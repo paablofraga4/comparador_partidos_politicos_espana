@@ -90,9 +90,15 @@ def fetch(
     force: bool = False,
     wayback: bool = True,
     client: httpx.Client | None = None,
+    wayback_ts: str | None = None,
+    nota: str | None = None,
 ) -> tuple[Fuente, str]:
     """Registra el programa. Devuelve (fuente, resultado) con resultado en
-    {'nuevo', 'sin-cambios', 'actualizado'}."""
+    {'nuevo', 'sin-cambios', 'actualizado'}.
+
+    Con `wayback_ts` el documento se descarga de la copia de la Wayback Machine de esa fecha
+    (para programas retirados de la web oficial); `url` sigue siendo la URL oficial original.
+    """
     load_candidaturas(paths).get(cand)  # valida que la candidatura existe
     reg = load_sources(paths)
     if conv not in reg.convocatorias:
@@ -108,6 +114,11 @@ def fetch(
                 origen = "pdf" if tmp_path.read_bytes()[:5].startswith(b"%PDF") else "html"
                 if origen == "html":
                     raise FetchError("--archivo debe ser un PDF")
+            elif wayback_ts:
+                raw = f"https://web.archive.org/web/{wayback_ts}id_/{url}"
+                origen = _download(raw, tmp_path, client)
+                if origen != "pdf":
+                    raise FetchError("La copia de la Wayback Machine no es un PDF")
             else:
                 origen = _download(url, tmp_path, client)
                 if origen == "html":
@@ -133,11 +144,16 @@ def fetch(
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(tmp_path, dest)
 
+        if wayback_ts:
+            archivo = f"https://web.archive.org/web/{wayback_ts}/{url}"
+        elif wayback and url.startswith("http"):
+            archivo = archive_wayback(url, client)
+        else:
+            archivo = None
         fuente = Fuente(
             url=url,
-            url_archivo=archive_wayback(url, client)
-            if (wayback and url.startswith("http"))
-            else None,
+            url_archivo=archivo,
+            nota=nota,
             fichero=paths.rel(dest),
             sha256=digest,
             descargado=datetime.now(UTC).replace(microsecond=0),

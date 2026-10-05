@@ -15,6 +15,7 @@ from .models import Bloque, DocumentoMeta, Pagina
 
 # Por debajo de esta media de caracteres por página asumimos PDF escaneado (necesita OCR).
 MIN_CHARS_PER_PAGE = 80
+MIN_TOC_ENTRIES = 3
 _BOLD_FLAG = 1 << 4
 
 _STOPWORDS = {
@@ -182,6 +183,9 @@ def extract(
     toc = [
         (int(lvl), str(title).strip(), int(pg)) for lvl, title, pg, *_ in doc.get_toc(simple=True)
     ]
+    # Un índice con muy pocas entradas no describe la estructura: se usa la tipografía.
+    if len(toc) < MIN_TOC_ENTRIES:
+        toc = []
     toc_by_page: dict[int, list[tuple[int, str]]] = {}
     for lvl, title, pg in toc:
         toc_by_page.setdefault(pg, []).append((lvl, title))

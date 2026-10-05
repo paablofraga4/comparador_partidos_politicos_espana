@@ -214,6 +214,7 @@ candidaturas:
 
   - id: geroa-bai
     nombre: Geroa Bai
+    nota: "Sin programa propio de generales 2023 localizado en su web oficial ni en archivo."
     corto: Geroa Bai
     tipo: partido
     ambito: autonomico
@@ -223,11 +224,12 @@ candidaturas:
     vigilar: []
     incluir: si-concurre-por-separado
     convocatorias:
-      generales-2023: { programa_propio: por-verificar }
+      generales-2023: { programa_propio: false }
       generales-2026: { estado: provisional, circunscripciones: [] }
 
   - id: asg
     nombre: Agrupación Socialista Gomera
+    nota: "En 2023 concurrió solo al Senado (La Gomera); sin programa propio de generales localizado."
     corto: ASG
     tipo: partido
     ambito: autonomico
@@ -237,7 +239,7 @@ candidaturas:
     vigilar: []
     incluir: si-concurre-por-separado
     convocatorias:
-      generales-2023: { programa_propio: por-verificar }
+      generales-2023: { programa_propio: false }
       generales-2026: { estado: provisional, circunscripciones: [] }
 
   - id: ahi
@@ -251,5 +253,5 @@ candidaturas:
     vigilar: []
     incluir: si-concurre-por-separado
     convocatorias:
-      generales-2023: { programa_propio: por-verificar }
+      generales-2023: { programa_propio: false, dentro_de: cc }
       generales-2026: { estado: provisional, circunscripciones: [] }

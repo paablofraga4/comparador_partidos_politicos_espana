@@ -12,15 +12,15 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-006 Licencias (MIT y CC BY 4.0)
 
 ## F1a · Pipeline (mar 6)
-- [ ] T-101 Instalar `uv` y crear el esqueleto de `pipeline/` (paquete `votoclaro` (CLI `vc`), typer, ruff y pytest). **V:** `uv run vc --help`
-- [ ] T-102 Esquemas Pydantic (candidatura, tema, fuente, documento, chunk, análisis y cita) y exportación a JSON Schema. **V:** tests
-- [ ] T-103 `vc fetch`: PDF o HTML (HTML → PDF con Playwright), SHA-256, `sources.yaml` y Wayback. **V:** test con fichero local
-- [ ] T-104 `vc extract`: páginas, bloques, etiquetas, jerarquía de secciones, idioma y OCR. **V:** test con PDF de prueba
-- [ ] T-105 `vc chunk`: ids estables, cabecera contextual y respeto de párrafos. **V:** tests
-- [ ] T-106 Localizar y registrar los PDFs de 2023 con continuidad. **V:** `vc fetch --all`
+- [x] T-101 Instalar `uv` y crear el esqueleto de `pipeline/` (paquete `votoclaro` (CLI `vc`), typer, ruff y pytest). **V:** `uv run vc --help`
+- [x] T-102 Esquemas Pydantic (candidatura, tema, fuente, documento, chunk, análisis y cita) y exportación a JSON Schema. **V:** tests
+- [x] T-103 `vc fetch`: PDF o HTML (HTML → PDF con Playwright), SHA-256, `sources.yaml` y Wayback. **V:** test con fichero local
+- [x] T-104 `vc extract`: páginas, bloques, etiquetas, jerarquía de secciones, idioma y OCR. **V:** test con PDF de prueba
+- [x] T-105 `vc chunk`: ids estables, cabecera contextual y respeto de párrafos. **V:** tests
+- [x] T-106 Localizar y registrar los PDFs de 2023 con continuidad (10/11; **Junts pendiente**: solo hay copia oficial truncada). **V:** `vc status`
 - [ ] T-107 Elegir los modelos (`/v1/models`) y documentarlos. **Requiere la `OPENAI_API_KEY`**
-- [ ] T-108 `vc verify`: literalidad normalizada y rectángulos (también entre dos páginas). **V:** tests con citas falsas
-- [ ] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
+- [x] T-108 `vc verify`: literalidad normalizada y rectángulos (también entre dos páginas). **V:** tests con citas falsas
+- [x] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
 
 ## F1b · Análisis de 2023 (mié 7)
 - [ ] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste. **V:** 1 candidatura × 3 temas

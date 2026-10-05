@@ -61,11 +61,23 @@ def fetch(
         bool, typer.Option(help="Re-registrar aunque el aprobado sea distinto")
     ] = False,
     sin_wayback: Annotated[bool, typer.Option("--sin-wayback")] = False,
+    desde_wayback: Annotated[
+        str | None, typer.Option(help="Descargar la copia archivada (timestamp AAAAMMDDhhmmss)")
+    ] = None,
+    nota: Annotated[str | None, typer.Option(help="Nota sobre la procedencia")] = None,
 ) -> None:
     """Descarga, archiva y registra un programa (HU-1.1)."""
     try:
         fuente, res = fetch_doc(
-            _paths(), candidatura, convocatoria, url, archivo, force, not sin_wayback
+            _paths(),
+            candidatura,
+            convocatoria,
+            url,
+            archivo,
+            force,
+            not sin_wayback,
+            wayback_ts=desde_wayback,
+            nota=nota,
         )
     except FetchError as e:
         console.print(f"[red]✗ {e}")
@@ -165,6 +177,8 @@ def status() -> None:
                 row.append(state)
             elif cc and cc.dentro_de:
                 row.append(f"dentro de {cc.dentro_de}")
+            elif cc and cc.programa_propio is False:
+                row.append("sin programa propio")
             elif cc and cc.programa_propio == "por-verificar":
                 row.append("¿programa propio?")
             else:
