@@ -1,0 +1,479 @@
+{
+  "$defs": {
+    "Afirmacion": {
+      "additionalProperties": false,
+      "properties": {
+        "texto": {
+          "title": "Texto",
+          "type": "string"
+        },
+        "citas": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Citas",
+          "type": "array"
+        }
+      },
+      "required": [
+        "texto",
+        "citas"
+      ],
+      "title": "Afirmacion",
+      "type": "object"
+    },
+    "AnalisisTema": {
+      "additionalProperties": false,
+      "properties": {
+        "menciona": {
+          "title": "Menciona",
+          "type": "boolean"
+        },
+        "resumen": {
+          "items": {
+            "$ref": "#/$defs/Afirmacion"
+          },
+          "title": "Resumen",
+          "type": "array"
+        },
+        "propuestas": {
+          "items": {
+            "$ref": "#/$defs/Propuesta"
+          },
+          "title": "Propuestas",
+          "type": "array"
+        },
+        "lectura_facil": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LecturaFacil"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "red_seguridad": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RedSeguridad"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "menciona"
+      ],
+      "title": "AnalisisTema",
+      "type": "object"
+    },
+    "Cita": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "title": "Chunk",
+          "type": "string"
+        },
+        "pagina": {
+          "title": "Pagina",
+          "type": "integer"
+        },
+        "pagina_impresa": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pagina Impresa"
+        },
+        "literal": {
+          "title": "Literal",
+          "type": "string"
+        },
+        "idioma": {
+          "default": "es",
+          "title": "Idioma",
+          "type": "string"
+        },
+        "traduccion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Traduccion"
+        },
+        "rects": {
+          "items": {
+            "$ref": "#/$defs/Rect"
+          },
+          "title": "Rects",
+          "type": "array"
+        },
+        "verificada": {
+          "default": false,
+          "title": "Verificada",
+          "type": "boolean"
+        },
+        "resaltada": {
+          "default": false,
+          "title": "Resaltada",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "chunk",
+        "pagina",
+        "literal"
+      ],
+      "title": "Cita",
+      "type": "object"
+    },
+    "DocumentoRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "paginas": {
+          "title": "Paginas",
+          "type": "integer"
+        },
+        "idioma": {
+          "title": "Idioma",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "sha256",
+        "paginas",
+        "idioma"
+      ],
+      "title": "DocumentoRef",
+      "type": "object"
+    },
+    "Generado": {
+      "additionalProperties": false,
+      "properties": {
+        "fecha": {
+          "format": "date-time",
+          "title": "Fecha",
+          "type": "string"
+        },
+        "modelo": {
+          "title": "Modelo",
+          "type": "string"
+        },
+        "modelo_lectura_facil": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Modelo Lectura Facil"
+        },
+        "prompt": {
+          "title": "Prompt",
+          "type": "string"
+        },
+        "tokens_entrada": {
+          "default": 0,
+          "title": "Tokens Entrada",
+          "type": "integer"
+        },
+        "tokens_cache": {
+          "default": 0,
+          "title": "Tokens Cache",
+          "type": "integer"
+        },
+        "tokens_salida": {
+          "default": 0,
+          "title": "Tokens Salida",
+          "type": "integer"
+        },
+        "coste_usd": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Coste Usd"
+        }
+      },
+      "required": [
+        "fecha",
+        "modelo",
+        "prompt"
+      ],
+      "title": "Generado",
+      "type": "object"
+    },
+    "LecturaFacil": {
+      "additionalProperties": false,
+      "properties": {
+        "resumen": {
+          "items": {
+            "$ref": "#/$defs/Afirmacion"
+          },
+          "title": "Resumen",
+          "type": "array"
+        },
+        "propuestas": {
+          "items": {
+            "$ref": "#/$defs/Propuesta"
+          },
+          "title": "Propuestas",
+          "type": "array"
+        },
+        "legibilidad": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Legibilidad"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "fiel": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fiel"
+        }
+      },
+      "title": "LecturaFacil",
+      "type": "object"
+    },
+    "Legibilidad": {
+      "additionalProperties": false,
+      "properties": {
+        "inflesz": {
+          "title": "Inflesz",
+          "type": "number"
+        },
+        "max_palabras_frase": {
+          "title": "Max Palabras Frase",
+          "type": "integer"
+        },
+        "ok": {
+          "title": "Ok",
+          "type": "boolean"
+        },
+        "avisos": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Avisos",
+          "type": "array"
+        }
+      },
+      "required": [
+        "inflesz",
+        "max_palabras_frase",
+        "ok"
+      ],
+      "title": "Legibilidad",
+      "type": "object"
+    },
+    "Propuesta": {
+      "additionalProperties": false,
+      "properties": {
+        "texto": {
+          "title": "Texto",
+          "type": "string"
+        },
+        "citas": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Citas",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "subtema": {
+          "title": "Subtema",
+          "type": "string"
+        }
+      },
+      "required": [
+        "texto",
+        "citas",
+        "id",
+        "subtema"
+      ],
+      "title": "Propuesta",
+      "type": "object"
+    },
+    "Rect": {
+      "additionalProperties": false,
+      "properties": {
+        "pagina": {
+          "title": "Pagina",
+          "type": "integer"
+        },
+        "r": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "R",
+          "type": "array"
+        }
+      },
+      "required": [
+        "pagina",
+        "r"
+      ],
+      "title": "Rect",
+      "type": "object"
+    },
+    "RedSeguridad": {
+      "additionalProperties": false,
+      "properties": {
+        "ejecutada": {
+          "title": "Ejecutada",
+          "type": "boolean"
+        },
+        "fragmentos_revisados": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fragmentos Revisados",
+          "type": "array"
+        },
+        "reanalizado": {
+          "default": false,
+          "title": "Reanalizado",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ejecutada"
+      ],
+      "title": "RedSeguridad",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "convocatoria": {
+      "title": "Convocatoria",
+      "type": "string"
+    },
+    "candidatura": {
+      "title": "Candidatura",
+      "type": "string"
+    },
+    "estado": {
+      "default": "borrador",
+      "enum": [
+        "borrador",
+        "aprobado"
+      ],
+      "title": "Estado",
+      "type": "string"
+    },
+    "aprobado_en": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Aprobado En"
+    },
+    "documento": {
+      "$ref": "#/$defs/DocumentoRef"
+    },
+    "generado": {
+      "$ref": "#/$defs/Generado"
+    },
+    "temas": {
+      "additionalProperties": {
+        "$ref": "#/$defs/AnalisisTema"
+      },
+      "title": "Temas",
+      "type": "object"
+    },
+    "citas": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Cita"
+      },
+      "title": "Citas",
+      "type": "object"
+    },
+    "incidencias": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Incidencias",
+      "type": "array"
+    }
+  },
+  "required": [
+    "convocatoria",
+    "candidatura",
+    "documento",
+    "generado",
+    "temas",
+    "citas"
+  ],
+  "title": "Analisis",
+  "type": "object"
+}

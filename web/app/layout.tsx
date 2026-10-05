@@ -1,0 +1,79 @@
+import type { Metadata, Viewport } from "next";
+import { Newsreader, Public_Sans } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { Suspense } from "react";
+
+import { FuentePanel } from "@/components/fuente-panel";
+import { LECTURA_SCRIPT } from "@/components/lectura-facil";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import "./globals.css";
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  display: "swap",
+  axes: ["opsz"],
+});
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  variable: "--font-public-sans",
+  display: "swap",
+});
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE),
+  title: {
+    default: "VotoClaro · Qué propone cada partido el 29N",
+    template: "%s · VotoClaro",
+  },
+  description:
+    "Compara los programas electorales de las elecciones generales del 29 de noviembre, tema a tema y con la fuente a un clic. Neutral, sin anuncios y con lectura fácil.",
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "VotoClaro",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf8f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#121316" },
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html
+      lang="es"
+      className={`${newsreader.variable} ${publicSans.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Aplica el modo de lectura guardado antes de pintar (sin parpadeo) */}
+        <script dangerouslySetInnerHTML={{ __html: LECTURA_SCRIPT }} />
+      </head>
+      <body className="flex min-h-dvh flex-col antialiased">
+        <NuqsAdapter>
+          <a
+            href="#contenido"
+            className="focus:bg-paper-raised sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2"
+          >
+            Saltar al contenido
+          </a>
+          <SiteHeader />
+          <main id="contenido" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+          <Suspense>
+            <FuentePanel />
+          </Suspense>
+        </NuqsAdapter>
+      </body>
+    </html>
+  );
+}

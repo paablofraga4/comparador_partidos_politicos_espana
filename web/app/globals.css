@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* VotoClaro · sistema de diseño «editorial cívico» (skill editorial-design).
+   Tokens como variables CSS; modo oscuro por preferencia del sistema o [data-theme]. */
+
+:root {
+  --paper: #faf8f3;
+  --paper-raised: #ffffff;
+  --paper-sunken: #f2efe6;
+  --ink: #16181d;
+  --ink-muted: #5b6170;
+  --ink-faint: #8a8f9a;
+  --rule: #e4e0d6;
+  --rule-strong: #cfc9bb;
+  --marker: #ffe45c;
+  --marker-soft: rgb(255 228 92 / 0.45);
+  --notice-ink: #7a4f00;
+  --notice-bg: #fff4db;
+  --notice-rule: #f0d9a8;
+  --focus: #16181d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121316;
+    --paper-raised: #1a1c20;
+    --paper-sunken: #0d0e10;
+    --ink: #eceae4;
+    --ink-muted: #a3a7b0;
+    --ink-faint: #7b808a;
+    --rule: #2a2d33;
+    --rule-strong: #3a3e46;
+    --marker: #ffe45c;
+    --marker-soft: rgb(255 228 92 / 0.28);
+    --notice-ink: #f2c46d;
+    --notice-bg: #2b2210;
+    --notice-rule: #4a3a17;
+    --focus: #eceae4;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #121316;
+  --paper-raised: #1a1c20;
+  --paper-sunken: #0d0e10;
+  --ink: #eceae4;
+  --ink-muted: #a3a7b0;
+  --ink-faint: #7b808a;
+  --rule: #2a2d33;
+  --rule-strong: #3a3e46;
+  --marker: #ffe45c;
+  --marker-soft: rgb(255 228 92 / 0.28);
+  --notice-ink: #f2c46d;
+  --notice-bg: #2b2210;
+  --notice-rule: #4a3a17;
+  --focus: #eceae4;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunken: var(--paper-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-marker: var(--marker);
+  --color-notice-ink: var(--notice-ink);
+  --color-notice-bg: var(--notice-bg);
+  --color-notice-rule: var(--notice-rule);
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-feature-settings: "kern", "liga";
+  text-rendering: optimizeLegibility;
+}
+
+/* Modo lectura fácil: más tamaño, más aire, sin cursivas (spec 002, HU-2.5) */
+html[data-lectura="facil"] body {
+  font-size: 1.1875rem;
+  line-height: 1.75;
+}
+html[data-lectura="facil"] em,
+html[data-lectura="facil"] i {
+  font-style: normal;
+}
+
+/* Dos versiones en el HTML; el modo activo decide cuál se ve */
+.solo-facil {
+  display: none;
+}
+html[data-lectura="facil"] .solo-facil {
+  display: revert;
+}
+html[data-lectura="facil"] .solo-normal {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--marker-soft);
+  border-radius: 4px;
+}
+
+/* Subrayado de rotulador: el motivo de marca. Solo para «aquí está la fuente». */
+.marker {
+  background-image: linear-gradient(
+    to top,
+    var(--marker-soft) 0,
+    var(--marker-soft) 0.42em,
+    transparent 0.42em
+  );
+}
+.marker-full {
+  background: var(--marker-soft);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
