@@ -12,7 +12,9 @@ import re
 
 from .models import Legibilidad
 
-MIN_INFLESZ = 65.0
+MIN_INFLESZ = 60.0  # obligatorio (por debajo bloquea)
+TARGET_INFLESZ = 65.0  # objetivo («bastante fácil»): entre 60 y 65, aviso no bloqueante
+AVISO = "Aviso:"
 MAX_WORDS_SENTENCE = 20
 
 _STRONG = set("aeoáéóíú")  # vocales que forman núcleo propio (í/ú acentuadas rompen diptongo)
@@ -86,4 +88,7 @@ def check(texts: list[str], extra_allowed: set[str] | None = None) -> Legibilida
     score = inflesz(texts)
     if score < MIN_INFLESZ:
         avisos.append(f"INFLESZ {score} < {MIN_INFLESZ} (texto demasiado difícil)")
-    return Legibilidad(inflesz=score, max_palabras_frase=max_words, ok=not avisos, avisos=avisos)
+    ok = not avisos
+    if MIN_INFLESZ <= score < TARGET_INFLESZ:
+        avisos.append(f"{AVISO} INFLESZ {score} por debajo del objetivo {TARGET_INFLESZ}")
+    return Legibilidad(inflesz=score, max_palabras_frase=max_words, ok=ok, avisos=avisos)

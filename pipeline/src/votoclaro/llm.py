@@ -76,6 +76,12 @@ class Usage:
             ) / 1_000_000
 
 
+def _sin_credito(e: Exception) -> bool:
+    """Un 429 por saldo agotado no es transitorio: reintentar solo hace perder tiempo."""
+    texto = f"{getattr(e, 'code', '')} {e}"
+    return "insufficient_quota" in texto or "credit_balance_exhausted" in texto
+
+
 class _Client(Protocol):
     responses: Any
 
@@ -135,6 +141,11 @@ def parse[T: BaseModel](
         try:
             resp = client.responses.parse(**kwargs)
         except transient as e:  # el SDK ya reintenta; esto cubre ráfagas largas
+            if _sin_credito(e):
+                raise LLMConfigError(
+                    "La cuenta de OpenAI no tiene crédito (insufficient_quota). Añade saldo en "
+                    "https://platform.openai.com/settings/organization/billing y vuelve a lanzar."
+                ) from e
             last = e
             time.sleep(10 * (attempt + 1))
             continue

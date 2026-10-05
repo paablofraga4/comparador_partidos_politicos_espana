@@ -20,6 +20,7 @@ from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
+from typing import Literal
 
 import pymupdf
 from pydantic import BaseModel, ConfigDict
@@ -49,7 +50,7 @@ from .models import (
 from .search import BM25, safety_net_candidates
 from .textnorm import normalize, word_count
 
-PROMPT_VERSION = "analisis@2"
+PROMPT_VERSION = "analisis@3"
 LF_ATTEMPTS = 4
 
 INSTRUCCIONES = """\
@@ -85,22 +86,30 @@ Reglas obligatorias:
 
 LF_INSTRUCCIONES = """\
 Adaptas textos a lectura fácil (pautas de la norma UNE 153101 EX) para VotoClaro, un
-comparador neutral de programas electorales.
+comparador neutral de programas electorales. Los textos resumen el programa de una
+candidatura, cuyo nombre se indica.
 Reglas:
 - Frases cortas: 15 palabras o menos (nunca más de 20). Una idea por frase.
-- Palabras de uso común. Si una palabra es difícil, cámbiala o explícala con palabras sencillas.
+- Palabras de uso común. Si una palabra es difícil, cámbiala por otra sencilla o explícala de
+  forma general y correcta. Nunca concretes más de lo que dice el original.
+- Conserva tal cual los nombres propios, leyes, instituciones, territorios y cifras del original
+  (no cambies «instituciones vascas» por «Gobierno vasco»).
 - Sin siglas, salvo nombres de partidos, IVA y UE. Escribe el nombre completo de lo demás.
-- Números en cifras. Voz activa. Sujeto claro: «El partido quiere…». Sin dobles negaciones ni
-  metáforas.
+- Números en cifras. Voz activa. El sujeto es el nombre de la candidatura: «{candidatura}
+  quiere…», «{candidatura} propone…». Sin dobles negaciones ni metáforas.
 - No añadas información nueva. No quites lo esencial. No valores las propuestas. Tono neutral.
 - Indica en `origen` de qué elemento original sale cada frase o propuesta adaptada.
 """
 
 JUEZ_INSTRUCCIONES = """\
-Comparas un texto original con su adaptación a lectura fácil. La adaptación es FIEL si no
-añade información, no omite lo esencial, no cambia el sentido y no introduce valoraciones.
-Simplificar el vocabulario o dividir frases no es infidelidad. Responde con el veredicto y,
-si no es fiel, la lista concreta de problemas.
+Comparas un texto original (resumen del programa electoral de una candidatura, cuyo nombre se
+indica) con su adaptación a lectura fácil. Lista los problemas de fidelidad y clasifica cada uno:
+- «grave»: cambia el sentido, añade un hecho, cifra, plazo o destinatario que no está en el
+  original, omite una propuesta o su elemento esencial, o introduce una valoración.
+- «leve»: matices de vocabulario, simplificaciones razonables, explicaciones generales y
+  correctas de una palabra difícil, o atribuir las propuestas a la candidatura indicada.
+Simplificar el vocabulario o dividir frases NO es un problema. Si no hay problemas, devuelve
+la lista vacía.
 """
 
 
@@ -162,9 +171,21 @@ class SalidaLF(_Strict):
     propuestas: list[PropuestaLF]
 
 
+class ProblemaFidelidad(_Strict):
+    descripcion: str
+    gravedad: Literal["grave", "leve"]
+
+
 class Veredicto(_Strict):
-    fiel: bool
-    problemas: list[str]
+    problemas: list[ProblemaFidelidad]
+
+    @property
+    def graves(self) -> list[str]:
+        return [p.descripcion for p in self.problemas if p.gravedad == "grave"]
+
+    @property
+    def leves(self) -> list[str]:
+        return [p.descripcion for p in self.problemas if p.gravedad == "leve"]
 
 
 _HYPHEN_SPACE = re.compile(r"(\w)- (\w)")
@@ -443,24 +464,43 @@ def _safety_net(ctx: Contexto, tema: Tema) -> AnalisisTema:
 # --- Lectura fácil ------------------------------------------------------------------------
 
 
-def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
+@dataclass
+class LFContexto:
+    """Lo mínimo para (re)generar la lectura fácil sin volver a leer el programa."""
+
+    client: object
+    model: ModelConfig
+    fast: ModelConfig
+    cand: Candidatura
+    usage: Usage = field(default_factory=Usage)
+    incidencias: list[str] = field(default_factory=list)
+
+
+def easy_read(ctx: Contexto | LFContexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
     original = {
         "resumen": [{"i": i, "texto": f.texto} for i, f in enumerate(t.resumen)],
         "propuestas": [{"id": p.id, "texto": p.texto} for p in t.propuestas],
     }
     original_json = json.dumps(original, ensure_ascii=False)
-    allowed = {ctx.cand.corto.upper(), *(w.upper() for w in ctx.cand.corto.split())}
+    nombre = ctx.cand.corto
+    allowed = {nombre.upper(), *(w.upper() for w in nombre.split())}
+    instrucciones = LF_INSTRUCCIONES.replace("{candidatura}", nombre)
     feedback: str | None = None
     lf = LecturaFacil()
     for _attempt in range(LF_ATTEMPTS):
-        messages = [{"role": "user", "content": f"Texto original (JSON):\n{original_json}"}]
+        messages = [
+            {
+                "role": "user",
+                "content": f"Candidatura: {nombre}\nTexto original (JSON):\n{original_json}",
+            }
+        ]
         if feedback:
             messages.append({"role": "user", "content": feedback})
         out = parse(
             ctx.client,
             ctx.model,
             ctx.usage,
-            instructions=LF_INSTRUCCIONES,
+            instructions=instrucciones,
             input=messages,
             schema=SalidaLF,
             max_output_tokens=6000,
@@ -483,16 +523,19 @@ def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
         ]
         texts = [f.texto for f in resumen] + [p.texto for p in propuestas]
         leg = legibility.check(texts, extra_allowed=allowed)
-        missing = {p.id for p in t.propuestas} - {p.id for p in propuestas}
-        fiel = None
-        problems = list(leg.avisos)
-        if not leg.ok and leg.inflesz < legibility.MIN_INFLESZ:
+        problems = [a for a in leg.avisos if not a.startswith(legibility.AVISO)]
+        if leg.inflesz < legibility.MIN_INFLESZ:
             problems += [
                 f"Frase difícil (INFLESZ {sc}): «{tx}». Hazla más corta y con palabras más comunes."
                 for tx, sc in legibility.hardest_sentences(texts)
             ]
+        missing = {p.id for p in t.propuestas} - {p.id for p in propuestas}
         if missing:
             problems.append(f"faltan las propuestas {sorted(missing)}")
+        if not resumen and t.resumen:
+            problems.append("falta adaptar el resumen")
+        fiel: bool | None = None
+        observaciones: list[str] = []
         if not problems:
             v = parse(
                 ctx.client,
@@ -502,16 +545,23 @@ def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
                 input=[
                     {
                         "role": "user",
-                        "content": f"ORIGINAL:\n{original_json}\n\nADAPTACIÓN:\n"
-                        f"{json.dumps(out.model_dump(), ensure_ascii=False)}",
+                        "content": f"Candidatura: {nombre}\n\nORIGINAL:\n{original_json}\n\n"
+                        f"ADAPTACIÓN:\n{json.dumps(out.model_dump(), ensure_ascii=False)}",
                     }
                 ],
                 schema=Veredicto,
-                max_output_tokens=2000,
+                max_output_tokens=3000,
             )
-            fiel = v.fiel
-            problems += [f"Fidelidad: {p}" for p in v.problemas] if not v.fiel else []
-        lf = LecturaFacil(resumen=resumen, propuestas=propuestas, legibilidad=leg, fiel=fiel)
+            fiel = not v.graves
+            observaciones = v.leves
+            problems += [f"Fidelidad (grave): {p}" for p in v.graves]
+        lf = LecturaFacil(
+            resumen=resumen,
+            propuestas=propuestas,
+            legibilidad=leg,
+            fiel=fiel,
+            observaciones=observaciones,
+        )
         if not problems:
             return lf
         feedback = (

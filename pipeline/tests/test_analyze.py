@@ -55,7 +55,7 @@ class FakeResponses:
                 ],
             )
         elif schema is Veredicto:
-            out = Veredicto(fiel=True, problemas=[])
+            out = Veredicto(problemas=[])
         else:
             if kw.get("prompt_cache_options", {}).get("prewarm"):
                 return SimpleNamespace(output_parsed=None, usage=usage, status="completed")

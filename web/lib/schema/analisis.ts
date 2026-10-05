@@ -38,6 +38,7 @@ export type MaxPalabrasFrase = number;
 export type Ok = boolean;
 export type Avisos = string[];
 export type Fiel = boolean | null;
+export type Observaciones = string[];
 export type Ejecutada = boolean;
 export type FragmentosRevisados = string[];
 export type Reanalizado = boolean;
@@ -110,6 +111,7 @@ export interface LecturaFacil {
   propuestas?: Propuestas1;
   legibilidad?: Legibilidad | null;
   fiel?: Fiel;
+  observaciones?: Observaciones;
 }
 export interface Legibilidad {
   inflesz: Inflesz;

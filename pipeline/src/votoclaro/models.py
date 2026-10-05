@@ -184,6 +184,7 @@ class LecturaFacil(_Model):
     propuestas: list[Propuesta] = Field(default_factory=list)
     legibilidad: Legibilidad | None = None
     fiel: bool | None = None
+    observaciones: list[str] = Field(default_factory=list)  # avisos leves del juez
 
 
 class RedSeguridad(_Model):

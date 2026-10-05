@@ -275,6 +275,13 @@
           ],
           "default": null,
           "title": "Fiel"
+        },
+        "observaciones": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Observaciones",
+          "type": "array"
         }
       },
       "title": "LecturaFacil",

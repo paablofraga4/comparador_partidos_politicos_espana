@@ -151,12 +151,15 @@ primeros?) y evals de respuesta (spec 003).
   de la norma UNE 153101 EX:
   - frases de 20 palabras como máximo (objetivo: 15);
   - una idea por frase;
-  - índice de legibilidad INFLESZ de 65 o más («bastante fácil»);
+  - índice de legibilidad INFLESZ de 60 o más como mínimo obligatorio y 65 («bastante
+    fácil») como objetivo; entre 60 y 65 es un aviso en el PR (calibrado el 6-oct con los
+    primeros programas: el vocabulario político no baja de ahí sin perder exactitud);
   - palabras poco frecuentes y siglas sustituidas o explicadas;
   - números en cifras;
   - sin dobles negaciones.
 - **Validación de fidelidad**: un juez automático comprueba que la versión fácil no añade, no
-  quita lo esencial ni cambia el sentido de la versión normal.
+  quita lo esencial ni cambia el sentido de la versión normal. Bloquean los problemas graves
+  (sentido cambiado, dato añadido, propuesta omitida, valoración); los leves van al informe.
 - **Validación humana** (la que exige la norma), con una entidad especializada y personas con
   dificultades de comprensión lectora:
   - **Fase 1**: textos de la interfaz, descripciones de los 19 temas y una muestra

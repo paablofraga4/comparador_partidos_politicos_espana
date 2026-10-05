@@ -347,3 +347,72 @@ def models() -> None:
     ids = sorted(m.id for m in client.models.list())
     for i in ids:
         console.print(i)
+
+
+@app.command(name="easy-read")
+def easy_read_cmd(
+    candidatura: Cand,
+    convocatoria: Conv,
+    tema: Annotated[list[str] | None, typer.Option(help="Solo estos temas (repetible)")] = None,
+    solo_fallidos: Annotated[
+        bool, typer.Option("--solo-fallidos", help="Solo temas cuya lectura fácil no valida")
+    ] = False,
+    workers: Annotated[int, typer.Option(help="Llamadas en paralelo")] = 6,
+) -> None:
+    """Regenera SOLO la lectura fácil a partir del análisis verificado (no relee el programa)."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    from .analyze import LFContexto, easy_read
+    from .llm import LLMConfigError, ModelConfig, make_client
+    from .registry import load_topics
+
+    paths = _paths()
+    a = load_analysis(paths, convocatoria, candidatura)
+    if a.estado == "aprobado":
+        console.print("[red]✗ El análisis está aprobado; regenerarlo requiere revisión de nuevo.")
+        raise typer.Exit(1)
+    try:
+        ctx = LFContexto(
+            client=make_client(),
+            model=ModelConfig.from_env("ANALYSIS"),
+            fast=ModelConfig.from_env("FAST"),
+            cand=load_candidaturas(paths).get(candidatura),
+        )
+    except LLMConfigError as e:
+        console.print(f"[red]✗ {e}")
+        raise typer.Exit(1) from e
+    temas = {t.id: t for t in load_topics(paths).temas}
+
+    def falla(tid: str) -> bool:
+        lf = a.temas[tid].lectura_facil
+        return not (lf and lf.legibilidad and lf.legibilidad.ok and lf.fiel is not False)
+
+    objetivo = [
+        tid
+        for tid, t in a.temas.items()
+        if t.menciona and (not tema or tid in tema) and (not solo_fallidos or falla(tid))
+    ]
+    console.print(f"Regenerando lectura fácil · {candidatura} · {len(objetivo)} temas")
+
+    def run(tid: str):
+        return tid, easy_read(ctx, temas[tid], a.temas[tid])
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for tid, lf in pool.map(run, objetivo):
+            a.temas[tid] = a.temas[tid].model_copy(update={"lectura_facil": lf})
+            ok = lf.legibilidad and lf.legibilidad.ok and lf.fiel is not False
+            console.print(
+                f"  {'✓' if ok else '✗'} {tid} · INFLESZ "
+                f"{lf.legibilidad.inflesz if lf.legibilidad else '?'}"
+            )
+    hechos = set(objetivo)
+    a.incidencias = [
+        i for i in a.incidencias if not (i.split(":")[0] in hechos and "lectura fácil" in i)
+    ] + ctx.incidencias
+    if a.generado.coste_usd is not None and ctx.usage.priced:
+        a.generado.coste_usd = round(a.generado.coste_usd + ctx.usage.cost_usd, 4)
+    write_json(paths.analysis(convocatoria, candidatura), a)
+    console.print(
+        f"[green]✓[/] coste de esta pasada: {round(ctx.usage.cost_usd, 4)} USD · "
+        f"{len(ctx.incidencias)} temas siguen sin validar"
+    )
