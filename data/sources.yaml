@@ -1,0 +1,11 @@
+# Fuentes de cada programa. Lo rellena `cmp fetch` (T-103/T-106); se puede editar a mano la URL.
+# estado: pendiente | publicado | analizado | aprobado   (spec 001, HU-1.7)
+# Solo se aceptan URLs del dominio oficial del partido (o fuente oficial equivalente).
+version: 1
+convocatorias:
+  generales-2023:
+    fecha: 2023-07-23
+    programas: {}   # <partido>: { url, url_archivo, sha256, descargado, idioma, estado }
+  generales-2026:
+    fecha: 2026-11-29
+    programas: {}

@@ -1,0 +1,117 @@
+# Taxonomía de temas. Editable: añadir un tema obliga a re-analizarlo para TODOS los partidos.
+# `icono`: nombre de icono de lucide (https://lucide.dev/icons).
+version: 1
+temas:
+  - id: vivienda
+    nombre: Vivienda
+    icono: house
+    descripcion: Acceso a la vivienda, alquiler, compra y vivienda pública.
+    subtemas: [alquiler, compra y acceso, vivienda pública y social, ocupación ilegal y desahucios, suelo y construcción, vivienda turística]
+
+  - id: economia-empleo
+    nombre: Economía y empleo
+    icono: briefcase
+    descripcion: Empleo, salarios, condiciones laborales y actividad económica.
+    subtemas: [empleo y paro, salario mínimo, reforma laboral y contratos, jornada laboral, autónomos y pymes, industria, deuda y déficit]
+
+  - id: impuestos
+    nombre: Impuestos
+    icono: receipt
+    descripcion: Qué impuestos se suben, se bajan o se crean.
+    subtemas: [IRPF, IVA, sociedades, patrimonio, sucesiones y donaciones, impuestos a banca y energéticas, fraude fiscal]
+
+  - id: pensiones
+    nombre: Pensiones
+    icono: piggy-bank
+    descripcion: Cuantía, sostenibilidad y edad de jubilación.
+    subtemas: [revalorización, sostenibilidad del sistema, edad de jubilación, pensiones mínimas y no contributivas, planes de pensiones]
+
+  - id: proteccion-social
+    nombre: Protección social
+    icono: hand-heart
+    descripcion: Ayudas, lucha contra la pobreza, dependencia y discapacidad.
+    subtemas: [ingreso mínimo vital, pobreza y exclusión, dependencia, discapacidad, servicios sociales]
+
+  - id: sanidad
+    nombre: Sanidad
+    icono: stethoscope
+    descripcion: Sistema sanitario, listas de espera y salud mental.
+    subtemas: [listas de espera, atención primaria, salud mental, profesionales sanitarios, sanidad pública y privada, medicamentos]
+
+  - id: educacion
+    nombre: Educación
+    icono: graduation-cap
+    descripcion: Desde infantil hasta la universidad y la formación profesional.
+    subtemas: [educación 0-3 años, modelo educativo, lenguas en la enseñanza, universidad y becas, formación profesional, profesorado, educación concertada]
+
+  - id: inmigracion
+    nombre: Inmigración
+    icono: globe
+    descripcion: Fronteras, regularización, asilo e integración.
+    subtemas: [control de fronteras, regularización, asilo y refugio, menores no acompañados, inmigración laboral, integración]
+
+  - id: medio-ambiente-energia
+    nombre: Medio ambiente y energía
+    icono: leaf
+    descripcion: Cambio climático, energía, agua y naturaleza.
+    subtemas: [cambio climático, energías renovables, energía nuclear, precio de la energía, agua y sequía, biodiversidad]
+
+  - id: mundo-rural
+    nombre: Mundo rural
+    icono: wheat
+    descripcion: Agricultura, ganadería, pesca y despoblación.
+    subtemas: [agricultura y ganadería, PAC, despoblación, pesca, caza, servicios en el medio rural]
+
+  - id: transporte
+    nombre: Transporte
+    icono: train-front
+    descripcion: Transporte público e infraestructuras.
+    subtemas: [tren y cercanías, transporte público y abonos, carreteras, puertos y aeropuertos, corredores ferroviarios]
+
+  - id: igualdad
+    nombre: Igualdad
+    icono: scale
+    descripcion: Igualdad entre mujeres y hombres, diversidad y derechos.
+    subtemas: [igualdad entre mujeres y hombres, violencia de género e intrafamiliar, derechos LGTBI, aborto y eutanasia, discriminación]
+
+  - id: familia-conciliacion
+    nombre: Familia y conciliación
+    icono: baby
+    descripcion: Natalidad, permisos, cuidados y horarios.
+    subtemas: [natalidad, permisos de nacimiento y crianza, ayudas por hijo, cuidados, conciliación y horarios]
+
+  - id: juventud
+    nombre: Juventud
+    icono: sparkles
+    descripcion: Emancipación, empleo joven y bienestar de la juventud.
+    subtemas: [emancipación, empleo joven, salud mental juvenil, ocio y cultura joven]
+
+  - id: ciencia-digital
+    nombre: Ciencia y digitalización
+    icono: cpu
+    descripcion: Investigación, tecnología e inteligencia artificial.
+    subtemas: [I+D+i, inteligencia artificial, brecha digital, ciberseguridad, telecomunicaciones]
+
+  - id: seguridad-justicia
+    nombre: Seguridad y justicia
+    icono: shield
+    descripcion: Fuerzas de seguridad, delitos y funcionamiento de la justicia.
+    subtemas: [fuerzas y cuerpos de seguridad, código penal, independencia judicial y CGPJ, crimen organizado y narcotráfico, terrorismo, prisiones]
+
+  - id: modelo-territorial
+    nombre: Modelo territorial
+    icono: map
+    descripcion: Organización del Estado, autonomías y financiación.
+    subtemas: [financiación autonómica, autogobierno y derecho a decidir, competencias, lenguas cooficiales, organización territorial del Estado]
+
+  - id: regeneracion-democratica
+    nombre: Regeneración democrática
+    icono: landmark
+    descripcion: Instituciones, transparencia, corrupción y ley electoral.
+    subtemas: [corrupción y transparencia, ley electoral, monarquía y jefatura del Estado, memoria democrática, participación ciudadana]
+
+  - id: exterior-defensa
+    nombre: Política exterior, UE y defensa
+    icono: earth
+    descripcion: Relaciones internacionales, Unión Europea y defensa.
+    subtemas: [Unión Europea, OTAN y gasto en defensa, conflictos internacionales, Marruecos y Sáhara, Gibraltar, Iberoamérica, cooperación al desarrollo]
