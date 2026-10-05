@@ -12,7 +12,7 @@ import pytest
 from votoclaro import chunk as chunk_mod
 from votoclaro import extract as extract_mod
 from votoclaro import legibility
-from votoclaro.analyze import CitaLLM, Contexto, SalidaLF, Veredicto, analyze
+from votoclaro.analyze import CitaLLM, Contexto, SalidaLF, Veredicto, analyze, snap_literal
 from votoclaro.llm import ModelConfig
 from votoclaro.paths import Paths
 from votoclaro.registry import load_candidaturas, load_topics
@@ -213,3 +213,23 @@ def test_legibility_easy_text_passes_and_hard_fails():
     res = legibility.check(hard)
     assert not res.ok
     assert any("palabras" in a for a in res.avisos) and any("CPFF" in a for a in res.avisos)
+
+
+def test_snap_literal_joins_hyphenation_and_completes_words():
+    chunk = (
+        "Derogación de la Ley de Vivienda y respeto a las competencias de la Co-\nmunidad Foral."
+    )
+    assert snap_literal("respeto a las competencias de la Co- munidad", chunk).endswith("Comunidad")
+    assert (
+        snap_literal("Derogación de la Ley de Vivien", chunk) == "Derogación de la Ley de Vivienda"
+    )
+    assert snap_literal("texto que no está", chunk) == "texto que no está"
+
+
+def test_single_schema_keeps_cache_prefix(sample_pdf: Path, data_dir: Paths):
+    ctx, calls, doc = _ctx(sample_pdf, data_dir)
+    temas = load_topics(data_dir).temas[:4]
+    analyze(ctx, temas, workers=2)
+    doc.close()
+    schemas = {c["text_format"] for c in calls if c["text_format"].__name__ == "TemaLLM"}
+    assert len(schemas) == 1, "el esquema debe ser idéntico en todos los temas (caché)"

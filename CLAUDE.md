@@ -50,7 +50,10 @@ coalición o agrupación de electores); desde el BOE (~28 oct) entran todas las 
 
 ## Gotchas
 - Windows + Git Bash en local; los hooks son Node (`.claude/hooks/*.mjs`) para ser portables.
-- Modelos de OpenAI: siempre desde variables de entorno; no escribas nombres de modelo de memoria.
+- Modelos de OpenAI: en `config/models.env` (versionado, no secreto; elegidos con `vc models` y la tabla
+  oficial de precios). Nunca escribas nombres de modelo de memoria en el código.
+- `git add -A` registra también borrados: revisa `git status` antes (lección: se borró `.env.example`).
+- `uv` puede no estar en el PATH en Windows: usa `python -m uv` (los hooks ya lo hacen).
 - Páginas: `pagina` = índice 1-based del PDF (visor); `pagina_impresa` = la que se muestra.
 - Candidaturas del 29N cambian hasta la proclamación (BOE ~3 nov): todo en `data/candidaturas.yaml`, nunca en código.
 - Comparador = extracción exhaustiva offline (no RAG); chat = RAG agéntico híbrido y simétrico (spec 001).

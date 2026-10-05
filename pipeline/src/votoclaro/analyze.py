@@ -12,16 +12,17 @@ Flujo por tema:
 
 from __future__ import annotations
 
+import difflib
 import json
+import re
 import threading
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
-from typing import Literal
 
 import pymupdf
-from pydantic import BaseModel, ConfigDict, create_model
+from pydantic import BaseModel, ConfigDict
 
 from . import legibility
 from . import verify as verify_mod
@@ -48,7 +49,8 @@ from .models import (
 from .search import BM25, safety_net_candidates
 from .textnorm import normalize, word_count
 
-PROMPT_VERSION = "analisis@1"
+PROMPT_VERSION = "analisis@2"
+LF_ATTEMPTS = 4
 
 INSTRUCCIONES = """\
 Eres analista de programas electorales para VotoClaro, un comparador público y neutral.
@@ -59,8 +61,8 @@ Reglas obligatorias:
 1. Fuente única: solo el texto del documento. Nada de conocimiento previo, prensa ni suposiciones.
 2. Cada frase del resumen y cada propuesta lleva al menos una cita. Una cita es el ID del
    fragmento más un literal COPIADO EXACTAMENTE de ese fragmento (mismas palabras, mayúsculas,
-   tildes y puntuación; entre 8 y 60 palabras). Nunca parafrasees el literal ni unas trozos de
-   fragmentos distintos.
+   tildes y puntuación; entre 8 y 60 palabras), que empieza y termina en palabra completa.
+   Nunca parafrasees el literal ni unas trozos de fragmentos distintos.
 3. La afirmación no puede decir más que su cita: sin cifras, plazos ni matices que no estén en
    el literal.
 4. Neutralidad: verbos descriptivos y atribuidos («propone», «plantea», «defiende», «prevé»).
@@ -70,7 +72,8 @@ Reglas obligatorias:
 5. Resumen: de 1 a 3 frases y como máximo 60 palabras en total, que describan la orientación
    general del programa en el tema.
 6. Propuestas: hasta 8, las más concretas y representativas (con cifras, plazos, leyes o
-   medidas identificables), sin repetir. Cada una con un subtema de la lista dada. Redáctalas
+   medidas identificables), sin repetir. Cada una con un subtema copiado tal cual de la lista
+   de subtemas válidos del tema. Redáctalas
    en infinitivo: «Construir…», «Bajar…», «Crear…».
 7. Si el programa NO trata el tema, responde menciona=false con listas vacías. Una mención es
    una propuesta, compromiso o posición explícita sobre el tema, no una alusión de pasada.
@@ -119,22 +122,29 @@ class FraseLLM(_Strict):
     citas: list[CitaLLM]
 
 
-def topic_schema(tema: Tema) -> type[BaseModel]:
-    sub = Literal[tuple(tema.subtemas)]  # type: ignore[valid-type]
-    propuesta = create_model(
-        "PropuestaLLM",
-        __base__=_Strict,
-        texto=(str, ...),
-        subtema=(sub, ...),
-        citas=(list[CitaLLM], ...),
-    )
-    return create_model(
-        "TemaLLM",
-        __base__=_Strict,
-        menciona=(bool, ...),
-        resumen=(list[FraseLLM], ...),
-        propuestas=(list[propuesta], ...),  # type: ignore[valid-type]
-    )
+class PropuestaLLM(_Strict):
+    texto: str
+    subtema: str
+    citas: list[CitaLLM]
+
+
+class TemaLLM(_Strict):
+    """Esquema ÚNICO para todos los temas: el esquema forma parte del prefijo del prompt, y si
+    cambiara por tema (p. ej. un enum de subtemas) se perdería la caché del documento."""
+
+    menciona: bool
+    resumen: list[FraseLLM]
+    propuestas: list[PropuestaLLM]
+
+
+def _match_subtema(value: str, tema: Tema) -> str | None:
+    if value in tema.subtemas:
+        return value
+    folded = {s.lower(): s for s in tema.subtemas}
+    if value.lower() in folded:
+        return folded[value.lower()]
+    close = difflib.get_close_matches(value.lower(), list(folded), n=1, cutoff=0.6)
+    return folded[close[0]] if close else None
 
 
 class FraseLF(_Strict):
@@ -155,6 +165,30 @@ class SalidaLF(_Strict):
 class Veredicto(_Strict):
     fiel: bool
     problemas: list[str]
+
+
+_HYPHEN_SPACE = re.compile(r"(\w)- (\w)")
+
+
+def snap_literal(literal: str, chunk_text: str) -> str:
+    """Limpia el literal del modelo sin dejar de ser literal: une palabras partidas por guion
+    de fin de línea («Co- munidad») y lo ajusta a palabras completas («padecen enfer» →
+    «padecen enfermedades»). Si no puede localizarlo, lo devuelve tal cual (y la verificación
+    decidirá)."""
+    lit = normalize(literal)
+    text = normalize(chunk_text)
+    joined = _HYPHEN_SPACE.sub(r"\1\2", lit)
+    if joined != lit and joined in text:
+        lit = joined
+    i = text.find(lit)
+    if i < 0:
+        return " ".join(literal.split())
+    j = i + len(lit)
+    while i > 0 and text[i - 1].isalnum():
+        i -= 1
+    while j < len(text) and text[j].isalnum():
+        j += 1
+    return text[i:j]
 
 
 # --- Contexto ------------------------------------------------------------------------------
@@ -201,7 +235,7 @@ class Contexto:
         cita = Cita(
             chunk=chunk.id,
             pagina=chunk.pagina,
-            literal=" ".join(raw.literal.split()),
+            literal=snap_literal(raw.literal, chunk.texto),
             idioma=self.meta.idioma,
             traduccion=raw.traduccion if self.meta.idioma != "es" else None,
         )
@@ -257,12 +291,16 @@ def _build(ctx: Contexto, tema: Tema, out: BaseModel) -> tuple[AnalisisTema, lis
             resumen.append(Afirmacion(texto=f.texto.strip(), citas=ids))
     propuestas = []
     for p in out.propuestas:  # type: ignore[attr-defined]
+        sub = _match_subtema(p.subtema, tema)
+        if sub is None:
+            problems.append(f"el subtema «{p.subtema}» no está en la lista de subtemas válidos")
+            sub = difflib.get_close_matches(p.subtema, tema.subtemas, n=1, cutoff=0)[0]
         ids = cites(p.citas)
         if ids:
             propuestas.append(
                 Propuesta(
                     id=f"{tema.id}-{len(propuestas) + 1}",
-                    subtema=p.subtema,
+                    subtema=sub,
                     texto=p.texto.strip(),
                     citas=ids,
                 )
@@ -298,7 +336,7 @@ def _ask(
         ctx.usage,
         instructions=INSTRUCCIONES,
         input=messages,
-        schema=topic_schema(tema),
+        schema=TemaLLM,
         cache_key=ctx.cache_key,
     )
 
@@ -388,7 +426,7 @@ def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
     allowed = {ctx.cand.corto.upper(), *(w.upper() for w in ctx.cand.corto.split())}
     feedback: str | None = None
     lf = LecturaFacil()
-    for _attempt in range(3):
+    for _attempt in range(LF_ATTEMPTS):
         messages = [{"role": "user", "content": f"Texto original (JSON):\n{original_json}"}]
         if feedback:
             messages.append({"role": "user", "content": feedback})
@@ -422,6 +460,11 @@ def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
         missing = {p.id for p in t.propuestas} - {p.id for p in propuestas}
         fiel = None
         problems = list(leg.avisos)
+        if not leg.ok and leg.inflesz < legibility.MIN_INFLESZ:
+            problems += [
+                f"Frase difícil (INFLESZ {sc}): «{tx}». Hazla más corta y con palabras más comunes."
+                for tx, sc in legibility.hardest_sentences(texts)
+            ]
         if missing:
             problems.append(f"faltan las propuestas {sorted(missing)}")
         if not problems:
@@ -449,7 +492,9 @@ def easy_read(ctx: Contexto, tema: Tema, t: AnalisisTema) -> LecturaFacil:
             "Corrige estos problemas de tu adaptación anterior y devuélvela completa:\n- "
             + "\n- ".join(problems[:15])
         )
-    ctx.incidencias.append(f"{tema.id}: la lectura fácil no supera la validación tras 3 intentos")
+    ctx.incidencias.append(
+        f"{tema.id}: la lectura fácil no supera la validación tras {LF_ATTEMPTS} intentos"
+    )
     return lf
 
 

@@ -6,12 +6,16 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import dotenv_values, load_dotenv
 
 ROOT = Path(__file__).resolve().parents[3]
 
 # Carga .env de la raíz del repo si existe. Nunca se imprimen sus valores.
 load_dotenv(ROOT / ".env")
+# Configuración no secreta de modelos (versionada). Un valor NO vacío en .env tiene prioridad.
+for _k, _v in dotenv_values(ROOT / "config" / "models.env").items():
+    if _v and not os.environ.get(_k):
+        os.environ[_k] = _v
 
 
 @dataclass(frozen=True)

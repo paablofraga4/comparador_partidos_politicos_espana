@@ -63,6 +63,12 @@ def inflesz(texts: list[str]) -> float:
     return round(206.835 - 62.3 * (syl / len(words)) - (len(words) / len(sents)), 1)
 
 
+def hardest_sentences(texts: list[str], n: int = 3) -> list[tuple[str, float]]:
+    """Las frases con peor INFLESZ individual (para dar al modelo una corrección concreta)."""
+    scored = [(s, inflesz([s])) for t in texts for s in sentences(t)]
+    return sorted(scored, key=lambda x: x[1])[:n]
+
+
 def check(texts: list[str], extra_allowed: set[str] | None = None) -> Legibilidad:
     allowed = ALLOWED_ACRONYMS | (extra_allowed or set())
     avisos: list[str] = []
