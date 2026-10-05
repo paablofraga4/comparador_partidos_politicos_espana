@@ -67,7 +67,7 @@ el partido borre el original. Siempre se enlazan también la URL original y la d
 
 **D6 · Lectura fácil**:
 - Una llamada aparte, sin el documento, a partir de la salida verificada.
-- `cmp easy-read check` aplica reglas deterministas: longitud de frase, INFLESZ calculado con
+- `vc easy-read check` aplica reglas deterministas: longitud de frase, INFLESZ calculado con
   silabeo en español, siglas, números en cifras, dobles negaciones y palabras poco frecuentes
   según una lista de frecuencias del español.
 - Un juez automático comprueba la fidelidad.
@@ -116,7 +116,7 @@ estén en los resultados de las *tools* de ese turno.
 
 **D12 · CI y automatizaciones (GitHub Actions)**:
 - `ci.yml`: web (lint, typecheck, tests y build), pipeline (ruff y pytest) y
-  `cmp validate`, que comprueba esquemas, citas verificadas, límites, completitud y lectura
+  `vc validate`, que comprueba esquemas, citas verificadas, límites, completitud y lectura
   fácil.
 - `ingest.yml` (manual o lanzado por la vigilancia): candidatura, convocatoria y URL → PR.
 - `watch-programs.yml` (cron cada 3 h, hasta el 27 de noviembre): páginas `vigilar` y

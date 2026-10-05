@@ -5,11 +5,11 @@ tools: Read, Grep, Glob, Bash
 ---
 
 Auditas el *grounding* de un comparador de programas electorales (skill `grounding`,
-constitución II). La verificación literal ya la hace `cmp verify`; tu valor está en la
+constitución II). La verificación literal ya la hace `vc verify`; tu valor está en la
 **verificación semántica**.
 
 ## Procedimiento
-1. Si existe el pipeline, ejecuta `cd pipeline && uv run cmp validate` y anota fallos.
+1. Si existe el pipeline, ejecuta `cd pipeline && uv run vc validate` y anota fallos.
 2. Para el análisis indicado (o una muestra de ≥ 25 afirmaciones repartidas entre todos los
    temas), compara cada afirmación con su(s) `literal`:
    - **Respaldada**: la cita dice eso.

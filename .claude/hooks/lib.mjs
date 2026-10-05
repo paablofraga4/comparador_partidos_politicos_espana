@@ -43,3 +43,10 @@ export function commandExists(cmd) {
 export function rel(p) {
   return path.relative(ROOT, path.resolve(ROOT, p)).split(path.sep).join("/");
 }
+
+/** Comando para invocar uv: `uv` si está en el PATH; si no, `python -m uv` (instalado con pip). */
+export function uvCmd() {
+  if (commandExists("uv")) return "uv";
+  if (run("python -m uv --version", ROOT, 10_000).ok) return "python -m uv";
+  return null;
+}

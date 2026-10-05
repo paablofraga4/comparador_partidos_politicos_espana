@@ -1,4 +1,4 @@
-# Fuentes de cada programa. Lo rellena `cmp fetch` (T-103/T-106); se puede editar a mano la URL.
+# Fuentes de cada programa. Lo rellena `vc fetch` (T-103/T-106); se puede editar a mano la URL.
 # estado: pendiente | publicado | analizado | aprobado   (spec 001, HU-1.7)
 # Solo se aceptan URLs del dominio oficial del partido (o fuente oficial equivalente).
 version: 1

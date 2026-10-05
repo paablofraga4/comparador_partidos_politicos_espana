@@ -1,6 +1,6 @@
 // PostToolUse (Edit|Write): formatea el fichero tocado. Nunca bloquea; si falta la
 // herramienta (aún no instalada en F0) simplemente no hace nada.
-import { readInput, run, has, commandExists, rel, ROOT } from "./lib.mjs";
+import { readInput, run, has, uvCmd, rel, ROOT } from "./lib.mjs";
 
 const input = await readInput();
 const file = input.tool_input?.file_path;
@@ -14,9 +14,10 @@ if (r.startsWith("web/") && /\.(ts|tsx|js|mjs|cjs|json|css|md|mdx)$/.test(r)) {
   }
 }
 
-if (r.startsWith("pipeline/") && r.endsWith(".py") && commandExists("uv")) {
-  run(`uv run --quiet ruff format "${r.slice(9)}"`, `${ROOT}/pipeline`, 30_000);
-  run(`uv run --quiet ruff check --fix --quiet "${r.slice(9)}"`, `${ROOT}/pipeline`, 30_000);
+const UV = r.startsWith("pipeline/") && r.endsWith(".py") ? uvCmd() : null;
+if (UV) {
+  run(`${UV} run --quiet ruff format "${r.slice(9)}"`, `${ROOT}/pipeline`, 30_000);
+  run(`${UV} run --quiet ruff check --fix --quiet "${r.slice(9)}"`, `${ROOT}/pipeline`, 30_000);
 }
 
 process.exit(0);

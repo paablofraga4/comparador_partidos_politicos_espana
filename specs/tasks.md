@@ -12,21 +12,21 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-006 Licencias (MIT y CC BY 4.0)
 
 ## F1a · Pipeline (mar 6)
-- [ ] T-101 Instalar `uv` y crear el esqueleto de `pipeline/` (paquete `cmp`, typer, ruff y pytest). **V:** `uv run cmp --help`
+- [ ] T-101 Instalar `uv` y crear el esqueleto de `pipeline/` (paquete `votoclaro` (CLI `vc`), typer, ruff y pytest). **V:** `uv run vc --help`
 - [ ] T-102 Esquemas Pydantic (candidatura, tema, fuente, documento, chunk, análisis y cita) y exportación a JSON Schema. **V:** tests
-- [ ] T-103 `cmp fetch`: PDF o HTML (HTML → PDF con Playwright), SHA-256, `sources.yaml` y Wayback. **V:** test con fichero local
-- [ ] T-104 `cmp extract`: páginas, bloques, etiquetas, jerarquía de secciones, idioma y OCR. **V:** test con PDF de prueba
-- [ ] T-105 `cmp chunk`: ids estables, cabecera contextual y respeto de párrafos. **V:** tests
-- [ ] T-106 Localizar y registrar los PDFs de 2023 con continuidad. **V:** `cmp fetch --all`
+- [ ] T-103 `vc fetch`: PDF o HTML (HTML → PDF con Playwright), SHA-256, `sources.yaml` y Wayback. **V:** test con fichero local
+- [ ] T-104 `vc extract`: páginas, bloques, etiquetas, jerarquía de secciones, idioma y OCR. **V:** test con PDF de prueba
+- [ ] T-105 `vc chunk`: ids estables, cabecera contextual y respeto de párrafos. **V:** tests
+- [ ] T-106 Localizar y registrar los PDFs de 2023 con continuidad. **V:** `vc fetch --all`
 - [ ] T-107 Elegir los modelos (`/v1/models`) y documentarlos. **Requiere la `OPENAI_API_KEY`**
-- [ ] T-108 `cmp verify`: literalidad normalizada y rectángulos (también entre dos páginas). **V:** tests con citas falsas
-- [ ] T-109 `cmp validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
+- [ ] T-108 `vc verify`: literalidad normalizada y rectángulos (también entre dos páginas). **V:** tests con citas falsas
+- [ ] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
 
 ## F1b · Análisis de 2023 (mié 7)
-- [ ] T-110 `cmp analyze`: programa completo, caché, *structured outputs*, reintentos y coste. **V:** 1 candidatura × 3 temas
+- [ ] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste. **V:** 1 candidatura × 3 temas
 - [ ] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
-- [ ] T-112 `cmp easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
-- [ ] T-113 `cmp report`: informe Markdown para el PR. **V:** informe de ejemplo
+- [ ] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
+- [ ] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
 - [ ] T-114 Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
 
 ## F2 · Comparador web (mié 7 - jue 8)

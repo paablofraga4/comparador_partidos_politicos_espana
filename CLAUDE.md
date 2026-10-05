@@ -27,13 +27,13 @@ coalición o agrupación de electores); desde el BOE (~28 oct) entran todas las 
 ## Mapa
 - `specs/` constitución, specs 001 datos · 002 comparador · 003 chat, `plan-tecnico.md`, `tasks.md`
 - `data/` `candidaturas.yaml`, `topics.yaml`, `sources.yaml`, `documents/` (PDFs), `extracted/`, `analyses/`
-- `pipeline/` Python (uv), paquete `cmp`: fetch → extract → chunk → analyze → verify → report → validate
+- `pipeline/` Python (uv), paquete `votoclaro` (CLI `vc`): fetch → extract → chunk → analyze → verify → report → validate
 - `web/` Next.js 16 + TS + Tailwind v4; lee `data/` en build; `/api/chat` con AI SDK + OpenAI
 - `evals/` preguntas de referencia del chat
 - `.claude/` hooks (guardarraíles, formato, verificación al terminar), skills, agents
 
 ## Comandos (se crean en F1/F2; si no existen aún, no los inventes)
-- Pipeline: `cd pipeline && uv run cmp --help` · `uv run pytest -q` · `uv run ruff check .` · `uv run cmp validate`
+- Pipeline: `cd pipeline && uv run vc --help` · `uv run pytest -q` · `uv run ruff check .` · `uv run vc validate`
 - Web: `cd web && npm run dev | typecheck | lint | test | test:e2e | build`
 - Evals: `cd evals && …` (F3)
 
