@@ -10,9 +10,18 @@ const REPO =
 
 function Citas({ ids, a, c }: { ids: string[]; a: Analisis; c: Candidatura }) {
   const conv = a.convocatoria as keyof typeof CONVOCATORIAS;
+  // Una marca por página dentro de la misma frase («p. 8» y no «p. 8 p. 8 p. 8»): todas las
+  // citas siguen en los datos y la frase conserva al menos una fuente verificable.
+  const vistas = new Set<number>();
+  const unicas = ids.filter((cid) => {
+    const p = a.citas[cid]?.pagina;
+    if (p === undefined || vistas.has(p)) return false;
+    vistas.add(p);
+    return true;
+  });
   return (
     <>
-      {ids.map((cid) => {
+      {unicas.map((cid) => {
         const cita = a.citas[cid];
         if (!cita) return null;
         return (

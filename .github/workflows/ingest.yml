@@ -1,0 +1,62 @@
+# Ingesta de un programa (spec 001, HU-1.7). Se lanza desde GitHub → Actions → «Ingestar
+# programa» → Run workflow (también desde el móvil). Abre un PR con el informe de revisión;
+# nada se publica sin merge humano.
+name: Ingestar programa
+on:
+  workflow_dispatch:
+    inputs:
+      candidatura:
+        description: "id en data/candidaturas.yaml (p. ej. pp, psoe, sumar)"
+        required: true
+      convocatoria:
+        description: "Convocatoria"
+        required: true
+        default: generales-2026
+        type: choice
+        options: [generales-2026, generales-2023]
+      url:
+        description: "URL oficial del programa (PDF o página web)"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ingestar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: pipeline
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      CAND: ${{ inputs.candidatura }}
+      CONV: ${{ inputs.convocatoria }}
+      URL: ${{ inputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --extra html
+      - run: uv run playwright install --with-deps chromium
+      - name: Descargar y archivar
+        run: uv run vc fetch -c "$CAND" -v "$CONV" --url "$URL"
+      - name: Extraer texto
+        run: uv run vc extract -c "$CAND" -v "$CONV"
+      - name: Analizar (todos los temas)
+        run: uv run vc analyze -c "$CAND" -v "$CONV"
+      - name: Informe de revisión
+        run: uv run vc report -c "$CAND" -v "$CONV" > "$RUNNER_TEMP/informe.md"
+      - name: Abrir PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rama="ingest/$CONV-$CAND-$(date +%Y%m%d%H%M)"
+          git config user.name "votoclaro-bot"
+          git config user.email "votoclaro-bot@users.noreply.github.com"
+          git switch -c "$rama"
+          git add ../data
+          git commit -m "data($CONV): programa de $CAND (borrador para revisión)"
+          git push -u origin "$rama"
+          gh pr create --title "Programa $CONV · $CAND" --body-file "$RUNNER_TEMP/informe.md" --label programa || \
+          gh pr create --title "Programa $CONV · $CAND" --body-file "$RUNNER_TEMP/informe.md"
