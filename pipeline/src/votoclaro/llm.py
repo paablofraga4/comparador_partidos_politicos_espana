@@ -98,8 +98,15 @@ def parse[T: BaseModel](
     schema: type[T],
     cache_key: str | None = None,
     max_output_tokens: int = 16_000,
-) -> T:
-    """Llamada con structured outputs. Reintenta errores transitorios (además de los del SDK)."""
+    explicit_cache: bool = False,
+    prewarm: bool = False,
+) -> T | None:
+    """Llamada con structured outputs. Reintenta errores transitorios (además de los del SDK).
+
+    `explicit_cache`: solo cachea hasta los bloques marcados con `prompt_cache_breakpoint`
+    (en gpt-5.6+ el punto implícito cae al final del prompt y no sirve para reutilizar el
+    documento entre temas). `prewarm`: escribe la caché sin generar salida (devuelve None).
+    """
     kwargs: dict[str, Any] = {
         "model": cfg.name,
         "instructions": instructions,
@@ -110,6 +117,11 @@ def parse[T: BaseModel](
     }
     if cache_key:
         kwargs["prompt_cache_key"] = cache_key
+    if explicit_cache or prewarm:
+        kwargs["prompt_cache_options"] = {
+            "mode": "explicit",
+            **({"prewarm": True} if prewarm else {}),
+        }
     if cfg.reasoning_effort:
         kwargs["reasoning"] = {"effort": cfg.reasoning_effort}
     if cfg.temperature is not None:
@@ -127,8 +139,11 @@ def parse[T: BaseModel](
             time.sleep(10 * (attempt + 1))
             continue
         u = resp.usage
-        cached = getattr(getattr(u, "input_tokens_details", None), "cached_tokens", 0) or 0
-        usage.add(cfg, u.input_tokens, cached, u.output_tokens)
+        if u is not None:
+            cached = getattr(getattr(u, "input_tokens_details", None), "cached_tokens", 0) or 0
+            usage.add(cfg, u.input_tokens, cached, u.output_tokens)
+        if prewarm:
+            return None
         if resp.output_parsed is None:
             raise RuntimeError(f"Respuesta sin contenido estructurado (estado: {resp.status})")
         return resp.output_parsed

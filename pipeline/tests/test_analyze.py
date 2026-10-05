@@ -18,6 +18,12 @@ from votoclaro.paths import Paths
 from votoclaro.registry import load_candidaturas, load_topics
 from votoclaro.validate import _check_analysis
 
+
+def _text(m: dict) -> str:
+    c = m["content"]
+    return c if isinstance(c, str) else "".join(b["text"] for b in c)
+
+
 LIT_VIV = "Construiremos 200.000 viviendas públicas en alquiler asequible antes de 2030"
 LIT_PEN = "Garantizaremos la revalorización de las pensiones conforme al IPC"
 
@@ -51,7 +57,9 @@ class FakeResponses:
         elif schema is Veredicto:
             out = Veredicto(fiel=True, problemas=[])
         else:
-            prompt = "\n".join(m["content"] for m in kw["input"] if m["role"] == "user")
+            if kw.get("prompt_cache_options", {}).get("prewarm"):
+                return SimpleNamespace(output_parsed=None, usage=usage, status="completed")
+            prompt = "\n".join(_text(m) for m in kw["input"] if m["role"] == "user")
             tema_line = next(line for line in prompt.splitlines() if line.startswith("TEMA:"))
             retry = any(m["role"] == "assistant" for m in kw["input"])
             if "(id: vivienda)" in tema_line:
@@ -147,8 +155,15 @@ def test_analyze_end_to_end_valid(sample_pdf: Path, data_dir: Paths):
     assert set(viv.lectura_facil.propuestas[0].citas) <= set(viv.propuestas[0].citas)
     # El documento va primero (prefijo idéntico → caché) con la misma clave de caché
     analysis_calls = [c for c in calls if c["text_format"].__name__ == "TemaLLM"]
-    first_msgs = {c["input"][0]["content"] for c in analysis_calls}
+    first_msgs = {_text(c["input"][0]) for c in analysis_calls}
     assert len(first_msgs) == 1 and first_msgs.pop().startswith("DOCUMENTO · Partido Popular")
+    # Punto de corte explícito tras el documento + modo explícito + prewarm previo
+    assert all(
+        c["input"][0]["content"][0]["prompt_cache_breakpoint"] == {"mode": "explicit"}
+        for c in analysis_calls
+    )
+    assert all(c["prompt_cache_options"]["mode"] == "explicit" for c in analysis_calls)
+    assert analysis_calls[0]["prompt_cache_options"].get("prewarm") is True
     assert {c.get("prompt_cache_key") for c in analysis_calls} == {"votoclaro/generales-2026/pp"}
     assert a.generado.tokens_cache > 0 and a.generado.coste_usd and a.generado.coste_usd > 0
     # Pasa la misma validación que la CI

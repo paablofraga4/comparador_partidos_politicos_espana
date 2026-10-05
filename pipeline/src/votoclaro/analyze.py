@@ -224,7 +224,18 @@ class Contexto:
             f"{' · ' + ' > '.join(c.seccion) if c.seccion else ''}]\n{c.texto}"
             for c in self.chunks
         )
-        self.document_message = {"role": "user", "content": header + body}
+        # Punto de corte explícito de caché justo detrás del documento: todo lo anterior
+        # (instrucciones + esquema + documento) es idéntico en todas las llamadas.
+        self.document_message = {
+            "role": "user",
+            "content": [
+                {
+                    "type": "input_text",
+                    "text": header + body,
+                    "prompt_cache_breakpoint": {"mode": "explicit"},
+                }
+            ],
+        }
         self.cache_key = f"votoclaro/{self.conv}/{self.cand.id}"
 
     def register(self, raw: CitaLLM) -> tuple[str | None, str | None]:
@@ -338,6 +349,21 @@ def _ask(
         input=messages,
         schema=TemaLLM,
         cache_key=ctx.cache_key,
+        explicit_cache=True,
+    )
+
+
+def prewarm(ctx: Contexto) -> None:
+    """Escribe en caché el prefijo común (instrucciones + esquema + documento) una vez."""
+    parse(
+        ctx.client,
+        ctx.model,
+        ctx.usage,
+        instructions=INSTRUCCIONES,
+        input=[ctx.document_message],
+        schema=TemaLLM,
+        cache_key=ctx.cache_key,
+        prewarm=True,
     )
 
 
@@ -517,11 +543,9 @@ def analyze(
         return tema.id, t
 
     if temas:
-        # La primera llamada calienta la caché del documento; el resto, en paralelo.
-        tid, t = run(temas[0])
-        results[tid] = t
+        prewarm(ctx)  # la caché del documento queda lista antes de lanzar los temas en paralelo
         with ThreadPoolExecutor(max_workers=workers) as pool:
-            for tid, t in pool.map(run, temas[1:]):
+            for tid, t in pool.map(run, temas):
                 results[tid] = t
 
     temas_out: dict[str, AnalisisTema] = {}
