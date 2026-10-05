@@ -23,10 +23,10 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
 
 ## F1b · Análisis de 2023 (mié 7)
-- [ ] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste. **V:** 1 candidatura × 3 temas
-- [ ] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
-- [ ] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
-- [ ] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
+- [ ] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste (código y tests con cliente simulado ✓; falta la ejecución real). **V:** 1 candidatura × 3 temas
+- [x] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
+- [x] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
+- [x] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
 - [ ] T-114 Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
 
 ## F2 · Comparador web (mié 7 - jue 8)

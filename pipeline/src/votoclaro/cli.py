@@ -212,3 +212,138 @@ def show_pages(candidatura: Cand, convocatoria: Conv, pagina: int) -> None:
             return
     console.print("[red]Página no encontrada")
     raise typer.Exit(1)
+
+
+@app.command()
+def analyze(
+    candidatura: Cand,
+    convocatoria: Conv,
+    tema: Annotated[list[str] | None, typer.Option(help="Solo estos temas (repetible)")] = None,
+    force: Annotated[bool, typer.Option(help="Permite rehacer un análisis aprobado")] = False,
+    workers: Annotated[int, typer.Option(help="Llamadas en paralelo")] = 6,
+) -> None:
+    """Analiza el programa por temas con citas verificadas y lectura fácil (HU-1.3/1.4/1.5)."""
+    from .analyze import Contexto
+    from .analyze import analyze as run_analysis
+    from .llm import LLMConfigError, ModelConfig, make_client
+    from .registry import load_topics
+
+    paths = _paths()
+    target = paths.analysis(convocatoria, candidatura)
+    previous = load_analysis(paths, convocatoria, candidatura) if target.exists() else None
+    if previous and previous.estado == "aprobado" and not force:
+        console.print("[red]✗ El análisis está aprobado. Usa --force (y avisa en el PR).")
+        raise typer.Exit(1)
+    topics = load_topics(paths).temas
+    if tema:
+        unknown = set(tema) - {t.id for t in topics}
+        if unknown:
+            console.print(f"[red]✗ Temas desconocidos: {sorted(unknown)}")
+            raise typer.Exit(1)
+        topics = [t for t in topics if t.id in tema]
+    else:
+        previous = None  # análisis completo: se rehace todo
+    try:
+        client = make_client()
+        model, fast = ModelConfig.from_env("ANALYSIS"), ModelConfig.from_env("FAST")
+    except LLMConfigError as e:
+        console.print(f"[red]✗ {e}")
+        raise typer.Exit(1) from e
+    fuente = load_sources(paths).convocatorias[convocatoria].programas[candidatura]
+    meta_path = paths.meta(convocatoria, candidatura)
+    from .models import DocumentoMeta
+
+    meta = DocumentoMeta.model_validate_json(meta_path.read_text(encoding="utf-8"))
+    if meta.sha256 != fuente.sha256:
+        console.print(
+            "[red]✗ El texto extraído no corresponde al documento registrado: `vc extract`"
+        )
+        raise typer.Exit(1)
+    cand = load_candidaturas(paths).get(candidatura)
+    with pymupdf.open(paths.data / fuente.fichero) as doc:
+        ctx = Contexto(
+            client=client,
+            model=model,
+            fast=fast,
+            cand=cand,
+            conv=convocatoria,
+            meta=meta,
+            chunks=load_chunks(paths, convocatoria, candidatura),
+            doc=doc,
+            log=lambda m: console.print(m),
+        )
+        console.print(
+            f"Analizando {cand.corto} · {convocatoria} · {len(topics)} temas · modelo {model.name}"
+        )
+        result = run_analysis(ctx, topics, workers=workers, previous=previous)
+    write_json(target, result)
+    reg = load_sources(paths)
+    reg.convocatorias[convocatoria].programas[candidatura].estado = "analizado"
+    from .registry import save_sources
+
+    save_sources(paths, reg)
+    g = result.generado
+    console.print(
+        f"[green]✓[/] {paths.rel(target)} · {len(result.citas)} citas · "
+        f"{len(result.incidencias)} incidencias · tokens {g.tokens_entrada:,} "
+        f"({g.tokens_cache:,} caché) / {g.tokens_salida:,} · "
+        f"coste {g.coste_usd if g.coste_usd is not None else '¿?'} USD"
+    )
+
+
+@app.command()
+def report(candidatura: Cand, convocatoria: Conv) -> None:
+    """Imprime el informe de revisión en Markdown (para el PR)."""
+    from .registry import iter_analyses, load_topics
+    from .report import render
+
+    paths = _paths()
+    a = load_analysis(paths, convocatoria, candidatura)
+    peers = [
+        x
+        for _, x in iter_analyses(paths)
+        if x.convocatoria == convocatoria and x.candidatura != candidatura
+    ]
+    sys.stdout.write(render(a, load_topics(paths), peers) + "\n")
+
+
+@app.command()
+def approve(candidatura: Cand, convocatoria: Conv) -> None:
+    """Marca un análisis como aprobado (se hace dentro del PR, antes del merge)."""
+    from datetime import UTC, datetime
+
+    from .registry import save_sources
+    from .validate import validate as validate_all
+
+    paths = _paths()
+    a = load_analysis(paths, convocatoria, candidatura)
+    a.estado = "aprobado"
+    a.aprobado_en = datetime.now(UTC).replace(microsecond=0)
+    write_json(paths.analysis(convocatoria, candidatura), a)
+    inf = validate_all(paths)
+    if not inf.ok:
+        a.estado, a.aprobado_en = "borrador", None
+        write_json(paths.analysis(convocatoria, candidatura), a)
+        for e in inf.errores[:20]:
+            console.print(f"[red]✗ {e}")
+        console.print("[red]No se puede aprobar: data/ no es válido.")
+        raise typer.Exit(1)
+    reg = load_sources(paths)
+    reg.convocatorias[convocatoria].programas[candidatura].estado = "aprobado"
+    save_sources(paths, reg)
+    console.print(f"[green]✓ {candidatura} · {convocatoria} aprobado")
+
+
+@app.command()
+def models() -> None:
+    """Lista los modelos disponibles con tu clave (tarea T-107)."""
+    from .llm import LLMConfigError, make_client
+
+    try:
+        client = make_client()
+    except LLMConfigError as e:
+        console.print(f"[red]✗ {e}")
+        raise typer.Exit(1) from e
+    ids = sorted(m.id for m in client.models.list())
+    for i in ids:
+        console.print(i)
