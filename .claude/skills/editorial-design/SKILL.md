@@ -30,7 +30,7 @@ concreta en código (`web/app/globals.css` + componentes base) y actualiza esta 
 | `--notice` | `#8A5A00` sobre `#FFF4DB` | `#F2C46D` sobre `#2B2210` | aviso "programa de 2023" |
 | `--focus` | `#16181D` + halo `--marker` | idem | anillo de foco |
 
-Colores de partido: `data/parties.yaml` → `--party-<id>`; solo `border-left`, punto de 8-10 px
+Colores de partido: `data/candidaturas.yaml` → `--party-<id>`; solo `border-left`, punto de 8-10 px
 o subrayado de pestaña. Nunca texto sobre color de partido salvo que pase AA.
 
 ## Tipografía (`next/font/google`)

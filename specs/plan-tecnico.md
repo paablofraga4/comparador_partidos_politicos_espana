@@ -1,200 +1,215 @@
-# Plan técnico
+# Plan técnico · VotoClaro
 
-- **Estado**: borrador · pendiente de aprobación
+- **Estado**: aprobado (5 oct 2026) · objetivo de lanzamiento: **domingo 11 de octubre**
 - **Implementa**: specs [001](001-datos-y-analisis/spec.md), [002](002-comparador/spec.md) y [003](003-chat/spec.md)
 
 ## Arquitectura
 
 ```
- PDFs oficiales (webs de los partidos)
-        │
+ Webs de partidos · BOE (datos abiertos) · noticias
+        │  vigilancia (GitHub Actions, cron) → issue + PR en borrador
         ▼
  pipeline/  · Python, se ejecuta offline (en local o en GitHub Actions)
-   fetch ─► extract ─► chunk ─► analyze ─► verify ─► report ─► PR
-             PyMuPDF             OpenAI      citas literales
-             texto+posiciones    structured  + rectángulos de
-                                 outputs     resaltado
+   fetch ─► extract ─► chunk ─► analyze ─► verify ─► recall-check ─► easy-read ─► report ─► PR
+   (PDF/HTML) PyMuPDF   contexto  programa    literal +   red de        reglas UNE
+              texto,    de        completo +  rects de    seguridad     + fidelidad
+              posición, sección   caché       resaltado   («no menciona»)
+              secciones
         │ escribe
         ▼
- data/  · fuente de verdad, en git y revisable por diff
-   parties.yaml · topics.yaml · sources.yaml
-   documents/<convocatoria>/<partido>.pdf
-   extracted/<convocatoria>/<partido>.jsonl   (páginas y chunks con posiciones)
-   analyses/<convocatoria>/<partido>.json     (todos los temas, con citas)
-        │                                   │
-        │ build (páginas estáticas)         │ pre-deploy: db:sync (embeddings incrementales)
+ data/  · fuente de verdad, en git
+   candidaturas.yaml · topics.yaml · sources.yaml
+   documents/<conv>/<cand>.pdf · extracted/<conv>/<cand>.jsonl · analyses/<conv>/<cand>.json
+        │ build (estático)                  │ pre-deploy: db:sync (índices incrementales)
         ▼                                   ▼
  web/  · Next.js 16 en Railway ◄────────► Postgres + pgvector en Railway
-   · comparador, fichas y temas (SSG)        · chunks con embedding y FTS en español
-   · panel de fuente y visor (pdf.js)        · límites de uso (hash de IP)
-   · /api/chat (AI SDK + tools de OpenAI)    · métricas agregadas
+   · comparador, fichas, temas, papeleta     · índice de propuestas (FTS + vector)
+   · panel de fuente y visor (pdf.js)        · índice de fragmentos contextuales (FTS + vector)
+   · /api/chat: AI SDK + tools de OpenAI     · límites de uso y uso diario agregado
 ```
 
 ## Decisiones
 
-**D1 · Monorepo**. Carpetas `web/` (TypeScript), `pipeline/` (Python), `data/`, `evals/` y
-`specs/`. Railway despliega un único servicio web.
+**D1 · Monorepo**. Carpetas `web/` (TypeScript), `pipeline/` (Python con uv), `data/`,
+`evals/` y `specs/`. Railway despliega un único servicio web más Postgres.
 
-**D2 · Los análisis viven en git, no en la base de datos**. Así se revisan por *diff*, se
-audita el historial, deshacer un cambio es un `git revert` y la web se genera estática. El
-paso de 2023 al 29N es el merge de un PR (spec 001, HU-1.7).
+**D2 · Los análisis viven en git**, no en la base de datos: se revisan por *diff*, se puede
+volver atrás con `git revert` y la web se genera estática. Pasar de 2023 al 29N es hacer
+merge de un PR.
 
-**D3 · Copia de los PDFs en el repo** (sin LFS, porque el ancho de banda de LFS penaliza
-los builds). Se estiman menos de 150 MB para las dos convocatorias. Así la URL de cada cita
-es estable aunque el partido mueva o borre su PDF. Siempre se enlaza también la URL original
-y la copia de la Wayback Machine.
+**D3 · Copia de los PDFs en el repo**, sin LFS. Así las citas tienen una URL estable aunque
+el partido borre el original. Siempre se enlazan también la URL original y la de Wayback.
 
 **D4 · Extracción con PyMuPDF**:
-- texto por página y bloques con *bounding box*;
-- etiqueta de página impresa;
-- los rectángulos de resaltado se calculan **en el pipeline** con `page.search_for(cita)` y
-  se guardan normalizados de 0 a 1, para que el navegador solo tenga que dibujarlos;
-- OCR (`ocrmypdf`) solo si el documento no tiene capa de texto.
+- texto por página, bloques con *bounding box*, etiqueta de página impresa y jerarquía de
+  títulos (por tamaño y peso de fuente, más el índice del PDF si existe);
+- los rectángulos de resaltado se calculan en el pipeline con `page.search_for()` y se guardan
+  normalizados (de 0 a 1);
+- OCR con `ocrmypdf` solo si hace falta;
+- los programas en **HTML** se archivan como PDF con Playwright (`page.pdf()`) y luego siguen
+  el mismo camino.
 
-**D5 · Análisis con el documento completo y caché**:
-- Los programas tienen entre 50 y 300 páginas, lo que cabe en el contexto de los modelos
-  actuales. Por cada partido se hace **una llamada por tema** con el documento completo como
-  prefijo idéntico, de modo que la caché automática de *prompts* de OpenAI abarata el coste.
-  El texto lleva marcas de chunk (`⟦c:pp-26-p047-02⟧`).
-- La salida usa *structured outputs* (JSON Schema estricto) con este contenido: `menciona`,
-  `resumen[] {texto, citas[] {chunk_id, literal}}` y `propuestas[] {texto, subtema, citas[]}`.
-- Una segunda llamada genera la lectura fácil a partir de la salida anterior, sin documento,
-  para que no pueda añadir hechos nuevos.
-- **Verificación determinista**: cada `literal` debe ser una subcadena (normalizada) del
-  chunk citado. Si no lo es, se reintenta una vez y, si vuelve a fallar, se descarta la
-  afirmación y se anota en el informe.
-- Si un documento no cabe en el contexto, se hace en dos pasos: clasificar los chunks por
-  tema y luego analizar.
-- Se usa temperatura 0 y se registran el modelo y la versión del prompt.
+**D5 · Análisis del comparador: extracción exhaustiva con el programa completo en contexto**
+(decisión razonada en la spec 001):
+- Se hace una llamada por tema con el programa entero como prefijo idéntico, para
+  aprovechar la caché automática de *prompts* de OpenAI. El texto lleva marcas de fragmento
+  `⟦c:ID⟧`.
+- La salida usa *structured outputs* con JSON Schema estricto: `menciona`,
+  `resumen[] {texto, citas[{chunk_id, literal}]}` y `propuestas[] {texto, subtema, citas[]}`.
+- **Verificación determinista** de cada literal. Si falla, se reintenta una vez y, si vuelve
+  a fallar, se descarta la afirmación y se anota en el informe.
+- **Red de seguridad**: para cada `menciona: false`, búsqueda híbrida con los subtemas. Si
+  aparecen fragmentos por encima del umbral, se reanaliza el tema con esos fragmentos
+  destacados y se anota en el informe.
+- Si un documento no cabe en el contexto, se clasifican los fragmentos por tema y se analiza
+  después.
+- Temperatura 0; se registran el modelo, la versión del *prompt* y el coste.
 
-**D6 · Lint de neutralidad**. En el informe se combinan un léxico de términos valorativos
-(determinista), la comparación de extensiones frente a la media y un revisor con IA. Los
-avisos no bloquean: los decide el humano en el PR.
+**D6 · Lectura fácil**:
+- Una llamada aparte, sin el documento, a partir de la salida verificada.
+- `cmp easy-read check` aplica reglas deterministas: longitud de frase, INFLESZ calculado con
+  silabeo en español, siglas, números en cifras, dobles negaciones y palabras poco frecuentes
+  según una lista de frecuencias del español.
+- Un juez automático comprueba la fidelidad.
+- Si falla, se regenera hasta 2 veces; si sigue fallando, se marca en el informe.
 
-**D7 · Búsqueda del chat**. Es híbrida en Postgres:
-- FTS con `to_tsvector('spanish')` y `unaccent`, más pgvector por similitud coseno, fusionadas
-  con RRF;
-- filtros por partido y convocatoria;
-- los embeddings los calcula `db:sync` en el *pre-deploy*, solo para los chunks nuevos (por
-  hash).
+**D7 · Búsqueda del chat: RAG agéntico híbrido y simétrico**. Todo en Postgres:
+- **Índices**: `propuestas` (texto de cada propuesta con partido, tema y subtema, más sus
+  citas) y `fragmentos` (texto con su cabecera contextual: candidatura, convocatoria,
+  «Capítulo > Sección» y página).
+- **Léxico**: `to_tsvector('spanish', unaccent(...))` con `ts_rank_cd`.
+- **Semántico**: pgvector con distancia coseno e índice HNSW. Los embeddings se calculan en
+  `db:sync`, solo para los elementos nuevos (por hash).
+- **Fusión** RRF (k=60), con los filtros de convocatoria vigente y candidaturas.
+- ***Reranking***: el modelo rápido puntúa los 40 mejores candidatos en una sola llamada y se
+  quedan 8. Se activa o desactiva por variable de entorno, según los evals.
+- **Simetría**: si la pregunta implica varias candidaturas, se hace una búsqueda por cada una
+  con la misma *k*.
 
-**D8 · Orquestación del chat**. AI SDK (`ai` v7 y `@ai-sdk/openai`) con `streamText` y tres
-*tools*:
-- `obtener_analisis(partidos[], temas[], convocatoria?)`: devuelve los análisis ya revisados.
-  Es la primera opción para preguntas de un tema.
-- `buscar_en_programas(consulta, partidos?, convocatoria?)`: búsqueda híbrida que devuelve
-  chunks con su id, página y texto.
-- `listar_partidos()`: partidos y estado de sus programas.
+**D8 · Orquestación del chat**. AI SDK (`ai` v7 y `@ai-sdk/openai`) con `streamText`, un
+máximo de 4 pasos y cuatro *tools*:
+- `obtener_analisis(candidaturas[], temas[], convocatoria?)`: análisis verificados. Va
+  primero.
+- `buscar_propuestas(consulta, candidaturas?)`: índice de propuestas.
+- `buscar_en_programas(consulta, candidaturas?, convocatoria?)`: índice de fragmentos.
+- `listar_candidaturas(provincia?)`: candidaturas y estado de sus programas.
 
-La respuesta cita con marcas `[[c:ID]]`. Un validador en el servidor elimina las marcas que
-no estén en los resultados de las *tools* de ese turno, y el cliente las convierte en
-*chips* que abren el panel de fuente.
+Las citas van con la marca `[[c:ID]]`. Un validador en el servidor elimina las marcas que no
+estén en los resultados de las *tools* de ese turno.
 
-**D9 · Modelos**. Se configuran por entorno: `OPENAI_MODEL_ANALYSIS`, `OPENAI_MODEL_CHAT`,
-`OPENAI_MODEL_FAST` y `OPENAI_EMBEDDING_MODEL`. Se fijan en la fase 1 tras consultar el
-catálogo real (`GET /v1/models`) y compararlos con los evals. No se dejan nombres de modelos
-supuestos en el código.
+**D9 · Modelos**. Por entorno: `OPENAI_MODEL_ANALYSIS`, `OPENAI_MODEL_CHAT`,
+`OPENAI_MODEL_FAST` y `OPENAI_EMBEDDING_MODEL`. Se fijan en la T-107 consultando
+`GET /v1/models` y probando con los evals. Nunca se escriben nombres de modelo de memoria.
 
 **D10 · Frontend**:
-- Next.js 16 (App Router), TypeScript estricto y Tailwind CSS v4;
-- primitivas accesibles de Radix (vía shadcn/ui) y Motion para las animaciones;
-- `next/font` para las tipografías y `pdfjs-dist` para el panel de fuente y el visor;
-- estado del comparador en la URL (`nuqs`).
+- Next.js 16 (App Router), TypeScript estricto y Tailwind v4;
+- shadcn/ui (Radix), Motion y `nuqs` (estado en la URL);
+- `next/font` con Newsreader y Public Sans;
+- `pdfjs-dist` cargado bajo demanda, con una capa de rectángulos encima;
+- *scroll* automático al primer rectángulo del resaltado.
 
-**D11 · Despliegue en Railway**:
-- Servicio `web`: `Dockerfile` en la raíz, necesario porque el build lee `data/`, que está
-  fuera de `web/`.
-- Servicio `postgres`: plantilla de Postgres con pgvector.
+**D11 · Railway**:
+- Servicio `web` con `Dockerfile` en la raíz (el build necesita `data/`).
+- Postgres con pgvector.
 - *Pre-deploy*: `npm run db:migrate && npm run db:sync`.
-- Despliegue automático con cada push a `main`.
+- Despliegue automático desde `main` y dominio `*.up.railway.app` hasta que compres el tuyo.
 
-**D12 · CI (GitHub Actions)**:
-- `ci.yml`: lint, typecheck, tests y build de web; ruff y pytest del pipeline; y
-  `validate-data` (esquemas, citas verificadas, simetría de límites y que todo partido × tema
-  exista).
-- `ingest.yml` (*workflow_dispatch*): recibe partido, convocatoria y URL, ejecuta el pipeline
-  y abre un PR con el informe.
-- `evals.yml` (manual o en PRs que tocan el chat): ejecuta los evals con un tope de coste.
+**D12 · CI y automatizaciones (GitHub Actions)**:
+- `ci.yml`: web (lint, typecheck, tests y build), pipeline (ruff y pytest) y
+  `cmp validate`, que comprueba esquemas, citas verificadas, límites, completitud y lectura
+  fácil.
+- `ingest.yml` (manual o lanzado por la vigilancia): candidatura, convocatoria y URL → PR.
+- `watch-programs.yml` (cron cada 3 h, hasta el 27 de noviembre): páginas `vigilar` y
+  búsqueda de noticias → *issue* y, si es un documento oficial, `ingest.yml` en borrador.
+- `watch-boe.yml` (cron diario, del 16 de octubre al 3 de noviembre): API del sumario del BOE
+  → *parser* de candidaturas → PR a `candidaturas.yaml`.
+- `evals.yml` (manual o en PRs que tocan el chat), con un tope de coste.
 
 **D13 · Tests**:
-- Vitest para la lógica de web (validador de citas, regla de *fallback* y RRF).
-- Playwright para el e2e: flujo de comparación, cita → panel en la página correcta, lectura
-  fácil y axe.
-- pytest para el pipeline, con PDFs de prueba pequeños.
+- Vitest para el validador de citas, el *fallback*, RRF y la simetría.
+- Playwright para el e2e: comparar, cita → página con el resaltado visible, lectura fácil,
+  papeleta y axe.
+- pytest con PDFs de prueba.
 
-**D14 · Privacidad y abuso**:
-- Límite de uso por `HMAC(IP, sal diaria)` en Postgres, con borrado a las 24 h.
-- Nunca se registra el contenido de las preguntas.
-- Tope de gasto diario contabilizado por los tokens de cada respuesta.
+**D14 · Privacidad**: límite de uso por `HMAC(IP, sal diaria)` con borrado a las 24 h; nunca
+se guarda el texto de las preguntas; tope de gasto diario.
 
-## Estructura del repositorio
-
-```
-.
-├── CLAUDE.md · README.md · Dockerfile · .env.example
-├── specs/              constitución, specs, plan, tareas y plantillas
-├── .claude/            settings (permisos y hooks), skills y agents
-├── .github/workflows/  ci, ingest y evals
-├── data/               registros, PDFs, texto extraído y análisis
-├── pipeline/           paquete Python «cmp» (uv): fetch, extract, analyze, verify y report
-├── web/                Next.js: app/, components/, lib/ y db/
-└── evals/              preguntas de referencia y runner
-```
+**D15 · Licencias**:
+- Código con licencia MIT (`LICENSE`).
+- Análisis, textos y datos propios con CC BY 4.0 (`data/LICENSE`).
+- Los PDFs de los programas son de sus partidos: se reproducen para documentar las fuentes y
+  quedan excluidos de las licencias anteriores.
+- Las citas literales se amparan en el derecho de cita (art. 32 LPI).
 
 ## Modelo de datos
 
-**Análisis** (`data/analyses/<convocatoria>/<partido>.json`):
+**Análisis** (`data/analyses/<conv>/<cand>.json`):
 
 ```jsonc
 {
   "convocatoria": "generales-2026",
-  "partido": "pp",
+  "candidatura": "pp",
   "estado": "borrador",            // borrador | aprobado
   "documento": { "id": "generales-2026/pp", "sha256": "…", "paginas": 230, "idioma": "es" },
   "generado": { "fecha": "…", "modelo": "…", "prompt": "analisis@1", "coste_usd": 1.2 },
   "temas": {
     "vivienda": {
       "menciona": true,
-      "resumen":     [{ "texto": "…", "citas": ["c0012"] }],
-      "propuestas":  [{ "id": "vivienda-1", "texto": "…", "subtema": "alquiler", "citas": ["c0012"] }],
-      "lectura_facil": { "resumen": [/* … */], "propuestas": [/* … */] }
+      "red_seguridad": null,       // si menciona=false: {ejecutada, fragmentos_revisados, reanalizado}
+      "resumen":    [{ "texto": "…", "citas": ["c0012"] }],
+      "propuestas": [{ "id": "vivienda-1", "texto": "…", "subtema": "alquiler", "citas": ["c0012"] }],
+      "lectura_facil": {
+        "resumen": [/* … */], "propuestas": [/* … */],
+        "legibilidad": { "inflesz": 72.4, "max_palabras_frase": 14, "ok": true }
+      }
     }
   },
   "citas": {
     "c0012": {
       "chunk": "pp-26-p047-02", "pagina": 47, "pagina_impresa": "45",
       "literal": "…", "idioma": "es", "traduccion": null,
-      "rects": [[0.12, 0.40, 0.88, 0.43]], "verificada": true
+      "rects": [{ "pagina": 47, "r": [0.12, 0.40, 0.88, 0.43] }], "verificada": true
     }
   }
 }
 ```
 
 **Postgres**:
-- `chunks(id, convocatoria, partido, pagina, texto, tsv, embedding vector, hash)`
+- `propuestas(id, conv, cand, tema, subtema, texto, citas jsonb, tsv, embedding, hash)`
+- `fragmentos(id, conv, cand, pagina, seccion, texto_contextual, tsv, embedding, hash)`
 - `rate_limits(clave_hash, ventana, contador)`
 - `uso_diario(fecha, preguntas, tokens_in, tokens_out, coste_usd)`
 
-## Calendario
+## Calendario hasta el lanzamiento
 
-| Fase | Contenido | Objetivo |
+| Día | Fases | Resultado |
 |---|---|---|
-| F0 | Harness, constitución y specs | 6 oct · **tu aprobación** |
-| F1 | Pipeline y programas de 2023 analizados y aprobados | 12 oct |
-| F2 | Comparador, panel de fuente, visor y lectura fácil | 21 oct |
-| F3 | Chat y evals | 28 oct |
-| F4 | Railway, dominio, accesibilidad, rendimiento y pulido | **online el 2 nov** |
-| F5 | Ingesta de los programas del 29N según se publiquen (< 24 h cada uno) | 2-27 nov |
+| **Lun 5** | F0 | Harness, specs aprobadas y repo ✅ |
+| **Mar 6** | F1a | Pipeline (fetch, extract, chunk, verify y validate) y PDFs de 2023 localizados. **Necesito tu `OPENAI_API_KEY` en `.env`** |
+| **Mié 7** | F1b y F2a | Análisis de 2023, red de seguridad, lectura fácil, revisión con agentes · esqueleto web, diseño y capa de datos |
+| **Jue 8** | F2b | Comparador, ficha, temas, panel de fuente, visor, lectura fácil y metodología |
+| **Vie 9** | F3 | Postgres, índices, búsqueda híbrida, *reranking*, chat y evals. **Necesito tu `railway login`** |
+| **Sáb 10** | F4 | Railway, CI, vigilancia de programas (versión mínima), accesibilidad, rendimiento y revisión final |
+| **Dom 11** | 🚀 | **Lanzamiento** y *smoke tests* |
 
-La campaña empieza el 13 de noviembre: la web tiene que estar estable antes.
+## Después del lanzamiento
+
+| Cuándo | Qué |
+|---|---|
+| 12-14 oct | Vigilancia de programas completa (noticias e ingesta automática en borrador) |
+| antes del 16 oct | Vigilancia del BOE y de coaliciones |
+| antes del 28 oct | *Parser* de candidaturas del BOE y «Tu papeleta» |
+| 28 oct - 3 nov | Carga de todas las candidaturas presentadas y luego proclamadas |
+| oct-nov | Validación humana de la lectura fácil (fase 1 y fase 2) |
+| hasta el 27 nov | Ingesta de los programas del 29N en menos de 24 h cada uno |
 
 ## Riesgos
 
 | Riesgo | Mitigación |
 |---|---|
-| Un partido publica tarde o nunca su programa | *Fallback* a 2023 con aviso; estado visible en la metodología |
-| PDF escaneado o con maquetación compleja (columnas, tablas) | OCR y revisión del texto extraído en el informe |
-| Alucinación o cita que no respalda la afirmación | Verificación literal, revisor con IA y revisión humana; evals en el chat |
-| Acusaciones de sesgo | Constitución pública, repo público, simetría y canal de errores |
-| Pico de tráfico en campaña | Comparador estático y chat con límites y tope de gasto |
-| Coste de la IA | Caché de *prompts*, tope diario y modelos según los evals |
+| El plazo del domingo | Alcance cerrado por día; si algo se retrasa, se recorta antes el *reranking* o el visor completo que el *grounding* o la revisión |
+| Muchas candidaturas pequeñas tras el BOE | El pipeline es automático; revisión por agentes y muestreo humano; «No ha publicado programa» |
+| Programas en HTML o escaneados | Archivo como PDF y OCR |
+| Alucinaciones o citas que no respaldan lo afirmado | Verificación literal, red de seguridad, auditor, revisión humana y evals |
+| Acusaciones de sesgo | Criterio del BOE sin filtro editorial, simetría, repo público y canal de errores |
+| Pico de tráfico en campaña | Páginas estáticas; chat con límites y tope de gasto |

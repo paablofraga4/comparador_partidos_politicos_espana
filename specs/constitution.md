@@ -1,4 +1,4 @@
-# Constitución del proyecto
+# Constitución de VotoClaro
 
 Principios no negociables. Cualquier spec, plan, prompt o línea de código que los contradiga
 está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de forma explícita.
@@ -23,9 +23,19 @@ está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de
    borde, etiqueta), nunca como fondo dominante; ningún partido destaca sobre otro.
    El color nunca es el único identificador: siempre va acompañado del nombre.
    No se usan logotipos de los partidos.
-6. **Criterio de inclusión objetivo y público**: partidos con representación en las
-   Cortes Generales en la XV legislatura, más Sumar. La lista y el criterio se publican
-   en la página de metodología.
+6. **Criterio de inclusión objetivo y público, con el BOE como única fuente**. La unidad que
+   se compara es la **candidatura** (partido, coalición o agrupación de electores), porque es
+   la que aparece en la papeleta y la que presenta el programa.
+   - *Fase provisional* (hasta que el BOE publique las candidaturas presentadas, hacia el
+     28 de octubre): las candidaturas con representación en las Cortes en la XV legislatura,
+     con el aviso «Lista provisional hasta la publicación oficial de candidaturas».
+   - *Desde la publicación en el BOE*: **todas** las candidaturas al Congreso presentadas y,
+     tras la proclamación (hacia el 3 de noviembre), todas las proclamadas, sin filtro
+     editorial.
+   - Una candidatura sin programa publicado aparece igualmente, con «No ha publicado programa
+     electoral (comprobado el {fecha})».
+   - El criterio, la fase vigente y la fuente del BOE se publican en la página de
+     metodología.
 
 ## II. Grounding: nada sin fuente
 
@@ -64,7 +74,9 @@ está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de
 ## V. Accesible y para todo el mundo
 
 1. WCAG 2.2 nivel AA. Mobile-first. Navegable con teclado y lector de pantalla.
-2. Modo de **lectura fácil** disponible en todo el contenido analizado y en el chat.
+2. Modo de **lectura fácil** disponible en todo el contenido analizado y en el chat. Mientras
+   no esté validado por personas usuarias (norma UNE 153101 EX), se etiqueta como «Adaptación
+   automática» y no lleva el logotipo oficial de lectura fácil.
 3. Lenguaje claro en toda la interfaz.
 4. Rápida en móviles modestos: LCP < 2,5 s en 4G para las páginas del comparador.
 

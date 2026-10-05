@@ -31,7 +31,7 @@ if (touched("pipeline/") && has("pipeline/pyproject.toml") && commandExists("uv"
   if (!tests.ok) failures.push(`pipeline · pytest\n${tests.out.slice(-3000)}`);
 }
 
-if ((touched("data/analyses/") || touched("data/parties.yaml") || touched("data/topics.yaml")) &&
+if ((touched("data/analyses/") || touched("data/candidaturas.yaml") || touched("data/topics.yaml")) &&
     has("pipeline/pyproject.toml") && commandExists("uv")) {
   const v = run("uv run --quiet cmp validate", `${ROOT}/pipeline`, 300_000);
   if (!v.ok) failures.push(`data · cmp validate\n${v.out.slice(-3000)}`);

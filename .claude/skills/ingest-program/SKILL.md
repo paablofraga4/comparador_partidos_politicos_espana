@@ -12,26 +12,28 @@ Solo `aprobado` se ve en la web; hasta entonces sigue el programa anterior con s
 > Los comandos `cmp …` se construyen en la fase F1. Antes de eso, este runbook es la guía.
 
 ## 0. Comprobaciones previas
-- El partido existe en `data/parties.yaml` y la candidatura de esa convocatoria está
-  actualizada (coaliciones). Si es un partido nuevo, añádelo respetando el criterio de
-  inclusión (constitución I.6) y confírmalo con el usuario.
+- La candidatura existe en `data/candidaturas.yaml` con su estado para esa convocatoria.
+  Si es nueva (coalición, agrupación de electores…), solo se publica si cumple el criterio
+  de inclusión (constitución I.6: fase provisional o aparece en el BOE); puedes ingestarla
+  antes en borrador para tenerla lista.
 - La URL es del **dominio oficial del partido** (o de una fuente oficial equivalente). Si
   solo existe en prensa, avisa al usuario antes de seguir.
 - Si hay versión en castellano y en otra lengua, usa la castellana y registra la otra.
 
 ## 1. Ejecutar
 Opción A — GitHub (también desde el móvil): Actions → **Ingestar programa** → Run workflow
-(partido, convocatoria, URL). Abre un PR automáticamente.
+(candidatura, convocatoria, URL). Abre un PR automáticamente. La vigilancia
+(`watch-programs.yml`) también lo lanza sola en borrador al detectar un documento oficial.
 
 Opción B — local:
 ```bash
-git switch -c ingest/<convocatoria>-<partido>
+git switch -c ingest/<convocatoria>-<candidatura>
 cd pipeline
-uv run cmp fetch   --partido <id> --convocatoria <conv> --url "<url>"
-uv run cmp extract --partido <id> --convocatoria <conv>
-uv run cmp analyze --partido <id> --convocatoria <conv>
-uv run cmp verify  --partido <id> --convocatoria <conv>
-uv run cmp report  --partido <id> --convocatoria <conv> > ../report.md
+uv run cmp fetch   --candidatura <id> --convocatoria <conv> --url "<url>"
+uv run cmp extract --candidatura <id> --convocatoria <conv>
+uv run cmp analyze --candidatura <id> --convocatoria <conv>
+uv run cmp verify  --candidatura <id> --convocatoria <conv>
+uv run cmp report  --candidatura <id> --convocatoria <conv> > ../report.md
 uv run cmp validate
 ```
 Después: commit, push y `gh pr create --title "Programa <conv> · <Partido>" --body-file report.md`.
@@ -52,5 +54,5 @@ Después: commit, push y `gh pr create --title "Programa <conv> · <Partido>" --
 
 ## Nunca
 - Aprobar con citas no verificadas (la CI lo impide; no lo sortees).
-- Mezclar dos partidos en un mismo PR.
+- Mezclar dos candidaturas en un mismo PR (salvo el PR único de referencia de 2023).
 - Sobrescribir un análisis aprobado sin `--force` explícito y sin decírselo al usuario.

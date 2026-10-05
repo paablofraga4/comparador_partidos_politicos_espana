@@ -1,6 +1,6 @@
-# Spec 002 · Comparador web
+# Spec 002 · Comparador web (VotoClaro)
 
-- **Estado**: borrador · pendiente de aprobación
+- **Estado**: aprobada (5 oct 2026, con cambios: la cita lleva a la página exacta con el contenido citado y se añade «Tu papeleta»)
 - **Depende de**: [constitución](../constitution.md) · [001 datos](../001-datos-y-analisis/spec.md)
 
 ## Contexto
@@ -26,6 +26,7 @@ fuente con un clic.
 | `/partidos/[partido]` | Ficha del partido con todos los temas |
 | `/temas/[tema]` | Todos los partidos en un tema |
 | `/programas/[partido]/[convocatoria]` | Visor del documento completo (`?pagina=47&cita=c12`) |
+| `/tu-papeleta` | Candidaturas de tu provincia (desde el BOE del ~28 oct) |
 | `/pregunta` | Chat (spec 003) |
 | `/metodologia` | Cómo se hace, criterios, estado de los programas y cómo reportar errores |
 
@@ -49,28 +50,38 @@ fuente con un clic.
   programa de origen.
 - El orden es alfabético (constitución I.2).
 
-### HU-2.3 Cada frase lleva a su fuente ⭐
+### HU-2.3 Cada frase lleva a la página exacta del programa ⭐
 - Cada frase del resumen y cada propuesta lleva **marcas de cita** discretas (por ejemplo,
-  «p. 47»), con estilo de subrayado de rotulador.
-- Al pulsar una cita se abre un **panel de fuente** (lateral en escritorio, a pantalla
-  completa en móvil) con:
-  - la **página del PDF** renderizada y el fragmento **resaltado**;
-  - el fragmento literal en texto, que se puede copiar;
+  «p. 45»), con estilo de subrayado de rotulador.
+- Al pulsar una cita se abre al momento un **panel de fuente** (lateral en escritorio, a
+  pantalla completa en móvil) que **muestra la página del programa que habla de eso**:
+  - la página del PDF renderizada, ajustada al ancho y **desplazada hasta el fragmento
+    citado**, que aparece **resaltado** con el rotulador y visible sin hacer nada más;
+  - las páginas anterior y siguiente a un toque, para leer el contexto;
+  - debajo, el fragmento literal en texto, que se puede copiar;
   - partido, convocatoria y página impresa;
-  - los botones «Abrir documento completo» (visor en esa página) y «Ver en la web del
-    partido» (URL original).
-- El panel se cierra con Esc o con «atrás», y se puede usar con teclado y lector de
-  pantalla («Fuente: programa del PP, página 47»).
+  - los botones «Abrir documento completo» (visor en esa página, con el resaltado) y «Ver en
+    la web del partido» (URL original).
+- Si una cita ocupa dos páginas, se resaltan las dos partes y se puede pasar de una a otra.
+- Si en un caso excepcional no se pudo calcular el resaltado (por ejemplo, un documento con
+  OCR), se abre igualmente en la página correcta, con el literal debajo y el aviso «Fragmento
+  sin resaltar».
+- El panel se cierra con Esc o con «atrás», y se puede usar con teclado y lector de pantalla
+  («Fuente: programa del PP, página 45»).
+- Cada cita tiene una **URL propia** que se puede compartir y abre directamente esa página con
+  el resaltado.
 
-### HU-2.4 Visor del documento
-- Muestra el PDF completo, con navegación por páginas, zoom y el fragmento de la cita
-  resaltado si viene en la URL.
+### HU-2.4 Visor del documento completo
+- Muestra el PDF entero, abierto en la página de la cita y con el fragmento resaltado en
+  pantalla. Tiene navegación por páginas, zoom y búsqueda dentro del documento.
 - Funciona en móvil.
 - Indica el hash del documento y la fecha de archivo, y enlaza a la copia de la Wayback
   Machine.
 
 ### HU-2.5 Modo lectura fácil
-- Un interruptor global, siempre visible en la cabecera, que se recuerda en el navegador.
+- Un interruptor global «Lectura fácil», siempre visible en la cabecera, que se recuerda en el
+  navegador. Muestra «Adaptación automática» hasta que se complete la validación humana
+  (spec 001, HU-1.4).
 - Sustituye los resúmenes y propuestas por su versión de lectura fácil y aumenta el tamaño
   del texto y el espaciado.
 - Las citas siguen visibles y funcionando igual.
@@ -88,6 +99,14 @@ fuente con un clic.
 ### HU-2.8 Reportar un error
 - En cada propuesta, un enlace discreto «¿Ves un error?» abre una *issue* de GitHub ya
   rellenada (partido, tema, propuesta y cita).
+
+### HU-2.10 Tu papeleta ⭐
+- Desde que el BOE publica las candidaturas (~28 oct): «¿Dónde votas?», con un selector de
+  provincia (o de Ceuta y Melilla), muestra **las candidaturas de tu papeleta del Congreso**
+  y permite compararlas con un toque.
+- La provincia se recuerda en el navegador y nunca sale de él.
+- Hasta esa fecha se muestra «Las candidaturas oficiales se publicarán en el BOE hacia el 28
+  de octubre» y el selector permanece oculto.
 
 ### HU-2.9 Encontrable y compartible
 - Las páginas de tema y de partido son indexables, con título y descripción propios.
@@ -120,8 +139,10 @@ fuente con un clic.
 
 - [ ] Desde el inicio, una persona llega a «PP vs PSOE en vivienda» en 3 toques o menos en
       móvil.
-- [ ] El 100 % de las afirmaciones visibles tienen una cita que abre el panel con el
-      fragmento resaltado en la página correcta (test e2e con muestreo).
+- [ ] El 100 % de las afirmaciones visibles tienen una cita que abre el panel en la página
+      correcta, con el fragmento resaltado **visible sin desplazarse** (test e2e con
+      muestreo, en escritorio y en móvil).
+- [ ] Una URL de cita compartida abre directamente la página con su resaltado.
 - [ ] El modo de lectura fácil cambia todo el contenido analizado y se mantiene al navegar.
 - [ ] Todas las tarjetas muestran el programa de origen; las de 2023 llevan su aviso.
 - [ ] axe no da violaciones serias ni críticas en las páginas principales.
@@ -134,7 +155,7 @@ fuente con un clic.
 - Otros idiomas de interfaz (catalán, euskera, gallego, inglés).
 - Las cuentas de usuario y los favoritos.
 
-## Preguntas abiertas
+## Decisiones cerradas
 
-1. **Nombre del producto**: propuestas «Qué Proponen», «Con Lupa» y «Programa a Programa».
-   El dominio lo comprarás tú más adelante.
+- **Nombre**: **VotoClaro**. El dominio lo comprarás tú más adelante; mientras tanto, se usa
+  el dominio de Railway.

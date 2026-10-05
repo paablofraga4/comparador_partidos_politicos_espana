@@ -1,14 +1,18 @@
-# Spec 001 · Datos, análisis y actualización de programas
+# Spec 001 · Datos, análisis, búsqueda y actualización de programas
 
-- **Estado**: borrador · pendiente de aprobación
+- **Estado**: aprobada (5 oct 2026, con cambios: candidaturas según el BOE, vigilancia, RAG y
+  validación de la lectura fácil)
 - **Depende de**: [constitución](../constitution.md)
 
 ## Contexto
 
-La web no analiza nada en tiempo real: cada programa se procesa **una vez**, se revisa y se
-publica. Esta spec define qué datos existen, cómo se generan los análisis por tema, cómo se
-garantiza que cada afirmación tiene fuente y **cómo se sustituye un programa de 2023 por el
-del 29N** cuando un partido lo publica.
+VotoClaro no analiza nada en tiempo real para el comparador: cada programa se procesa **una
+vez**, se revisa y se publica. Esta spec define:
+- qué datos existen;
+- qué técnica se usa para analizar y buscar (incluido el RAG);
+- cómo se garantiza que cada afirmación tiene fuente;
+- cómo **nos enteramos** de las candidaturas y programas nuevos;
+- cómo se sustituye un programa de 2023 por el del 29N.
 
 ## Convocatorias
 
@@ -17,157 +21,240 @@ del 29N** cuando un partido lo publica.
 | `generales-2023` | Elecciones generales 23J | 2023-07-23 | Referencia anterior (*fallback*) |
 | `generales-2026` | Elecciones generales 29N | 2026-11-29 | Convocatoria principal |
 
-## Partidos
+### Calendario oficial que condiciona los datos (LOREG, convocatoria en el BOE del 6 de octubre)
 
-Criterio: representación en las Cortes en la XV legislatura, más Sumar. Registro editable en
-[`data/parties.yaml`](../../data/parties.yaml); añadir o quitar un partido no requiere tocar código.
+| Fecha | Hito | Efecto en VotoClaro |
+|---|---|---|
+| hasta el 16 oct | Comunicación de coaliciones a las juntas electorales | Se vigilan los anuncios de coaliciones |
+| 21-26 oct | Presentación de candidaturas (partidos, coaliciones y agrupaciones de electores) | Se vigilan los anuncios |
+| ~28 oct | El BOE publica las **candidaturas presentadas** | Fin de la lista provisional: entran **todas** |
+| 2-3 nov | **Proclamación** y publicación en el BOE | Lista definitiva: salen las no proclamadas |
+| 13-27 nov | Campaña electoral | Pico de publicación de programas y de tráfico |
 
-- **Estatales**: PP, PSOE, VOX, Sumar y Podemos.
-- **Autonómicos**: ERC, Junts, EH Bildu, PNV, BNG, CC y UPN.
-- **Solo si publican programa propio de generales**: Geroa Bai, ASG y AHI.
-- **Más Madrid y Compromís**: en 2023 concurrieron dentro de Sumar. En el 29N aparecerán
-  por separado solo si se presentan con candidatura y programa propios.
+## Candidaturas
 
-La lista final del 29N se cierra con las coaliciones inscritas (hasta el 16 de octubre) y la
-proclamación de candidaturas.
+La unidad es la **candidatura** (partido, coalición o agrupación de electores): es lo que
+aparece en la papeleta y lo que presenta un programa (constitución I.6). Están registradas en
+[`data/candidaturas.yaml`](../../data/candidaturas.yaml), que se puede editar sin tocar código.
 
-**Regla de *fallback* con coaliciones**: si un partido concurrió en 2023 dentro de otra
-candidatura (por ejemplo, Podemos dentro de Sumar), **no** se le asigna el programa de esa
-coalición como propio. Se muestra «Pendiente del programa del 29N», con la nota «En 2023
-concurrió dentro de Sumar».
+- **Fase provisional** (hasta el BOE del ~28 de octubre): las candidaturas con representación
+  en las Cortes en la XV legislatura: PP, PSOE, VOX, Sumar, Podemos, ERC, Junts, EH Bildu,
+  PNV, BNG, CC y UPN, más Más Madrid, Compromís, Geroa Bai, ASG y AHI si concurren por
+  separado. Se muestra el aviso «Lista provisional».
+- **Fase BOE**: se cargan **todas** las candidaturas al Congreso publicadas en el BOE, con las
+  circunscripciones en que se presenta cada una. Así cada persona puede ver **su papeleta**
+  (spec 002, HU-2.10).
+- **Continuidad para el *fallback***: una candidatura de 2026 usa el programa de 2023 solo si
+  el registro lo enlaza de forma explícita con una candidatura de 2023 con programa propio
+  (por ejemplo, PP con PP). Si en 2023 concurrió dentro de otra candidatura (Podemos dentro de
+  Sumar) o es nueva, **no hay *fallback***: se muestra «Pendiente del programa del 29N».
+- **Sin programa**: una candidatura proclamada que no publica programa aparece con «No ha
+  publicado programa electoral (comprobado el {fecha})».
 
 ## Temas
 
-Hay 19 temas predefinidos, cada uno con subtemas, en [`data/topics.yaml`](../../data/topics.yaml).
-Son editables: añadir un tema implica volver a analizar ese tema para todos los partidos, por
-simetría.
+Hay 19 temas predefinidos con subtemas en [`data/topics.yaml`](../../data/topics.yaml). Añadir
+un tema obliga a analizarlo para **todas** las candidaturas (simetría).
 
-Vivienda · Economía y empleo · Impuestos · Pensiones · Protección social · Sanidad ·
-Educación · Inmigración · Medio ambiente y energía · Mundo rural · Transporte ·
-Igualdad · Familia y conciliación · Juventud · Ciencia y digitalización ·
-Seguridad y justicia · Modelo territorial · Regeneración democrática ·
-Política exterior, UE y defensa
+## Técnica de análisis y búsqueda: ¿RAG? (decisión)
+
+Hay dos necesidades distintas y **cada una tiene su mejor técnica**:
+
+### Para el comparador: extracción exhaustiva offline, sin RAG en tiempo real
+
+El comparador afirma cosas como «el partido X no menciona la vivienda turística». Esa
+afirmación solo es segura si **se ha leído todo el programa**. Un RAG clásico (recuperar los
+*k* fragmentos más parecidos) pierde menciones dispersas: un programa habla de vivienda en el
+capítulo de vivienda, pero también en el de juventud, en el de impuestos o en el de
+despoblación.
+
+**Decisión**: por cada candidatura × tema, el modelo lee **el programa completo** (cabe en el
+contexto de los modelos actuales y la caché de *prompts* abarata repetirlo por tema) y extrae
+las propuestas en un formato estructurado, con citas literales que luego se verifican.
+
+Una **red de seguridad de exhaustividad**: cuando el resultado es «no lo menciona», se lanza
+una búsqueda híbrida con los subtemas del tema. Si aparecen fragmentos relevantes, se
+reanaliza ese tema y se avisa en el informe.
+
+Ventajas: mejor exhaustividad, el mismo procedimiento para todos, coste único por programa y
+páginas instantáneas.
+
+### Para las preguntas libres: RAG agéntico, híbrido y simétrico
+
+Las preguntas no se pueden prever, así que aquí **sí** se usa RAG, con las técnicas que mejor
+funcionan hoy:
+
+1. **Dos índices**:
+   - **Propuestas**: las propuestas ya analizadas y verificadas del comparador (unas 2.500).
+     Son unidades cortas y limpias, ideales para «¿quién propone bajar el IVA de la luz?».
+   - **Fragmentos**: el texto completo de los programas, por si la pregunta va a un detalle
+     que no está entre las propuestas extraídas.
+2. **Recuperación contextual**: cada fragmento se indexa con su contexto (candidatura,
+   convocatoria, capítulo y sección, página) para que «bajaremos este impuesto» no quede
+   huérfano.
+3. **Búsqueda híbrida**: búsqueda léxica en español (encuentra términos exactos como «IRPF»,
+   «Ley 12/2023» o «MIR») más búsqueda semántica (encuentra «okupas» ↔ «ocupación ilegal»),
+   fusionadas.
+4. ***Reranking***: un modelo rápido reordena los ~40 candidatos y se quedan los 8 mejores.
+5. **Simetría por diseño**: en preguntas sobre varias candidaturas, la búsqueda se hace **por
+   candidatura** con el mismo presupuesto para cada una. Un RAG normal favorecería a los
+   programas más largos.
+6. **Agéntico**: el asistente decide qué herramientas usar. Primero consulta los análisis
+   verificados del tema y después busca en el texto si hace falta, con un máximo de 4 pasos.
+   Antes de buscar, reformula la consulta con sinónimos y términos legales.
+7. **Validación de citas** en el servidor antes de mostrar nada (spec 003, HU-3.2).
+
+**Descartado**:
+- RAG solo vectorial: pierde términos exactos y sigla, y no es simétrico.
+- Meter todos los programas en cada pregunta (*long context*): millones de *tokens* por
+  pregunta, lento y caro.
+- GraphRAG: caro, opaco y con poca ganancia sobre prosa política; además, es más difícil
+  verificar las citas.
+- *Fine-tuning*: los datos cambian cada semana en campaña y no aporta *grounding*.
+
+**Cómo se mide**: con evals de recuperación (¿están las páginas correctas entre los 8
+primeros?) y evals de respuesta (spec 003).
 
 ## Historias de usuario
 
 ### HU-1.1 Registrar un programa
-**Como** mantenedor **quiero** registrar un programa indicando partido, convocatoria y URL
+**Como** mantenedor **quiero** registrar un programa indicando candidatura, convocatoria y URL
 **para** que quede archivado con trazabilidad.
-
-- El sistema descarga el PDF, guarda una copia, calcula su SHA-256 y registra la URL
+- El sistema descarga el documento, guarda una copia, calcula su SHA-256 y registra la URL
   original, la fecha de descarga y una copia en el archivo web (Wayback Machine).
-- Si la URL no devuelve un PDF válido, falla con un mensaje claro y no registra nada.
-- Si el PDF ya está registrado con el mismo hash, no hace nada.
+- **Si el programa es una página web** (HTML) y no un PDF, se archiva como PDF con fecha,
+  para que las citas tengan página y sean estables.
+- Si la URL no es válida, falla con un mensaje claro y no registra nada.
+- Si el documento ya está registrado con el mismo hash, no hace nada; si el hash cambia, el
+  partido ha actualizado el programa y se avisa.
 
 ### HU-1.2 Extraer el texto
-- Se extrae el texto **por página**, con las posiciones necesarias para resaltar fragmentos
-  y la etiqueta de página impresa si existe.
-- Se detectan los PDFs escaneados (sin capa de texto) y se aplica OCR, marcando el documento
-  como «OCR».
-- Se detecta el idioma. Si el partido publica versión en castellano, se usa esa, y la
-  original queda enlazada.
+- Se extrae el texto por página, con las posiciones necesarias para resaltar fragmentos, la
+  etiqueta de página impresa y la estructura de capítulos y secciones (para la recuperación
+  contextual).
+- Se aplica OCR solo si el PDF no tiene capa de texto.
+- Se detecta el idioma. Si existe versión en castellano, se usa esa, y la original queda
+  enlazada.
 
 ### HU-1.3 Analizar por tema
-**Para cada** partido × tema se genera:
-- `menciona`: sí o no. Si es «no», no hay más campos y la web muestra «No lo menciona en su
-  programa».
+**Para cada** candidatura × tema se genera:
+- `menciona`: sí o no. Si es «no», se activa la red de seguridad de exhaustividad.
 - **Resumen**: de 1 a 3 frases y un máximo de 60 palabras. Cada frase con al menos 1 cita.
-- **Propuestas concretas**: hasta 8, cada una con su subtema y al menos 1 cita, y priorizando
-  las medidas más concretas (cifras, plazos, leyes).
-- Los mismos límites para todos los partidos (simetría).
+- **Propuestas concretas**: hasta 8, cada una con su subtema y al menos 1 cita, priorizando
+  las más concretas (cifras, plazos, leyes).
+- Los mismos límites para todas las candidaturas.
 
 ### HU-1.4 Lectura fácil
-- Cada resumen y cada propuesta tiene una versión de lectura fácil: frases cortas,
-  vocabulario común, una idea por frase y sin siglas sin explicar.
-- Hereda las citas de la versión normal; no puede añadir información que no esté en ella.
-- Se muestra con el aviso «Adaptación automática a lectura fácil».
+- Cada resumen y cada propuesta tiene una versión de lectura fácil que hereda sus citas y no
+  puede añadir información.
+- **Validación automática**, que bloquea la publicación si no se cumple. Son reglas derivadas
+  de la norma UNE 153101 EX:
+  - frases de 20 palabras como máximo (objetivo: 15);
+  - una idea por frase;
+  - índice de legibilidad INFLESZ de 65 o más («bastante fácil»);
+  - palabras poco frecuentes y siglas sustituidas o explicadas;
+  - números en cifras;
+  - sin dobles negaciones.
+- **Validación de fidelidad**: un juez automático comprueba que la versión fácil no añade, no
+  quita lo esencial ni cambia el sentido de la versión normal.
+- **Validación humana** (la que exige la norma), con una entidad especializada y personas con
+  dificultades de comprensión lectora:
+  - **Fase 1**: textos de la interfaz, descripciones de los 19 temas y una muestra
+    representativa de análisis.
+  - **Fase 2**: ajustar el *prompt* y las reglas con lo aprendido y regenerar.
+  - Hasta completarla, el modo se etiqueta «Lectura fácil · adaptación automática», sin el
+    logotipo oficial.
 
 ### HU-1.5 Verificar las citas (*grounding*)
-- Cada cita contiene un fragmento **literal** del documento. Se verifica comparando con el
-  texto extraído de esa página, normalizando espacios, guiones de fin de línea y comillas.
-- Para cada cita verificada se calculan los rectángulos de resaltado de la página.
-- Un análisis con **alguna** cita no verificada no puede pasar a `aprobado`, y la CI lo
+- Cada cita contiene un fragmento **literal** que se verifica contra el texto extraído de su
+  página (normalizado; skill `grounding`). Se calculan sus rectángulos de resaltado.
+- Un análisis con **alguna** cita sin verificar no puede pasar a `aprobado`, y la CI lo
   bloquea.
-- Un segundo control (revisor con IA y revisión humana) comprueba que la cita **respalda**
-  la afirmación y no solo que exista.
+- Un revisor con IA y la revisión humana comprueban que la cita **respalda** la afirmación.
 
 ### HU-1.6 Revisar y aprobar
-- Cada ingesta produce un **informe de revisión** legible en el PR, que incluye:
-  - cobertura de temas, con los temas que no se mencionan;
-  - el porcentaje de citas verificadas;
-  - avisos de neutralidad: adjetivos valorativos y extensiones desiguales frente a la media;
-  - el coste y los modelos usados;
-  - un enlace de cada propuesta a su cita.
-- El mantenedor aprueba haciendo merge del PR. Hasta entonces el análisis es `borrador` y
-  no se muestra en la web.
+- Cada ingesta produce un **informe de revisión** en el PR: cobertura de temas, temas sin
+  mención con el resultado de la red de seguridad, porcentaje de citas verificadas, avisos de
+  neutralidad, legibilidad de la lectura fácil, coste y modelos.
+- Se aprueba haciendo merge del PR. Hasta entonces es `borrador` y no se ve en la web.
+- Los programas de 2023 (referencia) se aprueban en un único PR; los del 29N, en uno por
+  candidatura.
 
 ### HU-1.7 Pasar de 2023 al 29N ⭐
-Cada partido tiene, por convocatoria, uno de estos estados:
+Estados por candidatura y convocatoria:
 
 ```
 pendiente ──► publicado ──► analizado ──► aprobado
-(sin PDF)     (PDF archivado) (borrador en PR) (merge: visible en la web)
+(sin documento) (archivado)  (borrador en PR) (merge: visible en la web)
 ```
 
-**Regla de visualización**: en cada partido se muestra el programa **aprobado más reciente**.
-- Mientras el del 29N no esté `aprobado`, se muestra el de 2023 con el aviso «Programa de
-  2023 (anterior) · pendiente del programa del 29N».
-- Al aprobarse el del 29N, cambian **a la vez** todas las vistas (comparador, ficha del
-  partido, páginas de tema y chat), sin tocar código.
-- El programa de 2023 sigue disponible desde la ficha del partido («Ver programa de 2023») y
-  en el chat, preguntando explícitamente por 2023.
-- La página de metodología muestra una tabla con el estado de cada partido y sus fechas:
-  publicado, analizado y aprobado.
+**Regla de visualización**: se muestra el programa **aprobado más reciente**.
+- Mientras el del 29N no esté aprobado y haya continuidad, se muestra el de 2023 con el aviso
+  «Programa de 2023 (anterior) · pendiente del programa del 29N».
+- Al aprobarse, cambian a la vez el comparador, la ficha, las páginas de tema y el chat.
+- El de 2023 sigue consultable desde la ficha («Ver programa de 2023») y en el chat, si se
+  pregunta por él.
+- La metodología muestra el estado y las fechas de cada candidatura.
 
-**Procedimiento operativo** cuando un partido publica su programa:
-1. Se lanza la ingesta con el partido, la convocatoria y la URL, de dos formas posibles:
-   el botón *Run workflow* de GitHub Actions (también desde el móvil) o el comando local
-   `/ingest-program`.
-2. El pipeline descarga, extrae, analiza y verifica, y abre un PR «Programa 29N · {partido}»
-   con el informe de revisión. Objetivo: menos de 30 minutos.
-3. Revisión humana del PR.
-4. Merge → despliegue automático en Railway → el contenido nuevo está en la web.
+**Procedimiento** (detallado en la skill `ingest-program`):
+1. Se detecta el programa: por la vigilancia (HU-1.10) o a mano.
+2. Se lanza la ingesta con el botón de GitHub Actions o con `/ingest-program`. La vigilancia
+   la puede lanzar sola.
+3. El pipeline abre un PR con el informe en menos de 30 minutos.
+4. Revisión humana y merge.
+5. Despliegue automático.
 
-**Objetivo**: menos de 24 h desde que un partido publica su programa hasta que está en la web.
+Objetivo: **menos de 24 h** desde que se publica el programa hasta que está en la web.
 
 ### HU-1.8 Corregir errores
-- Cualquier persona puede reportar un error desde la web, lo que crea una *issue* de GitHub
-  ya rellenada con el partido, el tema y la propuesta.
-- Las correcciones se hacen por PR, pasan la misma verificación y quedan en el historial.
+- Se reporta desde la web con una *issue* ya rellenada. Se corrige por PR, con la misma
+  verificación.
 
 ### HU-1.9 Reproducibilidad
-- Cada análisis registra el modelo, la versión del prompt, la fecha, el hash del documento y
-  el coste.
-- Volver a ejecutar el análisis no sobrescribe uno `aprobado` salvo con `--force`
-  explícito.
+- Se registran el modelo, la versión del *prompt*, la fecha, el hash del documento y el
+  coste.
+- Un análisis aprobado no se sobrescribe sin `--force` explícito.
+
+### HU-1.10 Vigilancia: enterarse a tiempo ⭐
+**Como** mantenedor **quiero** que el sistema me avise en cuanto aparezca una candidatura o un
+programa **para** no depender de revisarlo a mano.
+
+- **Programas**: varias veces al día, hasta el 27 de noviembre, se comprueba:
+  - las páginas de cada candidatura donde suele publicar el programa (`vigilar` en el
+    registro), buscando documentos nuevos o cambios de hash;
+  - una búsqueda de noticias por candidatura («programa electoral» + nombre).
+- **Candidaturas**: cada día, del 16 de octubre al 3 de noviembre, se revisa el **sumario del
+  BOE** (API de datos abiertos) en busca de candidaturas presentadas y proclamadas, y las
+  noticias de coaliciones y agrupaciones nuevas.
+- Cuando se detecta algo:
+  - se abre una *issue* de GitHub («Posible programa nuevo: X», con el enlace), que te llega
+    como notificación;
+  - si es un documento del dominio oficial, se lanza la ingesta automáticamente y queda en un
+    PR **en borrador**. Nunca se publica sin merge humano.
+  - si es el BOE, se abre un PR que actualiza `candidaturas.yaml` con las candidaturas y sus
+    circunscripciones.
+- La metodología muestra la fecha de la última comprobación de cada candidatura.
 
 ## Requisitos no funcionales
 
 - **Auditabilidad**: los análisis son ficheros de texto en git, revisables por *diff*.
-- **Coste**: se registra el coste de cada ejecución; el total de las dos convocatorias
-  debería quedarse en decenas de euros.
-- **Tiempo**: la ingesta completa de un programa tarda menos de 30 minutos.
+- **Coste**: se registra en cada ejecución; el total debería quedarse en decenas de euros.
+- **Tiempo**: menos de 30 minutos por ingesta.
 
 ## Criterios de aceptación globales
 
-- [ ] Los 13-16 partidos tienen su programa de 2023 en estado `aprobado` (o «sin programa
-      propio» documentado).
+- [ ] Los programas de 2023 de las candidaturas con continuidad están `aprobados`.
 - [ ] El 100 % de las citas publicadas están verificadas.
-- [ ] Todas las combinaciones partido × tema tienen análisis o «no menciona».
-- [ ] Ningún resumen ni propuesta supera los límites de extensión.
-- [ ] Una ingesta de prueba de un programa del 29N recorre todo el flujo hasta el PR.
+- [ ] Todas las combinaciones candidatura × tema tienen análisis o «no menciona» (con la red
+      de seguridad ejecutada).
+- [ ] La lectura fácil supera la validación automática en el 100 % de los textos.
+- [ ] La vigilancia detecta un documento nuevo de prueba y abre la *issue* y el PR en
+      borrador.
+- [ ] Al cargar el BOE de candidaturas presentadas, `candidaturas.yaml` refleja todas las
+      candidaturas con sus circunscripciones.
 
 ## Fuera de alcance (v1)
 
-- Vigilancia automática de las webs de los partidos para detectar programas nuevos (se puede
-  añadir después).
+- El Senado: las papeletas del Senado son de personas; se usa el programa de su candidatura.
 - Programas autonómicos, municipales o europeos.
 - Fuentes distintas del programa oficial.
-
-## Preguntas abiertas
-
-1. **Lectura fácil**: la norma UNE 153101 EX exige validación con personas con dificultades
-   de comprensión. ¿Llamamos al modo «Lectura fácil», con el aviso de adaptación automática,
-   o «Lenguaje sencillo»?
-2. **SALF y otras candidaturas** sin representación actual: propongo mantener el criterio
-   objetivo de representación en las Cortes y publicarlo.

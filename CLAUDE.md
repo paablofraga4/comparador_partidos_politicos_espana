@@ -1,9 +1,10 @@
-# Comparador de programas electorales (España, generales 29N-2026)
+# VotoClaro · comparador de programas electorales (generales 29N-2026)
 
-Web pública y **neutral** para comparar qué proponen los partidos, por temas predefinidos, y
+Web pública y **neutral** para comparar qué proponen las candidaturas, por temas predefinidos, y
 preguntar en lenguaje natural. Cada afirmación lleva a su fuente (PDF original, página exacta,
 fragmento resaltado). Mientras un partido no publique su programa del 29N, se muestra el del
-23J-2023 con aviso.
+23J-2023 con aviso. **Lanzamiento: domingo 11 oct 2026.** Unidad = *candidatura* (partido,
+coalición o agrupación de electores); desde el BOE (~28 oct) entran todas las proclamadas.
 
 ## Reglas de oro (resumen de `specs/constitution.md`; léela entera si tocas contenido, prompts o UI)
 1. **Nada sin cita verificada.** Si no hay respaldo literal en el programa → "No lo menciona".
@@ -25,7 +26,7 @@ fragmento resaltado). Mientras un partido no publique su programa del 29N, se mu
 
 ## Mapa
 - `specs/` constitución, specs 001 datos · 002 comparador · 003 chat, `plan-tecnico.md`, `tasks.md`
-- `data/` `parties.yaml`, `topics.yaml`, `sources.yaml`, `documents/` (PDFs), `extracted/`, `analyses/`
+- `data/` `candidaturas.yaml`, `topics.yaml`, `sources.yaml`, `documents/` (PDFs), `extracted/`, `analyses/`
 - `pipeline/` Python (uv), paquete `cmp`: fetch → extract → chunk → analyze → verify → report → validate
 - `web/` Next.js 16 + TS + Tailwind v4; lee `data/` en build; `/api/chat` con AI SDK + OpenAI
 - `evals/` preguntas de referencia del chat
@@ -44,11 +45,12 @@ fragmento resaltado). Mientras un partido no publique su programa del 29N, se mu
 
 ## Skills y agentes del proyecto
 - Skills: `sdd-spec`, `sdd-plan`, `sdd-tasks`, `sdd-implement`, `grounding`, `editorial-design`,
-  `ingest-program` (cómo añadir/actualizar un programa: 2023 → 29N).
+  `ingest-program` (cómo añadir/actualizar un programa: 2023 → 29N, vigilancia).
 - Agentes (solo informan): `neutrality-reviewer`, `grounding-auditor`, `ui-reviewer`.
 
 ## Gotchas
 - Windows + Git Bash en local; los hooks son Node (`.claude/hooks/*.mjs`) para ser portables.
 - Modelos de OpenAI: siempre desde variables de entorno; no escribas nombres de modelo de memoria.
 - Páginas: `pagina` = índice 1-based del PDF (visor); `pagina_impresa` = la que se muestra.
-- Candidaturas del 29N cambian hasta la proclamación: todo en `data/parties.yaml`, nunca en código.
+- Candidaturas del 29N cambian hasta la proclamación (BOE ~3 nov): todo en `data/candidaturas.yaml`, nunca en código.
+- Comparador = extracción exhaustiva offline (no RAG); chat = RAG agéntico híbrido y simétrico (spec 001).

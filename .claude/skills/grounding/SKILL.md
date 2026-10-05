@@ -17,7 +17,7 @@ Promesa del producto: **cada frase visible lleva a su fuente con un clic**. Cons
   "literal": "texto exacto…",    // subcadena del documento, idioma original
   "idioma": "es",
   "traduccion": null,            // si idioma != es: traducción, marcada como automática
-  "rects": [[x0, y0, x1, y1]],   // normalizados 0..1 respecto a la página
+  "rects": [{ "pagina": 47, "r": [x0, y0, x1, y1] }],  // normalizados 0..1; puede abarcar 2 páginas
   "verificada": true
 }
 ```
@@ -56,7 +56,8 @@ literal para que pase.
 
 - Marca de cita: "p. 45" (página impresa, o la del PDF si no hay), estilo subrayado de
   rotulador, objetivo táctil ≥ 44 px, `aria-label="Fuente: programa de {partido} {convocatoria}, página 45"`.
-- Clic → panel de fuente: página renderizada + `rects` resaltados + literal copiable +
+- Clic → panel de fuente: página renderizada, **desplazada hasta el primer rect** (el resaltado
+  debe verse sin que la persona haga nada), páginas contiguas, literal copiable +
   "Abrir documento completo" (`/programas/{partido}/{convocatoria}?pagina=47&cita=c0012`) +
   "Ver en la web del partido".
 - Si `traduccion`: mostrar literal original y traducción con etiqueta "Traducción automática".

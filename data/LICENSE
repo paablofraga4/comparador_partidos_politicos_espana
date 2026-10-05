@@ -1,0 +1,16 @@
+Datos y análisis de VotoClaro
+=============================
+
+Los análisis, resúmenes, adaptaciones a lectura fácil, registros (candidaturas.yaml,
+topics.yaml, sources.yaml) y demás datos elaborados por VotoClaro en este directorio se
+publican bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/deed.es
+
+Atribución sugerida: «Fuente: VotoClaro (https://github.com/paablofraga4/comparador_partidos_politicos_espana)».
+
+EXCLUSIONES
+- Los programas electorales (data/documents/**) y su texto extraído (data/extracted/**) son
+  obra de sus respectivos partidos, coaliciones o agrupaciones. Se reproducen únicamente para
+  documentar y verificar las fuentes y NO están cubiertos por esta licencia.
+- Las citas literales incluidas en los análisis se reproducen al amparo del derecho de cita
+  (art. 32 del Texto Refundido de la Ley de Propiedad Intelectual).
