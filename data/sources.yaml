@@ -51,7 +51,7 @@ convocatorias:
         descargado: '2026-10-05T21:21:13Z'
         origen: pdf
         paginas: 16
-        estado: analizado
+        estado: publicado
         nota: Documento programático de EH Bildu para el 23J («Compromiso»)
       pnv:
         url: https://www.eaj-pnv.eus/adjuntos/pdfs/ho23/con-voz-propia-programa-electoral-23-j.pdf
@@ -80,7 +80,7 @@ convocatorias:
         descargado: '2026-10-05T21:21:27Z'
         origen: pdf
         paginas: 14
-        estado: analizado
+        estado: publicado
         nota: Manifiesto electoral conjunto para el 23J (CC, AHI y agrupaciones locales), 26-6-2023
       upn:
         url: https://www.upn.org/wp-content/uploads/2023/07/Programa-Generales-23J_V2-1.pdf
@@ -90,7 +90,7 @@ convocatorias:
         descargado: '2026-10-05T21:21:32Z'
         origen: pdf
         paginas: 6
-        estado: analizado
+        estado: publicado
       erc:
         url: https://defensacatalunya.esquerrarepublicana.cat/documents/e2023-programa.pdf
         url_archivo: https://web.archive.org/web/20261005212137/https://defensacatalunya.esquerrarepublicana.cat/documents/e2023-programa.pdf
