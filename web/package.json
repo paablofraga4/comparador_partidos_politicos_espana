@@ -15,10 +15,10 @@
     "format": "prettier --write .",
     "types:analisis": "json2ts -i lib/schema/analisis.schema.json -o lib/schema/analisis.ts --no-additionalProperties --bannerComment \"/* Generado desde pipeline/src/votoclaro/models.py (vc schema). No editar a mano. */\"",
     "dev:preview": "node scripts/sync-assets.mjs && node scripts/dev-preview.mjs",
-    "db:migrate": "tsx scripts/db-migrate.ts",
-    "db:sync": "tsx scripts/db-sync.ts",
-    "build:scripts": "esbuild scripts/db-migrate.ts scripts/db-sync.ts --bundle --platform=node --format=esm --target=node24 --outdir=scripts/dist --out-extension:.js=.mjs --banner:js=\"import{createRequire}from'module';const require=createRequire(import.meta.url);\" --external:@electric-sql/pglite --external:@electric-sql/pglite-pgvector",
-    "evals": "tsx scripts/evals.ts"
+    "db:migrate": "tsx scripts/db-migrate.mts",
+    "db:sync": "tsx scripts/db-sync.mts",
+    "build:scripts": "esbuild scripts/db-migrate.mts scripts/db-sync.mts --bundle --platform=node --format=esm --target=node24 --outdir=scripts/dist --out-extension:.js=.mjs --banner:js=\"import{createRequire}from'module';const require=createRequire(import.meta.url);\" --external:@electric-sql/pglite --external:@electric-sql/pglite-pgvector",
+    "evals": "tsx scripts/evals.mts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.84",
