@@ -416,3 +416,35 @@ def easy_read_cmd(
         f"[green]✓[/] coste de esta pasada: {round(ctx.usage.cost_usd, 4)} USD · "
         f"{len(ctx.incidencias)} temas siguen sin validar"
     )
+
+
+@app.command(name="vigilar")
+def vigilar_cmd(
+    convocatoria: Annotated[str, typer.Option("--convocatoria", "-v")] = "generales-2026",
+    json_salida: Annotated[
+        bool, typer.Option("--json", help="Salida JSON para el workflow")
+    ] = False,
+    sin_noticias: Annotated[bool, typer.Option("--sin-noticias")] = False,
+) -> None:
+    """Busca programas nuevos en las webs de las candidaturas y en noticias (HU-1.10)."""
+    from .vigilancia import vigilar
+
+    paths = _paths()
+    cands = [c for c in load_candidaturas(paths).candidaturas if convocatoria in c.convocatorias]
+    novedades, errores = vigilar(
+        cands, load_sources(paths), convocatoria, con_noticias=not sin_noticias
+    )
+    if json_salida:
+        sys.stdout.write(
+            json.dumps(
+                {"novedades": [n.dict() for n in novedades], "errores": errores}, ensure_ascii=False
+            )
+            + "\n"
+        )
+        return
+    for n in novedades:
+        marca = "📄" if n.tipo == "pdf-oficial" else "📰"
+        console.print(f"{marca} {n.candidatura} · {n.titulo[:80]} · {n.url}")
+    for e in errores:
+        console.print(f"[yellow]⚠ {e}")
+    console.print(f"{len(novedades)} novedades · {len(errores)} errores")

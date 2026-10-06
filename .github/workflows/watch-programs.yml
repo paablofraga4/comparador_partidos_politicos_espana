@@ -1,0 +1,37 @@
+# Vigilancia de programas del 29N (spec 001, HU-1.10). Cada 3 horas hasta el 28-nov-2026:
+# webs de las candidaturas + Google News → issue (sin duplicar) que te llega como notificación.
+# Ingesta automática en borrador solo si la variable del repo VIGILANCIA_AUTOINGESTA = 1.
+name: Vigilar programas
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: ¿Campaña en curso?
+        id: fecha
+        run: |
+          if [ "$(date -u +%Y%m%d)" -gt 20261128 ]; then echo "fin=1" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.fecha.outputs.fin != '1'
+      - uses: astral-sh/setup-uv@v6
+        if: steps.fecha.outputs.fin != '1'
+      - name: Buscar novedades
+        if: steps.fecha.outputs.fin != '1'
+        working-directory: pipeline
+        run: uv sync && uv run vc vigilar --json > "$RUNNER_TEMP/vigilancia.json"
+      - name: Crear issues
+        if: steps.fecha.outputs.fin != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTO: ${{ vars.VIGILANCIA_AUTOINGESTA }}
+        run: python .github/scripts/vigilancia_issues.py "$RUNNER_TEMP/vigilancia.json"
