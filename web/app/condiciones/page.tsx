@@ -3,11 +3,13 @@ import Link from "next/link";
 
 import { titular } from "@/lib/bonos/pagos";
 import { centimosPorPregunta, euros, fechaCaducidad, PLANES } from "@/lib/bonos/planes";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Aviso legal y condiciones de los bonos",
-  description: "Quién está detrás de VotoClaro y condiciones de compra de los bonos del asistente.",
-};
+export const metadata: Metadata = metaPagina({
+  titulo: "Aviso legal y condiciones de los bonos",
+  descripcion: "Quién está detrás de VotoClaro y condiciones de compra de los bonos del asistente.",
+  ruta: "/condiciones",
+});
 
 export const dynamic = "force-dynamic";
 

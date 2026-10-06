@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     locale: "es_ES",
     siteName: "VotoClaro",
   },
+  twitter: { card: "summary_large_image" },
+  // Google Search Console (propiedad por prefijo de URL): el token va en una variable
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {

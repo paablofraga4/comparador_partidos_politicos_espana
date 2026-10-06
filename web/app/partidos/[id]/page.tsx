@@ -7,6 +7,7 @@ import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, temas, vigente } from "@/lib/data";
 import { CONVOCATORIAS } from "@/lib/types";
+import { metaPagina } from "@/lib/seo";
 
 export function generateStaticParams() {
   return candidaturas().map((c) => ({ id: c.id }));
@@ -16,10 +17,11 @@ export async function generateMetadata(props: PageProps<"/partidos/[id]">): Prom
   const { id } = await props.params;
   const c = candidatura(id);
   return c
-    ? {
-        title: `${c.nombre}: su programa por temas`,
-        description: `Qué propone ${c.nombre} en vivienda, empleo, pensiones, sanidad y más, con cada frase enlazada a su programa oficial.`,
-      }
+    ? metaPagina({
+        titulo: `${c.nombre}: su programa por temas`,
+        descripcion: `Qué propone ${c.nombre} en vivienda, empleo, pensiones, sanidad y más, con cada frase enlazada a su programa oficial.`,
+        ruta: `/partidos/${c.id}`,
+      })
     : {};
 }
 

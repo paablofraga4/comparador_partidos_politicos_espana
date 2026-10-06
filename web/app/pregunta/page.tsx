@@ -6,12 +6,14 @@ import { estadoPagos } from "@/lib/bonos/pagos";
 import { numeroEnv } from "@/lib/config";
 import { candidaturas } from "@/lib/data";
 import { hayDb } from "@/lib/db";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pregunta sobre los programas",
-  description:
+export const metadata: Metadata = metaPagina({
+  titulo: "Pregunta sobre los programas",
+  descripcion:
     "Pregunta en lenguaje natural qué proponen los partidos para el 29N. Cada respuesta cita la página exacta del programa oficial.",
-};
+  ruta: "/pregunta",
+});
 
 export const dynamic = "force-dynamic";
 

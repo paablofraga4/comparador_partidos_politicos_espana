@@ -5,12 +5,15 @@ import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { Selector } from "@/components/selector";
 import { candidaturas, temas, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Comparar partidos",
-  description:
+// Canónica sin parámetros: cada combinación de partidos y temas es la misma página
+export const metadata: Metadata = metaPagina({
+  titulo: "Comparar partidos",
+  descripcion:
     "Elige partidos y temas y compara sus propuestas para el 29N, con cada frase enlazada a su programa.",
-};
+  ruta: "/comparar",
+});
 
 const lista = (v: string | string[] | undefined) =>
   (Array.isArray(v) ? v.join(",") : (v ?? "")).split(",").filter(Boolean);

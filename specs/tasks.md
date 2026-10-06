@@ -41,7 +41,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-209 Visor completo `/programas/...` con búsqueda
 - [x] T-210 Modo lectura fácil
 - [x] T-211 Metodología (criterio del BOE, estado y fechas, lectura fácil) y «¿Ves un error?» (plantilla de *issue*)
-- [ ] T-212 SEO y Open Graph
+- [x] T-212 SEO y Open Graph (canónicas, sitemap, robots, imagen de marca, WebSite, llms.txt, redirección al dominio, Search Console)
 - [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer`
 
 ## F3 · Chat (vie 9)

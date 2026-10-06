@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidaturas, tema, temas, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
 export function generateStaticParams() {
   return temas().map((t) => ({ id: t.id }));
@@ -14,10 +15,11 @@ export async function generateMetadata(props: PageProps<"/temas/[id]">): Promise
   const { id } = await props.params;
   const t = tema(id);
   return t
-    ? {
-        title: `${t.nombre}: qué propone cada partido`,
-        description: `Compara lo que proponen los partidos sobre ${t.nombre.toLowerCase()} para el 29N, con cada frase enlazada a su programa oficial.`,
-      }
+    ? metaPagina({
+        titulo: `${t.nombre}: qué propone cada partido`,
+        descripcion: `Compara lo que proponen los partidos sobre ${t.nombre.toLowerCase()} para el 29N, con cada frase enlazada a su programa oficial.`,
+        ruta: `/temas/${t.id}`,
+      })
     : {};
 }
 

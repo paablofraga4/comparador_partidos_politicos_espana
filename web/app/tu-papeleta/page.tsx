@@ -3,12 +3,14 @@ import Link from "next/link";
 
 import { Papeleta, type CandidaturaPapeleta } from "@/components/papeleta";
 import { candidaturas, circunscripciones, registro, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Tu papeleta",
-  description:
+export const metadata: Metadata = metaPagina({
+  titulo: "Tu papeleta",
+  descripcion:
     "Elige tu provincia y mira qué candidaturas al Congreso hay en tu papeleta el 29N, con sus programas.",
-};
+  ruta: "/tu-papeleta",
+});
 
 export default function TuPapeleta() {
   const fase = registro().fase_inclusion;

@@ -8,6 +8,7 @@ import { Candidato } from "@/components/piezas";
 import { VisorDocumento } from "@/components/visor-documento";
 import { candidatura, fuente } from "@/lib/data";
 import { CONVOCATORIAS, type ConvocatoriaId } from "@/lib/types";
+import { metaPagina } from "@/lib/seo";
 
 export async function generateMetadata(
   props: PageProps<"/programas/[cand]/[conv]">,
@@ -15,7 +16,13 @@ export async function generateMetadata(
   const { cand, conv } = await props.params;
   const c = candidatura(cand);
   const cv = CONVOCATORIAS[conv as ConvocatoriaId];
-  return c && cv ? { title: `Programa de ${c.corto} · ${cv.nombre}` } : {};
+  return c && cv
+    ? metaPagina({
+        titulo: `Programa de ${c.corto} · ${cv.nombre}`,
+        descripcion: `El programa electoral de ${c.nombre} para las ${cv.nombre}, con buscador y enlace al documento oficial.`,
+        ruta: `/programas/${c.id}/${conv}`,
+      })
+    : {};
 }
 
 export default async function Programa(props: PageProps<"/programas/[cand]/[conv]">) {

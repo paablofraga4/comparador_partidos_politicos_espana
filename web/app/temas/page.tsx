@@ -3,11 +3,13 @@ import Link from "next/link";
 
 import { TemaIcono } from "@/components/piezas";
 import { temas } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Temas",
-  description: "Los 19 temas en los que comparamos los programas electorales del 29N.",
-};
+export const metadata: Metadata = metaPagina({
+  titulo: "Temas",
+  descripcion: "Los 19 temas en los que comparamos los programas electorales del 29N.",
+  ruta: "/temas",
+});
 
 export default function Temas() {
   return (

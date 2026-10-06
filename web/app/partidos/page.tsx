@@ -3,11 +3,13 @@ import Link from "next/link";
 
 import { Candidato, ProgramaBadge } from "@/components/piezas";
 import { candidaturas, registro, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Partidos",
-  description: "Los partidos que se presentan a las elecciones generales del 29N y sus programas.",
-};
+export const metadata: Metadata = metaPagina({
+  titulo: "Partidos",
+  descripcion: "Los partidos que se presentan a las elecciones generales del 29N y sus programas.",
+  ruta: "/partidos",
+});
 
 export default function Partidos() {
   const provisional = registro().fase_inclusion === "provisional";
