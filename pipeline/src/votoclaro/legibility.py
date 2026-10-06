@@ -21,7 +21,8 @@ _STRONG = set("aeoáéóíú")  # vocales que forman núcleo propio (í/ú acent
 _VOWELS = set("aeiouáéíóúü")
 _WORD = re.compile(r"[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]+|\d+(?:[.,]\d+)*")
 _SENTENCE_SPLIT = re.compile(r"(?<=[.!?…])\s+|\n+")
-_ACRONYM = re.compile(r"\b[A-ZÁÉÍÓÚÑ]{2,}\b")
+# Siglas; se excluyen códigos de carreteras y similares (AP-15, N-121-A): son nombres propios
+_ACRONYM = re.compile(r"\b[A-ZÁÉÍÓÚÑ]{2,}\b(?![-‑]\d)")
 _DOUBLE_NEG = re.compile(r"\bno\b[^.]*\b(nunca|nada|nadie|ningun[oa]?s?|tampoco)\b", re.IGNORECASE)
 
 # Siglas que el público general conoce o que son nombres propios de candidaturas
@@ -83,8 +84,9 @@ def check(texts: list[str], extra_allowed: set[str] | None = None) -> Legibilida
                 avisos.append(f"Frase de {n} palabras (máx. {MAX_WORDS_SENTENCE}): «{s[:80]}»")
             if _DOUBLE_NEG.search(s):
                 avisos.append(f"Doble negación: «{s[:80]}»")
-        for a in set(_ACRONYM.findall(t)) - allowed:
-            avisos.append(f"Sigla sin explicar: {a}")
+        for a in sorted(set(_ACRONYM.findall(t)) - allowed):
+            if f"Sigla sin explicar: {a}" not in avisos:
+                avisos.append(f"Sigla sin explicar: {a}")
     score = inflesz(texts)
     if score < MIN_INFLESZ:
         avisos.append(f"INFLESZ {score} < {MIN_INFLESZ} (texto demasiado difícil)")
