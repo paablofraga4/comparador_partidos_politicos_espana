@@ -99,7 +99,7 @@ export function Papeleta({
                     style={{ borderLeft: `4px solid ${c.color}` }}
                   >
                     <span className="font-semibold">{c.corto}</span>
-                    {local && local !== c.corto && (
+                    {local && local.toLowerCase() !== c.corto.toLowerCase() && (
                       <span className="text-ink-muted text-sm">En tu papeleta: {local}</span>
                     )}
                     <span className="text-ink-faint text-xs">{ETIQUETA[c.programa]}</span>

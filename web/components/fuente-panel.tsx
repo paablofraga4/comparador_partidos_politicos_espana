@@ -7,7 +7,7 @@ import { useQueryState } from "nuqs";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { limpiarLiteral } from "@/lib/reglas";
-import { FUENTE_PARAM, fuenteParser } from "./cita";
+import { EVENTO_FUENTE, FUENTE_PARAM, fuenteParser } from "./cita";
 import { PdfPagina, type RectNorm } from "./pdf-pagina";
 
 type Datos = {
@@ -47,6 +47,13 @@ export function FuentePanel() {
     fuente && setPaginaVista({ key: fuente, pagina: fn(pagina) });
 
   const cerrar = useCallback(() => setFuente(null), [setFuente]);
+
+  // Las marcas de cita piden abrir el panel con un evento (no leen la URL)
+  useEffect(() => {
+    const abrir = (e: Event) => setFuente((e as CustomEvent<string>).detail);
+    window.addEventListener(EVENTO_FUENTE, abrir);
+    return () => window.removeEventListener(EVENTO_FUENTE, abrir);
+  }, [setFuente]);
 
   useEffect(() => {
     if (!fuente) {

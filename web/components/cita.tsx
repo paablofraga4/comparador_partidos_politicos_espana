@@ -6,13 +6,13 @@ import { parseAsString } from "nuqs";
 export const FUENTE_PARAM = "fuente";
 export const fuenteParser = parseAsString.withOptions({ history: "push", scroll: false });
 
-/** Abre el panel de fuente escribiendo ?fuente=… en la URL. Next sincroniza pushState con
- * useSearchParams, así que el panel (que sí lee la URL) se entera sin que esta marca tenga que
- * leerla: las páginas estáticas no necesitan <Suspense> por cada cita. */
+export const EVENTO_FUENTE = "votoclaro:abrir-fuente";
+
+/** Pide al panel de fuente (montado en el layout) que se abra. La marca no lee la URL: así las
+ * páginas estáticas no necesitan <Suspense> por cada cita. El panel actualiza ?fuente=…
+ * (URL propia y compartible) y gestiona el historial. */
 export function abrirFuente(valor: string) {
-  const url = new URL(window.location.href);
-  url.searchParams.set(FUENTE_PARAM, valor);
-  window.history.pushState(window.history.state, "", url);
+  window.dispatchEvent(new CustomEvent<string>(EVENTO_FUENTE, { detail: valor }));
 }
 
 /**
