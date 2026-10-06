@@ -45,12 +45,12 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer`
 
 ## F3 · Chat (vie 9)
-- [ ] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos
-- [ ] T-302 Búsqueda híbrida con RRF, búsqueda por candidatura y *reranking*. **V:** evals de recuperación
-- [ ] T-303 `/api/chat`: AI SDK, 4 *tools*, *prompt* de sistema y validador de citas. **V:** tests del validador
-- [ ] T-304 Interfaz del chat (*streaming*, citas → panel, sugerencias y acotado)
-- [ ] T-305 Límites de uso, tope de gasto diario y métricas agregadas
-- [ ] T-306 `evals/`: 60 o más preguntas, juez y runner; `evals.yml`. **V:** umbrales de la spec 003
+- [x] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos
+- [x] T-302 Búsqueda híbrida con RRF, búsqueda por candidatura y *reranking*. **V:** evals de recuperación
+- [x] T-303 `/api/chat`: AI SDK, 4 *tools*, *prompt* de sistema y validador de citas. **V:** tests del validador
+- [x] T-304 Interfaz del chat (*streaming*, citas → panel, sugerencias y acotado)
+- [x] T-305 Límites de uso, tope de gasto diario y métricas agregadas
+- [ ] T-306 `evals/`: 62 preguntas, juez y runner ✓ (falta EJECUTARLOS: requiere crédito en OpenAI). **V:** umbrales de la spec 003
 
 ## F4 · Despliegue y lanzamiento (sáb 10 - dom 11)
 - [x] T-401 `Dockerfile`, `railway.json` y `/api/salud`; build *standalone* probado en local

@@ -35,9 +35,13 @@ function respuestaFija(texto: string) {
 }
 
 function mensajeError(e: unknown): string {
-  const t = String((e as { message?: string })?.message ?? e);
-  if (/insufficient_quota|credit_balance|hard limit/i.test(t)) {
+  const err = e as { message?: string; responseBody?: string };
+  const t = `${err?.message ?? e} ${err?.responseBody ?? ""}`;
+  if (/insufficient_quota|credit_balance|no credits|hard limit|spend limit/i.test(t)) {
     return "El asistente está en pausa porque ha llegado a su límite de uso. El comparador sigue funcionando con normalidad.";
+  }
+  if (/api key/i.test(t)) {
+    return "El asistente no está disponible en este momento. El comparador sigue funcionando con normalidad.";
   }
   return "Ha habido un problema al preparar la respuesta. Inténtalo de nuevo en unos segundos.";
 }
