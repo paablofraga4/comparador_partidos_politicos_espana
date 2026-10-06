@@ -55,6 +55,8 @@ class Candidatura(_Model):
     color: str = Field(pattern=r"^#[0-9A-Fa-f]{6}$")
     web: str
     vigilar: list[str] = Field(default_factory=list)
+    # Expresiones regulares de las siglas con que concurre en el BOE (p. ej. el PSOE como PSC)
+    siglas_boe: list[str] = Field(default_factory=list)
     incluir: Literal["siempre", "si-concurre-por-separado"] | None = None
     nota: str | None = None
     miembros: list[str] = Field(default_factory=list)

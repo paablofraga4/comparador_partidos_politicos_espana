@@ -12,6 +12,8 @@
 #   miembros: partidos que la integran (coaliciones)
 #   color: SOLO acento identificador (constitución I.5). Provisionales: verificar en F2.
 #   vigilar: URLs donde la candidatura suele publicar su programa (vigilancia, HU-1.10)
+#   siglas_boe: expresiones regulares de las siglas con que concurre en el BOE (p. ej. el
+#        PSOE como PSC en Cataluña). Gana la primera candidatura del registro que encaje.
 #   convocatorias.generales-2023.programa_propio: false si concurrió dentro de otra
 #        candidatura (dentro_de) → NO hay fallback a 2023 (spec 001).
 #   convocatorias.generales-2026.estado: provisional | presentada | proclamada | no-proclamada
@@ -28,6 +30,7 @@ candidaturas:
     color: "#1D84CE"
     web: https://www.pp.es/
     vigilar: []
+    siglas_boe: ['PP']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -41,6 +44,7 @@ candidaturas:
     color: "#E30613"
     web: https://www.psoe.es/
     vigilar: []
+    siglas_boe: ['PSOE', 'PSC', 'PSC-PSOE', '.*-PSOE', '.*[(]PSOE[)]']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -54,6 +58,7 @@ candidaturas:
     color: "#63BE21"
     web: https://www.voxespana.es/
     vigilar: []
+    siglas_boe: ['VOX']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -67,6 +72,7 @@ candidaturas:
     color: "#E51C55"
     web: https://movimientosumar.es/
     vigilar: []
+    siglas_boe: ['.*SUMAR.*']
     incluir: siempre
     nota: "En 2023 incluyó, entre otros, a Más Madrid, Compromís, IU y Podemos."
     convocatorias:
@@ -81,6 +87,7 @@ candidaturas:
     color: "#6B2E68"
     web: https://podemos.info/
     vigilar: []
+    siglas_boe: ['PODEMOS.*', '.*-PODEMOS']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: false, dentro_de: sumar }
@@ -95,6 +102,7 @@ candidaturas:
     color: "#FFB232"
     web: https://www.esquerra.cat/
     vigilar: []
+    siglas_boe: ['ERC.*']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -109,6 +117,7 @@ candidaturas:
     color: "#00C3B2"
     web: https://junts.cat/
     vigilar: []
+    siglas_boe: ['.*JUNTS.*']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -123,6 +132,7 @@ candidaturas:
     color: "#A4C400"
     web: https://ehbildu.eus/es
     vigilar: []
+    siglas_boe: ['EH ?BILDU']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -137,6 +147,7 @@ candidaturas:
     color: "#2E8B3E"
     web: https://www.eaj-pnv.eus/es/
     vigilar: []
+    siglas_boe: ['EAJ-PNV']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -151,6 +162,7 @@ candidaturas:
     color: "#76B3DD"
     web: https://www.bng.gal/
     vigilar: []
+    siglas_boe: ['BNG.*']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -165,6 +177,7 @@ candidaturas:
     color: "#F7D117"
     web: https://coalicioncanaria.org/
     vigilar: []
+    siglas_boe: ['CCA?', 'CCA?-.*']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -179,6 +192,7 @@ candidaturas:
     color: "#2A52BE"
     web: https://upn.org/
     vigilar: []
+    siglas_boe: ['UPN.*']
     incluir: siempre
     convocatorias:
       generales-2023: { programa_propio: true }
@@ -193,6 +207,7 @@ candidaturas:
     color: "#00A383"
     web: https://masmadrid.org/
     vigilar: []
+    siglas_boe: ['MÁS MADRID.*', 'MM']
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: { programa_propio: false, dentro_de: sumar }
@@ -207,6 +222,7 @@ candidaturas:
     color: "#F28C00"
     web: https://compromis.net/
     vigilar: []
+    siglas_boe: ['COMPROM[IÍ]S']
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: { programa_propio: false, dentro_de: sumar }
@@ -222,6 +238,7 @@ candidaturas:
     color: "#E2553B"
     web: https://geroabai.eus/es
     vigilar: []
+    siglas_boe: ['GBAI', 'GEROA BAI']
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: { programa_propio: false }
@@ -237,6 +254,7 @@ candidaturas:
     color: "#1B6FB5"
     web: https://www.agrupacionsocialistagomera.es/
     vigilar: []
+    siglas_boe: ['ASG']
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: { programa_propio: false }
@@ -251,6 +269,7 @@ candidaturas:
     color: "#2F9E44"
     web: https://ahi-elhierro.es/
     vigilar: []
+    siglas_boe: ['AHI']
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: { programa_propio: false, dentro_de: cc }
