@@ -17,7 +17,7 @@
     "dev:preview": "node scripts/sync-assets.mjs && node scripts/dev-preview.mjs",
     "db:migrate": "tsx scripts/db-migrate.mts",
     "db:sync": "tsx scripts/db-sync.mts",
-    "build:scripts": "esbuild scripts/db-migrate.mts scripts/db-sync.mts --bundle --platform=node --format=esm --target=node24 --outdir=scripts/dist --out-extension:.js=.mjs --banner:js=\"import{createRequire}from'module';const require=createRequire(import.meta.url);\" --external:@electric-sql/pglite --external:@electric-sql/pglite-pgvector",
+    "build:scripts": "esbuild scripts/db-migrate.mts scripts/db-sync.mts scripts/predeploy.mts --bundle --platform=node --format=esm --target=node24 --outdir=scripts/dist --out-extension:.js=.mjs --banner:js=\"import{createRequire}from'module';const require=createRequire(import.meta.url);\" --external:@electric-sql/pglite --external:@electric-sql/pglite-pgvector",
     "evals": "tsx scripts/evals.mts"
   },
   "dependencies": {
