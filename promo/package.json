@@ -1,0 +1,24 @@
+{
+  "name": "votoclaro-promo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capturas": "node capturas.mjs",
+    "studio": "remotion studio src/index.ts",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.533",
+    "@remotion/cli": "^4.0.533",
+    "@remotion/google-fonts": "^4.0.533",
+    "@remotion/renderer": "^4.0.533",
+    "@remotion/transitions": "^4.0.533",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.533"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.3"
+  }
+}
