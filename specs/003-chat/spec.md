@@ -67,8 +67,8 @@ que **la web sigue funcionando entera aunque el chat se pause**. Hay cinco capas
    y el chat lo detecta y se pausa con un mensaje amable.
 2. **Tope diario propio.** Se calcula a partir de los *tokens* de cada respuesta (por
    defecto 1,5 $ al día). Así el presupuesto mensual no se agota en un solo día de pico.
-3. **Por persona anónima**: 15 preguntas por hora y 40 al día, medidas con un hash de la IP
-   con sal diaria.
+3. **Por persona anónima**: ver la **spec 004**. Hay 2 preguntas gratis en total por navegador,
+   con un techo diario por IP (hash de la IP con sal diaria) y bonos de pago opcionales.
 4. **Tamaño acotado**:
    - preguntas de 500 caracteres como máximo;
    - conversaciones de 10 turnos;
@@ -81,7 +81,8 @@ que **la web sigue funcionando entera aunque el chat se pause**. Hay cinco capas
 Además, para que cada euro dé para más:
 - Las **preguntas sugeridas** tienen respuestas generadas de antemano (coste cero por visita).
 - El modelo del chat será el más barato que supere los evals: `gpt-6-luna` cuesta unas 20
-  veces menos que `gpt-6.1-sol`.
+  veces menos que `gpt-6.1-sol`. El 6 de octubre luna no superó los umbrales, así que el chat
+  usa sol.
 
 ### HU-3.8 Privacidad
 - No se guarda el texto de las preguntas ni de las respuestas (constitución VI.2).

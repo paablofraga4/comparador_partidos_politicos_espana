@@ -141,6 +141,25 @@ se guarda el texto de las preguntas; tope de gasto diario.
   quedan excluidos de las licencias anteriores.
 - Las citas literales se amparan en el derecho de cita (art. 32 LPI).
 
+**D16 · Cupo gratis y bonos (spec 004)**:
+- **Migración** `002_bonos.sql`:
+  - `uso_gratis(clave, usadas)`, donde `clave` es el sha256 de la *cookie* `vc_uso`;
+  - `bonos(id, codigo_hash, plan, total, usadas, por_hora, estado, sesion, pago, caduca)`;
+  - `uso_diario` pasa a tener la clave `(fecha, tipo)`, con `tipo` gratis o pago.
+- **Reserva atómica**: `update … set usadas = usadas + 1 where usadas < total returning`. Si la
+  respuesta no llega a `onEnd`, se devuelve. Los 503 del proveedor se reintentan con
+  `streamRetries`.
+- **Módulos**:
+  - `lib/bonos/`: `planes.ts`, `codigos.ts`, `cupo.ts` (reserva y devolución), `pagos.ts`
+    (interruptor y salvaguardas) y `pasarela.ts` (Stripe con el SDK `stripe`, más una pasarela
+    simulada solo para desarrollo).
+  - Rutas en `/api/bonos/*`: comprar, confirmar, webhook, canjear y olvidar.
+  - `/api/cupo`.
+  - Páginas `/bono` y `/condiciones`.
+- **Chat**: el cupo y el límite viajan como partes de datos (`data-cupo` y `data-limite`), y la
+  interfaz pinta la tarjeta de planes.
+- **Tests** con PGlite: cupo, bonos, caducidad, devoluciones y salvaguardas.
+
 ## Modelo de datos
 
 **Análisis** (`data/analyses/<conv>/<cand>.json`):
