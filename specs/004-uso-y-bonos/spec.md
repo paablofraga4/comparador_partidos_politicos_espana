@@ -129,17 +129,25 @@ Si se devuelve un pago desde Stripe, el *webhook* `charge.refunded` anula el bon
   gestoría** antes de activar los pagos.
 
 ## Criterios de aceptación
-- [ ] Con un navegador nuevo:
-  - 2 preguntas se responden y la 3.ª muestra la tarjeta de planes;
-  - la 7.ª desde la misma IP en el mismo día, aunque se borren las *cookies*, también.
-- [ ] Una respuesta que falla (p. ej., saturación de OpenAI) no gasta la pregunta.
-- [ ] Al superar el tope diario gratuito, el plan gratis se pausa y el de pago no.
-- [ ] Pasarela simulada:
+Verificados el 6 de octubre. Entre paréntesis, cómo: e2e = en el navegador, test = Vitest con
+PGlite.
+
+- [x] Con un navegador nuevo:
+  - 2 preguntas se responden y la 3.ª muestra la tarjeta de planes (e2e);
+  - la 7.ª desde la misma IP en el mismo día, aunque se borren las *cookies*, también (test).
+- [x] Una respuesta que falla no gasta la pregunta (e2e, con un modelo inexistente).
+- [x] Al superar el tope diario gratuito, el plan gratis se pausa y el de pago no (test).
+- [x] Pasarela simulada (e2e):
   - comprar Bono 25 da 25 preguntas;
   - el código funciona en otro navegador;
   - al devolver el pago, el bono se anula.
-- [ ] Un bono no admite más preguntas por hora que las de su plan, ni más que su total, ni
-  después de caducar.
-- [ ] Con `PAGOS_ACTIVOS=1` pero sin los datos del titular, no se puede comprar.
-- [ ] Ninguna tabla guarda el texto de las preguntas, emails ni IPs en claro.
-- [ ] La tarjeta de planes es accesible: teclado, lector de pantalla y 375 px.
+- [x] Un bono no admite más preguntas por hora que las de su plan, ni más que su total, ni
+  después de caducar (test).
+- [x] Con `PAGOS_ACTIVOS=1` pero sin los datos del titular, no se puede comprar (test).
+- [x] Ninguna tabla guarda el texto de las preguntas, emails ni IPs en claro (diseño y test del
+  *hash* del código).
+- [ ] La tarjeta de planes es accesible.
+  - Teclado, 375 px y objetivos de 44 px: verificados.
+  - Lector de pantalla: falta probarlo (T-213).
+- [x] **Producción, con Stripe en modo real**: el propietario probó la compra del Bono 25, el
+  uso del bono y la devolución, que lo anula vía *webhook*.
