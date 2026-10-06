@@ -54,9 +54,8 @@ coalición o agrupación de electores); desde el BOE (~28 oct) entran todas las 
   oficial de precios). Nunca escribas nombres de modelo de memoria en el código.
 - `git add -A` registra también borrados: revisa `git status` antes (lección: se borró `.env.example`).
 - `uv` puede no estar en el PATH en Windows: usa `python -m uv` (los hooks ya lo hacen).
-- **No edites código con heredocs de Python** (`python - <<EOF … s.replace(…)`): los `
-` y `\d`
-  se corrompen (pasó 4 veces y llegó a `main`). Usa las herramientas Edit/Write.
+- **No edites código con heredocs de Python** (`python - <<EOF … s.replace(…)`): las secuencias
+  de escape (barra invertida + n, d, s…) se corrompen. Pasó 5 veces y llegó a `main`. Usa Edit/Write.
 - Páginas: `pagina` = índice 1-based del PDF (visor); `pagina_impresa` = la que se muestra.
 - Candidaturas del 29N cambian hasta la proclamación (BOE ~3 nov): todo en `data/candidaturas.yaml`, nunca en código.
 - Comparador = extracción exhaustiva offline (no RAG); chat = RAG agéntico híbrido y simétrico (spec 001).
