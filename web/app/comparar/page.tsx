@@ -5,12 +5,15 @@ import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { Selector } from "@/components/selector";
 import { candidaturas, temas, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Comparar partidos",
-  description:
-    "Elige partidos y temas y compara sus propuestas para el 29N, con cada frase enlazada a su programa.",
-};
+// Canónica sin parámetros: cada combinación de partidos y temas es la misma página
+export const metadata: Metadata = metaPagina({
+  titulo: "Comparar programas electorales por temas",
+  descripcion:
+    "Elige partidos y temas y compara sus propuestas para el 29N lado a lado: vivienda, pensiones, sanidad, impuestos… Cada frase enlaza a su programa oficial.",
+  ruta: "/comparar",
+});
 
 const lista = (v: string | string[] | undefined) =>
   (Array.isArray(v) ? v.join(",") : (v ?? "")).split(",").filter(Boolean);
@@ -28,7 +31,7 @@ export default async function Comparar(props: PageProps<"/comparar">) {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <h1 className="text-4xl font-medium sm:text-5xl">Comparar</h1>
+      <h1 className="text-4xl font-medium sm:text-5xl">Comparar programas</h1>
       <div className="border-rule bg-paper-raised mt-6 rounded-xl border p-4 sm:p-6">
         <Selector
           partidos={todas.map((c) => ({ id: c.id, etiqueta: c.corto, color: c.color }))}

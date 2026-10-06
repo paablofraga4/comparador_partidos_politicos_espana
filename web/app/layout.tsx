@@ -29,12 +29,17 @@ export const metadata: Metadata = {
     template: "%s · VotoClaro",
   },
   description:
-    "Compara los programas electorales de las elecciones generales del 29 de noviembre, tema a tema y con la fuente a un clic. Neutral, sin anuncios y con lectura fácil.",
+    "Entiende los programas electorales del 29N: las propuestas de cada partido, tema a tema, explicadas claro y con la página exacta del programa oficial.",
   openGraph: {
     type: "website",
     locale: "es_ES",
     siteName: "VotoClaro",
   },
+  twitter: { card: "summary_large_image" },
+  // Google Search Console (propiedad por prefijo de URL): el token va en una variable
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, temas, vigente } from "@/lib/data";
+import { metaPagina, nombrePartido } from "@/lib/seo";
 import { CONVOCATORIAS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -15,12 +16,25 @@ export function generateStaticParams() {
 export async function generateMetadata(props: PageProps<"/partidos/[id]">): Promise<Metadata> {
   const { id } = await props.params;
   const c = candidatura(id);
-  return c
-    ? {
-        title: `${c.nombre}: su programa por temas`,
-        description: `Qué propone ${c.nombre} en vivienda, empleo, pensiones, sanidad y más, con cada frase enlazada a su programa oficial.`,
-      }
-    : {};
+  if (!c) return {};
+  const v = vigente(c);
+  const ruta = `/partidos/${c.id}`;
+  const titulo = `${c.corto}: programa electoral y propuestas, tema a tema`;
+  // Honesto con lo que se muestra: sin programa propio, o con el de 2023, la descripción lo dice
+  if (v.tipo === "pendiente") {
+    const dentro = v.dentroDe ? candidatura(v.dentroDe) : undefined;
+    return metaPagina({
+      titulo,
+      descripcion: `${nombrePartido(c)}: ${dentro ? `en 2023 se presentó dentro de ${dentro.corto}. ` : ""}Su programa electoral para el 29N aparecerá aquí, explicado por temas, en cuanto se publique.`,
+      ruta,
+    });
+  }
+  const aviso = v.anterior ? " Hasta que publique el del 29N, es su programa de 2023." : "";
+  return metaPagina({
+    titulo,
+    descripcion: `${nombrePartido(c)}: sus propuestas en vivienda, empleo, pensiones, sanidad, impuestos y más, explicadas claro y con la página exacta de su programa oficial.${aviso}`,
+    ruta,
+  });
 }
 
 export default async function FichaCandidatura(props: PageProps<"/partidos/[id]">) {
@@ -44,7 +58,9 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
         <h1 className="text-4xl font-medium sm:text-5xl">
           <Candidato c={c} />
         </h1>
-        <p className="text-ink-muted mt-2 text-lg">{c.nombre}</p>
+        <p className="text-ink-muted mt-2 text-lg">
+          {c.nombre} · su programa electoral, tema a tema
+        </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <ProgramaBadge v={v} />
           {v.tipo === "programa" && v.fuente && (

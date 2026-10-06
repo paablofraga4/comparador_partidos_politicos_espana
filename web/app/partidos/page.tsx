@@ -3,17 +3,20 @@ import Link from "next/link";
 
 import { Candidato, ProgramaBadge } from "@/components/piezas";
 import { candidaturas, registro, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Partidos",
-  description: "Los partidos que se presentan a las elecciones generales del 29N y sus programas.",
-};
+export const metadata: Metadata = metaPagina({
+  titulo: "Partidos y programas electorales de las generales del 29N",
+  descripcion:
+    "Todos los partidos de las elecciones generales del 29 de noviembre, en orden alfabético, con su programa electoral explicado por temas.",
+  ruta: "/partidos",
+});
 
 export default function Partidos() {
   const provisional = registro().fase_inclusion === "provisional";
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-      <h1 className="text-4xl font-medium sm:text-5xl">Partidos</h1>
+      <h1 className="text-4xl font-medium sm:text-5xl">Partidos y sus programas</h1>
       <p className="text-ink-muted mt-3 max-w-2xl text-lg">
         Elige un partido para ver todo lo que propone, tema a tema.
       </p>

@@ -112,6 +112,18 @@ fuente con un clic.
 - Las páginas de tema y de partido son indexables, con título y descripción propios.
 - Tienen metadatos Open Graph básicos (texto). Las imágenes generadas para redes quedan
   fuera de la v1.
+- *Ampliado el 6 de octubre a petición del propietario («dominio y SEO»):*
+  - **URL canónica** en cada página indexable, sin parámetros. `/bono` no se indexa.
+  - **`sitemap.xml`**: inicio, comparar, partidos y sus fichas, temas y sus páginas, programas,
+    pregunta, tu papeleta, metodología y condiciones.
+  - **`robots.txt`**: excluye `/api` y `/bono`.
+  - **Imagen para compartir**: una sola y de marca, sin partidos, para no favorecer a ninguno.
+    Las imágenes por página siguen fuera de la v1.
+  - **Buscadores con IA**: datos estructurados `WebSite` en la portada y un `llms.txt` con los
+    principios y los enlaces principales.
+  - **Dominio propio**: la URL de Railway redirige (301) al dominio, salvo `/api` (*webhooks* y
+    salud).
+  - **Google Search Console**: verificación con una variable de entorno (meta etiqueta).
 
 ## Diseño: «editorial cívico»
 

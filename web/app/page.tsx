@@ -3,6 +3,38 @@ import Link from "next/link";
 
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidaturas, estadoProgramas29N, registro, temas, vigente } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
+import { urlDelSitio } from "@/lib/sitio";
+
+// SEO centrado en el contenido (lo que se busca), no en la marca
+const DESCRIPCION =
+  "Entiende los programas electorales del 29N: las propuestas de cada partido, tema a tema, explicadas claro y con la página exacta del programa oficial.";
+
+export const metadata = metaPagina({
+  titulo: "Qué propone cada partido el 29N: programas electorales explicados",
+  descripcion: DESCRIPCION,
+  ruta: "/",
+});
+
+/** Datos estructurados para buscadores (spec 002, HU-2.9): qué es el sitio, sin valoraciones. */
+function DatosEstructurados() {
+  const url = urlDelSitio(process.env.NEXT_PUBLIC_SITE_URL).origin;
+  const datos = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "VotoClaro",
+    url,
+    inLanguage: "es-ES",
+    description: DESCRIPCION,
+    publisher: { "@type": "Organization", name: "VotoClaro", url },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(datos).replace(/</g, "\\u003c") }}
+    />
+  );
+}
 
 export default function Inicio() {
   const cands = candidaturas();
@@ -12,14 +44,15 @@ export default function Inicio() {
 
   return (
     <>
+      <DatosEstructurados />
       <section className="border-rule border-b">
         <div className="mx-auto max-w-6xl px-4 pt-14 pb-12 sm:px-6 sm:pt-20">
           <p className="text-ink-muted text-sm font-semibold tracking-wide uppercase">
             Elecciones generales · 29 de noviembre de 2026
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-medium sm:text-6xl">
-            Qué propone cada partido, explicado <span className="marker">claro</span> y con la
-            fuente a un clic.
+            Qué propone cada partido en su programa electoral, explicado{" "}
+            <span className="marker">claro</span> y con la fuente a un clic.
           </h1>
           <p className="text-ink-muted mt-5 max-w-2xl text-lg">
             Leemos los programas electorales enteros y los ordenamos por temas. Cada frase enlaza a

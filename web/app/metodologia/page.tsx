@@ -3,13 +3,15 @@ import Link from "next/link";
 
 import { Candidato } from "@/components/piezas";
 import { analisis, candidaturas, fuente, registro } from "@/lib/data";
+import { metaPagina } from "@/lib/seo";
 import type { ConvocatoriaId } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: "Cómo lo hacemos",
-  description:
+export const metadata: Metadata = metaPagina({
+  titulo: "Cómo lo hacemos",
+  descripcion:
     "Metodología de VotoClaro: criterio de inclusión, fuentes, verificación de citas, neutralidad, lectura fácil y estado de cada programa.",
-};
+  ruta: "/metodologia",
+});
 
 const REPO = `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_REPO ?? "paablofraga4/comparador_partidos_politicos_espana"}`;
 
