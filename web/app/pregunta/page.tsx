@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Chat } from "@/components/chat";
+import { estadoPagos } from "@/lib/bonos/pagos";
 import { numeroEnv } from "@/lib/config";
 import { candidaturas } from "@/lib/data";
 import { hayDb } from "@/lib/db";
@@ -14,8 +15,9 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function Pregunta() {
+export default async function Pregunta(props: PageProps<"/pregunta">) {
   const activo = hayDb() && process.env.CHAT_ACTIVO === "1";
+  const { pago } = await props.searchParams;
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
       <h1 className="text-4xl font-medium sm:text-5xl">Pregunta</h1>
@@ -27,12 +29,18 @@ export default function Pregunta() {
         <li>· Solo responde con lo que dicen los programas oficiales.</li>
         <li>· No recomienda a quién votar ni valora propuestas.</li>
         <li>· No guardamos tus preguntas.</li>
+        <li>
+          · Tienes {numeroEnv("CHAT_GRATIS_TOTAL", 2)} preguntas gratis. El comparador es gratis y
+          sin límite.
+        </li>
       </ul>
       <div className="mt-8">
         {activo ? (
           <Chat
             candidaturas={candidaturas().map((c) => ({ id: c.id, corto: c.corto, color: c.color }))}
             maxChars={numeroEnv("CHAT_MAX_QUESTION_CHARS", 500)}
+            pagosActivos={estadoPagos().activos}
+            avisoPago={typeof pago === "string" ? pago : undefined}
           />
         ) : (
           <p className="border-rule bg-paper-raised rounded-lg border p-5">

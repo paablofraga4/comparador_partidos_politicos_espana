@@ -60,6 +60,13 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [ ] T-405 Rendimiento (Lighthouse), revisión final con los tres agentes y correcciones
 - [ ] T-406 🚀 Lanzamiento: despliegue y *smoke test* en producción
 
+## F4b · Cupo gratis y bonos (spec 004)
+- [x] T-451 Migración 002, `lib/bonos` (planes, códigos, cupo, pagos, pasarela) y tests. **V:** tests de cupo, bonos y salvaguardas
+- [x] T-452 `/api/chat` con cupo gratis/bono, devolución si falla, `streamRetries` y presupuestos separados; `/api/cupo`
+- [x] T-453 Rutas de compra (Stripe y simulada), confirmación, *webhook*, canje y olvido. **V:** flujo completo con la pasarela simulada
+- [x] T-454 Interfaz: contador, tarjeta de planes (con lectura fácil), «Tengo un código», `/bono` y `/condiciones`. **V:** escritorio y 375 px
+- [x] T-455 Documentación: `.env.example`, metodología/privacidad y runbook para activar los pagos
+
 ## F5 · Campaña (después del lanzamiento)
 - [ ] T-501 Vigilancia completa: noticias e ingesta automática en borrador (12-14 oct)
 - [ ] T-502 `watch-boe.yml` y vigilancia de coaliciones (antes del 16 oct)
