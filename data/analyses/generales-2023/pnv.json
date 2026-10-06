@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "pnv",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:16Z",
   "documento": {
     "id": "generales-2023/pnv",
     "sha256": "45be62bd6bd8488134513d6ea619ba3fe810ea34a49491f15ded0fb360c23994",

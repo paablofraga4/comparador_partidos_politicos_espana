@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "pp",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:21Z",
   "documento": {
     "id": "generales-2023/pp",
     "sha256": "c93baafc88bdcb33adcd7e8be9dc309b09056362183ad7b7767f3d5134313108",
@@ -16,7 +17,7 @@
     "tokens_entrada": 1308506,
     "tokens_cache": 1177905,
     "tokens_salida": 114895,
-    "coste_usd": 1.2975
+    "coste_usd": 1.3855
   },
   "temas": {
     "vivienda": {
@@ -306,7 +307,7 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "PP quiere alcanzar los mismos niveles de empleo que el resto de la Unión Europea.",
+            "texto": "PP quiere alcanzar los niveles de empleo del resto de la Unión Europea.",
             "citas": [
               "c0009"
             ]
@@ -325,7 +326,7 @@
             ]
           },
           {
-            "texto": "PP quiere un mayor equilibrio entre los ingresos y los gastos públicos.",
+            "texto": "PP quiere reducir la diferencia entre los ingresos y los gastos públicos.",
             "citas": [
               "c0038",
               "c0029"
@@ -334,7 +335,7 @@
         ],
         "propuestas": [
           {
-            "texto": "PP quiere cambiar las medidas para ayudar a encontrar empleo. PP propone ofrecer más cursos de formación. PP quiere que las personas sin empleo tengan más libertad para elegir.",
+            "texto": "PP quiere cambiar las medidas para ayudar a encontrar empleo. PP propone ofrecer más cursos a las personas sin empleo. PP quiere que estas personas tengan más libertad para elegir.",
             "citas": [
               "c0011"
             ],
@@ -342,7 +343,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "PP propone un plan contra el paro de las mujeres. PP quiere reducir a la mitad la diferencia entre hombres y mujeres que trabajan. PP quiere lograrlo durante los años de su mandato.",
+            "texto": "PP propone un plan contra el paro de las mujeres. PP quiere reducir la diferencia entre hombres y mujeres que trabajan o buscan trabajo. PP quiere reducir esta diferencia a la mitad durante la legislatura.",
             "citas": [
               "c0025"
             ],
@@ -350,7 +351,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "PP quiere revisar el sueldo mínimo. PP propone hacerlo mediante el diálogo con sindicatos, empresarios y expertos.",
+            "texto": "PP quiere revisar el sueldo mínimo. PP propone hacerlo con sindicatos, empresarios y expertos.",
             "citas": [
               "c0010"
             ],
@@ -358,7 +359,7 @@
             "subtema": "salario mínimo"
           },
           {
-            "texto": "PP quiere cambiar los contratos que combinan trabajo y formación. PP quiere facilitar el empleo y la formación de jóvenes sin experiencia. PP dirige esta medida a jóvenes con enseñanza obligatoria. PP también quiere formar a trabajadores de más edad para que actualicen sus conocimientos.",
+            "texto": "PP quiere adaptar los contratos que unen trabajo y formación. PP quiere facilitar el empleo de jóvenes sin experiencia. PP también quiere facilitar su formación. PP dirige esta medida a jóvenes con enseñanza obligatoria. PP quiere que los trabajadores de más edad aprendan nuevas tareas.",
             "citas": [
               "c0015"
             ],
@@ -366,7 +367,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "PP quiere que los horarios de trabajo sean más flexibles. PP propone un banco de horas para repartir las horas de trabajo con más flexibilidad. PP quiere mantener las horas trabajadas y el sueldo.",
+            "texto": "PP quiere dar más opciones para ajustar los horarios de trabajo. PP propone un banco de horas para repartir el tiempo de trabajo. PP quiere mantener las horas trabajadas y el sueldo.",
             "citas": [
               "c0114"
             ],
@@ -374,7 +375,7 @@
             "subtema": "jornada laboral"
           },
           {
-            "texto": "PP propone una tarifa 0 para nuevos autónomos durante el 1.er año.",
+            "texto": "PP propone una tarifa 0 para nuevos autónomos durante el primer año. PP dirige esta medida a quienes empiezan a trabajar por cuenta propia.",
             "citas": [
               "c0018"
             ],
@@ -382,7 +383,7 @@
             "subtema": "autónomos y pymes"
           },
           {
-            "texto": "PP propone una Estrategia Nacional de Reindustrialización. PP quiere que la industria española alcance el 20% del producto interior bruto. PP propone también un plan para alcanzar esa meta.",
+            "texto": "PP propone la Estrategia Nacional de Reindustrialización. PP quiere ponerla en marcha para impulsar la industria. PP también propone un plan para que la industria española tenga más peso. PP quiere que alcance el 20% del producto interior bruto.",
             "citas": [
               "c0038"
             ],
@@ -390,7 +391,7 @@
             "subtema": "industria"
           },
           {
-            "texto": "PP quiere revisar las cuentas públicas con la Intervención General de la Administración del Estado. PP quiere hacer esta revisión al inicio de su mandato. PP quiere revisar los gastos ya acordados. PP también quiere revisar las obligaciones pendientes.",
+            "texto": "PP quiere revisar las cuentas públicas al inicio de la legislatura. PP quiere hacerlo con la Intervención General de la Administración del Estado. PP quiere revisar los gastos ya acordados. PP también quiere revisar las obligaciones que quedan por cumplir.",
             "citas": [
               "c0033"
             ],
@@ -399,12 +400,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.4,
-          "max_palabras_frase": 15,
+          "inflesz": 69.2,
+          "max_palabras_frase": 14,
           "ok": true,
           "avisos": []
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -2783,7 +2784,7 @@
             ]
           },
           {
-            "texto": "PP impulsa la Estrategia Nacional de Inteligencia Artificial.",
+            "texto": "PP quiere desarrollar la Estrategia Nacional de Inteligencia Artificial.",
             "citas": [
               "c0007",
               "c0027"
@@ -2797,7 +2798,7 @@
             ]
           },
           {
-            "texto": "PP quiere reforzar la seguridad de los sistemas digitales.",
+            "texto": "PP quiere mejorar la seguridad de los sistemas digitales.",
             "citas": [
               "c0172",
               "c0175"
@@ -2811,7 +2812,7 @@
             ]
           },
           {
-            "texto": "PP propone acompañarlas y ayudarlas en su uso.",
+            "texto": "PP quiere acompañarlas en el uso de estos servicios.",
             "citas": [
               "c0172",
               "c0175"
@@ -2820,7 +2821,7 @@
         ],
         "propuestas": [
           {
-            "texto": "PP quiere invertir más en investigación, desarrollo e innovación durante su mandato. PP propone hacerlo de acuerdo con la Ley de la Ciencia.",
+            "texto": "PP quiere invertir más en investigación, desarrollo e innovación. PP quiere hacerlo durante su mandato. PP quiere seguir la Ley de la Ciencia.",
             "citas": [
               "c0007",
               "c0008"
@@ -2829,7 +2830,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "PP quiere un plan para incorporar a profesores y personas que investigan. PP propone reconocer de forma automática sus títulos y su experiencia. PP propone usar declaraciones en las que estas personas prometen decir la verdad. PP quiere evaluar la calidad de sus investigaciones.",
+            "texto": "PP quiere crear un programa para incorporar docentes y personal investigador. PP quiere reconocer de forma automática los títulos y la experiencia de ese personal. PP quiere usar declaraciones juradas, donde cada persona promete que dice la verdad. PP quiere evaluar la calidad de su investigación.",
             "citas": [
               "c0003"
             ],
@@ -2837,7 +2838,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "PP impulsa la aprobación del reglamento europeo de inteligencia artificial. PP quiere aprobarlo durante el actual mandato europeo.",
+            "texto": "PP quiere que la UE apruebe normas sobre inteligencia artificial. PP quiere lograrlo antes de que acabe el mandato europeo.",
             "citas": [
               "c0028"
             ],
@@ -2845,7 +2846,7 @@
             "subtema": "inteligencia artificial"
           },
           {
-            "texto": "PP impulsa la Estrategia Nacional de Inteligencia Artificial. PP quiere poner en marcha la Agencia Española de Supervisión.",
+            "texto": "PP quiere desarrollar la Estrategia Nacional de Inteligencia Artificial. PP quiere poner en marcha la Agencia Española de Supervisión.",
             "citas": [
               "c0027"
             ],
@@ -2853,7 +2854,7 @@
             "subtema": "inteligencia artificial"
           },
           {
-            "texto": "PP quiere regular qué información muestran los sistemas de inteligencia artificial de la Administración. PP quiere regular el acceso a su código fuente: las instrucciones escritas que hacen funcionar estos sistemas. PP quiere que las personas tomen las decisiones que permiten elegir entre varias opciones. PP quiere que las razones de esas decisiones sean fáciles de entender.",
+            "texto": "PP quiere fijar normas para conocer cómo funcionan los sistemas administrativos de inteligencia artificial. PP quiere regular el acceso a su código fuente: las instrucciones que hacen funcionar estos sistemas. PP quiere que las personas tomen las decisiones que permiten elegir entre varias opciones. PP quiere que los motivos de las decisiones sean fáciles de entender.",
             "citas": [
               "c0173"
             ],
@@ -2861,7 +2862,7 @@
             "subtema": "inteligencia artificial"
           },
           {
-            "texto": "PP impulsa el Plan Mayores Digitales. PP quiere enseñar a las personas mayores a usar servicios digitales públicos y privados. PP propone acompañarlas y ayudarlas en su uso.",
+            "texto": "PP quiere impulsar el \"Plan Mayores Digitales\". PP quiere enseñar a las personas mayores a usar servicios digitales públicos y privados. PP quiere acompañarlas en el uso de estos servicios.",
             "citas": [
               "c0174"
             ],
@@ -2869,7 +2870,7 @@
             "subtema": "brecha digital"
           },
           {
-            "texto": "PP quiere más medios para proteger los sistemas digitales de la Administración. PP propone reforzar también la protección digital de las empresas y la ciudadanía. PP quiere organizar mejor estos medios. PP quiere mejorar la coordinación con otros países.",
+            "texto": "PP quiere dar más medios para proteger los sistemas digitales de la Administración. PP quiere dar más medios a las empresas y a la ciudadanía para esta protección. PP quiere mejorar la gestión de esa seguridad. PP quiere mejorar el trabajo conjunto con otros países.",
             "citas": [
               "c0172"
             ],
@@ -2877,7 +2878,7 @@
             "subtema": "ciberseguridad"
           },
           {
-            "texto": "PP quiere invertir en las instalaciones necesarias para ampliar el 5G. PP propone hacerlo en vías que permiten mucho tráfico.",
+            "texto": "PP quiere invertir en instalaciones para extender las redes móviles de 5.ª generación. PP quiere extender estas redes en vías con capacidad para mucho tráfico.",
             "citas": [
               "c0058"
             ],
@@ -2886,13 +2887,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 58.2,
-          "max_palabras_frase": 17,
-          "ok": false,
+          "inflesz": 61.1,
+          "max_palabras_frase": 16,
+          "ok": true,
           "avisos": [
-            "INFLESZ 58.2 < 60.0 (texto demasiado difícil)"
+            "Aviso: INFLESZ 61.1 por debajo del objetivo 65.0"
           ]
         },
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -13289,8 +13291,5 @@
       "resaltada": true
     }
   },
-  "incidencias": [
-    "economia-empleo: la lectura fácil no supera la validación tras 4 intentos",
-    "ciencia-digital: la lectura fácil no supera la validación tras 4 intentos"
-  ]
+  "incidencias": []
 }

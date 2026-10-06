@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "erc",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:08Z",
   "documento": {
     "id": "generales-2023/erc",
     "sha256": "760db25e48422b74a9b0c3172cab16cf39d010345849e50b921ff8bf61be2854",
@@ -16,7 +17,7 @@
     "tokens_entrada": 2761769,
     "tokens_cache": 2554455,
     "tokens_salida": 133170,
-    "coste_usd": 1.7128
+    "coste_usd": 2.0466
   },
   "temas": {
     "vivienda": {
@@ -912,31 +913,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "ERC propone repartir la riqueza de forma más justa.",
+            "texto": "ERC propone repartir mejor la riqueza.",
             "citas": [
               "c0063"
             ]
           },
           {
-            "texto": "ERC quiere asegurar los derechos sociales.",
+            "texto": "ERC quiere garantizar los derechos sociales.",
             "citas": [
               "c0063"
             ]
           },
           {
-            "texto": "ERC quiere prestar especial atención a quienes necesitan apoyo o pueden caer en la pobreza.",
+            "texto": "ERC quiere atender especialmente a personas con más dificultades o en riesgo de pobreza.",
             "citas": [
               "c0063"
             ]
           },
           {
-            "texto": "ERC quiere que las personas con discapacidad puedan vivir de forma independiente.",
+            "texto": "ERC defiende que las personas con discapacidad puedan vivir de forma independiente.",
             "citas": [
               "c0064"
             ]
           },
           {
-            "texto": "ERC propone apoyos y servicios cerca de donde viven.",
+            "texto": "ERC propone apoyos y servicios cercanos para estas personas.",
             "citas": [
               "c0064"
             ]
@@ -944,7 +945,7 @@
         ],
         "propuestas": [
           {
-            "texto": "ERC propone transferir toda la gestión del ingreso mínimo vital. ERC incluye las demás ayudas del Estado que no exigen haber pagado cuotas. ERC quiere que Cataluña, la Comunidad Valenciana y las Illes Balears gestionen estas ayudas.",
+            "texto": "ERC propone transferir toda la gestión del ingreso mínimo vital. ERC incluye las demás ayudas del Estado que no exigen pagos previos a la Seguridad Social. ERC propone que Cataluña, la Comunidad Valenciana y las Illes Balears gestionen estas ayudas.",
             "citas": [
               "c0069"
             ],
@@ -952,7 +953,7 @@
             "subtema": "ingreso mínimo vital"
           },
           {
-            "texto": "ERC defiende una renta básica europea: un ingreso para cubrir las necesidades más básicas. ERC quiere que esta renta permita vivir con más libertad. ERC quiere que esta renta ayude a acabar con la pobreza.",
+            "texto": "ERC defiende una renta básica europea. ERC quiere que esta ayuda cubra lo necesario para vivir. ERC quiere que permita a las personas decidir sobre su propia vida. ERC quiere que esta ayuda contribuya a acabar con la pobreza.",
             "citas": [
               "c0067"
             ],
@@ -960,7 +961,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "ERC propone una ayuda para todos por la crianza de hijos.",
+            "texto": "ERC propone una ayuda para criar hijos que puedan recibir todas las personas.",
             "citas": [
               "c0068"
             ],
@@ -968,7 +969,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "ERC exige que el Estado aporte dinero para atender a personas que necesitan apoyo. ERC exige que aporte, como mínimo, tanto como las comunidades autónomas. ERC exige que el Estado pague su deuda con la Generalitat de Cataluña. ERC cifra esta deuda de los últimos 10 años en 5.700 millones de euros.",
+            "texto": "ERC exige dinero del Estado para atender a personas que necesitan ayuda diaria. ERC exige que el Estado aporte, como mínimo, tanto dinero como las comunidades autónomas. ERC exige que el Estado pague su deuda con la Generalitat de Cataluña. ERC cifra esa deuda de los últimos 10 años en 5.700 millones de euros.",
             "citas": [
               "c0072"
             ],
@@ -976,7 +977,7 @@
             "subtema": "dependencia"
           },
           {
-            "texto": "ERC propone cambiar las leyes españolas sobre los derechos de las personas con discapacidad. ERC quiere adaptar estas leyes a la Convención Internacional de 2006.",
+            "texto": "ERC propone adaptar las leyes españolas sobre los derechos de las personas con discapacidad. ERC quiere que estas leyes respeten la Convención Internacional de 2006.",
             "citas": [
               "c0076"
             ],
@@ -984,7 +985,7 @@
             "subtema": "discapacidad"
           },
           {
-            "texto": "ERC propone aumentar mucho los fondos del plan concertado destinados a Cataluña. ERC quiere reforzar así los servicios sociales básicos.",
+            "texto": "ERC propone aumentar varias veces el dinero del plan concertado destinado a Cataluña. ERC quiere reforzar así los servicios sociales básicos.",
             "citas": [
               "c0074"
             ],
@@ -992,7 +993,7 @@
             "subtema": "servicios sociales"
           },
           {
-            "texto": "ERC propone cambiar el bono eléctrico, una ayuda para pagar la luz. ERC propone sistemas que perdonen deudas de energía de forma automática. ERC propone esta medida para familias y personas que necesitan más ayuda.",
+            "texto": "ERC propone cambiar el bono eléctrico, una ayuda para pagar la electricidad. ERC propone perdonar deudas de energía a familias y personas con más dificultades. ERC quiere que el sistema lo haga de forma automática.",
             "citas": [
               "c0075"
             ],
@@ -1000,7 +1001,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "ERC propone fondos y medios para ayudar a personas con problemas de salud mental. ERC propone darles una vivienda. ERC propone darles apoyo en su vida diaria. ERC propone darles apoyo para cuidar su salud. ERC propone ayudas para sus gastos básicos.",
+            "texto": "ERC propone dedicar medios y dinero al apoyo de personas con trastornos mentales. ERC propone ofrecer vivienda a estas personas. ERC propone apoyo social y de salud para estas personas. ERC propone ayudas de dinero para cubrir lo necesario para vivir.",
             "citas": [
               "c0077"
             ],
@@ -1009,12 +1010,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 65.2,
-          "max_palabras_frase": 15,
+          "inflesz": 61.7,
+          "max_palabras_frase": 16,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 61.7 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -1282,25 +1285,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "ERC propone una educación gratuita, con igualdad y justicia social.",
+            "texto": "ERC propone una educación gratuita.",
             "citas": [
               "c0178"
             ]
           },
           {
-            "texto": "ERC quiere una educación que responda de forma justa a las distintas necesidades.",
+            "texto": "ERC quiere igualdad y una educación que tenga en cuenta las necesidades de cada persona.",
             "citas": [
               "c0178"
             ]
           },
           {
-            "texto": "ERC defiende que todas las personas tengan las mismas oportunidades en la universidad.",
+            "texto": "ERC quiere que la educación ayude a lograr una sociedad más justa.",
+            "citas": [
+              "c0178"
+            ]
+          },
+          {
+            "texto": "ERC defiende las mismas oportunidades para todos en la universidad.",
             "citas": [
               "c0184"
             ]
           },
           {
-            "texto": "ERC quiere bajar los precios públicos de la universidad para avanzar hacia una educación gratuita.",
+            "texto": "ERC quiere reducir los precios públicos de la universidad hasta que sea gratuita.",
             "citas": [
               "c0184"
             ]
@@ -1314,7 +1323,7 @@
         ],
         "propuestas": [
           {
-            "texto": "ERC quiere asegurar fondos para las administraciones que se encargan de la educación infantil. ERC quiere educación infantil para todos los niños de 0 a 3 años.",
+            "texto": "ERC quiere asegurar dinero para quienes gestionan la educación infantil. ERC quiere educación infantil para todos los niños de 0 a 3 años.",
             "citas": [
               "c0182"
             ],
@@ -1322,7 +1331,7 @@
             "subtema": "educación 0-3 años"
           },
           {
-            "texto": "ERC quiere que cada gobierno decida en exclusiva qué se enseña. ERC lo pide para los gobiernos de Cataluña y la Comunidad Valenciana. ERC también lo pide para el gobierno de las Illes Balears. ERC lo pide para la enseñanza que todo el alumnado debe cursar. ERC también lo pide para las etapas que vienen después.",
+            "texto": "ERC quiere que estos gobiernos decidan por sí solos los contenidos de los estudios. ERC pide este poder para los gobiernos de Cataluña y la Comunidad Valenciana. ERC también lo pide para el gobierno de las Illes Balears. ERC incluye los estudios obligatorios y los que vienen después.",
             "citas": [
               "c0180"
             ],
@@ -1330,7 +1339,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "ERC quiere mantener el modelo de enseñanza en catalán. ERC quiere que el catalán sea la lengua principal en las clases. ERC quiere enseñar en lengua de signos catalana al alumnado que la usa. ERC quiere el occitano como lengua principal en los centros educativos de Aran.",
+            "texto": "ERC quiere mantener la enseñanza en catalán. ERC quiere enseñar en lengua de signos catalana a quienes usan esta lengua. ERC quiere enseñar en occitano en los centros educativos de Aran.",
             "citas": [
               "c0176"
             ],
@@ -1338,7 +1347,7 @@
             "subtema": "lenguas en la enseñanza"
           },
           {
-            "texto": "ERC exige al Estado fondos para las universidades. ERC pide el 2% del producto interior bruto para ese fin. ERC quiere recuperar los fondos básicos que perdieron las universidades por los recortes.",
+            "texto": "ERC exige al Estado el 2% del producto interior bruto para las universidades. ERC quiere recuperar el dinero que los recortes quitaron a las universidades. ERC se refiere al dinero para su funcionamiento básico.",
             "citas": [
               "c0186"
             ],
@@ -1346,7 +1355,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "ERC quiere dar a la Generalitat de Catalunya toda la gestión de becas. ERC quiere lo mismo para las ayudas al estudio. ERC pide la gestión que prevé el Estatuto de Autonomía.",
+            "texto": "ERC quiere que la Generalitat de Catalunya gestione por completo las becas. ERC también quiere que gestione por completo las ayudas al estudio. ERC pide la gestión prevista en el Estatuto de Autonomía.",
             "citas": [
               "c0183"
             ],
@@ -1354,7 +1363,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "ERC quiere crear ya el Estatuto del Personal Docente e Investigador Universitario. ERC quiere reforzar así el modelo catalán.",
+            "texto": "ERC quiere crear ya el Estatuto del Personal Docente e Investigador Universitario. ERC quiere reforzar con él el modelo catalán.",
             "citas": [
               "c0185"
             ],
@@ -1362,7 +1371,7 @@
             "subtema": "profesorado"
           },
           {
-            "texto": "ERC quiere unir las distintas formas de formación profesional. ERC incluye la formación inicial y la formación para el empleo. ERC incluye también la formación que continúa a lo largo de la vida. ERC quiere atender las necesidades de la educación y del mundo del trabajo.",
+            "texto": "ERC quiere unir la formación profesional inicial con la formación para el empleo. ERC también quiere incluir la formación para seguir aprendiendo durante la vida laboral. ERC quiere que responda a las necesidades de la educación y del trabajo.",
             "citas": [
               "c0179"
             ],
@@ -1370,7 +1379,7 @@
             "subtema": "formación profesional"
           },
           {
-            "texto": "ERC propone crear un Fondo de Compensación Educativa. ERC quiere que este fondo pague parte de las medidas para mejorar la educación.",
+            "texto": "ERC quiere crear un Fondo de Compensación Educativa. ERC quiere que el fondo pague parte de las mejoras del sistema educativo.",
             "citas": [
               "c0181"
             ],
@@ -1379,15 +1388,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.3,
+          "inflesz": 66.5,
           "max_palabras_frase": 15,
           "ok": true,
           "avisos": []
         },
-        "fiel": false,
-        "observaciones": [
-          "La frase sobre responder justamente a distintas necesidades interpreta el principio de equidad como una atención diferenciada a las necesidades. Es una explicación general razonable, pero ese detalle no aparece expresamente en el original."
-        ]
+        "fiel": true,
+        "observaciones": []
       }
     },
     "inmigracion": {
@@ -2101,31 +2108,37 @@
             ]
           },
           {
-            "texto": "ERC propone invertir en trenes para transportar personas y mercancías.",
+            "texto": "ERC quiere invertir en trenes para llevar personas y mercancías.",
             "citas": [
               "c0157"
             ]
           },
           {
-            "texto": "ERC quiere combinar distintos medios de transporte para dañar menos el medio ambiente.",
+            "texto": "ERC propone combinar distintos medios de transporte.",
             "citas": [
               "c0157"
             ]
           },
           {
-            "texto": "ERC quiere dar los puertos y aeropuertos a los gobiernos de estos territorios.",
+            "texto": "ERC quiere que estos transportes dañen poco el medio ambiente.",
+            "citas": [
+              "c0157"
+            ]
+          },
+          {
+            "texto": "ERC quiere que los gobiernos de Cataluña, Comunidad Valenciana e Illes Balears reciban puertos y aeropuertos.",
             "citas": [
               "c0159"
             ]
           },
           {
-            "texto": "ERC se refiere a Cataluña, Comunidad Valenciana e Illes Balears.",
+            "texto": "ERC quiere que estos gobiernos sean sus dueños y los gestionen.",
             "citas": [
               "c0159"
             ]
           },
           {
-            "texto": "ERC propone que estos gobiernos reciban la propiedad, los recursos y la gestión.",
+            "texto": "ERC quiere que estos gobiernos reciban también los recursos.",
             "citas": [
               "c0159"
             ]
@@ -2133,7 +2146,7 @@
         ],
         "propuestas": [
           {
-            "texto": "ERC quiere que una ley fije una cantidad mínima de dinero del Estado. ERC propone usar ese dinero para pagar el transporte público. ERC quiere que este transporte sea de calidad. ERC quiere que pueda mantenerse y cuide el medio ambiente.",
+            "texto": "ERC quiere fijar por ley una cantidad mínima de dinero del Estado para el transporte público. ERC quiere que este transporte funcione bien y pueda mantenerse en el tiempo.",
             "citas": [
               "c0158"
             ],
@@ -2141,7 +2154,7 @@
             "subtema": "transporte público y abonos"
           },
           {
-            "texto": "ERC quiere dar todo Cercanías a estas instituciones. ERC se refiere a la Generalitat de Cataluña y la Generalitat Valenciana. ERC propone incluir el dinero, las instalaciones, los trenes y el personal. ERC quiere que las estaciones estén en condiciones de uso.",
+            "texto": "ERC quiere pasar todo Cercanías a la Generalitat de Cataluña. ERC quiere también pasarlo a la Generalitat Valenciana. ERC quiere incluir el dinero, las instalaciones, los trenes y el personal. ERC quiere incluir las estaciones en condiciones de uso.",
             "citas": [
               "c0161"
             ],
@@ -2149,7 +2162,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "ERC quiere pagar a quienes usan Cercanías si hay retrasos o cancelaciones. ERC propone seguir el compromiso de Renfe de que los trenes lleguen a tiempo. ERC toma como ejemplo los servicios de alta velocidad.",
+            "texto": "ERC propone pagos para los usuarios de Cercanías por retrasos y viajes cancelados. ERC quiere seguir el compromiso de puntualidad de Renfe en servicios como la alta velocidad.",
             "citas": [
               "c0165"
             ],
@@ -2157,7 +2170,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "ERC quiere conectar el corredor mediterráneo de mercancías con la red transeuropea. ERC propone 2 plataformas de vías con la separación internacional entre raíles. ERC quiere transportar por tren al menos un 35% de las mercancías en 2040.",
+            "texto": "ERC propone conectar el corredor mediterráneo de mercancías con la red transeuropea. ERC propone construir una doble plataforma para las vías de esta conexión. ERC quiere que las vías tengan ancho internacional. ERC quiere que el tren transporte al menos un 35% de mercancías en 2040.",
             "citas": [
               "c0164",
               "c0163"
@@ -2166,7 +2179,7 @@
             "subtema": "corredores ferroviarios"
           },
           {
-            "texto": "ERC quiere recuperar los trenes de noche. ERC propone salidas desde las principales ciudades de los «Países Catalanes». ERC quiere que estos trenes lleguen a ciudades europeas.",
+            "texto": "ERC quiere recuperar los trenes de noche. ERC propone que salgan de las principales ciudades de los «Países Catalanes». ERC quiere que lleguen a ciudades europeas.",
             "citas": [
               "c0166"
             ],
@@ -2174,7 +2187,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "ERC quiere dar los puertos y aeropuertos de los «Países Catalanes» a estas instituciones. ERC se refiere a la Generalitat de Cataluña y la Generalitat Valenciana. ERC incluye también al Gobierno de las Illes Balears. ERC propone darles la propiedad, los recursos y la gestión.",
+            "texto": "ERC quiere pasar los puertos y aeropuertos de los «Países Catalanes» a estos gobiernos. ERC propone que la Generalitat de Cataluña reciba su propiedad, sus recursos y su gestión. ERC propone lo mismo para la Generalitat Valenciana. ERC propone lo mismo para el Gobierno de las Illes Balears.",
             "citas": [
               "c0159"
             ],
@@ -2182,7 +2195,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "ERC quiere frenar que empresas privadas gestionen las torres de control de los aeropuertos. ERC quiere recuperar su gestión pública cuando ya esté en manos privadas. ERC incluye aeropuertos como Son Sant Joan de Palma.",
+            "texto": "ERC quiere frenar la venta de torres de control de aeropuertos a empresas privadas. ERC quiere que las torres ya vendidas vuelvan a ser públicas. ERC incluye aeropuertos como Son Sant Joan de Palma.",
             "citas": [
               "c0160"
             ],
@@ -2190,7 +2203,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "ERC quiere dar la propiedad y la gestión de autopistas y autovías a estas instituciones. ERC se refiere a la Generalitat de Cataluña y la Generalitat Valenciana. ERC incluye también al Gobierno de las Illes Balears. ERC propone aplicar la euroviñeta, un sistema de cobro por usar carreteras.",
+            "texto": "ERC quiere pasar la propiedad y la gestión de autopistas y autovías a estos gobiernos. ERC propone que las reciba la Generalitat de Cataluña. ERC propone que también las reciba la Generalitat Valenciana. ERC propone lo mismo para el Gobierno de las Illes Balears. ERC quiere aplicar la euroviñeta, un pago por usar carreteras.",
             "citas": [
               "c0162"
             ],
@@ -2199,12 +2212,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 66.9,
-          "max_palabras_frase": 15,
+          "inflesz": 68.4,
+          "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -3606,37 +3619,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "ERC quiere una República Catalana que forme parte de la UE.",
+            "texto": "ERC propone una República Catalana miembro de la UE.",
             "citas": [
               "c0009"
             ]
           },
           {
-            "texto": "ERC quiere que la Unión y sus Estados compartan el poder.",
+            "texto": "ERC quiere que la Unión y sus países miembros compartan el poder.",
             "citas": [
               "c0009"
             ]
           },
           {
-            "texto": "ERC quiere que los países decidan juntos sobre los asuntos del mundo.",
+            "texto": "ERC propone que varios países participen en las decisiones mundiales.",
             "citas": [
               "c0009"
             ]
           },
           {
-            "texto": "ERC quiere reducir la presencia militar del Estado español.",
+            "texto": "ERC propone reducir la presencia militar y retirar armas del Estado español.",
             "citas": [
               "c0026"
             ]
           },
           {
-            "texto": "ERC quiere que el Estado español deje de tener armas.",
-            "citas": [
-              "c0026"
-            ]
-          },
-          {
-            "texto": "ERC plantea estas medidas como parte de la seguridad y la defensa entre países.",
+            "texto": "ERC sitúa esta propuesta dentro de la seguridad y la defensa internacional.",
             "citas": [
               "c0026"
             ]
@@ -3644,7 +3651,7 @@
         ],
         "propuestas": [
           {
-            "texto": "ERC quiere que la Unión Europea y sus Estados compartan el poder.",
+            "texto": "ERC propone una Unión Europea federal. ERC quiere que la Unión Europea y sus países miembros compartan el poder.",
             "citas": [
               "c0008"
             ],
@@ -3652,7 +3659,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "ERC propone que el catalán y el occitano sean lenguas oficiales de la UE.",
+            "texto": "ERC propone que el catalán y el occitano sean lenguas oficiales de la UE. ERC también propone que sean lenguas de trabajo en el Parlamento Europeo.",
             "citas": [
               "c0010"
             ],
@@ -3660,15 +3667,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "ERC propone usar ambas lenguas para trabajar en el Parlamento Europeo.",
-            "citas": [
-              "c0010"
-            ],
-            "id": "exterior-defensa-2",
-            "subtema": "Unión Europea"
-          },
-          {
-            "texto": "ERC mantiene su apoyo al pueblo de Ucrania ante la invasión de la Federación rusa.",
+            "texto": "ERC quiere mantener el apoyo y la solidaridad con el pueblo de Ucrania. ERC plantea este apoyo ante la invasión de la Federación rusa.",
             "citas": [
               "c0012"
             ],
@@ -3676,7 +3675,7 @@
             "subtema": "conflictos internacionales"
           },
           {
-            "texto": "ERC quiere que el pueblo del Sáhara Occidental decida su futuro.",
+            "texto": "ERC defiende que el pueblo del Sáhara Occidental decida su futuro. ERC exige al Gobierno español corregir su apoyo a la propuesta marroquí de autonomía para el Sáhara Occidental.",
             "citas": [
               "c0028"
             ],
@@ -3684,23 +3683,7 @@
             "subtema": "Marruecos y Sáhara"
           },
           {
-            "texto": "ERC exige que el Gobierno español cambie su postura sobre el plan de autonomía marroquí.",
-            "citas": [
-              "c0028"
-            ],
-            "id": "exterior-defensa-4",
-            "subtema": "Marruecos y Sáhara"
-          },
-          {
-            "texto": "ERC quiere que el Gobierno español deje de apoyar ese plan.",
-            "citas": [
-              "c0028"
-            ],
-            "id": "exterior-defensa-4",
-            "subtema": "Marruecos y Sáhara"
-          },
-          {
-            "texto": "ERC propone dedicar el 0,7% de los presupuestos estatales a ayuda entre países.",
+            "texto": "ERC propone dedicar el 0,7% de los presupuestos estatales a ayuda para el desarrollo. ERC incluye la cooperación y la solidaridad internacional en esta ayuda. ERC propone gestionar la parte correspondiente mediante la Agencia Catalana de Cooperación al Desarrollo. ERC propone que el Fons Català también gestione esa parte.",
             "citas": [
               "c0027"
             ],
@@ -3708,31 +3691,7 @@
             "subtema": "cooperación al desarrollo"
           },
           {
-            "texto": "ERC quiere destinar esta ayuda al desarrollo y la solidaridad entre países.",
-            "citas": [
-              "c0027"
-            ],
-            "id": "exterior-defensa-5",
-            "subtema": "cooperación al desarrollo"
-          },
-          {
-            "texto": "ERC propone gestionar su parte mediante la Agencia Catalana de Cooperación al Desarrollo.",
-            "citas": [
-              "c0027"
-            ],
-            "id": "exterior-defensa-5",
-            "subtema": "cooperación al desarrollo"
-          },
-          {
-            "texto": "ERC también propone gestionar esa parte mediante el Fons Català.",
-            "citas": [
-              "c0027"
-            ],
-            "id": "exterior-defensa-5",
-            "subtema": "cooperación al desarrollo"
-          },
-          {
-            "texto": "ERC propone reducir un 50% el gasto anual en armas del Ministerio de Defensa.",
+            "texto": "ERC propone reducir un 50% el presupuesto anual para armas del Ministerio de Defensa. ERC propone reducir también un 50% los fondos anuales de otros ministerios. ERC se refiere a fondos para investigar y desarrollar la industria de armas.",
             "citas": [
               "c0029"
             ],
@@ -3740,23 +3699,7 @@
             "subtema": "OTAN y gasto en defensa"
           },
           {
-            "texto": "ERC propone reducir un 50% el gasto anual de otros ministerios en investigar armas.",
-            "citas": [
-              "c0029"
-            ],
-            "id": "exterior-defensa-6",
-            "subtema": "OTAN y gasto en defensa"
-          },
-          {
-            "texto": "ERC incluye también el gasto para crear y mejorar armas.",
-            "citas": [
-              "c0029"
-            ],
-            "id": "exterior-defensa-6",
-            "subtema": "OTAN y gasto en defensa"
-          },
-          {
-            "texto": "ERC propone suspender de inmediato los permisos para vender armas a otros Estados.",
+            "texto": "ERC propone suspender de inmediato los permisos para exportar armas y material de defensa. ERC quiere aplicar esta medida a cualquier otro Estado, aunque pertenezca a la UE. ERC quiere aplicarla sin tener en cuenta los tratados comerciales vigentes.",
             "citas": [
               "c0030"
             ],
@@ -3764,31 +3707,7 @@
             "subtema": "OTAN y gasto en defensa"
           },
           {
-            "texto": "ERC incluye los permisos para vender material de defensa.",
-            "citas": [
-              "c0030"
-            ],
-            "id": "exterior-defensa-7",
-            "subtema": "OTAN y gasto en defensa"
-          },
-          {
-            "texto": "ERC quiere aplicar esta medida también a los Estados de la UE.",
-            "citas": [
-              "c0030"
-            ],
-            "id": "exterior-defensa-7",
-            "subtema": "OTAN y gasto en defensa"
-          },
-          {
-            "texto": "ERC quiere aplicar esta medida aunque haya acuerdos de comercio en vigor.",
-            "citas": [
-              "c0030"
-            ],
-            "id": "exterior-defensa-7",
-            "subtema": "OTAN y gasto en defensa"
-          },
-          {
-            "texto": "ERC propone aprobar de forma oficial el Tratado de Prohibición de las Armas Nucleares.",
+            "texto": "ERC propone aprobar oficialmente el Tratado de Prohibición de las Armas Nucleares.",
             "citas": [
               "c0011"
             ],
@@ -3797,13 +3716,18 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.1,
-          "max_palabras_frase": 15,
+          "inflesz": 61.3,
+          "max_palabras_frase": 18,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 61.3 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false,
-        "observaciones": []
+        "fiel": true,
+        "observaciones": [
+          "En la propuesta de cooperación, se omite que el 0,7% corresponde a ayuda oficial al desarrollo. La adaptación conserva la ayuda para el desarrollo, pero deja fuera ese matiz del compromiso.",
+          "La propuesta de ratificar el Tratado de Prohibición de las Armas Nucleares se reformula como aprobarlo oficialmente. No son necesariamente el mismo trámite, aunque la frase puede entenderse como una simplificación de la ratificación."
+        ]
       }
     }
   },
@@ -10067,10 +9991,5 @@
       "resaltada": true
     }
   },
-  "incidencias": [
-    "educacion: la lectura fácil no supera la validación tras 4 intentos",
-    "proteccion-social: la lectura fácil no supera la validación tras 4 intentos",
-    "transporte: la lectura fácil no supera la validación tras 4 intentos",
-    "exterior-defensa: la lectura fácil no supera la validación tras 4 intentos"
-  ]
+  "incidencias": []
 }

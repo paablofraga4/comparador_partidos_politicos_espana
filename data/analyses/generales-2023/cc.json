@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "cc",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:04Z",
   "documento": {
     "id": "generales-2023/cc",
     "sha256": "ebcac3e6b17012c77d1a761041dc1615c2b28a527666a1467db66e4b82b49c33",
@@ -16,7 +17,7 @@
     "tokens_entrada": 278215,
     "tokens_cache": 208670,
     "tokens_salida": 116544,
-    "coste_usd": 1.4491
+    "coste_usd": 1.5516
   },
   "temas": {
     "vivienda": {
@@ -779,43 +780,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "CC propone un acuerdo social sobre la educación.",
+            "texto": "CC propone un acuerdo social sobre la enseñanza.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "CC quiere incluir conocimientos básicos.",
+            "texto": "CC quiere incluir los conocimientos básicos y cómo usarlos.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "CC quiere incluir habilidades básicas.",
+            "texto": "CC quiere incluir las lenguas extranjeras y el uso de tecnologías.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "CC quiere incluir el aprendizaje de otras lenguas.",
+            "texto": "CC quiere que el acuerdo ayude a reducir las desigualdades.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "CC quiere incluir el uso de tecnologías.",
-            "citas": [
-              "c0017"
-            ]
-          },
-          {
-            "texto": "CC quiere reducir las desigualdades.",
-            "citas": [
-              "c0017"
-            ]
-          },
-          {
-            "texto": "CC pide dinero para obras en centros educativos de Canarias.",
+            "texto": "CC pide dinero para los edificios y espacios de enseñanza en Canarias.",
             "citas": [
               "c0015"
             ]
@@ -823,7 +812,7 @@
         ],
         "propuestas": [
           {
-            "texto": "CC propone un acuerdo social sobre la educación. CC quiere incluir conocimientos básicos. CC quiere incluir habilidades básicas. CC quiere incluir el aprendizaje de otras lenguas. CC quiere incluir el uso de tecnologías. CC quiere reducir las desigualdades.",
+            "texto": "CC propone un acuerdo social sobre la enseñanza. CC quiere incluir los conocimientos básicos y cómo usarlos. CC quiere incluir las lenguas extranjeras y el uso de tecnologías. CC quiere que el acuerdo ayude a reducir las desigualdades.",
             "citas": [
               "c0017"
             ],
@@ -831,7 +820,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "CC quiere mantener el convenio de varios años del Plan Especial de Infraestructura Educativa. CC pide al menos 42 millones de euros al año para este plan.",
+            "texto": "CC quiere mantener el acuerdo de varios años del Plan Especial de Infraestructura Educativa. CC pide al menos 42 millones de euros al año para este plan.",
             "citas": [
               "c0015"
             ],
@@ -839,7 +828,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "CC quiere cambiar las leyes sobre la educación infantil. CC quiere que sea gratis de 0 a 3 años. CC quiere que haya plazas públicas suficientes.",
+            "texto": "CC quiere cambiar la ley sobre la educación infantil de 0 a 3 años. CC quiere que la ley reconozca que esta enseñanza es gratis. CC quiere que haya bastantes plazas públicas para estas edades.",
             "citas": [
               "c0016",
               "c0032"
@@ -856,7 +845,7 @@
             "subtema": "formación profesional"
           },
           {
-            "texto": "CC exige cumplir el artículo 23 del Régimen Económico y Fiscal de Canarias. CC pide becas para estudiantes canarios cuyos estudios no se ofrecen en su isla. CC también pide becas para los viajes de los jóvenes canarios.",
+            "texto": "CC exige cumplir el artículo 23 del Régimen Económico y Fiscal. CC pide becas para estudiantes canarios sin los estudios que buscan en su isla. CC pide becas de viaje para jóvenes canarios.",
             "citas": [
               "c0023"
             ],
@@ -864,7 +853,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "CC propone un límite de ingresos para recibir ayudas de comedor escolar gratis. CC quiere usar el nivel de ingresos que marca la pobreza. CC propone el mismo límite en todo el país. CC quiere aumentar estas ayudas del 13% al 29%.",
+            "texto": "CC propone un mismo límite de ingresos para todo el Estado. CC quiere fijarlo en el nivel de ingresos que marca la pobreza. CC propone usar ese límite para dar ayudas de comedor escolar gratuito. CC quiere que estas ayudas pasen de cubrir el 13% al 29%.",
             "citas": [
               "c0093"
             ],
@@ -872,7 +861,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "CC quiere detectar pronto qué alumnos necesitan ayuda por su situación social. CC quiere que más alumnos reciban apoyo escolar antes de que surjan problemas.",
+            "texto": "CC quiere reconocer antes a los alumnos con dificultades sociales. CC quiere que más de estos alumnos reciban apoyo y refuerzo escolar. CC quiere que reciban ese apoyo para prevenir problemas.",
             "citas": [
               "c0092"
             ],
@@ -881,12 +870,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 68.7,
+          "inflesz": 69.2,
           "max_palabras_frase": 14,
           "ok": true,
           "avisos": []
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -1408,34 +1397,34 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "CC propone un transporte público accesible.",
+            "texto": "CC propone un transporte público que todas las personas puedan usar.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "CC quiere mantener los descuentos del transporte público.",
+            "texto": "CC quiere mantener los descuentos en el transporte público.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "CC quiere financiación para los proyectos de trenes de Gran Canaria y Tenerife.",
+            "texto": "CC quiere fondos para los trenes de Gran Canaria y Tenerife.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "CC propone desarrollar las redes de transporte para conectar mejor los territorios.",
+            "texto": "CC propone ampliar las redes de transporte para conectar mejor los territorios.",
             "citas": [
               "c0064"
             ]
           },
           {
-            "texto": "CC propone adaptar las instalaciones marítimas y aéreas para conectar mejor los territorios.",
+            "texto": "CC quiere adaptar los puertos y aeropuertos para conectar mejor los territorios.",
             "citas": [
               "c0064"
             ]
@@ -1443,7 +1432,7 @@
         ],
         "propuestas": [
           {
-            "texto": "CC propone mantener el descuento del 100% para guaguas y tranvías, sin limitaciones. CC propone ampliarlo más allá del 31 de diciembre de 2023.",
+            "texto": "CC quiere mantener el descuento del 100% en guaguas y tranvías, sin límites. CC quiere que siga más allá del 31 de diciembre de 2023.",
             "citas": [
               "c0007"
             ],
@@ -1451,7 +1440,7 @@
             "subtema": "transporte público y abonos"
           },
           {
-            "texto": "CC propone incluir los trenes de Gran Canaria y Tenerife en la red del Administrador de Infraestructuras Ferroviarias. CC quiere financiación del Estado y europea para desarrollar los proyectos de esos trenes.",
+            "texto": "CC quiere incluir los trenes de Gran Canaria y Tenerife en una red de trenes. CC propone la red del Administrador de Infraestructuras Ferroviarias. CC quiere fondos del Estado y de la UE para construir estos trenes.",
             "citas": [
               "c0008"
             ],
@@ -1459,7 +1448,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "CC defiende el descuento del 75% para residentes en Canarias. CC exige medidas para proteger la competencia entre empresas. CC exige eliminar los precios excesivos de los vuelos.",
+            "texto": "CC defiende el descuento del 75% para residentes en Canarias. CC exige medidas para que las empresas compitan de forma justa. CC exige eliminar los precios abusivos de los vuelos.",
             "citas": [
               "c0004"
             ],
@@ -1467,7 +1456,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "CC propone precios máximos de referencia para líneas aéreas con obligación de servicio público.",
+            "texto": "CC propone precios máximos que sirvan de guía para ciertas rutas de avión. CC quiere esta medida en rutas que deben dar un servicio público.",
             "citas": [
               "c0072"
             ],
@@ -1475,7 +1464,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "CC propone establecer una obligación de servicio público marítimo. CC propone este servicio entre La Palma, El Hierro y La Gomera. CC propone un precio máximo para este servicio.",
+            "texto": "CC propone un servicio público obligatorio de barcos entre La Palma, El Hierro y La Gomera. CC quiere un precio máximo para este servicio.",
             "citas": [
               "c0073"
             ],
@@ -1483,7 +1472,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "CC exige cumplir el convenio de carreteras con Canarias. CC exige transferir de inmediato el dinero previsto en los Presupuestos Generales del Estado.",
+            "texto": "CC exige cumplir el acuerdo de carreteras con Canarias. CC exige entregar de inmediato los fondos previstos en los Presupuestos Generales del Estado.",
             "citas": [
               "c0080"
             ],
@@ -1491,7 +1480,7 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "CC propone aprobar la ley prevista en el artículo 161.3 del Estatuto. CC propone normas especiales para los aeropuertos canarios como red específica. CC quiere una participación decisiva de las administraciones de Canarias. CC quiere también una participación decisiva de los sectores económicos y sociales de Canarias.",
+            "texto": "CC propone aprobar la ley prevista en el artículo 161.3 del Estatuto. CC quiere normas especiales para los aeropuertos canarios. CC quiere que estos aeropuertos formen una red propia. CC quiere que las administraciones de Canarias tengan un papel clave. CC quiere que las personas y grupos económicos de Canarias tengan un papel clave. CC quiere que las personas y grupos sociales de Canarias tengan un papel clave.",
             "citas": [
               "c0076"
             ],
@@ -1508,13 +1497,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 53.9,
-          "max_palabras_frase": 18,
-          "ok": false,
-          "avisos": [
-            "INFLESZ 53.9 < 60.0 (texto demasiado difícil)"
-          ]
+          "inflesz": 71.0,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
         },
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -6427,8 +6415,5 @@
       "resaltada": true
     }
   },
-  "incidencias": [
-    "transporte: la lectura fácil no supera la validación tras 4 intentos",
-    "educacion: la lectura fácil no supera la validación tras 4 intentos"
-  ]
+  "incidencias": []
 }

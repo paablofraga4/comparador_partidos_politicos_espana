@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "bng",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:00Z",
   "documento": {
     "id": "generales-2023/bng",
     "sha256": "b8994deec0bbc45cdcbef5d7c5395cabf30b0509706303c3d8e76058c48eebfd",
@@ -16,7 +17,7 @@
     "tokens_entrada": 845100,
     "tokens_cache": 730620,
     "tokens_salida": 139617,
-    "coste_usd": 1.4463
+    "coste_usd": 2.0243
   },
   "temas": {
     "vivienda": {
@@ -266,7 +267,7 @@
             ]
           },
           {
-            "texto": "BNG propone reducir las horas de trabajo sin bajar los salarios.",
+            "texto": "BNG quiere reducir la jornada laboral sin bajar los salarios.",
             "citas": [
               "c0023"
             ]
@@ -278,13 +279,13 @@
             ]
           },
           {
-            "texto": "BNG propone repartir la actividad industrial de forma más equilibrada entre los territorios.",
+            "texto": "BNG quiere repartir la industria de forma más equilibrada entre los territorios.",
             "citas": [
               "c0109"
             ]
           },
           {
-            "texto": "BNG propone dar prioridad a las comarcas con una industria en crisis.",
+            "texto": "BNG propone dar prioridad a las comarcas en crisis industrial.",
             "citas": [
               "c0109"
             ]
@@ -292,7 +293,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG propone eliminar todos los cambios en las leyes laborales que redujeron derechos. BNG propone cambiar todo el Estatuto del Trabajo. BNG propone recuperar 45 días de compensación económica por despido sin causa justificada.",
+            "texto": "BNG propone anular por completo las contrarreformas laborales: los cambios que revierten reformas laborales anteriores. BNG quiere cambiar todo el Estatuto del Trabajo. BNG propone recuperar los 45 días de indemnización por despido sin una causa justificada.",
             "citas": [
               "c0018"
             ],
@@ -300,7 +301,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "BNG propone una semana laboral de 35 horas sin bajar los salarios.",
+            "texto": "BNG propone una jornada laboral de 35 horas semanales sin bajar los salarios.",
             "citas": [
               "c0022"
             ],
@@ -316,7 +317,7 @@
             "subtema": "salario mínimo"
           },
           {
-            "texto": "BNG propone reforzar el Servicio Público de Empleo. BNG propone garantizar apoyo a todas las personas sin empleo.",
+            "texto": "BNG propone reforzar el Servicio Público de Empleo. BNG quiere garantizar protección a todas las personas sin empleo.",
             "citas": [
               "c0025"
             ],
@@ -324,7 +325,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "BNG propone eliminar las empresas de trabajo temporal. BNG propone eliminar las cadenas de empresas que encargan el trabajo unas a otras. BNG propone eliminar los falsos autónomos: personas que figuran como autónomas, pero trabajan como empleadas.",
+            "texto": "BNG propone eliminar las empresas de trabajo temporal. BNG quiere eliminar la contratación de empresas que, a su vez, contratan a otras. BNG propone eliminar el uso de trabajadores como autónomos cuando deberían ser empleados.",
             "citas": [
               "c0024"
             ],
@@ -332,7 +333,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "BNG propone ampliar una reducción del Impuesto sobre Sociedades para empresas pequeñas y medianas. BNG propone subir esa reducción del 10 % al 25 %. BNG propone reducir la cantidad sobre la que se calcula el impuesto. BNG propone esta reducción por aumentar los fondos propios de las empresas.",
+            "texto": "BNG propone reducir más la cantidad usada para calcular el Impuesto sobre Sociedades. BNG quiere aumentar esta reducción del 10 % al 25 %. BNG propone esta reducción por reservar parte de los beneficios en empresas pequeñas y medianas.",
             "citas": [
               "c0101"
             ],
@@ -340,7 +341,7 @@
             "subtema": "autónomos y pymes"
           },
           {
-            "texto": "BNG propone que el Estado facilite dinero para el plan industrial de la Xunta. BNG propone que el Estado facilite también las normas necesarias para este plan. BNG propone repartir la actividad industrial de forma más equilibrada entre los territorios. BNG propone dar prioridad a las comarcas con una industria en crisis, como Ferrol y Vigo.",
+            "texto": "BNG propone que el Estado aporte dinero y normas para el plan industrial de la Xunta. BNG quiere repartir la industria de forma más equilibrada entre los territorios. BNG propone dar prioridad a las comarcas en crisis industrial, como Ferrol y Vigo.",
             "citas": [
               "c0109"
             ],
@@ -348,7 +349,7 @@
             "subtema": "industria"
           },
           {
-            "texto": "BNG propone convertir la empresa naval NAVANTIA-Ferrol en un centro con distintas actividades industriales. BNG propone incluir la construcción de barcos para uso civil. BNG propone un plan de inversiones para renovar sus instalaciones.",
+            "texto": "BNG propone transformar la empresa de construcción de barcos NAVANTIA-Ferrol. BNG quiere convertirla en un conjunto de instalaciones para distintas actividades industriales. BNG quiere incluir la construcción de barcos civiles. BNG propone un plan de inversiones para renovar sus instalaciones.",
             "citas": [
               "c0108"
             ],
@@ -357,14 +358,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 61.1,
+          "inflesz": 60.8,
           "max_palabras_frase": 16,
-          "ok": false,
+          "ok": true,
           "avisos": [
-            "Sigla sin explicar: NAVANTIA",
-            "Aviso: INFLESZ 61.1 por debajo del objetivo 65.0"
+            "Aviso: INFLESZ 60.8 por debajo del objetivo 65.0"
           ]
         },
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -636,14 +637,14 @@
             ]
           },
           {
-            "texto": "BNG quiere que Galicia asuma las funciones de la Seguridad Social.",
+            "texto": "BNG quiere que Galicia gestione la Seguridad Social.",
             "citas": [
               "c0027",
               "c0028"
             ]
           },
           {
-            "texto": "BNG quiere mejorar las condiciones de vida de quienes cobran una pensión.",
+            "texto": "BNG quiere mejorar las condiciones de las personas que cobran una pensión.",
             "citas": [
               "c0027",
               "c0028"
@@ -652,7 +653,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG propone subir las pensiones mínimas hasta el 60 % del salario medio.",
+            "texto": "BNG quiere subir las pensiones mínimas.",
             "citas": [
               "c0026"
             ],
@@ -660,7 +661,15 @@
             "subtema": "pensiones mínimas y no contributivas"
           },
           {
-            "texto": "BNG propone subir las pensiones cada año. BNG propone ajustar esa subida al índice de precios de consumo real.",
+            "texto": "BNG propone que lleguen al 60 % del salario medio.",
+            "citas": [
+              "c0026"
+            ],
+            "id": "pensiones-1",
+            "subtema": "pensiones mínimas y no contributivas"
+          },
+          {
+            "texto": "BNG propone subir las pensiones cada año según la subida real de los precios.",
             "citas": [
               "c0033"
             ],
@@ -668,7 +677,7 @@
             "subtema": "revalorización"
           },
           {
-            "texto": "BNG propone volver a la jubilación normal a los 65 años. BNG propone volver a la jubilación parcial a los 61 años.",
+            "texto": "BNG propone volver a la jubilación ordinaria a los 65 años.",
             "citas": [
               "c0032"
             ],
@@ -676,7 +685,15 @@
             "subtema": "edad de jubilación"
           },
           {
-            "texto": "BNG propone permitir pagar las pensiones con dinero de los presupuestos públicos. BNG propone permitir también el pago con impuestos sobre la riqueza.",
+            "texto": "BNG propone volver a la jubilación parcial a los 61 años.",
+            "citas": [
+              "c0032"
+            ],
+            "id": "pensiones-3",
+            "subtema": "edad de jubilación"
+          },
+          {
+            "texto": "BNG quiere permitir el pago de pensiones con fondos de los presupuestos.",
             "citas": [
               "c0030"
             ],
@@ -684,7 +701,15 @@
             "subtema": "sostenibilidad del sistema"
           },
           {
-            "texto": "BNG propone calcular la base de la pensión con 10 años. BNG quiere que la persona que cobra la pensión elija esos años.",
+            "texto": "BNG también quiere usar impuestos sobre la riqueza para pagar pensiones.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "pensiones-4",
+            "subtema": "sostenibilidad del sistema"
+          },
+          {
+            "texto": "BNG propone usar un período de 10 años para calcular la base de la pensión.",
             "citas": [
               "c0031"
             ],
@@ -692,7 +717,15 @@
             "subtema": "sostenibilidad del sistema"
           },
           {
-            "texto": "BNG propone jubilar antes a quienes hacen trabajos duros. BNG quiere incluir trabajos cuya dureza aún no se reconoce, como el naval. BNG propone ampliar este derecho en los sectores pesquero y marisquero.",
+            "texto": "BNG quiere que la persona que recibe la pensión elija esos años.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "pensiones-5",
+            "subtema": "sostenibilidad del sistema"
+          },
+          {
+            "texto": "BNG propone jubilarse antes en trabajos duros.",
             "citas": [
               "c0029"
             ],
@@ -700,7 +733,31 @@
             "subtema": "edad de jubilación"
           },
           {
-            "texto": "BNG propone pasar a Galicia las funciones de la Seguridad Social. BNG quiere garantizar pensiones dignas a quienes tienen edad de jubilarse.",
+            "texto": "BNG incluye el naval y otros trabajos duros aún sin reconocer.",
+            "citas": [
+              "c0029"
+            ],
+            "id": "pensiones-6",
+            "subtema": "edad de jubilación"
+          },
+          {
+            "texto": "BNG propone ampliar esta medida en los sectores pesquero y marisquero.",
+            "citas": [
+              "c0029"
+            ],
+            "id": "pensiones-6",
+            "subtema": "edad de jubilación"
+          },
+          {
+            "texto": "BNG propone que Galicia gestione la Seguridad Social.",
+            "citas": [
+              "c0027"
+            ],
+            "id": "pensiones-7",
+            "subtema": "sostenibilidad del sistema"
+          },
+          {
+            "texto": "BNG quiere asegurar pensiones dignas a las personas en edad de jubilarse.",
             "citas": [
               "c0027"
             ],
@@ -709,12 +766,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 72.1,
-          "max_palabras_frase": 13,
+          "inflesz": 72.9,
+          "max_palabras_frase": 15,
           "ok": true,
           "avisos": []
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -2139,14 +2196,28 @@
             ]
           },
           {
-            "texto": "BNG reclama toda la capacidad de decidir sobre el transporte gallego.",
+            "texto": "BNG reclama todo el poder de decisión sobre el transporte en Galicia.",
             "citas": [
               "c0137",
               "c0134"
             ]
           },
           {
-            "texto": "BNG pide financiación para desarrollar un transporte gallego que conecte las localidades de todo el territorio.",
+            "texto": "BNG reclama dinero para ejercer ese poder de decisión.",
+            "citas": [
+              "c0137",
+              "c0134"
+            ]
+          },
+          {
+            "texto": "BNG quiere una política gallega de transporte que conecte las localidades.",
+            "citas": [
+              "c0137",
+              "c0134"
+            ]
+          },
+          {
+            "texto": "BNG quiere conectar las distintas zonas del territorio.",
             "citas": [
               "c0137",
               "c0134"
@@ -2155,7 +2226,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG propone trenes de cercanías para conectar las principales ciudades gallegas con localidades próximas. BNG quiere recuperar estaciones y pequeñas paradas de tren que ya no se usan. BNG propone adaptar las conexiones, los horarios, los precios y el número de viajes.",
+            "texto": "BNG propone servicios de tren para viajes cortos entre las principales ciudades gallegas y sus alrededores.",
             "citas": [
               "c0136"
             ],
@@ -2163,7 +2234,31 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "BNG propone mejorar la red de trenes del interior. BNG plantea obras en A Coruña–Ferrol, A Coruña–Lugo y Vigo–frontera portuguesa. BNG incluye el bypass de Betanzos, una vía alternativa para los trenes. BNG también propone modernizar la línea Ferrol–Ribadeo.",
+            "texto": "BNG propone recuperar estaciones y pequeñas paradas de tren que ya no se usan.",
+            "citas": [
+              "c0136"
+            ],
+            "id": "transporte-1",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone adaptar las conexiones entre trenes.",
+            "citas": [
+              "c0136"
+            ],
+            "id": "transporte-1",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone adaptar el número de viajes, los horarios y los precios.",
+            "citas": [
+              "c0136"
+            ],
+            "id": "transporte-1",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone mejorar la red ferroviaria interior.",
             "citas": [
               "c0133"
             ],
@@ -2171,7 +2266,31 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "BNG quiere completar el Corredor Atlántico de Mercancías en Galicia. BNG propone obras en Ourense–Monforte–Lugo y León–Monforte. BNG quiere mejorar los tramos convencionales del Eje Atlántico, que no son de alta velocidad. BNG también propone instalar en esos tramos sistemas eléctricos para los trenes.",
+            "texto": "BNG propone mejoras en A Coruña–Ferrol, A Coruña–Lugo y Vigo–frontera portuguesa.",
+            "citas": [
+              "c0133"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG incluye una vía alternativa en Betanzos.",
+            "citas": [
+              "c0133"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone modernizar la línea Ferrol–Ribadeo.",
+            "citas": [
+              "c0133"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone completar el Corredor Atlántico de Mercancías en Galicia.",
             "citas": [
               "c0135",
               "c0140"
@@ -2180,7 +2299,34 @@
             "subtema": "corredores ferroviarios"
           },
           {
-            "texto": "BNG propone aumentar el número de viajes en tren y mejorar sus horarios. BNG destaca los trenes AVANT, que realizan viajes de media distancia a alta velocidad. BNG quiere bajar los precios y ofrecer descuentos a quienes usan el tren con frecuencia.",
+            "texto": "BNG propone obras en Ourense–Monforte–Lugo y León–Monforte.",
+            "citas": [
+              "c0135",
+              "c0140"
+            ],
+            "id": "transporte-3",
+            "subtema": "corredores ferroviarios"
+          },
+          {
+            "texto": "BNG propone instalar suministro eléctrico en los tramos convencionales del Eje Atlántico.",
+            "citas": [
+              "c0135",
+              "c0140"
+            ],
+            "id": "transporte-3",
+            "subtema": "corredores ferroviarios"
+          },
+          {
+            "texto": "BNG también propone mejorar esos tramos.",
+            "citas": [
+              "c0135",
+              "c0140"
+            ],
+            "id": "transporte-3",
+            "subtema": "corredores ferroviarios"
+          },
+          {
+            "texto": "BNG propone aumentar el número de viajes en tren, especialmente en el servicio AVANT.",
             "citas": [
               "c0138"
             ],
@@ -2188,7 +2334,31 @@
             "subtema": "transporte público y abonos"
           },
           {
-            "texto": "BNG reclama que Galicia asuma la gestión de las líneas ferroviarias interiores. BNG propone gestionarlas mediante una empresa pública gallega llamada «GALTRÉN».",
+            "texto": "BNG propone mejorar los horarios de tren, especialmente en el servicio AVANT.",
+            "citas": [
+              "c0138"
+            ],
+            "id": "transporte-4",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "BNG propone bajar los precios de los viajes en tren.",
+            "citas": [
+              "c0138"
+            ],
+            "id": "transporte-4",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "BNG propone descuentos para las personas que usan el tren con frecuencia.",
+            "citas": [
+              "c0138"
+            ],
+            "id": "transporte-4",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "BNG propone que Galicia asuma la gestión de las líneas ferroviarias interiores.",
             "citas": [
               "c0139"
             ],
@@ -2196,7 +2366,15 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "BNG reclama que Galicia asuma la gestión de la AP-9 y la AP-53. BNG quiere eliminar los peajes de ambas autopistas. BNG propone terminar el contrato que permite a una empresa gestionar la AP-9.",
+            "texto": "BNG propone gestionar esas líneas mediante una empresa pública gallega llamada «GALTRÉN».",
+            "citas": [
+              "c0139"
+            ],
+            "id": "transporte-5",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "BNG propone que Galicia asuma la gestión de la AP-9 y la AP-53.",
             "citas": [
               "c0141",
               "c0142"
@@ -2205,7 +2383,25 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "BNG reclama para Galicia toda la capacidad de decidir y gestionar los aeropuertos gallegos. BNG también reclama para Galicia la gestión de los puertos de interés general. BNG incluye los puertos de Vigo, Marín y Vilagarcía de Arousa. BNG incluye también los puertos de A Coruña y Ferrol-San Cibrao.",
+            "texto": "BNG propone eliminar los pagos por circular por la AP-9 y la AP-53.",
+            "citas": [
+              "c0141",
+              "c0142"
+            ],
+            "id": "transporte-6",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "BNG propone finalizar el contrato de gestión de la AP-9.",
+            "citas": [
+              "c0141",
+              "c0142"
+            ],
+            "id": "transporte-6",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "BNG reclama para Galicia todas las decisiones sobre la gestión de los aeropuertos gallegos.",
             "citas": [
               "c0143",
               "c0144"
@@ -2214,7 +2410,42 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "BNG propone descuentos en viajes por carretera y tren para menores de 30 años. BNG quiere fomentar así el uso del transporte colectivo.",
+            "texto": "BNG reclama para Galicia la gestión de los puertos de interés general.",
+            "citas": [
+              "c0143",
+              "c0144"
+            ],
+            "id": "transporte-7",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "BNG incluye los puertos de Vigo, Marín y Vilagarcía de Arousa.",
+            "citas": [
+              "c0143",
+              "c0144"
+            ],
+            "id": "transporte-7",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "BNG también incluye los puertos de A Coruña y Ferrol-San Cibrao.",
+            "citas": [
+              "c0143",
+              "c0144"
+            ],
+            "id": "transporte-7",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "BNG propone descuentos en viajes por carretera y tren para menores de 30 años.",
+            "citas": [
+              "c0157"
+            ],
+            "id": "transporte-8",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "BNG quiere fomentar el uso del transporte colectivo entre menores de 30 años.",
             "citas": [
               "c0157"
             ],
@@ -2223,14 +2454,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 65.3,
+          "inflesz": 67.2,
           "max_palabras_frase": 16,
-          "ok": false,
-          "avisos": [
-            "Sigla sin explicar: AVANT",
-            "Sigla sin explicar: GALTRÉN"
-          ]
+          "ok": true,
+          "avisos": []
         },
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -2851,25 +3080,25 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "BNG quiere inversión pública y privada en ciencia.",
+            "texto": "BNG quiere más inversión pública y privada en ciencia.",
             "citas": [
               "c0121"
             ]
           },
           {
-            "texto": "BNG quiere que quienes investigan tengan buenas condiciones de trabajo y un empleo estable.",
+            "texto": "BNG quiere un empleo estable para quienes investigan.",
             "citas": [
               "c0121"
             ]
           },
           {
-            "texto": "BNG propone cambiar las leyes contra la violencia machista en medios digitales.",
+            "texto": "BNG quiere cambiar las leyes contra la violencia machista digital.",
             "citas": [
               "c0049"
             ]
           },
           {
-            "texto": "BNG incluye los casos que usan inteligencia artificial.",
+            "texto": "BNG incluye la violencia que usa inteligencia artificial.",
             "citas": [
               "c0049"
             ]
@@ -2877,7 +3106,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG quiere aumentar poco a poco la inversión estatal en investigación, desarrollo e innovación. BNG quiere que llegue al 3 % del producto interior bruto en 2030.",
+            "texto": "BNG quiere que el Estado gaste más en ciencia. BNG incluye la investigación, el desarrollo y la innovación en ese gasto. BNG quiere subir ese gasto poco a poco. BNG quiere llegar al 3 % del producto interior bruto en 2030.",
             "citas": [
               "c0119"
             ],
@@ -2885,7 +3114,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG propone ajustar las reglas de las ayudas a investigación, desarrollo e innovación. BNG quiere evitar el trato desigual por género en la carrera de quienes investigan.",
+            "texto": "BNG quiere introducir factores de corrección en las convocatorias de investigación, desarrollo e innovación. BNG propone estos ajustes para eliminar el trato desigual por género en la carrera investigadora.",
             "citas": [
               "c0120"
             ],
@@ -2893,7 +3122,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG quiere transferir a Galicia las entidades que dependen del Consejo Superior de Investigaciones Científicas. BNG también quiere transferir a Galicia los centros del Instituto Español de Oceanografía.",
+            "texto": "BNG quiere pasar a Galicia las entidades del Consejo Superior de Investigaciones Científicas. BNG también quiere pasar a Galicia los centros del Instituto Español de Oceanografía.",
             "citas": [
               "c0126"
             ],
@@ -2901,7 +3130,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG quiere garantizar los derechos de quienes recibieron becas de investigación antes de 2011. BNG incluye las becas para antes y después del doctorado. BNG destaca el derecho a la jubilación.",
+            "texto": "BNG quiere proteger los derechos de quienes recibieron becas para investigar antes de 2011. BNG incluye las becas para preparar el doctorado. BNG incluye las becas para investigar tras el doctorado. BNG quiere proteger, sobre todo, sus derechos de jubilación.",
             "citas": [
               "c0123"
             ],
@@ -2909,7 +3138,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG propone crear un Estatuto del Personal de Investigación. BNG quiere incluir a quienes investigan. BNG quiere incluir al personal técnico. BNG quiere incluir a quienes organizan el trabajo científico. BNG quiere asegurar derechos mínimos sobre los sueldos. BNG quiere asegurar derechos mínimos para la carrera de quienes investigan. BNG quiere asegurar derechos mínimos para tener un empleo estable.",
+            "texto": "BNG quiere crear un Estatuto del Personal de Investigación. BNG quiere incluir a quienes investigan. BNG también quiere incluir al personal técnico y al que gestiona la ciencia. BNG quiere fijar derechos mínimos sobre los sueldos. BNG quiere fijar derechos mínimos para avanzar en la carrera de investigación. BNG quiere fijar derechos mínimos para tener un empleo estable.",
             "citas": [
               "c0122"
             ],
@@ -2917,7 +3146,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG quiere reducir los trámites para hacer ciencia. BNG quiere que estos trámites sean más sencillos.",
+            "texto": "BNG quiere reducir los trámites del trabajo científico. BNG también quiere hacer esos trámites más simples.",
             "citas": [
               "c0125"
             ],
@@ -2925,7 +3154,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG quiere que se pueda conocer cómo se hace la investigación. BNG quiere una investigación honesta. BNG quiere una investigación abierta a personas diferentes. BNG propone castigar las trampas en la investigación. BNG quiere perseguir el acoso sexual. BNG quiere perseguir las prácticas que incumplen las reglas en los concursos públicos.",
+            "texto": "BNG quiere normas para que la investigación sea transparente y honesta. BNG quiere que esas normas fomenten la diversidad y la inclusión. BNG quiere que esas normas castiguen los fraudes. BNG quiere que esas normas persigan el acoso sexual. BNG también quiere que persigan las irregularidades en concursos públicos.",
             "citas": [
               "c0124"
             ],
@@ -2933,7 +3162,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "BNG propone cambiar las leyes contra la violencia machista en medios digitales. BNG quiere frenar y perseguir esta violencia. BNG incluye los casos que usan inteligencia artificial.",
+            "texto": "BNG quiere cambiar las leyes para combatir y perseguir la violencia machista digital. BNG incluye la violencia que usa tecnologías y plataformas digitales. BNG también incluye la violencia que usa inteligencia artificial.",
             "citas": [
               "c0049"
             ],
@@ -2942,14 +3171,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 61.4,
+          "inflesz": 62.9,
           "max_palabras_frase": 15,
           "ok": true,
           "avisos": [
-            "Aviso: INFLESZ 61.4 por debajo del objetivo 65.0"
+            "Aviso: INFLESZ 62.9 por debajo del objetivo 65.0"
           ]
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -3231,19 +3460,25 @@
             ]
           },
           {
-            "texto": "BNG quiere una constitución propia para crear la «República da Galiza».",
+            "texto": "BNG propone que Galicia elabore sus propias normas básicas.",
             "citas": [
               "c0001"
             ]
           },
           {
-            "texto": "BNG quiere un acuerdo directo entre Galicia y el Estado sobre cómo financiar Galicia.",
+            "texto": "BNG quiere crear así la «República da Galiza».",
+            "citas": [
+              "c0001"
+            ]
+          },
+          {
+            "texto": "BNG quiere que Galicia cobre todos los impuestos.",
             "citas": [
               "c0004"
             ]
           },
           {
-            "texto": "BNG quiere que Galicia recaude todos los impuestos.",
+            "texto": "BNG propone que Galicia acuerde directamente con el Estado cómo financiarse.",
             "citas": [
               "c0004"
             ]
@@ -3251,7 +3486,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG quiere reconocer el derecho de Galicia a decidir su futuro político. BNG quiere que Galicia pueda ejercer ese derecho. BNG propone elaborar una constitución propia para crear la «República da Galiza».",
+            "texto": "BNG quiere reconocer el derecho de Galicia a decidir su futuro político. BNG quiere que Galicia pueda ejercer ese derecho. BNG propone que Galicia elabore sus propias normas básicas. BNG quiere crear así la «República da Galiza».",
             "citas": [
               "c0001"
             ],
@@ -3259,7 +3494,7 @@
             "subtema": "autogobierno y derecho a decidir"
           },
           {
-            "texto": "BNG quiere un acuerdo directo entre Galicia y el Estado sobre cómo financiar Galicia. BNG quiere que Galicia recaude todos los impuestos. BNG quiere que Galicia decida cómo invertir ese dinero.",
+            "texto": "BNG quiere que Galicia cobre todos los impuestos. BNG propone que Galicia acuerde directamente con el Estado cómo financiarse. BNG quiere que Galicia decida cómo invertir ese dinero.",
             "citas": [
               "c0004"
             ],
@@ -3267,7 +3502,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "BNG quiere crear una Hacienda Gallega. BNG quiere que Galicia tenga pleno poder para decidir sobre sus impuestos. BNG quiere usar los impuestos para repartir la riqueza entre la población.",
+            "texto": "BNG propone crear una Hacienda Gallega. BNG quiere que Galicia tenga pleno poder para decidir sus propios impuestos. BNG propone usar los impuestos para reducir las diferencias de recursos entre personas.",
             "citas": [
               "c0002"
             ],
@@ -3275,7 +3510,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "BNG quiere que Galicia asuma las funciones del Estado sobre las relaciones de trabajo. BNG quiere que Galicia tenga sus propias normas sobre las relaciones de trabajo. BNG quiere proteger la negociación entre empresas y trabajadores sobre sus condiciones de trabajo.",
+            "texto": "BNG quiere que Galicia asuma el poder de regular las relaciones laborales. BNG propone normas propias para las relaciones entre trabajadores y empresas. BNG quiere proteger el derecho a negociar entre representantes de trabajadores y empresas.",
             "citas": [
               "c0003"
             ],
@@ -3283,7 +3518,7 @@
             "subtema": "competencias"
           },
           {
-            "texto": "BNG quiere que la Administración del Estado traspase a la Administración gallega las funciones pendientes. BNG quiere completar todos los traspasos previstos.",
+            "texto": "BNG quiere que la Administración del Estado ceda todas las tareas previstas. BNG quiere que la Administración gallega asuma esas tareas pendientes.",
             "citas": [
               "c0006"
             ],
@@ -3291,7 +3526,7 @@
             "subtema": "competencias"
           },
           {
-            "texto": "BNG quiere quitar la Administración periférica del Estado. BNG quiere quitar los departamentos ministeriales con funciones ya traspasadas.",
+            "texto": "BNG quiere quitar la Administración periférica del Estado. BNG quiere quitar los departamentos ministeriales que ya han cedido sus tareas.",
             "citas": [
               "c0075"
             ],
@@ -3299,7 +3534,7 @@
             "subtema": "organización territorial del Estado"
           },
           {
-            "texto": "BNG quiere quitar las diputaciones provinciales. BNG quiere pasar sus funciones a Galicia y a los ayuntamientos. BNG quiere evitar crear otras instituciones que las sustituyan.",
+            "texto": "BNG quiere quitar las diputaciones provinciales. BNG propone pasar sus tareas a Galicia y a los ayuntamientos. BNG quiere hacerlo sin crear nuevas instituciones que las sustituyan.",
             "citas": [
               "c0076"
             ],
@@ -3307,7 +3542,7 @@
             "subtema": "organización territorial del Estado"
           },
           {
-            "texto": "BNG quiere que la Administración central use el gallego de forma habitual. BNG quiere empezar por que su personal conozca el gallego. BNG quiere garantizar los derechos de las personas sobre el uso de su lengua.",
+            "texto": "BNG quiere que la Administración central use el gallego de forma habitual. BNG propone empezar por que su personal conozca el gallego. BNG quiere garantizar los derechos relacionados con la lengua.",
             "citas": [
               "c0149"
             ],
@@ -3316,14 +3551,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 62.6,
-          "max_palabras_frase": 15,
+          "inflesz": 60.2,
+          "max_palabras_frase": 13,
           "ok": true,
           "avisos": [
-            "Aviso: INFLESZ 62.6 por debajo del objetivo 65.0"
+            "Aviso: INFLESZ 60.2 por debajo del objetivo 65.0"
           ]
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -3414,13 +3649,13 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "BNG quiere dar información más clara sobre la actividad política y los contratos públicos.",
+            "texto": "BNG quiere que la ciudadanía pueda conocer y controlar la acción política.",
             "citas": [
               "c0074"
             ]
           },
           {
-            "texto": "BNG quiere reforzar el control público sobre estas actividades.",
+            "texto": "BNG quiere más información y control público sobre los contratos públicos.",
             "citas": [
               "c0074"
             ]
@@ -3434,7 +3669,7 @@
             ]
           },
           {
-            "texto": "BNG propone consultas mediante el voto cuyos resultados sean de obligado cumplimiento.",
+            "texto": "BNG propone consultas ciudadanas cuyos resultados se deban cumplir.",
             "citas": [
               "c0070",
               "c0067",
@@ -3442,7 +3677,7 @@
             ]
           },
           {
-            "texto": "BNG propone eliminar la Ley de Amnistía de 1977.",
+            "texto": "BNG propone quitar la Ley de Amnistía de 1977.",
             "citas": [
               "c0070",
               "c0067",
@@ -3452,7 +3687,7 @@
         ],
         "propuestas": [
           {
-            "texto": "BNG propone apartar directamente de sus cargos a representantes públicos que engañen para pagar menos impuestos. BNG propone lo mismo por negocios en paraísos fiscales: lugares con impuestos bajos y poco control. BNG incluye los negocios propios y los realizados junto con familiares o compañeros de trabajo.",
+            "texto": "BNG propone prohibir directamente los cargos públicos a quienes hagan trampas con los impuestos. BNG incluye a los representantes en esta prohibición. BNG propone lo mismo por usar paraísos fiscales en sus negocios. BNG se refiere a lugares que permiten pagar pocos impuestos. BNG incluye los negocios propios. BNG incluye los negocios hechos con ayuda de familiares o compañeros de trabajo.",
             "citas": [
               "c0069"
             ],
@@ -3460,7 +3695,7 @@
             "subtema": "corrupción y transparencia"
           },
           {
-            "texto": "BNG propone regular el paso de cargos públicos a empresas privadas y al revés. BNG propone regular qué trabajos no pueden tener a la vez los cargos públicos.",
+            "texto": "BNG propone regular los cambios de trabajo entre cargos públicos y empresas privadas. BNG propone fijar qué cargos y trabajos no se pueden tener a la vez.",
             "citas": [
               "c0072"
             ],
@@ -3468,7 +3703,7 @@
             "subtema": "corrupción y transparencia"
           },
           {
-            "texto": "BNG propone cambiar las normas de los contratos públicos. BNG propone dar información clara sobre los contratos negociados y los contratos directos. BNG propone publicar los procesos de contratación negociada donde se anuncian los contratos públicos.",
+            "texto": "BNG propone cambiar las normas de los contratos públicos. BNG quiere más información sobre los contratos que se negocian o se dan directamente. BNG propone publicar las ofertas de contratos negociados en las páginas de contratación.",
             "citas": [
               "c0073"
             ],
@@ -3476,7 +3711,7 @@
             "subtema": "corrupción y transparencia"
           },
           {
-            "texto": "BNG propone repartir los puestos en proporción a los votos. BNG propone usar el método proporcional directo con cuota Hare. BNG propone que Galicia sea un único territorio para elegir representantes. BNG propone quitar el mínimo del 5 % de votos para conseguir representantes. BNG propone que sea obligatorio votar en secreto dentro de una cabina. BNG propone prohibir el reparto de papeletas.",
+            "texto": "BNG propone usar el método proporcional directo con cuota Hare. BNG quiere repartir los puestos según los votos. BNG propone que Galicia sea una sola zona de voto. BNG propone quitar el mínimo del 5 % para lograr puestos. BNG propone que sea obligatorio votar en secreto dentro de una cabina. BNG propone prohibir el reparto de papeletas.",
             "citas": [
               "c0071"
             ],
@@ -3484,7 +3719,7 @@
             "subtema": "ley electoral"
           },
           {
-            "texto": "BNG propone que las personas de 16 y 17 años puedan votar en las distintas elecciones.",
+            "texto": "BNG propone que las personas de 16 y 17 años puedan votar en las elecciones.",
             "citas": [
               "c0158"
             ],
@@ -3492,7 +3727,7 @@
             "subtema": "ley electoral"
           },
           {
-            "texto": "BNG propone cambiar las leyes para permitir consultas mediante el voto sobre asuntos de interés. BNG propone que sus resultados sean de obligado cumplimiento. BNG incluye el derecho de cada pueblo a decidir su futuro político.",
+            "texto": "BNG propone cambiar las leyes para permitir consultas ciudadanas sobre asuntos de interés. BNG quiere que los resultados de estas consultas se deban cumplir. BNG incluye el derecho de los pueblos a decidir su futuro.",
             "citas": [
               "c0067"
             ],
@@ -3500,7 +3735,7 @@
             "subtema": "participación ciudadana"
           },
           {
-            "texto": "BNG propone eliminar la Ley de Amnistía de 1977. BNG propone que el paso del tiempo no impida juzgar los delitos de genocidio. BNG propone lo mismo para los delitos contra la humanidad. BNG propone respetar las leyes internacionales.",
+            "texto": "BNG propone quitar la Ley de Amnistía de 1977. BNG propone que los delitos de genocidio y lesa humanidad se puedan juzgar siempre. BNG quiere que el paso del tiempo no impida juzgar estos delitos. BNG propone reconocer el principio de legalidad internacional. BNG quiere que los delitos y las penas sigan las leyes internacionales.",
             "citas": [
               "c0063"
             ],
@@ -3508,7 +3743,7 @@
             "subtema": "memoria democrática"
           },
           {
-            "texto": "BNG propone recuperar los bienes que Francisco Franco y su familia quitaron a sus dueños. BNG incluye la Casa das Cunchas y la Casa Cornide. BNG también incluye las esculturas de Abraham e Isaac.",
+            "texto": "BNG propone recuperar los bienes que Francisco Franco y su familia robaron. BNG incluye la Casa das Cunchas y la Casa Cornide. BNG incluye también las esculturas de Abraham e Isaac.",
             "citas": [
               "c0065"
             ],
@@ -3517,14 +3752,12 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 63.3,
-          "max_palabras_frase": 16,
+          "inflesz": 70.1,
+          "max_palabras_frase": 15,
           "ok": true,
-          "avisos": [
-            "Aviso: INFLESZ 63.3 por debajo del objetivo 65.0"
-          ]
+          "avisos": []
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -11739,12 +11972,6 @@
     }
   },
   "incidencias": [
-    "vivienda: descartado tras reintento — el literal «Modificar os criterios do bono xove de vivenda, para \nade cualo á realidade dos pisos comp» no aparece tal cual en bng-23-p016-01",
-    "pensiones: la lectura fácil no supera la validación tras 4 intentos",
-    "economia-empleo: la lectura fácil no supera la validación tras 4 intentos",
-    "transporte: la lectura fácil no supera la validación tras 4 intentos",
-    "ciencia-digital: la lectura fácil no supera la validación tras 4 intentos",
-    "modelo-territorial: la lectura fácil no supera la validación tras 4 intentos",
-    "regeneracion-democratica: la lectura fácil no supera la validación tras 4 intentos"
+    "vivienda: descartado tras reintento — el literal «Modificar os criterios do bono xove de vivenda, para \nade cualo á realidade dos pisos comp» no aparece tal cual en bng-23-p016-01"
   ]
 }

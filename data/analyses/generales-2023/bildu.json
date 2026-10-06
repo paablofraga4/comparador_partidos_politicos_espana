@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "bildu",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:54:55Z",
   "documento": {
     "id": "generales-2023/bildu",
     "sha256": "6634c0786c1e771c61c1a65e549dfde0d4581d09e19949466e931c96a9642465",
@@ -16,7 +17,7 @@
     "tokens_entrada": 227283,
     "tokens_cache": 147649,
     "tokens_salida": 117516,
-    "coste_usd": 1.4058
+    "coste_usd": 1.4373
   },
   "temas": {
     "vivienda": {
@@ -2507,26 +2508,33 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "EH Bildu exige al Banco Central Europeo que anule las subidas de los tipos de interés.",
+            "texto": "EH Bildu quiere anular las subidas de los tipos de interés.",
             "citas": [
               "c0032"
             ]
           },
           {
-            "texto": "EH Bildu exige lo mismo a las instituciones comunitarias.",
+            "texto": "EH Bildu pide este cambio al Banco Central Europeo y a las instituciones comunitarias.",
             "citas": [
               "c0032"
             ]
           },
           {
-            "texto": "EH Bildu propone cambiar el sistema europeo que fija los precios de la energía.",
+            "texto": "EH Bildu quiere cambiar cómo la UE fija los precios de la energía.",
             "citas": [
               "c0045",
               "c0037"
             ]
           },
           {
-            "texto": "EH Bildu quiere dar fondos europeos a las cooperativas y a la economía social.",
+            "texto": "EH Bildu quiere ofrecer dinero europeo a las cooperativas.",
+            "citas": [
+              "c0045",
+              "c0037"
+            ]
+          },
+          {
+            "texto": "EH Bildu también quiere ofrecerlo a organizaciones de la economía social.",
             "citas": [
               "c0045",
               "c0037"
@@ -2535,7 +2543,7 @@
         ],
         "propuestas": [
           {
-            "texto": "EH Bildu exige al Banco Central Europeo que anule las subidas de los tipos de interés. EH Bildu exige lo mismo a las instituciones comunitarias. EH Bildu se refiere a las subidas desde julio de 2022.",
+            "texto": "EH Bildu quiere anular las subidas de los tipos de interés desde julio de 2022. EH Bildu pide este cambio al Banco Central Europeo y a las instituciones comunitarias.",
             "citas": [
               "c0032"
             ],
@@ -2543,7 +2551,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "EH Bildu rechaza volver a las reglas fiscales que limiten la inversión pública. EH Bildu rechaza las políticas de ahorro que causen recortes sociales. EH Bildu también las rechaza si recortan los servicios públicos.",
+            "texto": "EH Bildu rechaza recuperar reglas que limiten la inversión de dinero público. EH Bildu rechaza las políticas de ahorro que recorten gastos sociales o servicios públicos.",
             "citas": [
               "c0039"
             ],
@@ -2551,7 +2559,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "EH Bildu propone cambiar el sistema europeo que fija los precios de la energía. EH Bildu quiere hacer este cambio desde la Presidencia de la UE. EH Bildu propone precios distintos según el coste real de cada forma de producir energía.",
+            "texto": "EH Bildu quiere cambiar cómo la UE fija los precios de la energía. EH Bildu propone este cambio desde la Presidencia de la UE. EH Bildu quiere precios distintos para cada forma de producir energía. EH Bildu propone fijar esos precios según el coste real de producir energía.",
             "citas": [
               "c0046"
             ],
@@ -2559,7 +2567,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "EH Bildu quiere impulsar el plan de economía social y cooperativa. EH Bildu quiere dar fondos europeos a las cooperativas. EH Bildu también quiere dar estos fondos a la economía social.",
+            "texto": "EH Bildu quiere impulsar el plan de economía social y cooperativa. EH Bildu quiere ofrecer dinero europeo a las cooperativas. EH Bildu también quiere ofrecerlo a organizaciones de la economía social.",
             "citas": [
               "c0037"
             ],
@@ -2568,12 +2576,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 67.2,
-          "max_palabras_frase": 16,
+          "inflesz": 62.1,
+          "max_palabras_frase": 15,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 62.1 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     }
@@ -6040,7 +6050,5 @@
       "resaltada": true
     }
   },
-  "incidencias": [
-    "exterior-defensa: la lectura fácil no supera la validación tras 4 intentos"
-  ]
+  "incidencias": []
 }

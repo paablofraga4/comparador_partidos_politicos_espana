@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2023",
   "candidatura": "upn",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:33Z",
   "documento": {
     "id": "generales-2023/upn",
     "sha256": "6bbf12c4fe8acc17d8deb2ddc68a89cbee9e07ec70472ed7463655e8a59e15d6",
@@ -16,7 +17,7 @@
     "tokens_entrada": 122409,
     "tokens_cache": 0,
     "tokens_salida": 63767,
-    "coste_usd": 0.8426
+    "coste_usd": 0.8595
   },
   "temas": {
     "vivienda": {
@@ -1256,7 +1257,7 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "UPN propone desarrollar los trenes de alta velocidad.",
+            "texto": "UPN propone desarrollar el transporte en trenes de alta velocidad.",
             "citas": [
               "c0025",
               "c0018",
@@ -1264,7 +1265,7 @@
             ]
           },
           {
-            "texto": "UPN propone ampliar la N-121-A con carriles separados para cada sentido.",
+            "texto": "UPN propone ampliar la N-121-A con vías separadas para cada sentido.",
             "citas": [
               "c0025",
               "c0018",
@@ -1272,7 +1273,7 @@
             ]
           },
           {
-            "texto": "UPN propone prolongar el peaje gratuito de la autopista AP-15.",
+            "texto": "UPN propone mantener gratis el peaje de la AP-15 durante más tiempo.",
             "citas": [
               "c0025",
               "c0018",
@@ -1290,7 +1291,7 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "UPN propone desarrollar el Tren de Alta Velocidad hasta Pamplona. UPN propone conectarlo con la «Y vasca». UPN propone que el tren pare en Tudela. UPN propone nuevas estaciones en Pamplona y Tudela.",
+            "texto": "UPN propone desarrollar el Tren de Alta Velocidad hasta Pamplona. UPN propone conectar este tren con la «Y vasca». UPN propone que el tren pare en Tudela. UPN propone crear nuevas estaciones en Pamplona y Tudela.",
             "citas": [
               "c0025"
             ],
@@ -1298,7 +1299,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "UPN quiere exigir al Gobierno de España que tramite varias conexiones. UPN propone conectar con el País Vasco a través de Ezkio. UPN propone conectar también con la provincia de Zaragoza.",
+            "texto": "UPN exige al Gobierno de España tramitar la conexión con el País Vasco. UPN exige que esta conexión pase por Ezkio. UPN exige al Gobierno de España tramitar la conexión con la provincia de Zaragoza.",
             "citas": [
               "c0022"
             ],
@@ -1306,7 +1307,7 @@
             "subtema": "corredores ferroviarios"
           },
           {
-            "texto": "UPN propone estudiar si puede sacar las vías de la zona urbana de Tudela. UPN propone estudiar también si puede sacar la estación de esa zona.",
+            "texto": "UPN propone estudiar sacar las vías del tren del casco urbano de Tudela. UPN propone estudiar también sacar la estación del casco urbano de Tudela.",
             "citas": [
               "c0019"
             ],
@@ -1314,7 +1315,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "UPN propone ampliar la carretera nacional N-121-A con carriles separados para cada sentido.",
+            "texto": "UPN propone ampliar la carretera nacional N-121-A con vías separadas para cada sentido.",
             "citas": [
               "c0018"
             ],
@@ -1322,7 +1323,7 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "UPN propone prolongar el peaje gratuito de la Autopista de Navarra (AP-15).",
+            "texto": "UPN propone mantener el peaje gratuito de la AP-15 Autopista de Navarra durante más tiempo.",
             "citas": [
               "c0024"
             ],
@@ -1330,7 +1331,7 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "UPN propone mejorar las conexiones de Navarra por avión y tren. UPN propone conectar mejor con lugares de interés para la economía o las empresas.",
+            "texto": "UPN propone mejorar las conexiones de Navarra por avión y tren. UPN propone mejorar estas conexiones con lugares de interés económico o empresarial.",
             "citas": [
               "c0043"
             ],
@@ -1340,13 +1341,11 @@
         ],
         "legibilidad": {
           "inflesz": 66.9,
-          "max_palabras_frase": 15,
-          "ok": false,
-          "avisos": [
-            "Sigla sin explicar: AP",
-            "Sigla sin explicar: AP"
-          ]
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
         },
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -3678,7 +3677,5 @@
       "resaltada": true
     }
   },
-  "incidencias": [
-    "transporte: la lectura fácil no supera la validación tras 4 intentos"
-  ]
+  "incidencias": []
 }
