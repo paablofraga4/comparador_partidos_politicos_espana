@@ -5,15 +5,8 @@
  * incremental por hash: si el pre-deploy ya lo hizo, esta pasada no cambia nada.
  */
 export async function register() {
-  if (process.env.NEXT_RUNTIME !== "nodejs") return;
-  if (process.env.NODE_ENV !== "production" || !process.env.DATABASE_URL) return;
-  const { existsSync } = await import("node:fs");
-  const { spawn } = await import("node:child_process");
-  const path = await import("node:path");
-  const script = path.resolve(process.cwd(), "scripts", "dist", "predeploy.mjs");
-  if (!existsSync(script)) return;
-  const hijo = spawn(process.execPath, [script], { stdio: "inherit" });
-  hijo.on("exit", (code) => {
-    if (code) console.error(`⚠ preparación de la base terminó con código ${code}`);
-  });
+  if (process.env.NEXT_RUNTIME === "nodejs") {
+    const { prepararBase } = await import("./instrumentation-node");
+    prepararBase();
+  }
 }
