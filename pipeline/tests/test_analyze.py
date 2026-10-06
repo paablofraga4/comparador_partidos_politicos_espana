@@ -255,3 +255,27 @@ def test_codigos_de_carretera_no_son_siglas():
     assert not any("Sigla" in a for a in res.avisos)
     res2 = legibility.check(["Quiere más dinero para el CGPJ.", "El CGPJ debe cambiar."])
     assert [a for a in res2.avisos if "Sigla" in a] == ["Sigla sin explicar: CGPJ"]
+
+
+def test_siglas_explicadas_no_avisan():
+    explicadas = [
+        "BNG destaca AVANT (servicio de trenes de alta velocidad para distancias medias).",
+        "BNG propone gestionarlas mediante «GALTRÉN» (una empresa pública gallega de trenes).",
+        "Quiere controlar el sueldo con el algoritmo HER. HER es el nombre del algoritmo.",
+        "Propone transformar la empresa de construcción de barcos NAVANTIA-Ferrol.",
+    ]
+    res = legibility.check(explicadas)
+    assert not any("Sigla" in a for a in res.avisos)
+    # Una sigla explicada en otra frase del tema cuenta como explicada
+    assert not any(
+        "Sigla" in a
+        for a in legibility.check(
+            ["El CGPJ es el órgano de los jueces.", "Reformar el CGPJ."]
+        ).avisos
+    )
+    # Sin aclaración, sigue avisando
+    sueltas = legibility.check(["Quiere reformar el CGPJ y el TC."]).avisos
+    assert [a for a in sueltas if "Sigla" in a] == [
+        "Sigla sin explicar: CGPJ",
+        "Sigla sin explicar: TC",
+    ]

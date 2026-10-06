@@ -486,6 +486,8 @@ def easy_read(ctx: Contexto | LFContexto, tema: Tema, t: AnalisisTema) -> Lectur
     allowed = {nombre.upper(), *(w.upper() for w in nombre.split())}
     instrucciones = LF_INSTRUCCIONES.replace("{candidatura}", nombre)
     feedback: str | None = None
+    anterior: str | None = None
+    problems: list[str] = []
     lf = LecturaFacil()
     for _attempt in range(LF_ATTEMPTS):
         messages = [
@@ -494,7 +496,9 @@ def easy_read(ctx: Contexto | LFContexto, tema: Tema, t: AnalisisTema) -> Lectur
                 "content": f"Candidatura: {nombre}\nTexto original (JSON):\n{original_json}",
             }
         ]
-        if feedback:
+        if feedback and anterior:
+            # El modelo necesita ver su adaptación anterior para corregirla (no rehacerla a ciegas)
+            messages.append({"role": "assistant", "content": anterior})
             messages.append({"role": "user", "content": feedback})
         out = parse(
             ctx.client,
@@ -564,12 +568,14 @@ def easy_read(ctx: Contexto | LFContexto, tema: Tema, t: AnalisisTema) -> Lectur
         )
         if not problems:
             return lf
+        anterior = json.dumps(out.model_dump(), ensure_ascii=False)
         feedback = (
             "Corrige estos problemas de tu adaptación anterior y devuélvela completa:\n- "
             + "\n- ".join(problems[:15])
         )
     ctx.incidencias.append(
         f"{tema.id}: la lectura fácil no supera la validación tras {LF_ATTEMPTS} intentos"
+        f" (último: {' | '.join(problems[:3])[:400]})"
     )
     return lf
 

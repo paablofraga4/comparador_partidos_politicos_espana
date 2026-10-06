@@ -72,8 +72,31 @@ def hardest_sentences(texts: list[str], n: int = 3) -> list[tuple[str, float]]:
     return sorted(scored, key=lambda x: x[1])[:n]
 
 
+# Nombres genéricos que, delante de una sigla, la explican por aposición («la empresa NAVANTIA»)
+_GENERICOS = (
+    "empresa|servicio|programa|plan|algoritmo|ley|agencia|organismo|red|plataforma|sistema"
+    "|proyecto|fondo|impuesto|tren|línea|centro|instituto|fundación|consorcio|sociedad|entidad"
+)
+
+
+def _explicada(sigla: str, todo: str) -> bool:
+    """Una sigla está explicada (UNE 153101) si en el mismo tema va seguida de una aclaración
+    entre paréntesis, si una frase la define («HER es…») o si la precede un nombre genérico
+    («la empresa de construcción de barcos NAVANTIA-Ferrol»)."""
+    s = re.escape(sigla)
+    return bool(
+        re.search(rf"\b{s}\b[»”\"]?\s*\(", todo)
+        or re.search(rf"\b{s}\b[»”\"]?\s+(?:es|son|significa|quiere decir)\b", todo)
+        or re.search(
+            rf"\b(?i:la|el|los|las|un|una)\s+(?i:{_GENERICOS})\b(?:\s+[^\s.]+){{0,5}}?\s+[«“\"]?{s}\b",
+            todo,
+        )
+    )
+
+
 def check(texts: list[str], extra_allowed: set[str] | None = None) -> Legibilidad:
     allowed = ALLOWED_ACRONYMS | (extra_allowed or set())
+    todo = "\n".join(texts)
     avisos: list[str] = []
     max_words = 0
     for t in texts:
@@ -85,7 +108,7 @@ def check(texts: list[str], extra_allowed: set[str] | None = None) -> Legibilida
             if _DOUBLE_NEG.search(s):
                 avisos.append(f"Doble negación: «{s[:80]}»")
         for a in sorted(set(_ACRONYM.findall(t)) - allowed):
-            if f"Sigla sin explicar: {a}" not in avisos:
+            if not _explicada(a, todo) and f"Sigla sin explicar: {a}" not in avisos:
                 avisos.append(f"Sigla sin explicar: {a}")
     score = inflesz(texts)
     if score < MIN_INFLESZ:
