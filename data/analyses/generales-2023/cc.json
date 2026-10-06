@@ -16,7 +16,7 @@
     "tokens_entrada": 278215,
     "tokens_cache": 208670,
     "tokens_salida": 116544,
-    "coste_usd": 1.0744
+    "coste_usd": 1.4491
   },
   "temas": {
     "vivienda": {
@@ -105,25 +105,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere crear empleo estable y mejorar los salarios mediante sus políticas de trabajo.",
+            "texto": "CC quiere orientar las políticas de trabajo hacia la creación de empleo.",
             "citas": [
               "c0019"
             ]
           },
           {
-            "texto": "El partido quiere que Canarias tenga más tipos de actividades económicas.",
+            "texto": "CC quiere que el empleo sea estable y mejoren los salarios.",
+            "citas": [
+              "c0019"
+            ]
+          },
+          {
+            "texto": "CC propone que la economía canaria tenga más tipos de actividades.",
             "citas": [
               "c0052"
             ]
           },
           {
-            "texto": "Quiere impulsar la industria, la investigación y el desarrollo.",
+            "texto": "CC quiere impulsar la industria, la investigación y el desarrollo.",
             "citas": [
               "c0052"
             ]
           },
           {
-            "texto": "También quiere impulsar actividades como la agricultura, la ganadería y la pesca.",
+            "texto": "CC también quiere impulsar el sector primario, que obtiene recursos de la naturaleza.",
             "citas": [
               "c0052"
             ]
@@ -131,7 +137,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere mantener el dinero destinado al Plan Integral de Empleo de Canarias. La Ley de Empleo recoge este dinero.",
+            "texto": "CC quiere mantener el dinero del Plan Integral de Empleo de Canarias. CC propone mantenerlo como establece la Ley de Empleo.",
             "citas": [
               "c0021"
             ],
@@ -139,7 +145,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "El partido quiere mantener el dinero reservado para un programa de formación profesional. El programa busca crear empleo en sectores de servicios avanzados. La propuesta sigue el artículo 23 de la Ley 19/1994.",
+            "texto": "CC quiere mantener el dinero destinado a crear empleo con un programa de formación profesional. CC propone esta formación en sectores de servicios especializados. CC propone seguir el artículo 23 de la Ley 19/1994.",
             "citas": [
               "c0020"
             ],
@@ -147,7 +153,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "El partido quiere mantener las ayudas para contratar a jóvenes en empresas muy pequeñas. También quiere mantenerlas para trabajadores por cuenta propia que contraten a jóvenes. En ambos casos, los contratos no tienen fecha de finalización. También quiere mantener las ayudas para contratar en proyectos de emprendimiento joven. Estos son proyectos de jóvenes para crear negocios. También quiere mantener las ayudas al primer empleo de jóvenes. Además, quiere mantener las ayudas a los contratos en prácticas.",
+            "texto": "CC quiere mantener las ayudas para contratar jóvenes con contratos indefinidos. CC propone estas ayudas para empresas muy pequeñas y autónomos. CC quiere mantener las ayudas para contratar en proyectos empresariales de jóvenes. CC también quiere mantener las ayudas para el primer empleo de jóvenes. CC quiere mantener las ayudas para los contratos en prácticas.",
             "citas": [
               "c0014"
             ],
@@ -155,7 +161,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "El partido quiere reducir los pagos de las empresas a la Seguridad Social. La reducción se aplicaría a contratos sin fecha de finalización para estos grupos. La medida incluye a jóvenes de 16 a 30 años. También incluye a personas mayores de 45 años. También incluye a mujeres en trabajos con menos mujeres que hombres.",
+            "texto": "CC propone reducir los pagos empresariales a la Seguridad Social por ciertos contratos indefinidos. CC propone esta reducción para jóvenes de 16 a 30 años. CC también la propone para mayores de 45 años. CC también la propone para mujeres en trabajos donde hay pocas mujeres.",
             "citas": [
               "c0018"
             ],
@@ -163,7 +169,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "El partido quiere mantener y reforzar las medidas del Régimen Económico y Fiscal de Canarias. Estas medidas compensan los costes adicionales propios de la industria canaria. El partido quiere reducir las condiciones para acceder a los Incentivos Económicos Regionales. Estos incentivos son ayudas económicas.",
+            "texto": "CC quiere reforzar las medidas del Régimen Económico y Fiscal de Canarias. CC quiere que estas medidas compensen los costes adicionales propios de la industria canaria. CC propone reducir los requisitos para acceder a los Incentivos Económicos Regionales.",
             "citas": [
               "c0060"
             ],
@@ -171,7 +177,7 @@
             "subtema": "industria"
           },
           {
-            "texto": "El partido quiere garantizar las ventas desde Canarias a cualquier país de la UE. Quiere evitar barreras para las pequeñas y medianas empresas que venden a otros países.",
+            "texto": "CC quiere que las ventas desde Canarias sean accesibles en toda la Unión Europea. CC quiere evitar barreras para las pequeñas y medianas empresas que venden al extranjero.",
             "citas": [
               "c0069"
             ],
@@ -180,13 +186,18 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 58.3,
+          "inflesz": 60.1,
           "max_palabras_frase": 15,
-          "ok": false,
+          "ok": true,
           "avisos": [
-            "INFLESZ 58.3 < 65.0 (texto demasiado difícil)"
+            "Aviso: INFLESZ 60.1 por debajo del objetivo 65.0"
           ]
-        }
+        },
+        "fiel": true,
+        "observaciones": [
+          "En la propuesta 2, «sectores de servicios avanzados» se adapta como «sectores de servicios especializados». No son necesariamente equivalentes; se cambia ligeramente el tipo de sectores al que se refiere la propuesta.",
+          "En la propuesta 5, «consolidar las medidas» se adapta como «reforzar las medidas». Son expresiones cercanas, pero no idénticas en su matiz."
+        ]
       }
     },
     "impuestos": {
@@ -273,7 +284,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "pensiones": {
@@ -381,7 +393,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "proteccion-social": {
@@ -462,37 +475,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere pedir fondos al Estado para luchar contra la pobreza en Canarias.",
+            "texto": "CC quiere fondos del Estado para luchar contra la pobreza en Canarias.",
             "citas": [
               "c0026"
             ]
           },
           {
-            "texto": "Quiere esos fondos mientras la pobreza en Canarias supere el nivel medio de España.",
+            "texto": "CC reclama estos fondos mientras la pobreza en Canarias supere la media estatal.",
             "citas": [
               "c0026"
             ]
           },
           {
-            "texto": "El partido quiere cambiar cómo se pagan las ayudas por dependencia.",
+            "texto": "CC propone fondos para cuidar a personas que necesitan ayuda en su vida diaria.",
             "citas": [
               "c0031"
             ]
           },
           {
-            "texto": "Estas ayudas son para quienes necesitan apoyo en su día a día.",
+            "texto": "CC quiere incluir estos fondos en los fondos de las comunidades autónomas.",
             "citas": [
               "c0031"
             ]
           },
           {
-            "texto": "El partido quiere incluirlas en el reparto de fondos entre comunidades autónomas.",
-            "citas": [
-              "c0031"
-            ]
-          },
-          {
-            "texto": "El Estado pagaría el 50% de estas ayudas.",
+            "texto": "CC quiere que el Estado aporte el 50%.",
             "citas": [
               "c0031"
             ]
@@ -500,7 +507,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere pedir fondos para luchar contra la pobreza en Canarias. El Régimen Económico y Fiscal recoge esos fondos. Es el conjunto de normas sobre impuestos y economía de Canarias. El partido quiere esos fondos mientras la pobreza en Canarias supere el nivel medio de España.",
+            "texto": "CC reclama los fondos previstos en el Régimen Económico y Fiscal para combatir la pobreza. CC reclama estos fondos mientras la pobreza en Canarias supere la media estatal.",
             "citas": [
               "c0026"
             ],
@@ -508,7 +515,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "El partido quiere cambiar cómo se pagan las ayudas por dependencia. Estas ayudas son para quienes necesitan apoyo en su día a día. El partido quiere incluirlas en el reparto de fondos entre comunidades autónomas. El Estado pagaría el 50% de estas ayudas. Ese dinero solo serviría para pagar esas ayudas.",
+            "texto": "CC propone fondos para cuidar a personas que necesitan ayuda en su vida diaria. CC quiere incluir estos fondos en los fondos de las comunidades autónomas. CC quiere que el Estado aporte el 50% solo para estos cuidados.",
             "citas": [
               "c0031"
             ],
@@ -516,7 +523,7 @@
             "subtema": "dependencia"
           },
           {
-            "texto": "El partido quiere revisar la Ley 39/2006, sobre ayudas por dependencia. Estas ayudas son para quienes necesitan apoyo en su día a día. El partido quiere ajustar estas ayudas a lo que pide la gente. También quiere que funcionen mejor dentro de los servicios sociales. El partido quiere asegurar que el sistema pueda seguir dando estas ayudas.",
+            "texto": "CC propone revisar la Ley 39/2006. CC quiere ajustar la atención a personas dependientes a las necesidades de la gente. CC quiere que los servicios sociales incluyan mejor estos cuidados. CC quiere asegurar que el sistema pueda mantenerse.",
             "citas": [
               "c0029",
               "c0049"
@@ -525,7 +532,7 @@
             "subtema": "dependencia"
           },
           {
-            "texto": "El partido quiere dar ayudas para criar a los hijos a todas las familias. Las familias recibirían las ayudas sin tener que pedirlas. El partido quiere dar más apoyo a las familias con menos ingresos.",
+            "texto": "CC propone dar ayudas para criar a los hijos a todas las familias de forma automática. CC quiere dar un apoyo especial a las familias con menos ingresos.",
             "citas": [
               "c0086"
             ],
@@ -533,7 +540,7 @@
             "subtema": "servicios sociales"
           },
           {
-            "texto": "El partido quiere usar el mismo límite de ingresos en toda España. Ese límite marca cuándo una persona vive en la pobreza. Serviría para decidir quién recibe ayudas para comer gratis en el comedor escolar. El partido quiere que estas ayudas lleguen al 29% del alumnado, frente al 13% actual.",
+            "texto": "CC propone usar el umbral de pobreza como límite de ingresos en todo el Estado. CC quiere usar ese límite para dar acceso al comedor escolar gratuito. CC propone ampliar estas ayudas del 13% al 29% del alumnado.",
             "citas": [
               "c0093"
             ],
@@ -541,7 +548,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "El partido quiere detectar antes a más alumnos que viven en situaciones sociales difíciles. También quiere dar apoyo escolar a más de estos alumnos. Ese apoyo les ayudaría a aprender. El partido quiere darlo antes de que surjan problemas.",
+            "texto": "CC quiere detectar antes a más estudiantes con dificultades por su situación social. CC quiere dar apoyo escolar a más estudiantes antes de que tengan dificultades.",
             "citas": [
               "c0092"
             ],
@@ -549,7 +556,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "Algunas mujeres con discapacidad sufren un trato injusto por 2 o 3 motivos a la vez. El partido quiere exigir medidas contra ese trato injusto.",
+            "texto": "CC exige medidas contra la discriminación que sufren las mujeres con discapacidad. CC exige medidas cuando sufren discriminación por 2 o 3 motivos a la vez.",
             "citas": [
               "c0033"
             ],
@@ -558,12 +565,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 66.5,
+          "inflesz": 68.6,
           "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "sanidad": {
@@ -689,7 +697,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "educacion": {
@@ -770,43 +779,43 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere un acuerdo social sobre la educación.",
+            "texto": "CC propone un acuerdo social sobre la educación.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "El acuerdo tratará lo que todo alumno debe saber hacer.",
+            "texto": "CC quiere incluir conocimientos básicos.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "También tratará el aprendizaje de otras lenguas.",
+            "texto": "CC quiere incluir habilidades básicas.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "También tratará el uso de la tecnología.",
+            "texto": "CC quiere incluir el aprendizaje de otras lenguas.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "El acuerdo buscará reducir las diferencias entre alumnos para que todos puedan aprender.",
+            "texto": "CC quiere incluir el uso de tecnologías.",
             "citas": [
               "c0017"
             ]
           },
           {
-            "texto": "El partido pide dinero para los edificios y espacios de los centros de enseñanza.",
+            "texto": "CC quiere reducir las desigualdades.",
             "citas": [
-              "c0015"
+              "c0017"
             ]
           },
           {
-            "texto": "Estos centros están en Canarias.",
+            "texto": "CC pide dinero para obras en centros educativos de Canarias.",
             "citas": [
               "c0015"
             ]
@@ -814,7 +823,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere un acuerdo social sobre la educación. El acuerdo tratará lo que todo alumno debe saber hacer. También tratará el aprendizaje de otras lenguas. También tratará el uso de la tecnología. El acuerdo buscará reducir las diferencias entre alumnos para que todos puedan aprender.",
+            "texto": "CC propone un acuerdo social sobre la educación. CC quiere incluir conocimientos básicos. CC quiere incluir habilidades básicas. CC quiere incluir el aprendizaje de otras lenguas. CC quiere incluir el uso de tecnologías. CC quiere reducir las desigualdades.",
             "citas": [
               "c0017"
             ],
@@ -822,7 +831,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "El partido quiere mantener el acuerdo del Plan Especial de Infraestructura Educativa. Este plan trata de los edificios y espacios de los centros de enseñanza. El acuerdo dura varios años. El partido pide al menos 42 millones de euros al año para este plan.",
+            "texto": "CC quiere mantener el convenio de varios años del Plan Especial de Infraestructura Educativa. CC pide al menos 42 millones de euros al año para este plan.",
             "citas": [
               "c0015"
             ],
@@ -830,7 +839,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "El partido quiere cambiar la ley. La ley reconocerá que la educación infantil de 0 a 3 años es gratis. El partido quiere asegurar suficientes plazas en centros públicos.",
+            "texto": "CC quiere cambiar las leyes sobre la educación infantil. CC quiere que sea gratis de 0 a 3 años. CC quiere que haya plazas públicas suficientes.",
             "citas": [
               "c0016",
               "c0032"
@@ -839,7 +848,7 @@
             "subtema": "educación 0-3 años"
           },
           {
-            "texto": "El partido quiere desarrollar las normas de la formación profesional dual. Esta formación combina clases y trabajo en una empresa.",
+            "texto": "CC quiere desarrollar las normas de la Formación Profesional Dual del sistema educativo.",
             "citas": [
               "c0027"
             ],
@@ -847,7 +856,7 @@
             "subtema": "formación profesional"
           },
           {
-            "texto": "El partido exige cumplir el artículo 23 del Régimen Económico y Fiscal de Canarias. Este régimen recoge normas sobre la economía y los impuestos de Canarias. Para ello, pide becas para alumnos de Canarias. Estas becas son para quienes no pueden estudiar lo que quieren en su isla. También pide becas de viaje para jóvenes de Canarias.",
+            "texto": "CC exige cumplir el artículo 23 del Régimen Económico y Fiscal de Canarias. CC pide becas para estudiantes canarios cuyos estudios no se ofrecen en su isla. CC también pide becas para los viajes de los jóvenes canarios.",
             "citas": [
               "c0023"
             ],
@@ -855,7 +864,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "El partido quiere fijar el mismo límite de ingresos en toda España. Ese límite será el que marca cuándo una persona vive en pobreza. Las familias bajo ese límite podrán pedir ayudas para comer gratis en la escuela. Estas ayudas llegan al 13 % de los alumnos. El partido quiere que lleguen al 29 %.",
+            "texto": "CC propone un límite de ingresos para recibir ayudas de comedor escolar gratis. CC quiere usar el nivel de ingresos que marca la pobreza. CC propone el mismo límite en todo el país. CC quiere aumentar estas ayudas del 13% al 29%.",
             "citas": [
               "c0093"
             ],
@@ -863,7 +872,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "El partido quiere detectar pronto a más alumnos con problemas por su situación social. Quiere que más alumnos reciban ayuda para aprender antes de que surjan problemas.",
+            "texto": "CC quiere detectar pronto qué alumnos necesitan ayuda por su situación social. CC quiere que más alumnos reciban apoyo escolar antes de que surjan problemas.",
             "citas": [
               "c0092"
             ],
@@ -872,12 +881,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 68.1,
+          "inflesz": 68.7,
           "max_palabras_frase": 14,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": false,
+        "observaciones": []
       }
     },
     "inmigracion": {
@@ -934,53 +944,33 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere coordinar a los países europeos para rescatar inmigrantes en el mar.",
+            "texto": "CC propone coordinación europea para rescatar a inmigrantes en el mar.",
             "citas": [
               "c0091",
               "c0087"
             ]
           },
           {
-            "texto": "El partido quiere cooperar con los países de donde salen los inmigrantes.",
+            "texto": "CC propone cooperar con los países de origen y tránsito contra la inmigración irregular.",
             "citas": [
               "c0091",
               "c0087"
             ]
           },
           {
-            "texto": "También quiere cooperar con los países por donde pasan los inmigrantes.",
-            "citas": [
-              "c0091",
-              "c0087"
-            ]
-          },
-          {
-            "texto": "Esta cooperación busca combatir la inmigración que no cumple las normas.",
-            "citas": [
-              "c0091",
-              "c0087"
-            ]
-          },
-          {
-            "texto": "El partido quiere implicar a todas las comunidades autónomas en la acogida de menores.",
+            "texto": "CC quiere que todas las comunidades autónomas acojan a menores sin un adulto responsable.",
             "citas": [
               "c0089"
             ]
           },
           {
-            "texto": "Estos menores llegan sin un adulto responsable.",
+            "texto": "CC quiere que estas comunidades den formación a estos menores.",
             "citas": [
               "c0089"
             ]
           },
           {
-            "texto": "El partido quiere que las comunidades también les den formación.",
-            "citas": [
-              "c0089"
-            ]
-          },
-          {
-            "texto": "El partido quiere que las comunidades les ayuden a formar parte de la sociedad.",
+            "texto": "CC quiere que estas comunidades ayuden a estos menores a integrarse en la sociedad.",
             "citas": [
               "c0089"
             ]
@@ -988,7 +978,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere exigir que Canarias tenga representantes propios en las negociaciones del Estado. Son negociaciones con Marruecos sobre el control de los movimientos de inmigrantes.",
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos. CC exige esta representación para negociar el control de los movimientos migratorios.",
             "citas": [
               "c0011"
             ],
@@ -996,7 +986,7 @@
             "subtema": "control de fronteras"
           },
           {
-            "texto": "El partido quiere mejorar la coordinación entre países de la UE para rescatar inmigrantes. Estos rescates se realizan en el mar. El partido también quiere aumentar el apoyo directo de la UE.",
+            "texto": "CC propone que los países de la UE coordinen mejor el rescate de inmigrantes. CC propone esta coordinación para los rescates en el mar. CC propone aumentar el apoyo directo de la UE.",
             "citas": [
               "c0083"
             ],
@@ -1004,7 +994,7 @@
             "subtema": "control de fronteras"
           },
           {
-            "texto": "El partido quiere que la UE coopere más con los países de donde salen inmigrantes. También quiere aumentar la cooperación con los países por donde pasan los inmigrantes. Esta cooperación busca combatir la inmigración que no cumple las normas.",
+            "texto": "CC propone que la UE coopere más con los países de origen y tránsito. CC propone esta cooperación para luchar contra la inmigración irregular.",
             "citas": [
               "c0087"
             ],
@@ -1012,7 +1002,7 @@
             "subtema": "control de fronteras"
           },
           {
-            "texto": "El partido quiere cambiar las leyes para que participen todas las comunidades autónomas. El partido quiere que todas acojan a los menores que llegan a Canarias. El partido quiere que las comunidades también les den formación. El partido quiere que las comunidades les ayuden a formar parte de la sociedad. El partido quiere que las comunidades se ayuden entre ellas para atender a estos menores.",
+            "texto": "CC propone cambiar las leyes sobre los menores que llegan a Canarias. CC quiere que todas las comunidades autónomas participen en la acogida de estos menores. CC quiere que estas comunidades den formación a estos menores. CC quiere que estas comunidades ayuden a estos menores a integrarse en la sociedad. CC propone que los territorios se apoyen entre sí para atender a estos menores.",
             "citas": [
               "c0090"
             ],
@@ -1021,13 +1011,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 63.7,
-          "max_palabras_frase": 15,
-          "ok": false,
+          "inflesz": 61.0,
+          "max_palabras_frase": 14,
+          "ok": true,
           "avisos": [
-            "INFLESZ 63.7 < 65.0 (texto demasiado difícil)"
+            "Aviso: INFLESZ 61.0 por debajo del objetivo 65.0"
           ]
-        }
+        },
+        "fiel": true,
+        "observaciones": []
       }
     },
     "medio-ambiente-energia": {
@@ -1183,7 +1175,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "mundo-rural": {
@@ -1250,25 +1243,19 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere que el campo aporte más a la economía de Canarias.",
+            "texto": "CC quiere aumentar el peso de la agricultura, la ganadería y la pesca.",
             "citas": [
               "c0054"
             ]
           },
           {
-            "texto": "También quiere que la pesca aporte más a esa economía.",
+            "texto": "CC propone este aumento en la economía canaria.",
             "citas": [
               "c0054"
             ]
           },
           {
-            "texto": "El partido seguirá las normas de la Política Agraria Común.",
-            "citas": [
-              "c0054"
-            ]
-          },
-          {
-            "texto": "También seguirá las normas de la Política Pesquera Común.",
+            "texto": "CC propone hacerlo dentro de la Política Agraria Común y la Política Pesquera Común.",
             "citas": [
               "c0054"
             ]
@@ -1276,7 +1263,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere incluir fondos cada año en los Presupuestos Generales del Estado. España pagará así el 100% de la parte que le corresponde. Estos fondos apoyarán las ayudas a los cultivos locales. Las ayudas pertenecen al Programa de Opciones Específicas por la Lejanía y la Insularidad. Este programa ayuda al campo de las islas más alejadas.",
+            "texto": "CC propone fondos anuales en los Presupuestos Generales del Estado. CC quiere garantizar el 100% de la aportación nacional a las ayudas agrícolas locales. CC propone estas ayudas dentro del Programa de opciones específicas por la lejanía y la insularidad.",
             "citas": [
               "c0059"
             ],
@@ -1284,7 +1271,7 @@
             "subtema": "PAC"
           },
           {
-            "texto": "El partido quiere defender lo que cubren los seguros del campo. También quiere ayudas que paguen hasta el 100% del transporte de productos.",
+            "texto": "CC defiende la protección que ofrecen los seguros para la agricultura y la ganadería. CC defiende ayudas de hasta el 100% para el transporte de mercancías.",
             "citas": [
               "c0055"
             ],
@@ -1292,7 +1279,7 @@
             "subtema": "agricultura y ganadería"
           },
           {
-            "texto": "El partido quiere reservar dinero público cada año para bajar el precio del agua. Quiere igualar ese precio al del resto de España. Las ayudas cubrirán el agua del mar a la que se le quita la sal. También cubrirán el agua que se limpia o se vuelve a usar. Las ayudas también cubrirán el agua para el campo. Esa agua puede venir de pozos o galerías. Las galerías son túneles bajo tierra. De esos túneles se saca agua. También puede ser agua del mar sin sal.",
+            "texto": "CC propone fondos anuales para reducir los precios del agua. CC quiere igualar estos precios a los del resto del Estado. CC incluye el agua obtenida al quitarle la sal. CC incluye el agua tratada para usarla de nuevo. CC también incluye el agua que se usa de nuevo. CC también propone reducir los precios del agua agrícola de pozos y túneles subterráneos. CC incluye también el agua agrícola obtenida al quitarle la sal.",
             "citas": [
               "c0062",
               "c0058"
@@ -1301,7 +1288,7 @@
             "subtema": "agricultura y ganadería"
           },
           {
-            "texto": "El partido quiere mejorar los controles de salud de las plantas. Así quiere impedir la entrada de plagas que destruyan los cultivos.",
+            "texto": "CC propone mejorar los controles de salud de las plantas. CC quiere impedir la entrada de plagas que destruyan los cultivos.",
             "citas": [
               "c0056"
             ],
@@ -1309,7 +1296,7 @@
             "subtema": "agricultura y ganadería"
           },
           {
-            "texto": "El partido quiere que los barcos canarios puedan pescar más atún rojo. Quiere que reciban al menos el 12% del cupo de España para este pez. El cupo es la cantidad de pescado que se permite pescar. También quiere aumentar el cupo de tuna, también llamada patudo.",
+            "texto": "CC quiere al menos un 12% de la cuota nacional de atún rojo. CC propone reservar esta cantidad de pesca permitida para los barcos canarios que pescan atún. CC quiere aumentar la cantidad de tuna o patudo que pueden pescar.",
             "citas": [
               "c0057"
             ],
@@ -1317,7 +1304,7 @@
             "subtema": "pesca"
           },
           {
-            "texto": "El partido quiere quitar en el futuro los cupos de atún rojo en Canarias. También quiere quitar el cupo de tuna o patudo en Canarias. Los cupos fijan cuánto pescado se puede pescar.",
+            "texto": "CC quiere eliminar en el futuro los límites de pesca de atún rojo en Canarias. CC también quiere eliminar en el futuro los límites de pesca de tuna en Canarias.",
             "citas": [
               "c0061"
             ],
@@ -1326,12 +1313,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 76.9,
-          "max_palabras_frase": 15,
+          "inflesz": 68.7,
+          "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "transporte": {
@@ -1420,34 +1408,34 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere un transporte público que todos puedan usar.",
+            "texto": "CC propone un transporte público accesible.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "El partido quiere mantener los descuentos del transporte público.",
+            "texto": "CC quiere mantener los descuentos del transporte público.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "El partido quiere conseguir fondos para los trenes de Gran Canaria y Tenerife.",
+            "texto": "CC quiere financiación para los proyectos de trenes de Gran Canaria y Tenerife.",
             "citas": [
               "c0007",
               "c0008"
             ]
           },
           {
-            "texto": "El partido quiere ampliar las redes de transporte.",
+            "texto": "CC propone desarrollar las redes de transporte para conectar mejor los territorios.",
             "citas": [
               "c0064"
             ]
           },
           {
-            "texto": "El partido quiere adaptar los puertos y los aeropuertos para conectar mejor las islas.",
+            "texto": "CC propone adaptar las instalaciones marítimas y aéreas para conectar mejor los territorios.",
             "citas": [
               "c0064"
             ]
@@ -1455,7 +1443,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere mantener el descuento del 100% en autobuses y tranvías, sin límites. Quiere mantenerlo después del 31 de diciembre de 2023.",
+            "texto": "CC propone mantener el descuento del 100% para guaguas y tranvías, sin limitaciones. CC propone ampliarlo más allá del 31 de diciembre de 2023.",
             "citas": [
               "c0007"
             ],
@@ -1463,7 +1451,7 @@
             "subtema": "transporte público y abonos"
           },
           {
-            "texto": "El partido quiere incluir los trenes de Gran Canaria y Tenerife en la red estatal. Esta es la red de trenes del Estado. Quiere conseguir fondos del Estado y de la UE para construir estos trenes.",
+            "texto": "CC propone incluir los trenes de Gran Canaria y Tenerife en la red del Administrador de Infraestructuras Ferroviarias. CC quiere financiación del Estado y europea para desarrollar los proyectos de esos trenes.",
             "citas": [
               "c0008"
             ],
@@ -1471,7 +1459,7 @@
             "subtema": "tren y cercanías"
           },
           {
-            "texto": "El partido quiere mantener el descuento del 75% para quienes viven en Canarias. Quiere exigir medidas para que las empresas compitan de forma justa. También quiere eliminar los precios excesivos de los vuelos.",
+            "texto": "CC defiende el descuento del 75% para residentes en Canarias. CC exige medidas para proteger la competencia entre empresas. CC exige eliminar los precios excesivos de los vuelos.",
             "citas": [
               "c0004"
             ],
@@ -1479,7 +1467,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "El partido quiere fijar precios máximos que sirvan de referencia para algunas rutas de avión. Son las rutas que tienen la obligación de prestar un servicio público.",
+            "texto": "CC propone precios máximos de referencia para líneas aéreas con obligación de servicio público.",
             "citas": [
               "c0072"
             ],
@@ -1487,7 +1475,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "El partido quiere crear un servicio público de barcos entre 3 islas. Las islas son La Palma, El Hierro y La Gomera. Quiere que este servicio sea obligatorio y tenga un precio máximo.",
+            "texto": "CC propone establecer una obligación de servicio público marítimo. CC propone este servicio entre La Palma, El Hierro y La Gomera. CC propone un precio máximo para este servicio.",
             "citas": [
               "c0073"
             ],
@@ -1495,7 +1483,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "El partido quiere exigir que el Estado cumpla el acuerdo de carreteras con Canarias. También quiere que el Estado entregue de inmediato los fondos previstos en sus presupuestos.",
+            "texto": "CC exige cumplir el convenio de carreteras con Canarias. CC exige transferir de inmediato el dinero previsto en los Presupuestos Generales del Estado.",
             "citas": [
               "c0080"
             ],
@@ -1503,7 +1491,7 @@
             "subtema": "carreteras"
           },
           {
-            "texto": "El partido quiere aprobar la ley prevista en el artículo 161.3 del Estatuto de Autonomía. Esta ley dará normas especiales a los aeropuertos canarios. Los aeropuertos canarios formarán una red propia. Las instituciones públicas de Canarias tendrán un papel decisivo en esa red. Los grupos económicos y sociales de Canarias también tendrán un papel decisivo. Esto significa que sus decisiones serán clave.",
+            "texto": "CC propone aprobar la ley prevista en el artículo 161.3 del Estatuto. CC propone normas especiales para los aeropuertos canarios como red específica. CC quiere una participación decisiva de las administraciones de Canarias. CC quiere también una participación decisiva de los sectores económicos y sociales de Canarias.",
             "citas": [
               "c0076"
             ],
@@ -1511,7 +1499,7 @@
             "subtema": "puertos y aeropuertos"
           },
           {
-            "texto": "El partido quiere exigir que se actualicen de inmediato los costes de transportar mercancías. Las mercancías son productos que se llevan de un lugar a otro.",
+            "texto": "CC exige actualizar de inmediato los costes del transporte de mercancías.",
             "citas": [
               "c0002"
             ],
@@ -1520,12 +1508,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.0,
-          "max_palabras_frase": 15,
-          "ok": true,
-          "avisos": []
+          "inflesz": 53.9,
+          "max_palabras_frase": 18,
+          "ok": false,
+          "avisos": [
+            "INFLESZ 53.9 < 60.0 (texto demasiado difícil)"
+          ]
         },
-        "fiel": false
+        "observaciones": []
       }
     },
     "igualdad": {
@@ -1617,7 +1607,7 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido defiende las medidas contra la violencia hacia las mujeres.",
+            "texto": "CC defiende las políticas contra la violencia de género.",
             "citas": [
               "c0042",
               "c0048",
@@ -1625,7 +1615,7 @@
             ]
           },
           {
-            "texto": "Quiere aplicar el Convenio de Estambul, un acuerdo contra esta violencia.",
+            "texto": "CC propone aplicar el Convenio de Estambul y el Pacto de Estado.",
             "citas": [
               "c0042",
               "c0048",
@@ -1633,15 +1623,7 @@
             ]
           },
           {
-            "texto": "También quiere aplicar el Pacto de Estado contra la Violencia de Género.",
-            "citas": [
-              "c0042",
-              "c0048",
-              "c0034"
-            ]
-          },
-          {
-            "texto": "El partido quiere lograr la igualdad entre mujeres y hombres.",
+            "texto": "CC quiere acabar con las desigualdades entre mujeres y hombres.",
             "citas": [
               "c0037",
               "c0043",
@@ -1649,7 +1631,7 @@
             ]
           },
           {
-            "texto": "Quiere acabar con el trato injusto hacia las mujeres.",
+            "texto": "CC quiere acabar con la discriminación contra las mujeres.",
             "citas": [
               "c0037",
               "c0043",
@@ -1657,7 +1639,7 @@
             ]
           },
           {
-            "texto": "También quiere facilitar que las personas trabajen y cuiden de su familia.",
+            "texto": "CC propone facilitar que las personas combinen el trabajo y la vida familiar.",
             "citas": [
               "c0037",
               "c0043",
@@ -1665,15 +1647,7 @@
             ]
           },
           {
-            "texto": "Quiere dar apoyo legal y social a lesbianas, gais y bisexuales.",
-            "citas": [
-              "c0037",
-              "c0043",
-              "c0050"
-            ]
-          },
-          {
-            "texto": "También quiere dar ese apoyo a las personas trans e intersexuales.",
+            "texto": "CC propone apoyo legal y social para lesbianas, gais, bisexuales, personas transgénero e intersexuales.",
             "citas": [
               "c0037",
               "c0043",
@@ -1683,7 +1657,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere aplicar el Convenio de Estambul en todo el país. Este acuerdo busca luchar contra la violencia hacia las mujeres. Quiere que las leyes incluyan todas las formas de esta violencia. También quiere dedicar dinero y servicios para atender a las víctimas de todas estas violencias.",
+            "texto": "CC propone aplicar el Convenio de Estambul en todo el Estado. CC quiere incluir todas las formas de violencia de género en las leyes. CC también quiere incluirlas en los presupuestos y los servicios de atención a las víctimas.",
             "citas": [
               "c0048"
             ],
@@ -1691,7 +1665,7 @@
             "subtema": "violencia de género e intrafamiliar"
           },
           {
-            "texto": "El partido quiere aplicar el Pacto de Estado contra la Violencia de Género. Quiere medidas para evitar la violencia y proteger a las mujeres. También quiere proteger a sus hijos e hijas. Para ello, quiere nuevas leyes, servicios y dinero.",
+            "texto": "CC propone aplicar el Pacto de Estado contra la Violencia de Género. CC propone medidas para prevenir esta violencia y proteger a las mujeres y sus hijos. CC también propone nuevas leyes, servicios y presupuestos para aplicar este pacto.",
             "citas": [
               "c0035"
             ],
@@ -1699,7 +1673,7 @@
             "subtema": "violencia de género e intrafamiliar"
           },
           {
-            "texto": "El partido quiere leyes contra la trata de mujeres para la explotación sexual. La trata consiste en captar y controlar a personas para explotarlas. La explotación sexual consiste en aprovecharse de otra persona mediante actos sexuales. También quiere leyes contra la prostitución.",
+            "texto": "CC propone medidas legales contra el comercio de mujeres para explotarlas sexualmente. CC también propone medidas legales contra la prostitución.",
             "citas": [
               "c0039"
             ],
@@ -1707,7 +1681,7 @@
             "subtema": "violencia de género e intrafamiliar"
           },
           {
-            "texto": "El partido exige cumplir las leyes para lograr la igualdad entre mujeres y hombres. También exige usar medidas para lograr esta igualdad. Quiere igualdad en el acceso al empleo y en las condiciones de trabajo. También quiere igualdad en los sueldos, las pensiones y otras ayudas.",
+            "texto": "CC exige cumplir las leyes y aplicar medidas contra las desigualdades entre mujeres y hombres. CC quiere combatir estas desigualdades en el empleo y las condiciones de trabajo. CC también quiere combatirlas en los sueldos, las pensiones y otras ayudas.",
             "citas": [
               "c0038"
             ],
@@ -1715,7 +1689,7 @@
             "subtema": "igualdad entre mujeres y hombres"
           },
           {
-            "texto": "El partido exige medidas contra la pobreza que afecta más a las mujeres. También exige medidas contra el trato injusto que sufren algunas mujeres por varios motivos. Algunas sufren 2 o 3 tipos de trato injusto a la vez. El partido quiere proteger a las mujeres con discapacidad. También quiere proteger a las mujeres migrantes. Quiere proteger a las mujeres que sufren racismo. Las medidas también deben proteger a grupos de trabajadoras, como las que trabajan en casas.",
+            "texto": "CC exige medidas contra la pobreza que afecta más a las mujeres. CC exige medidas contra la discriminación por 2 o 3 motivos a la vez. CC propone estas medidas para mujeres con discapacidad y mujeres migrantes. CC también propone estas medidas para mujeres discriminadas por su origen o color de piel. CC exige estas medidas para grupos de trabajadoras, como las trabajadoras del hogar.",
             "citas": [
               "c0033"
             ],
@@ -1723,7 +1697,7 @@
             "subtema": "discriminación"
           },
           {
-            "texto": "El partido quiere facilitar que las personas trabajen y cuiden de su familia. Quiere ampliar la educación para niños y niñas de 0 a 3 años. Quiere mejorar los permisos de trabajo por maternidad y paternidad. Estos permisos permiten faltar al trabajo al tener un hijo o una hija. También quiere mejorar la ayuda a quienes necesitan cuidados en su vida diaria.",
+            "texto": "CC propone facilitar que las personas combinen el trabajo y la vida familiar. CC quiere ampliar la escolarización de 0 a 3 años. CC propone mejorar los permisos de paternidad y maternidad. CC quiere mejorar la atención a personas que necesitan ayuda en su vida diaria.",
             "citas": [
               "c0044"
             ],
@@ -1731,7 +1705,7 @@
             "subtema": "igualdad entre mujeres y hombres"
           },
           {
-            "texto": "El partido quiere dar apoyo legal y social a lesbianas, gais y bisexuales. También quiere dar ese apoyo a las personas trans e intersexuales. Quiere que todas estas personas tengan igualdad en el trabajo. Quiere establecer pasos para actuar ante el acoso en la escuela. También quiere que reciban cuidados de salud según sus necesidades.",
+            "texto": "CC propone apoyo legal y social para lesbianas, gais, bisexuales, personas transgénero e intersexuales. CC propone igualdad en el trabajo para este colectivo. CC propone pautas de actuación contra el acoso escolar que sufre este colectivo. CC propone una atención sanitaria que responda a las necesidades de este colectivo.",
             "citas": [
               "c0051"
             ],
@@ -1739,7 +1713,7 @@
             "subtema": "derechos LGTBI"
           },
           {
-            "texto": "El partido pide que las empresas paguen menos a la Seguridad Social. Esta ayuda sería para contratar a mujeres con contratos sin fecha de fin. Las empresas recibirían la ayuda en trabajos donde hay pocas mujeres.",
+            "texto": "CC pide reducir la cuota empresarial de la Seguridad Social por contratos indefinidos de mujeres. CC propone esta reducción en ocupaciones donde las mujeres tienen poca presencia.",
             "citas": [
               "c0018"
             ],
@@ -1748,12 +1722,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.1,
+          "inflesz": 61.9,
           "max_palabras_frase": 15,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 61.9 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "familia-conciliacion": {
@@ -1903,7 +1880,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "juventud": {
@@ -1979,7 +1957,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "ciencia-digital": {
@@ -2043,31 +2022,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere apoyar los estudios científicos y el desarrollo de nuevos productos y técnicas.",
+            "texto": "CC quiere apoyar la investigación y el desarrollo.",
             "citas": [
               "c0070"
             ]
           },
           {
-            "texto": "El partido quiere que las empresas usen los resultados de estos estudios.",
+            "texto": "CC quiere que las empresas usen los resultados de estos trabajos.",
             "citas": [
               "c0070"
             ]
           },
           {
-            "texto": "El partido quiere centrar los estudios en los temas que considera más importantes.",
+            "texto": "CC quiere centrar la investigación en los campos que considera más importantes.",
             "citas": [
               "c0070"
             ]
           },
           {
-            "texto": "El partido quiere incluir a Canarias en el mercado digital común de la UE.",
+            "texto": "CC quiere que Canarias forme parte del Mercado Único Digital Europeo.",
             "citas": [
               "c0065"
             ]
           },
           {
-            "texto": "El partido quiere un plan propio para las comunicaciones de Canarias, como teléfono e internet.",
+            "texto": "CC quiere un plan propio para mejorar las comunicaciones a distancia.",
             "citas": [
               "c0065"
             ]
@@ -2075,7 +2054,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere apoyar los estudios científicos. También quiere apoyar el desarrollo de nuevos productos y técnicas. Quiere que las empresas usen los resultados de estos estudios. Dará prioridad al estudio de los astros y el espacio. También dará prioridad al estudio del mar y las actividades relacionadas con él. Quiere estudiar cómo usar seres vivos para crear productos y mejorar la salud. Estos últimos estudios se centrarán en la variedad de seres vivos.",
+            "texto": "CC quiere apoyar la investigación y el desarrollo. CC quiere que las empresas usen los resultados de estos trabajos. CC da prioridad al estudio de los astros y el espacio. CC también da prioridad al estudio del mar y las actividades en el mar. CC prioriza crear técnicas que usan seres vivos. CC también prioriza los avances médicos. CC quiere ligar estas técnicas y avances a la variedad de seres vivos.",
             "citas": [
               "c0071"
             ],
@@ -2083,7 +2062,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "El partido quiere impulsar un plan propio para las comunicaciones de Canarias. Este plan trata sobre el teléfono e internet. Formará parte de la Agenda Digital española, que recoge los planes de España sobre tecnología. El plan seguirá la disposición adicional 6 del Estatuto de Canarias.",
+            "texto": "CC impulsa el Plan Específico de Telecomunicaciones de Canarias. CC quiere desarrollar este plan dentro de la Agenda Digital española. CC quiere seguir la Disposición Adicional Sexta del Estatuto.",
             "citas": [
               "c0067"
             ],
@@ -2091,7 +2070,7 @@
             "subtema": "telecomunicaciones"
           },
           {
-            "texto": "El partido quiere acordar medidas con el Estado y la UE. Estas medidas permitirán comprar por internet desde Canarias en tiendas de la UE. Quiere evitar cobros extra abusivos por servicios que unen a vendedores y compradores.",
+            "texto": "CC quiere asegurar el acceso desde Canarias a la oferta europea de venta por internet. CC quiere evitar cobros abusivos de quienes actúan entre compradores y vendedores. CC quiere acordar estas medidas con el Estado y la Unión Europea.",
             "citas": [
               "c0066"
             ],
@@ -2099,7 +2078,7 @@
             "subtema": "brecha digital"
           },
           {
-            "texto": "El partido quiere reforzar el uso de Canarias para hacer pruebas en la naturaleza. Estas pruebas buscarán formas de cuidar el entorno y sus recursos. El partido también quiere probar nuevas herramientas y técnicas para el mar.",
+            "texto": "CC quiere afianzar Canarias como lugar para hacer pruebas en la naturaleza. CC quiere que estas pruebas ayuden a cuidar el medio ambiente. CC incluye las pruebas de tecnología para el mar.",
             "citas": [
               "c0079"
             ],
@@ -2107,7 +2086,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "El partido exige dinero para un barco que estudie el mar en Canarias. Este barco permitirá realizar proyectos de forma continua en las islas.",
+            "texto": "CC exige fondos para disponer de un barco de investigación del mar en Canarias. CC quiere desarrollar proyectos permanentes en las islas con este barco.",
             "citas": [
               "c0081"
             ],
@@ -2116,12 +2095,16 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 65.7,
+          "inflesz": 67.9,
           "max_palabras_frase": 15,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": [
+          "La adaptación reduce «tejido productivo» a «las empresas», por lo que no recoge necesariamente a todos los agentes productivos a los que se transferirían los resultados.",
+          "La adaptación explica la sostenibilidad como cuidar el medio ambiente. Es una simplificación válida, aunque más estrecha que el concepto de sostenibilidad del original."
+        ]
       }
     },
     "seguridad-justicia": {
@@ -2169,7 +2152,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "modelo-territorial": {
@@ -2257,25 +2241,25 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere que Canarias tenga la mayor capacidad posible para gobernarse.",
+            "texto": "CC quiere que Canarias tenga el mayor poder posible para decidir sus asuntos.",
             "citas": [
               "c0001"
             ]
           },
           {
-            "texto": "Quiere un Estado que reconozca varias naciones, con un modelo acordado.",
+            "texto": "CC defiende un Estado con varias naciones mediante un acuerdo.",
             "citas": [
               "c0001"
             ]
           },
           {
-            "texto": "El partido quiere fondos suficientes para los servicios públicos básicos de Canarias.",
+            "texto": "CC quiere que Canarias reciba dinero suficiente para los servicios públicos básicos.",
             "citas": [
               "c0009"
             ]
           },
           {
-            "texto": "Estos fondos deben estar separados de los recursos del Régimen Económico y Fiscal.",
+            "texto": "CC quiere separar ese dinero de los fondos del Régimen Económico y Fiscal.",
             "citas": [
               "c0009"
             ]
@@ -2283,7 +2267,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere que Canarias tenga la mayor capacidad posible para gobernarse. Quiere igualdad de condiciones y de poderes para gobernar. Quiere un Estado que reconozca varias naciones, con un modelo acordado.",
+            "texto": "CC quiere que Canarias tenga el mayor poder posible para decidir sus asuntos. CC quiere igualdad de condiciones y poderes para Canarias. CC defiende un Estado con varias naciones mediante un acuerdo.",
             "citas": [
               "c0001"
             ],
@@ -2291,7 +2275,7 @@
             "subtema": "autogobierno y derecho a decidir"
           },
           {
-            "texto": "El partido quiere desarrollar el Estatuto de Autonomía de Canarias. Este texto recoge las normas básicas del gobierno de Canarias. El partido quiere dar prioridad a los intereses de la población canaria. Estos intereses deben estar por delante de las prioridades de los partidos que gobiernen España.",
+            "texto": "CC quiere poner en práctica el Estatuto de Autonomía de Canarias. CC quiere dar prioridad a los intereses de la ciudadanía canaria. CC los sitúa por delante de las prioridades de los partidos que gobiernen en Madrid.",
             "citas": [
               "c0006"
             ],
@@ -2299,7 +2283,7 @@
             "subtema": "competencias"
           },
           {
-            "texto": "El partido quiere un nuevo sistema para financiar las comunidades autónomas. Este sistema debe garantizar fondos suficientes para educación, sanidad y servicios sociales. También debe financiar la atención a personas que necesitan ayuda en su vida diaria. Estos fondos deben estar separados de los recursos del Régimen Económico y Fiscal. El sistema debe cumplir el artículo 166.3 del Estatuto de Autonomía de Canarias.",
+            "texto": "CC pide un nuevo sistema para repartir dinero entre las comunidades autónomas. CC quiere dinero suficiente para educación y sanidad. CC quiere también dinero suficiente para los servicios sociales. CC quiere dinero suficiente para ayudar a quienes necesitan apoyo en su vida diaria. CC quiere separar estos fondos de los recursos del Régimen Económico y Fiscal. CC pide cumplir el artículo 166.3 del Estatuto.",
             "citas": [
               "c0009"
             ],
@@ -2307,7 +2291,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere rechazar los presupuestos del Estado cuando se cumplan estas 2 condiciones. Los presupuestos incumplen los derechos especiales de Canarias. Los presupuestos no garantizan los compromisos del Régimen Económico y Fiscal. El partido quiere acudir a los tribunales para exigir que se cumplan estas obligaciones.",
+            "texto": "CC exige que los Presupuestos Generales del Estado respeten el fuero canario. CC defiende el fuero canario: las normas especiales de Canarias. CC exige que esos presupuestos garanticen los compromisos del Régimen Económico y Fiscal. CC rechazará esos presupuestos si incumplen ambas condiciones. CC acudirá a la justicia para exigir su cumplimiento.",
             "citas": [
               "c0005"
             ],
@@ -2315,7 +2299,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere que los presupuestos del Estado garanticen una inversión media en Canarias. Quiere que esta garantía sea obligatoria.",
+            "texto": "CC exige que los Presupuestos del Estado aseguren la inversión media en las islas.",
             "citas": [
               "c0003"
             ],
@@ -2323,7 +2307,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere incluir los fondos para dependencia en la financiación de las comunidades autónomas. La dependencia significa necesitar ayuda de otras personas para las actividades de la vida diaria. El Estado aportaría el 50% de esos fondos. Ese dinero solo se usaría para la atención a la dependencia.",
+            "texto": "CC quiere fondos para atender a personas que necesitan apoyo en su vida diaria. CC quiere incluir esos fondos en el dinero que reciben las comunidades autónomas. CC quiere que el Estado aporte el 50% de esos fondos. CC quiere que ese dinero se use solo para esa atención.",
             "citas": [
               "c0031"
             ],
@@ -2331,7 +2315,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere un sistema claro de financiación estatal de la sanidad. Este sistema debe ser específico para la sanidad. Debe estar separado del sistema de financiación de las comunidades autónomas.",
+            "texto": "CC quiere fondos del Estado solo para la sanidad. CC quiere que esos fondos sean transparentes. CC quiere mantenerlos aparte del dinero para las comunidades autónomas.",
             "citas": [
               "c0045"
             ],
@@ -2339,7 +2323,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere aprobar la ley del artículo 161.3 del Estatuto de Autonomía de Canarias. Esta ley creará una red de aeropuertos canarios con normas especiales. Las instituciones públicas de Canarias tendrán un papel decisivo en esta red. También lo tendrán los representantes de empresas y de organizaciones sociales de Canarias.",
+            "texto": "CC quiere aprobar la ley prevista en el artículo 161.3 del Estatuto. CC quiere crear una red de aeropuertos de Canarias con normas especiales. CC quiere que las administraciones de Canarias tengan un papel decisivo en esa red. CC quiere ese mismo papel para los grupos económicos y sociales de Canarias.",
             "citas": [
               "c0076"
             ],
@@ -2348,13 +2332,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 53.3,
+          "inflesz": 63.1,
           "max_palabras_frase": 15,
-          "ok": false,
+          "ok": true,
           "avisos": [
-            "INFLESZ 53.3 < 65.0 (texto demasiado difícil)"
+            "Aviso: INFLESZ 63.1 por debajo del objetivo 65.0"
           ]
-        }
+        },
+        "fiel": true,
+        "observaciones": []
       }
     },
     "regeneracion-democratica": {
@@ -2452,26 +2438,32 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere reforzar la alianza con Portugal y Francia.",
+            "texto": "CC propone reforzar las alianzas con Portugal y Francia.",
             "citas": [
               "c0010"
             ]
           },
           {
-            "texto": "También quiere reforzar los derechos de las regiones más lejanas de la UE.",
+            "texto": "CC quiere consolidar los derechos de las regiones ultraperiféricas en la UE.",
             "citas": [
               "c0010"
             ]
           },
           {
-            "texto": "El partido quiere trabajar con los países del oeste de África.",
+            "texto": "Estas regiones están muy alejadas del resto de la UE.",
+            "citas": [
+              "c0010"
+            ]
+          },
+          {
+            "texto": "CC propone fomentar la cooperación con África Occidental.",
             "citas": [
               "c0088",
               "c0011"
             ]
           },
           {
-            "texto": "También pide que Canarias tenga voz propia cuando España negocie con Marruecos.",
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos.",
             "citas": [
               "c0088",
               "c0011"
@@ -2480,7 +2472,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere reforzar la alianza con Portugal y Francia. Quiere hacerlo durante la presidencia española de la UE. Esto corresponde a la segunda mitad de 2023. También pide al Estado que refuerce los derechos de las regiones más lejanas de la UE.",
+            "texto": "CC propone reforzar la alianza con Portugal y Francia durante la Presidencia española de la UE. CC sitúa esta propuesta en el segundo semestre de 2023. CC exige que el Estado participe en consolidar los derechos de las regiones ultraperiféricas. Estas regiones están muy alejadas del resto de la UE.",
             "citas": [
               "c0010"
             ],
@@ -2488,7 +2480,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido quiere que Canarias no pague el nuevo impuesto verde sobre los vuelos. Este impuesto afecta a los vuelos entre países del Espacio Económico Europeo. Pide dar prioridad a este tema al negociar con las autoridades de la UE.",
+            "texto": "CC propone dar prioridad a las negociaciones con las autoridades de la UE. CC quiere que Canarias no pague la nueva tasa verde sobre vuelos internacionales. Esta tasa afecta a vuelos dentro del espacio económico europeo. Una tasa verde es un pago relacionado con el impacto ambiental.",
             "citas": [
               "c0012"
             ],
@@ -2496,7 +2488,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido pide que Canarias tenga voz propia cuando España negocie con Marruecos. Destaca las decisiones sobre los límites de las zonas de mar de cada país. También destaca el control de la entrada y salida de personas migrantes.",
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos. CC destaca las negociaciones para fijar los límites de los espacios marítimos. CC también destaca las negociaciones sobre el control de los movimientos migratorios. Estos movimientos son los desplazamientos de personas entre países para vivir en otro lugar.",
             "citas": [
               "c0011"
             ],
@@ -2504,7 +2496,7 @@
             "subtema": "Marruecos y Sáhara"
           },
           {
-            "texto": "El partido quiere acordar medidas con el Estado y la UE. Quiere que sea más fácil comprar desde Canarias en otros países de la UE. También quiere facilitar las ventas desde Canarias a cualquier país de la UE.",
+            "texto": "CC propone acordar medidas con el Estado y la UE para facilitar el comercio de Canarias. CC quiere facilitar las compras desde Canarias de productos de la oferta comercial europea. CC también quiere facilitar las ventas canarias a cualquier Estado miembro de la UE.",
             "citas": [
               "c0066",
               "c0069"
@@ -2513,7 +2505,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido quiere que Canarias sea un lugar para impulsar la paz. Así quiere trabajar con los países del oeste de África.",
+            "texto": "CC propone promover la condición de Canarias como «Plataforma de Paz». CC quiere así fomentar la cooperación con África Occidental.",
             "citas": [
               "c0088"
             ],
@@ -2521,7 +2513,7 @@
             "subtema": "cooperación al desarrollo"
           },
           {
-            "texto": "El partido pide al Gobierno de España que impulse el trabajo conjunto en la UE. Quiere que sus países trabajen más unidos para rescatar a personas migrantes en el mar. También pide más ayuda directa de la UE.",
+            "texto": "CC quiere más coordinación entre los Estados miembros de la UE para rescatar inmigrantes en el mar. CC también quiere más apoyo directo de la UE para estos rescates. CC exige al Gobierno de España que promueva estas medidas.",
             "citas": [
               "c0083"
             ],
@@ -2529,7 +2521,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido pide al Gobierno de España que impulse el trabajo conjunto en la UE. Quiere trabajar más con los países de los que salen las personas migrantes. También con los países por los que pasan. El fin es frenar la llegada de personas sin los permisos necesarios.",
+            "texto": "CC pide al Gobierno de España que impulse más cooperación en la UE. CC propone cooperar con los países de origen y tránsito de las personas inmigrantes. Son los países de donde salen o por donde pasan estas personas. CC quiere esta cooperación para combatir la inmigración irregular.",
             "citas": [
               "c0087"
             ],
@@ -2538,12 +2530,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 75.9,
-          "max_palabras_frase": 16,
+          "inflesz": 62.9,
+          "max_palabras_frase": 17,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 62.9 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     }
   },
@@ -2559,7 +2554,7 @@
           "r": [
             0.2024,
             0.752,
-            0.8623,
+            0.8569,
             0.7712
           ]
         },
@@ -2568,7 +2563,7 @@
           "r": [
             0.2024,
             0.7711,
-            0.8624,
+            0.8572,
             0.7903
           ]
         },
@@ -2596,7 +2591,7 @@
           "r": [
             0.2024,
             0.8474,
-            0.862,
+            0.8565,
             0.8665
           ]
         },
@@ -2624,7 +2619,7 @@
           "r": [
             0.2024,
             0.4467,
-            0.8621,
+            0.8567,
             0.4658
           ]
         },
@@ -2633,7 +2628,7 @@
           "r": [
             0.2024,
             0.4658,
-            0.862,
+            0.8567,
             0.4849
           ]
         },
@@ -2642,7 +2637,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8622,
+            0.8571,
             0.504
           ]
         },
@@ -2651,7 +2646,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8623,
+            0.8571,
             0.5229
           ]
         },
@@ -2679,88 +2674,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.2421,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.2494,
-            0.5612,
-            0.3512,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.3585,
-            0.5612,
-            0.3745,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.3818,
-            0.5612,
-            0.4193,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.4265,
-            0.5612,
-            0.4469,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.4541,
-            0.5612,
-            0.5387,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.546,
-            0.5612,
-            0.577,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.5842,
-            0.5612,
-            0.6495,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.657,
-            0.5612,
-            0.7352,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.7425,
-            0.5612,
-            0.8626,
+            0.857,
             0.5803
           ]
         },
@@ -2769,7 +2683,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.8623,
+            0.857,
             0.5994
           ]
         },
@@ -2778,97 +2692,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.2324,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.2405,
-            0.5994,
-            0.3347,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.343,
-            0.5994,
-            0.3697,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.3778,
-            0.5994,
-            0.4658,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.4739,
-            0.5994,
-            0.4922,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.5003,
-            0.5994,
-            0.5988,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.6069,
-            0.5994,
-            0.6445,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.6526,
-            0.5994,
-            0.7116,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.7197,
-            0.5994,
-            0.7464,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.7546,
-            0.5994,
-            0.8244,
-            0.6185
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.8325,
-            0.5994,
-            0.8625,
+            0.8571,
             0.6185
           ]
         },
@@ -2877,7 +2701,7 @@
           "r": [
             0.2024,
             0.6185,
-            0.8622,
+            0.8568,
             0.6376
           ]
         },
@@ -2905,7 +2729,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8624,
+            0.8571,
             0.3703
           ]
         },
@@ -2914,7 +2738,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.8626,
+            0.8568,
             0.3894
           ]
         },
@@ -2923,7 +2747,7 @@
           "r": [
             0.2024,
             0.3894,
-            0.8623,
+            0.8567,
             0.4085
           ]
         },
@@ -2951,43 +2775,7 @@
           "r": [
             0.5531,
             0.752,
-            0.5885,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.5964,
-            0.752,
-            0.637,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.6449,
-            0.752,
-            0.6814,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.6893,
-            0.752,
-            0.8381,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 4,
-          "r": [
-            0.846,
-            0.752,
-            0.8621,
+            0.8568,
             0.7712
           ]
         },
@@ -2996,7 +2784,7 @@
           "r": [
             0.2024,
             0.7711,
-            0.8622,
+            0.8568,
             0.7903
           ]
         },
@@ -3005,7 +2793,7 @@
           "r": [
             0.2024,
             0.7901,
-            0.8626,
+            0.8572,
             0.8092
           ]
         },
@@ -3033,7 +2821,7 @@
           "r": [
             0.2024,
             0.1986,
-            0.8622,
+            0.8568,
             0.2178
           ]
         },
@@ -3061,7 +2849,7 @@
           "r": [
             0.4357,
             0.3131,
-            0.8622,
+            0.8569,
             0.3322
           ]
         },
@@ -3070,7 +2858,7 @@
           "r": [
             0.2024,
             0.3322,
-            0.8623,
+            0.8568,
             0.3513
           ]
         },
@@ -3079,7 +2867,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8625,
+            0.8571,
             0.3703
           ]
         },
@@ -3107,7 +2895,7 @@
           "r": [
             0.2024,
             0.1031,
-            0.8625,
+            0.857,
             0.1223
           ]
         },
@@ -3116,79 +2904,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.2227,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.2288,
-            0.1222,
-            0.3241,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.3301,
-            0.1222,
-            0.4194,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4254,
-            0.1222,
-            0.4694,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4754,
-            0.1222,
-            0.5054,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.5115,
-            0.1222,
-            0.5918,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.5979,
-            0.1222,
-            0.6741,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6801,
-            0.1222,
-            0.7508,
-            0.1414
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7569,
-            0.1222,
-            0.8621,
+            0.8567,
             0.1414
           ]
         },
@@ -3197,7 +2913,7 @@
           "r": [
             0.2024,
             0.1413,
-            0.8624,
+            0.8568,
             0.1605
           ]
         },
@@ -3225,7 +2941,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.8625,
+            0.8572,
             0.4276
           ]
         },
@@ -3234,7 +2950,7 @@
           "r": [
             0.2024,
             0.4276,
-            0.8622,
+            0.8567,
             0.4467
           ]
         },
@@ -3242,105 +2958,6 @@
           "pagina": 5,
           "r": [
             0.2024,
-            0.4467,
-            0.2678,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.2745,
-            0.4467,
-            0.3003,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.307,
-            0.4467,
-            0.3839,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.3906,
-            0.4467,
-            0.4171,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4238,
-            0.4467,
-            0.4441,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4508,
-            0.4467,
-            0.5727,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.5794,
-            0.4467,
-            0.6063,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.613,
-            0.4467,
-            0.643,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6497,
-            0.4467,
-            0.7343,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.741,
-            0.4467,
-            0.7677,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7744,
-            0.4467,
-            0.8042,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.8109,
             0.4467,
             0.8569,
             0.4658
@@ -3361,79 +2978,7 @@
           "r": [
             0.2024,
             0.6185,
-            0.3031,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.3096,
-            0.6185,
-            0.3471,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.3536,
-            0.6185,
-            0.4359,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4424,
-            0.6185,
-            0.4844,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4909,
-            0.6185,
-            0.5765,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.583,
-            0.6185,
-            0.6192,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6257,
-            0.6185,
-            0.7585,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.765,
-            0.6185,
-            0.8291,
-            0.6376
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.8357,
-            0.6185,
-            0.8624,
+            0.8571,
             0.6376
           ]
         },
@@ -3442,106 +2987,7 @@
           "r": [
             0.2024,
             0.6376,
-            0.2795,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.2872,
-            0.6376,
-            0.4158,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4235,
-            0.6376,
-            0.4609,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4686,
-            0.6376,
-            0.4887,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4966,
-            0.6376,
-            0.5618,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.5695,
-            0.6376,
-            0.6144,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6221,
-            0.6376,
-            0.6381,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6458,
-            0.6376,
-            0.6927,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7004,
-            0.6376,
-            0.7369,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7446,
-            0.6376,
-            0.7647,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7724,
-            0.6376,
-            0.8279,
-            0.6567
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.8356,
-            0.6376,
-            0.8624,
+            0.8571,
             0.6567
           ]
         },
@@ -3550,7 +2996,7 @@
           "r": [
             0.2024,
             0.6565,
-            0.8623,
+            0.8569,
             0.6756
           ]
         },
@@ -3578,7 +3024,7 @@
           "r": [
             0.2024,
             0.4658,
-            0.8623,
+            0.8571,
             0.4849
           ]
         },
@@ -3587,7 +3033,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8622,
+            0.8569,
             0.504
           ]
         },
@@ -3596,7 +3042,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8626,
+            0.8573,
             0.5229
           ]
         },
@@ -3624,97 +3070,7 @@
           "r": [
             0.2024,
             0.7138,
-            0.3396,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.3454,
-            0.7138,
-            0.4247,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4304,
-            0.7138,
-            0.4465,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.4521,
-            0.7138,
-            0.5206,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.5263,
-            0.7138,
-            0.597,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6024,
-            0.7138,
-            0.6292,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.6349,
-            0.7138,
-            0.7044,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.71,
-            0.7138,
-            0.7368,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.7425,
-            0.7138,
-            0.7833,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.789,
-            0.7138,
-            0.8361,
-            0.7329
-          ]
-        },
-        {
-          "pagina": 5,
-          "r": [
-            0.8418,
-            0.7138,
-            0.8622,
+            0.8568,
             0.7329
           ]
         },
@@ -3742,7 +3098,7 @@
           "r": [
             0.2024,
             0.4276,
-            0.8622,
+            0.857,
             0.4467
           ]
         },
@@ -3751,79 +3107,7 @@
           "r": [
             0.2024,
             0.4467,
-            0.2741,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.2814,
-            0.4467,
-            0.3146,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.322,
-            0.4467,
-            0.4593,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4665,
-            0.4467,
-            0.4814,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4886,
-            0.4467,
-            0.6,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6071,
-            0.4467,
-            0.7133,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7206,
-            0.4467,
-            0.8117,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.8189,
-            0.4467,
-            0.835,
-            0.4658
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.8423,
-            0.4467,
-            0.8624,
+            0.8573,
             0.4658
           ]
         },
@@ -3832,7 +3116,7 @@
           "r": [
             0.2024,
             0.4658,
-            0.8622,
+            0.8567,
             0.4849
           ]
         },
@@ -3840,69 +3124,6 @@
           "pagina": 6,
           "r": [
             0.2024,
-            0.4849,
-            0.2537,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.2647,
-            0.4849,
-            0.2807,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.2916,
-            0.4849,
-            0.3827,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3936,
-            0.4849,
-            0.4098,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4208,
-            0.4849,
-            0.4507,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4616,
-            0.4849,
-            0.5464,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5573,
-            0.4849,
-            0.5841,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.595,
             0.4849,
             0.6776,
             0.504
@@ -3923,7 +3144,7 @@
           "r": [
             0.2024,
             0.7329,
-            0.8624,
+            0.8569,
             0.7521
           ]
         },
@@ -3951,43 +3172,7 @@
           "r": [
             0.4587,
             0.8665,
-            0.5904,
-            0.8856
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5994,
-            0.8665,
-            0.6366,
-            0.8856
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6455,
-            0.8665,
-            0.7172,
-            0.8856
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7261,
-            0.8665,
-            0.8161,
-            0.8856
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.825,
-            0.8665,
-            0.8622,
+            0.8571,
             0.8856
           ]
         },
@@ -4015,7 +3200,7 @@
           "r": [
             0.6812,
             0.6185,
-            0.8626,
+            0.8571,
             0.6376
           ]
         },
@@ -4024,7 +3209,7 @@
           "r": [
             0.2024,
             0.6376,
-            0.8626,
+            0.8575,
             0.6567
           ]
         },
@@ -4033,88 +3218,7 @@
           "r": [
             0.2024,
             0.6565,
-            0.3009,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3106,
-            0.6565,
-            0.3813,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.391,
-            0.6565,
-            0.4113,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.421,
-            0.6565,
-            0.495,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5048,
-            0.6565,
-            0.5646,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5743,
-            0.6565,
-            0.601,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6105,
-            0.6565,
-            0.7134,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7231,
-            0.6565,
-            0.7499,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7596,
-            0.6565,
-            0.8259,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.8356,
-            0.6565,
-            0.8623,
+            0.857,
             0.6756
           ]
         },
@@ -4123,7 +3227,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.8621,
+            0.8567,
             0.6947
           ]
         },
@@ -4151,16 +3255,7 @@
           "r": [
             0.6939,
             0.4849,
-            0.7122,
-            0.504
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7231,
-            0.4849,
-            0.8622,
+            0.8568,
             0.504
           ]
         },
@@ -4169,7 +3264,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8624,
+            0.8572,
             0.5229
           ]
         },
@@ -4178,7 +3273,7 @@
           "r": [
             0.2024,
             0.523,
-            0.8626,
+            0.8573,
             0.5421
           ]
         },
@@ -4187,7 +3282,7 @@
           "r": [
             0.2024,
             0.5421,
-            0.8623,
+            0.8569,
             0.5612
           ]
         },
@@ -4215,7 +3310,7 @@
           "r": [
             0.2024,
             0.084,
-            0.8623,
+            0.8568,
             0.1031
           ]
         },
@@ -4224,7 +3319,7 @@
           "r": [
             0.2024,
             0.1031,
-            0.8624,
+            0.8571,
             0.1223
           ]
         },
@@ -4233,7 +3328,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.8625,
+            0.8572,
             0.1414
           ]
         },
@@ -4241,33 +3336,6 @@
           "pagina": 6,
           "r": [
             0.2024,
-            0.1413,
-            0.2979,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3042,
-            0.1413,
-            0.3406,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3467,
-            0.1413,
-            0.4183,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4246,
             0.1413,
             0.4813,
             0.1605
@@ -4288,7 +3356,7 @@
           "r": [
             0.3023,
             0.3322,
-            0.8621,
+            0.8567,
             0.3513
           ]
         },
@@ -4297,7 +3365,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8626,
+            0.8573,
             0.3703
           ]
         },
@@ -4306,7 +3374,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.8627,
+            0.8573,
             0.3894
           ]
         },
@@ -4334,7 +3402,7 @@
           "r": [
             0.7562,
             0.2749,
-            0.8621,
+            0.8566,
             0.294
           ]
         },
@@ -4343,97 +3411,7 @@
           "r": [
             0.2024,
             0.294,
-            0.3042,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3096,
-            0.294,
-            0.3299,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.3356,
-            0.294,
-            0.3998,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.4055,
-            0.294,
-            0.5382,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5437,
-            0.294,
-            0.5709,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.5764,
-            0.294,
-            0.5967,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6024,
-            0.294,
-            0.6462,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6517,
-            0.294,
-            0.7214,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7269,
-            0.294,
-            0.7537,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7592,
-            0.294,
-            0.83,
-            0.3131
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.8355,
-            0.294,
-            0.8625,
+            0.857,
             0.3131
           ]
         },
@@ -4461,7 +3439,7 @@
           "r": [
             0.2788,
             0.4658,
-            0.8626,
+            0.8572,
             0.4849
           ]
         },
@@ -4489,15 +3467,6 @@
           "r": [
             0.2024,
             0.3322,
-            0.6055,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6108,
-            0.3322,
             0.8573,
             0.3513
           ]
@@ -4505,7 +3474,7 @@
         {
           "pagina": 7,
           "r": [
-            0.5229,
+            0.2024,
             0.3512,
             0.857,
             0.3703
@@ -4514,45 +3483,9 @@
         {
           "pagina": 7,
           "r": [
-            0.8359,
-            0.3894,
-            0.8626,
-            0.4085
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
             0.2024,
             0.3703,
-            0.2698,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.2749,
-            0.3703,
-            0.3188,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.5942,
-            0.3703,
-            0.6211,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6262,
-            0.3703,
-            0.7279,
+            0.8567,
             0.3894
           ]
         },
@@ -4561,16 +3494,7 @@
           "r": [
             0.2024,
             0.3894,
-            0.5994,
-            0.4085
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6062,
-            0.3894,
-            0.8626,
+            0.8573,
             0.4085
           ]
         },
@@ -4579,16 +3503,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.3772,
-            0.4276
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3826,
-            0.4085,
-            0.7019,
+            0.8572,
             0.4276
           ]
         }
@@ -4626,7 +3541,7 @@
           "r": [
             0.6302,
             0.5421,
-            0.8626,
+            0.8573,
             0.5612
           ]
         },
@@ -4635,7 +3550,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8626,
+            0.8572,
             0.5803
           ]
         },
@@ -4663,7 +3578,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.8622,
+            0.8571,
             0.6947
           ]
         },
@@ -4672,7 +3587,7 @@
           "r": [
             0.2024,
             0.6947,
-            0.8623,
+            0.857,
             0.7138
           ]
         },
@@ -4700,7 +3615,7 @@
           "r": [
             0.2024,
             0.1986,
-            0.8624,
+            0.8571,
             0.2178
           ]
         },
@@ -4728,34 +3643,7 @@
           "r": [
             0.5836,
             0.5038,
-            0.6704,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6761,
-            0.5038,
-            0.778,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7836,
-            0.5038,
-            0.8362,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.8419,
-            0.5038,
-            0.8622,
+            0.8569,
             0.5229
           ]
         },
@@ -4764,70 +3652,7 @@
           "r": [
             0.2024,
             0.523,
-            0.3094,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3219,
-            0.523,
-            0.3531,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3656,
-            0.523,
-            0.4889,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.5015,
-            0.523,
-            0.5957,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6082,
-            0.523,
-            0.6393,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6518,
-            0.523,
-            0.7226,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7352,
-            0.523,
-            0.7726,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7851,
-            0.523,
-            0.8626,
+            0.8571,
             0.5421
           ]
         },
@@ -4855,7 +3680,7 @@
           "r": [
             0.278,
             0.8665,
-            0.8624,
+            0.8571,
             0.8856
           ]
         },
@@ -4863,96 +3688,6 @@
           "pagina": 7,
           "r": [
             0.2024,
-            0.8856,
-            0.2292,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.234,
-            0.8856,
-            0.3282,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3332,
-            0.8856,
-            0.4619,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.4668,
-            0.8856,
-            0.4935,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.4984,
-            0.8856,
-            0.5187,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.5236,
-            0.8856,
-            0.6198,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.6247,
-            0.8856,
-            0.7039,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7088,
-            0.8856,
-            0.7236,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7285,
-            0.8856,
-            0.8067,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.8115,
-            0.8856,
-            0.8274,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.8323,
             0.8856,
             0.8568,
             0.9047
@@ -4973,7 +3708,7 @@
           "r": [
             0.7261,
             0.5421,
-            0.8626,
+            0.8573,
             0.5612
           ]
         },
@@ -4982,7 +3717,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8626,
+            0.8572,
             0.5803
           ]
         },
@@ -4991,7 +3726,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.8623,
+            0.8572,
             0.5994
           ]
         },
@@ -5000,7 +3735,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.8623,
+            0.8571,
             0.6185
           ]
         },
@@ -5009,7 +3744,7 @@
           "r": [
             0.2024,
             0.6185,
-            0.8621,
+            0.8569,
             0.6376
           ]
         },
@@ -5037,7 +3772,7 @@
           "r": [
             0.3245,
             0.8092,
-            0.8625,
+            0.8571,
             0.8283
           ]
         },
@@ -5046,7 +3781,7 @@
           "r": [
             0.2024,
             0.8283,
-            0.8625,
+            0.857,
             0.8474
           ]
         },
@@ -5055,7 +3790,7 @@
           "r": [
             0.2024,
             0.8474,
-            0.8622,
+            0.8571,
             0.8665
           ]
         },
@@ -5083,7 +3818,7 @@
           "r": [
             0.2024,
             0.084,
-            0.8622,
+            0.8569,
             0.1031
           ]
         },
@@ -5091,60 +3826,6 @@
           "pagina": 7,
           "r": [
             0.2024,
-            0.1031,
-            0.2572,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.2634,
-            0.1031,
-            0.3503,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3565,
-            0.1031,
-            0.3833,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.3896,
-            0.1031,
-            0.4506,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.4569,
-            0.1031,
-            0.4836,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.4899,
-            0.1031,
-            0.5585,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.5648,
             0.1031,
             0.641,
             0.1223
@@ -5165,7 +3846,7 @@
           "r": [
             0.5777,
             0.7138,
-            0.8624,
+            0.8571,
             0.7329
           ]
         },
@@ -5174,7 +3855,7 @@
           "r": [
             0.2024,
             0.7329,
-            0.8625,
+            0.8573,
             0.7521
           ]
         },
@@ -5183,88 +3864,7 @@
           "r": [
             0.2024,
             0.752,
-            0.2591,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.2676,
-            0.752,
-            0.4155,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.424,
-            0.752,
-            0.4615,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.47,
-            0.752,
-            0.5386,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5472,
-            0.752,
-            0.563,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5715,
-            0.752,
-            0.6013,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6098,
-            0.752,
-            0.6998,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7083,
-            0.752,
-            0.7351,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7434,
-            0.752,
-            0.8173,
-            0.7712
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.8258,
-            0.752,
-            0.8622,
+            0.857,
             0.7712
           ]
         },
@@ -5273,7 +3873,7 @@
           "r": [
             0.2024,
             0.7711,
-            0.8624,
+            0.8571,
             0.7903
           ]
         },
@@ -5301,7 +3901,7 @@
           "r": [
             0.4528,
             0.523,
-            0.8622,
+            0.8567,
             0.5421
           ]
         },
@@ -5329,7 +3929,7 @@
           "r": [
             0.4528,
             0.523,
-            0.8622,
+            0.8567,
             0.5421
           ]
         },
@@ -5338,7 +3938,7 @@
           "r": [
             0.2024,
             0.5421,
-            0.8625,
+            0.8572,
             0.5612
           ]
         },
@@ -5347,7 +3947,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8621,
+            0.857,
             0.5803
           ]
         },
@@ -5356,97 +3956,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.2473,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.2584,
-            0.5803,
-            0.2745,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.2856,
-            0.5803,
-            0.3305,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3416,
-            0.5803,
-            0.378,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3892,
-            0.5803,
-            0.4872,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4983,
-            0.5803,
-            0.5134,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5243,
-            0.5803,
-            0.5992,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6104,
-            0.5803,
-            0.6779,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.689,
-            0.5803,
-            0.7447,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7558,
-            0.5803,
-            0.8364,
-            0.5994
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.8475,
-            0.5803,
-            0.8626,
+            0.8572,
             0.5994
           ]
         },
@@ -5474,7 +3984,7 @@
           "r": [
             0.2024,
             0.1986,
-            0.8621,
+            0.8568,
             0.2178
           ]
         },
@@ -5483,7 +3993,7 @@
           "r": [
             0.2024,
             0.2176,
-            0.8623,
+            0.857,
             0.2367
           ]
         },
@@ -5511,7 +4021,7 @@
           "r": [
             0.2024,
             0.6565,
-            0.8626,
+            0.8572,
             0.6756
           ]
         },
@@ -5520,7 +4030,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.8625,
+            0.857,
             0.6947
           ]
         },
@@ -5548,7 +4058,7 @@
           "r": [
             0.2024,
             0.6565,
-            0.8626,
+            0.8572,
             0.6756
           ]
         },
@@ -5557,7 +4067,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.8625,
+            0.857,
             0.6947
           ]
         },
@@ -5566,25 +4076,7 @@
           "r": [
             0.2024,
             0.6947,
-            0.5664,
-            0.7138
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5711,
-            0.6947,
-            0.6448,
-            0.7138
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6498,
-            0.6947,
-            0.8625,
+            0.8569,
             0.7138
           ]
         },
@@ -5612,7 +4104,7 @@
           "r": [
             0.3293,
             0.5994,
-            0.8622,
+            0.8572,
             0.6185
           ]
         },
@@ -5640,7 +4132,7 @@
           "r": [
             0.4744,
             0.294,
-            0.8623,
+            0.8569,
             0.3131
           ]
         },
@@ -5649,97 +4141,7 @@
           "r": [
             0.2024,
             0.3131,
-            0.3021,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3116,
-            0.3131,
-            0.3384,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3479,
-            0.3131,
-            0.3681,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3776,
-            0.3131,
-            0.4757,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4852,
-            0.3131,
-            0.5003,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5098,
-            0.3131,
-            0.5301,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5396,
-            0.3131,
-            0.607,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6165,
-            0.3131,
-            0.6753,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6848,
-            0.3131,
-            0.7159,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7258,
-            0.3131,
-            0.7771,
-            0.3322
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7866,
-            0.3131,
-            0.8625,
+            0.8572,
             0.3322
           ]
         },
@@ -5747,33 +4149,6 @@
           "pagina": 8,
           "r": [
             0.2024,
-            0.3322,
-            0.3246,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3296,
-            0.3322,
-            0.367,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3721,
-            0.3322,
-            0.4192,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4243,
             0.3322,
             0.4949,
             0.3513
@@ -5794,7 +4169,7 @@
           "r": [
             0.6276,
             0.2176,
-            0.8623,
+            0.857,
             0.2367
           ]
         },
@@ -5822,7 +4197,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.8626,
+            0.8574,
             0.4276
           ]
         },
@@ -5850,7 +4225,7 @@
           "r": [
             0.2024,
             0.8283,
-            0.8621,
+            0.8567,
             0.8474
           ]
         },
@@ -5878,7 +4253,7 @@
           "r": [
             0.2024,
             0.8283,
-            0.8621,
+            0.8567,
             0.8474
           ]
         },
@@ -5887,7 +4262,7 @@
           "r": [
             0.2024,
             0.8474,
-            0.8622,
+            0.8569,
             0.8665
           ]
         },
@@ -5896,7 +4271,7 @@
           "r": [
             0.2024,
             0.8665,
-            0.862,
+            0.8567,
             0.8856
           ]
         },
@@ -5904,78 +4279,6 @@
           "pagina": 8,
           "r": [
             0.2024,
-            0.8856,
-            0.2292,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.2371,
-            0.8856,
-            0.3334,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3413,
-            0.8856,
-            0.3563,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3642,
-            0.8856,
-            0.4657,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4736,
-            0.8856,
-            0.4887,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4966,
-            0.8856,
-            0.5747,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5826,
-            0.8856,
-            0.5987,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6066,
-            0.8856,
-            0.6269,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6348,
             0.8856,
             0.7504,
             0.9047
@@ -5996,7 +4299,7 @@
           "r": [
             0.6316,
             0.2367,
-            0.8625,
+            0.857,
             0.2558
           ]
         },
@@ -6005,7 +4308,7 @@
           "r": [
             0.2024,
             0.2558,
-            0.8623,
+            0.8568,
             0.2749
           ]
         },
@@ -6014,7 +4317,7 @@
           "r": [
             0.2024,
             0.2749,
-            0.8624,
+            0.857,
             0.294
           ]
         },
@@ -6042,52 +4345,7 @@
           "r": [
             0.5056,
             0.3322,
-            0.5237,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5288,
-            0.3322,
-            0.669,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6741,
-            0.3322,
-            0.7115,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7166,
-            0.3322,
-            0.7369,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7417,
-            0.3322,
-            0.8263,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.8314,
-            0.3322,
-            0.8624,
+            0.857,
             0.3513
           ]
         },
@@ -6096,7 +4354,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8621,
+            0.8566,
             0.3703
           ]
         },
@@ -6124,7 +4382,7 @@
           "r": [
             0.8354,
             0.8474,
-            0.8622,
+            0.8569,
             0.8665
           ]
         },
@@ -6133,7 +4391,7 @@
           "r": [
             0.2024,
             0.8665,
-            0.862,
+            0.8567,
             0.8856
           ]
         },
@@ -6141,78 +4399,6 @@
           "pagina": 8,
           "r": [
             0.2024,
-            0.8856,
-            0.2292,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.2371,
-            0.8856,
-            0.3334,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3413,
-            0.8856,
-            0.3563,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3642,
-            0.8856,
-            0.4657,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4736,
-            0.8856,
-            0.4887,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4966,
-            0.8856,
-            0.5747,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5826,
-            0.8856,
-            0.5987,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6066,
-            0.8856,
-            0.6269,
-            0.9047
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6348,
             0.8856,
             0.7504,
             0.9047
@@ -6233,7 +4419,7 @@
           "r": [
             0.3406,
             0.4467,
-            0.8623,
+            0.8568,
             0.4658
           ]
         },
@@ -6242,97 +4428,7 @@
           "r": [
             0.2024,
             0.4658,
-            0.2936,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.3015,
-            0.4658,
-            0.3988,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.4065,
-            0.4658,
-            0.4591,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.467,
-            0.4658,
-            0.4969,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.5048,
-            0.4658,
-            0.5691,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.577,
-            0.4658,
-            0.6035,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6112,
-            0.4658,
-            0.6914,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.6993,
-            0.4658,
-            0.726,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.7339,
-            0.4658,
-            0.7992,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.8071,
-            0.4658,
-            0.8338,
-            0.4849
-          ]
-        },
-        {
-          "pagina": 8,
-          "r": [
-            0.8417,
-            0.4658,
-            0.8622,
+            0.8568,
             0.4849
           ]
         },
@@ -6360,7 +4456,7 @@
           "r": [
             0.2024,
             0.084,
-            0.8624,
+            0.8573,
             0.1031
           ]
         },
@@ -6369,7 +4465,7 @@
           "r": [
             0.2024,
             0.1031,
-            0.8621,
+            0.857,
             0.1223
           ]
         },
@@ -6378,7 +4474,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.8621,
+            0.8568,
             0.1414
           ]
         },
@@ -6387,7 +4483,7 @@
           "r": [
             0.2024,
             0.1413,
-            0.8626,
+            0.8575,
             0.1605
           ]
         },
@@ -6415,7 +4511,7 @@
           "r": [
             0.8328,
             0.1986,
-            0.8626,
+            0.8576,
             0.2178
           ]
         },
@@ -6424,7 +4520,7 @@
           "r": [
             0.2024,
             0.2176,
-            0.8622,
+            0.8567,
             0.2367
           ]
         },
@@ -6452,7 +4548,7 @@
           "r": [
             0.6848,
             0.2176,
-            0.8622,
+            0.8567,
             0.2367
           ]
         },
@@ -6461,7 +4557,7 @@
           "r": [
             0.2024,
             0.2367,
-            0.8619,
+            0.8566,
             0.2558
           ]
         },
@@ -6470,7 +4566,7 @@
           "r": [
             0.2024,
             0.2558,
-            0.8621,
+            0.8568,
             0.2749
           ]
         },
@@ -6479,16 +4575,7 @@
           "r": [
             0.2024,
             0.2749,
-            0.2708,
-            0.294
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.2755,
-            0.2749,
-            0.8627,
+            0.8573,
             0.294
           ]
         },
@@ -6516,61 +4603,7 @@
           "r": [
             0.3409,
             0.6565,
-            0.4461,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.4564,
-            0.6565,
-            0.5527,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.563,
-            0.6565,
-            0.607,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.6174,
-            0.6565,
-            0.7104,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.7207,
-            0.6565,
-            0.7411,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.7514,
-            0.6565,
-            0.8255,
-            0.6756
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.8358,
-            0.6565,
-            0.8623,
+            0.8572,
             0.6756
           ]
         },
@@ -6579,70 +4612,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.3341,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.3427,
-            0.6756,
-            0.4178,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.4263,
-            0.6756,
-            0.4939,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.5023,
-            0.6756,
-            0.63,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.6385,
-            0.6756,
-            0.6652,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.6737,
-            0.6756,
-            0.6941,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.7025,
-            0.6756,
-            0.7658,
-            0.6947
-          ]
-        },
-        {
-          "pagina": 9,
-          "r": [
-            0.7743,
-            0.6756,
-            0.8622,
+            0.8569,
             0.6947
           ]
         },
@@ -6651,7 +4621,7 @@
           "r": [
             0.2024,
             0.6947,
-            0.8622,
+            0.8568,
             0.7138
           ]
         },
@@ -6679,7 +4649,7 @@
           "r": [
             0.2024,
             0.4658,
-            0.8626,
+            0.8575,
             0.4849
           ]
         },
@@ -6688,7 +4658,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8623,
+            0.8572,
             0.504
           ]
         },
@@ -6697,7 +4667,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8623,
+            0.8569,
             0.5229
           ]
         },
@@ -6706,79 +4676,7 @@
           "r": [
             0.2024,
             0.523,
-            0.2505,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.2602,
-            0.523,
-            0.3783,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.3881,
-            0.523,
-            0.4918,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5016,
-            0.523,
-            0.5176,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5273,
-            0.523,
-            0.6209,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6306,
-            0.523,
-            0.6831,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6928,
-            0.523,
-            0.771,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.7807,
-            0.523,
-            0.8076,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.8174,
-            0.523,
-            0.8624,
+            0.8569,
             0.5421
           ]
         },
@@ -6806,7 +4704,7 @@
           "r": [
             0.2024,
             0.2367,
-            0.8625,
+            0.8571,
             0.2558
           ]
         },
@@ -6815,7 +4713,7 @@
           "r": [
             0.2024,
             0.2558,
-            0.8621,
+            0.8566,
             0.2749
           ]
         },
@@ -6843,7 +4741,7 @@
           "r": [
             0.5037,
             0.3894,
-            0.8626,
+            0.8572,
             0.4085
           ]
         },
@@ -6852,7 +4750,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.8622,
+            0.8568,
             0.4276
           ]
         },
@@ -6880,7 +4778,7 @@
           "r": [
             0.5259,
             0.5803,
-            0.8627,
+            0.8573,
             0.5994
           ]
         },
@@ -6889,7 +4787,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.8621,
+            0.8567,
             0.6185
           ]
         },
@@ -6917,7 +4815,7 @@
           "r": [
             0.5036,
             0.6947,
-            0.8624,
+            0.8572,
             0.7138
           ]
         },
@@ -6926,7 +4824,7 @@
           "r": [
             0.2024,
             0.7138,
-            0.8622,
+            0.8568,
             0.7329
           ]
         },
@@ -6954,7 +4852,7 @@
           "r": [
             0.6072,
             0.5421,
-            0.8625,
+            0.8572,
             0.5612
           ]
         },
@@ -6963,7 +4861,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8624,
+            0.8573,
             0.5803
           ]
         },
@@ -6991,7 +4889,7 @@
           "r": [
             0.2921,
             0.3131,
-            0.8621,
+            0.8568,
             0.3322
           ]
         },
@@ -7000,7 +4898,7 @@
           "r": [
             0.2024,
             0.3322,
-            0.8623,
+            0.8569,
             0.3513
           ]
         },
@@ -7009,7 +4907,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8625,
+            0.8571,
             0.3703
           ]
         },
@@ -7018,7 +4916,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.8623,
+            0.857,
             0.3894
           ]
         },
@@ -7046,7 +4944,7 @@
           "r": [
             0.5424,
             0.1031,
-            0.8624,
+            0.857,
             0.1223
           ]
         },
@@ -7055,7 +4953,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.8624,
+            0.8572,
             0.1414
           ]
         },
@@ -7064,7 +4962,7 @@
           "r": [
             0.2024,
             0.1413,
-            0.8624,
+            0.8571,
             0.1605
           ]
         },
@@ -7073,7 +4971,7 @@
           "r": [
             0.2024,
             0.1604,
-            0.8621,
+            0.857,
             0.1796
           ]
         },
@@ -7082,7 +4980,7 @@
           "r": [
             0.2024,
             0.1795,
-            0.8622,
+            0.8571,
             0.1987
           ]
         },
@@ -7110,7 +5008,7 @@
           "r": [
             0.2024,
             0.7138,
-            0.8622,
+            0.8568,
             0.7329
           ]
         },
@@ -7119,7 +5017,7 @@
           "r": [
             0.2024,
             0.7329,
-            0.8624,
+            0.8571,
             0.7521
           ]
         },
@@ -7147,7 +5045,7 @@
           "r": [
             0.2963,
             0.4658,
-            0.8626,
+            0.8575,
             0.4849
           ]
         },
@@ -7156,7 +5054,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8623,
+            0.8572,
             0.504
           ]
         },
@@ -7165,7 +5063,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8623,
+            0.8569,
             0.5229
           ]
         },
@@ -7174,79 +5072,7 @@
           "r": [
             0.2024,
             0.523,
-            0.2505,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.2602,
-            0.523,
-            0.3783,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.3881,
-            0.523,
-            0.4918,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5016,
-            0.523,
-            0.5176,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5273,
-            0.523,
-            0.6209,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6306,
-            0.523,
-            0.6831,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6928,
-            0.523,
-            0.771,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.7807,
-            0.523,
-            0.8076,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.8174,
-            0.523,
-            0.8624,
+            0.8569,
             0.5421
           ]
         },
@@ -7274,7 +5100,7 @@
           "r": [
             0.7381,
             0.4658,
-            0.8626,
+            0.8575,
             0.4849
           ]
         },
@@ -7283,7 +5109,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8623,
+            0.8572,
             0.504
           ]
         },
@@ -7292,7 +5118,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8623,
+            0.8569,
             0.5229
           ]
         },
@@ -7301,79 +5127,7 @@
           "r": [
             0.2024,
             0.523,
-            0.2505,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.2602,
-            0.523,
-            0.3783,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.3881,
-            0.523,
-            0.4918,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5016,
-            0.523,
-            0.5176,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.5273,
-            0.523,
-            0.6209,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6306,
-            0.523,
-            0.6831,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.6928,
-            0.523,
-            0.771,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.7807,
-            0.523,
-            0.8076,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 10,
-          "r": [
-            0.8174,
-            0.523,
-            0.8624,
+            0.8569,
             0.5421
           ]
         },
@@ -7401,7 +5155,7 @@
           "r": [
             0.2024,
             0.6756,
-            0.8623,
+            0.8571,
             0.6947
           ]
         },
@@ -7410,7 +5164,7 @@
           "r": [
             0.2024,
             0.6947,
-            0.8624,
+            0.8573,
             0.7138
           ]
         },
@@ -7438,88 +5192,7 @@
           "r": [
             0.2024,
             0.3322,
-            0.2848,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.2909,
-            0.3322,
-            0.338,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3441,
-            0.3322,
-            0.3815,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3876,
-            0.3322,
-            0.4788,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.4849,
-            0.3322,
-            0.5908,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.5969,
-            0.3322,
-            0.6238,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6299,
-            0.3322,
-            0.6503,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6563,
-            0.3322,
-            0.7367,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7428,
-            0.3322,
-            0.7973,
-            0.3513
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8034,
-            0.3322,
-            0.8622,
+            0.857,
             0.3513
           ]
         },
@@ -7528,7 +5201,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8624,
+            0.8568,
             0.3703
           ]
         },
@@ -7537,106 +5210,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.2292,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.2352,
-            0.3703,
-            0.323,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3291,
-            0.3703,
-            0.3891,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3952,
-            0.3703,
-            0.4219,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.428,
-            0.3703,
-            0.4483,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.4544,
-            0.3703,
-            0.5261,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.5322,
-            0.3703,
-            0.591,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.597,
-            0.3703,
-            0.6858,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6919,
-            0.3703,
-            0.7177,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7238,
-            0.3703,
-            0.7763,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7824,
-            0.3703,
-            0.8358,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8418,
-            0.3703,
-            0.8621,
+            0.8569,
             0.3894
           ]
         },
@@ -7664,7 +5238,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.8622,
+            0.8569,
             0.504
           ]
         },
@@ -7673,7 +5247,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8626,
+            0.8573,
             0.5229
           ]
         },
@@ -7682,7 +5256,7 @@
           "r": [
             0.2024,
             0.523,
-            0.8621,
+            0.857,
             0.5421
           ]
         },
@@ -7710,7 +5284,7 @@
           "r": [
             0.2857,
             0.3512,
-            0.8624,
+            0.8568,
             0.3703
           ]
         },
@@ -7719,106 +5293,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.2292,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.2352,
-            0.3703,
-            0.323,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3291,
-            0.3703,
-            0.3891,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.3952,
-            0.3703,
-            0.4219,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.428,
-            0.3703,
-            0.4483,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.4544,
-            0.3703,
-            0.5261,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.5322,
-            0.3703,
-            0.591,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.597,
-            0.3703,
-            0.6858,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6919,
-            0.3703,
-            0.7177,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7238,
-            0.3703,
-            0.7763,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7824,
-            0.3703,
-            0.8358,
-            0.3894
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8418,
-            0.3703,
-            0.8621,
+            0.8569,
             0.3894
           ]
         },
@@ -7846,7 +5321,7 @@
           "r": [
             0.6297,
             0.5803,
-            0.8624,
+            0.8572,
             0.5994
           ]
         },
@@ -7855,7 +5330,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.8619,
+            0.8566,
             0.6185
           ]
         },
@@ -7864,7 +5339,7 @@
           "r": [
             0.2024,
             0.6185,
-            0.8623,
+            0.8571,
             0.6376
           ]
         },
@@ -7892,7 +5367,7 @@
           "r": [
             0.5715,
             0.5421,
-            0.8621,
+            0.8565,
             0.5612
           ]
         },
@@ -7901,7 +5376,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8624,
+            0.857,
             0.5803
           ]
         },
@@ -7929,43 +5404,7 @@
           "r": [
             0.626,
             0.1986,
-            0.6902,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6951,
-            0.1986,
-            0.7155,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7203,
-            0.1986,
-            0.7954,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8005,
-            0.1986,
-            0.8272,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8321,
-            0.1986,
-            0.8621,
+            0.8567,
             0.2178
           ]
         },
@@ -7974,7 +5413,7 @@
           "r": [
             0.2024,
             0.2176,
-            0.8626,
+            0.8573,
             0.2367
           ]
         },
@@ -7983,7 +5422,7 @@
           "r": [
             0.2024,
             0.2367,
-            0.8621,
+            0.8567,
             0.2558
           ]
         },
@@ -8011,43 +5450,7 @@
           "r": [
             0.626,
             0.1986,
-            0.6902,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.6951,
-            0.1986,
-            0.7155,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.7203,
-            0.1986,
-            0.7954,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8005,
-            0.1986,
-            0.8272,
-            0.2178
-          ]
-        },
-        {
-          "pagina": 11,
-          "r": [
-            0.8321,
-            0.1986,
-            0.8621,
+            0.8567,
             0.2178
           ]
         },
@@ -8056,7 +5459,7 @@
           "r": [
             0.2024,
             0.2176,
-            0.8626,
+            0.8573,
             0.2367
           ]
         },
@@ -8065,7 +5468,7 @@
           "r": [
             0.2024,
             0.2367,
-            0.8621,
+            0.8567,
             0.2558
           ]
         },
@@ -8074,7 +5477,7 @@
           "r": [
             0.2024,
             0.2558,
-            0.8624,
+            0.8572,
             0.2749
           ]
         },
@@ -8083,7 +5486,7 @@
           "r": [
             0.2024,
             0.2749,
-            0.8622,
+            0.8566,
             0.294
           ]
         },
@@ -8111,7 +5514,7 @@
           "r": [
             0.6732,
             0.8283,
-            0.8621,
+            0.857,
             0.8474
           ]
         },
@@ -8120,7 +5523,7 @@
           "r": [
             0.2024,
             0.8474,
-            0.8626,
+            0.8567,
             0.8665
           ]
         },
@@ -8148,7 +5551,7 @@
           "r": [
             0.2024,
             0.1604,
-            0.8622,
+            0.8567,
             0.1796
           ]
         },
@@ -8157,7 +5560,7 @@
           "r": [
             0.2024,
             0.1795,
-            0.8621,
+            0.8568,
             0.1987
           ]
         },
@@ -8185,7 +5588,7 @@
           "r": [
             0.2024,
             0.6376,
-            0.8625,
+            0.8572,
             0.6567
           ]
         },
@@ -8213,61 +5616,7 @@
           "r": [
             0.427,
             0.5421,
-            0.4977,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.505,
-            0.5421,
-            0.5531,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.5604,
-            0.5421,
-            0.6557,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6629,
-            0.5421,
-            0.679,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6863,
-            0.5421,
-            0.7687,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.776,
-            0.5421,
-            0.7963,
-            0.5612
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.8036,
-            0.5421,
-            0.8623,
+            0.857,
             0.5612
           ]
         },
@@ -8276,16 +5625,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8044,
-            0.5803
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.8093,
-            0.5612,
-            0.8626,
+            0.8574,
             0.5803
           ]
         },
@@ -8294,7 +5634,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.8622,
+            0.8571,
             0.5994
           ]
         },
@@ -8322,7 +5662,7 @@
           "r": [
             0.2024,
             0.3322,
-            0.8626,
+            0.8572,
             0.3513
           ]
         },
@@ -8331,7 +5671,7 @@
           "r": [
             0.2024,
             0.3512,
-            0.8625,
+            0.8571,
             0.3703
           ]
         },
@@ -8340,7 +5680,7 @@
           "r": [
             0.2024,
             0.3703,
-            0.8624,
+            0.8571,
             0.3894
           ]
         },
@@ -8349,7 +5689,7 @@
           "r": [
             0.2024,
             0.3894,
-            0.8622,
+            0.8567,
             0.4085
           ]
         },
@@ -8358,7 +5698,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.8626,
+            0.8573,
             0.4276
           ]
         },
@@ -8384,9 +5724,9 @@
         {
           "pagina": 12,
           "r": [
-            0.8205,
+            0.2024,
             0.4658,
-            0.8624,
+            0.857,
             0.4849
           ]
         },
@@ -8395,25 +5735,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.3905,
-            0.504
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.3946,
-            0.4849,
-            0.653,
-            0.504
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6572,
-            0.4849,
-            0.8623,
+            0.8571,
             0.504
           ]
         },
@@ -8421,24 +5743,6 @@
           "pagina": 12,
           "r": [
             0.2024,
-            0.5038,
-            0.3201,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.3273,
-            0.5038,
-            0.6509,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6583,
             0.5038,
             0.8281,
             0.5229
@@ -8457,9 +5761,9 @@
         {
           "pagina": 12,
           "r": [
-            0.8205,
+            0.2024,
             0.4658,
-            0.8624,
+            0.857,
             0.4849
           ]
         },
@@ -8468,25 +5772,7 @@
           "r": [
             0.2024,
             0.4849,
-            0.3905,
-            0.504
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.3946,
-            0.4849,
-            0.653,
-            0.504
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6572,
-            0.4849,
-            0.8623,
+            0.8571,
             0.504
           ]
         },
@@ -8495,25 +5781,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.3201,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.3273,
-            0.5038,
-            0.6509,
-            0.5229
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6583,
-            0.5038,
-            0.8626,
+            0.8573,
             0.5229
           ]
         },
@@ -8522,25 +5790,7 @@
           "r": [
             0.2024,
             0.523,
-            0.2593,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.2685,
-            0.523,
-            0.603,
-            0.5421
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6121,
-            0.523,
-            0.8623,
+            0.8568,
             0.5421
           ]
         },
@@ -8549,7 +5799,7 @@
           "r": [
             0.2024,
             0.5421,
-            0.2978,
+            0.4141,
             0.5612
           ]
         }
@@ -8568,7 +5818,7 @@
           "r": [
             0.2024,
             0.7329,
-            0.8624,
+            0.857,
             0.7521
           ]
         },
@@ -8596,7 +5846,7 @@
           "r": [
             0.2024,
             0.2558,
-            0.8626,
+            0.8572,
             0.2749
           ]
         },
@@ -8605,70 +5855,7 @@
           "r": [
             0.2024,
             0.2749,
-            0.2848,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.2919,
-            0.2749,
-            0.3188,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.3259,
-            0.2749,
-            0.4182,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.4252,
-            0.2749,
-            0.4616,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.4687,
-            0.2749,
-            0.5565,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.5636,
-            0.2749,
-            0.6752,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.6823,
-            0.2749,
-            0.8249,
-            0.294
-          ]
-        },
-        {
-          "pagina": 12,
-          "r": [
-            0.832,
-            0.2749,
-            0.8622,
+            0.8566,
             0.294
           ]
         },
@@ -8696,7 +5883,7 @@
           "r": [
             0.2718,
             0.8092,
-            0.8626,
+            0.8573,
             0.8283
           ]
         },
@@ -8724,7 +5911,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.8622,
+            0.8571,
             0.5994
           ]
         },
@@ -8752,7 +5939,7 @@
           "r": [
             0.2024,
             0.3894,
-            0.8623,
+            0.857,
             0.4085
           ]
         },
@@ -8761,7 +5948,7 @@
           "r": [
             0.2024,
             0.4085,
-            0.8624,
+            0.857,
             0.4276
           ]
         },
@@ -8770,106 +5957,7 @@
           "r": [
             0.2024,
             0.4276,
-            0.2775,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.2838,
-            0.4276,
-            0.3791,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.3854,
-            0.4276,
-            0.4003,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4063,
-            0.4276,
-            0.4556,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4619,
-            0.4276,
-            0.5068,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5131,
-            0.4276,
-            0.5335,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5397,
-            0.4276,
-            0.6082,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6144,
-            0.4276,
-            0.6412,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6475,
-            0.4276,
-            0.7524,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7587,
-            0.4276,
-            0.7855,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7918,
-            0.4276,
-            0.8121,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.8183,
-            0.4276,
-            0.8622,
+            0.857,
             0.4467
           ]
         },
@@ -8878,7 +5966,7 @@
           "r": [
             0.2024,
             0.4467,
-            0.8626,
+            0.8575,
             0.4658
           ]
         },
@@ -8906,7 +5994,7 @@
           "r": [
             0.2024,
             0.7138,
-            0.8621,
+            0.8567,
             0.7329
           ]
         },
@@ -8934,7 +6022,7 @@
           "r": [
             0.2024,
             0.7138,
-            0.8621,
+            0.8567,
             0.7329
           ]
         },
@@ -8943,7 +6031,7 @@
           "r": [
             0.2024,
             0.7329,
-            0.8621,
+            0.8567,
             0.7521
           ]
         },
@@ -8952,7 +6040,7 @@
           "r": [
             0.2024,
             0.752,
-            0.8624,
+            0.8569,
             0.7712
           ]
         },
@@ -8961,88 +6049,7 @@
           "r": [
             0.2024,
             0.7711,
-            0.2678,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.2727,
-            0.7711,
-            0.2888,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.2937,
-            0.7711,
-            0.4524,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4573,
-            0.7711,
-            0.4883,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4931,
-            0.7711,
-            0.5596,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5645,
-            0.7711,
-            0.6171,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6219,
-            0.7711,
-            0.6894,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6943,
-            0.7711,
-            0.7307,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7356,
-            0.7711,
-            0.7837,
-            0.7903
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7885,
-            0.7711,
-            0.8624,
+            0.8569,
             0.7903
           ]
         },
@@ -9070,7 +6077,7 @@
           "r": [
             0.2024,
             0.8474,
-            0.8622,
+            0.8568,
             0.8665
           ]
         },
@@ -9079,7 +6086,7 @@
           "r": [
             0.2024,
             0.8665,
-            0.8626,
+            0.8572,
             0.8856
           ]
         },
@@ -9107,7 +6114,7 @@
           "r": [
             0.2024,
             0.5038,
-            0.8625,
+            0.8574,
             0.5229
           ]
         },
@@ -9116,7 +6123,7 @@
           "r": [
             0.2024,
             0.523,
-            0.8625,
+            0.8572,
             0.5421
           ]
         },
@@ -9144,52 +6151,7 @@
           "r": [
             0.429,
             0.1031,
-            0.5573,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5646,
-            0.1031,
-            0.5849,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5922,
-            0.1031,
-            0.6786,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6859,
-            0.1031,
-            0.7126,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7199,
-            0.1031,
-            0.8025,
-            0.1223
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.8097,
-            0.1031,
-            0.8621,
+            0.857,
             0.1223
           ]
         },
@@ -9198,7 +6160,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.8622,
+            0.8569,
             0.1414
           ]
         },
@@ -9226,7 +6188,7 @@
           "r": [
             0.7734,
             0.5421,
-            0.8623,
+            0.8568,
             0.5612
           ]
         },
@@ -9235,7 +6197,7 @@
           "r": [
             0.2024,
             0.5612,
-            0.8623,
+            0.857,
             0.5803
           ]
         },
@@ -9244,7 +6206,7 @@
           "r": [
             0.2024,
             0.5803,
-            0.8622,
+            0.8566,
             0.5994
           ]
         },
@@ -9253,7 +6215,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.8624,
+            0.8571,
             0.6185
           ]
         },
@@ -9281,7 +6243,7 @@
           "r": [
             0.3615,
             0.5803,
-            0.8622,
+            0.8566,
             0.5994
           ]
         },
@@ -9290,7 +6252,7 @@
           "r": [
             0.2024,
             0.5994,
-            0.8624,
+            0.8571,
             0.6185
           ]
         },
@@ -9299,7 +6261,7 @@
           "r": [
             0.2024,
             0.6185,
-            0.8626,
+            0.8571,
             0.6376
           ]
         },
@@ -9327,7 +6289,7 @@
           "r": [
             0.3544,
             0.4085,
-            0.8624,
+            0.857,
             0.4276
           ]
         },
@@ -9336,106 +6298,7 @@
           "r": [
             0.2024,
             0.4276,
-            0.2775,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.2838,
-            0.4276,
-            0.3791,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.3854,
-            0.4276,
-            0.4003,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4063,
-            0.4276,
-            0.4556,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.4619,
-            0.4276,
-            0.5068,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5131,
-            0.4276,
-            0.5335,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.5397,
-            0.4276,
-            0.6082,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6144,
-            0.4276,
-            0.6412,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.6475,
-            0.4276,
-            0.7524,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7587,
-            0.4276,
-            0.7855,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.7918,
-            0.4276,
-            0.8121,
-            0.4467
-          ]
-        },
-        {
-          "pagina": 13,
-          "r": [
-            0.8183,
-            0.4276,
-            0.8622,
+            0.857,
             0.4467
           ]
         },
@@ -9444,7 +6307,7 @@
           "r": [
             0.2024,
             0.4467,
-            0.8626,
+            0.8575,
             0.4658
           ]
         },
@@ -9472,52 +6335,7 @@
           "r": [
             0.4406,
             0.1413,
-            0.5209,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.528,
-            0.1413,
-            0.6499,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.657,
-            0.1413,
-            0.6944,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.7015,
-            0.1413,
-            0.727,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.7341,
-            0.1413,
-            0.8349,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.842,
-            0.1413,
-            0.8622,
+            0.857,
             0.1605
           ]
         },
@@ -9526,7 +6344,7 @@
           "r": [
             0.2024,
             0.1604,
-            0.8622,
+            0.857,
             0.1796
           ]
         },
@@ -9554,7 +6372,7 @@
           "r": [
             0.2024,
             0.084,
-            0.8625,
+            0.857,
             0.1031
           ]
         },
@@ -9563,7 +6381,7 @@
           "r": [
             0.2024,
             0.1031,
-            0.8622,
+            0.8568,
             0.1223
           ]
         },
@@ -9572,7 +6390,7 @@
           "r": [
             0.2024,
             0.1222,
-            0.862,
+            0.8567,
             0.1414
           ]
         },
@@ -9580,33 +6398,6 @@
           "pagina": 14,
           "r": [
             0.2024,
-            0.1413,
-            0.2443,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.2514,
-            0.1413,
-            0.2781,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.2852,
-            0.1413,
-            0.3601,
-            0.1605
-          ]
-        },
-        {
-          "pagina": 14,
-          "r": [
-            0.3672,
             0.1413,
             0.4281,
             0.1605
@@ -9637,15 +6428,7 @@
     }
   },
   "incidencias": [
-    "inmigracion: la lectura fácil no supera la validación tras 4 intentos",
-    "educacion: la lectura fácil no supera la validación tras 4 intentos",
-    "economia-empleo: la lectura fácil no supera la validación tras 4 intentos",
-    "proteccion-social: la lectura fácil no supera la validación tras 4 intentos",
     "transporte: la lectura fácil no supera la validación tras 4 intentos",
-    "mundo-rural: la lectura fácil no supera la validación tras 4 intentos",
-    "igualdad: la lectura fácil no supera la validación tras 4 intentos",
-    "ciencia-digital: la lectura fácil no supera la validación tras 4 intentos",
-    "exterior-defensa: la lectura fácil no supera la validación tras 4 intentos",
-    "modelo-territorial: la lectura fácil no supera la validación tras 4 intentos"
+    "educacion: la lectura fácil no supera la validación tras 4 intentos"
   ]
 }

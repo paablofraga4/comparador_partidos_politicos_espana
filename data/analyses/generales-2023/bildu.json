@@ -16,7 +16,7 @@
     "tokens_entrada": 227283,
     "tokens_cache": 147649,
     "tokens_salida": 117516,
-    "coste_usd": 1.0895
+    "coste_usd": 1.4058
   },
   "temas": {
     "vivienda": {
@@ -118,7 +118,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "economia-empleo": {
@@ -208,33 +209,20 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere recuperar normas de trabajo.",
+            "texto": "EH Bildu quiere recuperar medidas laborales que quedaron fuera de la última reforma laboral.",
             "citas": [
               "c0005"
             ]
           },
           {
-            "texto": "La última reforma las quitó.",
-            "citas": [
-              "c0005"
-            ]
-          },
-          {
-            "texto": "El partido quiere una nueva ley para la industria.",
+            "texto": "EH Bildu propone una nueva Ley de Industria centrada en las pequeñas y medianas empresas.",
             "citas": [
               "c0038",
               "c0039"
             ]
           },
           {
-            "texto": "Esta ley se centrará en las empresas pequeñas y medianas.",
-            "citas": [
-              "c0038",
-              "c0039"
-            ]
-          },
-          {
-            "texto": "El partido rechaza las normas que limitan el dinero público para invertir.",
+            "texto": "EH Bildu rechaza los límites fiscales a la inversión pública.",
             "citas": [
               "c0038",
               "c0039"
@@ -243,7 +231,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere recuperar el pago de 45 días de sueldo por despido. También quiere recuperar los sueldos que corresponden al tiempo que dura el juicio por despido.",
+            "texto": "EH Bildu quiere recuperar el pago de 45 días de sueldo por despido. EH Bildu quiere recuperar el pago de sueldos durante el juicio por despido.",
             "citas": [
               "c0006"
             ],
@@ -251,7 +239,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "El partido quiere acabar con el control estatal de los acuerdos sobre trabajo. Quiere dar prioridad a los acuerdos del País Vasco. También quiere dar prioridad a los acuerdos de cada provincia. Quiere dar prioridad a los acuerdos de cada comunidad autónoma.",
+            "texto": "EH Bildu quiere acabar con la prioridad de los convenios laborales estatales. EH Bildu quiere dar prioridad a los convenios de ámbito vasco, provincial y autonómico.",
             "citas": [
               "c0002"
             ],
@@ -259,7 +247,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "El partido quiere reducir el tiempo de trabajo a 32 horas por semana. Quiere mantener el mismo sueldo. También quiere mantener las demás condiciones de trabajo.",
+            "texto": "EH Bildu quiere reducir la jornada laboral a 32 horas semanales. EH Bildu quiere mantener los sueldos y las demás condiciones de trabajo.",
             "citas": [
               "c0004"
             ],
@@ -267,7 +255,7 @@
             "subtema": "jornada laboral"
           },
           {
-            "texto": "El partido quiere subir el salario mínimo a 1.200 euros. También quiere poder fijar un salario mínimo propio.",
+            "texto": "EH Bildu quiere subir el salario mínimo interprofesional a 1.200 euros. EH Bildu quiere poder fijar un salario mínimo propio.",
             "citas": [
               "c0001"
             ],
@@ -275,7 +263,7 @@
             "subtema": "salario mínimo"
           },
           {
-            "texto": "El partido quiere medidas para mujeres y jóvenes. Quiere reducir las diferencias de sueldo. Quiere reducir los empleos con malas condiciones. También quiere reducir los contratos con fecha de fin. Quiere reducir los empleos de pocas horas.",
+            "texto": "EH Bildu quiere medidas para mujeres y jóvenes. EH Bildu quiere reducir las diferencias de sueldo. EH Bildu quiere combatir las malas condiciones de trabajo. EH Bildu quiere combatir los empleos temporales y a tiempo parcial.",
             "citas": [
               "c0003"
             ],
@@ -283,7 +271,7 @@
             "subtema": "reforma laboral y contratos"
           },
           {
-            "texto": "El partido quiere traspasar la Inspección de Trabajo. Este servicio vigila que las empresas cumplan las normas de trabajo. Hasta completar el traspaso, quiere abrir nuevas plazas para contratar más personal.",
+            "texto": "EH Bildu quiere transferir la Inspección de Trabajo. EH Bildu propone ofrecer más plazas de trabajo mientras se completa ese traspaso.",
             "citas": [
               "c0007"
             ],
@@ -291,7 +279,7 @@
             "subtema": "empleo y paro"
           },
           {
-            "texto": "El partido quiere una nueva ley para la industria. La ley se centrará en las empresas pequeñas y medianas. También se centrará en la investigación y las nuevas ideas. La ley apoyará el desarrollo y el uso de herramientas digitales. El partido quiere que las empresas devuelvan las ayudas públicas si llevan su producción a otros lugares.",
+            "texto": "EH Bildu propone una nueva Ley de Industria centrada en las pequeñas y medianas empresas. EH Bildu quiere que esta ley impulse la investigación, la innovación y el desarrollo. EH Bildu quiere que esta ley impulse el uso de tecnologías digitales. EH Bildu quiere exigir la devolución de ayudas públicas a empresas que trasladen su producción.",
             "citas": [
               "c0038",
               "c0034"
@@ -300,7 +288,7 @@
             "subtema": "industria"
           },
           {
-            "texto": "El partido quiere anular el cambio del artículo 135 de la Constitución. Ese cambio obliga a pagar primero la deuda. El dinero para proyectos públicos y sociales queda después.",
+            "texto": "EH Bildu quiere anular el cambio del artículo 135 de la Constitución. EH Bildu rechaza pagar la deuda antes que hacer inversiones públicas y sociales.",
             "citas": [
               "c0036"
             ],
@@ -309,12 +297,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 70.7,
-          "max_palabras_frase": 17,
+          "inflesz": 66.3,
+          "max_palabras_frase": 15,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "impuestos": {
@@ -454,7 +443,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "pensiones": {
@@ -512,7 +502,7 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere subir las pensiones mínimas.",
+            "texto": "EH Bildu quiere aumentar las pensiones mínimas y las pensiones de viudedad.",
             "citas": [
               "c0012",
               "c0013",
@@ -520,7 +510,7 @@
             ]
           },
           {
-            "texto": "También quiere subir las pensiones de viudedad. Son las pensiones que se cobran cuando muere la pareja.",
+            "texto": "EH Bildu quiere aumentar las pensiones que no exigen aportaciones previas a la Seguridad Social.",
             "citas": [
               "c0012",
               "c0013",
@@ -528,7 +518,7 @@
             ]
           },
           {
-            "texto": "También quiere subir las pensiones para quienes han pagado poco o nada. Se refiere a los pagos a la Seguridad Social.",
+            "texto": "EH Bildu rechaza aumentar la edad de jubilación.",
             "citas": [
               "c0012",
               "c0013",
@@ -536,7 +526,7 @@
             ]
           },
           {
-            "texto": "El partido rechaza subir la edad para jubilarse.",
+            "texto": "EH Bildu rechaza aumentar el tiempo que cuenta para calcular las pensiones.",
             "citas": [
               "c0012",
               "c0013",
@@ -544,21 +534,13 @@
             ]
           },
           {
-            "texto": "También rechaza contar más años de trabajo para calcular la pensión.",
-            "citas": [
-              "c0012",
-              "c0013",
-              "c0015"
-            ]
-          },
-          {
-            "texto": "El partido quiere cambiar quién controla el dinero de la Seguridad Social.",
+            "texto": "EH Bildu propone transferir el Régimen Económico de la Seguridad Social.",
             "citas": [
               "c0016"
             ]
           },
           {
-            "texto": "Quiere dar ese control a los gobiernos de Euskadi y Navarra.",
+            "texto": "EH Bildu quiere que lo reciban las instituciones vascas y navarras.",
             "citas": [
               "c0016"
             ]
@@ -566,7 +548,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere subir ya las pensiones mínimas hasta 1.080 euros. También quiere tener poder propio para añadir dinero a esas pensiones.",
+            "texto": "EH Bildu propone aumentar inmediatamente las pensiones mínimas hasta los 1.080€. EH Bildu quiere asumir la capacidad propia para añadir dinero a estas pensiones.",
             "citas": [
               "c0012"
             ],
@@ -574,7 +556,7 @@
             "subtema": "pensiones mínimas y no contributivas"
           },
           {
-            "texto": "El partido quiere subir las pensiones mínimas de viudedad. Son las pensiones que se cobran cuando muere la pareja. También quiere subir las pensiones para quienes han pagado poco o nada. Se refiere a los pagos a la Seguridad Social. Quiere que estas pensiones basten para vivir.",
+            "texto": "EH Bildu quiere aumentar las pensiones mínimas de viudedad hasta una cantidad suficiente. EH Bildu también quiere aumentar las pensiones que no exigen aportaciones previas. EH Bildu quiere que estas pensiones alcancen una cantidad suficiente.",
             "citas": [
               "c0013"
             ],
@@ -582,7 +564,7 @@
             "subtema": "pensiones mínimas y no contributivas"
           },
           {
-            "texto": "El partido rechaza subir la edad para jubilarse. También rechaza contar más años de trabajo para calcular la pensión.",
+            "texto": "EH Bildu rechaza cualquier aumento de la edad de jubilación. EH Bildu rechaza cualquier aumento del tiempo que cuenta para calcular las pensiones.",
             "citas": [
               "c0015"
             ],
@@ -590,7 +572,7 @@
             "subtema": "edad de jubilación"
           },
           {
-            "texto": "El partido quiere cambiar quién controla el dinero de la Seguridad Social. Quiere dar ese control a los gobiernos de Euskadi y Navarra.",
+            "texto": "EH Bildu propone transferir el Régimen Económico de la Seguridad Social. EH Bildu quiere que lo reciban las instituciones vascas y navarras.",
             "citas": [
               "c0016"
             ],
@@ -599,12 +581,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 75.2,
-          "max_palabras_frase": 12,
+          "inflesz": 61.0,
+          "max_palabras_frase": 15,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 61.0 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "proteccion-social": {
@@ -655,28 +640,28 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere dar más apoyo a las personas con pocos recursos.",
+            "texto": "EH Bildu quiere ampliar la protección social.",
             "citas": [
               "c0031",
               "c0027"
             ]
           },
           {
-            "texto": "Quiere subir el límite de ingresos para recibir ese apoyo.",
+            "texto": "EH Bildu propone subir los límites de ingresos para reconocer a más personas como vulnerables.",
             "citas": [
               "c0031",
               "c0027"
             ]
           },
           {
-            "texto": "También quiere que más personas reciban el ingreso mínimo vital.",
+            "texto": "EH Bildu quiere que más personas puedan acceder al ingreso mínimo vital.",
             "citas": [
               "c0031",
               "c0027"
             ]
           },
           {
-            "texto": "Quiere aumentar el dinero de esta ayuda.",
+            "texto": "EH Bildu propone aumentar las cantidades del ingreso mínimo vital.",
             "citas": [
               "c0031",
               "c0027"
@@ -685,7 +670,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere prohibir para siempre los cortes de servicios básicos. La medida protegerá a personas y familias con pocos recursos. También quiere ampliar por ley el suministro mínimo vital. Quiere que más personas puedan recibirlo. También quiere que dure más tiempo.",
+            "texto": "EH Bildu quiere prohibir para siempre cortar suministros básicos a personas y familias vulnerables. EH Bildu propone ampliar por ley el acceso al Suministro Mínimo Vital. EH Bildu propone ampliar por ley la duración del Suministro Mínimo Vital.",
             "citas": [
               "c0030"
             ],
@@ -693,7 +678,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "El partido quiere subir el indicador público de renta de efectos múltiples. Este indicador sirve para fijar ayudas. Quiere subirlo si el índice de precios de consumo aumenta más del 2,5%. Este índice mide cuánto suben los precios. La subida del indicador seguirá ese índice. También quiere compensar las pérdidas de los últimos años con fuertes subidas de precios.",
+            "texto": "EH Bildu propone aumentar el Indicador Público de Renta de Efectos Múltiples. EH Bildu propone ajustarlo al Índice de Precios de Consumo cuando supere el 2,5%. EH Bildu quiere recuperar las pérdidas de los últimos años de fuertes subidas de precios.",
             "citas": [
               "c0029"
             ],
@@ -701,7 +686,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "El partido quiere subir un 15% el límite de ingresos para reconocer a personas vulnerables. Son personas que necesitan apoyo por tener pocos recursos. Así, más personas podrán recibir las ayudas que dependen de ese límite.",
+            "texto": "EH Bildu propone subir un 15% los límites de ingresos para considerar a alguien vulnerable. EH Bildu quiere que estas medidas de protección social lleguen a más personas.",
             "citas": [
               "c0031"
             ],
@@ -709,7 +694,7 @@
             "subtema": "pobreza y exclusión"
           },
           {
-            "texto": "El partido quiere que más personas reciban el ingreso mínimo vital. Para ello, quiere subir el límite de ingresos para pedir esta ayuda. Quiere dar al menos un 12% más de dinero con esta ayuda. También quiere hacer los trámites más fáciles y rápidos. Quiere asegurar que las personas puedan pedir la ayuda en persona. También quiere que puedan hacer los demás trámites en persona.",
+            "texto": "EH Bildu propone subir los límites de ingresos para acceder al ingreso mínimo vital. EH Bildu propone aumentar sus cantidades al menos un 12%. EH Bildu quiere facilitar los trámites. EH Bildu quiere que los trámites sean más rápidos. EH Bildu quiere asegurar que las personas puedan solicitarlo en persona. EH Bildu quiere asegurar que también puedan hacer los trámites en persona.",
             "citas": [
               "c0028"
             ],
@@ -718,12 +703,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 69.1,
+          "inflesz": 65.7,
           "max_palabras_frase": 15,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "sanidad": {
@@ -872,7 +858,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "educacion": {
@@ -907,25 +894,25 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere proteger los modelos de enseñanza propios.",
+            "texto": "EH Bildu quiere proteger los modelos propios de enseñanza.",
             "citas": [
               "c0074"
             ]
           },
           {
-            "texto": "También quiere proteger sus planes de estudio.",
+            "texto": "EH Bildu quiere proteger sus planes de estudio.",
             "citas": [
               "c0074"
             ]
           },
           {
-            "texto": "Quiere proteger cómo se usan las lenguas.",
+            "texto": "EH Bildu quiere proteger el uso de las lenguas en estos modelos.",
             "citas": [
               "c0074"
             ]
           },
           {
-            "texto": "El partido rechaza que otros impongan cambios.",
+            "texto": "EH Bildu rechaza los cambios impuestos en estos modelos.",
             "citas": [
               "c0074"
             ]
@@ -933,7 +920,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere proteger los modelos de enseñanza propios. También quiere proteger sus planes de estudio. Quiere proteger cómo se usan las lenguas. El partido rechaza que otros intervengan en estos modelos o impongan cambios.",
+            "texto": "EH Bildu quiere proteger los modelos propios de enseñanza. EH Bildu quiere proteger sus planes de estudio. EH Bildu quiere proteger el uso de las lenguas en estos modelos. EH Bildu rechaza que otros intervengan en estos modelos. EH Bildu rechaza los cambios impuestos.",
             "citas": [
               "c0074"
             ],
@@ -941,7 +928,7 @@
             "subtema": "lenguas en la enseñanza"
           },
           {
-            "texto": "El partido exige que se traspase el control de las becas. Este traspaso sigue pendiente. Así lo recoge el Estatuto Vasco. También lo recoge el Amejoramiento Navarro.",
+            "texto": "EH Bildu exige recibir el poder de decidir sobre las becas. EH Bildu exige este traspaso pendiente según el Estatuto Vasco. EH Bildu también lo exige según el Amejoramiento Navarro.",
             "citas": [
               "c0079",
               "c0082"
@@ -951,12 +938,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 68.5,
+          "inflesz": 72.9,
           "max_palabras_frase": 12,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "inmigracion": {
@@ -1013,46 +1001,40 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere una nueva ley para quienes llegan de otros países.",
+            "texto": "EH Bildu propone una nueva ley para garantizar los derechos de las personas migrantes.",
             "citas": [
               "c0059"
             ]
           },
           {
-            "texto": "Esta ley debe proteger sus derechos.",
+            "texto": "EH Bildu quiere que esta ley garantice su acceso a los servicios públicos básicos.",
             "citas": [
               "c0059"
             ]
           },
           {
-            "texto": "El partido quiere que puedan usar los servicios públicos básicos.",
-            "citas": [
-              "c0059"
-            ]
-          },
-          {
-            "texto": "El partido quiere pasos seguros entre países.",
+            "texto": "EH Bildu propone rutas seguras para las personas migrantes.",
             "citas": [
               "c0061",
               "c0058"
             ]
           },
           {
-            "texto": "El partido quiere asegurar el asilo y la ayuda.",
+            "texto": "EH Bildu propone garantizar el asilo, que ofrece protección en otro país.",
             "citas": [
               "c0061",
               "c0058"
             ]
           },
           {
-            "texto": "El asilo da protección a quienes huyen de su país.",
+            "texto": "EH Bildu propone garantizar ayuda a las personas migrantes.",
             "citas": [
               "c0061",
               "c0058"
             ]
           },
           {
-            "texto": "El partido quiere acabar con las expulsiones sin revisar cada caso.",
+            "texto": "EH Bildu propone poner fin a las devoluciones en caliente.",
             "citas": [
               "c0061",
               "c0058"
@@ -1061,7 +1043,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere quitar la Ley de Extranjería y aprobar otra ley. Esta ley trata sobre quienes llegan de otros países. La nueva ley debe asegurar sus derechos humanos y civiles. Son los derechos que protegen a las personas y sus libertades. El partido quiere que puedan usar los servicios públicos básicos.",
+            "texto": "EH Bildu propone eliminar la Ley de Extranjería y sustituirla por una nueva ley. EH Bildu quiere que esta ley garantice los derechos humanos y civiles de las personas migrantes. EH Bildu quiere que esta ley garantice su acceso a los servicios públicos básicos.",
             "citas": [
               "c0059"
             ],
@@ -1069,7 +1051,7 @@
             "subtema": "integración"
           },
           {
-            "texto": "El partido quiere pasos seguros entre países. Quiere empezar por abrir de nuevo los pasos entre Irun y Hendaia. También quiere asegurar el asilo y la ayuda a quienes llegan de otros países. El asilo da protección a quienes huyen de su país.",
+            "texto": "EH Bildu propone crear rutas seguras para las personas migrantes. EH Bildu propone comenzar por reabrir los pasos entre Irun y Hendaia. EH Bildu propone garantizar el asilo, que ofrece protección en otro país. EH Bildu propone garantizar ayuda a las personas migrantes.",
             "citas": [
               "c0061"
             ],
@@ -1077,7 +1059,7 @@
             "subtema": "asilo y refugio"
           },
           {
-            "texto": "El partido quiere acabar con las expulsiones sin revisar cada caso. Esto incluye las expulsiones por tierra y por mar.",
+            "texto": "EH Bildu propone poner fin a las devoluciones en caliente por tierra o por mar.",
             "citas": [
               "c0058"
             ],
@@ -1085,7 +1067,7 @@
             "subtema": "control de fronteras"
           },
           {
-            "texto": "El partido propone una ley contra el racismo. El racismo es tratar peor a alguien por su origen o color de piel. La ley debe combatir también todas las formas de discriminación. Discriminar es tratar peor a alguien por sus rasgos o su situación. La ley debe actuar contra estos problemas de forma completa.",
+            "texto": "EH Bildu propone una Ley Integral contra el Racismo y todas las formas de discriminación.",
             "citas": [
               "c0060"
             ],
@@ -1094,12 +1076,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 76.3,
-          "max_palabras_frase": 14,
+          "inflesz": 66.2,
+          "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "medio-ambiente-energia": {
@@ -1191,28 +1174,28 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere reducir más los gases que calientan el planeta.",
+            "texto": "EH Bildu quiere aumentar los objetivos de reducción de gases que calientan el planeta.",
             "citas": [
               "c0048",
               "c0047"
             ]
           },
           {
-            "texto": "En 2040, quiere emitir solo los gases que se puedan retirar del aire.",
+            "texto": "EH Bildu quiere que las emisiones de estos gases se compensen en 2040.",
             "citas": [
               "c0048",
               "c0047"
             ]
           },
           {
-            "texto": "Quiere producir más energía con fuentes como el sol y el viento.",
+            "texto": "EH Bildu quiere aumentar la producción de energía renovable.",
             "citas": [
               "c0048",
               "c0047"
             ]
           },
           {
-            "texto": "El partido quiere cambiar cómo se fijan los precios de la energía.",
+            "texto": "EH Bildu quiere cambiar cómo se fijan los precios de la energía.",
             "citas": [
               "c0045",
               "c0044",
@@ -1220,7 +1203,7 @@
             ]
           },
           {
-            "texto": "Quiere que sea más fácil crear empresas públicas que vendan luz.",
+            "texto": "EH Bildu quiere facilitar la creación de empresas públicas que vendan electricidad.",
             "citas": [
               "c0045",
               "c0044",
@@ -1228,7 +1211,23 @@
             ]
           },
           {
-            "texto": "Quiere fijar normas para controlar y ahorrar agua ante la sequía.",
+            "texto": "EH Bildu propone normas sobre el uso del agua frente a la sequía.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere controlar el uso del agua.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere promover el ahorro de agua.",
             "citas": [
               "c0045",
               "c0044",
@@ -1238,7 +1237,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere cambiar la ley sobre el clima y la energía. Para 2030, quiere reducir más el uso de carbón, petróleo y gas. También quiere reducir más los gases que calientan el planeta. En 2040, quiere emitir solo los gases que se puedan retirar del aire.",
+            "texto": "EH Bildu quiere revisar la Ley de Cambio Climático y Transición Energética. EH Bildu quiere aumentar los objetivos de reducción de gases que calientan el planeta para 2030. EH Bildu quiere que las emisiones de estos gases se compensen en 2040.",
             "citas": [
               "c0048"
             ],
@@ -1246,7 +1245,7 @@
             "subtema": "cambio climático"
           },
           {
-            "texto": "El partido quiere invertir más para producir energía con fuentes como el sol y el viento. Quiere planear esa producción según cómo es cada zona y qué necesita.",
+            "texto": "EH Bildu quiere aumentar la producción de energía renovable con nuevas inversiones. EH Bildu propone planificar esa producción según las características y necesidades de cada territorio.",
             "citas": [
               "c0047"
             ],
@@ -1254,7 +1253,7 @@
             "subtema": "energías renovables"
           },
           {
-            "texto": "El partido quiere cambiar cómo se fija el precio de la energía en Europa. Quiere fijar precios distintos según el coste real de cada forma de producir energía.",
+            "texto": "EH Bildu quiere cambiar cómo se fijan los precios de la energía en Europa. EH Bildu propone precios distintos según el coste real de cada forma de producir energía.",
             "citas": [
               "c0046"
             ],
@@ -1262,7 +1261,7 @@
             "subtema": "precio de la energía"
           },
           {
-            "texto": "El partido quiere cambiar las leyes. Quiere que sea más fácil crear empresas públicas que vendan luz. Quiere permitirlo en todos los niveles de gobierno.",
+            "texto": "EH Bildu quiere cambiar las leyes para facilitar empresas públicas que vendan electricidad. EH Bildu propone facilitar estas empresas en todos los niveles de las instituciones.",
             "citas": [
               "c0044"
             ],
@@ -1270,7 +1269,7 @@
             "subtema": "precio de la energía"
           },
           {
-            "texto": "El partido quiere mantener el precio máximo del gas. También quiere mantener los límites al precio de producir luz. Quiere mantener estas medidas sin fijar una fecha de fin. Seguirían hasta que los precios vuelvan al nivel previo a las subidas de los últimos años.",
+            "texto": "EH Bildu quiere mantener el límite al precio del gas sin fecha de finalización. EH Bildu quiere mantener las medidas que limitan los precios de producción de electricidad. EH Bildu quiere mantener estas medidas hasta recuperar los precios anteriores al aumento de los últimos años.",
             "citas": [
               "c0014"
             ],
@@ -1278,7 +1277,7 @@
             "subtema": "precio de la energía"
           },
           {
-            "texto": "El partido quiere impedir los cortes de servicios básicos a quienes más lo necesitan. Esto incluye a personas y familias. Quiere que esta norma se mantenga sin fecha de fin. Quiere ampliar por ley el acceso al suministro mínimo vital. Este servicio asegura una cantidad mínima de luz. Quiere que este servicio dure más tiempo.",
+            "texto": "EH Bildu quiere prohibir de forma permanente los cortes de suministros básicos. EH Bildu propone esta protección para personas y familias en situación vulnerable. EH Bildu quiere ampliar por ley el acceso al Suministro Mínimo Vital. EH Bildu quiere que el Suministro Mínimo Vital dure más tiempo.",
             "citas": [
               "c0030"
             ],
@@ -1286,7 +1285,7 @@
             "subtema": "precio de la energía"
           },
           {
-            "texto": "El partido quiere fijar normas para controlar y ahorrar agua ante la sequía. Quiere asegurar agua para la población y el campo. Quiere invertir en nuevas técnicas para el campo afectado por la sequía. También quiere invertir en cambios en esas actividades del campo.",
+            "texto": "EH Bildu quiere establecer normas para usar el agua durante las sequías. EH Bildu quiere controlar el uso del agua. EH Bildu quiere promover el ahorro de agua. EH Bildu quiere asegurar el suministro de agua a la población y al sector agrícola. EH Bildu quiere invertir en nuevas soluciones para los sectores agrícolas afectados. EH Bildu quiere invertir en cambios en estos sectores agrícolas.",
             "citas": [
               "c0040",
               "c0043"
@@ -1295,7 +1294,7 @@
             "subtema": "agua y sequía"
           },
           {
-            "texto": "El partido quiere vigilar más a las empresas de energía. Quiere imponer castigos más duros si usan agua sin cumplir las normas para producir energía. Esto incluye el agua de los pantanos y las reservas de agua.",
+            "texto": "EH Bildu quiere controlar más el uso irregular de pantanos y reservas de agua. EH Bildu quiere sanciones más duras para las empresas energéticas que incumplen estas normas. EH Bildu propone estas medidas cuando las empresas usan esa agua para generar energía.",
             "citas": [
               "c0042"
             ],
@@ -1304,12 +1303,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 74.9,
-          "max_palabras_frase": 16,
+          "inflesz": 64.8,
+          "max_palabras_frase": 17,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 64.8 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "mundo-rural": {
@@ -1389,7 +1391,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "transporte": {
@@ -1503,7 +1506,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "igualdad": {
@@ -1585,31 +1589,31 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido defiende los derechos que las mujeres han conseguido.",
+            "texto": "EH Bildu defiende los avances en los derechos de las mujeres.",
             "citas": [
               "c0050"
             ]
           },
           {
-            "texto": "El partido quiere ampliar los derechos de las mujeres.",
+            "texto": "EH Bildu propone ampliar derechos.",
             "citas": [
               "c0050"
             ]
           },
           {
-            "texto": "Quiere reforzar la lucha contra la violencia hacia las mujeres.",
+            "texto": "EH Bildu propone reforzar la lucha contra la violencia machista.",
             "citas": [
               "c0050"
             ]
           },
           {
-            "texto": "Quiere que mujeres y hombres tengan los mismos derechos y oportunidades.",
+            "texto": "EH Bildu quiere trabajar por la igualdad entre mujeres y hombres.",
             "citas": [
               "c0050"
             ]
           },
           {
-            "texto": "El partido defiende los derechos de lesbianas, gais y bisexuales.",
+            "texto": "EH Bildu defiende los derechos de las personas con diversidad sexual y de género.",
             "citas": [
               "c0053",
               "c0055",
@@ -1617,15 +1621,7 @@
             ]
           },
           {
-            "texto": "También defiende a las personas trans e intersexuales, entre otras.",
-            "citas": [
-              "c0053",
-              "c0055",
-              "c0056"
-            ]
-          },
-          {
-            "texto": "Quiere combatir los ataques y el trato injusto hacia estas personas.",
+            "texto": "EH Bildu propone combatir la discriminación y los ataques contra estas personas.",
             "citas": [
               "c0053",
               "c0055",
@@ -1635,7 +1631,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere medidas para mujeres y jóvenes en el trabajo. Quiere reducir las diferencias de sueldo. Quiere reducir los empleos con malas condiciones. Quiere reducir los contratos de corta duración. Quiere reducir los empleos con jornadas de pocas horas.",
+            "texto": "EH Bildu propone medidas específicas para mujeres y personas jóvenes en el trabajo. EH Bildu quiere reducir las diferencias de sueldo. EH Bildu propone combatir las malas condiciones de trabajo. EH Bildu propone medidas contra los contratos temporales y el trabajo a tiempo parcial.",
             "citas": [
               "c0003"
             ],
@@ -1643,7 +1639,7 @@
             "subtema": "igualdad entre mujeres y hombres"
           },
           {
-            "texto": "El partido quiere dar gratis productos para la regla a personas que necesitan ayuda. Estas personas podrán recogerlos gratis en las farmacias. También quiere aplicar el IVA más bajo a estos productos. Este IVA se aplicará en todos los lugares de venta.",
+            "texto": "EH Bildu propone dar productos de higiene menstrual gratis a personas vulnerables. EH Bildu propone distribuir estos productos mediante farmacias. EH Bildu propone aplicar a estos productos el tipo más bajo de IVA. EH Bildu propone este IVA en todos los puntos de venta.",
             "citas": [
               "c0019"
             ],
@@ -1651,7 +1647,7 @@
             "subtema": "igualdad entre mujeres y hombres"
           },
           {
-            "texto": "El partido quiere reforzar la lucha contra la violencia hacia las mujeres. Quiere hacerlo en todos los ámbitos.",
+            "texto": "EH Bildu propone reforzar la lucha contra la violencia machista desde todos los ámbitos.",
             "citas": [
               "c0049"
             ],
@@ -1659,7 +1655,7 @@
             "subtema": "violencia de género e intrafamiliar"
           },
           {
-            "texto": "El partido quiere reconocer el derecho de cada persona a decidir sobre su cuerpo. También quiere reconocer su derecho a decidir sobre su sexualidad y su vida.",
+            "texto": "EH Bildu propone reconocer el derecho a decidir sobre el propio cuerpo. EH Bildu propone reconocer el derecho a decidir sobre la propia sexualidad. EH Bildu propone reconocer el derecho a decidir sobre la propia vida.",
             "citas": [
               "c0052"
             ],
@@ -1667,7 +1663,7 @@
             "subtema": "igualdad entre mujeres y hombres"
           },
           {
-            "texto": "El partido quiere combatir los mensajes de odio contra lesbianas, gais y bisexuales. También contra las personas trans e intersexuales, entre otras. Quiere combatir los delitos de odio, las agresiones y otros ataques contra estas personas. Quiere tomar medidas para protegerlas. También quiere enseñar a respetarlas en la sociedad y en los centros educativos.",
+            "texto": "EH Bildu propone proteger a las personas con diversidad sexual y de género. EH Bildu propone combatir los mensajes y delitos de odio contra estas personas. EH Bildu propone combatir las agresiones y los ataques contra estas personas. EH Bildu propone ayudar a la sociedad a comprender y respetar esta diversidad. EH Bildu propone trabajar este respeto también en la educación.",
             "citas": [
               "c0054"
             ],
@@ -1675,7 +1671,7 @@
             "subtema": "derechos LGTBI"
           },
           {
-            "texto": "El partido quiere espacios de diálogo para lesbianas, gais y bisexuales. También para las personas trans e intersexuales, entre otras. Quiere que tengan voz en las instituciones públicas. Sus grupos también tendrán voz. El partido quiere combatir así el trato injusto hacia estas personas.",
+            "texto": "EH Bildu propone espacios de debate para personas con diversidad sexual y de género. EH Bildu propone que sus asociaciones también participen en estos espacios. EH Bildu propone que estas personas y sus asociaciones tengan representación en las instituciones. EH Bildu propone estas medidas para combatir la discriminación.",
             "citas": [
               "c0057"
             ],
@@ -1683,7 +1679,7 @@
             "subtema": "derechos LGTBI"
           },
           {
-            "texto": "El partido quiere una ley contra el racismo. Esta ley también combatirá todas las formas de trato injusto por ser diferente.",
+            "texto": "EH Bildu propone una Ley Integral contra el Racismo y todas las formas de discriminación.",
             "citas": [
               "c0060"
             ],
@@ -1692,12 +1688,17 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 67.8,
-          "max_palabras_frase": 14,
+          "inflesz": 63.5,
+          "max_palabras_frase": 15,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 63.5 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": [
+          "En el resumen, «avances feministas» se reformula como «avances en los derechos de las mujeres». Es una simplificación cercana, pero pierde la referencia explícita al feminismo."
+        ]
       }
     },
     "familia-conciliacion": {
@@ -1761,7 +1762,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "juventud": {
@@ -1864,7 +1866,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "ciencia-digital": {
@@ -1899,31 +1902,19 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere una nueva ley para la industria vasca.",
+            "texto": "EH Bildu propone una nueva Ley de Industria para transformar la industria vasca.",
             "citas": [
               "c0038"
             ]
           },
           {
-            "texto": "La ley busca cambiar la industria vasca.",
+            "texto": "EH Bildu quiere basarla en la investigación y en introducir mejoras.",
             "citas": [
               "c0038"
             ]
           },
           {
-            "texto": "La ley se basará en estudios para lograr nuevos conocimientos.",
-            "citas": [
-              "c0038"
-            ]
-          },
-          {
-            "texto": "También se basará en nuevas ideas y en cómo ponerlas en práctica.",
-            "citas": [
-              "c0038"
-            ]
-          },
-          {
-            "texto": "La ley también tendrá como base el uso de medios digitales.",
+            "texto": "EH Bildu también quiere basarla en el desarrollo y el uso de tecnologías digitales.",
             "citas": [
               "c0038"
             ]
@@ -1931,7 +1922,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere aprobar una nueva ley para la industria vasca. La ley se centrará en las empresas pequeñas y medianas. Busca cambiar la industria vasca. Se basará en estudios para lograr nuevos conocimientos. También se basará en nuevas ideas y en cómo ponerlas en práctica. La ley también tendrá como base el uso de medios digitales.",
+            "texto": "EH Bildu propone una nueva Ley de Industria para transformar la industria vasca. EH Bildu quiere centrar esta ley en las pequeñas y medianas empresas. EH Bildu quiere basarla en la investigación y en introducir mejoras. EH Bildu también quiere basarla en el desarrollo y el uso de tecnologías digitales.",
             "citas": [
               "c0038"
             ],
@@ -1939,7 +1930,7 @@
             "subtema": "I+D+i"
           },
           {
-            "texto": "El partido exige más poder de decisión para el Gobierno vasco. Quiere que pueda decidir sobre los estudios para lograr nuevos conocimientos. También quiere que decida sobre nuevas ideas y cómo ponerlas en práctica. El partido lo pide para que el País Vasco tenga más poder de decisión.",
+            "texto": "EH Bildu exige el traspaso del poder de decisión sobre investigación, desarrollo e innovación. EH Bildu pide este traspaso como parte del autogobierno: decidir sobre los asuntos propios.",
             "citas": [
               "c0079",
               "c0080"
@@ -1949,12 +1940,15 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 74.7,
+          "inflesz": 61.8,
           "max_palabras_frase": 14,
           "ok": true,
-          "avisos": []
+          "avisos": [
+            "Aviso: INFLESZ 61.8 por debajo del objetivo 65.0"
+          ]
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "seguridad-justicia": {
@@ -2097,7 +2091,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "modelo-territorial": {
@@ -2190,35 +2185,35 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere reconocer que España está formada por varias naciones.",
+            "texto": "EH Bildu quiere reconocer que el Estado tiene varias naciones.",
             "citas": [
               "c0073",
               "c0071"
             ]
           },
           {
-            "texto": "El partido defiende el derecho de la gente vasca a decidir.",
+            "texto": "EH Bildu defiende el derecho a decidir de la ciudadanía vasca.",
             "citas": [
               "c0073",
               "c0071"
             ]
           },
           {
-            "texto": "El partido quiere recibir más poderes para decidir sobre sus propios asuntos.",
+            "texto": "EH Bildu quiere más poder para decidir sobre sus propios asuntos.",
             "citas": [
               "c0079",
               "c0076"
             ]
           },
           {
-            "texto": "El partido quiere asegurar el uso del euskera en los servicios públicos del Estado.",
+            "texto": "EH Bildu propone recibir más funciones.",
             "citas": [
               "c0079",
               "c0076"
             ]
           },
           {
-            "texto": "El euskera es la lengua vasca.",
+            "texto": "EH Bildu quiere asegurar el uso del euskera en las administraciones que dependen del Estado.",
             "citas": [
               "c0079",
               "c0076"
@@ -2227,7 +2222,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere reconocer que España está formada por varias naciones. También quiere reconocer a Euskal Herria como nación.",
+            "texto": "EH Bildu quiere reconocer que el Estado tiene varias naciones. EH Bildu quiere reconocer Euskal Herria como nación.",
             "citas": [
               "c0073",
               "c0069"
@@ -2236,7 +2231,7 @@
             "subtema": "organización territorial del Estado"
           },
           {
-            "texto": "El partido quiere reconocer el derecho de la gente vasca a decidir. Quiere resolver así los problemas de la política. La solución debe basarse en lo que quiera y decida la gente vasca.",
+            "texto": "EH Bildu quiere que la ciudadanía vasca tenga derecho a decidir. EH Bildu propone una solución política que siga la decisión de la ciudadanía vasca.",
             "citas": [
               "c0070",
               "c0071"
@@ -2245,7 +2240,7 @@
             "subtema": "autogobierno y derecho a decidir"
           },
           {
-            "texto": "El partido quiere ceder todos los poderes que aún faltan. El Estatuto Vasco y el Amejoramiento Navarro recogen esos poderes. Son las normas básicas del País Vasco y Navarra.",
+            "texto": "EH Bildu pide recibir todas las funciones pendientes del Estatuto Vasco. EH Bildu pide recibir todas las funciones pendientes del Amejoramiento Navarro.",
             "citas": [
               "c0078"
             ],
@@ -2253,7 +2248,7 @@
             "subtema": "competencias"
           },
           {
-            "texto": "El partido quiere ceder cada nueva ley o medida que afecte a los poderes propios. Quiere hacerlo de inmediato.",
+            "texto": "EH Bildu pide recibir cada nueva ley o medida sobre sus funciones. EH Bildu pide hacerlo de inmediato.",
             "citas": [
               "c0081"
             ],
@@ -2261,7 +2256,7 @@
             "subtema": "competencias"
           },
           {
-            "texto": "El partido quiere pactar cómo negociar los acuerdos sobre impuestos del País Vasco y Navarra. Quiere que ambas partes negocien en igualdad.",
+            "texto": "EH Bildu propone acordar una nueva forma de negociar de igual a igual. EH Bildu propone este cambio para el Concierto Económico Vasco. EH Bildu propone este cambio para el Convenio Económico Navarro.",
             "citas": [
               "c0084",
               "c0085"
@@ -2270,7 +2265,7 @@
             "subtema": "financiación autonómica"
           },
           {
-            "texto": "El partido quiere asegurar la atención en euskera en todos los servicios públicos del Estado. El euskera es la lengua vasca. Quiere fomentar que su personal aprenda esta lengua.",
+            "texto": "EH Bildu quiere asegurar la atención en euskera en todas las administraciones que dependen del Estado. EH Bildu quiere que sus trabajadores aprendan euskera.",
             "citas": [
               "c0077"
             ],
@@ -2278,7 +2273,7 @@
             "subtema": "lenguas cooficiales"
           },
           {
-            "texto": "El partido quiere proteger la forma propia de enseñar y los contenidos de clase. También quiere proteger el uso de las lenguas en clase. Quiere evitar que otros intervengan o impongan cambios.",
+            "texto": "EH Bildu quiere proteger sus modelos de enseñanza y sus planes de estudio. EH Bildu quiere proteger también el uso de las lenguas en esos modelos. EH Bildu quiere protegerlos frente a cambios impuestos y a la intervención de otros.",
             "citas": [
               "c0074"
             ],
@@ -2286,7 +2281,7 @@
             "subtema": "lenguas cooficiales"
           },
           {
-            "texto": "El partido quiere aumentar el uso del euskera en los medios digitales. También quiere aumentar su uso en medios con imagen y sonido.",
+            "texto": "EH Bildu quiere ampliar el uso del euskera en los medios digitales. EH Bildu quiere ampliar su uso en medios con imágenes y sonido.",
             "citas": [
               "c0075"
             ],
@@ -2295,12 +2290,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 70.2,
-          "max_palabras_frase": 15,
+          "inflesz": 66.5,
+          "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": true,
+        "observaciones": []
       }
     },
     "regeneracion-democratica": {
@@ -2453,7 +2449,8 @@
           "ok": true,
           "avisos": []
         },
-        "fiel": true
+        "fiel": true,
+        "observaciones": []
       }
     },
     "exterior-defensa": {
@@ -2510,26 +2507,26 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "El partido quiere anular las subidas de los tipos de interés.",
+            "texto": "EH Bildu exige al Banco Central Europeo que anule las subidas de los tipos de interés.",
             "citas": [
               "c0032"
             ]
           },
           {
-            "texto": "Quiere exigirlo al Banco Central Europeo y a las instituciones de la UE.",
+            "texto": "EH Bildu exige lo mismo a las instituciones comunitarias.",
             "citas": [
               "c0032"
             ]
           },
           {
-            "texto": "El partido quiere cambiar cómo se fija el precio de la energía en la UE.",
+            "texto": "EH Bildu propone cambiar el sistema europeo que fija los precios de la energía.",
             "citas": [
               "c0045",
               "c0037"
             ]
           },
           {
-            "texto": "Quiere dar fondos de la UE a cooperativas y empresas con fines sociales.",
+            "texto": "EH Bildu quiere dar fondos europeos a las cooperativas y a la economía social.",
             "citas": [
               "c0045",
               "c0037"
@@ -2538,7 +2535,7 @@
         ],
         "propuestas": [
           {
-            "texto": "El partido quiere anular las subidas de los tipos de interés desde julio de 2022. Quiere exigirlo al Banco Central Europeo y a las instituciones de la UE.",
+            "texto": "EH Bildu exige al Banco Central Europeo que anule las subidas de los tipos de interés. EH Bildu exige lo mismo a las instituciones comunitarias. EH Bildu se refiere a las subidas desde julio de 2022.",
             "citas": [
               "c0032"
             ],
@@ -2546,7 +2543,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido rechaza recuperar normas que limiten lo que el Estado puede invertir. También rechaza los planes de ahorro que recorten las ayudas sociales. También rechaza que estos planes recorten los servicios públicos.",
+            "texto": "EH Bildu rechaza volver a las reglas fiscales que limiten la inversión pública. EH Bildu rechaza las políticas de ahorro que causen recortes sociales. EH Bildu también las rechaza si recortan los servicios públicos.",
             "citas": [
               "c0039"
             ],
@@ -2554,7 +2551,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido quiere cambiar cómo se fija el precio de la energía en la UE. Quiere hacerlo desde la presidencia de la UE. Cada forma de producir energía tendría un precio según su coste real.",
+            "texto": "EH Bildu propone cambiar el sistema europeo que fija los precios de la energía. EH Bildu quiere hacer este cambio desde la Presidencia de la UE. EH Bildu propone precios distintos según el coste real de cada forma de producir energía.",
             "citas": [
               "c0046"
             ],
@@ -2562,7 +2559,7 @@
             "subtema": "Unión Europea"
           },
           {
-            "texto": "El partido quiere impulsar el plan de apoyo a empresas sociales y cooperativas. Quiere dar fondos de la UE a cooperativas y empresas con fines sociales.",
+            "texto": "EH Bildu quiere impulsar el plan de economía social y cooperativa. EH Bildu quiere dar fondos europeos a las cooperativas. EH Bildu también quiere dar estos fondos a la economía social.",
             "citas": [
               "c0037"
             ],
@@ -2571,12 +2568,13 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 71.6,
-          "max_palabras_frase": 15,
+          "inflesz": 67.2,
+          "max_palabras_frase": 16,
           "ok": true,
           "avisos": []
         },
-        "fiel": false
+        "fiel": false,
+        "observaciones": []
       }
     }
   },
@@ -2592,7 +2590,7 @@
           "r": [
             0.2921,
             0.8466,
-            0.8742,
+            0.87,
             0.863
           ]
         },
@@ -2620,7 +2618,7 @@
           "r": [
             0.3238,
             0.5687,
-            0.8131,
+            0.8089,
             0.5851
           ]
         },
@@ -2629,7 +2627,7 @@
           "r": [
             0.3238,
             0.59,
-            0.8628,
+            0.8586,
             0.6065
           ]
         },
@@ -2638,7 +2636,7 @@
           "r": [
             0.3238,
             0.6114,
-            0.8551,
+            0.8509,
             0.6278
           ]
         },
@@ -2666,7 +2664,7 @@
           "r": [
             0.3238,
             0.7397,
-            0.8506,
+            0.8465,
             0.7561
           ]
         },
@@ -2675,7 +2673,7 @@
           "r": [
             0.3238,
             0.7611,
-            0.8511,
+            0.847,
             0.7775
           ]
         },
@@ -2684,7 +2682,7 @@
           "r": [
             0.3238,
             0.7825,
-            0.8617,
+            0.8575,
             0.7989
           ]
         },
@@ -2712,7 +2710,7 @@
           "r": [
             0.3238,
             0.6649,
-            0.8514,
+            0.8472,
             0.6813
           ]
         },
@@ -2721,7 +2719,7 @@
           "r": [
             0.3238,
             0.6863,
-            0.7936,
+            0.7894,
             0.7027
           ]
         },
@@ -2749,7 +2747,7 @@
           "r": [
             0.2921,
             0.4297,
-            0.8676,
+            0.8634,
             0.4461
           ]
         },
@@ -2758,7 +2756,7 @@
           "r": [
             0.2921,
             0.4511,
-            0.8798,
+            0.8757,
             0.4675
           ]
         },
@@ -2786,16 +2784,7 @@
           "r": [
             0.2921,
             0.4297,
-            0.6738,
-            0.4461
-          ]
-        },
-        {
-          "pagina": 3,
-          "r": [
-            0.678,
-            0.4297,
-            0.8676,
+            0.8634,
             0.4461
           ]
         },
@@ -2804,25 +2793,7 @@
           "r": [
             0.2921,
             0.4511,
-            0.4817,
-            0.4675
-          ]
-        },
-        {
-          "pagina": 3,
-          "r": [
-            0.4859,
-            0.4511,
-            0.7896,
-            0.4675
-          ]
-        },
-        {
-          "pagina": 3,
-          "r": [
-            0.7938,
-            0.4511,
-            0.8798,
+            0.8757,
             0.4675
           ]
         },
@@ -2868,7 +2839,7 @@
           "r": [
             0.2921,
             0.2907,
-            0.8596,
+            0.8554,
             0.3071
           ]
         },
@@ -2877,7 +2848,7 @@
           "r": [
             0.2921,
             0.3121,
-            0.8631,
+            0.859,
             0.3285
           ]
         },
@@ -2895,7 +2866,7 @@
           "r": [
             0.2921,
             0.3655,
-            0.7931,
+            0.789,
             0.3819
           ]
         },
@@ -2904,7 +2875,7 @@
           "r": [
             0.2921,
             0.3869,
-            0.8372,
+            0.8331,
             0.4033
           ]
         },
@@ -2932,7 +2903,7 @@
           "r": [
             0.3238,
             0.8466,
-            0.846,
+            0.8419,
             0.863
           ]
         },
@@ -2960,7 +2931,7 @@
           "r": [
             0.3238,
             0.729,
-            0.8141,
+            0.81,
             0.7454
           ]
         },
@@ -2969,7 +2940,7 @@
           "r": [
             0.3238,
             0.7504,
-            0.8361,
+            0.832,
             0.7668
           ]
         },
@@ -2978,7 +2949,7 @@
           "r": [
             0.3238,
             0.7718,
-            0.8447,
+            0.8406,
             0.7882
           ]
         },
@@ -2987,7 +2958,7 @@
           "r": [
             0.3238,
             0.7931,
-            0.8523,
+            0.8482,
             0.8095
           ]
         },
@@ -3015,7 +2986,7 @@
           "r": [
             0.3238,
             0.6114,
-            0.8443,
+            0.8402,
             0.6278
           ]
         },
@@ -3024,7 +2995,7 @@
           "r": [
             0.3238,
             0.6328,
-            0.8567,
+            0.8525,
             0.6492
           ]
         },
@@ -3052,7 +3023,7 @@
           "r": [
             0.3238,
             0.5366,
-            0.8119,
+            0.8077,
             0.553
           ]
         },
@@ -3061,7 +3032,7 @@
           "r": [
             0.3238,
             0.558,
-            0.8192,
+            0.8151,
             0.5744
           ]
         },
@@ -3070,7 +3041,7 @@
           "r": [
             0.3238,
             0.5793,
-            0.8236,
+            0.8195,
             0.5958
           ]
         },
@@ -3079,7 +3050,7 @@
           "r": [
             0.3238,
             0.6007,
-            0.838,
+            0.8338,
             0.6171
           ]
         },
@@ -3107,7 +3078,7 @@
           "r": [
             0.3238,
             0.1945,
-            0.8775,
+            0.8733,
             0.2109
           ]
         },
@@ -3116,7 +3087,7 @@
           "r": [
             0.3238,
             0.2159,
-            0.8494,
+            0.8452,
             0.2323
           ]
         },
@@ -3144,7 +3115,7 @@
           "r": [
             0.3238,
             0.3121,
-            0.831,
+            0.8269,
             0.3285
           ]
         },
@@ -3172,7 +3143,7 @@
           "r": [
             0.3238,
             0.8038,
-            0.8112,
+            0.807,
             0.8202
           ]
         },
@@ -3181,7 +3152,7 @@
           "r": [
             0.3238,
             0.8252,
-            0.8238,
+            0.8197,
             0.8416
           ]
         },
@@ -3190,7 +3161,7 @@
           "r": [
             0.3238,
             0.8466,
-            0.8839,
+            0.8798,
             0.863
           ]
         },
@@ -3218,7 +3189,7 @@
           "r": [
             0.3238,
             0.3869,
-            0.8536,
+            0.8494,
             0.4033
           ]
         },
@@ -3246,7 +3217,7 @@
           "r": [
             0.3238,
             0.4404,
-            0.8716,
+            0.8675,
             0.4568
           ]
         },
@@ -3274,7 +3245,7 @@
           "r": [
             0.3238,
             0.0983,
-            0.8823,
+            0.8782,
             0.1147
           ]
         },
@@ -3302,7 +3273,7 @@
           "r": [
             0.3238,
             0.2373,
-            0.8522,
+            0.8481,
             0.2537
           ]
         },
@@ -3311,7 +3282,7 @@
           "r": [
             0.3238,
             0.2586,
-            0.8589,
+            0.8548,
             0.2751
           ]
         },
@@ -3339,7 +3310,7 @@
           "r": [
             0.3238,
             0.5366,
-            0.8558,
+            0.8516,
             0.553
           ]
         },
@@ -3348,7 +3319,7 @@
           "r": [
             0.3238,
             0.558,
-            0.8518,
+            0.8477,
             0.5744
           ]
         },
@@ -3357,7 +3328,7 @@
           "r": [
             0.3238,
             0.5793,
-            0.8498,
+            0.8456,
             0.5957
           ]
         },
@@ -3385,16 +3356,7 @@
           "r": [
             0.3238,
             0.7504,
-            0.6305,
-            0.7668
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.6347,
-            0.7504,
-            0.8106,
+            0.8064,
             0.7668
           ]
         },
@@ -3403,25 +3365,7 @@
           "r": [
             0.3238,
             0.7718,
-            0.3849,
-            0.7882
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.389,
-            0.7718,
-            0.7891,
-            0.7882
-          ]
-        },
-        {
-          "pagina": 6,
-          "r": [
-            0.7932,
-            0.7718,
-            0.8572,
+            0.8531,
             0.7882
           ]
         },
@@ -3430,14 +3374,14 @@
           "r": [
             0.3238,
             0.7931,
-            0.5548,
+            0.8322,
             0.8095
           ]
         },
         {
           "pagina": 6,
           "r": [
-            0.4527,
+            0.3238,
             0.8145,
             0.617,
             0.8309
@@ -3458,7 +3402,7 @@
           "r": [
             0.3238,
             0.3121,
-            0.8833,
+            0.8791,
             0.3285
           ]
         },
@@ -3467,7 +3411,7 @@
           "r": [
             0.3238,
             0.3335,
-            0.8623,
+            0.8581,
             0.3499
           ]
         },
@@ -3495,7 +3439,7 @@
           "r": [
             0.3238,
             0.6756,
-            0.8519,
+            0.8477,
             0.692
           ]
         },
@@ -3504,7 +3448,7 @@
           "r": [
             0.3238,
             0.6969,
-            0.8233,
+            0.8191,
             0.7133
           ]
         },
@@ -3532,7 +3476,7 @@
           "r": [
             0.3238,
             0.4831,
-            0.8712,
+            0.867,
             0.4995
           ]
         },
@@ -3560,7 +3504,7 @@
           "r": [
             0.3238,
             0.3869,
-            0.8072,
+            0.803,
             0.4033
           ]
         },
@@ -3569,7 +3513,7 @@
           "r": [
             0.3238,
             0.4083,
-            0.8506,
+            0.8464,
             0.4247
           ]
         },
@@ -3578,7 +3522,7 @@
           "r": [
             0.3238,
             0.4297,
-            0.8714,
+            0.8672,
             0.4461
           ]
         },
@@ -3606,7 +3550,7 @@
           "r": [
             0.3238,
             0.8466,
-            0.8816,
+            0.8775,
             0.863
           ]
         },
@@ -3634,7 +3578,7 @@
           "r": [
             0.3383,
             0.5793,
-            0.8498,
+            0.8456,
             0.5957
           ]
         },
@@ -3662,7 +3606,7 @@
           "r": [
             0.3238,
             0.4404,
-            0.8753,
+            0.8712,
             0.4568
           ]
         },
@@ -3671,7 +3615,7 @@
           "r": [
             0.3238,
             0.4617,
-            0.8479,
+            0.8437,
             0.4781
           ]
         },
@@ -3699,7 +3643,7 @@
           "r": [
             0.3238,
             0.4404,
-            0.8753,
+            0.8712,
             0.4568
           ]
         },
@@ -3708,7 +3652,7 @@
           "r": [
             0.3238,
             0.4617,
-            0.8479,
+            0.8437,
             0.4781
           ]
         },
@@ -3717,7 +3661,7 @@
           "r": [
             0.3238,
             0.4831,
-            0.8572,
+            0.853,
             0.4995
           ]
         },
@@ -3726,7 +3670,7 @@
           "r": [
             0.3238,
             0.5045,
-            0.8767,
+            0.8726,
             0.5209
           ]
         },
@@ -3754,7 +3698,7 @@
           "r": [
             0.3238,
             0.2266,
-            0.8611,
+            0.8569,
             0.243
           ]
         },
@@ -3763,7 +3707,7 @@
           "r": [
             0.3238,
             0.248,
-            0.8728,
+            0.8686,
             0.2644
           ]
         },
@@ -3772,7 +3716,7 @@
           "r": [
             0.3238,
             0.2693,
-            0.8198,
+            0.8156,
             0.2857
           ]
         },
@@ -3800,7 +3744,7 @@
           "r": [
             0.3238,
             0.1304,
-            0.7795,
+            0.7753,
             0.1468
           ]
         },
@@ -3809,7 +3753,7 @@
           "r": [
             0.3238,
             0.1517,
-            0.8327,
+            0.8286,
             0.1682
           ]
         },
@@ -3818,7 +3762,7 @@
           "r": [
             0.3238,
             0.1731,
-            0.8428,
+            0.8387,
             0.1895
           ]
         },
@@ -3846,16 +3790,16 @@
           "r": [
             0.3238,
             0.3228,
-            0.7395,
+            0.847,
             0.3392
           ]
         },
         {
           "pagina": 7,
           "r": [
-            0.621,
+            0.3238,
             0.3442,
-            0.7921,
+            0.7879,
             0.3606
           ]
         },
@@ -3864,25 +3808,7 @@
           "r": [
             0.3238,
             0.3655,
-            0.4323,
-            0.3819
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.4365,
-            0.3655,
-            0.7261,
-            0.3819
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.7302,
-            0.3655,
-            0.8845,
+            0.8803,
             0.3819
           ]
         },
@@ -3890,15 +3816,6 @@
           "pagina": 7,
           "r": [
             0.3238,
-            0.3869,
-            0.5534,
-            0.4033
-          ]
-        },
-        {
-          "pagina": 7,
-          "r": [
-            0.5576,
             0.3869,
             0.801,
             0.4033
@@ -3928,7 +3845,7 @@
           "r": [
             0.2921,
             0.2907,
-            0.8626,
+            0.8584,
             0.3071
           ]
         },
@@ -3937,7 +3854,7 @@
           "r": [
             0.2921,
             0.3121,
-            0.8795,
+            0.8753,
             0.3285
           ]
         },
@@ -3965,7 +3882,7 @@
           "r": [
             0.2921,
             0.2373,
-            0.8275,
+            0.8234,
             0.2537
           ]
         },
@@ -3993,7 +3910,7 @@
           "r": [
             0.2619,
             0.7397,
-            0.7932,
+            0.789,
             0.7561
           ]
         },
@@ -4002,7 +3919,7 @@
           "r": [
             0.2619,
             0.761,
-            0.8383,
+            0.8342,
             0.7775
           ]
         },
@@ -4030,7 +3947,7 @@
           "r": [
             0.2921,
             0.1411,
-            0.8231,
+            0.8189,
             0.1575
           ]
         },
@@ -4039,7 +3956,7 @@
           "r": [
             0.2921,
             0.1624,
-            0.8575,
+            0.8533,
             0.1788
           ]
         },
@@ -4048,7 +3965,7 @@
           "r": [
             0.2921,
             0.1838,
-            0.8398,
+            0.8357,
             0.2002
           ]
         },
@@ -4076,7 +3993,7 @@
           "r": [
             0.2921,
             0.4831,
-            0.8819,
+            0.8778,
             0.4995
           ]
         },
@@ -4085,7 +4002,7 @@
           "r": [
             0.2921,
             0.5045,
-            0.8813,
+            0.8772,
             0.5209
           ]
         },
@@ -4113,7 +4030,7 @@
           "r": [
             0.2921,
             0.5579,
-            0.8621,
+            0.858,
             0.5744
           ]
         },
@@ -4122,7 +4039,7 @@
           "r": [
             0.2921,
             0.5793,
-            0.8685,
+            0.8643,
             0.5957
           ]
         },
@@ -4150,7 +4067,7 @@
           "r": [
             0.2921,
             0.6328,
-            0.8385,
+            0.8343,
             0.6492
           ]
         },
@@ -4159,7 +4076,7 @@
           "r": [
             0.2921,
             0.6542,
-            0.8173,
+            0.8132,
             0.6706
           ]
         },
@@ -4168,7 +4085,7 @@
           "r": [
             0.2921,
             0.6755,
-            0.8688,
+            0.8646,
             0.6919
           ]
         },
@@ -4196,7 +4113,7 @@
           "r": [
             0.2921,
             0.4083,
-            0.8566,
+            0.8525,
             0.4247
           ]
         },
@@ -4205,7 +4122,7 @@
           "r": [
             0.2921,
             0.4297,
-            0.849,
+            0.8449,
             0.4461
           ]
         },
@@ -4233,7 +4150,7 @@
           "r": [
             0.2921,
             0.59,
-            0.8623,
+            0.8582,
             0.6064
           ]
         },
@@ -4242,7 +4159,7 @@
           "r": [
             0.2921,
             0.6114,
-            0.8462,
+            0.842,
             0.6278
           ]
         },
@@ -4270,7 +4187,7 @@
           "r": [
             0.2921,
             0.59,
-            0.8623,
+            0.8582,
             0.6064
           ]
         },
@@ -4279,7 +4196,7 @@
           "r": [
             0.2921,
             0.6114,
-            0.8462,
+            0.842,
             0.6278
           ]
         },
@@ -4297,7 +4214,7 @@
           "r": [
             0.2619,
             0.6755,
-            0.8349,
+            0.8308,
             0.6919
           ]
         },
@@ -4306,7 +4223,7 @@
           "r": [
             0.2619,
             0.6969,
-            0.8682,
+            0.8641,
             0.7133
           ]
         },
@@ -4315,7 +4232,7 @@
           "r": [
             0.2619,
             0.7183,
-            0.8711,
+            0.867,
             0.7347
           ]
         },
@@ -4343,7 +4260,7 @@
           "r": [
             0.2619,
             0.7717,
-            0.8601,
+            0.856,
             0.7881
           ]
         },
@@ -4352,7 +4269,7 @@
           "r": [
             0.2619,
             0.7931,
-            0.8388,
+            0.8347,
             0.8095
           ]
         },
@@ -4380,7 +4297,7 @@
           "r": [
             0.2619,
             0.6755,
-            0.8349,
+            0.8308,
             0.6919
           ]
         },
@@ -4389,7 +4306,7 @@
           "r": [
             0.2619,
             0.6969,
-            0.8682,
+            0.8641,
             0.7133
           ]
         },
@@ -4398,7 +4315,7 @@
           "r": [
             0.2619,
             0.7183,
-            0.8711,
+            0.867,
             0.7347
           ]
         },
@@ -4426,7 +4343,7 @@
           "r": [
             0.2921,
             0.451,
-            0.7561,
+            0.7519,
             0.4675
           ]
         },
@@ -4435,7 +4352,7 @@
           "r": [
             0.2921,
             0.4724,
-            0.76,
+            0.7558,
             0.4888
           ]
         },
@@ -4444,7 +4361,7 @@
           "r": [
             0.2921,
             0.4938,
-            0.7481,
+            0.744,
             0.5102
           ]
         },
@@ -4472,7 +4389,7 @@
           "r": [
             0.2921,
             0.3335,
-            0.8237,
+            0.8196,
             0.3499
           ]
         },
@@ -4481,7 +4398,7 @@
           "r": [
             0.2921,
             0.3548,
-            0.8327,
+            0.8286,
             0.3712
           ]
         },
@@ -4509,7 +4426,7 @@
           "r": [
             0.2921,
             0.3335,
-            0.8237,
+            0.8196,
             0.3499
           ]
         },
@@ -4518,7 +4435,7 @@
           "r": [
             0.2921,
             0.3548,
-            0.8327,
+            0.8286,
             0.3712
           ]
         },
@@ -4527,7 +4444,7 @@
           "r": [
             0.2921,
             0.3762,
-            0.8473,
+            0.8431,
             0.3926
           ]
         },
@@ -4536,7 +4453,7 @@
           "r": [
             0.2921,
             0.3976,
-            0.8532,
+            0.8491,
             0.414
           ]
         },
@@ -4564,7 +4481,7 @@
           "r": [
             0.2921,
             0.2373,
-            0.8372,
+            0.833,
             0.2537
           ]
         },
@@ -4573,7 +4490,7 @@
           "r": [
             0.2921,
             0.2586,
-            0.8773,
+            0.8732,
             0.275
           ]
         },
@@ -4582,7 +4499,7 @@
           "r": [
             0.2921,
             0.28,
-            0.8555,
+            0.8514,
             0.2964
           ]
         },
@@ -4610,7 +4527,7 @@
           "r": [
             0.2921,
             0.1411,
-            0.8115,
+            0.8073,
             0.1575
           ]
         },
@@ -4619,7 +4536,7 @@
           "r": [
             0.2921,
             0.1624,
-            0.8285,
+            0.8244,
             0.1788
           ]
         },
@@ -4628,7 +4545,7 @@
           "r": [
             0.2921,
             0.1838,
-            0.8374,
+            0.8332,
             0.2002
           ]
         },
@@ -4656,7 +4573,7 @@
           "r": [
             0.6743,
             0.5045,
-            0.8469,
+            0.8428,
             0.5209
           ]
         },
@@ -4665,7 +4582,7 @@
           "r": [
             0.2619,
             0.5259,
-            0.7973,
+            0.7932,
             0.5423
           ]
         },
@@ -4693,7 +4610,7 @@
           "r": [
             0.2619,
             0.4831,
-            0.769,
+            0.7648,
             0.4996
           ]
         },
@@ -4702,7 +4619,7 @@
           "r": [
             0.2619,
             0.5045,
-            0.8469,
+            0.8428,
             0.5209
           ]
         },
@@ -4711,7 +4628,7 @@
           "r": [
             0.2619,
             0.5259,
-            0.7973,
+            0.7932,
             0.5423
           ]
         },
@@ -4739,7 +4656,7 @@
           "r": [
             0.5558,
             0.6435,
-            0.8771,
+            0.873,
             0.6599
           ]
         },
@@ -4748,7 +4665,7 @@
           "r": [
             0.2619,
             0.6649,
-            0.8569,
+            0.8528,
             0.6813
           ]
         },
@@ -4757,7 +4674,7 @@
           "r": [
             0.2619,
             0.6862,
-            0.8471,
+            0.843,
             0.7026
           ]
         },
@@ -4766,7 +4683,7 @@
           "r": [
             0.2619,
             0.7076,
-            0.846,
+            0.8418,
             0.724
           ]
         },
@@ -4794,7 +4711,7 @@
           "r": [
             0.2619,
             0.5473,
-            0.7874,
+            0.7833,
             0.5637
           ]
         },
@@ -4803,7 +4720,7 @@
           "r": [
             0.2619,
             0.5686,
-            0.8732,
+            0.8691,
             0.5851
           ]
         },
@@ -4831,7 +4748,7 @@
           "r": [
             0.2619,
             0.8145,
-            0.8599,
+            0.8557,
             0.831
           ]
         },
@@ -4859,7 +4776,7 @@
           "r": [
             0.2619,
             0.0983,
-            0.8704,
+            0.8662,
             0.1147
           ]
         },
@@ -4868,7 +4785,7 @@
           "r": [
             0.2619,
             0.1197,
-            0.8482,
+            0.8441,
             0.1361
           ]
         },
@@ -4877,7 +4794,7 @@
           "r": [
             0.2619,
             0.141,
-            0.8418,
+            0.8376,
             0.1575
           ]
         },
@@ -4886,7 +4803,7 @@
           "r": [
             0.2619,
             0.1624,
-            0.8633,
+            0.8592,
             0.1788
           ]
         },
@@ -4914,7 +4831,7 @@
           "r": [
             0.3638,
             0.141,
-            0.8418,
+            0.8376,
             0.1575
           ]
         },
@@ -4923,7 +4840,7 @@
           "r": [
             0.2619,
             0.1624,
-            0.8633,
+            0.8592,
             0.1788
           ]
         },
@@ -4951,7 +4868,7 @@
           "r": [
             0.2619,
             0.2159,
-            0.8142,
+            0.8101,
             0.2323
           ]
         },
@@ -4960,7 +4877,7 @@
           "r": [
             0.2619,
             0.2373,
-            0.8434,
+            0.8393,
             0.2537
           ]
         },
@@ -4988,7 +4905,7 @@
           "r": [
             0.2619,
             0.2159,
-            0.8142,
+            0.8101,
             0.2323
           ]
         },
@@ -4997,7 +4914,7 @@
           "r": [
             0.2619,
             0.2373,
-            0.8434,
+            0.8393,
             0.2537
           ]
         },
@@ -5006,7 +4923,7 @@
           "r": [
             0.2619,
             0.2586,
-            0.8506,
+            0.8464,
             0.275
           ]
         },
@@ -5034,7 +4951,7 @@
           "r": [
             0.2921,
             0.6542,
-            0.8458,
+            0.8416,
             0.6706
           ]
         },
@@ -5062,7 +4979,7 @@
           "r": [
             0.2921,
             0.4618,
-            0.861,
+            0.8568,
             0.4782
           ]
         },
@@ -5071,7 +4988,7 @@
           "r": [
             0.2921,
             0.4831,
-            0.8851,
+            0.8809,
             0.4995
           ]
         },
@@ -5080,7 +4997,7 @@
           "r": [
             0.2921,
             0.5045,
-            0.8407,
+            0.8365,
             0.5209
           ]
         },
@@ -5108,7 +5025,7 @@
           "r": [
             0.2921,
             0.729,
-            0.8235,
+            0.8193,
             0.7454
           ]
         },
@@ -5136,7 +5053,7 @@
           "r": [
             0.2921,
             0.558,
-            0.857,
+            0.8529,
             0.5744
           ]
         },
@@ -5145,7 +5062,7 @@
           "r": [
             0.2921,
             0.5793,
-            0.8852,
+            0.881,
             0.5957
           ]
         },
@@ -5154,7 +5071,7 @@
           "r": [
             0.2921,
             0.6007,
-            0.876,
+            0.8718,
             0.6171
           ]
         },
@@ -5182,7 +5099,7 @@
           "r": [
             0.2921,
             0.3442,
-            0.8259,
+            0.8218,
             0.3606
           ]
         },
@@ -5210,7 +5127,7 @@
           "r": [
             0.2921,
             0.3442,
-            0.8259,
+            0.8218,
             0.3606
           ]
         },
@@ -5219,7 +5136,7 @@
           "r": [
             0.2921,
             0.3655,
-            0.8688,
+            0.8646,
             0.382
           ]
         },
@@ -5228,7 +5145,7 @@
           "r": [
             0.2921,
             0.3869,
-            0.8296,
+            0.8254,
             0.4033
           ]
         },
@@ -5237,7 +5154,7 @@
           "r": [
             0.2921,
             0.4083,
-            0.8193,
+            0.8152,
             0.4247
           ]
         },
@@ -5284,7 +5201,7 @@
           "r": [
             0.2619,
             0.1411,
-            0.8816,
+            0.8774,
             0.1575
           ]
         },
@@ -5293,7 +5210,7 @@
           "r": [
             0.2619,
             0.1624,
-            0.8779,
+            0.8737,
             0.1788
           ]
         },
@@ -5321,7 +5238,7 @@
           "r": [
             0.2921,
             0.7504,
-            0.8604,
+            0.8562,
             0.7668
           ]
         },
@@ -5330,7 +5247,7 @@
           "r": [
             0.2921,
             0.7717,
-            0.8217,
+            0.8176,
             0.7882
           ]
         },
@@ -5339,7 +5256,7 @@
           "r": [
             0.2921,
             0.7931,
-            0.8353,
+            0.8311,
             0.8095
           ]
         },
@@ -5367,7 +5284,7 @@
           "r": [
             0.2921,
             0.7504,
-            0.8604,
+            0.8562,
             0.7668
           ]
         },
@@ -5376,7 +5293,7 @@
           "r": [
             0.2921,
             0.7717,
-            0.8217,
+            0.8176,
             0.7882
           ]
         },
@@ -5385,7 +5302,7 @@
           "r": [
             0.2921,
             0.7931,
-            0.8353,
+            0.8311,
             0.8095
           ]
         },
@@ -5394,7 +5311,7 @@
           "r": [
             0.2921,
             0.8145,
-            0.8566,
+            0.8524,
             0.8309
           ]
         },
@@ -5422,7 +5339,7 @@
           "r": [
             0.2921,
             0.0983,
-            0.7896,
+            0.7854,
             0.1147
           ]
         },
@@ -5431,7 +5348,7 @@
           "r": [
             0.2921,
             0.1197,
-            0.8278,
+            0.8236,
             0.1361
           ]
         },
@@ -5478,7 +5395,7 @@
           "r": [
             0.2921,
             0.5687,
-            0.8764,
+            0.8723,
             0.5851
           ]
         },
@@ -5487,7 +5404,7 @@
           "r": [
             0.2921,
             0.59,
-            0.8649,
+            0.8607,
             0.6065
           ]
         },
@@ -5515,7 +5432,7 @@
           "r": [
             0.2921,
             0.6435,
-            0.7979,
+            0.7938,
             0.6599
           ]
         },
@@ -5524,7 +5441,7 @@
           "r": [
             0.2921,
             0.6649,
-            0.8685,
+            0.8643,
             0.6813
           ]
         },
@@ -5552,7 +5469,7 @@
           "r": [
             0.2921,
             0.7183,
-            0.8484,
+            0.8442,
             0.7347
           ]
         },
@@ -5561,7 +5478,7 @@
           "r": [
             0.2921,
             0.7397,
-            0.8242,
+            0.82,
             0.7561
           ]
         },
@@ -5570,7 +5487,7 @@
           "r": [
             0.2921,
             0.7611,
-            0.8675,
+            0.8633,
             0.7775
           ]
         },
@@ -5598,7 +5515,7 @@
           "r": [
             0.2619,
             0.4618,
-            0.8592,
+            0.8551,
             0.4782
           ]
         },
@@ -5607,7 +5524,7 @@
           "r": [
             0.2619,
             0.4831,
-            0.8526,
+            0.8485,
             0.4995
           ]
         },
@@ -5635,7 +5552,7 @@
           "r": [
             0.2921,
             0.3762,
-            0.7869,
+            0.7827,
             0.3926
           ]
         },
@@ -5644,7 +5561,7 @@
           "r": [
             0.2921,
             0.3976,
-            0.8017,
+            0.7975,
             0.414
           ]
         },
@@ -5672,7 +5589,7 @@
           "r": [
             0.2921,
             0.451,
-            0.805,
+            0.8008,
             0.4675
           ]
         },
@@ -5681,7 +5598,7 @@
           "r": [
             0.2921,
             0.4724,
-            0.8585,
+            0.8543,
             0.4888
           ]
         },
@@ -5709,7 +5626,7 @@
           "r": [
             0.2921,
             0.2586,
-            0.8062,
+            0.802,
             0.275
           ]
         },
@@ -5737,7 +5654,7 @@
           "r": [
             0.2921,
             0.2586,
-            0.8062,
+            0.802,
             0.275
           ]
         },
@@ -5746,7 +5663,7 @@
           "r": [
             0.2921,
             0.28,
-            0.8689,
+            0.8647,
             0.2964
           ]
         },
@@ -5755,7 +5672,7 @@
           "r": [
             0.2921,
             0.3014,
-            0.8538,
+            0.8496,
             0.3178
           ]
         },
@@ -5764,7 +5681,7 @@
           "r": [
             0.2921,
             0.3228,
-            0.8247,
+            0.8205,
             0.3392
           ]
         },
@@ -5792,7 +5709,7 @@
           "r": [
             0.2619,
             0.6542,
-            0.8337,
+            0.8295,
             0.6706
           ]
         },
@@ -5820,7 +5737,7 @@
           "r": [
             0.2619,
             0.6542,
-            0.8337,
+            0.8295,
             0.6706
           ]
         },
@@ -5829,7 +5746,7 @@
           "r": [
             0.2619,
             0.6756,
-            0.847,
+            0.8429,
             0.692
           ]
         },
@@ -5838,7 +5755,7 @@
           "r": [
             0.2619,
             0.6969,
-            0.8287,
+            0.8245,
             0.7133
           ]
         },
@@ -5860,9 +5777,55 @@
       "pagina": 15,
       "literal": "Régimen Económico de la Seguridad Social \"\" Inspección de Trabajo \"\" Políticas pasivas de empleo \"\" SMI propio y adaptado \"\" I+D+i",
       "idioma": "es",
-      "rects": [],
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.7931,
+            0.666,
+            0.8096
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8145,
+            0.4831,
+            0.8309
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8359,
+            0.5276,
+            0.8523
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8573,
+            0.4878,
+            0.8737
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8786,
+            0.3397,
+            0.8951
+          ]
+        }
+      ],
       "verificada": true,
-      "resaltada": false
+      "resaltada": true
     },
     "c0081": {
       "chunk": "bildu-23-p016-01",
@@ -5875,7 +5838,7 @@
           "r": [
             0.2619,
             0.3335,
-            0.8151,
+            0.8109,
             0.3499
           ]
         },
@@ -5884,7 +5847,7 @@
           "r": [
             0.2619,
             0.3548,
-            0.7723,
+            0.7681,
             0.3712
           ]
         },
@@ -5906,18 +5869,101 @@
       "pagina": 16,
       "literal": "Becas \"\" Cercanías \"\" Migración \"\" Marco Vasco y Navarro de Relaciones Laborales",
       "idioma": "es",
-      "rects": [],
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.0983,
+            0.342,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1197,
+            0.3772,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.141,
+            0.3806,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1624,
+            0.7019,
+            0.1788
+          ]
+        }
+      ],
       "verificada": true,
-      "resaltada": false
+      "resaltada": true
     },
     "c0083": {
       "chunk": "bildu-23-p016-01",
       "pagina": 16,
       "literal": "Becas \"\" Cercanías \"\" Migración \"\" Marco Vasco y Navarro de Relaciones Laborales \"\" Puertos y aeropuertos",
       "idioma": "es",
-      "rects": [],
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.0983,
+            0.342,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1197,
+            0.3772,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.141,
+            0.3806,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1624,
+            0.7019,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1838,
+            0.4812,
+            0.2002
+          ]
+        }
+      ],
       "verificada": true,
-      "resaltada": false
+      "resaltada": true
     },
     "c0084": {
       "chunk": "bildu-23-p016-02",
@@ -5930,7 +5976,7 @@
           "r": [
             0.2619,
             0.4673,
-            0.7064,
+            0.6959,
             0.4904
           ]
         },
@@ -5948,7 +5994,7 @@
           "r": [
             0.2619,
             0.5259,
-            0.8465,
+            0.8423,
             0.5423
           ]
         },
@@ -5976,7 +6022,7 @@
           "r": [
             0.2619,
             0.59,
-            0.8518,
+            0.8476,
             0.6064
           ]
         },
@@ -5995,15 +6041,6 @@
     }
   },
   "incidencias": [
-    "educacion: la lectura fácil no supera la validación tras 4 intentos",
-    "proteccion-social: la lectura fácil no supera la validación tras 4 intentos",
-    "pensiones: la lectura fácil no supera la validación tras 4 intentos",
-    "inmigracion: la lectura fácil no supera la validación tras 4 intentos",
-    "economia-empleo: la lectura fácil no supera la validación tras 4 intentos",
-    "medio-ambiente-energia: la lectura fácil no supera la validación tras 4 intentos",
-    "ciencia-digital: la lectura fácil no supera la validación tras 4 intentos",
-    "igualdad: la lectura fácil no supera la validación tras 4 intentos",
-    "modelo-territorial: la lectura fácil no supera la validación tras 4 intentos",
     "exterior-defensa: la lectura fácil no supera la validación tras 4 intentos"
   ]
 }
