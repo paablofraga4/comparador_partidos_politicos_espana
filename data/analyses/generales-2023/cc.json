@@ -1,0 +1,6419 @@
+{
+  "convocatoria": "generales-2023",
+  "candidatura": "cc",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:04Z",
+  "documento": {
+    "id": "generales-2023/cc",
+    "sha256": "ebcac3e6b17012c77d1a761041dc1615c2b28a527666a1467db66e4b82b49c33",
+    "paginas": 14,
+    "idioma": "es"
+  },
+  "generado": {
+    "fecha": "2026-10-05T21:52:25Z",
+    "modelo": "gpt-6.1-sol",
+    "modelo_lectura_facil": "gpt-6.1-sol",
+    "prompt": "analisis@2",
+    "tokens_entrada": 278215,
+    "tokens_cache": 208670,
+    "tokens_salida": 116544,
+    "coste_usd": 1.5516
+  },
+  "temas": {
+    "vivienda": {
+      "menciona": false,
+      "resumen": [],
+      "propuestas": [],
+      "red_seguridad": {
+        "ejecutada": true,
+        "fragmentos_revisados": [
+          "cc-23-p011-02",
+          "cc-23-p009-02",
+          "cc-23-p005-01",
+          "cc-23-p012-02",
+          "cc-23-p006-02",
+          "cc-23-p008-02"
+        ],
+        "reanalizado": false
+      }
+    },
+    "economia-empleo": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Plantea orientar las políticas laborales hacia la creación de empleo, la estabilidad y la mejora de las condiciones salariales.",
+          "citas": [
+            "c0019"
+          ]
+        },
+        {
+          "texto": "Propone diversificar la economía canaria mediante la industria, la I+D y el sector primario.",
+          "citas": [
+            "c0052"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Mantener la partida presupuestaria del Plan Integral de Empleo de Canarias recogida en la Ley de Empleo.",
+          "citas": [
+            "c0021"
+          ],
+          "id": "economia-empleo-1",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Mantener la partida específica para crear empleo mediante un programa de formación profesional en sectores de servicios avanzados, conforme al artículo 23 de la Ley 19/1994.",
+          "citas": [
+            "c0020"
+          ],
+          "id": "economia-empleo-2",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Mantener los incentivos a la contratación indefinida de jóvenes por microempresas y autónomos, a la contratación en proyectos de emprendimiento joven, al primer empleo joven y a los contratos en prácticas.",
+          "citas": [
+            "c0014"
+          ],
+          "id": "economia-empleo-3",
+          "subtema": "reforma laboral y contratos"
+        },
+        {
+          "texto": "Establecer bonificaciones en la cuota empresarial de la Seguridad Social para contratos indefinidos de jóvenes de 16 a 30 años, mayores de 45 años y mujeres en ocupaciones donde estén insuficientemente representadas.",
+          "citas": [
+            "c0018"
+          ],
+          "id": "economia-empleo-4",
+          "subtema": "reforma laboral y contratos"
+        },
+        {
+          "texto": "Consolidar las medidas del REF que compensan los sobrecostes estructurales de la industria canaria y rebajar las condiciones de acceso a los Incentivos Económicos Regionales.",
+          "citas": [
+            "c0060"
+          ],
+          "id": "economia-empleo-5",
+          "subtema": "industria"
+        },
+        {
+          "texto": "Garantizar que las ventas desde Canarias sean accesibles desde cualquier Estado miembro de la Unión Europea, sin barreras para las pymes exportadoras.",
+          "citas": [
+            "c0069"
+          ],
+          "id": "economia-empleo-6",
+          "subtema": "autónomos y pymes"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC quiere orientar las políticas de trabajo hacia la creación de empleo.",
+            "citas": [
+              "c0019"
+            ]
+          },
+          {
+            "texto": "CC quiere que el empleo sea estable y mejoren los salarios.",
+            "citas": [
+              "c0019"
+            ]
+          },
+          {
+            "texto": "CC propone que la economía canaria tenga más tipos de actividades.",
+            "citas": [
+              "c0052"
+            ]
+          },
+          {
+            "texto": "CC quiere impulsar la industria, la investigación y el desarrollo.",
+            "citas": [
+              "c0052"
+            ]
+          },
+          {
+            "texto": "CC también quiere impulsar el sector primario, que obtiene recursos de la naturaleza.",
+            "citas": [
+              "c0052"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC quiere mantener el dinero del Plan Integral de Empleo de Canarias. CC propone mantenerlo como establece la Ley de Empleo.",
+            "citas": [
+              "c0021"
+            ],
+            "id": "economia-empleo-1",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "CC quiere mantener el dinero destinado a crear empleo con un programa de formación profesional. CC propone esta formación en sectores de servicios especializados. CC propone seguir el artículo 23 de la Ley 19/1994.",
+            "citas": [
+              "c0020"
+            ],
+            "id": "economia-empleo-2",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "CC quiere mantener las ayudas para contratar jóvenes con contratos indefinidos. CC propone estas ayudas para empresas muy pequeñas y autónomos. CC quiere mantener las ayudas para contratar en proyectos empresariales de jóvenes. CC también quiere mantener las ayudas para el primer empleo de jóvenes. CC quiere mantener las ayudas para los contratos en prácticas.",
+            "citas": [
+              "c0014"
+            ],
+            "id": "economia-empleo-3",
+            "subtema": "reforma laboral y contratos"
+          },
+          {
+            "texto": "CC propone reducir los pagos empresariales a la Seguridad Social por ciertos contratos indefinidos. CC propone esta reducción para jóvenes de 16 a 30 años. CC también la propone para mayores de 45 años. CC también la propone para mujeres en trabajos donde hay pocas mujeres.",
+            "citas": [
+              "c0018"
+            ],
+            "id": "economia-empleo-4",
+            "subtema": "reforma laboral y contratos"
+          },
+          {
+            "texto": "CC quiere reforzar las medidas del Régimen Económico y Fiscal de Canarias. CC quiere que estas medidas compensen los costes adicionales propios de la industria canaria. CC propone reducir los requisitos para acceder a los Incentivos Económicos Regionales.",
+            "citas": [
+              "c0060"
+            ],
+            "id": "economia-empleo-5",
+            "subtema": "industria"
+          },
+          {
+            "texto": "CC quiere que las ventas desde Canarias sean accesibles en toda la Unión Europea. CC quiere evitar barreras para las pequeñas y medianas empresas que venden al extranjero.",
+            "citas": [
+              "c0069"
+            ],
+            "id": "economia-empleo-6",
+            "subtema": "autónomos y pymes"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 60.1,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 60.1 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": [
+          "En la propuesta 2, «sectores de servicios avanzados» se adapta como «sectores de servicios especializados». No son necesariamente equivalentes; se cambia ligeramente el tipo de sectores al que se refiere la propuesta.",
+          "En la propuesta 5, «consolidar las medidas» se adapta como «reforzar las medidas». Son expresiones cercanas, pero no idénticas en su matiz."
+        ]
+      }
+    },
+    "impuestos": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone prolongar la bonificación del IRPF para residentes en La Palma y corregir el cobro de IVA en lugar de IGIC en compras digitales desde Canarias.",
+          "citas": [
+            "c0013",
+            "c0068"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Ampliar durante diez años la bonificación del 60% del IRPF para los residentes en La Palma.",
+          "citas": [
+            "c0013"
+          ],
+          "id": "impuestos-1",
+          "subtema": "IRPF"
+        },
+        {
+          "texto": "Corregir la recaudación de IVA en lugar de IGIC en compras de bienes digitales desde Canarias.",
+          "citas": [
+            "c0068"
+          ],
+          "id": "impuestos-2",
+          "subtema": "IVA"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mantener la reducción del impuesto sobre la renta de las personas físicas.",
+            "citas": [
+              "c0013",
+              "c0068"
+            ]
+          },
+          {
+            "texto": "Esta reducción beneficia a las personas que viven en La Palma.",
+            "citas": [
+              "c0013",
+              "c0068"
+            ]
+          },
+          {
+            "texto": "El partido quiere corregir los impuestos en compras de bienes digitales desde Canarias.",
+            "citas": [
+              "c0013",
+              "c0068"
+            ]
+          },
+          {
+            "texto": "El partido quiere aplicar el impuesto general indirecto canario en lugar del IVA.",
+            "citas": [
+              "c0013",
+              "c0068"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere mantener la reducción del impuesto sobre la renta de las personas físicas. La reducción es del 60% para las personas que viven en La Palma. El partido quiere mantener esta reducción durante 10 años.",
+            "citas": [
+              "c0013"
+            ],
+            "id": "impuestos-1",
+            "subtema": "IRPF"
+          },
+          {
+            "texto": "El partido quiere corregir los impuestos en compras de bienes digitales desde Canarias. El partido quiere cobrar el impuesto general indirecto canario en lugar del IVA.",
+            "citas": [
+              "c0068"
+            ],
+            "id": "impuestos-2",
+            "subtema": "IVA"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.2,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "pensiones": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende la sostenibilidad de las pensiones públicas y su actualización según el coste de la vida, y plantea financiar el sistema mediante los Presupuestos Generales del Estado e impulsar un Pacto de Estado.",
+          "citas": [
+            "c0022",
+            "c0028",
+            "c0025"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Actualizar las pensiones en función del coste de la vida.",
+          "citas": [
+            "c0024"
+          ],
+          "id": "pensiones-1",
+          "subtema": "revalorización"
+        },
+        {
+          "texto": "Financiar las pensiones mediante los Presupuestos Generales del Estado.",
+          "citas": [
+            "c0028"
+          ],
+          "id": "pensiones-2",
+          "subtema": "sostenibilidad del sistema"
+        },
+        {
+          "texto": "Impulsar un Pacto de Estado con los partidos parlamentarios y los actores sociales para garantizar la sostenibilidad y suficiencia de las pensiones actuales y futuras, tramitándolo en la comisión del Pacto de Toledo.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "pensiones-3",
+          "subtema": "sostenibilidad del sistema"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que las pensiones públicas se puedan mantener en el tiempo.",
+            "citas": [
+              "c0022",
+              "c0028",
+              "c0025"
+            ]
+          },
+          {
+            "texto": "El partido quiere actualizar las pensiones según el coste de la vida.",
+            "citas": [
+              "c0022",
+              "c0028",
+              "c0025"
+            ]
+          },
+          {
+            "texto": "El partido quiere financiar las pensiones con los Presupuestos Generales del Estado.",
+            "citas": [
+              "c0022",
+              "c0028",
+              "c0025"
+            ]
+          },
+          {
+            "texto": "El partido quiere impulsar un acuerdo de Estado sobre las pensiones.",
+            "citas": [
+              "c0022",
+              "c0028",
+              "c0025"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere actualizar las pensiones según el coste de la vida.",
+            "citas": [
+              "c0024"
+            ],
+            "id": "pensiones-1",
+            "subtema": "revalorización"
+          },
+          {
+            "texto": "El partido quiere financiar las pensiones con los Presupuestos Generales del Estado.",
+            "citas": [
+              "c0028"
+            ],
+            "id": "pensiones-2",
+            "subtema": "sostenibilidad del sistema"
+          },
+          {
+            "texto": "El partido quiere un acuerdo de Estado con los partidos del Parlamento. También quiere incluir a los representantes de la sociedad en este acuerdo. El acuerdo busca mantener las pensiones actuales y futuras. También busca que estas pensiones sean suficientes para vivir. El partido quiere tratar este acuerdo en la comisión del Pacto de Toledo.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "pensiones-3",
+            "subtema": "sostenibilidad del sistema"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 67.7,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "proteccion-social": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reclamar financiación estatal para combatir la pobreza en Canarias mientras supere la media estatal.",
+          "citas": [
+            "c0026"
+          ]
+        },
+        {
+          "texto": "Plantea integrar la financiación de la dependencia en el sistema de financiación autonómica, con una contribución estatal del 50%.",
+          "citas": [
+            "c0031"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reclamar la financiación prevista en el Régimen Económico y Fiscal para luchar contra la pobreza mientras su nivel en Canarias supere la media estatal.",
+          "citas": [
+            "c0026"
+          ],
+          "id": "proteccion-social-1",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Integrar la financiación de la dependencia en el sistema de financiación autonómica, con una aportación estatal finalista del 50%.",
+          "citas": [
+            "c0031"
+          ],
+          "id": "proteccion-social-2",
+          "subtema": "dependencia"
+        },
+        {
+          "texto": "Revisar la Ley 39/2006 para adaptar los mecanismos de dependencia a la demanda ciudadana, mejorar su encaje en los servicios sociales y garantizar la sostenibilidad del sistema.",
+          "citas": [
+            "c0029",
+            "c0049"
+          ],
+          "id": "proteccion-social-3",
+          "subtema": "dependencia"
+        },
+        {
+          "texto": "Extender automáticamente las ayudas a la crianza a todas las familias, con apoyo especial a las de menores ingresos.",
+          "citas": [
+            "c0086"
+          ],
+          "id": "proteccion-social-4",
+          "subtema": "servicios sociales"
+        },
+        {
+          "texto": "Establecer el umbral de pobreza como nivel de renta común estatal para acceder a ayudas de comedor escolar gratuito y elevar su cobertura del 13% al 29%.",
+          "citas": [
+            "c0093"
+          ],
+          "id": "proteccion-social-5",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Incrementar la identificación temprana del alumnado socialmente vulnerable y extender preventivamente su acceso a apoyo y refuerzo educativo.",
+          "citas": [
+            "c0092"
+          ],
+          "id": "proteccion-social-6",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Exigir medidas contra las dobles y triples discriminaciones que afectan a las mujeres con discapacidad.",
+          "citas": [
+            "c0033"
+          ],
+          "id": "proteccion-social-7",
+          "subtema": "discapacidad"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC quiere fondos del Estado para luchar contra la pobreza en Canarias.",
+            "citas": [
+              "c0026"
+            ]
+          },
+          {
+            "texto": "CC reclama estos fondos mientras la pobreza en Canarias supere la media estatal.",
+            "citas": [
+              "c0026"
+            ]
+          },
+          {
+            "texto": "CC propone fondos para cuidar a personas que necesitan ayuda en su vida diaria.",
+            "citas": [
+              "c0031"
+            ]
+          },
+          {
+            "texto": "CC quiere incluir estos fondos en los fondos de las comunidades autónomas.",
+            "citas": [
+              "c0031"
+            ]
+          },
+          {
+            "texto": "CC quiere que el Estado aporte el 50%.",
+            "citas": [
+              "c0031"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC reclama los fondos previstos en el Régimen Económico y Fiscal para combatir la pobreza. CC reclama estos fondos mientras la pobreza en Canarias supere la media estatal.",
+            "citas": [
+              "c0026"
+            ],
+            "id": "proteccion-social-1",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "CC propone fondos para cuidar a personas que necesitan ayuda en su vida diaria. CC quiere incluir estos fondos en los fondos de las comunidades autónomas. CC quiere que el Estado aporte el 50% solo para estos cuidados.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "proteccion-social-2",
+            "subtema": "dependencia"
+          },
+          {
+            "texto": "CC propone revisar la Ley 39/2006. CC quiere ajustar la atención a personas dependientes a las necesidades de la gente. CC quiere que los servicios sociales incluyan mejor estos cuidados. CC quiere asegurar que el sistema pueda mantenerse.",
+            "citas": [
+              "c0029",
+              "c0049"
+            ],
+            "id": "proteccion-social-3",
+            "subtema": "dependencia"
+          },
+          {
+            "texto": "CC propone dar ayudas para criar a los hijos a todas las familias de forma automática. CC quiere dar un apoyo especial a las familias con menos ingresos.",
+            "citas": [
+              "c0086"
+            ],
+            "id": "proteccion-social-4",
+            "subtema": "servicios sociales"
+          },
+          {
+            "texto": "CC propone usar el umbral de pobreza como límite de ingresos en todo el Estado. CC quiere usar ese límite para dar acceso al comedor escolar gratuito. CC propone ampliar estas ayudas del 13% al 29% del alumnado.",
+            "citas": [
+              "c0093"
+            ],
+            "id": "proteccion-social-5",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "CC quiere detectar antes a más estudiantes con dificultades por su situación social. CC quiere dar apoyo escolar a más estudiantes antes de que tengan dificultades.",
+            "citas": [
+              "c0092"
+            ],
+            "id": "proteccion-social-6",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "CC exige medidas contra la discriminación que sufren las mujeres con discapacidad. CC exige medidas cuando sufren discriminación por 2 o 3 motivos a la vez.",
+            "citas": [
+              "c0033"
+            ],
+            "id": "proteccion-social-7",
+            "subtema": "discapacidad"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 68.6,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "sanidad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende una sanidad pública y universal, plantea revisar su financiación y propone aumentar los recursos destinados a la salud mental en Canarias.",
+          "citas": [
+            "c0041",
+            "c0045",
+            "c0046"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Exigir la protección constitucional de la salud como derecho fundamental y defender una sanidad pública y universal.",
+          "citas": [
+            "c0036"
+          ],
+          "id": "sanidad-1",
+          "subtema": "sanidad pública y privada"
+        },
+        {
+          "texto": "Establecer un modelo de financiación sanitaria específica, no diluida en la financiación autonómica, y revisar el sobrecoste de la insularidad y la lejanía.",
+          "citas": [
+            "c0045",
+            "c0040"
+          ],
+          "id": "sanidad-2",
+          "subtema": "sanidad pública y privada"
+        },
+        {
+          "texto": "Aumentar la partida estatal transferida a Canarias para la atención a la salud mental.",
+          "citas": [
+            "c0046"
+          ],
+          "id": "sanidad-3",
+          "subtema": "salud mental"
+        },
+        {
+          "texto": "Aumentar el número de profesionales de salud mental.",
+          "citas": [
+            "c0094"
+          ],
+          "id": "sanidad-4",
+          "subtema": "profesionales sanitarios"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que la sanidad sea pública.",
+            "citas": [
+              "c0041",
+              "c0045",
+              "c0046"
+            ]
+          },
+          {
+            "texto": "El partido quiere que atienda a todas las personas.",
+            "citas": [
+              "c0041",
+              "c0045",
+              "c0046"
+            ]
+          },
+          {
+            "texto": "El partido quiere revisar cómo se paga la sanidad.",
+            "citas": [
+              "c0041",
+              "c0045",
+              "c0046"
+            ]
+          },
+          {
+            "texto": "El partido quiere más recursos para la salud mental en Canarias.",
+            "citas": [
+              "c0041",
+              "c0045",
+              "c0046"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que la Constitución proteja el derecho a la salud. Este debe ser un derecho básico. El partido quiere que la sanidad sea pública. El partido quiere que atienda a todas las personas.",
+            "citas": [
+              "c0036"
+            ],
+            "id": "sanidad-1",
+            "subtema": "sanidad pública y privada"
+          },
+          {
+            "texto": "El partido quiere un fondo propio para la sanidad. Este dinero debe ir aparte de los fondos que recibe cada comunidad autónoma. El partido quiere revisar el coste extra de la sanidad en las islas. El partido quiere revisar también el coste extra por estar lejos.",
+            "citas": [
+              "c0045",
+              "c0040"
+            ],
+            "id": "sanidad-2",
+            "subtema": "sanidad pública y privada"
+          },
+          {
+            "texto": "El partido quiere que el Estado dé más dinero a Canarias. Este dinero es para atender la salud mental.",
+            "citas": [
+              "c0046"
+            ],
+            "id": "sanidad-3",
+            "subtema": "salud mental"
+          },
+          {
+            "texto": "El partido quiere más personal para atender la salud mental.",
+            "citas": [
+              "c0094"
+            ],
+            "id": "sanidad-4",
+            "subtema": "profesionales sanitarios"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 75.8,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "educacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone un pacto social por la educación orientado a las competencias básicas, las lenguas extranjeras, las tecnologías y la compensación de desigualdades.",
+          "citas": [
+            "c0017"
+          ]
+        },
+        {
+          "texto": "Reclama financiación para infraestructuras educativas en Canarias.",
+          "citas": [
+            "c0015"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Impulsar un pacto social por la educación que contemple competencias básicas, lenguas extranjeras y tecnologías, y la compensación de desigualdades.",
+          "citas": [
+            "c0017"
+          ],
+          "id": "educacion-1",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Mantener el convenio plurianual del Plan Especial de Infraestructura Educativa con al menos 42 millones de euros anuales.",
+          "citas": [
+            "c0015"
+          ],
+          "id": "educacion-2",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Reformar la legislación para reconocer la gratuidad de la educación infantil de 0 a 3 años y garantizar una oferta suficiente de plazas públicas.",
+          "citas": [
+            "c0016",
+            "c0032"
+          ],
+          "id": "educacion-3",
+          "subtema": "educación 0-3 años"
+        },
+        {
+          "texto": "Desarrollar la normativa que regula la Formación Profesional Dual del sistema educativo.",
+          "citas": [
+            "c0027"
+          ],
+          "id": "educacion-4",
+          "subtema": "formación profesional"
+        },
+        {
+          "texto": "Exigir el cumplimiento del artículo 23 del REF mediante becas para estudiantes canarios sin la oferta educativa demandada en su isla y becas de desplazamiento para jóvenes canarios.",
+          "citas": [
+            "c0023"
+          ],
+          "id": "educacion-5",
+          "subtema": "universidad y becas"
+        },
+        {
+          "texto": "Establecer el umbral de pobreza como renta mínima común estatal para acceder a ayudas de comedor escolar gratuito y elevar la cobertura del 13% al 29%.",
+          "citas": [
+            "c0093"
+          ],
+          "id": "educacion-6",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Incrementar la identificación temprana del alumnado socialmente vulnerable y extender preventivamente su acceso a apoyo y refuerzo educativo.",
+          "citas": [
+            "c0092"
+          ],
+          "id": "educacion-7",
+          "subtema": "modelo educativo"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC propone un acuerdo social sobre la enseñanza.",
+            "citas": [
+              "c0017"
+            ]
+          },
+          {
+            "texto": "CC quiere incluir los conocimientos básicos y cómo usarlos.",
+            "citas": [
+              "c0017"
+            ]
+          },
+          {
+            "texto": "CC quiere incluir las lenguas extranjeras y el uso de tecnologías.",
+            "citas": [
+              "c0017"
+            ]
+          },
+          {
+            "texto": "CC quiere que el acuerdo ayude a reducir las desigualdades.",
+            "citas": [
+              "c0017"
+            ]
+          },
+          {
+            "texto": "CC pide dinero para los edificios y espacios de enseñanza en Canarias.",
+            "citas": [
+              "c0015"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC propone un acuerdo social sobre la enseñanza. CC quiere incluir los conocimientos básicos y cómo usarlos. CC quiere incluir las lenguas extranjeras y el uso de tecnologías. CC quiere que el acuerdo ayude a reducir las desigualdades.",
+            "citas": [
+              "c0017"
+            ],
+            "id": "educacion-1",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "CC quiere mantener el acuerdo de varios años del Plan Especial de Infraestructura Educativa. CC pide al menos 42 millones de euros al año para este plan.",
+            "citas": [
+              "c0015"
+            ],
+            "id": "educacion-2",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "CC quiere cambiar la ley sobre la educación infantil de 0 a 3 años. CC quiere que la ley reconozca que esta enseñanza es gratis. CC quiere que haya bastantes plazas públicas para estas edades.",
+            "citas": [
+              "c0016",
+              "c0032"
+            ],
+            "id": "educacion-3",
+            "subtema": "educación 0-3 años"
+          },
+          {
+            "texto": "CC quiere desarrollar las normas de la Formación Profesional Dual del sistema educativo.",
+            "citas": [
+              "c0027"
+            ],
+            "id": "educacion-4",
+            "subtema": "formación profesional"
+          },
+          {
+            "texto": "CC exige cumplir el artículo 23 del Régimen Económico y Fiscal. CC pide becas para estudiantes canarios sin los estudios que buscan en su isla. CC pide becas de viaje para jóvenes canarios.",
+            "citas": [
+              "c0023"
+            ],
+            "id": "educacion-5",
+            "subtema": "universidad y becas"
+          },
+          {
+            "texto": "CC propone un mismo límite de ingresos para todo el Estado. CC quiere fijarlo en el nivel de ingresos que marca la pobreza. CC propone usar ese límite para dar ayudas de comedor escolar gratuito. CC quiere que estas ayudas pasen de cubrir el 13% al 29%.",
+            "citas": [
+              "c0093"
+            ],
+            "id": "educacion-6",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "CC quiere reconocer antes a los alumnos con dificultades sociales. CC quiere que más de estos alumnos reciban apoyo y refuerzo escolar. CC quiere que reciban ese apoyo para prevenir problemas.",
+            "citas": [
+              "c0092"
+            ],
+            "id": "educacion-7",
+            "subtema": "modelo educativo"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 69.2,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "inmigracion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone coordinación europea para el rescate de inmigrantes en el mar y cooperación con países de origen y tránsito contra la inmigración irregular.",
+          "citas": [
+            "c0091",
+            "c0087"
+          ]
+        },
+        {
+          "texto": "Plantea implicar a todas las comunidades autónomas en la acogida, formación e integración de menores no acompañados.",
+          "citas": [
+            "c0089"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Exigir representación propia de Canarias en las negociaciones del Estado con Marruecos sobre el control de los movimientos migratorios.",
+          "citas": [
+            "c0011"
+          ],
+          "id": "inmigracion-1",
+          "subtema": "control de fronteras"
+        },
+        {
+          "texto": "Promover mayor coordinación entre los Estados miembros para el rescate de inmigrantes en el mar y aumentar el apoyo directo de la UE.",
+          "citas": [
+            "c0083"
+          ],
+          "id": "inmigracion-2",
+          "subtema": "control de fronteras"
+        },
+        {
+          "texto": "Promover en la UE mayor cooperación con los países de origen y tránsito en la lucha contra la inmigración irregular.",
+          "citas": [
+            "c0087"
+          ],
+          "id": "inmigracion-3",
+          "subtema": "control de fronteras"
+        },
+        {
+          "texto": "Promover modificaciones legislativas para implicar a todas las comunidades autónomas en la acogida, formación e integración de los menores que llegan a Canarias y aplicar la solidaridad interterritorial.",
+          "citas": [
+            "c0090"
+          ],
+          "id": "inmigracion-4",
+          "subtema": "menores no acompañados"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC propone coordinación europea para rescatar a inmigrantes en el mar.",
+            "citas": [
+              "c0091",
+              "c0087"
+            ]
+          },
+          {
+            "texto": "CC propone cooperar con los países de origen y tránsito contra la inmigración irregular.",
+            "citas": [
+              "c0091",
+              "c0087"
+            ]
+          },
+          {
+            "texto": "CC quiere que todas las comunidades autónomas acojan a menores sin un adulto responsable.",
+            "citas": [
+              "c0089"
+            ]
+          },
+          {
+            "texto": "CC quiere que estas comunidades den formación a estos menores.",
+            "citas": [
+              "c0089"
+            ]
+          },
+          {
+            "texto": "CC quiere que estas comunidades ayuden a estos menores a integrarse en la sociedad.",
+            "citas": [
+              "c0089"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos. CC exige esta representación para negociar el control de los movimientos migratorios.",
+            "citas": [
+              "c0011"
+            ],
+            "id": "inmigracion-1",
+            "subtema": "control de fronteras"
+          },
+          {
+            "texto": "CC propone que los países de la UE coordinen mejor el rescate de inmigrantes. CC propone esta coordinación para los rescates en el mar. CC propone aumentar el apoyo directo de la UE.",
+            "citas": [
+              "c0083"
+            ],
+            "id": "inmigracion-2",
+            "subtema": "control de fronteras"
+          },
+          {
+            "texto": "CC propone que la UE coopere más con los países de origen y tránsito. CC propone esta cooperación para luchar contra la inmigración irregular.",
+            "citas": [
+              "c0087"
+            ],
+            "id": "inmigracion-3",
+            "subtema": "control de fronteras"
+          },
+          {
+            "texto": "CC propone cambiar las leyes sobre los menores que llegan a Canarias. CC quiere que todas las comunidades autónomas participen en la acogida de estos menores. CC quiere que estas comunidades den formación a estos menores. CC quiere que estas comunidades ayuden a estos menores a integrarse en la sociedad. CC propone que los territorios se apoyen entre sí para atender a estos menores.",
+            "citas": [
+              "c0090"
+            ],
+            "id": "inmigracion-4",
+            "subtema": "menores no acompañados"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 61.0,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 61.0 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "medio-ambiente-energia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone medidas específicas para acelerar la transición energética en Canarias y defiende proyectos hidroeólicos como vía hacia la sostenibilidad.",
+          "citas": [
+            "c0074",
+            "c0077"
+          ]
+        },
+        {
+          "texto": "Plantea establecer series temporales para conocer la dimensión del cambio climático y compensaciones para moderar los precios del agua.",
+          "citas": [
+            "c0082",
+            "c0063"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Instar al Estado a articular medidas específicas para acelerar la transición energética en Canarias.",
+          "citas": [
+            "c0074"
+          ],
+          "id": "medio-ambiente-energia-1",
+          "subtema": "energías renovables"
+        },
+        {
+          "texto": "Respaldar la central hidroeólica de Gorona del Viento, el proyecto Chira-Soria y el desarrollo del proyecto de Güímar como vía hacia la sostenibilidad.",
+          "citas": [
+            "c0078"
+          ],
+          "id": "medio-ambiente-energia-2",
+          "subtema": "energías renovables"
+        },
+        {
+          "texto": "Exigir al Estado el establecimiento de series temporales fijas para conocer la dimensión del cambio climático.",
+          "citas": [
+            "c0075"
+          ],
+          "id": "medio-ambiente-energia-3",
+          "subtema": "cambio climático"
+        },
+        {
+          "texto": "Reclamar un sistema de compensación consignado anualmente en los Presupuestos Generales del Estado para equiparar los precios del agua desalinizada, regenerada o reutilizada en Canarias a los del resto del territorio estatal.",
+          "citas": [
+            "c0053"
+          ],
+          "id": "medio-ambiente-energia-4",
+          "subtema": "agua y sequía"
+        },
+        {
+          "texto": "Introducir mejoras en la inspección fitosanitaria para impedir la entrada de plagas que destruyan los cultivos.",
+          "citas": [
+            "c0056"
+          ],
+          "id": "medio-ambiente-energia-5",
+          "subtema": "biodiversidad"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere medidas específicas para usar energías más limpias antes en Canarias.",
+            "citas": [
+              "c0074",
+              "c0077"
+            ]
+          },
+          {
+            "texto": "El partido apoya proyectos que producen electricidad con agua y viento.",
+            "citas": [
+              "c0074",
+              "c0077"
+            ]
+          },
+          {
+            "texto": "Estos proyectos buscan cuidar el medio ambiente.",
+            "citas": [
+              "c0074",
+              "c0077"
+            ]
+          },
+          {
+            "texto": "El partido quiere recoger datos del clima en fechas fijas.",
+            "citas": [
+              "c0082",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "Estos datos permitirían conocer cuánto cambia el clima.",
+            "citas": [
+              "c0082",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "El partido quiere ayudas para moderar los precios del agua.",
+            "citas": [
+              "c0082",
+              "c0063"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere pedir al Estado medidas específicas para Canarias. Estas medidas deben acelerar el uso de energías más limpias.",
+            "citas": [
+              "c0074"
+            ],
+            "id": "medio-ambiente-energia-1",
+            "subtema": "energías renovables"
+          },
+          {
+            "texto": "El partido apoya la central de Gorona del Viento, que usa agua y viento. También apoya el proyecto Chira-Soria y el desarrollo del proyecto de Güímar. El partido apoya estos proyectos para cuidar el medio ambiente.",
+            "citas": [
+              "c0078"
+            ],
+            "id": "medio-ambiente-energia-2",
+            "subtema": "energías renovables"
+          },
+          {
+            "texto": "El partido exige al Estado recoger datos sobre el clima en fechas fijas. Estos datos permitirían conocer cuánto cambia el clima.",
+            "citas": [
+              "c0075"
+            ],
+            "id": "medio-ambiente-energia-3",
+            "subtema": "cambio climático"
+          },
+          {
+            "texto": "El partido pide ayudas incluidas cada año en los Presupuestos Generales del Estado. Estas ayudas buscan igualar los precios del agua con los del resto de España. Las ayudas cubrirían agua de Canarias a la que se ha quitado la sal. También cubrirían el agua tratada para usarla de nuevo o usada otra vez.",
+            "citas": [
+              "c0053"
+            ],
+            "id": "medio-ambiente-energia-4",
+            "subtema": "agua y sequía"
+          },
+          {
+            "texto": "El partido quiere mejorar los controles para proteger la salud de las plantas. Estos controles buscan impedir la entrada de plagas que destruyan los cultivos.",
+            "citas": [
+              "c0056"
+            ],
+            "id": "medio-ambiente-energia-5",
+            "subtema": "biodiversidad"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 65.7,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "mundo-rural": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Plantea aumentar el peso del sector primario en la economía canaria dentro del marco de la Política Agraria Común y la Política Pesquera Común.",
+          "citas": [
+            "c0054"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Consignar anualmente en los Presupuestos Generales del Estado fondos para garantizar el 100% de la aportación nacional a las medidas de fomento de las producciones agrícolas locales del POSEI.",
+          "citas": [
+            "c0059"
+          ],
+          "id": "mundo-rural-1",
+          "subtema": "PAC"
+        },
+        {
+          "texto": "Defender la cobertura de los seguros agrarios y las subvenciones de hasta el 100% del transporte de mercancías.",
+          "citas": [
+            "c0055"
+          ],
+          "id": "mundo-rural-2",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Establecer un sistema de compensación presupuestaria anual para moderar los precios del agua desalinizada, regenerada o reutilizada hasta equipararlos al resto del Estado, así como los del agua de consumo agrario procedente de pozos, galerías y desalación.",
+          "citas": [
+            "c0062",
+            "c0058"
+          ],
+          "id": "mundo-rural-3",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Introducir mejoras en la inspección fitosanitaria para impedir la entrada de plagas que destruyan los cultivos.",
+          "citas": [
+            "c0056"
+          ],
+          "id": "mundo-rural-4",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Alcanzar al menos un 12% de la cuota nacional de atún rojo para la flota atunera canaria y aumentar la cuota de tuna o patudo.",
+          "citas": [
+            "c0057"
+          ],
+          "id": "mundo-rural-5",
+          "subtema": "pesca"
+        },
+        {
+          "texto": "Eliminar en el futuro las cuotas de atún rojo y tuna en Canarias.",
+          "citas": [
+            "c0061"
+          ],
+          "id": "mundo-rural-6",
+          "subtema": "pesca"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC quiere aumentar el peso de la agricultura, la ganadería y la pesca.",
+            "citas": [
+              "c0054"
+            ]
+          },
+          {
+            "texto": "CC propone este aumento en la economía canaria.",
+            "citas": [
+              "c0054"
+            ]
+          },
+          {
+            "texto": "CC propone hacerlo dentro de la Política Agraria Común y la Política Pesquera Común.",
+            "citas": [
+              "c0054"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC propone fondos anuales en los Presupuestos Generales del Estado. CC quiere garantizar el 100% de la aportación nacional a las ayudas agrícolas locales. CC propone estas ayudas dentro del Programa de opciones específicas por la lejanía y la insularidad.",
+            "citas": [
+              "c0059"
+            ],
+            "id": "mundo-rural-1",
+            "subtema": "PAC"
+          },
+          {
+            "texto": "CC defiende la protección que ofrecen los seguros para la agricultura y la ganadería. CC defiende ayudas de hasta el 100% para el transporte de mercancías.",
+            "citas": [
+              "c0055"
+            ],
+            "id": "mundo-rural-2",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "CC propone fondos anuales para reducir los precios del agua. CC quiere igualar estos precios a los del resto del Estado. CC incluye el agua obtenida al quitarle la sal. CC incluye el agua tratada para usarla de nuevo. CC también incluye el agua que se usa de nuevo. CC también propone reducir los precios del agua agrícola de pozos y túneles subterráneos. CC incluye también el agua agrícola obtenida al quitarle la sal.",
+            "citas": [
+              "c0062",
+              "c0058"
+            ],
+            "id": "mundo-rural-3",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "CC propone mejorar los controles de salud de las plantas. CC quiere impedir la entrada de plagas que destruyan los cultivos.",
+            "citas": [
+              "c0056"
+            ],
+            "id": "mundo-rural-4",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "CC quiere al menos un 12% de la cuota nacional de atún rojo. CC propone reservar esta cantidad de pesca permitida para los barcos canarios que pescan atún. CC quiere aumentar la cantidad de tuna o patudo que pueden pescar.",
+            "citas": [
+              "c0057"
+            ],
+            "id": "mundo-rural-5",
+            "subtema": "pesca"
+          },
+          {
+            "texto": "CC quiere eliminar en el futuro los límites de pesca de atún rojo en Canarias. CC también quiere eliminar en el futuro los límites de pesca de tuna en Canarias.",
+            "citas": [
+              "c0061"
+            ],
+            "id": "mundo-rural-6",
+            "subtema": "pesca"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 68.7,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "transporte": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone un transporte público accesible, la continuidad de las bonificaciones y financiación para los trenes de Gran Canaria y Tenerife.",
+          "citas": [
+            "c0007",
+            "c0008"
+          ]
+        },
+        {
+          "texto": "Plantea desarrollar las redes de transporte y adecuar las infraestructuras marítimas y aéreas para la cohesión territorial.",
+          "citas": [
+            "c0064"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Ampliar la bonificación del 100% para guaguas y tranvías, sin limitaciones, más allá del 31 de diciembre de 2023.",
+          "citas": [
+            "c0007"
+          ],
+          "id": "transporte-1",
+          "subtema": "transporte público y abonos"
+        },
+        {
+          "texto": "Incluir los trenes de Gran Canaria y Tenerife en la red ferroviaria de ADIF y obtener financiación estatal y europea para su ejecución.",
+          "citas": [
+            "c0008"
+          ],
+          "id": "transporte-2",
+          "subtema": "tren y cercanías"
+        },
+        {
+          "texto": "Defender la bonificación del 75% para residentes en Canarias y exigir mecanismos de defensa de la competencia y la eliminación de tarifas aéreas abusivas.",
+          "citas": [
+            "c0004"
+          ],
+          "id": "transporte-3",
+          "subtema": "puertos y aeropuertos"
+        },
+        {
+          "texto": "Establecer precios máximos de referencia en las líneas aéreas declaradas obligación de servicio público.",
+          "citas": [
+            "c0072"
+          ],
+          "id": "transporte-4",
+          "subtema": "puertos y aeropuertos"
+        },
+        {
+          "texto": "Establecer una obligación de servicio público marítimo, con precio máximo, entre La Palma, El Hierro y La Gomera.",
+          "citas": [
+            "c0073"
+          ],
+          "id": "transporte-5",
+          "subtema": "puertos y aeropuertos"
+        },
+        {
+          "texto": "Exigir la ejecución del convenio de carreteras con Canarias y la transferencia inmediata de los fondos consignados en los Presupuestos Generales del Estado.",
+          "citas": [
+            "c0080"
+          ],
+          "id": "transporte-6",
+          "subtema": "carreteras"
+        },
+        {
+          "texto": "Aprobar la ley prevista en el artículo 161.3 del Estatuto para establecer un régimen especial de los aeropuertos canarios como red específica, con participación determinante de las administraciones y agentes económicos y sociales de Canarias.",
+          "citas": [
+            "c0076"
+          ],
+          "id": "transporte-7",
+          "subtema": "puertos y aeropuertos"
+        },
+        {
+          "texto": "Exigir la actualización inmediata de los costes del transporte de mercancías.",
+          "citas": [
+            "c0002"
+          ],
+          "id": "transporte-8",
+          "subtema": "transporte público y abonos"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC propone un transporte público que todas las personas puedan usar.",
+            "citas": [
+              "c0007",
+              "c0008"
+            ]
+          },
+          {
+            "texto": "CC quiere mantener los descuentos en el transporte público.",
+            "citas": [
+              "c0007",
+              "c0008"
+            ]
+          },
+          {
+            "texto": "CC quiere fondos para los trenes de Gran Canaria y Tenerife.",
+            "citas": [
+              "c0007",
+              "c0008"
+            ]
+          },
+          {
+            "texto": "CC propone ampliar las redes de transporte para conectar mejor los territorios.",
+            "citas": [
+              "c0064"
+            ]
+          },
+          {
+            "texto": "CC quiere adaptar los puertos y aeropuertos para conectar mejor los territorios.",
+            "citas": [
+              "c0064"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC quiere mantener el descuento del 100% en guaguas y tranvías, sin límites. CC quiere que siga más allá del 31 de diciembre de 2023.",
+            "citas": [
+              "c0007"
+            ],
+            "id": "transporte-1",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "CC quiere incluir los trenes de Gran Canaria y Tenerife en una red de trenes. CC propone la red del Administrador de Infraestructuras Ferroviarias. CC quiere fondos del Estado y de la UE para construir estos trenes.",
+            "citas": [
+              "c0008"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "CC defiende el descuento del 75% para residentes en Canarias. CC exige medidas para que las empresas compitan de forma justa. CC exige eliminar los precios abusivos de los vuelos.",
+            "citas": [
+              "c0004"
+            ],
+            "id": "transporte-3",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "CC propone precios máximos que sirvan de guía para ciertas rutas de avión. CC quiere esta medida en rutas que deben dar un servicio público.",
+            "citas": [
+              "c0072"
+            ],
+            "id": "transporte-4",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "CC propone un servicio público obligatorio de barcos entre La Palma, El Hierro y La Gomera. CC quiere un precio máximo para este servicio.",
+            "citas": [
+              "c0073"
+            ],
+            "id": "transporte-5",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "CC exige cumplir el acuerdo de carreteras con Canarias. CC exige entregar de inmediato los fondos previstos en los Presupuestos Generales del Estado.",
+            "citas": [
+              "c0080"
+            ],
+            "id": "transporte-6",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "CC propone aprobar la ley prevista en el artículo 161.3 del Estatuto. CC quiere normas especiales para los aeropuertos canarios. CC quiere que estos aeropuertos formen una red propia. CC quiere que las administraciones de Canarias tengan un papel clave. CC quiere que las personas y grupos económicos de Canarias tengan un papel clave. CC quiere que las personas y grupos sociales de Canarias tengan un papel clave.",
+            "citas": [
+              "c0076"
+            ],
+            "id": "transporte-7",
+            "subtema": "puertos y aeropuertos"
+          },
+          {
+            "texto": "CC exige actualizar de inmediato los costes del transporte de mercancías.",
+            "citas": [
+              "c0002"
+            ],
+            "id": "transporte-8",
+            "subtema": "transporte público y abonos"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.0,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "igualdad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende las políticas contra la violencia de género y propone aplicar el Convenio de Estambul y el Pacto de Estado.",
+          "citas": [
+            "c0042",
+            "c0048",
+            "c0034"
+          ]
+        },
+        {
+          "texto": "Plantea superar las brechas de género y las discriminaciones contra las mujeres, mejorar la conciliación y respaldar legal y socialmente al colectivo LGTBI.",
+          "citas": [
+            "c0037",
+            "c0043",
+            "c0050"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Aplicar el Convenio de Estambul en todo el Estado, incluyendo todas las formas de violencia de género en la legislación, los presupuestos y los servicios de atención a las víctimas.",
+          "citas": [
+            "c0048"
+          ],
+          "id": "igualdad-1",
+          "subtema": "violencia de género e intrafamiliar"
+        },
+        {
+          "texto": "Aplicar el Pacto de Estado contra la Violencia de Género mediante mecanismos de prevención y protección de las mujeres y sus hijos e hijas, y nuevas leyes, servicios y presupuestos.",
+          "citas": [
+            "c0035"
+          ],
+          "id": "igualdad-2",
+          "subtema": "violencia de género e intrafamiliar"
+        },
+        {
+          "texto": "Impulsar medidas legales contra la trata de mujeres con fines de explotación sexual y la prostitución.",
+          "citas": [
+            "c0039"
+          ],
+          "id": "igualdad-3",
+          "subtema": "violencia de género e intrafamiliar"
+        },
+        {
+          "texto": "Exigir el cumplimiento de las leyes y mecanismos para superar las brechas de género en el empleo, las condiciones de trabajo, las retribuciones, las pensiones y otras prestaciones.",
+          "citas": [
+            "c0038"
+          ],
+          "id": "igualdad-4",
+          "subtema": "igualdad entre mujeres y hombres"
+        },
+        {
+          "texto": "Exigir medidas contra la feminización de la pobreza y las discriminaciones dobles y triples que afectan a mujeres con discapacidad, migrantes y racializadas, y en colectivos laborales como las trabajadoras del hogar.",
+          "citas": [
+            "c0033"
+          ],
+          "id": "igualdad-5",
+          "subtema": "discriminación"
+        },
+        {
+          "texto": "Mejorar la conciliación mediante la extensión de la escolarización de 0 a 3 años, la mejora de los permisos de paternidad y maternidad y la atención a la dependencia.",
+          "citas": [
+            "c0044"
+          ],
+          "id": "igualdad-6",
+          "subtema": "igualdad entre mujeres y hombres"
+        },
+        {
+          "texto": "Promover el respaldo legal y social del colectivo LGTBI, la igualdad laboral, protocolos ante el acoso escolar y una atención sanitaria ajustada a sus necesidades.",
+          "citas": [
+            "c0051"
+          ],
+          "id": "igualdad-7",
+          "subtema": "derechos LGTBI"
+        },
+        {
+          "texto": "Demandar bonificaciones en la cuota empresarial de la Seguridad Social para contratos indefinidos de mujeres en ocupaciones donde no estén suficientemente representadas.",
+          "citas": [
+            "c0018"
+          ],
+          "id": "igualdad-8",
+          "subtema": "igualdad entre mujeres y hombres"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC defiende las políticas contra la violencia de género.",
+            "citas": [
+              "c0042",
+              "c0048",
+              "c0034"
+            ]
+          },
+          {
+            "texto": "CC propone aplicar el Convenio de Estambul y el Pacto de Estado.",
+            "citas": [
+              "c0042",
+              "c0048",
+              "c0034"
+            ]
+          },
+          {
+            "texto": "CC quiere acabar con las desigualdades entre mujeres y hombres.",
+            "citas": [
+              "c0037",
+              "c0043",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "CC quiere acabar con la discriminación contra las mujeres.",
+            "citas": [
+              "c0037",
+              "c0043",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "CC propone facilitar que las personas combinen el trabajo y la vida familiar.",
+            "citas": [
+              "c0037",
+              "c0043",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "CC propone apoyo legal y social para lesbianas, gais, bisexuales, personas transgénero e intersexuales.",
+            "citas": [
+              "c0037",
+              "c0043",
+              "c0050"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC propone aplicar el Convenio de Estambul en todo el Estado. CC quiere incluir todas las formas de violencia de género en las leyes. CC también quiere incluirlas en los presupuestos y los servicios de atención a las víctimas.",
+            "citas": [
+              "c0048"
+            ],
+            "id": "igualdad-1",
+            "subtema": "violencia de género e intrafamiliar"
+          },
+          {
+            "texto": "CC propone aplicar el Pacto de Estado contra la Violencia de Género. CC propone medidas para prevenir esta violencia y proteger a las mujeres y sus hijos. CC también propone nuevas leyes, servicios y presupuestos para aplicar este pacto.",
+            "citas": [
+              "c0035"
+            ],
+            "id": "igualdad-2",
+            "subtema": "violencia de género e intrafamiliar"
+          },
+          {
+            "texto": "CC propone medidas legales contra el comercio de mujeres para explotarlas sexualmente. CC también propone medidas legales contra la prostitución.",
+            "citas": [
+              "c0039"
+            ],
+            "id": "igualdad-3",
+            "subtema": "violencia de género e intrafamiliar"
+          },
+          {
+            "texto": "CC exige cumplir las leyes y aplicar medidas contra las desigualdades entre mujeres y hombres. CC quiere combatir estas desigualdades en el empleo y las condiciones de trabajo. CC también quiere combatirlas en los sueldos, las pensiones y otras ayudas.",
+            "citas": [
+              "c0038"
+            ],
+            "id": "igualdad-4",
+            "subtema": "igualdad entre mujeres y hombres"
+          },
+          {
+            "texto": "CC exige medidas contra la pobreza que afecta más a las mujeres. CC exige medidas contra la discriminación por 2 o 3 motivos a la vez. CC propone estas medidas para mujeres con discapacidad y mujeres migrantes. CC también propone estas medidas para mujeres discriminadas por su origen o color de piel. CC exige estas medidas para grupos de trabajadoras, como las trabajadoras del hogar.",
+            "citas": [
+              "c0033"
+            ],
+            "id": "igualdad-5",
+            "subtema": "discriminación"
+          },
+          {
+            "texto": "CC propone facilitar que las personas combinen el trabajo y la vida familiar. CC quiere ampliar la escolarización de 0 a 3 años. CC propone mejorar los permisos de paternidad y maternidad. CC quiere mejorar la atención a personas que necesitan ayuda en su vida diaria.",
+            "citas": [
+              "c0044"
+            ],
+            "id": "igualdad-6",
+            "subtema": "igualdad entre mujeres y hombres"
+          },
+          {
+            "texto": "CC propone apoyo legal y social para lesbianas, gais, bisexuales, personas transgénero e intersexuales. CC propone igualdad en el trabajo para este colectivo. CC propone pautas de actuación contra el acoso escolar que sufre este colectivo. CC propone una atención sanitaria que responda a las necesidades de este colectivo.",
+            "citas": [
+              "c0051"
+            ],
+            "id": "igualdad-7",
+            "subtema": "derechos LGTBI"
+          },
+          {
+            "texto": "CC pide reducir la cuota empresarial de la Seguridad Social por contratos indefinidos de mujeres. CC propone esta reducción en ocupaciones donde las mujeres tienen poca presencia.",
+            "citas": [
+              "c0018"
+            ],
+            "id": "igualdad-8",
+            "subtema": "igualdad entre mujeres y hombres"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 61.9,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 61.9 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "familia-conciliacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone mejorar la conciliación mediante la escolarización de 0 a 3 años, los permisos de paternidad y maternidad y la atención a la dependencia.",
+          "citas": [
+            "c0044"
+          ]
+        },
+        {
+          "texto": "Plantea ayudas a la crianza para todas las familias, con apoyo específico a aquellas con menos ingresos.",
+          "citas": [
+            "c0086"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reconocer por ley la gratuidad de la Educación Infantil de 0 a 3 años y garantizar una oferta suficiente de plazas públicas.",
+          "citas": [
+            "c0016",
+            "c0032"
+          ],
+          "id": "familia-conciliacion-1",
+          "subtema": "conciliación y horarios"
+        },
+        {
+          "texto": "Mejorar los permisos de paternidad y maternidad.",
+          "citas": [
+            "c0047"
+          ],
+          "id": "familia-conciliacion-2",
+          "subtema": "permisos de nacimiento y crianza"
+        },
+        {
+          "texto": "Integrar la financiación de la dependencia en el sistema de financiación autonómica, con una aportación estatal del 50% de carácter finalista.",
+          "citas": [
+            "c0031"
+          ],
+          "id": "familia-conciliacion-3",
+          "subtema": "cuidados"
+        },
+        {
+          "texto": "Establecer ayudas complementarias a la crianza que alcancen automáticamente a todas las familias y apoyen especialmente a las de menores ingresos.",
+          "citas": [
+            "c0086"
+          ],
+          "id": "familia-conciliacion-4",
+          "subtema": "ayudas por hijo"
+        },
+        {
+          "texto": "Establecer el umbral de pobreza como criterio de renta común estatal para acceder a ayudas de comedor escolar gratuito, elevando la cobertura del 13% al 29%.",
+          "citas": [
+            "c0093"
+          ],
+          "id": "familia-conciliacion-5",
+          "subtema": "ayudas por hijo"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere facilitar que las familias cuiden a sus hijos y trabajen.",
+            "citas": [
+              "c0044"
+            ]
+          },
+          {
+            "texto": "Quiere ofrecer escuelas para niños de 0 a 3 años.",
+            "citas": [
+              "c0044"
+            ]
+          },
+          {
+            "texto": "Quiere mejorar los permisos de madres y padres tras tener hijos.",
+            "citas": [
+              "c0044"
+            ]
+          },
+          {
+            "texto": "También quiere mejorar los cuidados de personas que necesitan ayuda diaria.",
+            "citas": [
+              "c0044"
+            ]
+          },
+          {
+            "texto": "El partido quiere dar ayudas a todas las familias para criar a sus hijos.",
+            "citas": [
+              "c0086"
+            ]
+          },
+          {
+            "texto": "Quiere dar más apoyo a las familias con menos dinero.",
+            "citas": [
+              "c0086"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que la ley garantice escuelas gratis de 0 a 3 años. Quiere que haya suficientes plazas en las escuelas públicas.",
+            "citas": [
+              "c0016",
+              "c0032"
+            ],
+            "id": "familia-conciliacion-1",
+            "subtema": "conciliación y horarios"
+          },
+          {
+            "texto": "El partido quiere mejorar los permisos de madres y padres tras tener hijos.",
+            "citas": [
+              "c0047"
+            ],
+            "id": "familia-conciliacion-2",
+            "subtema": "permisos de nacimiento y crianza"
+          },
+          {
+            "texto": "El partido quiere cambiar cómo se pagan los cuidados de personas que necesitan ayuda diaria. Quiere incluir ese gasto en los fondos que reciben las regiones. El Estado aportaría el 50% del dinero. El Estado daría ese dinero solo para estos cuidados.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "familia-conciliacion-3",
+            "subtema": "cuidados"
+          },
+          {
+            "texto": "El partido quiere dar más ayudas para criar a los hijos. Todas las familias las recibirían sin tener que pedirlas. Las familias con menos dinero tendrían más apoyo.",
+            "citas": [
+              "c0086"
+            ],
+            "id": "familia-conciliacion-4",
+            "subtema": "ayudas por hijo"
+          },
+          {
+            "texto": "El partido quiere dar ayudas para el comedor escolar gratis según los ingresos familiares. Quiere usar el límite de pobreza para dar estas ayudas. Ese límite indica si una familia es pobre según el dinero que tiene. Todo el país usaría el mismo límite. Quiere que estas ayudas pasen de cubrir el 13% al 29%.",
+            "citas": [
+              "c0093"
+            ],
+            "id": "familia-conciliacion-5",
+            "subtema": "ayudas por hijo"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 74.0,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "juventud": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone mantener incentivos al empleo joven, con medidas para la contratación indefinida, el primer empleo y los contratos en prácticas.",
+          "citas": [
+            "c0014"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Mantener los incentivos a la contratación indefinida de jóvenes por microempresas y autónomos, a la contratación en nuevos proyectos de emprendimiento joven, al primer empleo joven y a los contratos en prácticas.",
+          "citas": [
+            "c0014"
+          ],
+          "id": "juventud-1",
+          "subtema": "empleo joven"
+        },
+        {
+          "texto": "Establecer bonificaciones en la cuota empresarial de la Seguridad Social para contratos indefinidos de jóvenes entre 16 y 30 años.",
+          "citas": [
+            "c0018"
+          ],
+          "id": "juventud-2",
+          "subtema": "empleo joven"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mantener las ayudas al empleo joven.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "Estas ayudas incluyen los empleos fijos.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "También incluyen el primer empleo y los contratos en prácticas.",
+            "citas": [
+              "c0014"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere mantener las ayudas para dar empleo fijo a jóvenes. Estas ayudas son para empresas muy pequeñas y personas que trabajan por su cuenta. También quiere mantener ayudas para contratar jóvenes en nuevos negocios de jóvenes. Además, quiere mantener las ayudas al primer empleo joven. También quiere mantener las ayudas a los contratos en prácticas.",
+            "citas": [
+              "c0014"
+            ],
+            "id": "juventud-1",
+            "subtema": "empleo joven"
+          },
+          {
+            "texto": "El partido quiere bajar la cuota de las empresas a la Seguridad Social. Esta ayuda sería para contratos fijos de jóvenes de 16 a 30 años.",
+            "citas": [
+              "c0018"
+            ],
+            "id": "juventud-2",
+            "subtema": "empleo joven"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.8,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "ciencia-digital": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone fomentar la I+D, transferir sus resultados al tejido productivo y especializar la investigación en ámbitos prioritarios.",
+          "citas": [
+            "c0070"
+          ]
+        },
+        {
+          "texto": "Plantea integrar Canarias en el Mercado Único Digital Europeo e impulsar un plan específico de telecomunicaciones.",
+          "citas": [
+            "c0065"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Fomentar las actividades de I+D y la transferencia de resultados al tejido productivo, priorizando astrofísica y espacio, ciencias marino marítimas, y biotecnología y biomedicina asociadas a la biodiversidad.",
+          "citas": [
+            "c0071"
+          ],
+          "id": "ciencia-digital-1",
+          "subtema": "I+D+i"
+        },
+        {
+          "texto": "Impulsar el Plan Específico de Telecomunicaciones de Canarias dentro de la Agenda Digital española, conforme a la Disposición Adicional Sexta del Estatuto.",
+          "citas": [
+            "c0067"
+          ],
+          "id": "ciencia-digital-2",
+          "subtema": "telecomunicaciones"
+        },
+        {
+          "texto": "Acordar con el Estado y la Unión Europea medidas para asegurar el acceso desde Canarias a la oferta de comercio electrónico europea sin sobrecostes de intermediación abusivos.",
+          "citas": [
+            "c0066"
+          ],
+          "id": "ciencia-digital-3",
+          "subtema": "brecha digital"
+        },
+        {
+          "texto": "Consolidar Canarias como laboratorio natural de ensayos para la sostenibilidad, incluida la tecnología marina.",
+          "citas": [
+            "c0079"
+          ],
+          "id": "ciencia-digital-4",
+          "subtema": "I+D+i"
+        },
+        {
+          "texto": "Exigir financiación para disponer de un buque oceanográfico en Canarias que permita desarrollar proyectos permanentes en las islas.",
+          "citas": [
+            "c0081"
+          ],
+          "id": "ciencia-digital-5",
+          "subtema": "I+D+i"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC quiere apoyar la investigación y el desarrollo.",
+            "citas": [
+              "c0070"
+            ]
+          },
+          {
+            "texto": "CC quiere que las empresas usen los resultados de estos trabajos.",
+            "citas": [
+              "c0070"
+            ]
+          },
+          {
+            "texto": "CC quiere centrar la investigación en los campos que considera más importantes.",
+            "citas": [
+              "c0070"
+            ]
+          },
+          {
+            "texto": "CC quiere que Canarias forme parte del Mercado Único Digital Europeo.",
+            "citas": [
+              "c0065"
+            ]
+          },
+          {
+            "texto": "CC quiere un plan propio para mejorar las comunicaciones a distancia.",
+            "citas": [
+              "c0065"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC quiere apoyar la investigación y el desarrollo. CC quiere que las empresas usen los resultados de estos trabajos. CC da prioridad al estudio de los astros y el espacio. CC también da prioridad al estudio del mar y las actividades en el mar. CC prioriza crear técnicas que usan seres vivos. CC también prioriza los avances médicos. CC quiere ligar estas técnicas y avances a la variedad de seres vivos.",
+            "citas": [
+              "c0071"
+            ],
+            "id": "ciencia-digital-1",
+            "subtema": "I+D+i"
+          },
+          {
+            "texto": "CC impulsa el Plan Específico de Telecomunicaciones de Canarias. CC quiere desarrollar este plan dentro de la Agenda Digital española. CC quiere seguir la Disposición Adicional Sexta del Estatuto.",
+            "citas": [
+              "c0067"
+            ],
+            "id": "ciencia-digital-2",
+            "subtema": "telecomunicaciones"
+          },
+          {
+            "texto": "CC quiere asegurar el acceso desde Canarias a la oferta europea de venta por internet. CC quiere evitar cobros abusivos de quienes actúan entre compradores y vendedores. CC quiere acordar estas medidas con el Estado y la Unión Europea.",
+            "citas": [
+              "c0066"
+            ],
+            "id": "ciencia-digital-3",
+            "subtema": "brecha digital"
+          },
+          {
+            "texto": "CC quiere afianzar Canarias como lugar para hacer pruebas en la naturaleza. CC quiere que estas pruebas ayuden a cuidar el medio ambiente. CC incluye las pruebas de tecnología para el mar.",
+            "citas": [
+              "c0079"
+            ],
+            "id": "ciencia-digital-4",
+            "subtema": "I+D+i"
+          },
+          {
+            "texto": "CC exige fondos para disponer de un barco de investigación del mar en Canarias. CC quiere desarrollar proyectos permanentes en las islas con este barco.",
+            "citas": [
+              "c0081"
+            ],
+            "id": "ciencia-digital-5",
+            "subtema": "I+D+i"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 67.9,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": [
+          "La adaptación reduce «tejido productivo» a «las empresas», por lo que no recoge necesariamente a todos los agentes productivos a los que se transferirían los resultados.",
+          "La adaptación explica la sostenibilidad como cuidar el medio ambiente. Es una simplificación válida, aunque más estrecha que el concepto de sostenibilidad del original."
+        ]
+      }
+    },
+    "seguridad-justicia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reclamar financiación estatal para las plazas del Cuerpo General de la Policía Canaria.",
+          "citas": [
+            "c0084"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reclamar al Estado la financiación de plazas del Cuerpo General de la Policía Canaria equiparable a las plazas vacantes de los catálogos de los Cuerpos y Fuerzas de Seguridad del Estado, o la cofinanciación de la Policía Canaria.",
+          "citas": [
+            "c0085"
+          ],
+          "id": "seguridad-justicia-1",
+          "subtema": "fuerzas y cuerpos de seguridad"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que el Estado financie puestos del Cuerpo General de la Policía Canaria.",
+            "citas": [
+              "c0084"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que el Estado financie puestos del Cuerpo General de la Policía Canaria. La financiación sería equivalente a la de puestos vacantes de las fuerzas de seguridad estatales. Son puestos sin cubrir incluidos en las listas de esas fuerzas. El partido propone otra opción para el Cuerpo General de la Policía Canaria. El partido quiere que el Estado pague parte de los gastos de este cuerpo.",
+            "citas": [
+              "c0085"
+            ],
+            "id": "seguridad-justicia-1",
+            "subtema": "fuerzas y cuerpos de seguridad"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 68.4,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "modelo-territorial": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende el máximo nivel de autogobierno para Canarias dentro de un Estado plurinacional consensuado.",
+          "citas": [
+            "c0001"
+          ]
+        },
+        {
+          "texto": "Propone una financiación autonómica suficiente para los servicios públicos básicos, separada de los recursos del Régimen Económico y Fiscal.",
+          "citas": [
+            "c0009"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Defender el máximo nivel de autogobierno de Canarias, en igualdad de condiciones y competencias, dentro de un Estado plurinacional consensuado.",
+          "citas": [
+            "c0001"
+          ],
+          "id": "modelo-territorial-1",
+          "subtema": "autogobierno y derecho a decidir"
+        },
+        {
+          "texto": "Desarrollar el Estatuto de Autonomía de Canarias, priorizando los intereses de la ciudadanía canaria frente a las prioridades de los partidos que gobiernen en Madrid.",
+          "citas": [
+            "c0006"
+          ],
+          "id": "modelo-territorial-2",
+          "subtema": "competencias"
+        },
+        {
+          "texto": "Reclamar un nuevo modelo de financiación autonómica que garantice recursos suficientes para educación, sanidad y servicios sociales y dependencia, separados de los recursos del REF, conforme al artículo 166.3 del Estatuto.",
+          "citas": [
+            "c0009"
+          ],
+          "id": "modelo-territorial-3",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Rechazar los Presupuestos Generales del Estado que incumplan el fuero canario y no garanticen los compromisos del REF, e iniciar acciones legales para exigir su cumplimiento.",
+          "citas": [
+            "c0005"
+          ],
+          "id": "modelo-territorial-4",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Defender la obligatoriedad de garantizar la inversión media en las islas en los Presupuestos del Estado.",
+          "citas": [
+            "c0003"
+          ],
+          "id": "modelo-territorial-5",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Integrar la financiación de la dependencia en el sistema de financiación autonómica, con una aportación estatal del 50% de carácter finalista.",
+          "citas": [
+            "c0031"
+          ],
+          "id": "modelo-territorial-6",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Defender un modelo de financiación sanitaria estatal transparente y específico, no diluido en la financiación autonómica.",
+          "citas": [
+            "c0045"
+          ],
+          "id": "modelo-territorial-7",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Aprobar la ley prevista en el artículo 161.3 del Estatuto para establecer una red aeroportuaria canaria con régimen especial y participación determinante de las administraciones y agentes económicos y sociales de Canarias.",
+          "citas": [
+            "c0076"
+          ],
+          "id": "modelo-territorial-8",
+          "subtema": "competencias"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC quiere que Canarias tenga el mayor poder posible para decidir sus asuntos.",
+            "citas": [
+              "c0001"
+            ]
+          },
+          {
+            "texto": "CC defiende un Estado con varias naciones mediante un acuerdo.",
+            "citas": [
+              "c0001"
+            ]
+          },
+          {
+            "texto": "CC quiere que Canarias reciba dinero suficiente para los servicios públicos básicos.",
+            "citas": [
+              "c0009"
+            ]
+          },
+          {
+            "texto": "CC quiere separar ese dinero de los fondos del Régimen Económico y Fiscal.",
+            "citas": [
+              "c0009"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC quiere que Canarias tenga el mayor poder posible para decidir sus asuntos. CC quiere igualdad de condiciones y poderes para Canarias. CC defiende un Estado con varias naciones mediante un acuerdo.",
+            "citas": [
+              "c0001"
+            ],
+            "id": "modelo-territorial-1",
+            "subtema": "autogobierno y derecho a decidir"
+          },
+          {
+            "texto": "CC quiere poner en práctica el Estatuto de Autonomía de Canarias. CC quiere dar prioridad a los intereses de la ciudadanía canaria. CC los sitúa por delante de las prioridades de los partidos que gobiernen en Madrid.",
+            "citas": [
+              "c0006"
+            ],
+            "id": "modelo-territorial-2",
+            "subtema": "competencias"
+          },
+          {
+            "texto": "CC pide un nuevo sistema para repartir dinero entre las comunidades autónomas. CC quiere dinero suficiente para educación y sanidad. CC quiere también dinero suficiente para los servicios sociales. CC quiere dinero suficiente para ayudar a quienes necesitan apoyo en su vida diaria. CC quiere separar estos fondos de los recursos del Régimen Económico y Fiscal. CC pide cumplir el artículo 166.3 del Estatuto.",
+            "citas": [
+              "c0009"
+            ],
+            "id": "modelo-territorial-3",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "CC exige que los Presupuestos Generales del Estado respeten el fuero canario. CC defiende el fuero canario: las normas especiales de Canarias. CC exige que esos presupuestos garanticen los compromisos del Régimen Económico y Fiscal. CC rechazará esos presupuestos si incumplen ambas condiciones. CC acudirá a la justicia para exigir su cumplimiento.",
+            "citas": [
+              "c0005"
+            ],
+            "id": "modelo-territorial-4",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "CC exige que los Presupuestos del Estado aseguren la inversión media en las islas.",
+            "citas": [
+              "c0003"
+            ],
+            "id": "modelo-territorial-5",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "CC quiere fondos para atender a personas que necesitan apoyo en su vida diaria. CC quiere incluir esos fondos en el dinero que reciben las comunidades autónomas. CC quiere que el Estado aporte el 50% de esos fondos. CC quiere que ese dinero se use solo para esa atención.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "modelo-territorial-6",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "CC quiere fondos del Estado solo para la sanidad. CC quiere que esos fondos sean transparentes. CC quiere mantenerlos aparte del dinero para las comunidades autónomas.",
+            "citas": [
+              "c0045"
+            ],
+            "id": "modelo-territorial-7",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "CC quiere aprobar la ley prevista en el artículo 161.3 del Estatuto. CC quiere crear una red de aeropuertos de Canarias con normas especiales. CC quiere que las administraciones de Canarias tengan un papel decisivo en esa red. CC quiere ese mismo papel para los grupos económicos y sociales de Canarias.",
+            "citas": [
+              "c0076"
+            ],
+            "id": "modelo-territorial-8",
+            "subtema": "competencias"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 63.1,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 63.1 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "regeneracion-democratica": {
+      "menciona": false,
+      "resumen": [],
+      "propuestas": [],
+      "red_seguridad": {
+        "ejecutada": true,
+        "fragmentos_revisados": [
+          "cc-23-p013-02",
+          "cc-23-p007-02",
+          "cc-23-p001-01",
+          "cc-23-p006-02",
+          "cc-23-p012-02"
+        ],
+        "reanalizado": false
+      }
+    },
+    "exterior-defensa": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reforzar las alianzas con Portugal y Francia y consolidar los derechos de las regiones ultraperiféricas en la UE.",
+          "citas": [
+            "c0010"
+          ]
+        },
+        {
+          "texto": "Plantea fomentar la cooperación con África Occidental y exigir representación propia de Canarias en las negociaciones del Estado con Marruecos.",
+          "citas": [
+            "c0088",
+            "c0011"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reforzar la alianza con Portugal y Francia durante la Presidencia española de la UE, en el segundo semestre de 2023, y exigir la implicación del Estado en la consolidación de los derechos de las regiones ultraperiféricas.",
+          "citas": [
+            "c0010"
+          ],
+          "id": "exterior-defensa-1",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Priorizar las negociaciones con las autoridades comunitarias para conseguir la exención de Canarias de la nueva tasa verde sobre vuelos internacionales dentro del espacio económico europeo.",
+          "citas": [
+            "c0012"
+          ],
+          "id": "exterior-defensa-2",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Exigir representación propia de Canarias en las negociaciones del Estado con Marruecos, especialmente sobre delimitación de espacios marítimos y control de movimientos migratorios.",
+          "citas": [
+            "c0011"
+          ],
+          "id": "exterior-defensa-3",
+          "subtema": "Marruecos y Sáhara"
+        },
+        {
+          "texto": "Acordar con el Estado y la UE medidas para facilitar el acceso de las compras desde Canarias a la oferta comercial europea y de las ventas canarias a cualquier Estado miembro.",
+          "citas": [
+            "c0066",
+            "c0069"
+          ],
+          "id": "exterior-defensa-4",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Promover la condición de Canarias como «Plataforma de Paz» para fomentar la cooperación con África Occidental.",
+          "citas": [
+            "c0088"
+          ],
+          "id": "exterior-defensa-5",
+          "subtema": "cooperación al desarrollo"
+        },
+        {
+          "texto": "Exigir al Gobierno de España que promueva una mayor coordinación entre los Estados miembros de la UE en el rescate de inmigrantes en el mar y un mayor apoyo directo europeo.",
+          "citas": [
+            "c0083"
+          ],
+          "id": "exterior-defensa-6",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Instar al Gobierno de España a promover en la UE una mayor cooperación con los países de origen y tránsito en la lucha contra la inmigración irregular.",
+          "citas": [
+            "c0087"
+          ],
+          "id": "exterior-defensa-7",
+          "subtema": "Unión Europea"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "CC propone reforzar las alianzas con Portugal y Francia.",
+            "citas": [
+              "c0010"
+            ]
+          },
+          {
+            "texto": "CC quiere consolidar los derechos de las regiones ultraperiféricas en la UE.",
+            "citas": [
+              "c0010"
+            ]
+          },
+          {
+            "texto": "Estas regiones están muy alejadas del resto de la UE.",
+            "citas": [
+              "c0010"
+            ]
+          },
+          {
+            "texto": "CC propone fomentar la cooperación con África Occidental.",
+            "citas": [
+              "c0088",
+              "c0011"
+            ]
+          },
+          {
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos.",
+            "citas": [
+              "c0088",
+              "c0011"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "CC propone reforzar la alianza con Portugal y Francia durante la Presidencia española de la UE. CC sitúa esta propuesta en el segundo semestre de 2023. CC exige que el Estado participe en consolidar los derechos de las regiones ultraperiféricas. Estas regiones están muy alejadas del resto de la UE.",
+            "citas": [
+              "c0010"
+            ],
+            "id": "exterior-defensa-1",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "CC propone dar prioridad a las negociaciones con las autoridades de la UE. CC quiere que Canarias no pague la nueva tasa verde sobre vuelos internacionales. Esta tasa afecta a vuelos dentro del espacio económico europeo. Una tasa verde es un pago relacionado con el impacto ambiental.",
+            "citas": [
+              "c0012"
+            ],
+            "id": "exterior-defensa-2",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "CC exige representación propia de Canarias en las negociaciones del Estado con Marruecos. CC destaca las negociaciones para fijar los límites de los espacios marítimos. CC también destaca las negociaciones sobre el control de los movimientos migratorios. Estos movimientos son los desplazamientos de personas entre países para vivir en otro lugar.",
+            "citas": [
+              "c0011"
+            ],
+            "id": "exterior-defensa-3",
+            "subtema": "Marruecos y Sáhara"
+          },
+          {
+            "texto": "CC propone acordar medidas con el Estado y la UE para facilitar el comercio de Canarias. CC quiere facilitar las compras desde Canarias de productos de la oferta comercial europea. CC también quiere facilitar las ventas canarias a cualquier Estado miembro de la UE.",
+            "citas": [
+              "c0066",
+              "c0069"
+            ],
+            "id": "exterior-defensa-4",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "CC propone promover la condición de Canarias como «Plataforma de Paz». CC quiere así fomentar la cooperación con África Occidental.",
+            "citas": [
+              "c0088"
+            ],
+            "id": "exterior-defensa-5",
+            "subtema": "cooperación al desarrollo"
+          },
+          {
+            "texto": "CC quiere más coordinación entre los Estados miembros de la UE para rescatar inmigrantes en el mar. CC también quiere más apoyo directo de la UE para estos rescates. CC exige al Gobierno de España que promueva estas medidas.",
+            "citas": [
+              "c0083"
+            ],
+            "id": "exterior-defensa-6",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "CC pide al Gobierno de España que impulse más cooperación en la UE. CC propone cooperar con los países de origen y tránsito de las personas inmigrantes. Son los países de donde salen o por donde pasan estas personas. CC quiere esta cooperación para combatir la inmigración irregular.",
+            "citas": [
+              "c0087"
+            ],
+            "id": "exterior-defensa-7",
+            "subtema": "Unión Europea"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 62.9,
+          "max_palabras_frase": 17,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 62.9 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    }
+  },
+  "citas": {
+    "c0001": {
+      "chunk": "cc-23-p003-02",
+      "pagina": 3,
+      "literal": "Las fuerzas que integramos esta coalición creemos en una Canarias más fuerte y con el máximo nivel de autogobierno, en igualdad de condiciones y competencias, dentro de un consensuado estado plurinacional.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.2024,
+            0.752,
+            0.8569,
+            0.7712
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2024,
+            0.7711,
+            0.8572,
+            0.7903
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2024,
+            0.7901,
+            0.7498,
+            0.8092
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0002": {
+      "chunk": "cc-23-p004-02",
+      "pagina": 4,
+      "literal": "Exigiremos que el Gobierno cumpla inmediatamente con la actualización de los costes del transporte de mercancías",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8565,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.8665,
+            0.5435,
+            0.8856
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0003": {
+      "chunk": "cc-23-p004-02",
+      "pagina": 4,
+      "literal": "No permitiremos nuevas reformas por la puerta de atrás, como se ha hecho en esta legislatura, ni que se vulneren los principios elementales de los dos instrumentos más importantes de los que disponemos para garantizar la cohesión social y territorial, entre ellos la obligatoriedad de garantizar la inversión media en las islas en los Presupuestos del Estado.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.4467,
+            0.8567,
+            0.4658
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.4658,
+            0.8567,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8571,
+            0.504
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8571,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.523,
+            0.7202,
+            0.5421
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0004": {
+      "chunk": "cc-23-p004-02",
+      "pagina": 4,
+      "literal": "Nos negaremos a que el Gobierno del Estado continúe cuestionando sistemáticamente derechos consolidados como la bonificación del 75% para los residentes en Canarias. Y exigiremos que ponga en marcha los mecanismos de defensa de la competencia y promueva ante las compañías aéreas la eliminación de las tarifas abusivas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.5612,
+            0.857,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.5803,
+            0.857,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8571,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.6185,
+            0.8568,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.6376,
+            0.5854,
+            0.6567
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0005": {
+      "chunk": "cc-23-p004-02",
+      "pagina": 4,
+      "literal": "Nunca apoyaremos unos Presupuestos Generales del Estado que incumplan el fuero canario y no garanticen los compromisos del REF. No toleraremos más frustraciones ni incumplimientos e iniciaremos cuantas acciones legales sean necesarias para defender el cumplimiento del nuestro REF.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8571,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8568,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.3894,
+            0.8567,
+            0.4085
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.4085,
+            0.7579,
+            0.4276
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0006": {
+      "chunk": "cc-23-p004-02",
+      "pagina": 4,
+      "literal": "Por ello, nos comprometemos a desarrollar el Estatuto de Autonomía de Canarias, priorizando siempre los intereses de los canarios y las canarias frente a las prioridades de los partidos que gobiernen en Madrid.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.5531,
+            0.752,
+            0.8568,
+            0.7712
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.7711,
+            0.8568,
+            0.7903
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.7901,
+            0.8572,
+            0.8092
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2024,
+            0.8092,
+            0.4222,
+            0.8283
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0007": {
+      "chunk": "cc-23-p005-01",
+      "pagina": 5,
+      "literal": "Demandaremos la ampliación del 100% de la bonificación para las guaguas y los tranvías, sin limitaciones, más allá del 31 de diciembre de 2023,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.1986,
+            0.8568,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.2176,
+            0.8336,
+            0.2367
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0008": {
+      "chunk": "cc-23-p005-01",
+      "pagina": 5,
+      "literal": "La inclusión en la red ferroviaria de ADIF de los trenes de Gran Canaria y Tenerife y la aportación financiera estatal y europea para su ejecución son determinantes para ese transporte público en las islas más pobladas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.4357,
+            0.3131,
+            0.8569,
+            0.3322
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.3322,
+            0.8568,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8571,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.3703,
+            0.3277,
+            0.3894
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0009": {
+      "chunk": "cc-23-p005-01",
+      "pagina": 5,
+      "literal": "Reclamaremos un nuevo modelo de financiación autonómica que garantice la suficiencia financiera para los servicios públicos básicos (educación, sanidad y servicios sociales-Dependencia), con absoluta separación de los recursos del REF, conforme al artículo 166.3 del Estatuto canario.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.1031,
+            0.857,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8567,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.1413,
+            0.8568,
+            0.1605
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.1604,
+            0.7664,
+            0.1796
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0010": {
+      "chunk": "cc-23-p005-02",
+      "pagina": 5,
+      "literal": "Durante la Presidencia de España en la UE, en este segundo semestre de 2023, reforzaremos la alianza con Portugal y Francia y exigiremos que el Estado se implique en la consolidación de los derechos de las RUP.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.4085,
+            0.8572,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.4276,
+            0.8567,
+            0.4467
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.4467,
+            0.8569,
+            0.4658
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0011": {
+      "chunk": "cc-23-p005-02",
+      "pagina": 5,
+      "literal": "Exigiremos que Canarias esté presente, con representación propia, en aquellas negociaciones que el Estado lleve a cabo con el Reino de Marruecos, especialmente en dos asuntos fundamentales: la delimitación de los espacios marítimos y el control de los movimientos migratorios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.6185,
+            0.8571,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.6376,
+            0.8571,
+            0.6567
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.6565,
+            0.8569,
+            0.6756
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.6756,
+            0.7736,
+            0.6947
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0012": {
+      "chunk": "cc-23-p005-02",
+      "pagina": 5,
+      "literal": "Priorizaremos las negociaciones con las autoridades comunitarias para tratar de corregir el gravísimo error que constituiría la no exención de Canarias en la nueva tasa verde que se aplicará a los vuelos internacionales dentro del espacio económico europeo (UE, más Islandia, Noruega y Suiza.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.4658,
+            0.8571,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8569,
+            0.504
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8573,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.523,
+            0.7946,
+            0.5421
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0013": {
+      "chunk": "cc-23-p005-02",
+      "pagina": 5,
+      "literal": "Propondremos, además, a ampliar durante un periodo de diez años la bonificación del 60% del IRPF para los residentes en la isla de La Palma",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8568,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.2024,
+            0.7329,
+            0.8139,
+            0.7521
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0014": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "Abogamos por mantener los incentivos a la contratación indefinida a los jóvenes por microempresas y empresarios autónomos, incentivos a la contratación en nuevos proyectos de emprendimiento joven, primer empleo joven e incentivos a los contratos en prácticas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.4276,
+            0.857,
+            0.4467
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.4467,
+            0.8573,
+            0.4658
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.4658,
+            0.8567,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.4849,
+            0.6776,
+            0.504
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0015": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "Exigiremos la continuidad del convenio plurianual para el Plan Especial de Infraestructura Educativa, dotado con al menos 42 millones de euros anuales,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.7329,
+            0.8569,
+            0.7521
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.752,
+            0.8572,
+            0.7712
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0016": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "Propondremos una reforma legislativa que reconozca la gratuidad del primer ciclo de la Educación Infantil (0-3 años)",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.4587,
+            0.8665,
+            0.8571,
+            0.8856
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.8856,
+            0.8413,
+            0.9047
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0017": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "Un gran Pacto social por la Educación. Pacto que garantice marco global que permita colocar a la educación, incluida la canaria, dentro de parámetros de calidad en competencias básicas, lenguas extranjeras y tecnologías, y que sirva a los objetivos de promoción social y de compensación de las desigualdades.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.6812,
+            0.6185,
+            0.8571,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.6376,
+            0.8575,
+            0.6567
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.6565,
+            0.857,
+            0.6756
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.6756,
+            0.8567,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.6947,
+            0.8189,
+            0.7138
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0018": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "Y demandaremos bonificaciones en la cuota empresarial de la Seguridad Social para contratos indefinidos para jóvenes entre 16 y 30 años, para mayores de 45 años, y para mujeres en ocupaciones en las que el colectivo no está suficientemente representado.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.6939,
+            0.4849,
+            0.8568,
+            0.504
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8572,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.523,
+            0.8573,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.5421,
+            0.8569,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.5612,
+            0.3213,
+            0.5803
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0019": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "laborales deben estar dirigidas a la creación de puestos de trabajo, la mejora de la calidad del empleo y la estabilidad. Debemos dejar atrás la precariedad laboral y encaminar nuestros esfuerzos a conseguir plantillas formadas en las empresas, con sueldos dignos",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.084,
+            0.8568,
+            0.1031
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.1031,
+            0.8571,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8572,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.1413,
+            0.4813,
+            0.1605
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0020": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "que se respete también la partida específica para la creación de empleo de un Programa especial de formación profesional para el empleo en sectores de servicios avanzados en cumplimiento de la medida 29 del nuevo REF (art. 23 de la Ley 19/1994).",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3023,
+            0.3322,
+            0.8567,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8573,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8573,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.3894,
+            0.4778,
+            0.4085
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0021": {
+      "chunk": "cc-23-p006-02",
+      "pagina": 6,
+      "literal": "que se siga respetando la partida presupuestaria en el Plan Integral de Empleo de Canarias (PIEC), recogida en una disposición adicional de la Ley de Empleo",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.7562,
+            0.2749,
+            0.8566,
+            0.294
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.294,
+            0.857,
+            0.3131
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.2024,
+            0.3131,
+            0.8568,
+            0.3322
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0022": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Defenderemos la sostenibilidad del sistema de pensiones públicas. Garantizando pensiones dignas y actualizadas en función del coste de la vida.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2788,
+            0.4658,
+            0.8572,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8572,
+            0.504
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0023": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Demandaremos el cumplimiento del artículo 23 del REF (Ley 19/1994) en el que se indica que \"se establecerá un programa específico de becas de estudio para los estudiantes canarios que no encuentren en su isla de residencia la oferta educativa que demanden. Asimismo, se establecerá un programa específico de becas de desplazamiento para los jóvenes canarios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.3322,
+            0.8573,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.3512,
+            0.857,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8567,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.3894,
+            0.8573,
+            0.4085
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.4085,
+            0.8572,
+            0.4276
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0024": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Garantizando pensiones dignas y actualizadas en función del coste de la vida.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8572,
+            0.504
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0025": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Para ello, apoyaremos el impulso de un Pacto de Estado, suscrito por todos los partidos políticos parlamentarios y con la participación de todos los actores sociales,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.6302,
+            0.5421,
+            0.8573,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5612,
+            0.8572,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5803,
+            0.815,
+            0.5994
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0026": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Reclamaremos al Gobierno del Estado la financiación prevista en nuestro Régimen Económico y Fiscal para luchar contra la pobreza en tanto en cuanto la situación de la pobreza en Canarias sea mayor que la media estatal.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.6756,
+            0.8571,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.6947,
+            0.857,
+            0.7138
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8093,
+            0.7329
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0027": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Reivindicaremos que se desarrolle la normativa que regula la Formación Profesional Dual del sistema educativo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.1986,
+            0.8571,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.2176,
+            0.54,
+            0.2367
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0028": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Tomando decisiones, como la financiación vía Presupuestos Generales del Estado, que eliminen incertidumbres y blinden su presente y futuro.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.5836,
+            0.5038,
+            0.8569,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.523,
+            0.8571,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5421,
+            0.6199,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0029": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "Y plantearemos que se realice una revisión de la Ley 39/2006, de 14 de diciembre, de Promoción de la autonomía personal y atención a las",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.278,
+            0.8665,
+            0.8571,
+            0.8856
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.8856,
+            0.8568,
+            0.9047
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0030": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "apoyaremos el impulso de un Pacto de Estado, suscrito por todos los partidos políticos parlamentarios y con la participación de todos los actores sociales, que garantice un sistema de pensiones dignas, fiable y duradero, teniendo como objetivo la sostenibilidad y la suficiencia de las pensiones actuales y futuras, y tramitándose en la comisión del Pacto de Toledo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.7261,
+            0.5421,
+            0.8573,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5612,
+            0.8572,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5803,
+            0.8572,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8571,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.6185,
+            0.8569,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.6376,
+            0.6397,
+            0.6567
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0031": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "la necesidad de integrar la financiación de dependencia en el sistema de financiación autonómica, con la contribución de la Administración General del Estado en un 50% de financiación por su parte con carácter finalista.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3245,
+            0.8092,
+            0.8571,
+            0.8283
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.8283,
+            0.857,
+            0.8474
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8571,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.8665,
+            0.2731,
+            0.8856
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0032": {
+      "chunk": "cc-23-p007-02",
+      "pagina": 7,
+      "literal": "que disponga el deber de las administraciones educativas de garantizar una oferta suficiente de plazas en centros públicos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.084,
+            0.8569,
+            0.1031
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.2024,
+            0.1031,
+            0.641,
+            0.1223
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0033": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Asimismo, exigiremos atención y medidas concretas contra la feminización de la pobreza y contra las dobles y triples discriminaciones que afectan a los colectivos de mujeres con discapacidad, migrantes y racializadas, en colectivos laborales como las trabajadoras del hogar.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.5777,
+            0.7138,
+            0.8571,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.7329,
+            0.8573,
+            0.7521
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.752,
+            0.857,
+            0.7712
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.7711,
+            0.8571,
+            0.7903
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.7901,
+            0.4007,
+            0.8092
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0034": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Asimismo, exigiremos la aplicación efectiva del Pacto de Estado contra la Violencia de Género",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.4528,
+            0.523,
+            0.8567,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.5421,
+            0.6232,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0035": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Asimismo, exigiremos la aplicación efectiva del Pacto de Estado contra la Violencia de Género desarrollando y aplicando para ello mecanismos de prevención y protección de las mujeres y de sus hijos e hijas hoy existentes, y creando nuevas leyes, servicios y presupuestos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.4528,
+            0.523,
+            0.8567,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.5421,
+            0.8572,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.5612,
+            0.857,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.5803,
+            0.8572,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.5994,
+            0.3235,
+            0.6185
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0036": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Continuaremos exigiendo al Estado la protección constitucional de la salud como un derecho fundamental de las personas. Nos mantendremos firmes en la defensa de una Sanidad pública y universal.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.1986,
+            0.8568,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.2176,
+            0.857,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.2367,
+            0.6263,
+            0.2558
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0037": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Exigiremos el cumplimiento efectivo de las leyes y mecanismos para superar las brechas de género y todas las discriminaciones que afectan a las mujeres en la economía y en el mundo laboral:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6565,
+            0.8572,
+            0.6756
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6756,
+            0.857,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6947,
+            0.561,
+            0.7138
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0038": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Exigiremos el cumplimiento efectivo de las leyes y mecanismos para superar las brechas de género y todas las discriminaciones que afectan a las mujeres en la economía y en el mundo laboral: empleo, condiciones de trabajo, retribución, pensiones y otras prestaciones.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6565,
+            0.8572,
+            0.6756
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6756,
+            0.857,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6947,
+            0.8569,
+            0.7138
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.7138,
+            0.5726,
+            0.7329
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0039": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Impulsaremos y apoyaremos medidas legales en contra de la trata de mujeres con fines de explotación sexual y la prostitución.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.3293,
+            0.5994,
+            0.8572,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.6185,
+            0.7601,
+            0.6376
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0040": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Junto a ello, reclamaremos una revisión del sobrecoste de la insularidad y la lejanía, propio del único territorio ultraperiférico que tiene España.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.4744,
+            0.294,
+            0.8569,
+            0.3131
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.3131,
+            0.8572,
+            0.3322
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.3322,
+            0.4949,
+            0.3513
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0041": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Nos mantendremos firmes en la defensa de una Sanidad pública y universal.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.6276,
+            0.2176,
+            0.857,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.2367,
+            0.6263,
+            0.2558
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0042": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Nos opondremos a cualquier intento de retroceso o de desmontar las políticas y leyes contra la Violencia de Género.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.4085,
+            0.8574,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.4276,
+            0.5514,
+            0.4467
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0043": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Propondremos más medidas para mejorar la corresponsabilidad del Estado, de las empresas y de toda la sociedad en las políticas de conciliación:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8283,
+            0.8567,
+            0.8474
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8277,
+            0.8665
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0044": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Propondremos más medidas para mejorar la corresponsabilidad del Estado, de las empresas y de toda la sociedad en las políticas de conciliación: en especial extender la escolarización de 0 a 3 años, la mejora de los permisos de paternidad y maternidad y atención a la dependencia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8283,
+            0.8567,
+            0.8474
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8569,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8665,
+            0.8567,
+            0.8856
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8856,
+            0.7504,
+            0.9047
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0045": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Y defenderemos un nuevo modelo de financiación en el que la obligación constitucional de financiación sanitaria por parte de Estado sea más transparente, específica y no diluida en la financiación autonómica.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.6316,
+            0.2367,
+            0.857,
+            0.2558
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.2558,
+            0.8568,
+            0.2749
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.2749,
+            0.857,
+            0.294
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.294,
+            0.4671,
+            0.3131
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0046": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "Y reivindicaremos que el Gobierno del Estado aumente la partida que transfiere a Canarias para seguir impulsando la atención a la salud mental.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.5056,
+            0.3322,
+            0.857,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8566,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.3703,
+            0.4522,
+            0.3894
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0047": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "en especial extender la escolarización de 0 a 3 años, la mejora de los permisos de paternidad y maternidad y atención a la dependencia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.8354,
+            0.8474,
+            0.8569,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8665,
+            0.8567,
+            0.8856
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.8856,
+            0.7504,
+            0.9047
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0048": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "la aplicación en todo el Estado español del Convenio de Estambul, incluyendo todas las formas de violencia de género en la legislación, en los presupuestos y en los servicios de atención a las víctimas,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.3406,
+            0.4467,
+            0.8568,
+            0.4658
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.4658,
+            0.8568,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.4849,
+            0.857,
+            0.504
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0049": {
+      "chunk": "cc-23-p008-02",
+      "pagina": 8,
+      "literal": "personas en situación de dependencia, para que adapte sus mecanismos a la demanda de los ciudadanos, flexibilice sus estructuras para mejorar su capacidad de respuesta a los nuevos problemas sociales, mejore su encaje en el sistema público de servicios sociales y garantice la sostenibilidad del sistema.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.084,
+            0.8573,
+            0.1031
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.1031,
+            0.857,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8568,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.1413,
+            0.8575,
+            0.1605
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2024,
+            0.1604,
+            0.2743,
+            0.1796
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0050": {
+      "chunk": "cc-23-p009-02",
+      "pagina": 9,
+      "literal": "Un problema que precisa de medidas que contribuyan a respetar la realidad LGTBI y que ofrezca a este colectivo el respaldo legal y social que precisan",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.8328,
+            0.1986,
+            0.8576,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.2176,
+            0.8567,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.2367,
+            0.8566,
+            0.2558
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0051": {
+      "chunk": "cc-23-p009-02",
+      "pagina": 9,
+      "literal": "respetar la realidad LGTBI y que ofrezca a este colectivo el respaldo legal y social que precisan para denunciar los actos de violencia, avanzar en la igualdad en el ámbito laboral, el impulso de protocolos de actuación para los casos de acoso escolar o una atención sanitaria que se ajuste a sus necesidades.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.6848,
+            0.2176,
+            0.8567,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.2367,
+            0.8566,
+            0.2558
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.2558,
+            0.8568,
+            0.2749
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.2749,
+            0.8573,
+            0.294
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.294,
+            0.7651,
+            0.3131
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0052": {
+      "chunk": "cc-23-p009-02",
+      "pagina": 9,
+      "literal": "seguiremos trabajando para consolidar el proceso de diversificación, creando nuevas oportunidades en el ámbito industrial, abriendo nuevas puertas a la I+D y apostando por el crecimiento del sector primario.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.3409,
+            0.6565,
+            0.8572,
+            0.6756
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.6756,
+            0.8569,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.6947,
+            0.8568,
+            0.7138
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2024,
+            0.7138,
+            0.2773,
+            0.7329
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0053": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "Asimismo, reclamaremos que se cumpla el establecimiento de un sistema de compensación, consignado anualmente en los Presupuestos Generales del Estado, que garantice en las Islas Canarias la moderación de los precios del agua desalinizada, regenerada o reutilizada hasta alcanzar un nivel equivalente al del resto del territorio del Estado,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4658,
+            0.8575,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8572,
+            0.504
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8569,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.523,
+            0.8569,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5421,
+            0.6029,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0054": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "El sector primario puede y debe incrementar su peso en la economía canaria, dentro del marco de la Política Agraria Común y de la Política Pesquera Común.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.2367,
+            0.8571,
+            0.2558
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.2558,
+            0.8566,
+            0.2749
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.2749,
+            0.2699,
+            0.294
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0055": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "La cobertura de los seguros agrarios y las subvenciones hasta el 100% del transporte de mercancías son dos logros que defenderemos cada día en las Cortes Generales.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.5037,
+            0.3894,
+            0.8572,
+            0.4085
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4085,
+            0.8568,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4276,
+            0.6612,
+            0.4467
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0056": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "Y reiteraremos nuestra demanda para que se introduzcan mejoras en la inspección fitosanitaria para impedir la entrada de plagas que destruyan nuestros cultivos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.5259,
+            0.5803,
+            0.8573,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8567,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.6185,
+            0.6389,
+            0.6376
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0057": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "alcanzar al menos un 12% de la cuota nacional de atún rojo para la flota atunera canaria y el aumento de la cuota de la tuna (patudo en Península).",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.5036,
+            0.6947,
+            0.8572,
+            0.7138
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8568,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.7329,
+            0.4873,
+            0.7521
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0058": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "así como los precios del agua de consumo agrario fruto de la extracción y elevación de pozos y galerías, y de la desalación para riego agrícola.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.6072,
+            0.5421,
+            0.8572,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5612,
+            0.8573,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5803,
+            0.5192,
+            0.5994
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0059": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "consigne anualmente en los Presupuestos Generales del Estado una dotación suficiente para garantizar el 100% de la aportación nacional de las medidas de fomento de las producciones agrícolas locales autorizada por la Unión Europea, en el marco del Programa de Opciones Específicas de Alejamiento e Insularidad (POSEI).",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2921,
+            0.3131,
+            0.8568,
+            0.3322
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.3322,
+            0.8569,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8571,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.3703,
+            0.857,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.3894,
+            0.4992,
+            0.4085
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0060": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "demandaremos que el Gobierno del Estado cumpla el nuevo REF para que se consoliden las medidas específicas que compensen los sobrecostes estructurales que limitan el desarrollo de la industria en Canarias, rebajando las condiciones de acceso a los Incentivos Económicos Regionales para que las empresas canarias puedan optar a estas ayudas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.5424,
+            0.1031,
+            0.857,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8572,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.1413,
+            0.8571,
+            0.1605
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.1604,
+            0.857,
+            0.1796
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.1795,
+            0.8571,
+            0.1987
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.1986,
+            0.3214,
+            0.2178
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0061": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "nacional de atún rojo para la flota atunera canaria y el aumento de la cuota de la tuna (patudo en Península). Con el objetivo futuro de no tener cuota en Canarias de estas dos especies,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8568,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.7329,
+            0.8571,
+            0.7521
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.752,
+            0.4851,
+            0.7712
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0062": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "reclamaremos que se cumpla el establecimiento de un sistema de compensación, consignado anualmente en los Presupuestos Generales del Estado, que garantice en las Islas Canarias la moderación de los precios del agua desalinizada, regenerada o reutilizada hasta alcanzar un nivel equivalente al del resto del territorio del Estado,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2963,
+            0.4658,
+            0.8575,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8572,
+            0.504
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8569,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.523,
+            0.8569,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5421,
+            0.6029,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0063": {
+      "chunk": "cc-23-p010-02",
+      "pagina": 10,
+      "literal": "un sistema de compensación, consignado anualmente en los Presupuestos Generales del Estado, que garantice en las Islas Canarias la moderación de los precios del agua desalinizada, regenerada o reutilizada hasta alcanzar un nivel equivalente al del resto del territorio del Estado,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.7381,
+            0.4658,
+            0.8575,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8572,
+            0.504
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8569,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.523,
+            0.8569,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2024,
+            0.5421,
+            0.6029,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0064": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "Alcanzar la cohesión territorial y sacar provecho a nuestra posición geográfica pasa por el desarrollo de las redes de transporte y la adecuación de nuestras infraestructuras marítimas y aéreas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.6756,
+            0.8571,
+            0.6947
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.6947,
+            0.8573,
+            0.7138
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.7138,
+            0.511,
+            0.7329
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0065": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "Canarias tiene que integrarse plenamente en el Mercado Único Digital Europeo. Para ello, impulsaremos el Plan Específico de Telecomunicaciones de Canarias, dentro de la Agenda Digital española, tal como prevé la Disposición Adicional Sexta del Estatuto.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3322,
+            0.857,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8568,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8569,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3894,
+            0.5525,
+            0.4085
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0066": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "Es necesario acordar con el Estado y con la Unión Europea medidas que aseguren que la compra desde Canarias no se vea sujeta a sobrecostes de intermediación abusivos, teniendo acceso efectivo al conjunto de la oferta comercial disponible en la Unión Europea.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8569,
+            0.504
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8573,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.523,
+            0.857,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.5421,
+            0.5656,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0067": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "Para ello, impulsaremos el Plan Específico de Telecomunicaciones de Canarias, dentro de la Agenda Digital española, tal como prevé la Disposición Adicional Sexta del Estatuto.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2857,
+            0.3512,
+            0.8568,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8569,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.3894,
+            0.5525,
+            0.4085
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0068": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "También han de corregirse los frecuentes errores impositivos en la compra de bienes digitales, en los que se daña al consumidor canario y a la Hacienda pública canaria, por recaudarse IVA en vez de IGIC en múltiples contrataciones electrónicas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.6297,
+            0.5803,
+            0.8572,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8566,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.6185,
+            0.8571,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.6376,
+            0.8224,
+            0.6567
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0069": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "Y que las ventas desde Canarias sean efectivamente accesibles desde cualquier Estado miembro, sin barreras ni dificultades para nuestras Pymes exportadoras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.5715,
+            0.5421,
+            0.8565,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.5612,
+            0.857,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.5803,
+            0.6253,
+            0.5994
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0070": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "figuran el fomento de las actividades de I+D y los procesos de transferencia de sus resultados al tejido productivo y la generación de conocimiento y potenciación de la excelencia, con énfasis en la especialización",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.626,
+            0.1986,
+            0.8567,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2176,
+            0.8573,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2367,
+            0.8567,
+            0.2558
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2558,
+            0.478,
+            0.2749
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0071": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "figuran el fomento de las actividades de I+D y los procesos de transferencia de sus resultados al tejido productivo y la generación de conocimiento y potenciación de la excelencia, con énfasis en la especialización y el fortalecimiento de los siguientes ámbitos prioritarios: astrofísica y espacio, ciencias marino marítimas y biotecnología y biomedicina asociadas a la biodiversidad.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.626,
+            0.1986,
+            0.8567,
+            0.2178
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2176,
+            0.8573,
+            0.2367
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2367,
+            0.8567,
+            0.2558
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2558,
+            0.8572,
+            0.2749
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.2749,
+            0.8566,
+            0.294
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.294,
+            0.5732,
+            0.3131
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0072": {
+      "chunk": "cc-23-p011-02",
+      "pagina": 11,
+      "literal": "se precisa de claras decisiones como el establecimiento de precios máximos de referencia en aquellas líneas declaradas como obligación de servicio público.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.6732,
+            0.8283,
+            0.857,
+            0.8474
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8567,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2024,
+            0.8665,
+            0.742,
+            0.8856
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0073": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "Demandaremos la obligación de servicio público marítimo, con un precio máximo, que una el triángulo de las Islas Verdes (La Palma, El Hierro y La Gomera),",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.1604,
+            0.8567,
+            0.1796
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.1795,
+            0.8568,
+            0.1987
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.1986,
+            0.2839,
+            0.2178
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0074": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "En especial, se instará al Estado a que se articulen medidas específicas para acelerar la transición energética en Canarias",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.6376,
+            0.8572,
+            0.6567
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.6565,
+            0.5818,
+            0.6756
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0075": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "España debe considerar a Canarias la región geográfica más sensible en materia de cambio climático y, por lo tanto, comprometerse a establecer series temporales fijas. Esta es la única forma que tenemos de conocer de verdad la dimensión del cambio climático.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.427,
+            0.5421,
+            0.857,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5612,
+            0.8574,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5803,
+            0.8571,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8037,
+            0.6185
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0076": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "Exigiremos que se apruebe la ley prevista en el artículo 161.3 del Estatuto, estableciendo un régimen especial de funcionamiento de los aeropuertos canarios, concebidos como una red específica, en la que las administraciones públicas canarias y los agentes económicos y sociales de Canarias jueguen un papel determinante en su estrategia comercial y la actualización de la red de infraestructuras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.3322,
+            0.8572,
+            0.3513
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.3512,
+            0.8571,
+            0.3703
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.3703,
+            0.8571,
+            0.3894
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.3894,
+            0.8567,
+            0.4085
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4085,
+            0.8573,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4276,
+            0.3676,
+            0.4467
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0077": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "La central hidroeólica de \"Gorona del Viento\", en El Hierro, representa el más claro ejemplo de la vía por la que debemos transitar si queremos que nuestras Islas sean un modelo sostenible y un ejemplo para el resto del mundo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4658,
+            0.857,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8571,
+            0.504
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8281,
+            0.5229
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0078": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "La central hidroeólica de \"Gorona del Viento\", en El Hierro, representa el más claro ejemplo de la vía por la que debemos transitar si queremos que nuestras Islas sean un modelo sostenible y un ejemplo para el resto del mundo. Lo mismo que el proyecto Chira-Soria, en Gran Canaria, y el desarrollo del proyectado en Güímar.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4658,
+            0.857,
+            0.4849
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.4849,
+            0.8571,
+            0.504
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8573,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.523,
+            0.8568,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5421,
+            0.4141,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0079": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "Propondremos consolidar Canarias como un laboratorio natural de ensayos mundial para la sostenibilidad, entre ellos la tecnología marina.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.7329,
+            0.857,
+            0.7521
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.752,
+            0.7324,
+            0.7712
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0080": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "Reclamaremos al Estado que cumpla escrupulosamente con la ejecución del convenio de carreteras con Canarias, transfiriendo inmediatamente los fondos consignados en los Presupuestos Generales del Estado.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.2558,
+            0.8572,
+            0.2749
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.2749,
+            0.8566,
+            0.294
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.294,
+            0.7502,
+            0.3131
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0081": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "Y exigiremos la financiación para que exista un buque oceanográfico en Canarias que permita desarrollar proyectos permanentes en las islas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2718,
+            0.8092,
+            0.8573,
+            0.8283
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.8283,
+            0.8233,
+            0.8474
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0082": {
+      "chunk": "cc-23-p012-02",
+      "pagina": 12,
+      "literal": "comprometerse a establecer series temporales fijas. Esta es la única forma que tenemos de conocer de verdad la dimensión del cambio climático.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5803,
+            0.8571,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8037,
+            0.6185
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0083": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Demandaremos al Gobierno de España para que promueva en el ámbito de la Unión Europea una mayor coordinación entre las políticas de los diferentes Estados miembros, y entre ellas el rescate de inmigrantes en el mar, intensificándose el apoyo directo de la UE a los Estados Miembros en esta materia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.3894,
+            0.857,
+            0.4085
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4085,
+            0.857,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4276,
+            0.857,
+            0.4467
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4467,
+            0.8575,
+            0.4658
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4658,
+            0.2721,
+            0.4849
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0084": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Demandaremos al Gobierno del Estado, al menos, la financiación de las plazas del Cuerpo General de la Policía Canaria (CGPC)",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8567,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7329,
+            0.7005,
+            0.7521
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0085": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Demandaremos al Gobierno del Estado, al menos, la financiación de las plazas del Cuerpo General de la Policía Canaria (CGPC) equiparable a las plazas vacantes de los catálogos de los Cuerpos y Fuerzas de Seguridad del Estado o de cofinanciación del CGPC, como sucede con otros cuerpos autonómicos,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7138,
+            0.8567,
+            0.7329
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7329,
+            0.8567,
+            0.7521
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.752,
+            0.8569,
+            0.7712
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7711,
+            0.8569,
+            0.7903
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.7901,
+            0.317,
+            0.8092
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0086": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Demandaremos medidas complementarias para la ayuda a la crianza de los niños y las niñas con el objetivo de que alcance automáticamente a todas las familias y apoye especialmente a aquellas con menos ingresos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.8474,
+            0.8568,
+            0.8665
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.8665,
+            0.8572,
+            0.8856
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.8856,
+            0.773,
+            0.9047
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0087": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Instaremos al Gobierno de España para que promueva en el ámbito de la UE una mayor cooperación con los países de origen y tránsito en la lucha contra la inmigración irregular.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5038,
+            0.8574,
+            0.5229
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.523,
+            0.8572,
+            0.5421
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5421,
+            0.4044,
+            0.5612
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0088": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "Propiciaremos la condición de Canarias como Plataforma de Paz y fomentaremos esta circunstancia para la cooperación con África Occidental.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.429,
+            0.1031,
+            0.857,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8569,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.1413,
+            0.3896,
+            0.1605
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0089": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "la llegada de menores no acompañados empiece a considerarse un asunto prioritario para el Estado, y que promueva las modificaciones legislativas necesarias para que todas las comunidades autónomas se impliquen en la acogida, formación e integración de los menores que llegan a Canarias;",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.7734,
+            0.5421,
+            0.8568,
+            0.5612
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5612,
+            0.857,
+            0.5803
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5803,
+            0.8566,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8571,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.6185,
+            0.7293,
+            0.6376
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0090": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "que promueva las modificaciones legislativas necesarias para que todas las comunidades autónomas se impliquen en la acogida, formación e integración de los menores que llegan a Canarias; que se aplique la solidaridad interterritorial",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.3615,
+            0.5803,
+            0.8566,
+            0.5994
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.5994,
+            0.8571,
+            0.6185
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.6185,
+            0.8571,
+            0.6376
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.6376,
+            0.4372,
+            0.6567
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0091": {
+      "chunk": "cc-23-p013-02",
+      "pagina": 13,
+      "literal": "una mayor coordinación entre las políticas de los diferentes Estados miembros, y entre ellas el rescate de inmigrantes en el mar, intensificándose el apoyo directo de la UE a los Estados Miembros en esta materia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.3544,
+            0.4085,
+            0.857,
+            0.4276
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4276,
+            0.857,
+            0.4467
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4467,
+            0.8575,
+            0.4658
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2024,
+            0.4658,
+            0.2721,
+            0.4849
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0092": {
+      "chunk": "cc-23-p014-01",
+      "pagina": 14,
+      "literal": "También plantearemos que se incremente la identificación temprana del alumnado en situación socialmente vulnerable y extender de forma preventiva su acceso a apoyo y refuerzo educativo",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.4406,
+            0.1413,
+            0.857,
+            0.1605
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.1604,
+            0.857,
+            0.1796
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.1795,
+            0.8028,
+            0.1987
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0093": {
+      "chunk": "cc-23-p014-01",
+      "pagina": 14,
+      "literal": "establecer, además, el umbral de pobreza como nivel de renta mínimo común a nivel estatal para acceder a ayudas (o bonificaciones) de comedor escolar gratuito, vivan donde vivan, elevando la cobertura del 13% actual al 29% de tasa de pobreza infantil.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.084,
+            0.857,
+            0.1031
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.1031,
+            0.8568,
+            0.1223
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.1222,
+            0.8567,
+            0.1414
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2024,
+            0.1413,
+            0.4281,
+            0.1605
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0094": {
+      "chunk": "cc-23-p014-01",
+      "pagina": 14,
+      "literal": "que se aumente el número de profesionales de salud mental.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2882,
+            0.1986,
+            0.8114,
+            0.2178
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    }
+  },
+  "incidencias": []
+}

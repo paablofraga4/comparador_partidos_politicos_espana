@@ -1,0 +1,6054 @@
+{
+  "convocatoria": "generales-2023",
+  "candidatura": "bildu",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:54:55Z",
+  "documento": {
+    "id": "generales-2023/bildu",
+    "sha256": "6634c0786c1e771c61c1a65e549dfde0d4581d09e19949466e931c96a9642465",
+    "paginas": 16,
+    "idioma": "es"
+  },
+  "generado": {
+    "fecha": "2026-10-05T21:58:16Z",
+    "modelo": "gpt-6.1-sol",
+    "modelo_lectura_facil": "gpt-6.1-sol",
+    "prompt": "analisis@2",
+    "tokens_entrada": 227283,
+    "tokens_cache": 147649,
+    "tokens_salida": 117516,
+    "coste_usd": 1.4373
+  },
+  "temas": {
+    "vivienda": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone mantener las condiciones de los alquileres renovados y limitar las subidas de cuotas hipotecarias, además de ampliar la protección ante dificultades de pago.",
+          "citas": [
+            "c0010",
+            "c0009",
+            "c0017"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Recuperar indefinidamente la prórroga automática de los contratos de alquiler en caso de renovación, manteniendo las condiciones y cuantías de renta.",
+          "citas": [
+            "c0010"
+          ],
+          "id": "vivienda-1",
+          "subtema": "alquiler"
+        },
+        {
+          "texto": "Establecer, hasta la reversión del alza de tipos de interés, una congelación retroactiva de las cuotas de hipotecas inferiores a 250.000€, limitando su aumento al 15% respecto a las cuotas previas a la primera subida de tipos de julio de 2022.",
+          "citas": [
+            "c0009"
+          ],
+          "id": "vivienda-2",
+          "subtema": "compra y acceso"
+        },
+        {
+          "texto": "Hacer obligatorio el cumplimiento del Código de Buenas Prácticas de la Banca para afrontar los pagos hipotecarios y ampliar su acceso a más sectores con dificultades económicas.",
+          "citas": [
+            "c0008",
+            "c0017"
+          ],
+          "id": "vivienda-3",
+          "subtema": "compra y acceso"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mantener las condiciones y el precio del alquiler al renovar el contrato.",
+            "citas": [
+              "c0010",
+              "c0009",
+              "c0017"
+            ]
+          },
+          {
+            "texto": "El partido quiere limitar las subidas de las cuotas de las hipotecas.",
+            "citas": [
+              "c0010",
+              "c0009",
+              "c0017"
+            ]
+          },
+          {
+            "texto": "El partido quiere ampliar la ayuda para quienes tienen problemas para pagar.",
+            "citas": [
+              "c0010",
+              "c0009",
+              "c0017"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que los contratos de alquiler se renueven solos. El partido quiere recuperar esta medida sin fecha de fin. Los contratos mantendrán las mismas condiciones y el mismo precio.",
+            "citas": [
+              "c0010"
+            ],
+            "id": "vivienda-1",
+            "subtema": "alquiler"
+          },
+          {
+            "texto": "El partido quiere dejar fijas las cuotas de las hipotecas. La medida afecta a hipotecas de menos de 250.000 €. Las cuotas no podrán subir más de un 15% sobre las cuotas previas. Son las cuotas anteriores a la primera subida de intereses de julio de 2022. El límite también afecta a las cuotas ya cobradas desde esa subida. La medida durará hasta que los intereses vuelvan al nivel previo a su subida.",
+            "citas": [
+              "c0009"
+            ],
+            "id": "vivienda-2",
+            "subtema": "compra y acceso"
+          },
+          {
+            "texto": "El partido quiere que los bancos cumplan unas reglas de ayuda para pagar hipotecas. Estas reglas se llaman Código de Buenas Prácticas de la Banca. El partido quiere que su cumplimiento sea obligatorio. El partido quiere que más grupos con problemas de dinero reciban esta ayuda.",
+            "citas": [
+              "c0008",
+              "c0017"
+            ],
+            "id": "vivienda-3",
+            "subtema": "compra y acceso"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 73.1,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "economia-empleo": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone recuperar medidas laborales excluidas de la última reforma laboral.",
+          "citas": [
+            "c0005"
+          ]
+        },
+        {
+          "texto": "Plantea una nueva Ley de Industria centrada en las pymes y rechaza las restricciones fiscales a la inversión pública.",
+          "citas": [
+            "c0038",
+            "c0039"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Recuperar la indemnización por despido de 45 días y los salarios de tramitación.",
+          "citas": [
+            "c0006"
+          ],
+          "id": "economia-empleo-1",
+          "subtema": "reforma laboral y contratos"
+        },
+        {
+          "texto": "Poner fin a la estatalización de los convenios y recuperar la prioridad aplicativa de los convenios de ámbito vasco, provincial y autonómico.",
+          "citas": [
+            "c0002"
+          ],
+          "id": "economia-empleo-2",
+          "subtema": "reforma laboral y contratos"
+        },
+        {
+          "texto": "Reducir la jornada laboral hasta las 32 horas semanales sin reducción salarial ni modificación de condiciones.",
+          "citas": [
+            "c0004"
+          ],
+          "id": "economia-empleo-3",
+          "subtema": "jornada laboral"
+        },
+        {
+          "texto": "Aumentar el SMI hasta los 1.200 euros y asumir la capacidad de establecer un SMI propio.",
+          "citas": [
+            "c0001"
+          ],
+          "id": "economia-empleo-4",
+          "subtema": "salario mínimo"
+        },
+        {
+          "texto": "Adoptar medidas específicas para mujeres y jóvenes contra la brecha salarial, la precariedad, la temporalidad y la parcialidad.",
+          "citas": [
+            "c0003"
+          ],
+          "id": "economia-empleo-5",
+          "subtema": "reforma laboral y contratos"
+        },
+        {
+          "texto": "Transferir la Inspección de Trabajo y, hasta que se haga efectiva la transferencia, convocar plazas para ampliar su plantilla.",
+          "citas": [
+            "c0007"
+          ],
+          "id": "economia-empleo-6",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Aprobar una nueva Ley de Industria centrada en las pymes, la investigación, la innovación, el desarrollo y la digitalización, y exigir la devolución de ayudas públicas a las empresas que deslocalicen la producción.",
+          "citas": [
+            "c0038",
+            "c0034"
+          ],
+          "id": "economia-empleo-7",
+          "subtema": "industria"
+        },
+        {
+          "texto": "Derogar la modificación del artículo 135 de la Constitución que prioriza el pago de la deuda sobre la inversión pública y social.",
+          "citas": [
+            "c0036"
+          ],
+          "id": "economia-empleo-8",
+          "subtema": "deuda y déficit"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere recuperar medidas laborales que quedaron fuera de la última reforma laboral.",
+            "citas": [
+              "c0005"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone una nueva Ley de Industria centrada en las pequeñas y medianas empresas.",
+            "citas": [
+              "c0038",
+              "c0039"
+            ]
+          },
+          {
+            "texto": "EH Bildu rechaza los límites fiscales a la inversión pública.",
+            "citas": [
+              "c0038",
+              "c0039"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere recuperar el pago de 45 días de sueldo por despido. EH Bildu quiere recuperar el pago de sueldos durante el juicio por despido.",
+            "citas": [
+              "c0006"
+            ],
+            "id": "economia-empleo-1",
+            "subtema": "reforma laboral y contratos"
+          },
+          {
+            "texto": "EH Bildu quiere acabar con la prioridad de los convenios laborales estatales. EH Bildu quiere dar prioridad a los convenios de ámbito vasco, provincial y autonómico.",
+            "citas": [
+              "c0002"
+            ],
+            "id": "economia-empleo-2",
+            "subtema": "reforma laboral y contratos"
+          },
+          {
+            "texto": "EH Bildu quiere reducir la jornada laboral a 32 horas semanales. EH Bildu quiere mantener los sueldos y las demás condiciones de trabajo.",
+            "citas": [
+              "c0004"
+            ],
+            "id": "economia-empleo-3",
+            "subtema": "jornada laboral"
+          },
+          {
+            "texto": "EH Bildu quiere subir el salario mínimo interprofesional a 1.200 euros. EH Bildu quiere poder fijar un salario mínimo propio.",
+            "citas": [
+              "c0001"
+            ],
+            "id": "economia-empleo-4",
+            "subtema": "salario mínimo"
+          },
+          {
+            "texto": "EH Bildu quiere medidas para mujeres y jóvenes. EH Bildu quiere reducir las diferencias de sueldo. EH Bildu quiere combatir las malas condiciones de trabajo. EH Bildu quiere combatir los empleos temporales y a tiempo parcial.",
+            "citas": [
+              "c0003"
+            ],
+            "id": "economia-empleo-5",
+            "subtema": "reforma laboral y contratos"
+          },
+          {
+            "texto": "EH Bildu quiere transferir la Inspección de Trabajo. EH Bildu propone ofrecer más plazas de trabajo mientras se completa ese traspaso.",
+            "citas": [
+              "c0007"
+            ],
+            "id": "economia-empleo-6",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "EH Bildu propone una nueva Ley de Industria centrada en las pequeñas y medianas empresas. EH Bildu quiere que esta ley impulse la investigación, la innovación y el desarrollo. EH Bildu quiere que esta ley impulse el uso de tecnologías digitales. EH Bildu quiere exigir la devolución de ayudas públicas a empresas que trasladen su producción.",
+            "citas": [
+              "c0038",
+              "c0034"
+            ],
+            "id": "economia-empleo-7",
+            "subtema": "industria"
+          },
+          {
+            "texto": "EH Bildu quiere anular el cambio del artículo 135 de la Constitución. EH Bildu rechaza pagar la deuda antes que hacer inversiones públicas y sociales.",
+            "citas": [
+              "c0036"
+            ],
+            "id": "economia-empleo-8",
+            "subtema": "deuda y déficit"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.3,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "impuestos": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone aumentar y hacer permanentes los impuestos a la banca, las energéticas y las grandes fortunas, y crear un impuesto sobre los beneficios de grandes distribuidoras alimentarias.",
+          "citas": [
+            "c0035",
+            "c0033"
+          ]
+        },
+        {
+          "texto": "Plantea aplicar el IVA superreducido a los productos de higiene menstrual.",
+          "citas": [
+            "c0026",
+            "c0019"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Aumentar la carga impositiva y convertir en permanentes los impuestos a la banca y las energéticas, respetando la gestión y recaudación de las haciendas forales.",
+          "citas": [
+            "c0035"
+          ],
+          "id": "impuestos-1",
+          "subtema": "impuestos a banca y energéticas"
+        },
+        {
+          "texto": "Aumentar la carga impositiva y convertir en permanentes los impuestos a las grandes fortunas, respetando la gestión y recaudación de las haciendas forales.",
+          "citas": [
+            "c0035"
+          ],
+          "id": "impuestos-2",
+          "subtema": "patrimonio"
+        },
+        {
+          "texto": "Crear un impuesto especial sobre los beneficios de grandes cadenas distribuidoras alimentarias.",
+          "citas": [
+            "c0033"
+          ],
+          "id": "impuestos-3",
+          "subtema": "sociedades"
+        },
+        {
+          "texto": "Aplicar el IVA superreducido a los productos de higiene menstrual en todos los puntos de venta.",
+          "citas": [
+            "c0019"
+          ],
+          "id": "impuestos-4",
+          "subtema": "IVA"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere subir los impuestos a los bancos y las empresas de energía.",
+            "citas": [
+              "c0035",
+              "c0033"
+            ]
+          },
+          {
+            "texto": "También quiere subir los impuestos a las grandes fortunas.",
+            "citas": [
+              "c0035",
+              "c0033"
+            ]
+          },
+          {
+            "texto": "El partido quiere que estos impuestos no tengan fecha de fin.",
+            "citas": [
+              "c0035",
+              "c0033"
+            ]
+          },
+          {
+            "texto": "El partido quiere crear un impuesto sobre las ganancias.",
+            "citas": [
+              "c0035",
+              "c0033"
+            ]
+          },
+          {
+            "texto": "Lo pagarán las grandes cadenas de tiendas de alimentos.",
+            "citas": [
+              "c0035",
+              "c0033"
+            ]
+          },
+          {
+            "texto": "El partido quiere aplicar el IVA más bajo a los productos para la regla.",
+            "citas": [
+              "c0026",
+              "c0019"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere subir los impuestos a los bancos y las empresas de energía. El partido quiere que estos impuestos no tengan fecha de fin. Las haciendas forales son las oficinas de impuestos de algunos territorios. El partido quiere que estas oficinas sigan a cargo de estos impuestos. También quiere que estas oficinas sigan cobrando estos impuestos.",
+            "citas": [
+              "c0035"
+            ],
+            "id": "impuestos-1",
+            "subtema": "impuestos a banca y energéticas"
+          },
+          {
+            "texto": "El partido quiere subir los impuestos a las grandes fortunas. El partido quiere que estos impuestos no tengan fecha de fin. Las haciendas forales son las oficinas de impuestos de algunos territorios. El partido quiere que estas oficinas sigan a cargo de estos impuestos. También quiere que estas oficinas sigan cobrando estos impuestos.",
+            "citas": [
+              "c0035"
+            ],
+            "id": "impuestos-2",
+            "subtema": "patrimonio"
+          },
+          {
+            "texto": "El partido quiere crear un impuesto especial. Las grandes cadenas de tiendas de alimentos lo pagarán sobre sus ganancias.",
+            "citas": [
+              "c0033"
+            ],
+            "id": "impuestos-3",
+            "subtema": "sociedades"
+          },
+          {
+            "texto": "El partido quiere aplicar el IVA más bajo a los productos para la regla. Quiere aplicar este IVA en todos los lugares donde se venden estos productos.",
+            "citas": [
+              "c0019"
+            ],
+            "id": "impuestos-4",
+            "subtema": "IVA"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 73.4,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "pensiones": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone aumentar las pensiones mínimas, de viudedad y no contributivas, y rechaza elevar la edad de jubilación o el periodo de cómputo.",
+          "citas": [
+            "c0012",
+            "c0013",
+            "c0015"
+          ]
+        },
+        {
+          "texto": "Plantea transferir el Régimen Económico de la Seguridad Social a las instituciones vascas y navarras.",
+          "citas": [
+            "c0016"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Aumentar inmediatamente las pensiones mínimas hasta los 1.080€ y asumir la capacidad propia para complementarlas.",
+          "citas": [
+            "c0012"
+          ],
+          "id": "pensiones-1",
+          "subtema": "pensiones mínimas y no contributivas"
+        },
+        {
+          "texto": "Aumentar las pensiones mínimas de viudedad y las no contributivas para alcanzar un objetivo de suficiencia.",
+          "citas": [
+            "c0013"
+          ],
+          "id": "pensiones-2",
+          "subtema": "pensiones mínimas y no contributivas"
+        },
+        {
+          "texto": "Rechazar cualquier aumento de la edad de jubilación o del periodo de cómputo de las pensiones.",
+          "citas": [
+            "c0015"
+          ],
+          "id": "pensiones-3",
+          "subtema": "edad de jubilación"
+        },
+        {
+          "texto": "Transferir el Régimen Económico de la Seguridad Social a las instituciones vascas y navarras.",
+          "citas": [
+            "c0016"
+          ],
+          "id": "pensiones-4",
+          "subtema": "sostenibilidad del sistema"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere aumentar las pensiones mínimas y las pensiones de viudedad.",
+            "citas": [
+              "c0012",
+              "c0013",
+              "c0015"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere aumentar las pensiones que no exigen aportaciones previas a la Seguridad Social.",
+            "citas": [
+              "c0012",
+              "c0013",
+              "c0015"
+            ]
+          },
+          {
+            "texto": "EH Bildu rechaza aumentar la edad de jubilación.",
+            "citas": [
+              "c0012",
+              "c0013",
+              "c0015"
+            ]
+          },
+          {
+            "texto": "EH Bildu rechaza aumentar el tiempo que cuenta para calcular las pensiones.",
+            "citas": [
+              "c0012",
+              "c0013",
+              "c0015"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone transferir el Régimen Económico de la Seguridad Social.",
+            "citas": [
+              "c0016"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere que lo reciban las instituciones vascas y navarras.",
+            "citas": [
+              "c0016"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu propone aumentar inmediatamente las pensiones mínimas hasta los 1.080€. EH Bildu quiere asumir la capacidad propia para añadir dinero a estas pensiones.",
+            "citas": [
+              "c0012"
+            ],
+            "id": "pensiones-1",
+            "subtema": "pensiones mínimas y no contributivas"
+          },
+          {
+            "texto": "EH Bildu quiere aumentar las pensiones mínimas de viudedad hasta una cantidad suficiente. EH Bildu también quiere aumentar las pensiones que no exigen aportaciones previas. EH Bildu quiere que estas pensiones alcancen una cantidad suficiente.",
+            "citas": [
+              "c0013"
+            ],
+            "id": "pensiones-2",
+            "subtema": "pensiones mínimas y no contributivas"
+          },
+          {
+            "texto": "EH Bildu rechaza cualquier aumento de la edad de jubilación. EH Bildu rechaza cualquier aumento del tiempo que cuenta para calcular las pensiones.",
+            "citas": [
+              "c0015"
+            ],
+            "id": "pensiones-3",
+            "subtema": "edad de jubilación"
+          },
+          {
+            "texto": "EH Bildu propone transferir el Régimen Económico de la Seguridad Social. EH Bildu quiere que lo reciban las instituciones vascas y navarras.",
+            "citas": [
+              "c0016"
+            ],
+            "id": "pensiones-4",
+            "subtema": "sostenibilidad del sistema"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 61.0,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 61.0 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "proteccion-social": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone ampliar la protección social mediante el aumento de los límites de renta para reconocer la vulnerabilidad y la ampliación del acceso y las cuantías del ingreso mínimo vital.",
+          "citas": [
+            "c0031",
+            "c0027"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Convertir en permanente la prohibición de cortes de suministros básicos para personas y familias vulnerables y ampliar por ley el acceso y la duración del Suministro Mínimo Vital.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "proteccion-social-1",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Aumentar el IPREM en función del IPC cuando este supere el 2,5% y recuperar las pérdidas de los últimos años de alta inflación.",
+          "citas": [
+            "c0029"
+          ],
+          "id": "proteccion-social-2",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Ampliar un 15% los límites de renta para la calificación de “persona vulnerable”, extendiendo el alcance de las medidas de protección social vinculadas a ella.",
+          "citas": [
+            "c0031"
+          ],
+          "id": "proteccion-social-3",
+          "subtema": "pobreza y exclusión"
+        },
+        {
+          "texto": "Ampliar el acceso al IMV elevando los máximos de renta, aumentar sus cuantías al menos un 12%, simplificar y agilizar la tramitación y asegurar la solicitud y el trámite presencial.",
+          "citas": [
+            "c0028"
+          ],
+          "id": "proteccion-social-4",
+          "subtema": "ingreso mínimo vital"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere ampliar la protección social.",
+            "citas": [
+              "c0031",
+              "c0027"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone subir los límites de ingresos para reconocer a más personas como vulnerables.",
+            "citas": [
+              "c0031",
+              "c0027"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere que más personas puedan acceder al ingreso mínimo vital.",
+            "citas": [
+              "c0031",
+              "c0027"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone aumentar las cantidades del ingreso mínimo vital.",
+            "citas": [
+              "c0031",
+              "c0027"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere prohibir para siempre cortar suministros básicos a personas y familias vulnerables. EH Bildu propone ampliar por ley el acceso al Suministro Mínimo Vital. EH Bildu propone ampliar por ley la duración del Suministro Mínimo Vital.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "proteccion-social-1",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "EH Bildu propone aumentar el Indicador Público de Renta de Efectos Múltiples. EH Bildu propone ajustarlo al Índice de Precios de Consumo cuando supere el 2,5%. EH Bildu quiere recuperar las pérdidas de los últimos años de fuertes subidas de precios.",
+            "citas": [
+              "c0029"
+            ],
+            "id": "proteccion-social-2",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "EH Bildu propone subir un 15% los límites de ingresos para considerar a alguien vulnerable. EH Bildu quiere que estas medidas de protección social lleguen a más personas.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "proteccion-social-3",
+            "subtema": "pobreza y exclusión"
+          },
+          {
+            "texto": "EH Bildu propone subir los límites de ingresos para acceder al ingreso mínimo vital. EH Bildu propone aumentar sus cantidades al menos un 12%. EH Bildu quiere facilitar los trámites. EH Bildu quiere que los trámites sean más rápidos. EH Bildu quiere asegurar que las personas puedan solicitarlo en persona. EH Bildu quiere asegurar que también puedan hacer los trámites en persona.",
+            "citas": [
+              "c0028"
+            ],
+            "id": "proteccion-social-4",
+            "subtema": "ingreso mínimo vital"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 65.7,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "sanidad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reforzar la Atención Primaria y ampliar el acceso a los servicios públicos de salud mental.",
+          "citas": [
+            "c0018",
+            "c0024"
+          ]
+        },
+        {
+          "texto": "Plantea derogar la ley que permite la privatización y externalización sanitaria e incorporar prestaciones a la cartera pública.",
+          "citas": [
+            "c0021",
+            "c0023"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Ampliar y asegurar la adjudicación de plazas MIR para cubrir las plazas necesarias y reforzar la Atención Primaria.",
+          "citas": [
+            "c0018"
+          ],
+          "id": "sanidad-1",
+          "subtema": "atención primaria"
+        },
+        {
+          "texto": "Derogar la Ley 15/1997 de Gestión del Sistema de Salud, que permite la privatización y externalización de los servicios sanitarios.",
+          "citas": [
+            "c0021"
+          ],
+          "id": "sanidad-2",
+          "subtema": "sanidad pública y privada"
+        },
+        {
+          "texto": "Multiplicar el presupuesto de salud mental y aumentar las plazas PIR, asegurando servicios psicológicos públicos y gratuitos para las personas solicitantes, con atención a las personas jóvenes.",
+          "citas": [
+            "c0024"
+          ],
+          "id": "sanidad-3",
+          "subtema": "salud mental"
+        },
+        {
+          "texto": "Incluir servicios oftalmológicos y dentales básicos en la cartera de servicios públicos sanitarios.",
+          "citas": [
+            "c0023"
+          ],
+          "id": "sanidad-4",
+          "subtema": "sanidad pública y privada"
+        },
+        {
+          "texto": "Aprobar la gratuidad de productos de higiene menstrual para personas vulnerables mediante distribución farmacéutica y aplicarles el IVA superreducido en todos los puntos de venta.",
+          "citas": [
+            "c0019"
+          ],
+          "id": "sanidad-5",
+          "subtema": "medicamentos"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mejorar la atención en los centros de salud.",
+            "citas": [
+              "c0018",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "El partido quiere facilitar el acceso a los servicios públicos de salud mental.",
+            "citas": [
+              "c0018",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "El partido quiere eliminar la ley que permite hacer privados los servicios de salud.",
+            "citas": [
+              "c0021",
+              "c0023"
+            ]
+          },
+          {
+            "texto": "Esa ley también permite que empresas privadas den servicios de salud.",
+            "citas": [
+              "c0021",
+              "c0023"
+            ]
+          },
+          {
+            "texto": "El partido quiere añadir más servicios a la atención pública de salud.",
+            "citas": [
+              "c0021",
+              "c0023"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere ofrecer más plazas para formar a médicos especialistas. El partido quiere asegurar que se cubran las plazas necesarias. El partido quiere mejorar la atención en los centros de salud.",
+            "citas": [
+              "c0018"
+            ],
+            "id": "sanidad-1",
+            "subtema": "atención primaria"
+          },
+          {
+            "texto": "El partido quiere eliminar la Ley 15/1997 de Gestión del Sistema de Salud. Esta ley permite hacer privados los servicios de salud. La ley también permite que empresas privadas den servicios de salud.",
+            "citas": [
+              "c0021"
+            ],
+            "id": "sanidad-2",
+            "subtema": "sanidad pública y privada"
+          },
+          {
+            "texto": "El partido quiere aumentar mucho el dinero para la salud mental. El partido quiere ofrecer más plazas para formar a psicólogos especialistas. El partido quiere dar atención psicológica pública y gratis a quienes la pidan. El partido quiere prestar especial atención a las personas jóvenes.",
+            "citas": [
+              "c0024"
+            ],
+            "id": "sanidad-3",
+            "subtema": "salud mental"
+          },
+          {
+            "texto": "El partido quiere incluir cuidados básicos de los ojos en los servicios públicos de salud. El partido también quiere incluir cuidados básicos de los dientes.",
+            "citas": [
+              "c0023"
+            ],
+            "id": "sanidad-4",
+            "subtema": "sanidad pública y privada"
+          },
+          {
+            "texto": "El partido quiere dar gratis productos para la regla. Estos productos serían para personas en situación de necesidad. Las farmacias darían estos productos gratis. El partido quiere aplicar el IVA más bajo a estos productos. El partido quiere aplicar este IVA en todos los puntos de venta.",
+            "citas": [
+              "c0019"
+            ],
+            "id": "sanidad-5",
+            "subtema": "medicamentos"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 69.1,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "educacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone proteger los modelos educativos y curriculares propios y sus características lingüísticas frente a cambios impuestos.",
+          "citas": [
+            "c0074"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Proteger los modelos educativos y curriculares propios y sus características lingüísticas, sin permitir intromisiones ni cambios impuestos.",
+          "citas": [
+            "c0074"
+          ],
+          "id": "educacion-1",
+          "subtema": "lenguas en la enseñanza"
+        },
+        {
+          "texto": "Exigir la transferencia de la competencia sobre becas dentro de las competencias pendientes del Estatuto Vasco y el Amejoramiento Navarro.",
+          "citas": [
+            "c0079",
+            "c0082"
+          ],
+          "id": "educacion-2",
+          "subtema": "universidad y becas"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere proteger los modelos propios de enseñanza.",
+            "citas": [
+              "c0074"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere proteger sus planes de estudio.",
+            "citas": [
+              "c0074"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere proteger el uso de las lenguas en estos modelos.",
+            "citas": [
+              "c0074"
+            ]
+          },
+          {
+            "texto": "EH Bildu rechaza los cambios impuestos en estos modelos.",
+            "citas": [
+              "c0074"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere proteger los modelos propios de enseñanza. EH Bildu quiere proteger sus planes de estudio. EH Bildu quiere proteger el uso de las lenguas en estos modelos. EH Bildu rechaza que otros intervengan en estos modelos. EH Bildu rechaza los cambios impuestos.",
+            "citas": [
+              "c0074"
+            ],
+            "id": "educacion-1",
+            "subtema": "lenguas en la enseñanza"
+          },
+          {
+            "texto": "EH Bildu exige recibir el poder de decidir sobre las becas. EH Bildu exige este traspaso pendiente según el Estatuto Vasco. EH Bildu también lo exige según el Amejoramiento Navarro.",
+            "citas": [
+              "c0079",
+              "c0082"
+            ],
+            "id": "educacion-2",
+            "subtema": "universidad y becas"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 72.9,
+          "max_palabras_frase": 12,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "inmigracion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende garantizar los derechos de las personas migrantes y su acceso a los servicios públicos básicos mediante una nueva legislación.",
+          "citas": [
+            "c0059"
+          ]
+        },
+        {
+          "texto": "Propone vías seguras, garantías de asilo y asistencia, y el fin de las devoluciones en caliente.",
+          "citas": [
+            "c0061",
+            "c0058"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Derogar la Ley de Extranjería y sustituirla por una legislación que garantice los derechos humanos y civiles de las personas migrantes y su acceso a los servicios públicos básicos.",
+          "citas": [
+            "c0059"
+          ],
+          "id": "inmigracion-1",
+          "subtema": "integración"
+        },
+        {
+          "texto": "Establecer corredores y vías seguras para las personas migrantes, comenzando por reabrir los pasos entre Irun y Hendaia, y adoptar medidas que garanticen el asilo y la asistencia.",
+          "citas": [
+            "c0061"
+          ],
+          "id": "inmigracion-2",
+          "subtema": "asilo y refugio"
+        },
+        {
+          "texto": "Poner fin a las devoluciones en caliente por vía terrestre o marítima.",
+          "citas": [
+            "c0058"
+          ],
+          "id": "inmigracion-3",
+          "subtema": "control de fronteras"
+        },
+        {
+          "texto": "Proponer una Ley Integral contra el Racismo y todas las formas de discriminación.",
+          "citas": [
+            "c0060"
+          ],
+          "id": "inmigracion-4",
+          "subtema": "integración"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu propone una nueva ley para garantizar los derechos de las personas migrantes.",
+            "citas": [
+              "c0059"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere que esta ley garantice su acceso a los servicios públicos básicos.",
+            "citas": [
+              "c0059"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone rutas seguras para las personas migrantes.",
+            "citas": [
+              "c0061",
+              "c0058"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone garantizar el asilo, que ofrece protección en otro país.",
+            "citas": [
+              "c0061",
+              "c0058"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone garantizar ayuda a las personas migrantes.",
+            "citas": [
+              "c0061",
+              "c0058"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone poner fin a las devoluciones en caliente.",
+            "citas": [
+              "c0061",
+              "c0058"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu propone eliminar la Ley de Extranjería y sustituirla por una nueva ley. EH Bildu quiere que esta ley garantice los derechos humanos y civiles de las personas migrantes. EH Bildu quiere que esta ley garantice su acceso a los servicios públicos básicos.",
+            "citas": [
+              "c0059"
+            ],
+            "id": "inmigracion-1",
+            "subtema": "integración"
+          },
+          {
+            "texto": "EH Bildu propone crear rutas seguras para las personas migrantes. EH Bildu propone comenzar por reabrir los pasos entre Irun y Hendaia. EH Bildu propone garantizar el asilo, que ofrece protección en otro país. EH Bildu propone garantizar ayuda a las personas migrantes.",
+            "citas": [
+              "c0061"
+            ],
+            "id": "inmigracion-2",
+            "subtema": "asilo y refugio"
+          },
+          {
+            "texto": "EH Bildu propone poner fin a las devoluciones en caliente por tierra o por mar.",
+            "citas": [
+              "c0058"
+            ],
+            "id": "inmigracion-3",
+            "subtema": "control de fronteras"
+          },
+          {
+            "texto": "EH Bildu propone una Ley Integral contra el Racismo y todas las formas de discriminación.",
+            "citas": [
+              "c0060"
+            ],
+            "id": "inmigracion-4",
+            "subtema": "integración"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.2,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "medio-ambiente-energia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone ampliar los objetivos de descarbonización para alcanzar la neutralidad climática en 2040 y reforzar la generación energética renovable.",
+          "citas": [
+            "c0048",
+            "c0047"
+          ]
+        },
+        {
+          "texto": "Plantea modificar la fijación de precios energéticos, facilitar empresas públicas de comercialización eléctrica y adoptar medidas de regulación, control y ahorro frente a la sequía.",
+          "citas": [
+            "c0045",
+            "c0044",
+            "c0040"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Revisar la Ley de Cambio Climático y Transición Energética para ampliar los objetivos de descarbonización y reducción de emisiones de 2030 y alcanzar la neutralidad climática en 2040.",
+          "citas": [
+            "c0048"
+          ],
+          "id": "medio-ambiente-energia-1",
+          "subtema": "cambio climático"
+        },
+        {
+          "texto": "Reforzar la generación energética renovable con nuevas inversiones y una planificación que atienda a las particularidades y necesidades de cada territorio.",
+          "citas": [
+            "c0047"
+          ],
+          "id": "medio-ambiente-energia-2",
+          "subtema": "energías renovables"
+        },
+        {
+          "texto": "Transformar el sistema marginalista de fijación de precios energéticos europeos para establecer precios diferenciados según el coste real de cada sistema de generación.",
+          "citas": [
+            "c0046"
+          ],
+          "id": "medio-ambiente-energia-3",
+          "subtema": "precio de la energía"
+        },
+        {
+          "texto": "Facilitar mediante cambios legislativos la creación de empresas públicas de comercialización de electricidad en todas las escalas institucionales.",
+          "citas": [
+            "c0044"
+          ],
+          "id": "medio-ambiente-energia-4",
+          "subtema": "precio de la energía"
+        },
+        {
+          "texto": "Prorrogar indefinidamente el tope al gas y la contención de precios de la generación eléctrica hasta que los precios vuelvan a los valores previos al aumento de los últimos años.",
+          "citas": [
+            "c0014"
+          ],
+          "id": "medio-ambiente-energia-5",
+          "subtema": "precio de la energía"
+        },
+        {
+          "texto": "Convertir en permanente la prohibición de cortes de suministros básicos para personas y familias vulnerables y ampliar por ley el acceso y la duración del Suministro Mínimo Vital.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "medio-ambiente-energia-6",
+          "subtema": "precio de la energía"
+        },
+        {
+          "texto": "Adoptar una política de regulación, control y ahorro frente a la sequía para asegurar el suministro a la población y al ámbito agrícola, con inversiones en innovación y transformación de los sectores agrícolas afectados.",
+          "citas": [
+            "c0040",
+            "c0043"
+          ],
+          "id": "medio-ambiente-energia-7",
+          "subtema": "agua y sequía"
+        },
+        {
+          "texto": "Endurecer los mecanismos de control y sanción sobre las empresas energéticas que utilizan irregularmente los pantanos y las reservas hídricas para generar energía.",
+          "citas": [
+            "c0042"
+          ],
+          "id": "medio-ambiente-energia-8",
+          "subtema": "agua y sequía"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere aumentar los objetivos de reducción de gases que calientan el planeta.",
+            "citas": [
+              "c0048",
+              "c0047"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere que las emisiones de estos gases se compensen en 2040.",
+            "citas": [
+              "c0048",
+              "c0047"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere aumentar la producción de energía renovable.",
+            "citas": [
+              "c0048",
+              "c0047"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere cambiar cómo se fijan los precios de la energía.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere facilitar la creación de empresas públicas que vendan electricidad.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone normas sobre el uso del agua frente a la sequía.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere controlar el uso del agua.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere promover el ahorro de agua.",
+            "citas": [
+              "c0045",
+              "c0044",
+              "c0040"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere revisar la Ley de Cambio Climático y Transición Energética. EH Bildu quiere aumentar los objetivos de reducción de gases que calientan el planeta para 2030. EH Bildu quiere que las emisiones de estos gases se compensen en 2040.",
+            "citas": [
+              "c0048"
+            ],
+            "id": "medio-ambiente-energia-1",
+            "subtema": "cambio climático"
+          },
+          {
+            "texto": "EH Bildu quiere aumentar la producción de energía renovable con nuevas inversiones. EH Bildu propone planificar esa producción según las características y necesidades de cada territorio.",
+            "citas": [
+              "c0047"
+            ],
+            "id": "medio-ambiente-energia-2",
+            "subtema": "energías renovables"
+          },
+          {
+            "texto": "EH Bildu quiere cambiar cómo se fijan los precios de la energía en Europa. EH Bildu propone precios distintos según el coste real de cada forma de producir energía.",
+            "citas": [
+              "c0046"
+            ],
+            "id": "medio-ambiente-energia-3",
+            "subtema": "precio de la energía"
+          },
+          {
+            "texto": "EH Bildu quiere cambiar las leyes para facilitar empresas públicas que vendan electricidad. EH Bildu propone facilitar estas empresas en todos los niveles de las instituciones.",
+            "citas": [
+              "c0044"
+            ],
+            "id": "medio-ambiente-energia-4",
+            "subtema": "precio de la energía"
+          },
+          {
+            "texto": "EH Bildu quiere mantener el límite al precio del gas sin fecha de finalización. EH Bildu quiere mantener las medidas que limitan los precios de producción de electricidad. EH Bildu quiere mantener estas medidas hasta recuperar los precios anteriores al aumento de los últimos años.",
+            "citas": [
+              "c0014"
+            ],
+            "id": "medio-ambiente-energia-5",
+            "subtema": "precio de la energía"
+          },
+          {
+            "texto": "EH Bildu quiere prohibir de forma permanente los cortes de suministros básicos. EH Bildu propone esta protección para personas y familias en situación vulnerable. EH Bildu quiere ampliar por ley el acceso al Suministro Mínimo Vital. EH Bildu quiere que el Suministro Mínimo Vital dure más tiempo.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "medio-ambiente-energia-6",
+            "subtema": "precio de la energía"
+          },
+          {
+            "texto": "EH Bildu quiere establecer normas para usar el agua durante las sequías. EH Bildu quiere controlar el uso del agua. EH Bildu quiere promover el ahorro de agua. EH Bildu quiere asegurar el suministro de agua a la población y al sector agrícola. EH Bildu quiere invertir en nuevas soluciones para los sectores agrícolas afectados. EH Bildu quiere invertir en cambios en estos sectores agrícolas.",
+            "citas": [
+              "c0040",
+              "c0043"
+            ],
+            "id": "medio-ambiente-energia-7",
+            "subtema": "agua y sequía"
+          },
+          {
+            "texto": "EH Bildu quiere controlar más el uso irregular de pantanos y reservas de agua. EH Bildu quiere sanciones más duras para las empresas energéticas que incumplen estas normas. EH Bildu propone estas medidas cuando las empresas usan esa agua para generar energía.",
+            "citas": [
+              "c0042"
+            ],
+            "id": "medio-ambiente-energia-8",
+            "subtema": "agua y sequía"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 64.8,
+          "max_palabras_frase": 17,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 64.8 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "mundo-rural": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone asegurar el suministro de agua al ámbito agrícola frente a la sequía y reforzar el control de la cadena alimentaria para asegurar precios a los productores.",
+          "citas": [
+            "c0043",
+            "c0011"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Adoptar medidas de regulación, control y ahorro de agua frente a la sequía, asegurando el suministro agrícola e invirtiendo en innovación y transformación de los sectores agrícolas afectados.",
+          "citas": [
+            "c0041"
+          ],
+          "id": "mundo-rural-1",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Aumentar los efectivos de control de la cadena de producción y distribución alimentaria para asegurar precios a los productores y evitar aumentos injustificados de precios por intermediarios y grandes distribuidoras.",
+          "citas": [
+            "c0011"
+          ],
+          "id": "mundo-rural-2",
+          "subtema": "agricultura y ganadería"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que el campo tenga agua cuando no llueve.",
+            "citas": [
+              "c0043",
+              "c0011"
+            ]
+          },
+          {
+            "texto": "El partido quiere más control sobre cómo se producen y venden los alimentos.",
+            "citas": [
+              "c0043",
+              "c0011"
+            ]
+          },
+          {
+            "texto": "Así quiere asegurar los precios que reciben quienes producen los alimentos.",
+            "citas": [
+              "c0043",
+              "c0011"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere poner normas para el uso del agua. También quiere controlar su uso y ahorrar agua. Quiere que el campo tenga agua cuando no llueve. Quiere invertir en nuevas ideas para el campo afectado por la sequía. También quiere invertir en cambios en ese campo.",
+            "citas": [
+              "c0041"
+            ],
+            "id": "mundo-rural-1",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "El partido quiere más personal para controlar cómo se producen y venden los alimentos. Quiere asegurar los precios que reciben quienes producen los alimentos. Quiere evitar que quienes compran y revenden alimentos suban los precios sin motivo. Las grandes empresas que venden alimentos tampoco deben subir los precios sin motivo.",
+            "citas": [
+              "c0011"
+            ],
+            "id": "mundo-rural-2",
+            "subtema": "agricultura y ganadería"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.2,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "transporte": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone mantener por ley la gratuidad y los descuentos del transporte público y aumentar la inversión para modernizar la red ferroviaria estatal que opera en sus territorios.",
+          "citas": [
+            "c0022",
+            "c0020"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Establecer por ley de forma permanente la gratuidad y los descuentos del transporte público actualmente en vigor, con financiación suficiente.",
+          "citas": [
+            "c0022"
+          ],
+          "id": "transporte-1",
+          "subtema": "transporte público y abonos"
+        },
+        {
+          "texto": "Aumentar la inversión en la red de Renfe y Feve que opera en sus territorios para modernizar infraestructuras, trenes y accesibilidad y ampliar horarios.",
+          "citas": [
+            "c0020"
+          ],
+          "id": "transporte-2",
+          "subtema": "tren y cercanías"
+        },
+        {
+          "texto": "Negociar y hacer efectiva la transferencia completa de los trenes de Cercanías a las instituciones vascas.",
+          "citas": [
+            "c0025"
+          ],
+          "id": "transporte-3",
+          "subtema": "tren y cercanías"
+        },
+        {
+          "texto": "Exigir la transferencia de las competencias pendientes en puertos y aeropuertos.",
+          "citas": [
+            "c0078",
+            "c0083"
+          ],
+          "id": "transporte-4",
+          "subtema": "puertos y aeropuertos"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mantener por ley el transporte público gratuito y los descuentos actuales.",
+            "citas": [
+              "c0022",
+              "c0020"
+            ]
+          },
+          {
+            "texto": "El partido quiere invertir más para modernizar la red de trenes del Estado.",
+            "citas": [
+              "c0022",
+              "c0020"
+            ]
+          },
+          {
+            "texto": "Esta red funciona en sus territorios.",
+            "citas": [
+              "c0022",
+              "c0020"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere mantener por ley el transporte público gratuito y los descuentos actuales. Quiere que estas medidas sean permanentes. También quiere asegurar el dinero necesario para mantenerlas.",
+            "citas": [
+              "c0022"
+            ],
+            "id": "transporte-1",
+            "subtema": "transporte público y abonos"
+          },
+          {
+            "texto": "El partido quiere invertir más en la red de la Red Nacional de los Ferrocarriles Españoles. También quiere invertir más en la red de Ferrocarriles de Vía Estrecha. Estas redes funcionan en sus territorios. Quiere modernizar las instalaciones de la red y los trenes. También quiere facilitar que todas las personas puedan usar esta red de trenes. Además, quiere ampliar los horarios.",
+            "citas": [
+              "c0020"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "El partido quiere negociar que las instituciones vascas controlen todos los trenes de Cercanías. También quiere que ese cambio se haga realidad.",
+            "citas": [
+              "c0025"
+            ],
+            "id": "transporte-3",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "El partido quiere exigir el traspaso de las responsabilidades pendientes sobre puertos y aeropuertos.",
+            "citas": [
+              "c0078",
+              "c0083"
+            ],
+            "id": "transporte-4",
+            "subtema": "puertos y aeropuertos"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 65.4,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "igualdad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende los avances feministas y propone ampliar derechos, reforzar la lucha contra la violencia machista y trabajar por la igualdad entre mujeres y hombres.",
+          "citas": [
+            "c0050"
+          ]
+        },
+        {
+          "texto": "Defiende los derechos LGTBIQ+ y plantea combatir la discriminación y los ataques contra este colectivo.",
+          "citas": [
+            "c0053",
+            "c0055",
+            "c0056"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Adoptar medidas específicas para mujeres y personas jóvenes contra la brecha salarial, la precariedad, la temporalidad y la parcialidad laboral.",
+          "citas": [
+            "c0003"
+          ],
+          "id": "igualdad-1",
+          "subtema": "igualdad entre mujeres y hombres"
+        },
+        {
+          "texto": "Aprobar la gratuidad de productos de higiene menstrual para personas vulnerables mediante distribución farmacéutica y aplicarles el IVA superreducido en todos los puntos de venta.",
+          "citas": [
+            "c0019"
+          ],
+          "id": "igualdad-2",
+          "subtema": "igualdad entre mujeres y hombres"
+        },
+        {
+          "texto": "Reforzar la lucha contra la violencia machista desde todos los ámbitos.",
+          "citas": [
+            "c0049"
+          ],
+          "id": "igualdad-3",
+          "subtema": "violencia de género e intrafamiliar"
+        },
+        {
+          "texto": "Promover el reconocimiento del derecho a decidir sobre el cuerpo, la sexualidad y la vida.",
+          "citas": [
+            "c0052"
+          ],
+          "id": "igualdad-4",
+          "subtema": "igualdad entre mujeres y hombres"
+        },
+        {
+          "texto": "Combatir los discursos y delitos de odio, las agresiones y los ataques contra las personas LGTBIQ+ mediante políticas de protección y medidas de concienciación social y educativa.",
+          "citas": [
+            "c0054"
+          ],
+          "id": "igualdad-5",
+          "subtema": "derechos LGTBI"
+        },
+        {
+          "texto": "Ofrecer foros y espacios de representación institucional al colectivo LGTBIQ+ y sus asociaciones para combatir la discriminación.",
+          "citas": [
+            "c0057"
+          ],
+          "id": "igualdad-6",
+          "subtema": "derechos LGTBI"
+        },
+        {
+          "texto": "Proponer una Ley Integral contra el Racismo y todas las formas de discriminación.",
+          "citas": [
+            "c0060"
+          ],
+          "id": "igualdad-7",
+          "subtema": "discriminación"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu defiende los avances en los derechos de las mujeres.",
+            "citas": [
+              "c0050"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone ampliar derechos.",
+            "citas": [
+              "c0050"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone reforzar la lucha contra la violencia machista.",
+            "citas": [
+              "c0050"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere trabajar por la igualdad entre mujeres y hombres.",
+            "citas": [
+              "c0050"
+            ]
+          },
+          {
+            "texto": "EH Bildu defiende los derechos de las personas con diversidad sexual y de género.",
+            "citas": [
+              "c0053",
+              "c0055",
+              "c0056"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone combatir la discriminación y los ataques contra estas personas.",
+            "citas": [
+              "c0053",
+              "c0055",
+              "c0056"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu propone medidas específicas para mujeres y personas jóvenes en el trabajo. EH Bildu quiere reducir las diferencias de sueldo. EH Bildu propone combatir las malas condiciones de trabajo. EH Bildu propone medidas contra los contratos temporales y el trabajo a tiempo parcial.",
+            "citas": [
+              "c0003"
+            ],
+            "id": "igualdad-1",
+            "subtema": "igualdad entre mujeres y hombres"
+          },
+          {
+            "texto": "EH Bildu propone dar productos de higiene menstrual gratis a personas vulnerables. EH Bildu propone distribuir estos productos mediante farmacias. EH Bildu propone aplicar a estos productos el tipo más bajo de IVA. EH Bildu propone este IVA en todos los puntos de venta.",
+            "citas": [
+              "c0019"
+            ],
+            "id": "igualdad-2",
+            "subtema": "igualdad entre mujeres y hombres"
+          },
+          {
+            "texto": "EH Bildu propone reforzar la lucha contra la violencia machista desde todos los ámbitos.",
+            "citas": [
+              "c0049"
+            ],
+            "id": "igualdad-3",
+            "subtema": "violencia de género e intrafamiliar"
+          },
+          {
+            "texto": "EH Bildu propone reconocer el derecho a decidir sobre el propio cuerpo. EH Bildu propone reconocer el derecho a decidir sobre la propia sexualidad. EH Bildu propone reconocer el derecho a decidir sobre la propia vida.",
+            "citas": [
+              "c0052"
+            ],
+            "id": "igualdad-4",
+            "subtema": "igualdad entre mujeres y hombres"
+          },
+          {
+            "texto": "EH Bildu propone proteger a las personas con diversidad sexual y de género. EH Bildu propone combatir los mensajes y delitos de odio contra estas personas. EH Bildu propone combatir las agresiones y los ataques contra estas personas. EH Bildu propone ayudar a la sociedad a comprender y respetar esta diversidad. EH Bildu propone trabajar este respeto también en la educación.",
+            "citas": [
+              "c0054"
+            ],
+            "id": "igualdad-5",
+            "subtema": "derechos LGTBI"
+          },
+          {
+            "texto": "EH Bildu propone espacios de debate para personas con diversidad sexual y de género. EH Bildu propone que sus asociaciones también participen en estos espacios. EH Bildu propone que estas personas y sus asociaciones tengan representación en las instituciones. EH Bildu propone estas medidas para combatir la discriminación.",
+            "citas": [
+              "c0057"
+            ],
+            "id": "igualdad-6",
+            "subtema": "derechos LGTBI"
+          },
+          {
+            "texto": "EH Bildu propone una Ley Integral contra el Racismo y todas las formas de discriminación.",
+            "citas": [
+              "c0060"
+            ],
+            "id": "igualdad-7",
+            "subtema": "discriminación"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 63.5,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 63.5 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": [
+          "En el resumen, «avances feministas» se reformula como «avances en los derechos de las mujeres». Es una simplificación cercana, pero pierde la referencia explícita al feminismo."
+        ]
+      }
+    },
+    "familia-conciliacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reducir la jornada laboral sin reducción salarial ni modificación de condiciones y plantea acabar con las situaciones discriminatorias que sufren las mujeres en el ámbito de los cuidados.",
+          "citas": [
+            "c0004",
+            "c0051"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reducir la jornada laboral hasta las 32 horas semanales sin reducción salarial ni modificación de condiciones.",
+          "citas": [
+            "c0004"
+          ],
+          "id": "familia-conciliacion-1",
+          "subtema": "conciliación y horarios"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere reducir las horas de trabajo.",
+            "citas": [
+              "c0004",
+              "c0051"
+            ]
+          },
+          {
+            "texto": "El partido quiere mantener los salarios y las condiciones de trabajo.",
+            "citas": [
+              "c0004",
+              "c0051"
+            ]
+          },
+          {
+            "texto": "El partido quiere acabar con el trato desigual hacia las mujeres en los cuidados.",
+            "citas": [
+              "c0004",
+              "c0051"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere reducir las horas de trabajo a 32 por semana. El partido quiere mantener los salarios y las condiciones de trabajo.",
+            "citas": [
+              "c0004"
+            ],
+            "id": "familia-conciliacion-1",
+            "subtema": "conciliación y horarios"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.0,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "juventud": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone medidas laborales dirigidas a personas jóvenes y reforzar la atención psicológica pública y gratuita, con especial atención a la juventud.",
+          "citas": [
+            "c0003",
+            "c0024"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Aplicar medidas específicas para personas jóvenes y mujeres contra la brecha salarial, la precariedad, la temporalidad y la parcialidad laboral.",
+          "citas": [
+            "c0003"
+          ],
+          "id": "juventud-1",
+          "subtema": "empleo joven"
+        },
+        {
+          "texto": "Multiplicar el presupuesto de salud mental y aumentar las plazas PIR, asegurando el acceso a servicios psicológicos públicos y gratuitos con especial atención a las personas jóvenes.",
+          "citas": [
+            "c0024"
+          ],
+          "id": "juventud-2",
+          "subtema": "salud mental juvenil"
+        },
+        {
+          "texto": "Extender y ampliar el uso del euskera en el ámbito digital y audiovisual para promover su uso y conocimiento entre las generaciones más jóvenes.",
+          "citas": [
+            "c0075"
+          ],
+          "id": "juventud-3",
+          "subtema": "ocio y cultura joven"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere medidas de empleo para los jóvenes.",
+            "citas": [
+              "c0003",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "El partido quiere más ayuda de psicólogos en la sanidad pública.",
+            "citas": [
+              "c0003",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "Esta ayuda será gratis.",
+            "citas": [
+              "c0003",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "El partido quiere dar especial atención a los jóvenes.",
+            "citas": [
+              "c0003",
+              "c0024"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere medidas de empleo para jóvenes y mujeres. Quiere reducir las diferencias de sueldo. Quiere reducir los empleos con malas condiciones. Quiere reducir los contratos que duran poco tiempo. Quiere reducir los empleos con menos horas que una jornada completa.",
+            "citas": [
+              "c0003"
+            ],
+            "id": "juventud-1",
+            "subtema": "empleo joven"
+          },
+          {
+            "texto": "El partido quiere aumentar mucho el dinero para la salud mental. Quiere más plazas para formar a psicólogos. Estos psicólogos tratarán problemas de salud mental. Quiere que las personas puedan recibir ayuda de psicólogos en la sanidad pública. Esta ayuda será gratis. El partido quiere dar especial atención a los jóvenes.",
+            "citas": [
+              "c0024"
+            ],
+            "id": "juventud-2",
+            "subtema": "salud mental juvenil"
+          },
+          {
+            "texto": "El partido quiere ampliar el uso del euskera en los medios digitales. El euskera es la lengua vasca. También quiere más euskera en contenidos con imagen y sonido. Quiere que los más jóvenes lo usen y lo conozcan.",
+            "citas": [
+              "c0075"
+            ],
+            "id": "juventud-3",
+            "subtema": "ocio y cultura joven"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 70.2,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "ciencia-digital": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone una nueva Ley de Industria que sitúe la investigación, la innovación, el desarrollo y la digitalización como pilares de la transformación del tejido industrial vasco.",
+          "citas": [
+            "c0038"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Aprobar una nueva Ley de Industria centrada en las pequeñas y medianas empresas y basada en la investigación, innovación, desarrollo y digitalización para transformar el tejido industrial vasco.",
+          "citas": [
+            "c0038"
+          ],
+          "id": "ciencia-digital-1",
+          "subtema": "I+D+i"
+        },
+        {
+          "texto": "Exigir la transferencia de competencias en I+D+i dentro de las demandas de autogobierno.",
+          "citas": [
+            "c0079",
+            "c0080"
+          ],
+          "id": "ciencia-digital-2",
+          "subtema": "I+D+i"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu propone una nueva Ley de Industria para transformar la industria vasca.",
+            "citas": [
+              "c0038"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere basarla en la investigación y en introducir mejoras.",
+            "citas": [
+              "c0038"
+            ]
+          },
+          {
+            "texto": "EH Bildu también quiere basarla en el desarrollo y el uso de tecnologías digitales.",
+            "citas": [
+              "c0038"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu propone una nueva Ley de Industria para transformar la industria vasca. EH Bildu quiere centrar esta ley en las pequeñas y medianas empresas. EH Bildu quiere basarla en la investigación y en introducir mejoras. EH Bildu también quiere basarla en el desarrollo y el uso de tecnologías digitales.",
+            "citas": [
+              "c0038"
+            ],
+            "id": "ciencia-digital-1",
+            "subtema": "I+D+i"
+          },
+          {
+            "texto": "EH Bildu exige el traspaso del poder de decisión sobre investigación, desarrollo e innovación. EH Bildu pide este traspaso como parte del autogobierno: decidir sobre los asuntos propios.",
+            "citas": [
+              "c0079",
+              "c0080"
+            ],
+            "id": "ciencia-digital-2",
+            "subtema": "I+D+i"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 61.8,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 61.8 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "seguridad-justicia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone derogar la Ley Mordaza y establecer supervisión externa e independiente de las actuaciones policiales.",
+          "citas": [
+            "c0065",
+            "c0063"
+          ]
+        },
+        {
+          "texto": "Plantea ampliar el reconocimiento, la justicia y la reparación para víctimas de la tortura y del terrorismo de Estado.",
+          "citas": [
+            "c0067"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Derogar la Ley Mordaza.",
+          "citas": [
+            "c0065"
+          ],
+          "id": "seguridad-justicia-1",
+          "subtema": "fuerzas y cuerpos de seguridad"
+        },
+        {
+          "texto": "Prohibir el uso de las pelotas de goma y las devoluciones en caliente.",
+          "citas": [
+            "c0064"
+          ],
+          "id": "seguridad-justicia-2",
+          "subtema": "fuerzas y cuerpos de seguridad"
+        },
+        {
+          "texto": "Crear un mecanismo externo e independiente de supervisión e investigación de las actuaciones policiales.",
+          "citas": [
+            "c0063"
+          ],
+          "id": "seguridad-justicia-3",
+          "subtema": "fuerzas y cuerpos de seguridad"
+        },
+        {
+          "texto": "Ampliar la Ley de Memoria Democrática para incluir garantías de reconocimiento, justicia y reparación para las víctimas del terrorismo de Estado y de los grupos ultraderechistas.",
+          "citas": [
+            "c0067"
+          ],
+          "id": "seguridad-justicia-4",
+          "subtema": "terrorismo"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere quitar la Ley Mordaza.",
+            "citas": [
+              "c0065",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "El partido quiere que un grupo revise los actos de la policía.",
+            "citas": [
+              "c0065",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "Este grupo no formaría parte de la policía.",
+            "citas": [
+              "c0065",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "El grupo no recibiría órdenes de otros.",
+            "citas": [
+              "c0065",
+              "c0063"
+            ]
+          },
+          {
+            "texto": "El partido quiere reconocer a más víctimas de tortura y terrorismo del Estado.",
+            "citas": [
+              "c0067"
+            ]
+          },
+          {
+            "texto": "El partido también quiere más justicia para estas víctimas.",
+            "citas": [
+              "c0067"
+            ]
+          },
+          {
+            "texto": "También quiere hacer más para reparar los daños que han sufrido.",
+            "citas": [
+              "c0067"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere quitar la Ley Mordaza.",
+            "citas": [
+              "c0065"
+            ],
+            "id": "seguridad-justicia-1",
+            "subtema": "fuerzas y cuerpos de seguridad"
+          },
+          {
+            "texto": "El partido quiere prohibir el uso de pelotas de goma. También quiere prohibir las expulsiones en la frontera sin revisar cada caso.",
+            "citas": [
+              "c0064"
+            ],
+            "id": "seguridad-justicia-2",
+            "subtema": "fuerzas y cuerpos de seguridad"
+          },
+          {
+            "texto": "El partido quiere crear un grupo que revise los actos de la policía. Este grupo también investigaría esos actos. El grupo no formaría parte de la policía. El grupo no recibiría órdenes de otros.",
+            "citas": [
+              "c0063"
+            ],
+            "id": "seguridad-justicia-3",
+            "subtema": "fuerzas y cuerpos de seguridad"
+          },
+          {
+            "texto": "El partido quiere ampliar la Ley de Memoria Democrática. La ley incluiría a las víctimas del terrorismo del Estado. También incluiría a las víctimas de grupos de extrema derecha. La ley debe asegurar el reconocimiento de estas víctimas. También debe asegurar justicia para estas víctimas. La ley debe asegurar la reparación de los daños que han sufrido.",
+            "citas": [
+              "c0067"
+            ],
+            "id": "seguridad-justicia-4",
+            "subtema": "terrorismo"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 69.9,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "modelo-territorial": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende el reconocimiento del carácter plurinacional del Estado y el derecho a decidir de la ciudadanía vasca.",
+          "citas": [
+            "c0073",
+            "c0071"
+          ]
+        },
+        {
+          "texto": "Plantea ampliar el autogobierno mediante transferencias de competencias y garantizar el uso del euskera en las administraciones dependientes del Estado.",
+          "citas": [
+            "c0079",
+            "c0076"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reconocer el carácter plurinacional del Estado y Euskal Herria como nación.",
+          "citas": [
+            "c0073",
+            "c0069"
+          ],
+          "id": "modelo-territorial-1",
+          "subtema": "organización territorial del Estado"
+        },
+        {
+          "texto": "Reconocer el derecho a decidir como mecanismo de solución política basado en la voluntad y decisión de la ciudadanía vasca.",
+          "citas": [
+            "c0070",
+            "c0071"
+          ],
+          "id": "modelo-territorial-2",
+          "subtema": "autogobierno y derecho a decidir"
+        },
+        {
+          "texto": "Transferir todas las competencias pendientes contempladas en el Estatuto Vasco y el Amejoramiento Navarro.",
+          "citas": [
+            "c0078"
+          ],
+          "id": "modelo-territorial-3",
+          "subtema": "competencias"
+        },
+        {
+          "texto": "Transferir inmediatamente cada nueva ley o medida que responda o afecte a las competencias propias.",
+          "citas": [
+            "c0081"
+          ],
+          "id": "modelo-territorial-4",
+          "subtema": "competencias"
+        },
+        {
+          "texto": "Acordar una nueva forma de negociación del Concierto Económico Vasco y del Convenio Económico Navarro de igual a igual.",
+          "citas": [
+            "c0084",
+            "c0085"
+          ],
+          "id": "modelo-territorial-5",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Garantizar la atención en euskera en todas las administraciones públicas dependientes del Estado, impulsando su conocimiento entre sus trabajadores.",
+          "citas": [
+            "c0077"
+          ],
+          "id": "modelo-territorial-6",
+          "subtema": "lenguas cooficiales"
+        },
+        {
+          "texto": "Blindar los modelos educativos y curriculares propios y sus características lingüísticas frente a intromisiones o cambios impuestos.",
+          "citas": [
+            "c0074"
+          ],
+          "id": "modelo-territorial-7",
+          "subtema": "lenguas cooficiales"
+        },
+        {
+          "texto": "Extender y ampliar el uso del euskera en el ámbito digital y audiovisual.",
+          "citas": [
+            "c0075"
+          ],
+          "id": "modelo-territorial-8",
+          "subtema": "lenguas cooficiales"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere reconocer que el Estado tiene varias naciones.",
+            "citas": [
+              "c0073",
+              "c0071"
+            ]
+          },
+          {
+            "texto": "EH Bildu defiende el derecho a decidir de la ciudadanía vasca.",
+            "citas": [
+              "c0073",
+              "c0071"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere más poder para decidir sobre sus propios asuntos.",
+            "citas": [
+              "c0079",
+              "c0076"
+            ]
+          },
+          {
+            "texto": "EH Bildu propone recibir más funciones.",
+            "citas": [
+              "c0079",
+              "c0076"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere asegurar el uso del euskera en las administraciones que dependen del Estado.",
+            "citas": [
+              "c0079",
+              "c0076"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere reconocer que el Estado tiene varias naciones. EH Bildu quiere reconocer Euskal Herria como nación.",
+            "citas": [
+              "c0073",
+              "c0069"
+            ],
+            "id": "modelo-territorial-1",
+            "subtema": "organización territorial del Estado"
+          },
+          {
+            "texto": "EH Bildu quiere que la ciudadanía vasca tenga derecho a decidir. EH Bildu propone una solución política que siga la decisión de la ciudadanía vasca.",
+            "citas": [
+              "c0070",
+              "c0071"
+            ],
+            "id": "modelo-territorial-2",
+            "subtema": "autogobierno y derecho a decidir"
+          },
+          {
+            "texto": "EH Bildu pide recibir todas las funciones pendientes del Estatuto Vasco. EH Bildu pide recibir todas las funciones pendientes del Amejoramiento Navarro.",
+            "citas": [
+              "c0078"
+            ],
+            "id": "modelo-territorial-3",
+            "subtema": "competencias"
+          },
+          {
+            "texto": "EH Bildu pide recibir cada nueva ley o medida sobre sus funciones. EH Bildu pide hacerlo de inmediato.",
+            "citas": [
+              "c0081"
+            ],
+            "id": "modelo-territorial-4",
+            "subtema": "competencias"
+          },
+          {
+            "texto": "EH Bildu propone acordar una nueva forma de negociar de igual a igual. EH Bildu propone este cambio para el Concierto Económico Vasco. EH Bildu propone este cambio para el Convenio Económico Navarro.",
+            "citas": [
+              "c0084",
+              "c0085"
+            ],
+            "id": "modelo-territorial-5",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "EH Bildu quiere asegurar la atención en euskera en todas las administraciones que dependen del Estado. EH Bildu quiere que sus trabajadores aprendan euskera.",
+            "citas": [
+              "c0077"
+            ],
+            "id": "modelo-territorial-6",
+            "subtema": "lenguas cooficiales"
+          },
+          {
+            "texto": "EH Bildu quiere proteger sus modelos de enseñanza y sus planes de estudio. EH Bildu quiere proteger también el uso de las lenguas en esos modelos. EH Bildu quiere protegerlos frente a cambios impuestos y a la intervención de otros.",
+            "citas": [
+              "c0074"
+            ],
+            "id": "modelo-territorial-7",
+            "subtema": "lenguas cooficiales"
+          },
+          {
+            "texto": "EH Bildu quiere ampliar el uso del euskera en los medios digitales. EH Bildu quiere ampliar su uso en medios con imágenes y sonido.",
+            "citas": [
+              "c0075"
+            ],
+            "id": "modelo-territorial-8",
+            "subtema": "lenguas cooficiales"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.5,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "regeneracion-democratica": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone ampliar el reconocimiento y la reparación de las víctimas mediante la Ley de Memoria Democrática.",
+          "citas": [
+            "c0066"
+          ]
+        },
+        {
+          "texto": "Plantea sustituir la Ley de Secretos Oficiales y crear una supervisión independiente de las actuaciones policiales.",
+          "citas": [
+            "c0068",
+            "c0062"
+          ]
+        },
+        {
+          "texto": "Defiende el reconocimiento del derecho a decidir de la ciudadanía vasca.",
+          "citas": [
+            "c0071"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Ampliar la Ley de Memoria Democrática para reconocer y reparar a las víctimas del franquismo, la tortura, el terrorismo de Estado y los grupos ultraderechistas.",
+          "citas": [
+            "c0067"
+          ],
+          "id": "regeneracion-democratica-1",
+          "subtema": "memoria democrática"
+        },
+        {
+          "texto": "Sustituir la Ley de Secretos Oficiales por una legislación que asegure claridad, accesibilidad, información y protección de los derechos individuales.",
+          "citas": [
+            "c0068"
+          ],
+          "id": "regeneracion-democratica-2",
+          "subtema": "corrupción y transparencia"
+        },
+        {
+          "texto": "Crear un mecanismo externo e independiente de supervisión e investigación de las actuaciones policiales para controlar su actividad y el cumplimiento de derechos y libertades.",
+          "citas": [
+            "c0063"
+          ],
+          "id": "regeneracion-democratica-3",
+          "subtema": "corrupción y transparencia"
+        },
+        {
+          "texto": "Reconocer el derecho a decidir como mecanismo de solución política basado en la voluntad y decisión de la ciudadanía vasca.",
+          "citas": [
+            "c0071",
+            "c0070"
+          ],
+          "id": "regeneracion-democratica-4",
+          "subtema": "participación ciudadana"
+        },
+        {
+          "texto": "Exigir que el Gobierno español y sus instituciones respeten los acuerdos y propuestas de los parlamentos de Gasteiz e Iruñea ratificados por la ciudadanía.",
+          "citas": [
+            "c0072"
+          ],
+          "id": "regeneracion-democratica-5",
+          "subtema": "participación ciudadana"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere reconocer a más víctimas y reparar el daño que sufrieron.",
+            "citas": [
+              "c0066"
+            ]
+          },
+          {
+            "texto": "Para ello, quiere usar la Ley de Memoria Democrática.",
+            "citas": [
+              "c0066"
+            ]
+          },
+          {
+            "texto": "El partido quiere cambiar la Ley de Secretos Oficiales por una nueva ley.",
+            "citas": [
+              "c0068",
+              "c0062"
+            ]
+          },
+          {
+            "texto": "También quiere un control de la policía que no dependa de ella.",
+            "citas": [
+              "c0068",
+              "c0062"
+            ]
+          },
+          {
+            "texto": "El partido quiere que la población vasca tenga derecho a decidir.",
+            "citas": [
+              "c0071"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere ampliar la Ley de Memoria Democrática. Quiere reconocer a más víctimas y reparar el daño que sufrieron. Incluye a las víctimas de la dictadura de Franco. También incluye a las víctimas de tortura y de grupos de extrema derecha. Incluye además a las víctimas del terrorismo de Estado. Esto significa actos de terror que comete el Estado.",
+            "citas": [
+              "c0067"
+            ],
+            "id": "regeneracion-democratica-1",
+            "subtema": "memoria democrática"
+          },
+          {
+            "texto": "El partido quiere cambiar la Ley de Secretos Oficiales por una nueva ley. Quiere que la nueva ley sea clara y fácil de consultar. También quiere que garantice el acceso a la información. La ley debe proteger los derechos de cada persona.",
+            "citas": [
+              "c0068"
+            ],
+            "id": "regeneracion-democratica-2",
+            "subtema": "corrupción y transparencia"
+          },
+          {
+            "texto": "El partido quiere crear un grupo que vigile a la policía. Este grupo también debe investigar sus actos. Debe ser independiente y estar fuera de la policía. Debe comprobar que la policía respeta los derechos y las libertades.",
+            "citas": [
+              "c0063"
+            ],
+            "id": "regeneracion-democratica-3",
+            "subtema": "corrupción y transparencia"
+          },
+          {
+            "texto": "El partido quiere que la población vasca tenga derecho a decidir. El partido propone este derecho como una forma de resolver el problema político. La solución debe seguir lo que quiera y decida la población vasca.",
+            "citas": [
+              "c0071",
+              "c0070"
+            ],
+            "id": "regeneracion-democratica-4",
+            "subtema": "participación ciudadana"
+          },
+          {
+            "texto": "El partido exige al Gobierno español respetar estos acuerdos. También le exige respetar estas propuestas. Exige lo mismo a las demás instituciones del Estado. Los acuerdos y propuestas son de los parlamentos de Gasteiz e Iruñea. La población los ha aprobado.",
+            "citas": [
+              "c0072"
+            ],
+            "id": "regeneracion-democratica-5",
+            "subtema": "participación ciudadana"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.4,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "exterior-defensa": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone exigir al BCE y a las instituciones comunitarias la reversión de las subidas de tipos de interés.",
+          "citas": [
+            "c0032"
+          ]
+        },
+        {
+          "texto": "Plantea transformar el sistema europeo de fijación de precios energéticos y destinar financiación europea al tejido cooperativo y social.",
+          "citas": [
+            "c0045",
+            "c0037"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Exigir al BCE y a las instituciones comunitarias la reversión del aumento de los tipos de interés adoptado desde julio de 2022.",
+          "citas": [
+            "c0032"
+          ],
+          "id": "exterior-defensa-1",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Rechazar la recuperación de las reglas fiscales que contengan la inversión pública y las políticas de austeridad que conlleven recortes sociales o de servicios públicos.",
+          "citas": [
+            "c0039"
+          ],
+          "id": "exterior-defensa-2",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Transformar desde la Presidencia de la UE el sistema marginalista de fijación de precios energéticos europeos y establecer precios diferenciados según el coste real de cada sistema de generación.",
+          "citas": [
+            "c0046"
+          ],
+          "id": "exterior-defensa-3",
+          "subtema": "Unión Europea"
+        },
+        {
+          "texto": "Impulsar el PERTE de economía social y cooperativa y poner financiación europea a disposición del tejido cooperativo y social.",
+          "citas": [
+            "c0037"
+          ],
+          "id": "exterior-defensa-4",
+          "subtema": "Unión Europea"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "EH Bildu quiere anular las subidas de los tipos de interés.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "EH Bildu pide este cambio al Banco Central Europeo y a las instituciones comunitarias.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere cambiar cómo la UE fija los precios de la energía.",
+            "citas": [
+              "c0045",
+              "c0037"
+            ]
+          },
+          {
+            "texto": "EH Bildu quiere ofrecer dinero europeo a las cooperativas.",
+            "citas": [
+              "c0045",
+              "c0037"
+            ]
+          },
+          {
+            "texto": "EH Bildu también quiere ofrecerlo a organizaciones de la economía social.",
+            "citas": [
+              "c0045",
+              "c0037"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "EH Bildu quiere anular las subidas de los tipos de interés desde julio de 2022. EH Bildu pide este cambio al Banco Central Europeo y a las instituciones comunitarias.",
+            "citas": [
+              "c0032"
+            ],
+            "id": "exterior-defensa-1",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "EH Bildu rechaza recuperar reglas que limiten la inversión de dinero público. EH Bildu rechaza las políticas de ahorro que recorten gastos sociales o servicios públicos.",
+            "citas": [
+              "c0039"
+            ],
+            "id": "exterior-defensa-2",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "EH Bildu quiere cambiar cómo la UE fija los precios de la energía. EH Bildu propone este cambio desde la Presidencia de la UE. EH Bildu quiere precios distintos para cada forma de producir energía. EH Bildu propone fijar esos precios según el coste real de producir energía.",
+            "citas": [
+              "c0046"
+            ],
+            "id": "exterior-defensa-3",
+            "subtema": "Unión Europea"
+          },
+          {
+            "texto": "EH Bildu quiere impulsar el plan de economía social y cooperativa. EH Bildu quiere ofrecer dinero europeo a las cooperativas. EH Bildu también quiere ofrecerlo a organizaciones de la economía social.",
+            "citas": [
+              "c0037"
+            ],
+            "id": "exterior-defensa-4",
+            "subtema": "Unión Europea"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 62.1,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": [
+            "Aviso: INFLESZ 62.1 por debajo del objetivo 65.0"
+          ]
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    }
+  },
+  "citas": {
+    "c0001": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Exigiremos el aumento del SMI hasta los 1.200€, asumiendo además la capacidad para establecer un SMI propio",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.8466,
+            0.87,
+            0.863
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.868,
+            0.6554,
+            0.8844
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0002": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Fin de la estatalización de los convenios, recuperando la prioridad aplicativa de los convenios propios de ámbito vasco, provincial y autonómico, asegurando así un aumento salarial superior al pactado a nivel estatal.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.5687,
+            0.8089,
+            0.5851
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.59,
+            0.8586,
+            0.6065
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.6114,
+            0.8509,
+            0.6278
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.6328,
+            0.6183,
+            0.6492
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0003": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Medidas específicas orientadas a mujeres y personas jóvenes que atajen la brecha salarial que hoy sufren esos sectores, así como la precariedad, temporalidad y parcialidad presentes en gran parte de los mismos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.7397,
+            0.8465,
+            0.7561
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.7611,
+            0.847,
+            0.7775
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.7825,
+            0.8575,
+            0.7989
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.8038,
+            0.5448,
+            0.8202
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0004": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Reducción de la jornada laboral hasta las 32 horas semanales sin reducción salarial ni modificación de condiciones, respondiendo a la exigencia de la mayoría sindical vasca.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.6649,
+            0.8472,
+            0.6813
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.6863,
+            0.7894,
+            0.7027
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.7076,
+            0.8147,
+            0.724
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0005": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Trabajaremos para lograr la recuperación de las medidas laborales más importantes para los y las trabajadoras que quedaron excluidas de la última Reforma Laboral:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4297,
+            0.8634,
+            0.4461
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4511,
+            0.8757,
+            0.4675
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4724,
+            0.5495,
+            0.4889
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0006": {
+      "chunk": "bildu-23-p003-02",
+      "pagina": 3,
+      "literal": "Trabajaremos para lograr la recuperación de las medidas laborales más importantes para los y las trabajadoras que quedaron excluidas de la última Reforma Laboral: Indemnización por despido de 45 días. Salarios de tramitación",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4297,
+            0.8634,
+            0.4461
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4511,
+            0.8757,
+            0.4675
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.2921,
+            0.4724,
+            0.5495,
+            0.4889
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.5045,
+            0.658,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.3238,
+            0.5366,
+            0.5239,
+            0.553
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0007": {
+      "chunk": "bildu-23-p004-01",
+      "pagina": 4,
+      "literal": "Trabajaremos por la transferencia de la Inspección de Trabajo para contar con un instrumento fundamental para la protección de los y las trabajadoras. Transitoriamente, y hasta que la transferencia sea efectiva, exigiremos la convocatoria de plazas para ampliar la plantilla de la Inspección de Trabajo,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.2907,
+            0.8554,
+            0.3071
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.3121,
+            0.859,
+            0.3285
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.3335,
+            0.4305,
+            0.3499
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.3655,
+            0.789,
+            0.3819
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.3869,
+            0.8331,
+            0.4033
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.2921,
+            0.4083,
+            0.5032,
+            0.4247
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0008": {
+      "chunk": "bildu-23-p004-02",
+      "pagina": 4,
+      "literal": "Establecer la obligatoriedad de cumplir el Código de Buenas Prácticas de la Banca para hacer frente a los pagos hipotecarios",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.8466,
+            0.8419,
+            0.863
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.868,
+            0.8664,
+            0.8844
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0009": {
+      "chunk": "bildu-23-p004-02",
+      "pagina": 4,
+      "literal": "Establecer temporalmente, hasta la reversión del alza de los tipos de interés, la congelación retroactiva de las cuotas hipotecarias para hipotecas inferiores a 250.000€ limitando el aumento a un máximo del 15% sobre las cuotas previas a la primera subida de los tipos de interés de julio de 2022.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.729,
+            0.81,
+            0.7454
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.7504,
+            0.832,
+            0.7668
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.7718,
+            0.8406,
+            0.7882
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.7931,
+            0.8482,
+            0.8095
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.8145,
+            0.7899,
+            0.8309
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0010": {
+      "chunk": "bildu-23-p004-02",
+      "pagina": 4,
+      "literal": "Recuperar, de manera indefinida, la prórroga automática de los contratos de alquiler en caso de renovación, manteniendo condiciones y cuantías de renta.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.6114,
+            0.8402,
+            0.6278
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.6328,
+            0.8525,
+            0.6492
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.3238,
+            0.6542,
+            0.6018,
+            0.6706
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0011": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Aumentar el control sobre toda la cadena de producción y distribución alimentaria, dedicando más efectivos para ello, al objeto de asegurar precios justos y suficientes para los productores y evitar el aumento injustificado de precios generado por intermediarios y grandes distribuidoras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.5366,
+            0.8077,
+            0.553
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.558,
+            0.8151,
+            0.5744
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.5793,
+            0.8195,
+            0.5958
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.6007,
+            0.8338,
+            0.6171
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.6221,
+            0.7913,
+            0.6385
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0012": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Aumento inmediato de las pensiones mínimas hasta los 1.080€, asumiendo también la capacidad propia para complementar estas pensiones",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.1945,
+            0.8733,
+            0.2109
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.2159,
+            0.8452,
+            0.2323
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.2373,
+            0.4592,
+            0.2537
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0013": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Nuevo alza en las pensiones mínimas de viudedad y las no contributivas, alcanzando un objetivo de suficiencia",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.3121,
+            0.8269,
+            0.3285
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.3335,
+            0.7731,
+            0.3499
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0014": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Prorrogar indefinidamente el tope al gas y la contención de precios de la generación eléctrica hasta que los precios retrocedan a los valores previos al aumento descontrolado de los últimos años.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.8038,
+            0.807,
+            0.8202
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.8252,
+            0.8197,
+            0.8416
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.8466,
+            0.8798,
+            0.863
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.868,
+            0.4408,
+            0.8844
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0015": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Rechazo a cualquier aumento de la edad de jubilación y/o del periodo de cómputo de las pensiones.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.3869,
+            0.8494,
+            0.4033
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.4083,
+            0.6491,
+            0.4247
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0016": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "Transferencia del Régimen Económico de la Seguridad Social a las instituciones vascas y navarras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.4404,
+            0.8675,
+            0.4568
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.4617,
+            0.6238,
+            0.4782
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0017": {
+      "chunk": "bildu-23-p005-01",
+      "pagina": 5,
+      "literal": "ampliar su alcance facilitando el acceso al mismo a más sectores poblacionales que atraviesen dificultades económicas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.0983,
+            0.8782,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.3238,
+            0.1197,
+            0.7936,
+            0.1361
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0018": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Ampliar y asegurar la adjudicación de plazas MIR para poder ocupar todas las plazas necesarias y reforzar especialmente la Atención Primaria.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.2373,
+            0.8481,
+            0.2537
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.2586,
+            0.8548,
+            0.2751
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.28,
+            0.4881,
+            0.2964
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0019": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Aprobar la gratuidad de productos de higiene menstrual para personas vulnerables mediante su distribución farmacéutica y aplicar el IVA superreducido a estos productos en todos los puntos de venta.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.5366,
+            0.8516,
+            0.553
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.558,
+            0.8477,
+            0.5744
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.5793,
+            0.8456,
+            0.5957
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.6007,
+            0.4674,
+            0.6171
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0020": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Aumentar la inversión en los trenes de la red estatal que operan en nuestros territorios, dependientes de Renfe y Feve, para mejorar y modernizar la red -infraestructura, trenes y accesibilidad- y ampliar horarios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.7504,
+            0.8064,
+            0.7668
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.7718,
+            0.8531,
+            0.7882
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.7931,
+            0.8322,
+            0.8095
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.8145,
+            0.617,
+            0.8309
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0021": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Derogar la Ley 15/1997 de Gestión del Sistema de Salud aprobada por el PP, que permite la privatización y externalización de los servicios sanitarios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.3121,
+            0.8791,
+            0.3285
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.3335,
+            0.8581,
+            0.3499
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.3549,
+            0.4953,
+            0.3713
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0022": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Establecer por ley la gratuidad y los descuentos al transporte público actualmente en vigor de forma permanente y con financiación suficiente.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.6756,
+            0.8477,
+            0.692
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.6969,
+            0.8191,
+            0.7133
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.7183,
+            0.5268,
+            0.7347
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0023": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Incluir servicios oftalmológicos y dentales básicos en la cartera de servicios públicos sanitarios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.4831,
+            0.867,
+            0.4995
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.5045,
+            0.5987,
+            0.5209
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0024": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Multiplicar el presupuesto dedicado a la Salud Mental y aumentar las plazas PIR, asegurando el acceso a los servicios psicológicos públicos y gratuitos para las personas solicitantes, con especial atención a las personas jóvenes.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.3869,
+            0.803,
+            0.4033
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.4083,
+            0.8464,
+            0.4247
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.4297,
+            0.8672,
+            0.4461
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.4511,
+            0.7093,
+            0.4675
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0025": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "Negociar y hacer efectiva la transferencia completa de los trenes de Cercanías para las instituciones vascas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.8466,
+            0.8775,
+            0.863
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.868,
+            0.6879,
+            0.8844
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0026": {
+      "chunk": "bildu-23-p006-01",
+      "pagina": 6,
+      "literal": "aplicar el IVA superreducido a estos productos en todos los puntos de venta.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.3383,
+            0.5793,
+            0.8456,
+            0.5957
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.3238,
+            0.6007,
+            0.4674,
+            0.6171
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0027": {
+      "chunk": "bildu-23-p007-01",
+      "pagina": 7,
+      "literal": "Ampliar el alcance del IMV elevando los máximos de renta para hacerlo accesible a más personas y aumentando las cuantías en un mínimo del 12%,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4404,
+            0.8712,
+            0.4568
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4617,
+            0.8437,
+            0.4781
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4831,
+            0.5206,
+            0.4995
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0028": {
+      "chunk": "bildu-23-p007-01",
+      "pagina": 7,
+      "literal": "Ampliar el alcance del IMV elevando los máximos de renta para hacerlo accesible a más personas y aumentando las cuantías en un mínimo del 12%, así como simplificar trámites, facilitar canales para agilizar y acortar las tramitaciones y concesiones y asegurar la posibilidad de solicitud y trámite presencial.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4404,
+            0.8712,
+            0.4568
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4617,
+            0.8437,
+            0.4781
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4831,
+            0.853,
+            0.4995
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.5045,
+            0.8726,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.5259,
+            0.8079,
+            0.5423
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0029": {
+      "chunk": "bildu-23-p007-01",
+      "pagina": 7,
+      "literal": "Aumentar el IPREM, índice de referencia para la concesión de ayudas, subvenciones o desempleo, en función del IPC siempre que este sea superior al 2,5%, asegurando su suficiencia y recuperando las pérdidas de los últimos años de alta inflación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.2266,
+            0.8569,
+            0.243
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.248,
+            0.8686,
+            0.2644
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.2693,
+            0.8156,
+            0.2857
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.2907,
+            0.8615,
+            0.3071
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0030": {
+      "chunk": "bildu-23-p007-01",
+      "pagina": 7,
+      "literal": "Convertir en permanente la prohibición de cortes de suministros básicos para personas y familias vulnerables y ampliar por ley el acceso y duración del Suministro Mínimo Vital.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.1304,
+            0.7753,
+            0.1468
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.1517,
+            0.8286,
+            0.1682
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.1731,
+            0.8387,
+            0.1895
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.1945,
+            0.3707,
+            0.2109
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0031": {
+      "chunk": "bildu-23-p007-01",
+      "pagina": 7,
+      "literal": "Reformular los condicionantes de la calificación de \"persona vulnerable\" ampliando los límites de renta en un 15%, permitiendo así que las medidas de protección social amparadas en esta definición amplíen su alcance acorde a la nueva situación de vulnerabilidad social.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.3228,
+            0.847,
+            0.3392
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.3442,
+            0.7879,
+            0.3606
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.3655,
+            0.8803,
+            0.3819
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.3869,
+            0.801,
+            0.4033
+          ]
+        },
+        {
+          "pagina": 7,
+          "r": [
+            0.3238,
+            0.4083,
+            0.6212,
+            0.4247
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0032": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Adoptar frente al Banco Central Europeo (BCE) y las instituciones comunitarias una posición contraria y de exigencia de reversión del aumento de los tipos de interés adoptada desde julio de 2022.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.2907,
+            0.8584,
+            0.3071
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.3121,
+            0.8753,
+            0.3285
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.3335,
+            0.8196,
+            0.3499
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0033": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Aprobar un impuesto especial sobre los beneficios de grandes cadenas distribuidoras alimentarias.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.2373,
+            0.8234,
+            0.2537
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.2586,
+            0.6078,
+            0.275
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0034": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Así mismo, se incluirán y establecerán por ley las medidas de obligatoriedad de devolución de las ayudas públicas obtenidas por las empresas que deslocalicen la producción,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2619,
+            0.7397,
+            0.789,
+            0.7561
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2619,
+            0.761,
+            0.8342,
+            0.7775
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2619,
+            0.7824,
+            0.65,
+            0.7988
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0035": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Aumentar la carga impositiva y convertir en permanentes los impuestos a la banca, energéticas y grandes fortunas, respetando la competencia y capacidad de nuestras haciendas forales en la gestión y recaudación de los mismos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.1411,
+            0.8189,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.1624,
+            0.8533,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.1838,
+            0.8357,
+            0.2002
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.2052,
+            0.6137,
+            0.2216
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0036": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Derogar la modificación del artículo 135 de la Constitución española ejecutada por el PP y el PSOE, que prioriza el pago de la deuda sobre la inversión pública y social.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.4831,
+            0.8778,
+            0.4995
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.5045,
+            0.8772,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.5259,
+            0.5368,
+            0.5423
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0037": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Impulsar el PERTE de economía social y cooperativa, poniendo la financiación europea a disposición de nuestro tejido cooperativo y social.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.5579,
+            0.858,
+            0.5744
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.5793,
+            0.8643,
+            0.5957
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.6007,
+            0.3476,
+            0.6171
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0038": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Proponer y aprobar una nueva Ley de Industria que coloque en el centro las pequeñas y medianas empresas y apueste por la investigación, innovación, desarrollo y digitalización como pilares para la transformación y reconversión del tejido industrial vasco.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.6328,
+            0.8343,
+            0.6492
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.6542,
+            0.8132,
+            0.6706
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.6755,
+            0.8646,
+            0.6919
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.6969,
+            0.8521,
+            0.7133
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0039": {
+      "chunk": "bildu-23-p008-01",
+      "pagina": 8,
+      "literal": "Rechazar la recuperación de las reglas fiscales para la contención de la inversión pública, impidiendo cualquier tipo de política de austeridad que conlleve recortes sociales o de servicios públicos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.4083,
+            0.8525,
+            0.4247
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.4297,
+            0.8449,
+            0.4461
+          ]
+        },
+        {
+          "pagina": 8,
+          "r": [
+            0.2921,
+            0.451,
+            0.8487,
+            0.4675
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0040": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Adoptar nuevas medidas frente a las situaciones de sequía, que se agravarán los próximos años, impulsando una nueva política de regulación, control y ahorro.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.59,
+            0.8582,
+            0.6064
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.6114,
+            0.842,
+            0.6278
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.6327,
+            0.5377,
+            0.6492
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0041": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Adoptar nuevas medidas frente a las situaciones de sequía, que se agravarán los próximos años, impulsando una nueva política de regulación, control y ahorro. Esta nueva política debe permitir asegurar el suministro tanto a la población como al ámbito agrícola, impulsando mediante inversiones suficientes la innovación y las necesarias transformaciones necesarias en los sectores agrícolas más afectados.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.59,
+            0.8582,
+            0.6064
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.6114,
+            0.842,
+            0.6278
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.6327,
+            0.5377,
+            0.6492
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.6755,
+            0.8308,
+            0.6919
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.6969,
+            0.8641,
+            0.7133
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7183,
+            0.867,
+            0.7347
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7396,
+            0.6014,
+            0.7561
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0042": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Deberán endurecerse asimismo los mecanismos de control y sanción sobre las empresas energéticas que hacen una utilización irregular de los pantanos y las reservas hídricas para la generación de energía",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7717,
+            0.856,
+            0.7881
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7931,
+            0.8347,
+            0.8095
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.8145,
+            0.8472,
+            0.8309
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0043": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Esta nueva política debe permitir asegurar el suministro tanto a la población como al ámbito agrícola, impulsando mediante inversiones suficientes la innovación y las necesarias transformaciones necesarias en los sectores agrícolas más afectados.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.6755,
+            0.8308,
+            0.6919
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.6969,
+            0.8641,
+            0.7133
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7183,
+            0.867,
+            0.7347
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2619,
+            0.7396,
+            0.6014,
+            0.7561
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0044": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Impulsar y facilitar mediante los cambios legislativos correspondientes la creación de empresas públicas de comercialización de electricidad en todas las escalas institucionales.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.451,
+            0.7519,
+            0.4675
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.4724,
+            0.7558,
+            0.4888
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.4938,
+            0.744,
+            0.5102
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.5152,
+            0.4265,
+            0.5316
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0045": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Proponer y ejecutar desde la Presidencia de la UE el cambio y transformación del sistema marginalista de fijación de precios energéticos europeos",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3335,
+            0.8196,
+            0.3499
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3548,
+            0.8286,
+            0.3712
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3762,
+            0.4758,
+            0.3926
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0046": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Proponer y ejecutar desde la Presidencia de la UE el cambio y transformación del sistema marginalista de fijación de precios energéticos europeos para acabar con el injusto sistema actual y establecer precios diferenciados y acordes al coste real para cada sistema de generación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3335,
+            0.8196,
+            0.3499
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3548,
+            0.8286,
+            0.3712
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3762,
+            0.8431,
+            0.3926
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3976,
+            0.8491,
+            0.414
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.419,
+            0.4899,
+            0.4354
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0047": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Reforzar la apuesta por la generación energética renovable con nuevas inversiones que incluyan y aseguren una planificación justa y respetuosa con las particularidades, condiciones y necesidades diferenciadas de cada territorio.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.2373,
+            0.833,
+            0.2537
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.2586,
+            0.8732,
+            0.275
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.28,
+            0.8514,
+            0.2964
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.3014,
+            0.5675,
+            0.3178
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0048": {
+      "chunk": "bildu-23-p009-01",
+      "pagina": 9,
+      "literal": "Revisar la Ley de Cambio Climático y Transición Energética ampliando y aumentando los objetivos de descarbonización y reducción de emisiones para 2030 para alcanzar la neutralidad climática en 2040.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.1411,
+            0.8073,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.1624,
+            0.8244,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.1838,
+            0.8332,
+            0.2002
+          ]
+        },
+        {
+          "pagina": 9,
+          "r": [
+            0.2921,
+            0.2052,
+            0.4511,
+            0.2216
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0049": {
+      "chunk": "bildu-23-p010-02",
+      "pagina": 10,
+      "literal": "Además de reforzar la lucha contra la violencia machista desde todos los ámbitos, trabajaremos por la igualdad real y efectiva",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.6743,
+            0.5045,
+            0.8428,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5259,
+            0.7932,
+            0.5423
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5473,
+            0.6333,
+            0.5637
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0050": {
+      "chunk": "bildu-23-p010-02",
+      "pagina": 10,
+      "literal": "Defenderemos todos los avances feministas conseguidos y trabajaremos para conquistar nuevos derechos. Además de reforzar la lucha contra la violencia machista desde todos los ámbitos, trabajaremos por la igualdad real y efectiva",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.4831,
+            0.7648,
+            0.4996
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5045,
+            0.8428,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5259,
+            0.7932,
+            0.5423
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5473,
+            0.6333,
+            0.5637
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0051": {
+      "chunk": "bildu-23-p010-02",
+      "pagina": 10,
+      "literal": "haremos especial hincapié en acabar con las situaciones discriminatorias que aún sufren las mujeres en el acceso al empleo y condiciones laborales y salariales, en protección social y pensiones o en el ámbito invisibilizado y precarizado de los cuidados.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.5558,
+            0.6435,
+            0.873,
+            0.6599
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.6649,
+            0.8528,
+            0.6813
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.6862,
+            0.843,
+            0.7026
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.7076,
+            0.8418,
+            0.724
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.729,
+            0.3459,
+            0.7454
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0052": {
+      "chunk": "bildu-23-p010-02",
+      "pagina": 10,
+      "literal": "trabajaremos por la igualdad real y efectiva desde los valores transformadores feministas para que se reconozca el derecho a decidir sobre nuestros cuerpos, nuestra sexualidad y nuestras vidas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5473,
+            0.7833,
+            0.5637
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.5686,
+            0.8691,
+            0.5851
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.59,
+            0.7837,
+            0.6064
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0053": {
+      "chunk": "bildu-23-p010-03",
+      "pagina": 10,
+      "literal": "Defenderemos todos y cada uno de los avances y conquistas logradas para las personas LGTBIQ+, que amplían derechos y libertades.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.8145,
+            0.8557,
+            0.831
+          ]
+        },
+        {
+          "pagina": 10,
+          "r": [
+            0.2619,
+            0.8359,
+            0.8064,
+            0.8523
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0054": {
+      "chunk": "bildu-23-p011-01",
+      "pagina": 11,
+      "literal": "Apoyaremos los medios necesarios para acabar con la ola reaccionaria que amenaza los derechos y las vidas de las personas del colectivo y su entorno. Para ello, combatiremos los discursos y delitos de odio, agresiones y ataques. Sea en forma de políticas de protección, sea por medio de medidas de concienciación social y educativa.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.0983,
+            0.8662,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.1197,
+            0.8441,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.141,
+            0.8376,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.1624,
+            0.8592,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.1838,
+            0.7444,
+            0.2002
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0055": {
+      "chunk": "bildu-23-p011-01",
+      "pagina": 11,
+      "literal": "Para ello, combatiremos los discursos y delitos de odio, agresiones y ataques. Sea en forma de políticas de protección, sea por medio de medidas de concienciación social y educativa.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.3638,
+            0.141,
+            0.8376,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.1624,
+            0.8592,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.1838,
+            0.7444,
+            0.2002
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0056": {
+      "chunk": "bildu-23-p011-01",
+      "pagina": 11,
+      "literal": "Trabajaremos en contra de la discriminación que aún sufren las personas LGTBIQ+ en ámbitos como el laboral, económico, social y político.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2159,
+            0.8101,
+            0.2323
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2373,
+            0.8393,
+            0.2537
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2586,
+            0.3331,
+            0.275
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0057": {
+      "chunk": "bildu-23-p011-01",
+      "pagina": 11,
+      "literal": "Trabajaremos en contra de la discriminación que aún sufren las personas LGTBIQ+ en ámbitos como el laboral, económico, social y político. Para ello, nos comprometemos a ofrecer foros y los debidos espacios de representación institucional al colectivo y asociaciones.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2159,
+            0.8101,
+            0.2323
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2373,
+            0.8393,
+            0.2537
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.2586,
+            0.8464,
+            0.275
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2619,
+            0.28,
+            0.8468,
+            0.2964
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0058": {
+      "chunk": "bildu-23-p011-02",
+      "pagina": 11,
+      "literal": "Exigiremos el fin de las devoluciones en caliente ya sean por vía terrestre o marítima.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.6542,
+            0.8416,
+            0.6706
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.6755,
+            0.4712,
+            0.6919
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0059": {
+      "chunk": "bildu-23-p011-02",
+      "pagina": 11,
+      "literal": "Exigiremos la derogación de la Ley de Extranjería, sustituyéndola por una nueva legislación que respete y garantice todos los derechos humanos y civiles de todas las personas migrantes, así como su acceso a los servicios públicos básicos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.4618,
+            0.8568,
+            0.4782
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.4831,
+            0.8809,
+            0.4995
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.5045,
+            0.8365,
+            0.5209
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.5259,
+            0.6246,
+            0.5423
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0060": {
+      "chunk": "bildu-23-p011-02",
+      "pagina": 11,
+      "literal": "Propondremos una Ley Integral contra el Racismo y todas las formas de discriminación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.729,
+            0.8193,
+            0.7454
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.7504,
+            0.5191,
+            0.7668
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0061": {
+      "chunk": "bildu-23-p011-02",
+      "pagina": 11,
+      "literal": "Trabajaremos por el establecimiento de corredores y vías seguras para todas las personas migrantes, comenzando por la reapertura de los pasos entre Irun y Hendaia, así como medidas que garanticen el asilo y la asistencia para todas ellas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.558,
+            0.8529,
+            0.5744
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.5793,
+            0.881,
+            0.5957
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.6007,
+            0.8718,
+            0.6171
+          ]
+        },
+        {
+          "pagina": 11,
+          "r": [
+            0.2921,
+            0.6221,
+            0.6002,
+            0.6385
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0062": {
+      "chunk": "bildu-23-p012-01",
+      "pagina": 12,
+      "literal": "Crear un mecanismo externo e independiente de supervisión e investigación de las actuaciones policiales",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3442,
+            0.8218,
+            0.3606
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3655,
+            0.649,
+            0.382
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0063": {
+      "chunk": "bildu-23-p012-01",
+      "pagina": 12,
+      "literal": "Crear un mecanismo externo e independiente de supervisión e investigación de las actuaciones policiales como garantía de control sobre la actividad de los diferentes cuerpos y del cumplimiento de todos los derechos humanos, civiles y políticos y libertades individuales y colectivas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3442,
+            0.8218,
+            0.3606
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3655,
+            0.8646,
+            0.382
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3869,
+            0.8254,
+            0.4033
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.4083,
+            0.8152,
+            0.4247
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.4297,
+            0.5051,
+            0.4461
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0064": {
+      "chunk": "bildu-23-p012-01",
+      "pagina": 12,
+      "literal": "Prohibir el uso de las pelotas de goma y las devoluciones en caliente.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.3121,
+            0.8688,
+            0.3285
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0065": {
+      "chunk": "bildu-23-p012-01",
+      "pagina": 12,
+      "literal": "Volveremos a plantear la derogación de la Ley Mordaza para acabar con todas sus medidas contrarias a la libertad de expresión y los derechos y libertades, que el Gobierno español se negó a modificar:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2619,
+            0.1411,
+            0.8774,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2619,
+            0.1624,
+            0.8737,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2619,
+            0.1838,
+            0.7435,
+            0.2002
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0066": {
+      "chunk": "bildu-23-p012-02",
+      "pagina": 12,
+      "literal": "Ampliar la Ley de Memoria Democrática para incluir en la misma garantías de reconocimiento, justicia y reparación para todas las víctimas de todas las fases históricas que aún siguen sin ser reconocidas:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7504,
+            0.8562,
+            0.7668
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7717,
+            0.8176,
+            0.7882
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7931,
+            0.8311,
+            0.8095
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.8145,
+            0.4022,
+            0.8309
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0067": {
+      "chunk": "bildu-23-p012-02",
+      "pagina": 12,
+      "literal": "Ampliar la Ley de Memoria Democrática para incluir en la misma garantías de reconocimiento, justicia y reparación para todas las víctimas de todas las fases históricas que aún siguen sin ser reconocidas: las víctimas del franquismo, las de la tortura, las del terrorismo de Estado y de los grupos ultraderechistas,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7504,
+            0.8562,
+            0.7668
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7717,
+            0.8176,
+            0.7882
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.7931,
+            0.8311,
+            0.8095
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.8145,
+            0.8524,
+            0.8309
+          ]
+        },
+        {
+          "pagina": 12,
+          "r": [
+            0.2921,
+            0.8359,
+            0.7561,
+            0.8523
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0068": {
+      "chunk": "bildu-23-p013-01",
+      "pagina": 13,
+      "literal": "Acabar con la Ley de Secretos Oficiales para asegurar una legislación que asegure claridad, accesibilidad, información y protección de los derechos individuales",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 13,
+          "r": [
+            0.2921,
+            0.0983,
+            0.7854,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2921,
+            0.1197,
+            0.8236,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 13,
+          "r": [
+            0.2921,
+            0.141,
+            0.6344,
+            0.1575
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0069": {
+      "chunk": "bildu-23-p014-02",
+      "pagina": 14,
+      "literal": "El reconocimiento de Euskal Herria como nación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.5366,
+            0.7212,
+            0.553
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0070": {
+      "chunk": "bildu-23-p014-02",
+      "pagina": 14,
+      "literal": "El reconocimiento del carácter político del conflicto existente entre Euskal Herria y el Estado español y, en consecuencia, la búsqueda de una solución política al mismo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.5687,
+            0.8723,
+            0.5851
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.59,
+            0.8607,
+            0.6065
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.6114,
+            0.5877,
+            0.6278
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0071": {
+      "chunk": "bildu-23-p014-02",
+      "pagina": 14,
+      "literal": "El reconocimiento del derecho a decidir como mecanismo democrático para dicha solución, basada en la voluntad y decisión de la ciudadanía vasca.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.6435,
+            0.7938,
+            0.6599
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.6649,
+            0.8643,
+            0.6813
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.6862,
+            0.4914,
+            0.7027
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0072": {
+      "chunk": "bildu-23-p014-02",
+      "pagina": 14,
+      "literal": "El respeto tanto del Gobierno español como de sus instituciones a los acuerdos y propuestas políticas que alcancen las fuerzas políticas en los correspondientes parlamentos de Gasteiz e Iruñea, siempre y cuando estas sean ratificadas por nuestra ciudadanía.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.7183,
+            0.8442,
+            0.7347
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.7397,
+            0.82,
+            0.7561
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.7611,
+            0.8633,
+            0.7775
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2921,
+            0.7825,
+            0.8433,
+            0.7989
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0073": {
+      "chunk": "bildu-23-p014-02",
+      "pagina": 14,
+      "literal": "Trabajaremos con el resto de fuerzas soberanistas para avanzar hacia el reconocimiento del carácter plurinacional del Estado, lo que debe conllevar:",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 14,
+          "r": [
+            0.2619,
+            0.4618,
+            0.8551,
+            0.4782
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2619,
+            0.4831,
+            0.8485,
+            0.4995
+          ]
+        },
+        {
+          "pagina": 14,
+          "r": [
+            0.2619,
+            0.5045,
+            0.3475,
+            0.5209
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0074": {
+      "chunk": "bildu-23-p015-01",
+      "pagina": 15,
+      "literal": "Blindar nuestros modelos educativos y curriculares y sus características lingüísticas, no permitiendo ningún tipo de intromisión ni cambio impuesto en los modelos educativos propios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.3762,
+            0.7827,
+            0.3926
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.3976,
+            0.7975,
+            0.414
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.419,
+            0.8777,
+            0.4354
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0075": {
+      "chunk": "bildu-23-p015-01",
+      "pagina": 15,
+      "literal": "Extender y ampliar el uso del euskera en el ámbito digital y audiovisual, clave para promover su uso y conocimiento entre las generaciones más jóvenes.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.451,
+            0.8008,
+            0.4675
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.4724,
+            0.8543,
+            0.4888
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.4938,
+            0.5215,
+            0.5102
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0076": {
+      "chunk": "bildu-23-p015-01",
+      "pagina": 15,
+      "literal": "Garantizar el uso del euskera en todas las administraciones públicas dependientes del Estado,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.2586,
+            0.802,
+            0.275
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.28,
+            0.587,
+            0.2964
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0077": {
+      "chunk": "bildu-23-p015-01",
+      "pagina": 15,
+      "literal": "Garantizar el uso del euskera en todas las administraciones públicas dependientes del Estado, impulsando el conocimiento de nuestra lengua por parte de todos los trabajadores y trabajadoras de la misma para asegurar así la atención en euskera a toda la ciudadanía.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.2586,
+            0.802,
+            0.275
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.28,
+            0.8647,
+            0.2964
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.3014,
+            0.8496,
+            0.3178
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.3228,
+            0.8205,
+            0.3392
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.3441,
+            0.3947,
+            0.3605
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0078": {
+      "chunk": "bildu-23-p015-02",
+      "pagina": 15,
+      "literal": "Exigiremos la transferencia de todas las competencias pendientes contempladas en el Estatuto Vasco y el Amejoramiento Navarro,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.6542,
+            0.8295,
+            0.6706
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.6756,
+            0.8145,
+            0.692
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0079": {
+      "chunk": "bildu-23-p015-02",
+      "pagina": 15,
+      "literal": "Exigiremos la transferencia de todas las competencias pendientes contempladas en el Estatuto Vasco y el Amejoramiento Navarro, así como nuevos instrumentos para ensanchar nuestras capacidades de autogobierno,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.6542,
+            0.8295,
+            0.6706
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.6756,
+            0.8429,
+            0.692
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.6969,
+            0.8245,
+            0.7133
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2619,
+            0.7183,
+            0.4081,
+            0.7347
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0080": {
+      "chunk": "bildu-23-p015-02",
+      "pagina": 15,
+      "literal": "Régimen Económico de la Seguridad Social \"\" Inspección de Trabajo \"\" Políticas pasivas de empleo \"\" SMI propio y adaptado \"\" I+D+i",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.7931,
+            0.666,
+            0.8096
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8145,
+            0.4831,
+            0.8309
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8359,
+            0.5276,
+            0.8523
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8573,
+            0.4878,
+            0.8737
+          ]
+        },
+        {
+          "pagina": 15,
+          "r": [
+            0.2921,
+            0.8786,
+            0.3397,
+            0.8951
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0081": {
+      "chunk": "bildu-23-p016-01",
+      "pagina": 16,
+      "literal": "Aseguraremos también que cada nueva ley o medida que pueda aprobarse y responda o afecte a nuestras competencias sea inmediatamente transferida,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.3335,
+            0.8109,
+            0.3499
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.3548,
+            0.7681,
+            0.3712
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.3762,
+            0.5116,
+            0.3926
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0082": {
+      "chunk": "bildu-23-p016-01",
+      "pagina": 16,
+      "literal": "Becas \"\" Cercanías \"\" Migración \"\" Marco Vasco y Navarro de Relaciones Laborales",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.0983,
+            0.342,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1197,
+            0.3772,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.141,
+            0.3806,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1624,
+            0.7019,
+            0.1788
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0083": {
+      "chunk": "bildu-23-p016-01",
+      "pagina": 16,
+      "literal": "Becas \"\" Cercanías \"\" Migración \"\" Marco Vasco y Navarro de Relaciones Laborales \"\" Puertos y aeropuertos",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.0983,
+            0.342,
+            0.1147
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1197,
+            0.3772,
+            0.1361
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.141,
+            0.3806,
+            0.1575
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1624,
+            0.7019,
+            0.1788
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2921,
+            0.1838,
+            0.4812,
+            0.2002
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0084": {
+      "chunk": "bildu-23-p016-02",
+      "pagina": 16,
+      "literal": "Concierto Económico Vasco y Convenio Económico Navarro Defenderemos estas herramientas de autogobierno como pilar para nuestro bienestar,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.4673,
+            0.6959,
+            0.4904
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.4887,
+            0.48,
+            0.5118
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.5259,
+            0.8423,
+            0.5423
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.5473,
+            0.4183,
+            0.5637
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0085": {
+      "chunk": "bildu-23-p016-02",
+      "pagina": 16,
+      "literal": "trabajaremos para acordar una nueva forma de negociación de estas herramientas, de igual a igual, transparente y justa,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.59,
+            0.8476,
+            0.6064
+          ]
+        },
+        {
+          "pagina": 16,
+          "r": [
+            0.2619,
+            0.6114,
+            0.7042,
+            0.6278
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    }
+  },
+  "incidencias": []
+}

@@ -23,11 +23,11 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
 
 ## F1b · Análisis de 2023 (mié 7)
-- [ ] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste (código y tests con cliente simulado ✓; falta la ejecución real). **V:** 1 candidatura × 3 temas
+- [x] T-110 `vc analyze`: programa completo, caché, *structured outputs*, reintentos y coste (ejecutado en las 11 candidaturas de 2023). **V:** 1 candidatura × 3 temas
 - [x] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
 - [x] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
 - [x] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
-- [ ] T-114 (3/11 en rama `datos/2023`; Junts registrado desde beteve.cat con permiso; **bloqueado: sin crédito en OpenAI**) Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
+- [x] T-114 (11/11 aprobados en la rama `datos/2023`; se publican con el merge del PR) Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
 
 ## F2 · Comparador web (mié 7 - jue 8)
 - [x] T-201 Next.js 16, TypeScript estricto, Tailwind v4, shadcn/ui, Vitest y Playwright en `web/`. **V:** build
@@ -50,11 +50,11 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-303 `/api/chat`: AI SDK, 4 *tools*, *prompt* de sistema y validador de citas. **V:** tests del validador
 - [x] T-304 Interfaz del chat (*streaming*, citas → panel, sugerencias y acotado)
 - [x] T-305 Límites de uso, tope de gasto diario y métricas agregadas
-- [ ] T-306 `evals/`: 62 preguntas, juez y runner ✓ (falta EJECUTARLOS: requiere crédito en OpenAI). **V:** umbrales de la spec 003
+- [x] T-306 `evals/`: 62 preguntas, juez y runner (6-oct: sol supera los umbrales; luna no → el chat usa sol). **V:** umbrales de la spec 003
 
 ## F4 · Despliegue y lanzamiento (sáb 10 - dom 11)
 - [x] T-401 `Dockerfile`, `railway.json` y `/api/salud`; build *standalone* probado en local
-- [ ] T-402 Railway: proyecto, Postgres con pgvector, variables y *pre-deploy*. **Requiere tu `railway login`**
+- [x] T-402 Railway: proyecto, Postgres con pgvector y variables (web); la base se prepara al arrancar (`instrumentation.ts`)
 - [ ] T-403 `ci.yml` e `ingest.yml` en GitHub Actions. **Requiere el secreto `OPENAI_API_KEY` en GitHub**
 - [ ] T-404 `watch-programs.yml` (versión mínima: páginas `vigilar` → *issue*)
 - [ ] T-405 Rendimiento (Lighthouse), revisión final con los tres agentes y correcciones

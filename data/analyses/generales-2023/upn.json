@@ -1,0 +1,3681 @@
+{
+  "convocatoria": "generales-2023",
+  "candidatura": "upn",
+  "estado": "aprobado",
+  "aprobado_en": "2026-10-06T14:55:33Z",
+  "documento": {
+    "id": "generales-2023/upn",
+    "sha256": "6bbf12c4fe8acc17d8deb2ddc68a89cbee9e07ec70472ed7463655e8a59e15d6",
+    "paginas": 6,
+    "idioma": "es"
+  },
+  "generado": {
+    "fecha": "2026-10-05T21:43:20Z",
+    "modelo": "gpt-6.1-sol",
+    "modelo_lectura_facil": "gpt-6.1-sol",
+    "prompt": "analisis@2",
+    "tokens_entrada": 122409,
+    "tokens_cache": 0,
+    "tokens_salida": 63767,
+    "coste_usd": 0.8595
+  },
+  "temas": {
+    "vivienda": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone proteger la propiedad privada de las viviendas y combatir la ocupación ilegal, así como derogar la Ley de Vivienda y respetar las competencias de Navarra en esta materia.",
+          "citas": [
+            "c0055",
+            "c0054"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Establecer normativa que garantice el reconocimiento efectivo de la propiedad privada de las viviendas y la lucha contra la ocupación ilegal.",
+          "citas": [
+            "c0055"
+          ],
+          "id": "vivienda-1",
+          "subtema": "ocupación ilegal y desahucios"
+        },
+        {
+          "texto": "Derogar la Ley de Vivienda y respetar las competencias de la Comunidad Foral de Navarra en esta materia.",
+          "citas": [
+            "c0054"
+          ],
+          "id": "vivienda-2",
+          "subtema": "compra y acceso"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere proteger el derecho de los dueños sobre sus casas.",
+            "citas": [
+              "c0055",
+              "c0054"
+            ]
+          },
+          {
+            "texto": "El partido quiere evitar que se ocupen casas de forma ilegal.",
+            "citas": [
+              "c0055",
+              "c0054"
+            ]
+          },
+          {
+            "texto": "El partido quiere quitar la Ley de Vivienda.",
+            "citas": [
+              "c0055",
+              "c0054"
+            ]
+          },
+          {
+            "texto": "El partido quiere respetar el poder de Navarra para decidir sobre vivienda.",
+            "citas": [
+              "c0055",
+              "c0054"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere crear normas sobre el derecho de los dueños de las casas. Estas normas deben reconocer y proteger ese derecho. También deben evitar que se ocupen casas de forma ilegal.",
+            "citas": [
+              "c0055"
+            ],
+            "id": "vivienda-1",
+            "subtema": "ocupación ilegal y desahucios"
+          },
+          {
+            "texto": "El partido quiere quitar la Ley de Vivienda. El partido quiere respetar el poder de Navarra para decidir sobre vivienda.",
+            "citas": [
+              "c0054"
+            ],
+            "id": "vivienda-2",
+            "subtema": "compra y acceso"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 73.6,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "economia-empleo": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reducir impuestos, generar empleo y financiar políticas activas de empleo.",
+          "citas": [
+            "c0011",
+            "c0038"
+          ]
+        },
+        {
+          "texto": "Plantea apoyar el emprendimiento y a los autónomos, y fomentar las exportaciones navarras.",
+          "citas": [
+            "c0042",
+            "c0044"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Reducir impuestos y generar empleo.",
+          "citas": [
+            "c0011"
+          ],
+          "id": "economia-empleo-1",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Desarrollar contratos-programas entre el ministerio responsable de empleo y el Servicio Navarro de Empleo para financiar políticas activas de empleo.",
+          "citas": [
+            "c0038"
+          ],
+          "id": "economia-empleo-2",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Establecer un Plan Nacional de Empleo Juvenil.",
+          "citas": [
+            "c0039"
+          ],
+          "id": "economia-empleo-3",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Establecer medidas legales para la reinserción laboral de las personas que perciben algún tipo de ayuda pública.",
+          "citas": [
+            "c0040"
+          ],
+          "id": "economia-empleo-4",
+          "subtema": "empleo y paro"
+        },
+        {
+          "texto": "Implantar una planta de baterías dentro de VW Navarra y defender los intereses de los sectores de la automoción y del transporte.",
+          "citas": [
+            "c0045"
+          ],
+          "id": "economia-empleo-5",
+          "subtema": "industria"
+        },
+        {
+          "texto": "Establecer un Plan de Iniciación a la Exportación y firmar un convenio con el Instituto Español de Comercio Exterior para fomentar las exportaciones navarras.",
+          "citas": [
+            "c0044"
+          ],
+          "id": "economia-empleo-6",
+          "subtema": "industria"
+        },
+        {
+          "texto": "Establecer medidas y ayudas mediante normativa para facilitar el emprendimiento y defender al autónomo.",
+          "citas": [
+            "c0042"
+          ],
+          "id": "economia-empleo-7",
+          "subtema": "autónomos y pymes"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere bajar los impuestos.",
+            "citas": [
+              "c0011",
+              "c0038"
+            ]
+          },
+          {
+            "texto": "El partido quiere crear empleo.",
+            "citas": [
+              "c0011",
+              "c0038"
+            ]
+          },
+          {
+            "texto": "El partido quiere pagar planes que ayuden a encontrar trabajo.",
+            "citas": [
+              "c0011",
+              "c0038"
+            ]
+          },
+          {
+            "texto": "El partido quiere ayudar a crear negocios.",
+            "citas": [
+              "c0042",
+              "c0044"
+            ]
+          },
+          {
+            "texto": "El partido quiere apoyar a quienes trabajan por su cuenta.",
+            "citas": [
+              "c0042",
+              "c0044"
+            ]
+          },
+          {
+            "texto": "El partido quiere que Navarra venda más productos a otros países.",
+            "citas": [
+              "c0042",
+              "c0044"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere bajar los impuestos. El partido quiere crear empleo.",
+            "citas": [
+              "c0011"
+            ],
+            "id": "economia-empleo-1",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "El partido quiere acuerdos para pagar planes de empleo. Estos planes ayudarían a encontrar trabajo. El ministerio que se encarga del empleo firmaría estos acuerdos. El Servicio Navarro de Empleo también los firmaría.",
+            "citas": [
+              "c0038"
+            ],
+            "id": "economia-empleo-2",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "El partido quiere un plan para que los jóvenes encuentren trabajo. Este plan sería para todo el país.",
+            "citas": [
+              "c0039"
+            ],
+            "id": "economia-empleo-3",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "El partido quiere leyes para ayudar a volver al trabajo. Estas leyes son para quienes cobran ayudas públicas.",
+            "citas": [
+              "c0040"
+            ],
+            "id": "economia-empleo-4",
+            "subtema": "empleo y paro"
+          },
+          {
+            "texto": "El partido quiere una fábrica de baterías dentro de Volkswagen Navarra. El partido quiere defender los intereses de las empresas de vehículos. También quiere defender los intereses de las empresas de transporte.",
+            "citas": [
+              "c0045"
+            ],
+            "id": "economia-empleo-5",
+            "subtema": "industria"
+          },
+          {
+            "texto": "El partido quiere un plan para empezar a vender productos a otros países. También quiere firmar un acuerdo con el Instituto Español de Comercio Exterior. El acuerdo ayudaría a Navarra a vender más productos a otros países.",
+            "citas": [
+              "c0044"
+            ],
+            "id": "economia-empleo-6",
+            "subtema": "industria"
+          },
+          {
+            "texto": "El partido quiere normas y ayudas para que sea más fácil crear negocios. También quiere normas para defender a quienes trabajan por su cuenta.",
+            "citas": [
+              "c0042"
+            ],
+            "id": "economia-empleo-7",
+            "subtema": "autónomos y pymes"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 67.7,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "impuestos": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone reducir impuestos y deflactar la tarifa del IRPF.",
+          "citas": [
+            "c0011",
+            "c0008"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Deflactar la tarifa del IRPF.",
+          "citas": [
+            "c0008"
+          ],
+          "id": "impuestos-1",
+          "subtema": "IRPF"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere reducir impuestos.",
+            "citas": [
+              "c0011",
+              "c0008"
+            ]
+          },
+          {
+            "texto": "El partido quiere ajustar el impuesto sobre la renta de las personas físicas.",
+            "citas": [
+              "c0011",
+              "c0008"
+            ]
+          },
+          {
+            "texto": "El partido quiere adaptar sus límites de ingresos a la subida de los precios.",
+            "citas": [
+              "c0011",
+              "c0008"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere ajustar el impuesto sobre la renta de las personas físicas. El partido quiere adaptar sus límites de ingresos a la subida de los precios.",
+            "citas": [
+              "c0008"
+            ],
+            "id": "impuestos-1",
+            "subtema": "IRPF"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 72.5,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "pensiones": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende la continuidad del sistema de pensiones, con \"pensiones dignas\" y sin recortes.",
+          "citas": [
+            "c0037"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Mantener un sistema de pensiones que perdure en el tiempo, con \"pensiones dignas\" y sin recortes.",
+          "citas": [
+            "c0037"
+          ],
+          "id": "pensiones-1",
+          "subtema": "sostenibilidad del sistema"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere mantener el sistema de pensiones.",
+            "citas": [
+              "c0037"
+            ]
+          },
+          {
+            "texto": "El partido quiere pensiones dignas y sin recortes.",
+            "citas": [
+              "c0037"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere mantener el sistema de pensiones a largo plazo. El partido quiere pensiones dignas y sin recortes.",
+            "citas": [
+              "c0037"
+            ],
+            "id": "pensiones-1",
+            "subtema": "sostenibilidad del sistema"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.7,
+          "max_palabras_frase": 11,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "proteccion-social": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone cumplir la financiación de la Ley de Dependencia y las medidas de integración de las personas con discapacidad, así como desarrollar y cumplir la normativa de accesibilidad.",
+          "citas": [
+            "c0034",
+            "c0035"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Cumplir la financiación de la Ley de Dependencia.",
+          "citas": [
+            "c0033"
+          ],
+          "id": "proteccion-social-1",
+          "subtema": "dependencia"
+        },
+        {
+          "texto": "Cumplir las medidas para la integración efectiva de las personas con discapacidad.",
+          "citas": [
+            "c0034"
+          ],
+          "id": "proteccion-social-2",
+          "subtema": "discapacidad"
+        },
+        {
+          "texto": "Desarrollar y cumplir la normativa que regula la accesibilidad de las personas con discapacidad.",
+          "citas": [
+            "c0035"
+          ],
+          "id": "proteccion-social-3",
+          "subtema": "discapacidad"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere dar el dinero que exige la Ley de Dependencia.",
+            "citas": [
+              "c0034",
+              "c0035"
+            ]
+          },
+          {
+            "texto": "El partido quiere cumplir las medidas para incluir a las personas con discapacidad.",
+            "citas": [
+              "c0034",
+              "c0035"
+            ]
+          },
+          {
+            "texto": "El partido quiere crear y cumplir normas de acceso.",
+            "citas": [
+              "c0034",
+              "c0035"
+            ]
+          },
+          {
+            "texto": "Son normas para que las personas con discapacidad usen lugares y servicios.",
+            "citas": [
+              "c0034",
+              "c0035"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere dar el dinero que exige la Ley de Dependencia.",
+            "citas": [
+              "c0033"
+            ],
+            "id": "proteccion-social-1",
+            "subtema": "dependencia"
+          },
+          {
+            "texto": "El partido quiere cumplir las medidas para incluir a las personas con discapacidad.",
+            "citas": [
+              "c0034"
+            ],
+            "id": "proteccion-social-2",
+            "subtema": "discapacidad"
+          },
+          {
+            "texto": "El partido quiere crear y cumplir normas de acceso. Son normas para que las personas con discapacidad usen lugares y servicios.",
+            "citas": [
+              "c0035"
+            ],
+            "id": "proteccion-social-3",
+            "subtema": "discapacidad"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 72.1,
+          "max_palabras_frase": 13,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "sanidad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Plantea adaptar la normativa para defender la vida mediante políticas de familia y cuidados paliativos.",
+          "citas": [
+            "c0032"
+          ]
+        },
+        {
+          "texto": "Propone un plan nacional de prevención del suicidio y una norma para abordar las necesidades de personas con enfermedades raras y ELA.",
+          "citas": [
+            "c0036"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Establecer un Plan Nacional de Prevención del Suicidio.",
+          "citas": [
+            "c0036"
+          ],
+          "id": "sanidad-1",
+          "subtema": "salud mental"
+        },
+        {
+          "texto": "Aprobar una norma para abordar las necesidades de las personas con enfermedades raras y ELA.",
+          "citas": [
+            "c0036"
+          ],
+          "id": "sanidad-2",
+          "subtema": "sanidad pública y privada"
+        },
+        {
+          "texto": "Adaptar la normativa vigente para defender la vida con políticas en favor de la familia y los cuidados paliativos.",
+          "citas": [
+            "c0032"
+          ],
+          "id": "sanidad-3",
+          "subtema": "sanidad pública y privada"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "UPN quiere cambiar las normas para defender la vida.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "UPN propone medidas de apoyo a la familia.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "UPN propone cuidados para aliviar el dolor y el sufrimiento.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "UPN propone un plan nacional para prevenir el suicidio.",
+            "citas": [
+              "c0036"
+            ]
+          },
+          {
+            "texto": "UPN propone una norma sobre las enfermedades raras.",
+            "citas": [
+              "c0036"
+            ]
+          },
+          {
+            "texto": "UPN propone incluir la esclerosis lateral amiotrófica en esa norma.",
+            "citas": [
+              "c0036"
+            ]
+          },
+          {
+            "texto": "UPN quiere que la norma atienda las necesidades de estas personas.",
+            "citas": [
+              "c0036"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "UPN propone crear un Plan Nacional de Prevención del Suicidio.",
+            "citas": [
+              "c0036"
+            ],
+            "id": "sanidad-1",
+            "subtema": "salud mental"
+          },
+          {
+            "texto": "UPN propone aprobar una norma sobre las enfermedades raras. UPN propone incluir la esclerosis lateral amiotrófica en esa norma. UPN quiere que la norma atienda las necesidades de estas personas.",
+            "citas": [
+              "c0036"
+            ],
+            "id": "sanidad-2",
+            "subtema": "sanidad pública y privada"
+          },
+          {
+            "texto": "UPN quiere cambiar las normas actuales para defender la vida. UPN propone medidas de apoyo a la familia. UPN propone cuidados para aliviar el dolor y el sufrimiento.",
+            "citas": [
+              "c0032"
+            ],
+            "id": "sanidad-3",
+            "subtema": "sanidad pública y privada"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 67.6,
+          "max_palabras_frase": 11,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "educacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "El programa defiende la elección de centro por las familias, plantea eliminar limitaciones a los conciertos educativos y propone derogar la LOMLOE.",
+          "citas": [
+            "c0029"
+          ]
+        },
+        {
+          "texto": "También propone potenciar la FP dual, la atención a la diversidad y las lenguas extranjeras, y asumir la competencia en becas.",
+          "citas": [
+            "c0030",
+            "c0026"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Garantizar la elección de centros públicos o concertados por los padres y eliminar la limitación de concertar con centros en función de su modelo educativo.",
+          "citas": [
+            "c0028"
+          ],
+          "id": "educacion-1",
+          "subtema": "educación concertada"
+        },
+        {
+          "texto": "Derogar la LOMLOE.",
+          "citas": [
+            "c0027"
+          ],
+          "id": "educacion-2",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Potenciar la Formación Profesional dual.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "educacion-3",
+          "subtema": "formación profesional"
+        },
+        {
+          "texto": "Potenciar la atención a la diversidad y cubrir las necesidades del alumnado de educación especial y específica.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "educacion-4",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Potenciar el aprendizaje de lenguas extranjeras, especialmente el inglés.",
+          "citas": [
+            "c0030"
+          ],
+          "id": "educacion-5",
+          "subtema": "lenguas en la enseñanza"
+        },
+        {
+          "texto": "Promover modificaciones legislativas para impedir libros de texto que atenten contra los principios y derechos constitucionales o contra la realidad institucional de Navarra.",
+          "citas": [
+            "c0031"
+          ],
+          "id": "educacion-6",
+          "subtema": "modelo educativo"
+        },
+        {
+          "texto": "Asumir la competencia en materia de becas.",
+          "citas": [
+            "c0026"
+          ],
+          "id": "educacion-7",
+          "subtema": "universidad y becas"
+        },
+        {
+          "texto": "Defender la no imposición del euskera.",
+          "citas": [
+            "c0006"
+          ],
+          "id": "educacion-8",
+          "subtema": "lenguas en la enseñanza"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que las familias puedan elegir el centro donde estudian sus hijos.",
+            "citas": [
+              "c0029"
+            ]
+          },
+          {
+            "texto": "El partido quiere quitar límites a los acuerdos para dar fondos públicos a centros privados.",
+            "citas": [
+              "c0029"
+            ]
+          },
+          {
+            "texto": "El partido quiere quitar una ley de educación.",
+            "citas": [
+              "c0029"
+            ]
+          },
+          {
+            "texto": "Su nombre es Ley Orgánica de Modificación de la Ley Orgánica de Educación.",
+            "citas": [
+              "c0029"
+            ]
+          },
+          {
+            "texto": "El partido quiere impulsar la formación para trabajar que combina clases y trabajo en empresas.",
+            "citas": [
+              "c0030",
+              "c0026"
+            ]
+          },
+          {
+            "texto": "El partido quiere dar más apoyo a cada alumno según lo que necesite.",
+            "citas": [
+              "c0030",
+              "c0026"
+            ]
+          },
+          {
+            "texto": "El partido quiere que los alumnos aprendan más idiomas de otros países.",
+            "citas": [
+              "c0030",
+              "c0026"
+            ]
+          },
+          {
+            "texto": "El partido quiere encargarse de las becas.",
+            "citas": [
+              "c0030",
+              "c0026"
+            ]
+          },
+          {
+            "texto": "Las becas son ayudas para estudiar.",
+            "citas": [
+              "c0030",
+              "c0026"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que los padres puedan elegir centros públicos o concertados. Los centros concertados son privados y reciben fondos públicos. El partido quiere quitar límites a esos acuerdos según la forma de enseñar del centro.",
+            "citas": [
+              "c0028"
+            ],
+            "id": "educacion-1",
+            "subtema": "educación concertada"
+          },
+          {
+            "texto": "El partido quiere quitar una ley de educación. Su nombre es Ley Orgánica de Modificación de la Ley Orgánica de Educación.",
+            "citas": [
+              "c0027"
+            ],
+            "id": "educacion-2",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "El partido quiere impulsar la formación para trabajar que combina clases y trabajo en empresas.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "educacion-3",
+            "subtema": "formación profesional"
+          },
+          {
+            "texto": "El partido quiere dar más apoyo a cada alumno según lo que necesite. Quiere cubrir las necesidades de los alumnos que precisan educación especial. También quiere dar los apoyos concretos que otros alumnos necesiten.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "educacion-4",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "El partido quiere que los alumnos aprendan más idiomas de otros países. Quiere dar más apoyo al inglés.",
+            "citas": [
+              "c0030"
+            ],
+            "id": "educacion-5",
+            "subtema": "lenguas en la enseñanza"
+          },
+          {
+            "texto": "El partido quiere cambiar las leyes sobre los libros de texto. Quiere impedir libros que vayan contra los principios y derechos de la Constitución. También quiere impedir libros que vayan contra la organización de las instituciones de Navarra.",
+            "citas": [
+              "c0031"
+            ],
+            "id": "educacion-6",
+            "subtema": "modelo educativo"
+          },
+          {
+            "texto": "El partido quiere encargarse de las becas. Las becas son ayudas para estudiar.",
+            "citas": [
+              "c0026"
+            ],
+            "id": "educacion-7",
+            "subtema": "universidad y becas"
+          },
+          {
+            "texto": "El partido quiere que nadie imponga el euskera.",
+            "citas": [
+              "c0006"
+            ],
+            "id": "educacion-8",
+            "subtema": "lenguas en la enseñanza"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 69.3,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "inmigracion": {
+      "menciona": false,
+      "resumen": [],
+      "propuestas": [],
+      "red_seguridad": {
+        "ejecutada": true,
+        "fragmentos_revisados": [],
+        "reanalizado": false
+      }
+    },
+    "medio-ambiente-energia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "El programa propone apoyar las energías renovables, construir la segunda fase del Canal de Navarra y desarrollar actuaciones en vías verdes y cauces de ríos.",
+          "citas": [
+            "c0046",
+            "c0020",
+            "c0050"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Construir la segunda fase del Canal de Navarra y ampliar de 30 a 50 años el plazo de pago del canon de los agricultores.",
+          "citas": [
+            "c0021"
+          ],
+          "id": "medio-ambiente-energia-1",
+          "subtema": "agua y sequía"
+        },
+        {
+          "texto": "Apoyar las energías renovables y solucionar la situación de las 9.000 familias navarras que invirtieron en ellas y a las que se cambió la normativa.",
+          "citas": [
+            "c0046"
+          ],
+          "id": "medio-ambiente-energia-2",
+          "subtema": "energías renovables"
+        },
+        {
+          "texto": "Desarrollar vías verdes a lo largo de Navarra.",
+          "citas": [
+            "c0049"
+          ],
+          "id": "medio-ambiente-energia-3",
+          "subtema": "biodiversidad"
+        },
+        {
+          "texto": "Construir el corredor sostenible peatonal y ciclista del río Arga.",
+          "citas": [
+            "c0047"
+          ],
+          "id": "medio-ambiente-energia-4",
+          "subtema": "biodiversidad"
+        },
+        {
+          "texto": "Limpiar y adecuar los cauces de los ríos.",
+          "citas": [
+            "c0053"
+          ],
+          "id": "medio-ambiente-energia-5",
+          "subtema": "agua y sequía"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere apoyar las energías renovables.",
+            "citas": [
+              "c0046",
+              "c0020",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "El partido quiere construir la fase 2 del Canal de Navarra.",
+            "citas": [
+              "c0046",
+              "c0020",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "El partido quiere crear y mejorar vías verdes, caminos para caminar o ir en bicicleta.",
+            "citas": [
+              "c0046",
+              "c0020",
+              "c0050"
+            ]
+          },
+          {
+            "texto": "El partido quiere hacer mejoras en los espacios por donde corren los ríos.",
+            "citas": [
+              "c0046",
+              "c0020",
+              "c0050"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere construir la fase 2 del Canal de Navarra. También quiere ampliar el plazo de pago de la cuota de los agricultores. El plazo pasaría de 30 a 50 años.",
+            "citas": [
+              "c0021"
+            ],
+            "id": "medio-ambiente-energia-1",
+            "subtema": "agua y sequía"
+          },
+          {
+            "texto": "El partido quiere apoyar las energías renovables. También quiere solucionar los problemas de 9.000 familias navarras que invirtieron en estas energías. Las normas que afectaban a estas familias cambiaron.",
+            "citas": [
+              "c0046"
+            ],
+            "id": "medio-ambiente-energia-2",
+            "subtema": "energías renovables"
+          },
+          {
+            "texto": "El partido quiere crear vías verdes por toda Navarra. Son caminos para caminar o ir en bicicleta.",
+            "citas": [
+              "c0049"
+            ],
+            "id": "medio-ambiente-energia-3",
+            "subtema": "biodiversidad"
+          },
+          {
+            "texto": "El partido quiere construir un camino sostenible junto al río Arga. El camino será para caminar y usar la bicicleta.",
+            "citas": [
+              "c0047"
+            ],
+            "id": "medio-ambiente-energia-4",
+            "subtema": "biodiversidad"
+          },
+          {
+            "texto": "El partido quiere limpiar y mejorar los espacios por donde corren los ríos.",
+            "citas": [
+              "c0053"
+            ],
+            "id": "medio-ambiente-energia-5",
+            "subtema": "agua y sequía"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.0,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "mundo-rural": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende las actividades agrícolas y ganaderas, la caza y la pesca, y plantea acciones para hacer atractiva la vida rural y combatir la despoblación.",
+          "citas": [
+            "c0048",
+            "c0051"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Construir la segunda fase del Canal de Navarra y ampliar de 30 a 50 años el plazo de pago del canon de los agricultores.",
+          "citas": [
+            "c0021"
+          ],
+          "id": "mundo-rural-1",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Incrementar las coberturas de los seguros agrarios.",
+          "citas": [
+            "c0052"
+          ],
+          "id": "mundo-rural-2",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Firmar un convenio con el Ministerio de Economía para mejorar el suministro eléctrico y el acceso a servicios financieros en pequeñas poblaciones y para personas vulnerables.",
+          "citas": [
+            "c0041"
+          ],
+          "id": "mundo-rural-3",
+          "subtema": "servicios en el medio rural"
+        },
+        {
+          "texto": "Implementar acciones para hacer atractiva la vida en las zonas rurales y combatir la despoblación.",
+          "citas": [
+            "c0051"
+          ],
+          "id": "mundo-rural-4",
+          "subtema": "despoblación"
+        },
+        {
+          "texto": "Defender las actividades agrícolas y ganaderas.",
+          "citas": [
+            "c0048"
+          ],
+          "id": "mundo-rural-5",
+          "subtema": "agricultura y ganadería"
+        },
+        {
+          "texto": "Defender la caza.",
+          "citas": [
+            "c0048"
+          ],
+          "id": "mundo-rural-6",
+          "subtema": "caza"
+        },
+        {
+          "texto": "Defender la pesca.",
+          "citas": [
+            "c0048"
+          ],
+          "id": "mundo-rural-7",
+          "subtema": "pesca"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido defiende la agricultura y la ganadería.",
+            "citas": [
+              "c0048",
+              "c0051"
+            ]
+          },
+          {
+            "texto": "El partido defiende la caza y la pesca.",
+            "citas": [
+              "c0048",
+              "c0051"
+            ]
+          },
+          {
+            "texto": "El partido quiere hacer más atractiva la vida en los pueblos.",
+            "citas": [
+              "c0048",
+              "c0051"
+            ]
+          },
+          {
+            "texto": "El partido quiere evitar que los pueblos pierdan habitantes.",
+            "citas": [
+              "c0048",
+              "c0051"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere construir la fase 2 del Canal de Navarra. También quiere ampliar el plazo de pago de la cuota de los agricultores. El plazo pasaría de 30 a 50 años.",
+            "citas": [
+              "c0021"
+            ],
+            "id": "mundo-rural-1",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "El partido quiere que los seguros del campo ofrezcan más protección.",
+            "citas": [
+              "c0052"
+            ],
+            "id": "mundo-rural-2",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "El partido quiere firmar un acuerdo con el Ministerio de Economía. Con este acuerdo, el partido quiere mejorar el suministro de electricidad. También quiere mejorar el acceso a servicios para gestionar el dinero. Estas mejoras serían para pueblos pequeños y personas que necesitan más apoyo.",
+            "citas": [
+              "c0041"
+            ],
+            "id": "mundo-rural-3",
+            "subtema": "servicios en el medio rural"
+          },
+          {
+            "texto": "El partido quiere tomar medidas para hacer más atractiva la vida en los pueblos. También quiere evitar que los pueblos pierdan habitantes.",
+            "citas": [
+              "c0051"
+            ],
+            "id": "mundo-rural-4",
+            "subtema": "despoblación"
+          },
+          {
+            "texto": "El partido quiere defender la agricultura y la ganadería.",
+            "citas": [
+              "c0048"
+            ],
+            "id": "mundo-rural-5",
+            "subtema": "agricultura y ganadería"
+          },
+          {
+            "texto": "El partido quiere defender la caza.",
+            "citas": [
+              "c0048"
+            ],
+            "id": "mundo-rural-6",
+            "subtema": "caza"
+          },
+          {
+            "texto": "El partido quiere defender la pesca.",
+            "citas": [
+              "c0048"
+            ],
+            "id": "mundo-rural-7",
+            "subtema": "pesca"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 69.1,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "transporte": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone desarrollar la alta velocidad ferroviaria, desdoblar la N-121-A y prolongar la gratuidad de la AP-15.",
+          "citas": [
+            "c0025",
+            "c0018",
+            "c0024"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Finalizar la Autovía de Navarra desde Tudela hasta Medinaceli.",
+          "citas": [
+            "c0023"
+          ],
+          "id": "transporte-1",
+          "subtema": "carreteras"
+        },
+        {
+          "texto": "Desarrollar el Tren de Alta Velocidad hasta Pamplona y su conexión con la «Y vasca», con parada en Tudela y nuevas estaciones en Pamplona y Tudela.",
+          "citas": [
+            "c0025"
+          ],
+          "id": "transporte-2",
+          "subtema": "tren y cercanías"
+        },
+        {
+          "texto": "Exigir al Gobierno de España los trámites para la conexión con el País Vasco a través de Ezkio y con la provincia de Zaragoza.",
+          "citas": [
+            "c0022"
+          ],
+          "id": "transporte-3",
+          "subtema": "corredores ferroviarios"
+        },
+        {
+          "texto": "Analizar la posibilidad de sacar las vías férreas y la estación que atraviesan el casco urbano de Tudela.",
+          "citas": [
+            "c0019"
+          ],
+          "id": "transporte-4",
+          "subtema": "tren y cercanías"
+        },
+        {
+          "texto": "Realizar actuaciones para desdoblar la carretera nacional N-121-A.",
+          "citas": [
+            "c0018"
+          ],
+          "id": "transporte-5",
+          "subtema": "carreteras"
+        },
+        {
+          "texto": "Prolongar la gratuidad del peaje de la AP-15 Autopista de Navarra.",
+          "citas": [
+            "c0024"
+          ],
+          "id": "transporte-6",
+          "subtema": "carreteras"
+        },
+        {
+          "texto": "Mejorar las conexiones aéreas y ferroviarias de Navarra con puntos de interés económico o empresarial.",
+          "citas": [
+            "c0043"
+          ],
+          "id": "transporte-7",
+          "subtema": "puertos y aeropuertos"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "UPN propone desarrollar el transporte en trenes de alta velocidad.",
+            "citas": [
+              "c0025",
+              "c0018",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "UPN propone ampliar la N-121-A con vías separadas para cada sentido.",
+            "citas": [
+              "c0025",
+              "c0018",
+              "c0024"
+            ]
+          },
+          {
+            "texto": "UPN propone mantener gratis el peaje de la AP-15 durante más tiempo.",
+            "citas": [
+              "c0025",
+              "c0018",
+              "c0024"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "UPN propone terminar la Autovía de Navarra desde Tudela hasta Medinaceli.",
+            "citas": [
+              "c0023"
+            ],
+            "id": "transporte-1",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "UPN propone desarrollar el Tren de Alta Velocidad hasta Pamplona. UPN propone conectar este tren con la «Y vasca». UPN propone que el tren pare en Tudela. UPN propone crear nuevas estaciones en Pamplona y Tudela.",
+            "citas": [
+              "c0025"
+            ],
+            "id": "transporte-2",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "UPN exige al Gobierno de España tramitar la conexión con el País Vasco. UPN exige que esta conexión pase por Ezkio. UPN exige al Gobierno de España tramitar la conexión con la provincia de Zaragoza.",
+            "citas": [
+              "c0022"
+            ],
+            "id": "transporte-3",
+            "subtema": "corredores ferroviarios"
+          },
+          {
+            "texto": "UPN propone estudiar sacar las vías del tren del casco urbano de Tudela. UPN propone estudiar también sacar la estación del casco urbano de Tudela.",
+            "citas": [
+              "c0019"
+            ],
+            "id": "transporte-4",
+            "subtema": "tren y cercanías"
+          },
+          {
+            "texto": "UPN propone ampliar la carretera nacional N-121-A con vías separadas para cada sentido.",
+            "citas": [
+              "c0018"
+            ],
+            "id": "transporte-5",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "UPN propone mantener el peaje gratuito de la AP-15 Autopista de Navarra durante más tiempo.",
+            "citas": [
+              "c0024"
+            ],
+            "id": "transporte-6",
+            "subtema": "carreteras"
+          },
+          {
+            "texto": "UPN propone mejorar las conexiones de Navarra por avión y tren. UPN propone mejorar estas conexiones con lugares de interés económico o empresarial.",
+            "citas": [
+              "c0043"
+            ],
+            "id": "transporte-7",
+            "subtema": "puertos y aeropuertos"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 66.9,
+          "max_palabras_frase": 16,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "igualdad": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone adaptar la normativa para defender la vida con políticas en favor de la familia y los cuidados paliativos.",
+          "citas": [
+            "c0032"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Adaptar la normativa vigente para defender la vida con políticas en favor de la familia y los cuidados paliativos.",
+          "citas": [
+            "c0032"
+          ],
+          "id": "igualdad-1",
+          "subtema": "aborto y eutanasia"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "UPN propone cambiar las normas para defender la vida.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "UPN propone apoyar a la familia.",
+            "citas": [
+              "c0032"
+            ]
+          },
+          {
+            "texto": "UPN propone apoyar los cuidados que alivian el dolor y el malestar.",
+            "citas": [
+              "c0032"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "UPN propone cambiar las normas para defender la vida. UPN propone apoyar a la familia. UPN propone apoyar los cuidados que alivian el dolor y el malestar.",
+            "citas": [
+              "c0032"
+            ],
+            "id": "igualdad-1",
+            "subtema": "aborto y eutanasia"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 77.8,
+          "max_palabras_frase": 12,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "familia-conciliacion": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone adaptar la normativa para defender la vida mediante políticas en favor de la familia y los cuidados paliativos, y cumplir la financiación de la Ley de Dependencia.",
+          "citas": [
+            "c0032",
+            "c0034"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Adaptar la normativa vigente para defender la vida con políticas en favor de la familia y los cuidados paliativos.",
+          "citas": [
+            "c0032"
+          ],
+          "id": "familia-conciliacion-1",
+          "subtema": "cuidados"
+        },
+        {
+          "texto": "Cumplir la financiación de la Ley de Dependencia.",
+          "citas": [
+            "c0034"
+          ],
+          "id": "familia-conciliacion-2",
+          "subtema": "cuidados"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere adaptar las normas para defender la vida.",
+            "citas": [
+              "c0032",
+              "c0034"
+            ]
+          },
+          {
+            "texto": "El partido propone medidas de apoyo a las familias y cuidados para aliviar el dolor.",
+            "citas": [
+              "c0032",
+              "c0034"
+            ]
+          },
+          {
+            "texto": "El partido quiere cumplir con la financiación de la Ley de Dependencia.",
+            "citas": [
+              "c0032",
+              "c0034"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere adaptar las normas para defender la vida. El partido propone medidas de apoyo a las familias y cuidados para aliviar el dolor.",
+            "citas": [
+              "c0032"
+            ],
+            "id": "familia-conciliacion-1",
+            "subtema": "cuidados"
+          },
+          {
+            "texto": "El partido quiere cumplir con la financiación de la Ley de Dependencia.",
+            "citas": [
+              "c0034"
+            ],
+            "id": "familia-conciliacion-2",
+            "subtema": "cuidados"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.6,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "juventud": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone un Plan Nacional de Empleo Juvenil.",
+          "citas": [
+            "c0039"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Establecer un Plan Nacional de Empleo Juvenil.",
+          "citas": [
+            "c0039"
+          ],
+          "id": "juventud-1",
+          "subtema": "empleo joven"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido propone un plan nacional de empleo para jóvenes.",
+            "citas": [
+              "c0039"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere crear un plan nacional de empleo para jóvenes.",
+            "citas": [
+              "c0039"
+            ],
+            "id": "juventud-1",
+            "subtema": "empleo joven"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 68.8,
+          "max_palabras_frase": 11,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "ciencia-digital": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone colaborar en la financiación de centros de investigación en Navarra y facilitar el retorno y la contratación de investigadores.",
+          "citas": [
+            "c0057"
+          ]
+        },
+        {
+          "texto": "Plantea asumir competencias en investigación y desarrollo.",
+          "citas": [
+            "c0056"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Potenciar y colaborar en los proyectos previstos del Centro Nacional de Energías Renovables y del Centro Técnico Nacional de Conservas Vegetales.",
+          "citas": [
+            "c0058"
+          ],
+          "id": "ciencia-digital-1",
+          "subtema": "I+D+i"
+        },
+        {
+          "texto": "Colaborar en la financiación de todos los centros de investigación médica y científica implantados en Navarra y facilitar el retorno y el incremento de la contratación de investigadores.",
+          "citas": [
+            "c0057"
+          ],
+          "id": "ciencia-digital-2",
+          "subtema": "I+D+i"
+        },
+        {
+          "texto": "Asumir competencias en materia de investigación y desarrollo.",
+          "citas": [
+            "c0056"
+          ],
+          "id": "ciencia-digital-3",
+          "subtema": "I+D+i"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere ayudar a pagar los centros de ciencia de Navarra.",
+            "citas": [
+              "c0057"
+            ]
+          },
+          {
+            "texto": "El partido quiere ayudar a que vuelvan las personas que investigan.",
+            "citas": [
+              "c0057"
+            ]
+          },
+          {
+            "texto": "El partido quiere facilitar que los centros contraten a personas que investigan.",
+            "citas": [
+              "c0057"
+            ]
+          },
+          {
+            "texto": "El partido quiere tener poder para decidir sobre la ciencia y los nuevos avances.",
+            "citas": [
+              "c0056"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere apoyar los proyectos previstos de 2 centros y colaborar en ellos. Uno es el Centro Nacional de Energías Renovables. El otro es el Centro Técnico Nacional de Conservas Vegetales.",
+            "citas": [
+              "c0058"
+            ],
+            "id": "ciencia-digital-1",
+            "subtema": "I+D+i"
+          },
+          {
+            "texto": "El partido quiere ayudar a pagar todos los centros de Navarra que investigan. Son centros que estudian la salud y otros temas de ciencia. El partido quiere ayudar a que vuelvan las personas que investigan. También quiere facilitar que los centros contraten a más personas que investigan.",
+            "citas": [
+              "c0057"
+            ],
+            "id": "ciencia-digital-2",
+            "subtema": "I+D+i"
+          },
+          {
+            "texto": "El partido quiere tener poder para decidir sobre la ciencia y los nuevos avances.",
+            "citas": [
+              "c0056"
+            ],
+            "id": "ciencia-digital-3",
+            "subtema": "I+D+i"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 71.3,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "seguridad-justicia": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Propone modificaciones legales para acabar con los homenajes y enaltecimientos de los terroristas de ETA y de la propia banda.",
+          "citas": [
+            "c0014"
+          ]
+        },
+        {
+          "texto": "Defiende mantener la presencia de la Agrupación de Tráfico de la Guardia Civil en las carreteras navarras.",
+          "citas": [
+            "c0015"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Realizar modificaciones legales para acabar con los homenajes y enaltecimientos de los terroristas de ETA y de la propia banda terrorista.",
+          "citas": [
+            "c0014"
+          ],
+          "id": "seguridad-justicia-1",
+          "subtema": "terrorismo"
+        },
+        {
+          "texto": "Equiparar las indemnizaciones entre víctimas con y sin sentencia judicial.",
+          "citas": [
+            "c0012"
+          ],
+          "id": "seguridad-justicia-2",
+          "subtema": "terrorismo"
+        },
+        {
+          "texto": "Revisar los beneficios penitenciarios sin arrepentimiento y colaboración en el esclarecimiento de atentados sin resolver.",
+          "citas": [
+            "c0013"
+          ],
+          "id": "seguridad-justicia-3",
+          "subtema": "prisiones"
+        },
+        {
+          "texto": "Impedir el acceso a cargos públicos de terroristas condenados por delitos de sangre.",
+          "citas": [
+            "c0016"
+          ],
+          "id": "seguridad-justicia-4",
+          "subtema": "terrorismo"
+        },
+        {
+          "texto": "Defender la presencia de la Agrupación de Tráfico de la Guardia Civil en las carreteras navarras.",
+          "citas": [
+            "c0015"
+          ],
+          "id": "seguridad-justicia-5",
+          "subtema": "fuerzas y cuerpos de seguridad"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere cambiar las leyes.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "Quiere acabar con los homenajes a un grupo terrorista y a sus miembros.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "El grupo se llama Euskadi Ta Askatasuna.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "También quiere acabar con los actos que los alaban.",
+            "citas": [
+              "c0014"
+            ]
+          },
+          {
+            "texto": "El partido quiere mantener a los agentes de tráfico de la Guardia Civil.",
+            "citas": [
+              "c0015"
+            ]
+          },
+          {
+            "texto": "Quiere que sigan en las carreteras de Navarra.",
+            "citas": [
+              "c0015"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere cambiar las leyes. Quiere acabar con los homenajes a un grupo terrorista y a sus miembros. El grupo se llama Euskadi Ta Askatasuna. También quiere acabar con los actos que los alaban.",
+            "citas": [
+              "c0014"
+            ],
+            "id": "seguridad-justicia-1",
+            "subtema": "terrorismo"
+          },
+          {
+            "texto": "El partido quiere igualar el dinero que reciben las víctimas como pago por el daño. Quiere hacerlo tanto si tienen una sentencia de un juez como si no.",
+            "citas": [
+              "c0012"
+            ],
+            "id": "seguridad-justicia-2",
+            "subtema": "terrorismo"
+          },
+          {
+            "texto": "El partido quiere revisar las ventajas que reciben algunas personas en la cárcel. Son personas que no lamentan el daño que han causado. Tampoco ayudan a aclarar atentados que siguen sin resolver.",
+            "citas": [
+              "c0013"
+            ],
+            "id": "seguridad-justicia-3",
+            "subtema": "prisiones"
+          },
+          {
+            "texto": "El partido quiere impedir que ciertos terroristas ocupen cargos públicos. Son los condenados por delitos que causan muertes o heridas.",
+            "citas": [
+              "c0016"
+            ],
+            "id": "seguridad-justicia-4",
+            "subtema": "terrorismo"
+          },
+          {
+            "texto": "El partido quiere mantener a los agentes de tráfico de la Guardia Civil. Quiere que sigan en las carreteras de Navarra.",
+            "citas": [
+              "c0015"
+            ],
+            "id": "seguridad-justicia-5",
+            "subtema": "fuerzas y cuerpos de seguridad"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 77.0,
+          "max_palabras_frase": 15,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "modelo-territorial": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende la continuidad de Navarra como comunidad foral diferenciada dentro de España y Europa y la protección de sus competencias.",
+          "citas": [
+            "c0001",
+            "c0002"
+          ]
+        },
+        {
+          "texto": "Plantea reconocer en los Presupuestos Generales del Estado la contribución de Navarra mediante el Convenio Económico.",
+          "citas": [
+            "c0005"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Defender la continuidad de Navarra como comunidad foral diferenciada dentro de España y Europa.",
+          "citas": [
+            "c0001"
+          ],
+          "id": "modelo-territorial-1",
+          "subtema": "organización territorial del Estado"
+        },
+        {
+          "texto": "Suprimir la Disposición Transitoria Cuarta de la Constitución Española ante una modificación de la Carta Magna.",
+          "citas": [
+            "c0004"
+          ],
+          "id": "modelo-territorial-2",
+          "subtema": "organización territorial del Estado"
+        },
+        {
+          "texto": "Impedir que el independentismo vasco y partidos sin representantes de Navarra en Madrid negocien en nombre de la Comunidad Foral competencias y materias que dependen de ella.",
+          "citas": [
+            "c0003"
+          ],
+          "id": "modelo-territorial-3",
+          "subtema": "competencias"
+        },
+        {
+          "texto": "Reflejar en los Presupuestos Generales del Estado la contribución de Navarra a las cargas generales mediante el Convenio Económico, en función de su renta y no de su población.",
+          "citas": [
+            "c0005"
+          ],
+          "id": "modelo-territorial-4",
+          "subtema": "financiación autonómica"
+        },
+        {
+          "texto": "Colaborar en la asunción por Navarra de las competencias de I+D+I y becas.",
+          "citas": [
+            "c0007"
+          ],
+          "id": "modelo-territorial-5",
+          "subtema": "competencias"
+        },
+        {
+          "texto": "Defender la no imposición del euskera.",
+          "citas": [
+            "c0006"
+          ],
+          "id": "modelo-territorial-6",
+          "subtema": "lenguas cooficiales"
+        },
+        {
+          "texto": "Derogar la Ley de Vivienda y respetar las competencias de Navarra en esta materia.",
+          "citas": [
+            "c0054"
+          ],
+          "id": "modelo-territorial-7",
+          "subtema": "competencias"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que Navarra siga en España y Europa.",
+            "citas": [
+              "c0001",
+              "c0002"
+            ]
+          },
+          {
+            "texto": "Quiere que Navarra siga siendo una comunidad con normas propias.",
+            "citas": [
+              "c0001",
+              "c0002"
+            ]
+          },
+          {
+            "texto": "Quiere proteger las funciones que le corresponden a Navarra.",
+            "citas": [
+              "c0001",
+              "c0002"
+            ]
+          },
+          {
+            "texto": "El partido quiere que las cuentas del Estado recojan lo que paga Navarra.",
+            "citas": [
+              "c0005"
+            ]
+          },
+          {
+            "texto": "Navarra paga según un acuerdo con el Estado.",
+            "citas": [
+              "c0005"
+            ]
+          },
+          {
+            "texto": "Este acuerdo se llama Convenio Económico.",
+            "citas": [
+              "c0005"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere que Navarra siga en España y Europa. Quiere que Navarra siga siendo una comunidad con normas propias.",
+            "citas": [
+              "c0001"
+            ],
+            "id": "modelo-territorial-1",
+            "subtema": "organización territorial del Estado"
+          },
+          {
+            "texto": "El partido quiere quitar una norma de la Constitución española. Es la disposición transitoria 4. Quiere quitarla si se cambia la Constitución.",
+            "citas": [
+              "c0004"
+            ],
+            "id": "modelo-territorial-2",
+            "subtema": "organización territorial del Estado"
+          },
+          {
+            "texto": "El partido quiere impedir que ciertos grupos negocien en nombre de Navarra. Se refiere a los grupos que quieren la independencia del País Vasco. También a los partidos sin representantes de Navarra en Madrid. Esto afecta a las funciones y los asuntos que dependen de Navarra.",
+            "citas": [
+              "c0003"
+            ],
+            "id": "modelo-territorial-3",
+            "subtema": "competencias"
+          },
+          {
+            "texto": "El partido quiere que las cuentas del Estado recojan lo que paga Navarra. Navarra paga una parte de los gastos del Estado. El pago depende de su renta, es decir, de sus ingresos. No depende de cuántas personas viven en Navarra. Navarra paga según un acuerdo con el Estado. Este acuerdo se llama Convenio Económico.",
+            "citas": [
+              "c0005"
+            ],
+            "id": "modelo-territorial-4",
+            "subtema": "financiación autonómica"
+          },
+          {
+            "texto": "El partido quiere ayudar a Navarra a asumir nuevas funciones. Estas funciones tratan sobre la investigación, la creación de tecnología y las nuevas ideas. También incluyen las becas.",
+            "citas": [
+              "c0007"
+            ],
+            "id": "modelo-territorial-5",
+            "subtema": "competencias"
+          },
+          {
+            "texto": "El partido no quiere que se imponga el euskera. El euskera es la lengua vasca.",
+            "citas": [
+              "c0006"
+            ],
+            "id": "modelo-territorial-6",
+            "subtema": "lenguas cooficiales"
+          },
+          {
+            "texto": "El partido quiere quitar la Ley de Vivienda. Quiere respetar las funciones de Navarra sobre la vivienda.",
+            "citas": [
+              "c0054"
+            ],
+            "id": "modelo-territorial-7",
+            "subtema": "competencias"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 72.3,
+          "max_palabras_frase": 14,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "regeneracion-democratica": {
+      "menciona": true,
+      "resumen": [
+        {
+          "texto": "Defiende la ética pública y la ejemplaridad política, y propone derogar la Ley de Memoria Democrática.",
+          "citas": [
+            "c0009",
+            "c0017"
+          ]
+        }
+      ],
+      "propuestas": [
+        {
+          "texto": "Denunciar los comportamientos contrarios a la ética pública y no amparar conductas que traicionen el voto ciudadano o incumplan promesas electorales.",
+          "citas": [
+            "c0010"
+          ],
+          "id": "regeneracion-democratica-1",
+          "subtema": "corrupción y transparencia"
+        },
+        {
+          "texto": "Derogar la Ley de Memoria Democrática.",
+          "citas": [
+            "c0017"
+          ],
+          "id": "regeneracion-democratica-2",
+          "subtema": "memoria democrática"
+        }
+      ],
+      "lectura_facil": {
+        "resumen": [
+          {
+            "texto": "El partido quiere que los cargos públicos actúen bien.",
+            "citas": [
+              "c0009",
+              "c0017"
+            ]
+          },
+          {
+            "texto": "El partido quiere que los políticos den buen ejemplo.",
+            "citas": [
+              "c0009",
+              "c0017"
+            ]
+          },
+          {
+            "texto": "El partido quiere quitar la Ley de Memoria Democrática.",
+            "citas": [
+              "c0009",
+              "c0017"
+            ]
+          }
+        ],
+        "propuestas": [
+          {
+            "texto": "El partido quiere denunciar las malas conductas de los cargos públicos. El partido rechaza los actos que traicionen el voto de la gente. El partido rechaza los actos que incumplan las promesas de campaña.",
+            "citas": [
+              "c0010"
+            ],
+            "id": "regeneracion-democratica-1",
+            "subtema": "corrupción y transparencia"
+          },
+          {
+            "texto": "El partido quiere quitar la Ley de Memoria Democrática.",
+            "citas": [
+              "c0017"
+            ],
+            "id": "regeneracion-democratica-2",
+            "subtema": "memoria democrática"
+          }
+        ],
+        "legibilidad": {
+          "inflesz": 74.9,
+          "max_palabras_frase": 12,
+          "ok": true,
+          "avisos": []
+        },
+        "fiel": true,
+        "observaciones": []
+      }
+    },
+    "exterior-defensa": {
+      "menciona": false,
+      "resumen": [],
+      "propuestas": [],
+      "red_seguridad": {
+        "ejecutada": true,
+        "fragmentos_revisados": [
+          "upn-23-p005-01",
+          "upn-23-p006-03",
+          "upn-23-p002-01",
+          "upn-23-p005-02",
+          "upn-23-p002-02",
+          "upn-23-p003-01"
+        ],
+        "reanalizado": false
+      }
+    }
+  },
+  "citas": {
+    "c0001": {
+      "chunk": "upn-23-p002-01",
+      "pagina": 2,
+      "literal": "Defender a Navarra como una comunidad clave en nuestro país y su continuidad como Comunidad Foral, diferenciada, dentro de España y Europa.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.4159,
+            0.8666,
+            0.4327
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.4326,
+            0.5921,
+            0.4493
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0002": {
+      "chunk": "upn-23-p002-01",
+      "pagina": 2,
+      "literal": "Defensa de las competencias de Navarra ante ataques y leyes estatales que pueden invadir su capacidad competencial.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.3323,
+            0.2829,
+            0.8666,
+            0.2997
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.2995,
+            0.5661,
+            0.3163
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0003": {
+      "chunk": "upn-23-p002-01",
+      "pagina": 2,
+      "literal": "Impedir que el independentismo vasco y partidos que no tienen representantes de Navarra en Madrid negocien en nombre de la Comunidad Foral competencias y materias que dependen solo de ella.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.2496,
+            0.8667,
+            0.2664
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.2663,
+            0.8667,
+            0.283
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.2829,
+            0.3275,
+            0.2997
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0004": {
+      "chunk": "upn-23-p002-01",
+      "pagina": 2,
+      "literal": "Supresión de la Disposición Transitoria Cuarta de la Constitución Española ante una modificación de la Carta Magna tras 45 años de vigencia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.4658,
+            0.8667,
+            0.4826
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.4824,
+            0.5438,
+            0.4992
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0005": {
+      "chunk": "upn-23-p002-01",
+      "pagina": 2,
+      "literal": "la solidaridad del Convenio Económico mediante el cual Navarra aporta a las cargas generales del Estado en función de su renta y no de su población. Necesario reflejo en los Presupuestos Generales del Estado.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.358,
+            0.3494,
+            0.8666,
+            0.3662
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.366,
+            0.8667,
+            0.3828
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.3827,
+            0.5803,
+            0.3994
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0006": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Amparar el derecho y libertad de los padres a elegir la educación que quieran para sus hijos y la no imposición del euskera.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1538,
+            0.8649,
+            0.8667,
+            0.8817
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1538,
+            0.8815,
+            0.3932,
+            0.8983
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0007": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Colaborar en la asunción por Navarra de las competencias de I+D+ I y becas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.154,
+            0.7651,
+            0.7584,
+            0.7819
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0008": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Combatir la inflación con medidas efectivas que alivien el bolsillo de los ciudadanos. Deflactar la tarifa del IRPF.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1539,
+            0.7153,
+            0.8668,
+            0.732
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1539,
+            0.7319,
+            0.3108,
+            0.7486
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0009": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Denunciar todo comportamiento que suponga contravenir los principios básicos de la ética pública y la ejemplaridad en la acción política.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.5157,
+            0.8667,
+            0.5325
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.5323,
+            0.5598,
+            0.5491
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0010": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Denunciar todo comportamiento que suponga contravenir los principios básicos de la ética pública y la ejemplaridad en la acción política. De forma especial, no amparar conductas con las que se traiciona el voto de los ciudadanos o el incumplimiento de promesas electorales.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.5157,
+            0.8667,
+            0.5325
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.5323,
+            0.8666,
+            0.5491
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.549,
+            0.8667,
+            0.5657
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1501,
+            0.5656,
+            0.2074,
+            0.5823
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0011": {
+      "chunk": "upn-23-p002-02",
+      "pagina": 2,
+      "literal": "Reducir impuestos, generar empleo y defender a los trabajadores, autónomos, pequeña y mediana empresa y agricultores y ganaderos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 2,
+          "r": [
+            0.1509,
+            0.6654,
+            0.8663,
+            0.6821
+          ]
+        },
+        {
+          "pagina": 2,
+          "r": [
+            0.1509,
+            0.682,
+            0.5068,
+            0.6988
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0012": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "Equiparación de las indemnizaciones entre víctimas con y sin sentencia judicial,",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.3728,
+            0.747,
+            0.3896
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0013": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "Equiparación de las indemnizaciones entre víctimas con y sin sentencia judicial, revisión de beneficios penitenciarios sin arrepentimiento y colaboración en el esclarecimiento de atentados sin resolver y no acceso a cargos públicos de terroristas condenados por delitos de sangre.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.3728,
+            0.8667,
+            0.3896
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.3895,
+            0.8667,
+            0.4062
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.4061,
+            0.8503,
+            0.4229
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0014": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "Realización de las modificaciones legales pertinentes que permitan acabar con los homenajes y enaltecimientos de los terroristas de ETA y de la propia banda terrorista.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.3261,
+            0.8667,
+            0.3429
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.3427,
+            0.7117,
+            0.3595
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0015": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "Seguir defendiendo la presencia de la Agrupación de Tráfico de la Guardia Civil en las carreteras navarras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.4663,
+            0.8667,
+            0.4831
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.4829,
+            0.2491,
+            0.4997
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0016": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "no acceso a cargos públicos de terroristas condenados por delitos de sangre.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.2414,
+            0.4061,
+            0.8503,
+            0.4229
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0017": {
+      "chunk": "upn-23-p003-02",
+      "pagina": 3,
+      "literal": "sin resolver y no acceso a cargos públicos de terroristas condenados por delitos de sangre. Derogación de la Ley de Memoria Democrática.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.4061,
+            0.8503,
+            0.4229
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.4362,
+            0.5049,
+            0.453
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0018": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Actuaciones para el desdoblamiento de la carretera nacional N-121-A.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.8401,
+            0.6806,
+            0.8569
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0019": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Análisis de la posibilidad de sacar las vías férreas y estación que atraviesan el casco urbano de Tudela.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.7934,
+            0.8666,
+            0.8101
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.81,
+            0.215,
+            0.8268
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0020": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Construcción de la segunda fase del Canal de Navarra.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.6065,
+            0.5697,
+            0.6232
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0021": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Construcción de la segunda fase del Canal de Navarra. Exigiremos al Estado que el pago del canon de los agricultores pase de los 30 años actuales a 50 años.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.6065,
+            0.8667,
+            0.6232
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.6231,
+            0.6493,
+            0.6399
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0022": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Exigir al Gobierno de España llevar cabo, de manera urgente, los trámites necesarios para la conexión con el País Vasco a través de Ezkio y con la provincia de Zaragoza.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.7467,
+            0.8667,
+            0.7634
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.7633,
+            0.732,
+            0.78
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0023": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Finalización de la Autovía de Navarra desde Tudela hasta Medinaceli.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.6532,
+            0.6736,
+            0.67
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0024": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Prolongar la gratuidad del peaje de la AP-15 Autopista de Navarra.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.8702,
+            0.6502,
+            0.887
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0025": {
+      "chunk": "upn-23-p003-03",
+      "pagina": 3,
+      "literal": "Tren de Alta Velocidad hasta Pamplona y conexión con la denominada \"Y vasca\", con parada en Tudela y nuevas estaciones de ferrocarril (Pamplona y Tudela).",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.6999,
+            0.8666,
+            0.7167
+          ]
+        },
+        {
+          "pagina": 3,
+          "r": [
+            0.1333,
+            0.7166,
+            0.6478,
+            0.7333
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0026": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Asunción de la competencia en materia de becas.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.3746,
+            0.5232,
+            0.3914
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0027": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Eliminación de la limitación de concertar con centros educativos en función de su modelo educativo. Derogación de la LOMLOE.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.4506,
+            0.2012,
+            0.8666,
+            0.2179
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2178,
+            0.7179,
+            0.2346
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0028": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Garantizar la libertad de los padres para elegir la educación que quieren para sus hijos, ya sea en centros públicos como concertados. Eliminación de la limitación de concertar con centros educativos en función de su modelo educativo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.1846,
+            0.8667,
+            0.2013
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2012,
+            0.8666,
+            0.2179
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2178,
+            0.5033,
+            0.2346
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0029": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Garantizar la libertad de los padres para elegir la educación que quieren para sus hijos, ya sea en centros públicos como concertados. Eliminación de la limitación de concertar con centros educativos en función de su modelo educativo. Derogación de la LOMLOE.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.1846,
+            0.8667,
+            0.2013
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2012,
+            0.8666,
+            0.2179
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2178,
+            0.7179,
+            0.2346
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0030": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Potenciar la Formación Profesional dual, la atención a la diversidad, el aprendizaje de lenguas extranjeras (especialmente el inglés) y cubrir las necesidades de los alumnos de la educación especial y específica.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2479,
+            0.8667,
+            0.2647
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2645,
+            0.8667,
+            0.2813
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.2812,
+            0.301,
+            0.2979
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0031": {
+      "chunk": "upn-23-p004-01",
+      "pagina": 4,
+      "literal": "Promover modificaciones legislativas que impidan libros de texto que atentan contra los principios y derechos recogidos en la Constitución y los que van en contra de la realidad institucional de Navarra.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.3113,
+            0.8667,
+            0.328
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.3279,
+            0.8667,
+            0.3447
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.3445,
+            0.2239,
+            0.3613
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0032": {
+      "chunk": "upn-23-p004-02",
+      "pagina": 4,
+      "literal": "Adaptación de la normativa vigente para defender la vida con políticas en favor de la familia y los cuidados paliativos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.4681,
+            0.8666,
+            0.4848
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.4847,
+            0.3149,
+            0.5015
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0033": {
+      "chunk": "upn-23-p004-02",
+      "pagina": 4,
+      "literal": "Cumplimiento de la financiación de la Ley de Dependencia",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.5615,
+            0.6003,
+            0.5783
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0034": {
+      "chunk": "upn-23-p004-02",
+      "pagina": 4,
+      "literal": "Cumplimiento de la financiación de la Ley de Dependencia y de medidas para la integración efectiva de las personas con discapacidad.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.5615,
+            0.8667,
+            0.5783
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.5782,
+            0.471,
+            0.5949
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0035": {
+      "chunk": "upn-23-p004-02",
+      "pagina": 4,
+      "literal": "Desarrollo y cumplimiento de la normativa que regula la accesibilidad de las personas con discapacidad.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.6083,
+            0.8666,
+            0.625
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.6249,
+            0.2419,
+            0.6417
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0036": {
+      "chunk": "upn-23-p004-02",
+      "pagina": 4,
+      "literal": "Establecimiento de un Plan Nacional de Prevención del Suicidio y aprobación de la norma precisa para abordar las necesidades de las personas que padecen enfermedades raras y ELA.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.5148,
+            0.8667,
+            0.5316
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.5314,
+            0.852,
+            0.5482
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0037": {
+      "chunk": "upn-23-p004-03",
+      "pagina": 4,
+      "literal": "Defenderemos un sistema de pensiones que perdure en el tiempo con pensiones dignas y sin recortes.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.8752,
+            0.8667,
+            0.8919
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.8918,
+            0.2034,
+            0.9085
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0038": {
+      "chunk": "upn-23-p004-03",
+      "pagina": 4,
+      "literal": "Desarrollos de contratos-programas del Ministerio responsable de empleo con el Servicio Navarro de Empleo para la financiación de políticas activas de empleo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.7651,
+            0.8667,
+            0.7818
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.7817,
+            0.6634,
+            0.7985
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0039": {
+      "chunk": "upn-23-p004-03",
+      "pagina": 4,
+      "literal": "Establecimiento de un Plan Nacional de Empleo Juvenil",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.8118,
+            0.5748,
+            0.8286
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0040": {
+      "chunk": "upn-23-p004-03",
+      "pagina": 4,
+      "literal": "medidas legales que conlleven el establecimiento de la reinserción laboral de aquellas personas que perciben algún tipo de ayuda pública.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 4,
+          "r": [
+            0.6224,
+            0.8118,
+            0.8667,
+            0.8286
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.8284,
+            0.8667,
+            0.8452
+          ]
+        },
+        {
+          "pagina": 4,
+          "r": [
+            0.1333,
+            0.8451,
+            0.2466,
+            0.8618
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0041": {
+      "chunk": "upn-23-p005-01",
+      "pagina": 5,
+      "literal": "Firma de un convenio con el Ministerio de Economía para la mejora de suministro eléctrico y acceso a servicios financieros en pequeñas poblaciones y personas vulnerables.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.2599,
+            0.8666,
+            0.2767
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.2766,
+            0.7641,
+            0.2933
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0042": {
+      "chunk": "upn-23-p005-01",
+      "pagina": 5,
+      "literal": "Garantizar a través de la normativa correspondiente de medidas y ayudas que faciliten el establecimiento del emprendimiento y la defensa del autónomo.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.3534,
+            0.8667,
+            0.3702
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.37,
+            0.6165,
+            0.3868
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0043": {
+      "chunk": "upn-23-p005-01",
+      "pagina": 5,
+      "literal": "Mejora de las conexiones aéreas y ferroviarias de Navarra con puntos de interés económico o empresarial.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.4001,
+            0.8666,
+            0.4169
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.4168,
+            0.2286,
+            0.4335
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0044": {
+      "chunk": "upn-23-p005-01",
+      "pagina": 5,
+      "literal": "Plan de Iniciación a la Exportación. Firma de un convenio con el Instituto Español de Comercio Exterior para fomento de las exportaciones navarras.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.3067,
+            0.8666,
+            0.3234
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.3233,
+            0.5468,
+            0.3401
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0045": {
+      "chunk": "upn-23-p005-01",
+      "pagina": 5,
+      "literal": "Planta de baterías dentro de VW Navarra y defensa de los intereses del sector de la automoción y del transporte.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.1332,
+            0.8666,
+            0.15
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.1499,
+            0.3,
+            0.1666
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0046": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Apuesta decidida por las energías renovables. Solucionar la situación de las 9.000 familias navarras que invirtieron en energías renovables y a los que se cambió la normativa incumpliendo lo previamente aprobado.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.7573,
+            0.8666,
+            0.7741
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.7739,
+            0.8667,
+            0.7907
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.7906,
+            0.3332,
+            0.8073
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0047": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Construcción del corredor sostenible peatonal y ciclista del rio Arga.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8508,
+            0.6674,
+            0.8675
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0048": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Decidida defensa del mundo rural, tanto de las actividades agrícolas y ganaderas como de la caza y la pesca, así como la tauromaquia.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.5736,
+            0.8667,
+            0.5903
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.5902,
+            0.4581,
+            0.6069
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0049": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Desarrollo de vías verdes a lo largo de la Comunidad Foral de Navarra.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8207,
+            0.6824,
+            0.8374
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0050": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Desarrollo de vías verdes a lo largo de la Comunidad Foral de Navarra. Construcción del corredor sostenible peatonal y ciclista del rio Arga. Limpieza y adecuación de los cauces de los ríos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8207,
+            0.6824,
+            0.8374
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8508,
+            0.6674,
+            0.8675
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8809,
+            0.5147,
+            0.8976
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0051": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Implementar acciones concretas para hacer atractiva la vida en las zonas rurales y para combatir la despoblación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.6805,
+            0.8666,
+            0.6972
+          ]
+        },
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.6971,
+            0.3011,
+            0.7139
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0052": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Incremento de las coberturas de los seguros agrarios.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.6203,
+            0.5551,
+            0.637
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0053": {
+      "chunk": "upn-23-p005-02",
+      "pagina": 5,
+      "literal": "Limpieza y adecuación de los cauces de los ríos.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 5,
+          "r": [
+            0.1333,
+            0.8809,
+            0.5147,
+            0.8976
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0054": {
+      "chunk": "upn-23-p006-01",
+      "pagina": 6,
+      "literal": "Derogación de la Ley de Vivienda y respeto a las competencias que en la materia tiene la Comunidad Foral de Navarra.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.2313,
+            0.8667,
+            0.248
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.2479,
+            0.3394,
+            0.2647
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0055": {
+      "chunk": "upn-23-p006-01",
+      "pagina": 6,
+      "literal": "Establecimiento de normativa que garantice el reconocimiento efectivo a la propiedad privada de las viviendas y la lucha contra la ocupación ilegal.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.1846,
+            0.8666,
+            0.2013
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.2012,
+            0.5461,
+            0.2179
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0056": {
+      "chunk": "upn-23-p006-02",
+      "pagina": 6,
+      "literal": "Asunción de las competencias en materia de investigación, desarrollo e investigación.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.4348,
+            0.8044,
+            0.4516
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0057": {
+      "chunk": "upn-23-p006-02",
+      "pagina": 6,
+      "literal": "Colaboración en la financiación de todos los centros de investigación médica y científica implantados en Navarra. Facilitar el retorno e incremento de la contratación de investigadores.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.3881,
+            0.8667,
+            0.4049
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.4047,
+            0.8533,
+            0.4215
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    },
+    "c0058": {
+      "chunk": "upn-23-p006-02",
+      "pagina": 6,
+      "literal": "Potenciación y colaboración en los proyectos previstos del Centro Nacional de Energías Renovables y Centro Técnico Nacional de Conservas Vegetales.",
+      "idioma": "es",
+      "rects": [
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.3414,
+            0.8667,
+            0.3581
+          ]
+        },
+        {
+          "pagina": 6,
+          "r": [
+            0.1333,
+            0.358,
+            0.5945,
+            0.3748
+          ]
+        }
+      ],
+      "verificada": true,
+      "resaltada": true
+    }
+  },
+  "incidencias": []
+}
