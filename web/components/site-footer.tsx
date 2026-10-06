@@ -38,6 +38,11 @@ export function SiteFooter() {
               Código abierto en GitHub
             </a>
           </li>
+          <li>
+            <Link className="hover:text-ink" href="/condiciones">
+              Aviso legal y condiciones
+            </Link>
+          </li>
           <li>Código: licencia MIT · Análisis: CC BY 4.0</li>
           <li>Los programas electorales pertenecen a sus partidos.</li>
         </ul>

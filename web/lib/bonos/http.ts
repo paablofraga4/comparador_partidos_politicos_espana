@@ -1,11 +1,13 @@
 import { urlDelSitio } from "../sitio";
 
-/** URL pública para las redirecciones de pago: la del sitio en producción; la de la petición
- * en desarrollo (así funciona en cualquier puerto). */
+/** URL pública para las redirecciones de pago: la del sitio en producción; en desarrollo, el
+ * Host con el que ha entrado la petición (así las cookies siguen en el mismo origen). */
 export function urlBase(req: Request): string {
-  return process.env.NODE_ENV === "production"
-    ? urlDelSitio(process.env.NEXT_PUBLIC_SITE_URL).origin
-    : new URL(req.url).origin;
+  if (process.env.NODE_ENV === "production") {
+    return urlDelSitio(process.env.NEXT_PUBLIC_SITE_URL).origin;
+  }
+  const host = req.headers.get("host");
+  return host ? `${new URL(req.url).protocol}//${host}` : new URL(req.url).origin;
 }
 
 export function ipCliente(req: Request): string {

@@ -180,6 +180,30 @@ export default function Metodologia() {
           Sin cuentas, sin cookies de seguimiento y sin anuncios. Tus preferencias (como la lectura
           fácil) se guardan solo en tu navegador.
         </p>
+        <p>
+          <strong>El asistente</strong> no guarda el texto de tus preguntas: las preguntas sobre
+          política pueden revelar opiniones, y no queremos tenerlas. Para repartir las preguntas
+          gratis usa dos medidas técnicas, sin publicidad ni seguimiento:
+        </p>
+        <ul className="list-disc space-y-1 pl-6">
+          <li>
+            una cookie aleatoria (<code>vc_uso</code>) que solo cuenta cuántas preguntas gratis has
+            hecho en este navegador; guardamos su huella cifrada, no la cookie;
+          </li>
+          <li>
+            un máximo diario por conexión, calculado con una huella cifrada de la IP que cambia cada
+            día (la IP nunca se guarda).
+          </li>
+        </ul>
+        <p>
+          Si compras un bono, su código se guarda en otra cookie técnica (<code>vc_bono</code>). El
+          pago lo procesa Stripe; nosotros no guardamos tu nombre, tu email ni los datos de tu
+          tarjeta. Más en las{" "}
+          <Link className="underline" href="/condiciones">
+            condiciones de los bonos
+          </Link>
+          .
+        </p>
       </section>
     </article>
   );

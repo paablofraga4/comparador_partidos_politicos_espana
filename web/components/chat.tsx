@@ -3,11 +3,27 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { ArrowUp, Check, Loader2, Square } from "lucide-react";
-import { useMemo, useState } from "react";
+import Link from "next/link";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { fechaCaducidad } from "@/lib/bonos/planes";
 import { segmentar, sinMarcaIncompleta, type FuenteChat } from "@/lib/chat/refs";
-import type { MensajeChat } from "@/lib/chat/tipos";
+import type { CupoChat, LimiteChat, MensajeChat } from "@/lib/chat/tipos";
 import { CitaMark } from "./cita";
+import { TarjetaPlanes } from "./planes";
+
+type EstadoCupo = {
+  gratis: CupoChat;
+  bono: CupoChat | null;
+  bonoTerminado: boolean;
+  gratisPausado: boolean;
+};
+
+const AVISOS_PAGO: Record<string, string> = {
+  cancelado: "Has cancelado el pago. No se te ha cobrado nada.",
+  pendiente: "El pago aún no se ha confirmado. Si se completa, tu bono se activará solo.",
+  error: "No hemos podido activar el bono. Si se te ha cobrado, usa el código de tu recibo.",
+};
 
 const SUGERENCIAS = [
   "¿Qué proponen los partidos sobre el precio del alquiler?",
@@ -27,17 +43,68 @@ const ESTADO_HERRAMIENTA: Record<string, string> = {
 
 type Opcion = { id: string; corto: string; color: string };
 
-export function Chat({ candidaturas, maxChars }: { candidaturas: Opcion[]; maxChars: number }) {
+export function Chat({
+  candidaturas,
+  maxChars,
+  pagosActivos,
+  avisoPago,
+}: {
+  candidaturas: Opcion[];
+  maxChars: number;
+  pagosActivos: boolean;
+  avisoPago?: string;
+}) {
   const [seleccion, setSeleccion] = useState<string[]>([]);
   const [input, setInput] = useState("");
+  const [estadoCupo, setEstadoCupo] = useState<EstadoCupo | null>(null);
+  // Tras canjear un código, el límite que se mostraba deja de valer
+  const [limiteResuelto, setLimiteResuelto] = useState<string | null>(null);
+
+  const cargarCupo = useCallback(() => {
+    fetch("/api/cupo", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: EstadoCupo | null) => d && setEstadoCupo(d))
+      .catch(() => {});
+  }, []);
+  useEffect(() => cargarCupo(), [cargarCupo]);
 
   const transport = useMemo(() => new DefaultChatTransport<MensajeChat>({ api: "/api/chat" }), []);
-  const { messages, sendMessage, status, stop, error } = useChat<MensajeChat>({ transport });
+  // Tras cada respuesta (o fallo, que devuelve la pregunta) se vuelve a leer el cupo
+  const { messages, sendMessage, status, stop, error } = useChat<MensajeChat>({
+    transport,
+    onFinish: cargarCupo,
+    onError: cargarCupo,
+  });
   const ocupado = status === "submitted" || status === "streaming";
+
+  const cupo: CupoChat | null = estadoCupo ? (estadoCupo.bono ?? estadoCupo.gratis) : null;
+  const ultima = messages.findLast((m) => m.role === "assistant");
+  const limiteRespuesta = ultima?.parts.find((p) => p.type === "data-limite")?.data;
+  let limite: LimiteChat | null = null;
+  if (limiteRespuesta && ultima?.id !== limiteResuelto) {
+    limite = limiteRespuesta;
+  } else if (estadoCupo && !estadoCupo.bono && !ocupado) {
+    // Si ya no quedan gratis, se avisa antes de preguntar (sin gastar un viaje al servidor)
+    const total = estadoCupo.gratis.total;
+    if (estadoCupo.gratis.quedan === 0) {
+      limite = {
+        motivo: "gratis-agotado",
+        gratisTotal: total,
+        bonoTerminado: estadoCupo.bonoTerminado,
+      };
+    } else if (estadoCupo.gratisPausado) {
+      limite = { motivo: "gratis-presupuesto", gratisTotal: total, bonoTerminado: false };
+    }
+  }
+
+  function trasCanjear() {
+    if (ultima) setLimiteResuelto(ultima.id);
+    cargarCupo();
+  }
 
   function enviar(texto: string) {
     const t = texto.trim();
-    if (!t || ocupado || t.length > maxChars) return;
+    if (!t || ocupado || t.length > maxChars || limite) return;
     // Opciones por petición: partidos acotados y modo de lectura activo en ese momento
     sendMessage(
       { text: t },
@@ -53,6 +120,11 @@ export function Chat({ candidaturas, maxChars }: { candidaturas: Opcion[]; maxCh
 
   return (
     <div className="flex flex-col gap-6">
+      {avisoPago && AVISOS_PAGO[avisoPago] && (
+        <p role="status" className="border-rule bg-paper-raised rounded-lg border p-3 text-sm">
+          {AVISOS_PAGO[avisoPago]}
+        </p>
+      )}
       <fieldset>
         <legend className="text-sm font-semibold">Pregunta sobre (opcional)</legend>
         <div className="mt-2 flex flex-wrap gap-2">
@@ -91,7 +163,7 @@ export function Chat({ candidaturas, maxChars }: { candidaturas: Opcion[]; maxCh
       </fieldset>
 
       <ol className="flex flex-col gap-5" aria-live="polite">
-        {messages.map((m) => (
+        {messages.filter(conContenido).map((m) => (
           <li key={m.id} className={m.role === "user" ? "self-end" : "self-stretch"}>
             {m.role === "user" ? (
               <p className="bg-ink text-paper max-w-[46ch] rounded-2xl rounded-br-sm px-4 py-2.5">
@@ -115,7 +187,7 @@ export function Chat({ candidaturas, maxChars }: { candidaturas: Opcion[]; maxCh
         </p>
       )}
 
-      {messages.length === 0 && (
+      {messages.length === 0 && !limite && (
         <div>
           <p className="text-sm font-semibold">Prueba con:</p>
           <ul className="mt-2 grid gap-2 sm:grid-cols-2">
@@ -134,57 +206,92 @@ export function Chat({ candidaturas, maxChars }: { candidaturas: Opcion[]; maxCh
         </div>
       )}
 
-      <form
-        className="border-rule-strong bg-paper-raised sticky bottom-3 rounded-2xl border p-2 shadow-lg"
-        onSubmit={(e) => {
-          e.preventDefault();
-          enviar(input);
-        }}
-      >
-        <label htmlFor="pregunta" className="sr-only">
-          Tu pregunta sobre los programas
-        </label>
-        <div className="flex items-end gap-2">
-          <textarea
-            id="pregunta"
-            rows={2}
-            value={input}
-            maxLength={maxChars}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
-                e.preventDefault();
-                enviar(input);
-              }
-            }}
-            placeholder="Pregunta lo que quieras sobre los programas…"
-            className="placeholder:text-ink-faint min-h-12 flex-1 resize-none bg-transparent px-2 py-2 outline-none"
-          />
-          {ocupado ? (
-            <button
-              type="button"
-              onClick={() => stop()}
-              aria-label="Detener"
-              className="bg-ink text-paper grid h-11 w-11 place-items-center rounded-full"
-            >
-              <Square aria-hidden className="h-4 w-4" />
-            </button>
-          ) : (
-            <button
-              type="submit"
-              aria-label="Enviar pregunta"
-              disabled={!input.trim()}
-              className="bg-ink text-paper grid h-11 w-11 place-items-center rounded-full disabled:opacity-30"
-            >
-              <ArrowUp aria-hidden className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-        <p className="tabular text-ink-faint px-2 pt-1 text-right text-xs">
-          {input.length}/{maxChars}
-        </p>
-      </form>
+      {limite ? (
+        <TarjetaPlanes limite={limite} pagosActivos={pagosActivos} alCanjear={trasCanjear} />
+      ) : (
+        <form
+          className="border-rule-strong bg-paper-raised sticky bottom-3 rounded-2xl border p-2 shadow-lg"
+          onSubmit={(e) => {
+            e.preventDefault();
+            enviar(input);
+          }}
+        >
+          <label htmlFor="pregunta" className="sr-only">
+            Tu pregunta sobre los programas
+          </label>
+          <div className="flex items-end gap-2">
+            <textarea
+              id="pregunta"
+              rows={2}
+              value={input}
+              maxLength={maxChars}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  enviar(input);
+                }
+              }}
+              placeholder="Pregunta lo que quieras sobre los programas…"
+              className="placeholder:text-ink-faint min-h-12 flex-1 resize-none bg-transparent px-2 py-2 outline-none"
+            />
+            {ocupado ? (
+              <button
+                type="button"
+                onClick={() => stop()}
+                aria-label="Detener"
+                className="bg-ink text-paper grid h-11 w-11 place-items-center rounded-full"
+              >
+                <Square aria-hidden className="h-4 w-4" />
+              </button>
+            ) : (
+              <button
+                type="submit"
+                aria-label="Enviar pregunta"
+                disabled={!input.trim()}
+                className="bg-ink text-paper grid h-11 w-11 place-items-center rounded-full disabled:opacity-30"
+              >
+                <ArrowUp aria-hidden className="h-5 w-5" />
+              </button>
+            )}
+          </div>
+          <div className="text-ink-faint flex items-center justify-between gap-3 px-2 pt-1 text-xs">
+            <p aria-live="polite">{cupo && <TextoCupo cupo={cupo} />}</p>
+            <p className="tabular">
+              {input.length}/{maxChars}
+            </p>
+          </div>
+        </form>
+      )}
     </div>
+  );
+}
+
+/** Los mensajes que solo traen el límite se pintan como tarjeta, no como burbuja vacía. */
+function conContenido(m: MensajeChat): boolean {
+  return (
+    m.role === "user" || m.parts.some((p) => p.type !== "data-limite" && p.type !== "data-cupo")
+  );
+}
+
+function TextoCupo({ cupo }: { cupo: CupoChat }) {
+  if (cupo.tipo === "bono") {
+    return (
+      <>
+        Tu bono: <span className="tabular">{cupo.quedan}</span>{" "}
+        {cupo.quedan === 1 ? "pregunta" : "preguntas"} · hasta el{" "}
+        {fechaCaducidad(new Date(cupo.caduca))} ·{" "}
+        <Link href="/bono" className="underline">
+          ver código
+        </Link>
+      </>
+    );
+  }
+  return (
+    <>
+      Te {cupo.quedan === 1 ? "queda" : "quedan"} <span className="tabular">{cupo.quedan}</span>{" "}
+      {cupo.quedan === 1 ? "pregunta gratis" : "preguntas gratis"}
+    </>
   );
 }
 
