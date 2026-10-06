@@ -1,10 +1,19 @@
 "use client";
 
-import { parseAsString, useQueryState } from "nuqs";
+import { parseAsString } from "nuqs";
 
 /** Clave de una cita en la URL: «convocatoria.candidatura.idCita» (URL propia, compartible). */
 export const FUENTE_PARAM = "fuente";
 export const fuenteParser = parseAsString.withOptions({ history: "push", scroll: false });
+
+/** Abre el panel de fuente escribiendo ?fuente=… en la URL. Next sincroniza pushState con
+ * useSearchParams, así que el panel (que sí lee la URL) se entera sin que esta marca tenga que
+ * leerla: las páginas estáticas no necesitan <Suspense> por cada cita. */
+export function abrirFuente(valor: string) {
+  const url = new URL(window.location.href);
+  url.searchParams.set(FUENTE_PARAM, valor);
+  window.history.pushState(window.history.state, "", url);
+}
 
 /**
  * Marca de cita «p. 45» (skill grounding): abre el panel de fuente con la página del programa
@@ -25,11 +34,10 @@ export function CitaMark({
   candCorto: string;
   convCorto: string;
 }) {
-  const [, setFuente] = useQueryState(FUENTE_PARAM, fuenteParser);
   return (
     <button
       type="button"
-      onClick={() => setFuente(`${conv}.${cand}.${cid}`)}
+      onClick={() => abrirFuente(`${conv}.${cand}.${cid}`)}
       aria-label={`Fuente: programa de ${candCorto} ${convCorto}, página ${pagina}`}
       className="marker tabular text-ink mx-0.5 inline-flex min-h-6 items-baseline rounded-sm px-1 align-baseline text-[0.8em] font-semibold decoration-transparent transition-colors hover:bg-[var(--marker-soft)] focus-visible:bg-[var(--marker-soft)]"
     >

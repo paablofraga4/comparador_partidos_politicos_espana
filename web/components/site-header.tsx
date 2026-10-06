@@ -8,6 +8,7 @@ const NAV = [
   { href: "/partidos", label: "Partidos" },
   { href: "/temas", label: "Temas" },
   { href: "/pregunta", label: "Pregunta" },
+  { href: "/tu-papeleta", label: "Tu papeleta" },
   { href: "/metodologia", label: "Cómo lo hacemos" },
 ];
 

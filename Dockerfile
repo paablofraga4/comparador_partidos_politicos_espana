@@ -31,7 +31,7 @@ COPY --from=build --chown=app:app /app/web/.next/standalone ./
 COPY --from=build --chown=app:app /app/web/.next/static ./web/.next/static
 COPY --from=build --chown=app:app /app/web/public ./web/public
 # Datos que la web lee en tiempo de ejecución (los PDFs ya van en web/public/documentos)
-COPY --chown=app:app data/candidaturas.yaml data/topics.yaml data/sources.yaml ./data/
+COPY --chown=app:app data/*.yaml ./data/
 COPY --chown=app:app data/analyses ./data/analyses
 # Índices del chat: texto extraído (para db:sync), migraciones y scripts empaquetados
 COPY --chown=app:app data/extracted ./data/extracted

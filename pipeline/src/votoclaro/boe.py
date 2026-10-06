@@ -119,7 +119,9 @@ def parse(xml: str) -> DocumentoBOE:
                 continue
             nombre, siglas = par
             circs[junta[0]] = junta[1]
-            c = cands.setdefault(siglas, CandidaturaBOE(siglas, nombre))
+            # «U.P.L.» y «UPL» son la misma candidatura escrita de dos formas
+            clave = re.sub(r"[.\s]", "", siglas.upper())
+            c = cands.setdefault(clave, CandidaturaBOE(siglas, nombre))
             c.circunscripciones[junta[0]] = junta[1]
     return DocumentoBOE(
         ident.group(1) if ident else "",

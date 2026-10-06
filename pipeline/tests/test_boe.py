@@ -27,7 +27,7 @@ def test_parse_documento_real_2023():
     assert doc.identificador == "BOE-A-2023-15066"
     assert set(doc.circunscripciones) == {"albacete", "barcelona", "bizkaia", "navarra"}
     # PSE-EE (PSOE) en Bizkaia, PSC en Barcelona, PSN-PSOE en Navarra: el PSOE con otras siglas
-    assert {"PSE-EE (PSOE)", "PSC", "PSN-PSOE", "PSOE"} <= set(doc.candidaturas)
+    assert {"PSE-EE(PSOE)", "PSC", "PSN-PSOE", "PSOE"} <= set(doc.candidaturas)
     assert set(doc.candidaturas["PP"].circunscripciones) == set(doc.circunscripciones)
     assert list(doc.candidaturas["UPN"].circunscripciones) == ["navarra"]
 

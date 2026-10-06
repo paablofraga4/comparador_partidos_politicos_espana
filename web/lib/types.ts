@@ -25,7 +25,11 @@ export type CandidaturaEnConvocatoria = {
   dentro_de?: string | null;
   estado?: "provisional" | "presentada" | "proclamada" | "no-proclamada" | null;
   circunscripciones?: string[];
+  /** Siglas con que concurre en cada circunscripción según el BOE (p. ej. barcelona: PSC) */
+  listas?: Record<string, string>;
 };
+
+export type Circunscripcion = { id: string; nombre: string };
 
 export type Candidatura = {
   id: string;
