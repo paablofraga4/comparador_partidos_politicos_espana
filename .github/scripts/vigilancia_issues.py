@@ -22,6 +22,17 @@ for n in datos["novedades"]:
             "--search", f'"{n["url"]}" in:body', "--json", "number")
     if json.loads(ya):
         continue
+    if n["tipo"] == "boe":
+        gh("issue", "create", "--label", "vigilancia", "--title", f"BOE: {n['titulo'][:110]}",
+           "--body", f"Nueva disposición electoral en el BOE ({n.get('fecha')}):
+
+{n['url']}
+
+"
+           "Si son candidaturas presentadas o proclamadas, hay que cargarlas en "
+           "`data/candidaturas.yaml` (tarea T-503) y pasar `fase_inclusion` a la fase que toque.")
+        creadas += 1
+        continue
     tipo = "📄 PDF en su web" if n["tipo"] == "pdf-oficial" else "📰 Noticia"
     cuerpo = (
         f"**Candidatura:** `{n['candidatura']}`\n**Tipo:** {tipo}\n**Enlace:** {n['url']}\n"

@@ -448,3 +448,31 @@ def vigilar_cmd(
     for e in errores:
         console.print(f"[yellow]⚠ {e}")
     console.print(f"{len(novedades)} novedades · {len(errores)} errores")
+
+
+@app.command(name="vigilar-boe")
+def vigilar_boe_cmd(
+    dias: Annotated[int, typer.Option(help="Días hacia atrás a revisar")] = 3,
+    json_salida: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Revisa el BOE: candidaturas presentadas/proclamadas y coaliciones (HU-1.10)."""
+    from datetime import UTC, datetime, timedelta
+
+    import httpx
+
+    from .fetch import USER_AGENT
+    from .vigilancia import boe_novedades
+
+    hoy = datetime.now(UTC).date()
+    fechas = [(hoy - timedelta(days=i)).strftime("%Y%m%d") for i in range(dias)]
+    with httpx.Client(headers={"User-Agent": USER_AGENT}) as client:
+        novedades, errores = boe_novedades(fechas, client)
+    if json_salida:
+        salida = {"novedades": [n.dict() for n in novedades], "errores": errores}
+        sys.stdout.write(json.dumps(salida, ensure_ascii=False) + "\n")
+        return
+    for n in novedades:
+        console.print(f"📜 {n.fecha} · {n.titulo[:110]} · {n.url}")
+    for e in errores:
+        console.print(f"[yellow]⚠ {e}")
+    console.print(f"{len(novedades)} disposiciones · {len(errores)} errores")

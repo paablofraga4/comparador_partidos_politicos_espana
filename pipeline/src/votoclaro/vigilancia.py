@@ -137,3 +137,58 @@ def vigilar(
             client.close()
     unicas = list({n.url: n for n in novedades}.values())
     return unicas, errores
+
+
+# --- BOE: candidaturas y coaliciones (HU-1.10) --------------------------------------------
+
+_BOE_SUMARIO = "https://www.boe.es/datosabiertos/api/boe/sumario/{fecha}"
+_BOE_INTERES = re.compile(r"candidatura|coalici", re.I)
+
+
+def _items_boe(nodo: object):
+    if isinstance(nodo, dict):
+        if "identificador" in nodo and "titulo" in nodo:
+            yield nodo
+        for v in nodo.values():
+            yield from _items_boe(v)
+    elif isinstance(nodo, list):
+        for v in nodo:
+            yield from _items_boe(v)
+
+
+def boe_novedades(fechas: list[str], client: httpx.Client) -> tuple[list[Novedad], list[str]]:
+    """Disposiciones de las juntas electorales sobre candidaturas o coaliciones en los sumarios
+    del BOE de esas fechas (AAAAMMDD). Los días sin BOE (domingos) dan 404 y se ignoran."""
+    novedades: list[Novedad] = []
+    errores: list[str] = []
+    for f in fechas:
+        try:
+            r = client.get(
+                _BOE_SUMARIO.format(fecha=f), headers={"Accept": "application/json"}, timeout=60
+            )
+            if r.status_code == 404:
+                continue
+            r.raise_for_status()
+            sumario = r.json()["data"]["sumario"]
+        except (httpx.HTTPError, KeyError, ValueError) as e:
+            errores.append(f"BOE {f}: {e.__class__.__name__}")
+            continue
+        for diario in sumario.get("diario", []):
+            for seccion in diario.get("seccion", []):
+                deps = seccion.get("departamento", [])
+                for dep in deps if isinstance(deps, list) else [deps]:
+                    if "ELECTORAL" not in str(dep.get("nombre", "")).upper():
+                        continue
+                    for it in _items_boe(dep):
+                        if _BOE_INTERES.search(it["titulo"]):
+                            novedades.append(
+                                Novedad(
+                                    "boe",
+                                    "boe",
+                                    f"https://www.boe.es/diario_boe/txt.php?id={it['identificador']}",
+                                    f"{it['identificador']} · {it['titulo']}",
+                                    f"{f[:4]}-{f[4:6]}-{f[6:]}",
+                                    dominio_oficial=True,
+                                )
+                            )
+    return novedades, errores

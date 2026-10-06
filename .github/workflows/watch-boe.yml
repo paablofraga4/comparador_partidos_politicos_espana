@@ -1,0 +1,34 @@
+# Vigilancia del BOE (spec 001, HU-1.10): candidaturas presentadas (~28 oct), proclamadas
+# (~3 nov) y coaliciones. Cada mañana hasta el 4-nov-2026 → issue por disposición nueva.
+name: Vigilar BOE
+on:
+  schedule:
+    - cron: "30 6,9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  boe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: ¿Periodo electoral?
+        id: fecha
+        run: |
+          if [ "$(date -u +%Y%m%d)" -gt 20261104 ]; then echo "fin=1" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.fecha.outputs.fin != '1'
+      - uses: astral-sh/setup-uv@v6
+        if: steps.fecha.outputs.fin != '1'
+      - name: Revisar sumarios del BOE
+        if: steps.fecha.outputs.fin != '1'
+        working-directory: pipeline
+        run: uv sync && uv run vc vigilar-boe --dias 4 --json > "$RUNNER_TEMP/boe.json"
+      - name: Crear issues
+        if: steps.fecha.outputs.fin != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python .github/scripts/vigilancia_issues.py "$RUNNER_TEMP/boe.json"
