@@ -27,7 +27,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
 - [x] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
 - [x] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
-- [ ] T-114 (3/10 en rama `datos/2023`; **bloqueado: sin crédito en OpenAI**) Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
+- [ ] T-114 (3/11 en rama `datos/2023`; Junts registrado desde beteve.cat con permiso; **bloqueado: sin crédito en OpenAI**) Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
 
 ## F2 · Comparador web (mié 7 - jue 8)
 - [x] T-201 Next.js 16, TypeScript estricto, Tailwind v4, shadcn/ui, Vitest y Playwright en `web/`. **V:** build
@@ -53,7 +53,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [ ] T-306 `evals/`: 60 o más preguntas, juez y runner; `evals.yml`. **V:** umbrales de la spec 003
 
 ## F4 · Despliegue y lanzamiento (sáb 10 - dom 11)
-- [ ] T-401 `Dockerfile` y prueba del build en local
+- [x] T-401 `Dockerfile`, `railway.json` y `/api/salud`; build *standalone* probado en local
 - [ ] T-402 Railway: proyecto, Postgres con pgvector, variables y *pre-deploy*. **Requiere tu `railway login`**
 - [ ] T-403 `ci.yml` e `ingest.yml` en GitHub Actions. **Requiere el secreto `OPENAI_API_KEY` en GitHub**
 - [ ] T-404 `watch-programs.yml` (versión mínima: páginas `vigilar` → *issue*)
