@@ -7,6 +7,7 @@ import { FuentePanel } from "@/components/fuente-panel";
 import { LECTURA_SCRIPT } from "@/components/lectura-facil";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { urlDelSitio } from "@/lib/sitio";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -21,10 +22,8 @@ const publicSans = Public_Sans({
   display: "swap",
 });
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
+  metadataBase: urlDelSitio(process.env.NEXT_PUBLIC_SITE_URL),
   title: {
     default: "VotoClaro · Qué propone cada partido el 29N",
     template: "%s · VotoClaro",

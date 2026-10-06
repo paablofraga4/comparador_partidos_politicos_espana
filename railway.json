@@ -6,7 +6,7 @@
     "watchPatterns": ["web/**", "data/**", "config/**", "Dockerfile", "railway.json"]
   },
   "deploy": {
-    "preDeployCommand": ["node scripts/dist/db-migrate.mjs && node scripts/dist/db-sync.mjs"],
+    "preDeployCommand": ["node scripts/dist/predeploy.mjs"],
     "healthcheckPath": "/api/salud",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",

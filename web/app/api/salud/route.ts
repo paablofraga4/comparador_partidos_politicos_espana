@@ -19,9 +19,14 @@ export async function GET() {
                 (select count(*)::int from propuestas) as propuestas`,
       );
       chat.indices = r;
-    } catch {
-      chat.indices = "sin migrar";
+    } catch (e) {
+      // Solo el código (42P01 = falta la tabla; ENOTFOUND/ECONNREFUSED… = conexión), nunca el
+      // mensaje: podría incluir el host o el usuario de la base de datos
+      const codigo = (e as { code?: unknown }).code;
+      chat.indices =
+        codigo === "42P01" ? "sin migrar" : `error ${typeof codigo === "string" ? codigo : "?"}`;
     }
   }
-  return Response.json({ ok: true, candidaturas: candidaturas().length, chat });
+  const version = process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7);
+  return Response.json({ ok: true, version, candidaturas: candidaturas().length, chat });
 }
