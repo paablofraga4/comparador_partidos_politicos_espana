@@ -6,11 +6,12 @@ import { candidaturas, estadoProgramas29N, registro, temas, vigente } from "@/li
 import { metaPagina } from "@/lib/seo";
 import { urlDelSitio } from "@/lib/sitio";
 
+// SEO centrado en el contenido (lo que se busca), no en la marca
 const DESCRIPCION =
-  "Compara los programas electorales de las elecciones generales del 29 de noviembre, tema a tema y con la fuente a un clic. Neutral, sin anuncios y con lectura fácil.";
+  "Entiende los programas electorales del 29N: las propuestas de cada partido, tema a tema, explicadas claro y con la página exacta del programa oficial.";
 
 export const metadata = metaPagina({
-  titulo: "VotoClaro · Qué propone cada partido el 29N",
+  titulo: "Qué propone cada partido el 29N: programas electorales explicados",
   descripcion: DESCRIPCION,
   ruta: "/",
 });
@@ -50,8 +51,8 @@ export default function Inicio() {
             Elecciones generales · 29 de noviembre de 2026
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-medium sm:text-6xl">
-            Qué propone cada partido, explicado <span className="marker">claro</span> y con la
-            fuente a un clic.
+            Qué propone cada partido en su programa electoral, explicado{" "}
+            <span className="marker">claro</span> y con la fuente a un clic.
           </h1>
           <p className="text-ink-muted mt-5 max-w-2xl text-lg">
             Leemos los programas electorales enteros y los ordenamos por temas. Cada frase enlaza a

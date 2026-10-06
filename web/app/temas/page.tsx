@@ -6,15 +6,16 @@ import { temas } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export const metadata: Metadata = metaPagina({
-  titulo: "Temas",
-  descripcion: "Los 19 temas en los que comparamos los programas electorales del 29N.",
+  titulo: "Propuestas de los partidos por temas",
+  descripcion:
+    "Vivienda, pensiones, sanidad, impuestos, inmigración y 14 temas más: qué propone cada partido en su programa electoral para el 29N.",
   ruta: "/temas",
 });
 
 export default function Temas() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-      <h1 className="text-4xl font-medium sm:text-5xl">Temas</h1>
+      <h1 className="text-4xl font-medium sm:text-5xl">Propuestas por temas</h1>
       <p className="text-ink-muted mt-3 max-w-2xl text-lg">
         Los mismos 19 temas para todos los partidos. Dentro de cada uno verás qué propone cada
         partido y si no lo menciona.

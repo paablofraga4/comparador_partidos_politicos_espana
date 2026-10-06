@@ -6,8 +6,14 @@ export const IMAGEN_COMPARTIR = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "VotoClaro · ¿Qué propone cada partido? Compara los programas del 29N con la fuente a un clic.",
+  alt: "¿Qué propone cada partido? Los programas electorales del 29N, explicados y con la fuente.",
 };
+
+/** «PP (Partido Popular)»; si las siglas y el nombre coinciden, solo uno («Sumar»). Así los
+ * textos no dependen del artículo de cada partido («del PSOE», «de Sumar»). */
+export function nombrePartido(c: { corto: string; nombre: string }): string {
+  return c.corto === c.nombre ? c.corto : `${c.corto} (${c.nombre})`;
+}
 
 /**
  * Metadatos de una página indexable (spec 002, HU-2.9): título, descripción, URL canónica sin

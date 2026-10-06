@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { Candidato } from "@/components/piezas";
 import { analisis, candidaturas, fuente, registro } from "@/lib/data";
-import type { ConvocatoriaId } from "@/lib/types";
 import { metaPagina } from "@/lib/seo";
+import type { ConvocatoriaId } from "@/lib/types";
 
 export const metadata: Metadata = metaPagina({
   titulo: "Cómo lo hacemos",

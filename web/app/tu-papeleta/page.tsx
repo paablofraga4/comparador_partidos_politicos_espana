@@ -6,7 +6,7 @@ import { candidaturas, circunscripciones, registro, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export const metadata: Metadata = metaPagina({
-  titulo: "Tu papeleta",
+  titulo: "Tu papeleta del 29N: candidaturas por provincia",
   descripcion:
     "Elige tu provincia y mira qué candidaturas al Congreso hay en tu papeleta el 29N, con sus programas.",
   ruta: "/tu-papeleta",

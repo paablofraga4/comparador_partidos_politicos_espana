@@ -12,7 +12,7 @@ export function GET() {
   const cs = [...candidaturas()].sort((a, b) => a.corto.localeCompare(b.corto, "es"));
   const texto = `# VotoClaro
 
-> Comparador neutral de los programas electorales de las elecciones generales de España del 29 de noviembre de 2026. Cada afirmación enlaza a la página exacta del programa oficial, con el fragmento resaltado. Mientras un partido no publica su programa del 29N, se muestra el de 2023 (23J), avisado.
+> Los programas electorales de las elecciones generales de España del 29 de noviembre de 2026, explicados y comparados por temas: qué propone cada partido en vivienda, pensiones, sanidad, impuestos, inmigración y más. Cada afirmación enlaza a la página exacta del programa oficial, con el fragmento resaltado. Mientras un partido no publica su programa del 29N, se muestra el de 2023 (23J), avisado.
 
 Principios:
 - Solo usa los programas oficiales; si un programa no trata un tema, dice «No lo menciona».

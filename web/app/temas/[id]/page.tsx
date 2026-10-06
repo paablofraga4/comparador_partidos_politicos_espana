@@ -16,8 +16,8 @@ export async function generateMetadata(props: PageProps<"/temas/[id]">): Promise
   const t = tema(id);
   return t
     ? metaPagina({
-        titulo: `${t.nombre}: qué propone cada partido`,
-        descripcion: `Compara lo que proponen los partidos sobre ${t.nombre.toLowerCase()} para el 29N, con cada frase enlazada a su programa oficial.`,
+        titulo: `${t.nombre}: qué proponen los partidos`,
+        descripcion: `Qué propone cada partido sobre ${t.nombre.toLowerCase()} en su programa electoral para el 29N (${t.subtemas.slice(0, 3).join(", ")}…), comparado y con la página exacta de cada programa.`,
         ruta: `/temas/${t.id}`,
       })
     : {};
@@ -40,7 +40,7 @@ export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
       <header className="border-rule mt-4 border-b pb-6">
         <h1 className="flex items-center gap-3 text-4xl font-medium sm:text-5xl">
           <TemaIcono icono={t.icono} className="text-ink-muted h-8 w-8" />
-          {t.nombre}
+          {t.nombre}: qué propone cada partido
         </h1>
         <p className="text-ink-muted mt-3 max-w-2xl text-lg">{t.descripcion}</p>
         <p className="text-ink-faint mt-2 text-sm">Incluye: {t.subtemas.join(" · ")}</p>

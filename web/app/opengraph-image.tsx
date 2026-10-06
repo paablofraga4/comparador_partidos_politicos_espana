@@ -66,7 +66,7 @@ export default async function Imagen() {
           <span>?</span>
         </div>
         <div style={{ display: "flex", marginTop: 28, fontSize: 34, color: "#5B6170" }}>
-          Compara los programas del 29N con la fuente a un clic.
+          Los programas electorales del 29N, explicados y con la fuente.
         </div>
       </div>
       <div style={{ display: "flex", fontSize: 24, fontWeight: 600, color: "#5B6170" }}>
