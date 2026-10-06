@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Generados por scripts/sync-assets.mjs y json2ts
     "public/**",
     "lib/schema/analisis.ts",
+    "scripts/dist/**",
     "playwright-report/**",
     "test-results/**",
   ]),

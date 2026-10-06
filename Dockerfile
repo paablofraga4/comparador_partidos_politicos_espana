@@ -19,7 +19,7 @@ COPY web ./web
 COPY data ./data
 COPY config ./config
 WORKDIR /app/web
-RUN npm run build
+RUN npm run build && npm run build:scripts
 
 FROM node:24-alpine AS run
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000 HOSTNAME=0.0.0.0 \
@@ -33,7 +33,11 @@ COPY --from=build --chown=app:app /app/web/public ./web/public
 # Datos que la web lee en tiempo de ejecución (los PDFs ya van en web/public/documentos)
 COPY --chown=app:app data/candidaturas.yaml data/topics.yaml data/sources.yaml ./data/
 COPY --chown=app:app data/analyses ./data/analyses
+# Índices del chat: texto extraído (para db:sync), migraciones y scripts empaquetados
+COPY --chown=app:app data/extracted ./data/extracted
 COPY --chown=app:app config ./config
+COPY --from=build --chown=app:app /app/web/scripts/dist ./web/scripts/dist
+COPY --chown=app:app web/db ./web/db
 USER app
 WORKDIR /app/web
 EXPOSE 3000
