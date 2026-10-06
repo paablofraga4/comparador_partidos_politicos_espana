@@ -416,3 +416,89 @@ def easy_read_cmd(
         f"[green]✓[/] coste de esta pasada: {round(ctx.usage.cost_usd, 4)} USD · "
         f"{len(ctx.incidencias)} temas siguen sin validar"
     )
+
+
+@app.command(name="vigilar")
+def vigilar_cmd(
+    convocatoria: Annotated[str, typer.Option("--convocatoria", "-v")] = "generales-2026",
+    json_salida: Annotated[
+        bool, typer.Option("--json", help="Salida JSON para el workflow")
+    ] = False,
+    sin_noticias: Annotated[bool, typer.Option("--sin-noticias")] = False,
+) -> None:
+    """Busca programas nuevos en las webs de las candidaturas y en noticias (HU-1.10)."""
+    from .vigilancia import vigilar
+
+    paths = _paths()
+    cands = [c for c in load_candidaturas(paths).candidaturas if convocatoria in c.convocatorias]
+    novedades, errores = vigilar(
+        cands, load_sources(paths), convocatoria, con_noticias=not sin_noticias
+    )
+    if json_salida:
+        sys.stdout.write(
+            json.dumps(
+                {"novedades": [n.dict() for n in novedades], "errores": errores}, ensure_ascii=False
+            )
+            + "\n"
+        )
+        return
+    for n in novedades:
+        marca = "📄" if n.tipo == "pdf-oficial" else "📰"
+        console.print(f"{marca} {n.candidatura} · {n.titulo[:80]} · {n.url}")
+    for e in errores:
+        console.print(f"[yellow]⚠ {e}")
+    console.print(f"{len(novedades)} novedades · {len(errores)} errores")
+
+
+@app.command(name="vigilar-boe")
+def vigilar_boe_cmd(
+    dias: Annotated[int, typer.Option(help="Días hacia atrás a revisar")] = 3,
+    json_salida: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Revisa el BOE: candidaturas presentadas/proclamadas y coaliciones (HU-1.10)."""
+    from datetime import UTC, datetime, timedelta
+
+    import httpx
+
+    from .fetch import USER_AGENT
+    from .vigilancia import boe_novedades
+
+    hoy = datetime.now(UTC).date()
+    fechas = [(hoy - timedelta(days=i)).strftime("%Y%m%d") for i in range(dias)]
+    with httpx.Client(headers={"User-Agent": USER_AGENT}) as client:
+        novedades, errores = boe_novedades(fechas, client)
+    if json_salida:
+        salida = {"novedades": [n.dict() for n in novedades], "errores": errores}
+        sys.stdout.write(json.dumps(salida, ensure_ascii=False) + "\n")
+        return
+    for n in novedades:
+        console.print(f"📜 {n.fecha} · {n.titulo[:110]} · {n.url}")
+    for e in errores:
+        console.print(f"[yellow]⚠ {e}")
+    console.print(f"{len(novedades)} disposiciones · {len(errores)} errores")
+
+
+@app.command(name="boe-candidaturas")
+def boe_candidaturas_cmd(
+    fase: Annotated[str, typer.Option(help="presentadas | proclamadas")],
+    boe_id: Annotated[str | None, typer.Option("--id", help="Identificador BOE-A-…")] = None,
+    archivo: Annotated[Path | None, typer.Option(help="XML del BOE ya descargado")] = None,
+    informe: Annotated[
+        Path | None, typer.Option(help="Escribe el informe Markdown para el PR")
+    ] = None,
+) -> None:
+    """Aplica las candidaturas del BOE al registro (fase BOE, constitución I.6)."""
+    from .boe import descargar, parse
+    from .boe_registro import aplicar
+
+    if not (boe_id or archivo):
+        console.print("[red]✗ Indica --id o --archivo")
+        raise typer.Exit(1)
+    xml = archivo.read_text(encoding="utf-8") if archivo else descargar(boe_id or "")
+    doc = parse(xml)
+    paths = _paths()
+    res = aplicar(doc, fase, paths.candidaturas, paths.data / "circunscripciones.yaml")
+    md = res.markdown(doc, fase)
+    if informe:
+        informe.write_text(md + "\n", encoding="utf-8")
+    console.print(md)

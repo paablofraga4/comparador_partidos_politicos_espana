@@ -6,6 +6,7 @@ localiza en la página del PDF con `search_for` para que la web pueda resaltarla
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 import pymupdf
@@ -47,9 +48,59 @@ def _norm(r: pymupdf.Rect, page: pymupdf.Page, pagina: int) -> Rect:
     )
 
 
+def _tok(palabra: str) -> str:
+    """Forma comparable de una palabra: minúsculas, sin puntuación ni guiones."""
+    return re.sub(r"[\W_]", "", palabra.lower())
+
+
+def locate_palabras(
+    page: pymupdf.Page, literal: str, bbox: tuple[float, float, float, float]
+) -> list[pymupdf.Rect]:
+    """Empareja el literal palabra a palabra con las palabras de la página (con su posición).
+    Tolera palabras partidas por guion entre líneas («Na-» + «varro» = «Navarro»), que
+    `search_for` no siempre encuentra. Devuelve un rectángulo por línea."""
+    objetivo = [t for t in (_tok(w) for w in literal.split()) if t]
+    if not objetivo:
+        return []
+    palabras = [
+        (pymupdf.Rect(w[:4]), w[4], (w[5], w[6]))
+        for w in page.get_text("words")
+        if _inside(pymupdf.Rect(w[:4]), bbox)
+    ]
+    toks = [_tok(p[1]) for p in palabras]
+    n = len(palabras)
+    for inicio in range(n):
+        i, j, usadas = inicio, 0, []
+        while i < n and j < len(objetivo):
+            if toks[i] == objetivo[j]:
+                usadas.append(i)
+                i, j = i + 1, j + 1
+            elif (
+                i + 1 < n
+                and palabras[i][1].rstrip().endswith(("-", "­", "‐"))
+                and toks[i] + toks[i + 1] == objetivo[j]
+            ):
+                usadas += [i, i + 1]
+                i, j = i + 2, j + 1
+            elif not toks[i]:  # viñetas o símbolos sueltos entre palabras
+                i += 1
+            else:
+                break
+        if j == len(objetivo):
+            lineas: dict[tuple[int, int], pymupdf.Rect] = {}
+            for k in usadas:
+                r, _, linea = palabras[k]
+                lineas[linea] = lineas[linea] | r if linea in lineas else pymupdf.Rect(r)
+            return list(lineas.values())
+    return []
+
+
 def locate(
     page: pymupdf.Page, literal: str, bbox: tuple[float, float, float, float]
 ) -> list[pymupdf.Rect]:
+    por_palabras = locate_palabras(page, literal, bbox)
+    if por_palabras:
+        return por_palabras
     lit = " ".join(literal.split())
     hits = [r for r in page.search_for(lit, flags=_SEARCH_FLAGS) if _inside(r, bbox)]
     if hits:

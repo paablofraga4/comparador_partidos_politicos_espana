@@ -43,6 +43,8 @@ class CandidaturaEnConvocatoria(_Model):
     dentro_de: str | None = None
     estado: Literal["provisional", "presentada", "proclamada", "no-proclamada"] | None = None
     circunscripciones: list[str] = Field(default_factory=list)
+    # Siglas con que concurre en cada circunscripción (p. ej. barcelona: PSC), según el BOE
+    listas: dict[str, str] = Field(default_factory=dict)
 
 
 class Candidatura(_Model):
@@ -55,6 +57,8 @@ class Candidatura(_Model):
     color: str = Field(pattern=r"^#[0-9A-Fa-f]{6}$")
     web: str
     vigilar: list[str] = Field(default_factory=list)
+    # Expresiones regulares de las siglas con que concurre en el BOE (p. ej. el PSOE como PSC)
+    siglas_boe: list[str] = Field(default_factory=list)
     incluir: Literal["siempre", "si-concurre-por-separado"] | None = None
     nota: str | None = None
     miembros: list[str] = Field(default_factory=list)

@@ -58,10 +58,30 @@ Responde con amabilidad y redirige cuando le piden:
   sencillo, con las mismas citas.
 
 ### HU-3.7 Uso justo y control de coste
-- Por persona anónima, un máximo de preguntas por hora (configurable, por defecto 20).
-- Un **tope de gasto diario** global. Al alcanzarlo, el chat se pausa con un mensaje amable
-  y el comparador sigue funcionando.
-- Conversaciones de 10 turnos como máximo; a partir de ahí se sugiere empezar otra.
+Nadie puede gastar más de lo presupuestado. El comparador no usa la API en tiempo real, así
+que **la web sigue funcionando entera aunque el chat se pause**. Hay cinco capas de defensa
+(actualizado el 6 de octubre):
+
+1. **Tope duro en OpenAI.** La clave de producción pertenece a un proyecto de OpenAI propio
+   del chat, con un límite de gasto mensual duro. Al alcanzarlo, OpenAI rechaza las llamadas,
+   y el chat lo detecta y se pausa con un mensaje amable.
+2. **Tope diario propio.** Se calcula a partir de los *tokens* de cada respuesta (por
+   defecto 1,5 $ al día). Así el presupuesto mensual no se agota en un solo día de pico.
+3. **Por persona anónima**: 15 preguntas por hora y 40 al día, medidas con un hash de la IP
+   con sal diaria.
+4. **Tamaño acotado**:
+   - preguntas de 500 caracteres como máximo;
+   - conversaciones de 10 turnos;
+   - respuestas con tope de *tokens*;
+   - un máximo de 4 pasos de búsqueda por pregunta.
+5. **Antibots**: un campo trampa y los límites anteriores. Si se detecta abuso, se activa con
+   una variable de entorno un desafío invisible y sin cookies de seguimiento (Cloudflare
+   Turnstile).
+
+Además, para que cada euro dé para más:
+- Las **preguntas sugeridas** tienen respuestas generadas de antemano (coste cero por visita).
+- El modelo del chat será el más barato que supere los evals: `gpt-6-luna` cuesta unas 20
+  veces menos que `gpt-6.1-sol`.
 
 ### HU-3.8 Privacidad
 - No se guarda el texto de las preguntas ni de las respuestas (constitución VI.2).

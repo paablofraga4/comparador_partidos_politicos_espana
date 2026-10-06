@@ -8,6 +8,7 @@ import { candidaturasVisibles, programaVigente } from "./reglas";
 import type {
   Analisis,
   Candidatura,
+  Circunscripcion,
   ConvocatoriaId,
   Fuente,
   ProgramaVigente,
@@ -60,6 +61,16 @@ export function analisis(conv: ConvocatoriaId, cand: string): Analisis | null {
 
 export function candidaturas(): Candidatura[] {
   return candidaturasVisibles(registro());
+}
+
+/** Circunscripciones al Congreso según el BOE (vacío hasta que se publiquen las candidaturas). */
+export function circunscripciones(): Circunscripcion[] {
+  return memo("circunscripciones", () =>
+    existsSync(path.join(DATA_DIR, "circunscripciones.yaml"))
+      ? readYaml<{ circunscripciones: Circunscripcion[] }>("circunscripciones.yaml")
+          .circunscripciones
+      : [],
+  );
 }
 
 export function candidatura(id: string): Candidatura | undefined {

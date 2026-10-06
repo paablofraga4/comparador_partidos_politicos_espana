@@ -16,10 +16,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "texto",
-        "citas"
-      ],
+      "required": ["texto", "citas"],
       "title": "Afirmacion",
       "type": "object"
     },
@@ -67,9 +64,7 @@
           "default": null
         }
       },
-      "required": [
-        "menciona"
-      ],
+      "required": ["menciona"],
       "title": "AnalisisTema",
       "type": "object"
     },
@@ -135,11 +130,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "chunk",
-        "pagina",
-        "literal"
-      ],
+      "required": ["chunk", "pagina", "literal"],
       "title": "Cita",
       "type": "object"
     },
@@ -163,12 +154,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "sha256",
-        "paginas",
-        "idioma"
-      ],
+      "required": ["id", "sha256", "paginas", "idioma"],
       "title": "DocumentoRef",
       "type": "object"
     },
@@ -228,11 +214,7 @@
           "title": "Coste Usd"
         }
       },
-      "required": [
-        "fecha",
-        "modelo",
-        "prompt"
-      ],
+      "required": ["fecha", "modelo", "prompt"],
       "title": "Generado",
       "type": "object"
     },
@@ -310,11 +292,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "inflesz",
-        "max_palabras_frase",
-        "ok"
-      ],
+      "required": ["inflesz", "max_palabras_frase", "ok"],
       "title": "Legibilidad",
       "type": "object"
     },
@@ -342,12 +320,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "texto",
-        "citas",
-        "id",
-        "subtema"
-      ],
+      "required": ["texto", "citas", "id", "subtema"],
       "title": "Propuesta",
       "type": "object"
     },
@@ -379,10 +352,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "pagina",
-        "r"
-      ],
+      "required": ["pagina", "r"],
       "title": "Rect",
       "type": "object"
     },
@@ -406,9 +376,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "ejecutada"
-      ],
+      "required": ["ejecutada"],
       "title": "RedSeguridad",
       "type": "object"
     }
@@ -425,10 +393,7 @@
     },
     "estado": {
       "default": "borrador",
-      "enum": [
-        "borrador",
-        "aprobado"
-      ],
+      "enum": ["borrador", "aprobado"],
       "title": "Estado",
       "type": "string"
     },
@@ -473,14 +438,7 @@
       "type": "array"
     }
   },
-  "required": [
-    "convocatoria",
-    "candidatura",
-    "documento",
-    "generado",
-    "temas",
-    "citas"
-  ],
+  "required": ["convocatoria", "candidatura", "documento", "generado", "temas", "citas"],
   "title": "Analisis",
   "type": "object"
 }

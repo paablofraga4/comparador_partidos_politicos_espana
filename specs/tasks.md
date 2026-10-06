@@ -18,7 +18,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-104 `vc extract`: páginas, bloques, etiquetas, jerarquía de secciones, idioma y OCR. **V:** test con PDF de prueba
 - [x] T-105 `vc chunk`: ids estables, cabecera contextual y respeto de párrafos. **V:** tests
 - [x] T-106 Localizar y registrar los PDFs de 2023 con continuidad (10/11; **Junts pendiente**: solo hay copia oficial truncada). **V:** `vc status`
-- [ ] T-107 Elegir los modelos (`/v1/models`) y documentarlos. **Requiere la `OPENAI_API_KEY`**
+- [x] T-107 Elegir los modelos (`/v1/models`) y documentarlos → `config/models.env`
 - [x] T-108 `vc verify`: literalidad normalizada y rectángulos (también entre dos páginas). **V:** tests con citas falsas
 - [x] T-109 `vc validate` (esquemas, citas, límites, completitud y lectura fácil). **V:** falla con datos corruptos
 
@@ -27,33 +27,33 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-111 Red de seguridad para «no menciona» (búsqueda híbrida local). **V:** test con un tema escondido
 - [x] T-112 `vc easy-read`: generación, reglas UNE (INFLESZ…) y juez de fidelidad. **V:** tests de reglas
 - [x] T-113 `vc report`: informe Markdown para el PR. **V:** informe de ejemplo
-- [ ] T-114 Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
+- [ ] T-114 (3/11 en rama `datos/2023`; Junts registrado desde beteve.cat con permiso; **bloqueado: sin crédito en OpenAI**) Ejecutar todo 2023, revisar con `grounding-auditor` y `neutrality-reviewer`, y aprobar en un único PR
 
 ## F2 · Comparador web (mié 7 - jue 8)
-- [ ] T-201 Next.js 16, TypeScript estricto, Tailwind v4, shadcn/ui, Vitest y Playwright en `web/`. **V:** build
-- [ ] T-202 Concretar la skill `editorial-design` en código: tokens, tipografías, componentes base y modo oscuro
-- [ ] T-203 Capa de datos (`data/` en el build, regla de *fallback*, tipos desde el JSON Schema). **V:** tests del *fallback*
-- [ ] T-204 Inicio
-- [ ] T-205 Selector de candidaturas y temas con el estado en la URL
-- [ ] T-206 Comparativa (escritorio en columnas, móvil en tarjetas)
-- [ ] T-207 Ficha de candidatura y página de tema
-- [ ] T-208 Panel de fuente: página del PDF con el resaltado visible y *scroll* al fragmento, páginas contiguas y URL propia. **V:** e2e en escritorio y móvil
-- [ ] T-209 Visor completo `/programas/...` con búsqueda
-- [ ] T-210 Modo lectura fácil
-- [ ] T-211 Metodología (criterio del BOE, estado y fechas, lectura fácil) y «¿Ves un error?» (plantilla de *issue*)
+- [x] T-201 Next.js 16, TypeScript estricto, Tailwind v4, shadcn/ui, Vitest y Playwright en `web/`. **V:** build
+- [x] T-202 Concretar la skill `editorial-design` en código: tokens, tipografías, componentes base y modo oscuro
+- [x] T-203 Capa de datos (`data/` en el build, regla de *fallback*, tipos desde el JSON Schema). **V:** tests del *fallback*
+- [x] T-204 Inicio
+- [x] T-205 Selector de candidaturas y temas con el estado en la URL
+- [x] T-206 Comparativa (escritorio en columnas, móvil en tarjetas)
+- [x] T-207 Ficha de candidatura y página de tema
+- [x] T-208 Panel de fuente: página del PDF con el resaltado visible y *scroll* al fragmento, páginas contiguas y URL propia. **V:** e2e en escritorio y móvil
+- [x] T-209 Visor completo `/programas/...` con búsqueda
+- [x] T-210 Modo lectura fácil
+- [x] T-211 Metodología (criterio del BOE, estado y fechas, lectura fácil) y «¿Ves un error?» (plantilla de *issue*)
 - [ ] T-212 SEO y Open Graph
 - [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer`
 
 ## F3 · Chat (vie 9)
-- [ ] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos
-- [ ] T-302 Búsqueda híbrida con RRF, búsqueda por candidatura y *reranking*. **V:** evals de recuperación
-- [ ] T-303 `/api/chat`: AI SDK, 4 *tools*, *prompt* de sistema y validador de citas. **V:** tests del validador
-- [ ] T-304 Interfaz del chat (*streaming*, citas → panel, sugerencias y acotado)
-- [ ] T-305 Límites de uso, tope de gasto diario y métricas agregadas
-- [ ] T-306 `evals/`: 60 o más preguntas, juez y runner; `evals.yml`. **V:** umbrales de la spec 003
+- [x] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos
+- [x] T-302 Búsqueda híbrida con RRF, búsqueda por candidatura y *reranking*. **V:** evals de recuperación
+- [x] T-303 `/api/chat`: AI SDK, 4 *tools*, *prompt* de sistema y validador de citas. **V:** tests del validador
+- [x] T-304 Interfaz del chat (*streaming*, citas → panel, sugerencias y acotado)
+- [x] T-305 Límites de uso, tope de gasto diario y métricas agregadas
+- [ ] T-306 `evals/`: 62 preguntas, juez y runner ✓ (falta EJECUTARLOS: requiere crédito en OpenAI). **V:** umbrales de la spec 003
 
 ## F4 · Despliegue y lanzamiento (sáb 10 - dom 11)
-- [ ] T-401 `Dockerfile` y prueba del build en local
+- [x] T-401 `Dockerfile`, `railway.json` y `/api/salud`; build *standalone* probado en local
 - [ ] T-402 Railway: proyecto, Postgres con pgvector, variables y *pre-deploy*. **Requiere tu `railway login`**
 - [ ] T-403 `ci.yml` e `ingest.yml` en GitHub Actions. **Requiere el secreto `OPENAI_API_KEY` en GitHub**
 - [ ] T-404 `watch-programs.yml` (versión mínima: páginas `vigilar` → *issue*)

@@ -248,3 +248,10 @@ def test_single_schema_keeps_cache_prefix(sample_pdf: Path, data_dir: Paths):
     doc.close()
     schemas = {c["text_format"] for c in calls if c["text_format"].__name__ == "TemaLLM"}
     assert len(schemas) == 1, "el esquema debe ser idéntico en todos los temas (caché)"
+
+
+def test_codigos_de_carretera_no_son_siglas():
+    res = legibility.check(["UPN quiere terminar la autopista AP-15.", "También la N-121-A."])
+    assert not any("Sigla" in a for a in res.avisos)
+    res2 = legibility.check(["Quiere más dinero para el CGPJ.", "El CGPJ debe cambiar."])
+    assert [a for a in res2.avisos if "Sigla" in a] == ["Sigla sin explicar: CGPJ"]

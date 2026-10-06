@@ -101,6 +101,19 @@ convocatorias:
         paginas: 132
         estado: publicado
         nota: Programa en catalán (idioma original)
+      junts:
+        url: https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf
+        url_archivo: https://web.archive.org/web/20261006072244/https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf
+        fichero: documents/generales-2023/junts.pdf
+        sha256: 7f73e138b6020f9a12ff260f7baeb3aa2807b60903e91052435f7e0ded7d938b
+        descargado: '2026-10-06T07:22:50Z'
+        origen: pdf
+        paginas: 148
+        estado: publicado
+        nota: Copia publicada por beteve.cat (julio 2023). La versión oficial (junts.cat/wp-content/uploads/2023/08/Programa-Electoral-Definitiu-def.pdf)
+          ya no está disponible y su única copia archivada está truncada. Mismo título interno («Programa
+          Electoral Definitiu»), 148 págs., creado el 7-7-2023; recomprimido. Uso aprobado por el propietario
+          el 6-10-2026.
   generales-2026:
     fecha: '2026-11-29'
     programas: {}
