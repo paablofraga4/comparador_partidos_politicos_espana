@@ -476,3 +476,29 @@ def vigilar_boe_cmd(
     for e in errores:
         console.print(f"[yellow]⚠ {e}")
     console.print(f"{len(novedades)} disposiciones · {len(errores)} errores")
+
+
+@app.command(name="boe-candidaturas")
+def boe_candidaturas_cmd(
+    fase: Annotated[str, typer.Option(help="presentadas | proclamadas")],
+    boe_id: Annotated[str | None, typer.Option("--id", help="Identificador BOE-A-…")] = None,
+    archivo: Annotated[Path | None, typer.Option(help="XML del BOE ya descargado")] = None,
+    informe: Annotated[
+        Path | None, typer.Option(help="Escribe el informe Markdown para el PR")
+    ] = None,
+) -> None:
+    """Aplica las candidaturas del BOE al registro (fase BOE, constitución I.6)."""
+    from .boe import descargar, parse
+    from .boe_registro import aplicar
+
+    if not (boe_id or archivo):
+        console.print("[red]✗ Indica --id o --archivo")
+        raise typer.Exit(1)
+    xml = archivo.read_text(encoding="utf-8") if archivo else descargar(boe_id or "")
+    doc = parse(xml)
+    paths = _paths()
+    res = aplicar(doc, fase, paths.candidaturas, paths.data / "circunscripciones.yaml")
+    md = res.markdown(doc, fase)
+    if informe:
+        informe.write_text(md + "\n", encoding="utf-8")
+    console.print(md)

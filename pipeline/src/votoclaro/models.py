@@ -43,6 +43,8 @@ class CandidaturaEnConvocatoria(_Model):
     dentro_de: str | None = None
     estado: Literal["provisional", "presentada", "proclamada", "no-proclamada"] | None = None
     circunscripciones: list[str] = Field(default_factory=list)
+    # Siglas con que concurre en cada circunscripción (p. ej. barcelona: PSC), según el BOE
+    listas: dict[str, str] = Field(default_factory=dict)
 
 
 class Candidatura(_Model):
