@@ -82,6 +82,15 @@ export default function Inicio() {
               Ver estado
             </Link>
           </p>
+          <p className="mt-4 text-sm">
+            <Link
+              href="/elecciones-generales-2026"
+              className="inline-flex min-h-11 items-center gap-1 font-semibold underline-offset-4 hover:underline"
+            >
+              Guía de las elecciones: fechas, escaños y partidos{" "}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </Link>
+          </p>
         </div>
       </section>
 

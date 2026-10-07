@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato } from "@/components/piezas";
 import { VisorDocumento } from "@/components/visor-documento";
 import { candidatura, fuente } from "@/lib/data";
@@ -34,6 +35,13 @@ export default async function Programa(props: PageProps<"/programas/[cand]/[conv
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <MigasJsonLd
+        migas={[
+          { nombre: "Partidos", ruta: "/partidos" },
+          { nombre: c.corto, ruta: `/partidos/${c.id}` },
+          { nombre: `Programa ${cv.corto}`, ruta: `/programas/${c.id}/${conv}` },
+        ]}
+      />
       <nav aria-label="Migas" className="text-ink-muted text-sm">
         <Link href={`/partidos/${c.id}`} className="hover:text-ink">
           {c.corto}

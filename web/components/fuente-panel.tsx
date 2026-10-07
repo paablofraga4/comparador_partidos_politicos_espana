@@ -29,7 +29,7 @@ type Datos = {
  * Panel de fuente (spec 002, HU-2.3): lateral en escritorio, pantalla completa en móvil.
  * Muestra la página exacta del programa con el fragmento citado resaltado y visible.
  */
-export function FuentePanel() {
+export function FuentePanel({ inicial = null }: { inicial?: string | null }) {
   const [fuente, setFuente] = useQueryState(FUENTE_PARAM, fuenteParser);
   // Resultado asociado a la cita que lo pidió: si cambia la cita, el anterior deja de valer
   const [res, setRes] = useState<{ key: string; datos?: Datos; error?: boolean } | null>(null);
@@ -54,6 +54,15 @@ export function FuentePanel() {
     window.addEventListener(EVENTO_FUENTE, abrir);
     return () => window.removeEventListener(EVENTO_FUENTE, abrir);
   }, [setFuente]);
+
+  // El panel se carga en diferido: la cita que provocó la carga llega como `inicial` y se aplica
+  // una sola vez (si no, al cerrar el panel podría volver a abrirse)
+  const inicialAplicada = useRef(false);
+  useEffect(() => {
+    if (!inicial || inicialAplicada.current) return;
+    inicialAplicada.current = true;
+    void setFuente(inicial);
+  }, [inicial, setFuente]);
 
   useEffect(() => {
     if (!fuente) {

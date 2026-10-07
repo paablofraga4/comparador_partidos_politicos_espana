@@ -42,7 +42,10 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-210 Modo lectura fácil
 - [x] T-211 Metodología (criterio del BOE, estado y fechas, lectura fácil) y «¿Ves un error?» (plantilla de *issue*)
 - [x] T-212 SEO y Open Graph (canónicas, sitemap, robots, imagen de marca, WebSite, llms.txt, redirección al dominio, Search Console)
-- [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer`
+- [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer` — 7 oct: axe (Lighthouse) 100 en 6 páginas tras subir el contraste de `--ink-faint`; falta lector de pantalla y `ui-reviewer`
+- [x] T-214 Páginas partido × tema (`/partidos/[id]/[tema]`), enlaces internos y sitemap (HU-2.11). **V:** títulos, `noindex` en «no menciona», build
+- [x] T-215 Guía `/elecciones-generales-2026` con fuentes del BOE (HU-2.12). **V:** cifras contra el anexo del RD 806/2026
+- [x] T-216 Migas de pan `BreadcrumbList` (HU-2.9). **V:** JSON-LD válido en cada tipo de página
 
 ## F3 · Chat (vie 9)
 - [x] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos
@@ -57,7 +60,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-402 Railway: proyecto, Postgres con pgvector y variables (web); la base se prepara al arrancar (`instrumentation.ts`)
 - [ ] T-403 `ci.yml` e `ingest.yml` en GitHub Actions. **Requiere el secreto `OPENAI_API_KEY` en GitHub**
 - [ ] T-404 `watch-programs.yml` (versión mínima: páginas `vigilar` → *issue*)
-- [ ] T-405 Rendimiento (Lighthouse), revisión final con los tres agentes y correcciones
+- [ ] T-405 Rendimiento (Lighthouse), revisión final con los tres agentes y correcciones — 7 oct: rendimiento 93-99 en móvil (fuente serif 129→56 KiB, panel de fuente diferido, JS inicial 197→151 KiB); falta la revisión final
 - [ ] T-406 🚀 Lanzamiento: despliegue y *smoke test* en producción
 
 ## F4b · Cupo gratis y bonos (spec 004)

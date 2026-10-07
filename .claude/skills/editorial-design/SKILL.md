@@ -25,6 +25,7 @@ concreta en código (`web/app/globals.css` + componentes base) y actualiza esta 
 | `--paper-raised` | `#FFFFFF` | `#1A1C20` | tarjetas, panel |
 | `--ink` | `#16181D` | `#ECEAE4` | texto principal, botones primarios |
 | `--ink-muted` | `#5B6170` | `#A3A7B0` | texto secundario (≥ 4.5:1) |
+| `--ink-faint` | `#686D78` | `#868B95` | notas, metadatos y fuentes (≥ 4.5:1 sobre papel, tarjeta y hundido; antes #8A8F9A: 3,05:1, no cumplía AA) |
 | `--rule` | `#E4E0D6` | `#2A2D33` | separadores, bordes |
 | `--marker` | `#FFE45C` | `#FFE45C` @ 30 % | subrayado/resaltado de cita |
 | `--notice` | `#8A5A00` sobre `#FFF4DB` | `#F2C46D` sobre `#2B2210` | aviso "programa de 2023" |
