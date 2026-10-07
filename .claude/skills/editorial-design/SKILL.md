@@ -53,6 +53,13 @@ o subrayado de pestaña. Nunca texto sobre color de partido salvo que pase AA.
 - **NoMention**: texto `--ink-muted` en cursiva suave "No lo menciona en su programa" +
   enlace "Comprobar en el documento". Nunca rojo.
 - **EasyReadToggle**: interruptor en cabecera, etiqueta visible "Lectura fácil".
+- **Icono de la web** (pestaña, favoritos, iPhone): «V» en tinta sobre una franja de
+  rotulador, con fondo papel. Se dibuja con trazados, sin depender de fuentes, para que se
+  vea igual en pestañas claras y oscuras.
+  - El original es `app/icon.svg`.
+  - `app/favicon.ico` (16, 32 y 48 px) y `app/apple-icon.png` (180 px, a sangre, sin
+    esquinas redondeadas porque iOS las recorta) se rasterizan desde ese SVG: si cambia,
+    regenéralos.
 
 ## Movimiento (Motion)
 - 150-250 ms, `ease-out`; entrada de tarjetas con desplazamiento 8 px + opacidad, en cascada

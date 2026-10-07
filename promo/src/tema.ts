@@ -25,6 +25,7 @@ export const C = {
   tinta: "#16181D",
   tenue: "#5B6170",
   linea: "#E4E0D6",
+  lineaFuerte: "#CFC9BB",
   rotulador: "#FFE45C",
 };
 

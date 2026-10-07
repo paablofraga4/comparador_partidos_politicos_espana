@@ -1,11 +1,12 @@
 /**
  * Las 7 escenas del vídeo, para los dos formatos. Cada escena cuenta una micro-historia
  * (preparación → acción → reacción → reposo) y presenta un solo elemento protagonista.
- * Neutralidad: siempre todos los partidos en el orden alfabético de la web; la cita que se
- * abre es la del primero (BNG), sin destacar a nadie más.
+ * Neutralidad: PP, PSOE, Sumar y VOX (las cuatro fuerzas estatales con grupo propio) en el orden
+ * alfabético de la web, con el mismo trato; la cita que se abre es la del primero (PP) y en el
+ * chat se iluminan todas las citas a medida que aparecen.
  */
 import type { ReactNode } from "react";
-import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
 import {
   camara,
@@ -25,98 +26,62 @@ import {
   type Rect,
   type Toma,
 } from "./componentes";
+import posiciones from "./posiciones.json";
 import { C, D, GEO, SANS, SERIF, type Formato } from "./tema";
 
 type Punto = { x: number; y: number };
 
-/** Puntos de interés de cada captura (px CSS), medidos sobre las capturas reales. */
-const P: Record<
-  Formato,
-  {
-    compara: Toma[];
-    cita: Punto;
-    cursorCita: Punto;
-    fuente: Toma[];
-    resaltado: Rect;
-    interruptor: Punto;
-    cursorInterruptor: Punto;
-    facil: Toma[];
-    burbuja: Rect;
-    respuesta: Rect;
-    citaChat: Rect;
-    chat: Toma[];
-  }
-> = {
-  horizontal: {
-    compara: [
-      { f: 0, zoom: 1, x: 720, y: 420 },
-      { f: 40, zoom: 1, x: 720, y: 420 },
-      { f: 205, zoom: 1.18, x: 720, y: 700 },
-    ],
-    cita: { x: 351, y: 720 },
-    cursorCita: { x: 610, y: 840 },
-    fuente: [
-      { f: 0, zoom: 1.18, x: 720, y: 700 },
-      { f: 40, zoom: 1.6, x: 390, y: 700 },
-      { f: 82, zoom: 1.6, x: 390, y: 700 },
-      { f: 110, zoom: 1, x: 720, y: 450 },
-      { f: 135, zoom: 1, x: 720, y: 450 },
-      { f: 165, zoom: 1.25, x: 1000, y: 400 },
-      { f: 195, zoom: 1.6, x: 1237, y: 345 },
-    ],
-    resaltado: { x: 1098, y: 309, w: 278, h: 58 },
-    interruptor: { x: 1151, y: 32 },
-    cursorInterruptor: { x: 960, y: 230 },
-    facil: [
-      { f: 0, zoom: 1, x: 720, y: 300 },
-      { f: 72, zoom: 1, x: 720, y: 300 },
-      { f: 98, zoom: 1.05, x: 720, y: 540 },
-      { f: 128, zoom: 1.12, x: 720, y: 780 },
-    ],
-    burbuja: { x: 750, y: 499, w: 336, h: 54 },
-    respuesta: { x: 362, y: 572, w: 716, h: 218 },
-    citaChat: { x: 534, y: 610, w: 78, h: 26 },
-    // Arranca bajo el titular de la página (no lo corta) y acaba en la primera cita
-    chat: [
-      { f: 0, zoom: 1, x: 720, y: 552 },
-      { f: 150, zoom: 1, x: 720, y: 552 },
-      { f: 200, zoom: 1.45, x: 660, y: 640 },
-    ],
-  },
-  vertical: {
-    compara: [
-      { f: 0, zoom: 1, x: 195, y: 420 },
-      { f: 40, zoom: 1, x: 195, y: 420 },
-      { f: 205, zoom: 1.1, x: 195, y: 560 },
-    ],
-    cita: { x: 135, y: 675 },
-    cursorCita: { x: 300, y: 770 },
-    fuente: [
-      { f: 0, zoom: 1.1, x: 195, y: 560 },
-      { f: 40, zoom: 1.45, x: 170, y: 640 },
-      { f: 82, zoom: 1.45, x: 170, y: 640 },
-      { f: 110, zoom: 1, x: 195, y: 422 },
-      { f: 135, zoom: 1, x: 195, y: 422 },
-      { f: 180, zoom: 1.45, x: 237, y: 316 },
-    ],
-    resaltado: { x: 136, y: 292, w: 202, h: 44 },
-    interruptor: { x: 247, y: 32 },
-    cursorInterruptor: { x: 150, y: 230 },
-    facil: [
-      { f: 0, zoom: 1, x: 195, y: 320 },
-      { f: 72, zoom: 1, x: 195, y: 320 },
-      { f: 128, zoom: 1.05, x: 195, y: 600 },
-    ],
-    burbuja: { x: 46, y: 222, w: 333, h: 54 },
-    respuesta: { x: 17, y: 294, w: 357, h: 432 },
-    citaChat: { x: 48, y: 386, w: 78, h: 28 },
-    chat: [
-      { f: 0, zoom: 1, x: 195, y: 422 },
-      { f: 150, zoom: 1, x: 195, y: 422 },
-      { f: 200, zoom: 1.18, x: 195, y: 400 },
-    ],
-  },
+/** Posiciones medidas por capturas.mjs sobre las capturas reales (px CSS). */
+const POS: Record<Formato, typeof posiciones.escritorio> = {
+  horizontal: posiciones.escritorio,
+  vertical: posiciones.movil,
 };
+
+const centro = (r: Rect): Punto => ({ x: r.x + r.w / 2, y: r.y + r.h / 2 });
+const mas = (p: Punto, dx: number, dy: number): Punto => ({ x: p.x + dx, y: p.y + dy });
+
+/** Escala de la captura con zoom 1 y alto de la captura que cabe en pantalla (px CSS). */
+function encuadre(formato: Formato) {
+  const g = GEO[formato];
+  const k = g.pantalla.ancho / g.captura.vw;
+  return { k, visible: g.pantalla.alto / k, vw: g.captura.vw, vh: g.captura.vh };
+}
+
+/** Tomas de cámara y puntos del cursor, derivados de las posiciones medidas. */
+function plan(formato: Formato) {
+  const v = formato === "vertical";
+  const m = POS[formato];
+  const { visible, vw } = encuadre(formato);
+  const arriba = { zoom: 1, x: vw / 2, y: visible / 2 };
+  const cita = centro(m.cita);
+  const resaltado = centro(m.resaltado);
+  const interruptor = centro(m.interruptor);
+  // Escritorio: la comparativa se acerca a la cita · Móvil: se queda quieta mientras se desliza
+  const finCompara: Omit<Toma, "f"> = v ? arriba : { zoom: 1.1, ...cita };
+  const cerca = v ? 1.45 : 1.6;
+  return {
+    compara: [{ f: 0, ...arriba }, { f: 40, ...arriba }, { f: 205, ...finCompara }] as Toma[],
+    cita,
+    cursorCita: mas(cita, v ? 150 : 260, v ? 110 : 140),
+    fuente: [
+      { f: 0, ...finCompara },
+      { f: 40, zoom: cerca, ...cita },
+      { f: 82, zoom: cerca, ...cita },
+      { f: 110, ...arriba },
+      { f: 135, ...arriba },
+      ...(v ? [] : [{ f: 165, zoom: 1.25, x: (arriba.x + resaltado.x) / 2, y: (arriba.y + resaltado.y) / 2 }]),
+      { f: v ? 180 : 195, zoom: cerca, ...resaltado },
+    ] as Toma[],
+    interruptor,
+    cursorInterruptor: mas(interruptor, v ? -90 : -190, 200),
+    // La lectura fácil alarga las tarjetas: la cámara baja hasta verlas enteras
+    facil: [
+      { f: 0, ...arriba },
+      { f: 72, ...arriba },
+      { f: 128, zoom: 1, x: vw / 2, y: m.tarjeta.y - (v ? 20 : 30) + visible / 2 },
+    ] as Toma[],
+  };
+}
 
 const captura = (formato: Formato, nombre: string) => `capturas/${GEO[formato].captura.prefijo}-${nombre}.png`;
 
@@ -200,7 +165,21 @@ export function Gancho({ formato }: { formato: Formato }) {
 }
 
 // --- 2 · Compara ----------------------------------------------------------------------------------
+/** Fotogramas en que empieza cada arrastre del carrusel móvil (uno por tarjeta siguiente). */
+const DESLIZA = [56, 102, 148];
+
 export function Compara({ formato }: { formato: Formato }) {
+  const f = useCurrentFrame();
+  const m = POS[formato];
+  const t = m.tarjeta;
+  // Móvil: una captura por tarjeta; la nueva entra deslizándose sobre la zona del carrusel
+  const zona = { x: 0, y: t.y - 6, w: GEO[formato].captura.vw, h: GEO[formato].captura.vh - t.y + 6 };
+  const a = { x: t.x + t.w * 0.8, y: t.y + t.h * 0.5 };
+  const b = { x: t.x + t.w * 0.2, y: a.y };
+  const tramos = DESLIZA.slice(0, m.tarjetas - 1).flatMap((ini, i, arr) => [
+    { ini, de: a, a: b, pulsado: true },
+    ...(i < arr.length - 1 ? [{ ini: ini + 19, de: b, a, pulsado: false }] : []),
+  ]);
   return (
     <Escena
       formato={formato}
@@ -216,8 +195,31 @@ export function Compara({ formato }: { formato: Formato }) {
           sub="Elige partidos y temas: sus propuestas, una al lado de otra."
         />
       }
-      capas={[{ src: captura(formato, "comparar") }]}
-      tomas={P[formato].compara}
+      capas={[
+        { src: captura(formato, "comparar") },
+        ...DESLIZA.slice(0, m.tarjetas - 1).map((ini, i): Capa => {
+          const p = progreso(f, ini + 2, D.normal);
+          return { src: captura(formato, `comparar-${i + 2}`), recorte: zona, opacidad: p, dx: (1 - p) * 40 };
+        }),
+      ]}
+      tomas={plan(formato).compara}
+      encima={
+        tramos.length
+          ? (mapa, _k, fr) => {
+              let punto = a;
+              let pulsado = 0;
+              for (const tr of tramos) {
+                if (fr < tr.ini) break;
+                const p = progreso(fr, tr.ini, D.normal);
+                punto = { x: tr.de.x + (tr.a.x - tr.de.x) * p, y: tr.de.y };
+                pulsado = tr.pulsado ? Math.max(0, Math.min(1, (fr - tr.ini) / 3, (tr.ini + D.normal - fr) / 3)) : 0;
+              }
+              const visible = progreso(fr, 40, D.rapida) * (1 - progreso(fr, 172, D.rapida));
+              const pos = mapa(punto.x, punto.y);
+              return visible > 0 ? <Cursor x={pos.x} y={pos.y} opacidad={visible} pulsado={pulsado} onda={0} /> : null;
+            }
+          : undefined
+      }
     />
   );
 }
@@ -225,7 +227,7 @@ export function Compara({ formato }: { formato: Formato }) {
 // --- 3 · Fuente ----------------------------------------------------------------------------------
 export function Fuente({ formato }: { formato: Formato }) {
   const f = useCurrentFrame();
-  const p = P[formato];
+  const p = plan(formato);
   const cambio = progreso(f, 80, D.normal);
   return (
     <Escena
@@ -256,7 +258,7 @@ export function Fuente({ formato }: { formato: Formato }) {
         return (
           <>
             <RectCaptura
-              r={p.resaltado}
+              r={POS[formato].resaltado}
               mapa={mapa}
               k={k}
               style={{
@@ -277,7 +279,7 @@ export function Fuente({ formato }: { formato: Formato }) {
 // --- 4 · Lectura fácil ----------------------------------------------------------------------------
 export function Facil({ formato }: { formato: Formato }) {
   const f = useCurrentFrame();
-  const p = P[formato];
+  const p = plan(formato);
   const cambio = progreso(f, 46, D.rapida);
   return (
     <Escena
@@ -313,14 +315,33 @@ export function Facil({ formato }: { formato: Formato }) {
 }
 
 // --- 5 · Pregunta ---------------------------------------------------------------------------------
+/** La respuesta «se escribe» a ritmo constante, como el texto que llega del chat. */
+const ESCRIBE = { inicio: 44, dur: 150 };
+
 export function Pregunta({ formato }: { formato: Formato }) {
   const f = useCurrentFrame();
-  const p = P[formato];
-  const src = captura(formato, "chat");
+  const ch = POS[formato].chat;
+  const { k, visible, vw } = encuadre(formato);
+  const r = ch.respuesta;
   const burbuja = progreso(f, 16, D.normal);
-  // La respuesta «se escribe»: la tapa blanca se retira de arriba abajo
-  const escrita = progreso(f, 44, 100);
-  const r = p.respuesta;
+  const escrita = interpolate(f, [ESCRIBE.inicio, ESCRIBE.inicio + ESCRIBE.dur], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const borde = r.y + r.h * escrita;
+  // Desplazamiento de la página: la conversación sube por debajo de la cabecera y del formulario
+  // (pegado abajo, como en la web) siguiendo el texto que se escribe, hasta ver la respuesta entera
+  const pegado = visible - 12 - ch.formulario.h;
+  const s0 = Math.max(0, ch.burbuja.y + ch.burbuja.h + 24 - pegado);
+  const sMax = r.y + r.h + 16 - pegado;
+  const sMin = ch.burbuja.y - ch.cabecera - 8;
+  const s1 = Math.max(s0, sMin >= sMax - 16 ? (sMin + sMax) / 2 : sMax);
+  const s = Math.min(s1, Math.max(s0, borde + 16 - pegado));
+  const yFormulario = Math.min(ch.formularioNatural - s, pegado);
+  const pagina = captura(formato, "chat-pagina");
+  const vista = captura(formato, "chat");
+  const fo = ch.formulario;
+  const subeFormulario = fo.y - yFormulario;
   return (
     <Escena
       formato={formato}
@@ -337,24 +358,63 @@ export function Pregunta({ formato }: { formato: Formato }) {
         />
       }
       capas={[
-        { src },
-        { color: C.papel, recorte: p.burbuja },
-        { color: C.blanco, recorte: { x: r.x, y: r.y + r.h * escrita, w: r.w, h: r.h * (1 - escrita) } },
-        { src, recorte: p.burbuja, opacidad: burbuja, dy: (1 - burbuja) * 18 },
+        { src: pagina, alto: ch.alto, scroll: s },
+        { color: C.papel, recorte: ch.burbuja, alto: ch.alto, scroll: s },
+        { color: C.papel, recorte: { x: r.x - 2, y: borde - 1, w: r.w + 4, h: r.y + r.h + 3 - borde }, alto: ch.alto, scroll: s },
+        { src: pagina, alto: ch.alto, scroll: s, recorte: ch.burbuja, opacidad: burbuja, dy: (1 - burbuja) * 18 },
+        // Cabecera y formulario fijos. La cabecera sale del inicio (nada detrás de su desenfoque) y
+        // el formulario se recorta 2 px por dentro (en la captura roza el texto de detrás): debajo
+        // va su fondo blanco y encima se redibujan su borde y su sombra
+        { src: captura(formato, "inicio"), recorte: { x: 0, y: 0, w: vw, h: ch.cabecera } },
+        { color: C.blanco, recorte: fo, radio: 16, scroll: subeFormulario },
+        { src: vista, recorte: { ...fo, y: fo.y + 2, h: fo.h - 2 }, radio: 16, scroll: subeFormulario },
       ]}
-      tomas={p.chat}
-      encima={(mapa, k, fr) => (
-        <RectCaptura
-          r={p.citaChat}
-          mapa={mapa}
-          k={k}
-          style={{
-            borderRadius: 8,
-            outline: `3px solid ${C.rotulador}`,
-            boxShadow: `0 0 0 8px rgba(255,228,92,0.35), 0 0 30px rgba(255,228,92,0.6)`,
-            opacity: latido(fr, 206),
-          }}
-        />
+      tomas={[{ f: 0, zoom: 1, x: vw / 2, y: 0 }]}
+      encima={(_mapa, _k, fr) => (
+        <>
+          {/* Cada cita se ilumina al aparecer; el brillo se recorta entre la cabecera y el formulario */}
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: ch.cabecera * k,
+              height: (yFormulario - ch.cabecera) * k,
+              overflow: "hidden",
+            }}
+          >
+            {ch.citas.map((c, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "absolute",
+                  left: c.x * k,
+                  top: (c.y - s - ch.cabecera) * k,
+                  width: c.w * k,
+                  height: c.h * k,
+                  borderRadius: 8,
+                  outline: `3px solid ${C.rotulador}`,
+                  boxShadow: `0 0 0 8px rgba(255,228,92,0.35), 0 0 30px rgba(255,228,92,0.6)`,
+                  opacity: latido(fr, ESCRIBE.inicio + ((c.y + c.h - r.y) / r.h) * ESCRIBE.dur + 4),
+                }}
+              />
+            ))}
+          </div>
+          {/* Borde y sombra (shadow-lg) del formulario, como en la web */}
+          <div
+            style={{
+              position: "absolute",
+              left: fo.x * k,
+              top: yFormulario * k,
+              width: fo.w * k,
+              height: fo.h * k,
+              boxSizing: "border-box",
+              borderRadius: 16 * k,
+              border: `${k}px solid ${C.lineaFuerte}`,
+              boxShadow: `0 ${10 * k}px ${15 * k}px ${-3 * k}px rgba(0,0,0,0.1), 0 ${4 * k}px ${6 * k}px ${-4 * k}px rgba(0,0,0,0.1)`,
+            }}
+          />
+        </>
       )}
     />
   );
