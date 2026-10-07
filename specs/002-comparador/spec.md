@@ -124,6 +124,35 @@ fuente con un clic.
   - **Dominio propio**: la URL de Railway redirige (301) al dominio, salvo `/api` (*webhooks* y
     salud).
   - **Google Search Console**: verificación con una variable de entorno (meta etiqueta).
+- *Ampliado el 7 de octubre («posicionar bien la página»):* las páginas de partido, tema,
+  partido × tema, programa y guía declaran sus **migas de pan** (`BreadcrumbList`), para que
+  Google las muestre en los resultados.
+
+### HU-2.11 Una página por partido y tema (7 oct, a petición del propietario)
+**Como** persona que busca «qué propone VOX sobre vivienda» **quiero** una página que responda
+exactamente a eso **para** no tener que buscar dentro de la ficha completa.
+
+- `/partidos/[id]/[tema]`: el análisis de ese partido en ese tema, el mismo bloque que en su
+  ficha (resumen, propuestas y citas), con:
+  - aviso si es el programa de 2023;
+  - enlaces a lo que proponen **los demás partidos** sobre el mismo tema, en orden alfabético;
+  - enlaces a la comparativa del tema y a los demás temas del partido.
+- **Título**: «{Tema}: qué propone {siglas} en su programa electoral».
+- **Descripción**: se basa en el resumen verificado del análisis. No se escribe texto nuevo.
+- **Simetría**: todas las combinaciones existen con la misma estructura.
+- Las combinaciones que el programa **no menciona**, o de un partido sin programa propio:
+  - existen y dicen «No lo menciona»;
+  - son `noindex` y no entran en el sitemap, para no publicar páginas vacías.
+- La ficha del partido y la página de tema enlazan a estas páginas.
+
+### HU-2.12 Guía de las elecciones generales (7 oct, a petición del propietario)
+- `/elecciones-generales-2026` responde a qué se vota, cuándo, quién se presenta y dónde leer
+  los programas.
+- Cada dato cita su fuente: el Real Decreto 806/2026 de convocatoria (BOE-A-2026-20742) y el
+  calendario de la LOREG de la spec 001.
+  - El número de diputados es la suma del anexo del decreto, no se escribe de memoria.
+- **Neutral**: partidos en orden alfabético, sin valoraciones.
+- Enlazada desde la portada y el pie.
 
 ## Diseño: «editorial cívico»
 

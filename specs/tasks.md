@@ -43,6 +43,9 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-211 Metodología (criterio del BOE, estado y fechas, lectura fácil) y «¿Ves un error?» (plantilla de *issue*)
 - [x] T-212 SEO y Open Graph (canónicas, sitemap, robots, imagen de marca, WebSite, llms.txt, redirección al dominio, Search Console)
 - [ ] T-213 Accesibilidad (axe) y revisión con `ui-reviewer`
+- [x] T-214 Páginas partido × tema (`/partidos/[id]/[tema]`), enlaces internos y sitemap (HU-2.11). **V:** títulos, `noindex` en «no menciona», build
+- [x] T-215 Guía `/elecciones-generales-2026` con fuentes del BOE (HU-2.12). **V:** cifras contra el anexo del RD 806/2026
+- [x] T-216 Migas de pan `BreadcrumbList` (HU-2.9). **V:** JSON-LD válido en cada tipo de página
 
 ## F3 · Chat (vie 9)
 - [x] T-301 Postgres: migraciones (pgvector, unaccent, FTS en español, HNSW) y `db:sync` incremental de propuestas y fragmentos

@@ -20,6 +20,7 @@ Principios:
 - Proyecto independiente, sin relación con ningún partido. Sin anuncios.
 
 ## Páginas principales
+- [Elecciones generales del 29 de noviembre de 2026](${base}/elecciones-generales-2026): fechas, escaños y partidos, con fuentes del BOE.
 - [Comparar partidos por temas](${base}/comparar)
 - [Partidos](${base}/partidos)
 - [Temas](${base}/temas)
@@ -29,6 +30,8 @@ Principios:
 
 ## Partidos
 ${cs.map((c) => `- [${c.nombre}](${base}/partidos/${c.id})`).join("\n")}
+
+Cada partido tiene una página por tema: ${base}/partidos/{partido}/{tema} (por ejemplo, ${base}/partidos/${cs[0]?.id ?? "pp"}/vivienda).
 
 ## Temas
 ${temas()

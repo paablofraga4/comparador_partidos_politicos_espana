@@ -17,6 +17,11 @@ export function SiteFooter() {
         </div>
         <ul className="space-y-2">
           <li>
+            <Link className="hover:text-ink" href="/elecciones-generales-2026">
+              Elecciones generales 2026: fechas y partidos
+            </Link>
+          </li>
+          <li>
             <Link className="hover:text-ink" href="/metodologia">
               Cómo lo hacemos y criterios
             </Link>

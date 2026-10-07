@@ -9,6 +9,30 @@ export const IMAGEN_COMPARTIR = {
   alt: "¿Qué propone cada partido? Los programas electorales del 29N, explicados y con la fuente.",
 };
 
+/** Recorta un texto para una descripción, en el último espacio antes del límite. */
+export function extracto(texto: string, max = 155): string {
+  const t = texto.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const corte = t.lastIndexOf(" ", max - 1);
+  return `${t.slice(0, corte > 0 ? corte : max - 1).replace(/[,;:.]$/, "")}…`;
+}
+
+export type Miga = { nombre: string; ruta: string };
+
+/** Datos estructurados de migas de pan (Google las muestra en los resultados). */
+export function datosMigas(migas: Miga[], base: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: migas.map((m, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: m.nombre,
+      item: `${base}${m.ruta}`,
+    })),
+  };
+}
+
 /** «PP (Partido Popular)»; si las siglas y el nombre coinciden, solo uno («Sumar»). Así los
  * textos no dependen del artículo de cada partido («del PSOE», «de Sumar»). */
 export function nombrePartido(c: { corto: string; nombre: string }): string {

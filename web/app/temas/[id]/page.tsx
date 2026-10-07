@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
+import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidaturas, tema, temas, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
@@ -31,6 +32,12 @@ export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <MigasJsonLd
+        migas={[
+          { nombre: "Temas", ruta: "/temas" },
+          { nombre: t.nombre, ruta: `/temas/${t.id}` },
+        ]}
+      />
       <nav aria-label="Migas" className="text-ink-muted text-sm">
         <Link href="/temas" className="hover:text-ink">
           Temas
@@ -62,7 +69,7 @@ export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h2 className="text-xl font-semibold">
-                  <Link href={`/partidos/${c.id}#${t.id}`} className="hover:underline">
+                  <Link href={`/partidos/${c.id}/${t.id}`} className="hover:underline">
                     <Candidato c={c} />
                   </Link>
                 </h2>

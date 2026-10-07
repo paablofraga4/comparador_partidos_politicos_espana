@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
+import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, temas, vigente } from "@/lib/data";
 import { metaPagina, nombrePartido } from "@/lib/seo";
@@ -48,6 +49,12 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <MigasJsonLd
+        migas={[
+          { nombre: "Partidos", ruta: "/partidos" },
+          { nombre: c.corto, ruta: `/partidos/${c.id}` },
+        ]}
+      />
       <nav aria-label="Migas" className="text-ink-muted text-sm">
         <Link href="/partidos" className="hover:text-ink">
           Partidos
@@ -115,13 +122,19 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
               <section key={t.id} id={t.id} className="scroll-mt-28" aria-labelledby={`${t.id}-h`}>
                 <h2 id={`${t.id}-h`} className="flex items-center gap-2 text-2xl font-medium">
                   <TemaIcono icono={t.icono} className="text-ink-muted h-5 w-5" />
-                  <Link href={`/temas/${t.id}`} className="hover:underline">
+                  <Link href={`/partidos/${c.id}/${t.id}`} className="hover:underline">
                     {t.nombre}
                   </Link>
                 </h2>
                 <div className="mt-3">
                   <BloqueTema c={c} v={v} temaId={t.id} temaNombre={t.nombre} abiertas />
                 </div>
+                <Link
+                  href={`/temas/${t.id}`}
+                  className="text-ink-muted hover:text-ink mt-3 inline-flex min-h-11 items-center gap-1 text-sm underline-offset-4 hover:underline"
+                >
+                  Qué proponen los demás partidos sobre {t.nombre.toLowerCase()} →
+                </Link>
               </section>
             ))}
           </div>
