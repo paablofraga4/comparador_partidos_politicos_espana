@@ -3,7 +3,7 @@ import { Newsreader, Public_Sans } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Suspense } from "react";
 
-import { FuentePanel } from "@/components/fuente-panel";
+import { FuentePanelDiferido } from "@/components/fuente-panel-diferido";
 import { LECTURA_SCRIPT } from "@/components/lectura-facil";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -14,7 +14,6 @@ const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-newsreader",
   display: "swap",
-  axes: ["opsz"],
 });
 const publicSans = Public_Sans({
   subsets: ["latin"],
@@ -74,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <SiteFooter />
           <Suspense>
-            <FuentePanel />
+            <FuentePanelDiferido />
           </Suspense>
         </NuqsAdapter>
       </body>
