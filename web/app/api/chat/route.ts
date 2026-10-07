@@ -19,6 +19,7 @@ import {
   reservarGratis,
   reservarIp,
 } from "@/lib/bonos/cupo";
+import { ipCliente } from "@/lib/bonos/http";
 import { herramientas } from "@/lib/chat/herramientas";
 import { presupuestoAgotado, registrarUso, type TipoUso } from "@/lib/chat/limites";
 import { instrucciones } from "@/lib/chat/prompt";
@@ -72,11 +73,6 @@ function mensajeError(e: unknown): string {
     return "El asistente no está disponible en este momento. El comparador sigue funcionando con normalidad.";
   }
   return "Ha habido un problema al preparar la respuesta. No se ha descontado de tus preguntas. Inténtalo de nuevo en unos segundos.";
-}
-
-function ipCliente(req: Request): string {
-  const xff = req.headers.get("x-forwarded-for");
-  return (xff?.split(",")[0] ?? req.headers.get("x-real-ip") ?? "local").trim();
 }
 
 type Reserva =
