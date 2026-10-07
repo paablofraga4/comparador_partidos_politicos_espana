@@ -125,9 +125,15 @@ export type Capa = {
   src?: string;
   color?: string;
   opacidad?: number;
-  /** Recorte en px CSS de la captura (para animar solo una parte) */
+  /** Recorte en px CSS de la captura (para animar solo una parte), con esquinas redondeadas */
   recorte?: Rect;
+  radio?: number;
+  /** Desplazamiento en px del vídeo (deslizar tarjetas, entradas) */
+  dx?: number;
   dy?: number;
+  /** Alto de la imagen en px CSS cuando es la página entera, y cuánto se ha desplazado */
+  alto?: number;
+  scroll?: number;
 };
 type Mapa = (x: number, y: number) => { x: number; y: number };
 
@@ -159,17 +165,19 @@ export function Pantalla({
   return (
     <div style={{ position: "relative", width: ancho, height: alto, overflow: "hidden", background: C.papel }}>
       {capas.map((c, i) => {
+        const h = c.alto ?? vh;
+        const r = c.recorte;
         const style: CSSProperties = {
           position: "absolute",
           left: 0,
           top: 0,
           width: vw,
-          height: vh,
+          height: h,
           transformOrigin: "0 0",
-          transform: `translate(${tx}px, ${ty + (c.dy ?? 0)}px) scale(${k})`,
+          transform: `translate(${tx + (c.dx ?? 0)}px, ${ty + (c.dy ?? 0)}px) scale(${k}) translateY(${-(c.scroll ?? 0)}px)`,
           opacity: c.opacidad ?? 1,
-          clipPath: c.recorte
-            ? `inset(${c.recorte.y}px ${vw - c.recorte.x - c.recorte.w}px ${vh - c.recorte.y - c.recorte.h}px ${c.recorte.x}px)`
+          clipPath: r
+            ? `inset(${r.y}px ${vw - r.x - r.w}px ${h - r.y - r.h}px ${r.x}px${c.radio ? ` round ${c.radio}px` : ""})`
             : undefined,
         };
         return c.src ? (
