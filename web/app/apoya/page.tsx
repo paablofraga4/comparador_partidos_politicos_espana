@@ -9,7 +9,7 @@ import { COMISION, comisionEstimadaCent, iaUltimos30Usd, ingresosBonos } from "@
 import { desdePeriodo, tablon, type Tablon } from "@/lib/apoyos/tablon";
 import { estadoPagos, titular } from "@/lib/bonos/pagos";
 import { euros } from "@/lib/bonos/planes";
-import { costesFijos } from "@/lib/data";
+import { cargaIa, costesFijos } from "@/lib/data";
 import { getDb, hayDb } from "@/lib/db";
 import { metaPagina } from "@/lib/seo";
 
@@ -45,6 +45,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
   const tipoElegido = uno("tipo");
 
   const fijos = costesFijos();
+  const carga = cargaIa();
   const p = periodo();
   const desde = desdePeriodo(p);
   const apoyosActivos = estadoApoyos().activos;
@@ -112,7 +113,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           ))}
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
             <dt>
-              IA del chat
+              IA · consultas del chat
               <span className="text-ink-faint block text-sm">
                 Gasto real de los últimos 30 días. OpenAI cobra en dólares.
               </span>
@@ -120,6 +121,17 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
             <dd className="tabular font-medium">
               {iaUsd === null ? "pendiente de actualizar" : USD.format(iaUsd)}
             </dd>
+          </div>
+          <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
+            <dt>
+              IA · carga de los programas
+              <span className="text-ink-faint block text-sm">
+                Analizar y adaptar a lectura fácil los {carga.programas} programas. Se paga una vez
+                por programa y se repetirá con los del 29N. Es el mínimo registrado: no incluye los
+                reintentos.
+              </span>
+            </dt>
+            <dd className="tabular font-medium">{USD.format(carga.usd)} en total</dd>
           </div>
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
             <dt>

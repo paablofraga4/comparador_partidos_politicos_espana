@@ -66,6 +66,10 @@ El tablón **no** está en la portada: solo el enlace.
 - **Lo que cuesta al mes**, partida a partida:
   - la IA del chat, con el gasto real de los últimos 30 días, que ya se registra cada día de
     forma agregada;
+  - la IA de la carga de los programas (analizarlos y adaptarlos a lectura fácil), con la suma
+    de lo que registró cada análisis al generarse. Es un coste por programa, que se repetirá con
+    los del 29N, y un mínimo: no incluye los reintentos. *(Añadido el 8 oct a petición del
+    propietario.)*
   - servidor y base de datos (8 €/mes) y dominio (14 €/año, prorrateado: 1,17 €/mes), con las
     cifras de las facturas, que el propietario actualiza a mano en un archivo público del
     repositorio;

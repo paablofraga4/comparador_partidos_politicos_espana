@@ -1,6 +1,6 @@
 import "server-only";
 
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { parse } from "yaml";
 
@@ -112,6 +112,33 @@ export function costesFijos(): CosteFijo[] {
       return { ...c, actualizado: (f instanceof Date ? f.toISOString() : String(f)).slice(0, 10) };
     }),
   );
+}
+
+/**
+ * IA gastada en la carga de los programas (spec 005, HU-5.3): la suma de lo que registró cada
+ * análisis al generarse (análisis y lectura fácil). Es un mínimo: solo queda la última
+ * generación de cada programa, no los reintentos.
+ */
+export function cargaIa(): { usd: number; programas: number } {
+  return memo("cargaIa", () => {
+    const base = path.join(DATA_DIR, "analyses");
+    let usd = 0;
+    let programas = 0;
+    // Solo las carpetas de convocatoria (en analyses/ también hay un .gitkeep)
+    const convs = existsSync(base)
+      ? readdirSync(base, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name)
+      : [];
+    for (const conv of convs) {
+      for (const f of readdirSync(path.join(base, conv)).filter((x) => x.endsWith(".json"))) {
+        const a = JSON.parse(readFileSync(path.join(base, conv, f), "utf8")) as Analisis;
+        if (typeof a.generado?.coste_usd === "number") {
+          usd += a.generado.coste_usd;
+          programas++;
+        }
+      }
+    }
+    return { usd, programas };
+  });
 }
 
 /**
