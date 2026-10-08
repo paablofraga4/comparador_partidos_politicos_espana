@@ -71,7 +71,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-455 Documentación: `.env.example`, metodología/privacidad y runbook para activar los pagos
 
 ## F4c · Autoría y apoyos (spec 005, plan D17)
-- [ ] T-461 Autoría: `lib/autor.ts`, línea de *copyright* en el pie y `LICENSE`. **V:** test del pie
+- [x] T-461 Autoría: `lib/autor.ts`, línea de *copyright* en el pie y `LICENSE`. **V:** test del pie
 - [ ] T-462 Migración 003, `lib/apoyos` (nombres, interruptor, registro, tablón, cuentas) y `data/costes.yaml`. **V:** tests con PGlite
 - [ ] T-463 Rutas: iniciar, confirmar y simulada; eventos de apoyo en la pasarela y el *webhook*. **V:** flujo completo con la pasarela simulada
 - [ ] T-464 Interfaz: sección «Cómo se mantiene VotoClaro» en la portada, `/apoya` y `/apoya/gracias`; `ARG` en el `Dockerfile`. **V:** escritorio y 375 px

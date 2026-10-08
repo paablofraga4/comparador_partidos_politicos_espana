@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ANIO_COPYRIGHT, AUTOR } from "@/lib/autor";
+
 import { Wordmark } from "./brand";
 
 const REPO = `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_REPO ?? "paablofraga4/comparador_partidos_politicos_espana"}`;
@@ -51,6 +53,20 @@ export function SiteFooter() {
           <li>Código: licencia MIT · Análisis: CC BY 4.0</li>
           <li>Los programas electorales pertenecen a sus partidos.</li>
         </ul>
+      </div>
+      {/* Autoría (spec 005, HU-5.1): discreta, al final de todo */}
+      <div className="border-rule border-t">
+        <p className="text-ink-muted mx-auto max-w-6xl px-4 py-4 text-xs sm:px-6">
+          © {ANIO_COPYRIGHT}{" "}
+          <a
+            className="hover:text-ink underline-offset-2 hover:underline"
+            href={AUTOR.linkedin}
+            rel="author noopener"
+          >
+            {AUTOR.nombre}
+            <span className="sr-only"> (perfil de LinkedIn)</span>
+          </a>
+        </p>
       </div>
     </footer>
   );
