@@ -188,7 +188,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             {apoyosActivos && (
               <a href="#apoyar" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
-                Ayudar a cubrirlo
+                Contribuir
               </a>
             )}
             <a href="#bonos" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
