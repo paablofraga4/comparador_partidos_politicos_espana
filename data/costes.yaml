@@ -1,0 +1,14 @@
+# Costes fijos de VotoClaro (spec 005, HU-5.3), con las cifras de las facturas.
+# Se actualizan a mano cuando llega cada factura; la web muestra la fecha de cada partida.
+# La IA del chat no va aquí: se calcula con el gasto real registrado cada día.
+#   euros_mes: coste mensual · euros_ano: coste anual (la web lo prorratea por meses)
+
+fijos:
+  - id: servidor
+    nombre: Servidor y base de datos (Railway)
+    euros_mes: 8
+    actualizado: 2026-10-08
+  - id: dominio
+    nombre: Dominio votoclaro.app
+    euros_ano: 14
+    actualizado: 2026-10-08

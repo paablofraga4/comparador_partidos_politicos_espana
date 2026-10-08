@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { parse } from "yaml";
 
+import type { CosteFijo } from "./apoyos/cuentas";
 import { candidaturasVisibles, programaVigente } from "./reglas";
 import type {
   Analisis,
@@ -100,4 +101,29 @@ export function estadoProgramas29N() {
     return a && (a.estado === "aprobado" || MOSTRAR_BORRADORES);
   }).length;
   return { total: cs.length, con29N };
+}
+
+/** Costes fijos con las cifras de las facturas (spec 005, HU-5.3). */
+export function costesFijos(): CosteFijo[] {
+  return memo("costes", () =>
+    (readYaml<{ fijos: CosteFijo[] }>("costes.yaml").fijos ?? []).map((c) => {
+      // El YAML puede leer la fecha como Date: siempre AAAA-MM-DD
+      const f = c.actualizado as unknown;
+      return { ...c, actualizado: (f instanceof Date ? f.toISOString() : String(f)).slice(0, 10) };
+    }),
+  );
+}
+
+/**
+ * Siglas y nombres de todas las candidaturas del registro, para el filtro de nombres del tablón
+ * (spec 005, HU-5.6). Las siglas de varias palabras («EH Bildu») cuentan también por partes.
+ */
+export function nombresDePartidos(): string[] {
+  return memo("nombresPartidos", () =>
+    registro().candidaturas.flatMap((c) => [
+      c.corto,
+      c.nombre,
+      ...c.corto.split(/\s+/).filter((p) => p.length >= 2),
+    ]),
+  );
 }
