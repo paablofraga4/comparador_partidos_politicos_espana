@@ -188,7 +188,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             {apoyosActivos && (
               <a href="#apoyar" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
-                Ayudar a cubrirlo
+                Contribuir
               </a>
             )}
             <a href="#bonos" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
@@ -330,8 +330,8 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           Comprar preguntas del chat
         </h2>
         <p className="text-ink-muted mt-3 max-w-2xl">
-          El comparador es gratis y sin límite. El chat da 2 preguntas gratis; con un bono tienes más
-          y ayudas a cubrir lo que cuesta la IA.
+          El chat da 2 preguntas gratis; con un bono tienes más y ayudas a cubrir lo que cuesta la
+          IA.
         </p>
         {bonosActivos ? (
           <Planes />
