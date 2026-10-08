@@ -8,10 +8,16 @@ import { migrar } from "../indice";
 import { estadoApoyos, leerImporte, ocultos, periodo, urlPortal } from "./config";
 import {
   centMensual,
+  cobertura,
   comisionEstimadaCent,
   fijosMensualCent,
+  hoyEnEspana,
+  iaDesdeUsd,
   iaUltimos30Usd,
+  ingresosApoyos,
   ingresosBonos,
+  mesesEntre,
+  usdACent,
 } from "./cuentas";
 import { claveNombre, limpiarNombre, nombreParaTablon } from "./nombres";
 import {
@@ -212,6 +218,44 @@ describe("cuentas (HU-5.3)", () => {
     expect(fijos.map(centMensual)).toEqual([800, 117, null]);
     expect(fijosMensualCent(fijos)).toBe(917);
     expect(comisionEstimadaCent(1000, 2)).toBe(65);
+  });
+
+  it("barra del mes: costes del mes más la carga pendiente, que se va cubriendo con lo que sobra", () => {
+    // Sin ingresos: la meta es el mes más toda la carga
+    expect(cobertura({ costesMesCent: 1000, cargaCent: 1722, ingresosMesCent: 0, saldoAnteriorCent: 0 })).toEqual({
+      metaCent: 2722,
+      cargaPendienteCent: 1722,
+      pct: 0,
+    });
+    // Lo que sobró en meses anteriores se descuenta de la carga; un saldo negativo no la sube
+    expect(cobertura({ costesMesCent: 1000, cargaCent: 1722, ingresosMesCent: 500, saldoAnteriorCent: 722 })).toEqual({
+      metaCent: 2000,
+      cargaPendienteCent: 1000,
+      pct: 25,
+    });
+    expect(cobertura({ costesMesCent: 1000, cargaCent: 1722, ingresosMesCent: 0, saldoAnteriorCent: -500 }).cargaPendienteCent).toBe(1722);
+    // Carga cubierta: solo cuenta el mes, y nunca pasa del 100 %
+    expect(cobertura({ costesMesCent: 1000, cargaCent: 1722, ingresosMesCent: 3000, saldoAnteriorCent: 5000 })).toEqual({
+      metaCent: 1000,
+      cargaPendienteCent: 0,
+      pct: 100,
+    });
+    expect(usdACent(19.2475, { usdPorEur: 1.1177, fecha: "2026-10-07", fuente: "BCE" })).toBe(1722);
+    expect(mesesEntre("2026-10", "2026-10")).toBe(0);
+    expect(mesesEntre("2026-10", "2027-01")).toBe(3);
+    expect(hoyEnEspana(new Date("2026-10-31T23:30:00Z"))).toEqual({ dia: "2026-11-01", mes: "2026-11" });
+  });
+
+  it("IA y apoyos desde una fecha", async () => {
+    await db.exec(`delete from uso_diario;
+      insert into uso_diario (fecha, tipo, coste_usd) values
+        ('2026-10-02', 'gratis', 0.4), ('2026-09-20', 'gratis', 1);`);
+    expect(await iaDesdeUsd(db, "2026-10-01")).toBeCloseTo(0.4);
+    expect(await iaDesdeUsd(db, null)).toBeCloseTo(1.4);
+    const id = await apoyar("mensual", 500, "Ana", { id: "in_s", pago: "pi_s", cobrado: new Date("2026-09-15T10:00:00Z") });
+    await registrarCobro(db, { id: "in_o", apoyoId: id, importeCent: 500, pago: "pi_o", cobrado: new Date("2026-10-02T10:00:00Z") });
+    expect(await ingresosApoyos(db, new Date("2026-09-30T22:00:00Z"))).toEqual({ cent: 500, cobros: 1 });
+    expect(await ingresosApoyos(db, null)).toEqual({ cent: 1000, cobros: 2 });
   });
 
   it("IA de los últimos 30 días y bonos activos", async () => {

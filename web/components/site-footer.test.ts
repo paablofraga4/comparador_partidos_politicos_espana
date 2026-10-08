@@ -12,6 +12,9 @@ describe("pie (spec 005, HU-5.1)", () => {
     expect(html).toContain("© 2026");
     expect(html).toContain(`href="${AUTOR.linkedin}"`);
     expect(html).toContain(AUTOR.nombre);
+    // «LinkedIn» se ve (antes solo existía para lectores de pantalla y no se encontraba)
+    expect(html).toMatch(/>LinkedIn<\/a>/);
+    expect(html).toContain('href="/apoya"');
     expect(AUTOR.linkedin).toMatch(/^https:\/\/www\.linkedin\.com\/in\//);
   });
 });

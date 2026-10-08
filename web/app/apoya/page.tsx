@@ -5,11 +5,24 @@ import { costeMensualTexto, FormularioApoyo, TablonApoyos } from "@/components/a
 import { Planes } from "@/components/planes";
 import { SegunLectura } from "@/components/segun-lectura";
 import { estadoApoyos, ocultos, periodo, urlPortal } from "@/lib/apoyos/config";
-import { COMISION, comisionEstimadaCent, iaUltimos30Usd, ingresosBonos } from "@/lib/apoyos/cuentas";
-import { desdePeriodo, tablon, type Tablon } from "@/lib/apoyos/tablon";
-import { estadoPagos, titular } from "@/lib/bonos/pagos";
+import {
+  cobertura,
+  COMISION,
+  comisionEstimadaCent,
+  fijosMensualCent,
+  hoyEnEspana,
+  iaDesdeUsd,
+  iaUltimos30Usd,
+  ingresosApoyos,
+  ingresosBonos,
+  mesesEntre,
+  usdACent,
+} from "@/lib/apoyos/cuentas";
+import { desdePeriodo, inicioDeMes, tablon, type Tablon } from "@/lib/apoyos/tablon";
+import { AUTOR, CORREO_CONTACTO } from "@/lib/autor";
+import { estadoPagos } from "@/lib/bonos/pagos";
 import { euros } from "@/lib/bonos/planes";
-import { cargaIa, costesFijos } from "@/lib/data";
+import { ajustesCostes, cargaIa, costesFijos } from "@/lib/data";
 import { getDb, hayDb } from "@/lib/db";
 import { metaPagina } from "@/lib/seo";
 
@@ -33,7 +46,7 @@ const AVISOS: Record<string, string> = {
   pago: "No se ha podido abrir el pago. Inténtalo de nuevo en unos minutos.",
   cancelado: "Has cancelado el pago: no se ha cobrado nada.",
   pendiente: "El pago aún no está confirmado. Si se completa, tu apoyo aparecerá en unos minutos.",
-  error: "No hemos podido confirmar el pago. Si se te ha cobrado, escríbenos y lo revisamos.",
+  error: `No hemos podido confirmar el pago. Si se te ha cobrado, escríbenos a ${CORREO_CONTACTO} y lo revisamos.`,
 };
 
 const VACIO: Tablon = { top: [], ultimos: [], anonimos: 0, personas: 0, mensualesActivos: 0, totalCent: 0, cobros: 0 };
@@ -51,11 +64,16 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
   const apoyosActivos = estadoApoyos().activos;
   const bonosActivos = estadoPagos().activos;
   const portal = urlPortal();
-  const t0 = titular();
+
+  const { inicio, cambio } = ajustesCostes();
+  const hoy = hoyEnEspana();
+  const inicioMes = inicioDeMes();
 
   let t = VACIO;
   let iaUsd: number | null = null;
   let bonos = { cent: 0, cobros: 0 };
+  // Para la barra del mes: IA y entradas de este mes y de siempre
+  let mes = { iaUsd: 0, iaTotalUsd: 0, apoyos: { cent: 0, cobros: 0 }, apoyosTotal: { cent: 0, cobros: 0 }, bonos: { cent: 0, cobros: 0 }, bonosTotal: { cent: 0, cobros: 0 } };
   if (hayDb()) {
     try {
       const db = await getDb();
@@ -64,12 +82,47 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
         iaUltimos30Usd(db),
         ingresosBonos(db, desde),
       ]);
+      const [iaMes, iaTotal, apMes, apTotal, boMes, boTotal] = await Promise.all([
+        iaDesdeUsd(db, `${hoy.mes}-01`),
+        iaDesdeUsd(db, null),
+        ingresosApoyos(db, inicioMes),
+        ingresosApoyos(db, null),
+        ingresosBonos(db, inicioMes),
+        ingresosBonos(db, null),
+      ]);
+      mes = { iaUsd: iaMes, iaTotalUsd: iaTotal, apoyos: apMes, apoyosTotal: apTotal, bonos: boMes, bonosTotal: boTotal };
     } catch (e) {
       console.error("⚠ /apoya sin datos:", (e as Error).message);
     }
   }
   const comisiones = comisionEstimadaCent(t.totalCent + bonos.cent, t.cobros + bonos.cobros);
   const cuando = p === "mes" ? "este mes" : "desde el principio";
+
+  // Barra «este mes» (HU-5.3): lo que entra este mes frente a lo que cuesta este mes más lo que
+  // falta por cubrir de la carga de los programas. Sin cambio del BCE no se mezclan monedas.
+  const fijosMesCent = fijosMensualCent(fijos);
+  const barra = cambio
+    ? (() => {
+        const ingresosMesCent = mes.apoyos.cent + mes.bonos.cent;
+        const cobrosMes = mes.apoyos.cobros + mes.bonos.cobros;
+        const costesMesCent =
+          fijosMesCent + usdACent(mes.iaUsd, cambio) + comisionEstimadaCent(ingresosMesCent, cobrosMes);
+        const ingresosAntCent = mes.apoyosTotal.cent + mes.bonosTotal.cent - ingresosMesCent;
+        const cobrosAnt = mes.apoyosTotal.cobros + mes.bonosTotal.cobros - cobrosMes;
+        const costesAntCent =
+          fijosMesCent * mesesEntre(inicio, hoy.mes) +
+          usdACent(mes.iaTotalUsd - mes.iaUsd, cambio) +
+          comisionEstimadaCent(ingresosAntCent, cobrosAnt);
+        const cargaCent = usdACent(carga.usd, cambio);
+        return {
+          ingresosMesCent,
+          costesMesCent,
+          cargaCent,
+          ...cobertura({ costesMesCent, cargaCent, ingresosMesCent, saldoAnteriorCent: ingresosAntCent - costesAntCent }),
+        };
+      })()
+    : null;
+  const enEuros = (usd: number) => (cambio ? ` (≈ ${euros(usdACent(usd, cambio))})` : "");
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -84,8 +137,8 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           }
           facil={
             <p>
-              VotoClaro no tiene anuncios. Ningún partido lo paga. Aquí ves cuánto cuesta, cuánto
-              dinero entra y cómo puedes ayudar.
+              VotoClaro no tiene anuncios. No depende de ningún partido. Aquí ves cuánto cuesta,
+              cuánto dinero entra y cómo puedes ayudar.
             </p>
           }
         />
@@ -95,6 +148,54 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
         <p role="status" className="border-rule-strong bg-paper-raised mt-6 rounded-xl border p-4">
           {aviso}
         </p>
+      )}
+
+      {barra && (
+        <section
+          className="border-rule-strong bg-paper-raised mt-10 rounded-2xl border p-5 sm:p-6"
+          aria-labelledby="mes-h"
+        >
+          <h2 id="mes-h" className="font-serif text-2xl leading-tight">
+            Este mes llevamos cubierto el {barra.pct}&nbsp;%
+          </h2>
+          <div
+            role="progressbar"
+            aria-labelledby="mes-h"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={barra.pct}
+            className="bg-rule mt-4 h-3 overflow-hidden rounded-full"
+          >
+            {/* Mínimo visible del 1 % para que la barra no parezca rota con 0 € */}
+            <div className="bg-ink h-full rounded-full" style={{ width: `${Math.max(barra.pct, 1)}%` }} />
+          </div>
+          <p className="tabular mt-3 text-lg font-medium">
+            {euros(barra.ingresosMesCent)} de {euros(barra.metaCent)}
+          </p>
+          <p className="text-ink-muted mt-2 text-sm leading-relaxed">
+            La meta suma lo que cuesta este mes ({euros(barra.costesMesCent)}: servidor, dominio, IA
+            de las consultas y comisiones)
+            {barra.cargaPendienteCent > 0 ? (
+              <>
+                {" "}y lo que falta por cubrir de la carga de los programas (
+                {euros(barra.cargaPendienteCent)} de {euros(barra.cargaCent)}), que se paga una vez
+                por programa
+              </>
+            ) : null}
+            . Los dólares se pasan a euros al cambio del {cambio!.fuente} del {fecha(cambio!.fecha)}{" "}
+            (1&nbsp;€ = {cambio!.usdPorEur.toLocaleString("es-ES", { maximumFractionDigits: 4 })}&nbsp;$).
+          </p>
+          <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            {apoyosActivos && (
+              <a href="#apoyar" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
+                Ayudar a cubrirlo
+              </a>
+            )}
+            <a href="#bonos" className="inline-flex min-h-11 items-center font-medium underline underline-offset-4">
+              Comprar preguntas del chat
+            </a>
+          </p>
+        </section>
       )}
 
       <section className="mt-12" aria-labelledby="cuesta-h">
@@ -119,7 +220,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
               </span>
             </dt>
             <dd className="tabular font-medium">
-              {iaUsd === null ? "pendiente de actualizar" : USD.format(iaUsd)}
+              {iaUsd === null ? "pendiente de actualizar" : `${USD.format(iaUsd)}${enEuros(iaUsd)}`}
             </dd>
           </div>
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
@@ -131,7 +232,10 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
                 reintentos.
               </span>
             </dt>
-            <dd className="tabular font-medium">{USD.format(carga.usd)} en total</dd>
+            <dd className="tabular font-medium">
+              {USD.format(carga.usd)}
+              {enEuros(carga.usd)} en total
+            </dd>
           </div>
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
             <dt>
@@ -146,8 +250,11 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           </div>
         </dl>
         <p className="text-ink-muted mt-3 text-sm">
-          El desarrollo y la revisión los hace el autor sin cobrar. Las cifras fijas salen de las
-          facturas y están en el repositorio (
+          El desarrollo y la revisión los hace sin cobrar el autor, {AUTOR.nombre} (
+          <a className="underline" href={AUTOR.linkedin} rel="author noopener">
+            LinkedIn
+          </a>
+          ). Las cifras fijas salen de las facturas y están en el repositorio (
           <a
             className="underline"
             href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_REPO ?? "paablofraga4/comparador_partidos_politicos_espana"}/blob/main/data/costes.yaml`}
@@ -235,44 +342,31 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
 
       <section className="mt-12 scroll-mt-32" id="tablon" aria-labelledby="tablon-h">
         <h2 id="tablon-h" className="text-3xl font-medium">
-          Gracias a
+          Tablón de apoyos
         </h2>
+        <p className="text-ink-muted mt-2">Gracias a quienes hacen posible VotoClaro.</p>
         <TablonApoyos t={t} soloEsteMes={p === "mes"} />
       </section>
 
       <section className="mt-12" aria-labelledby="reglas-h">
         <h2 id="reglas-h" className="text-3xl font-medium">
-          Reglas para que siga siendo neutral
+          Neutralidad
         </h2>
         <ul className="text-ink-muted mt-4 list-disc space-y-2 pl-5 leading-relaxed">
           <li>
-            No aceptamos apoyos de partidos, candidaturas, sus fundaciones, candidatos ni cargos
-            públicos. Antes de pagar hay que confirmarlo; si llega uno, se devuelve.
+            Ninguna aportación influye de forma política: no cambia los análisis, ni el orden de los
+            partidos, ni las respuestas del chat.
           </li>
-          <li>Apoyar no cambia nada del contenido: ni los análisis, ni el orden, ni el chat.</li>
           <li>En el tablón solo salen nombres: sin logos, enlaces ni mensajes, tampoco de empresas.</li>
           <li>
             Los nombres con siglas de partidos, lemas, insultos o enlaces salen como anónimos, y
             podemos ocultar cualquier nombre.
           </li>
           <li>
-            ¿Quieres quitar o cambiar tu nombre? Escríbenos
-            {t0 ? (
-              <>
-                {" "}a{" "}
-                <a className="underline" href={`mailto:${t0.email}`}>
-                  {t0.email}
-                </a>
-              </>
-            ) : (
-              <>
-                {" "}(datos en el{" "}
-                <Link className="underline" href="/condiciones">
-                  aviso legal
-                </Link>
-                )
-              </>
-            )}{" "}
+            ¿Quieres quitar o cambiar tu nombre? Escríbenos a{" "}
+            <a className="underline" href={`mailto:${CORREO_CONTACTO}`}>
+              {CORREO_CONTACTO}
+            </a>{" "}
             y lo retiramos en menos de 7 días.
           </li>
         </ul>

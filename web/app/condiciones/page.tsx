@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { CORREO_CONTACTO } from "@/lib/autor";
 import { titular } from "@/lib/bonos/pagos";
 import { centimosPorPregunta, euros, fechaCaducidad, PLANES } from "@/lib/bonos/planes";
 import { metaPagina } from "@/lib/seo";
@@ -125,38 +126,30 @@ export default function Condiciones() {
         <h2 className="text-2xl font-medium">Apoyos voluntarios</h2>
         <p>
           Puedes apoyar VotoClaro cada mes o una vez. Es una aportación voluntaria para cubrir sus
-          costes (servidor, IA del chat y dominio): no es una compra, no da acceso a nada que no sea
-          gratis y no desgrava, porque VotoClaro no es una asociación ni una fundación. Apoyar no
-          cambia nada del contenido: ni los análisis, ni el orden de los partidos, ni el chat.
+          costes (servidor, IA y dominio): no es una compra, no da acceso a nada que no sea gratis y
+          no desgrava, porque VotoClaro no es una asociación ni una fundación.
         </p>
         <p>
-          No se aceptan apoyos de partidos, candidaturas, sus fundaciones, candidatos ni cargos
-          públicos. Antes de pagar confirmas que no aportas en nombre de ninguno de ellos. Si llega
-          un apoyo así, se devuelve.
+          Ninguna aportación influye de forma política: no cambia los análisis, ni el orden de los
+          partidos, ni las respuestas del chat.
         </p>
         <p>
           El apoyo mensual se cobra cada mes hasta que lo canceles, cuando quieras, desde el enlace
           «Gestionar o cancelar mi apoyo» de la página de apoyos o desde el recibo de Stripe. Si te
-          equivocas al apoyar, escríbenos en los 14 días siguientes
-          {t ? (
-            <>
-              {" "}
-              a{" "}
-              <a className="underline" href={`mailto:${t.email}`}>
-                {t.email}
-              </a>
-            </>
-          ) : null}{" "}
+          equivocas al apoyar, escríbenos en los 14 días siguientes a{" "}
+          <a className="underline" href={`mailto:${CORREO_CONTACTO}`}>
+            {CORREO_CONTACTO}
+          </a>{" "}
           y te lo devolvemos.
         </p>
         <p>
           Si escribes un nombre o alias en el pago, saldrá en el tablón de{" "}
-          <Link className="underline" href="/apoya">
+          <Link className="underline" href="/apoya#tablon">
             apoyos
           </Link>
           , sin importes. Los nombres con siglas de partidos, lemas, insultos o enlaces salen como
-          anónimos, y podemos ocultar cualquier nombre. Para quitar o cambiar el tuyo, escríbenos y
-          lo retiramos en menos de 7 días.
+          anónimos, y podemos ocultar cualquier nombre. Para quitar o cambiar el tuyo, escríbenos a{" "}
+          {CORREO_CONTACTO} y lo retiramos en menos de 7 días.
         </p>
       </section>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { urlPortal } from "@/lib/apoyos/config";
+import { CORREO_CONTACTO } from "@/lib/autor";
 
 export const metadata: Metadata = {
   title: "Gracias por apoyar VotoClaro",
@@ -13,8 +14,7 @@ export const dynamic = "force-dynamic";
 const NOMBRE: Record<string, string> = {
   publico: "Tu nombre saldrá en el tablón de apoyos.",
   anonimo: "Tu apoyo cuenta en los totales, sin tu nombre.",
-  filtrado:
-    "Tu apoyo cuenta, pero el nombre que escribiste no saldrá en el tablón: incluye siglas de partidos, un lema, un insulto o un enlace. Si crees que es un error, escríbenos.",
+  filtrado: `Tu apoyo cuenta, pero el nombre que escribiste no saldrá en el tablón: incluye siglas de partidos, un lema, un insulto o un enlace. Si crees que es un error, escríbenos a ${CORREO_CONTACTO}.`,
 };
 
 /** Agradecimiento tras el pago (spec 005, HU-5.4). La URL solo dice el tipo y el estado del nombre. */

@@ -181,7 +181,7 @@ se guarda el texto de las preguntas; tope de gasto diario.
     `parent.subscription_details.metadata`;
   - `custom_fields`:
     - `nombre`: texto opcional de 40 caracteres como máximo;
-    - `neutral`: desplegable obligatorio con una sola opción, la declaración de HU-5.6;
+    - (quitado el 8 oct, por cambio de HU-5.6) el desplegable `neutral` con la declaración;
   - `custom_text.submit`: aportación voluntaria, no desgrava y se puede cancelar.
 - **Eventos** en el mismo *webhook* que los bonos, `/api/bonos/webhook`:
   - `checkout.session.completed` con `apoyo_id` activa el apoyo y guarda el nombre. En los
@@ -232,7 +232,7 @@ se guarda el texto de las preguntas; tope de gasto diario.
 
   | Principio | Cómo lo cumple el plan |
   |---|---|
-  | I. Neutralidad | Ni el contenido ni el orden ni el chat leen nada de `apoyos`. Declaración obligatoria en Checkout, filtro de nombres con las candidaturas y ningún color de partido en el tablón. |
+  | I. Neutralidad | Ni el contenido ni el orden ni el chat leen nada de `apoyos`, y se dice en `/apoya`, `/condiciones` y el pago. Filtro de nombres con las candidaturas y ningún color de partido en el tablón. |
   | II. Grounding | No toca análisis ni citas. |
   | III. Transparencia | Costes versionados en `data/costes.yaml`, IA calculada con datos reales y comisiones rotuladas como estimación. |
   | IV. Asistente | No toca el chat. |

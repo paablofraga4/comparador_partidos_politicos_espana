@@ -45,7 +45,8 @@ export function SeccionMantenimiento({ fijos, activos }: { fijos: CosteFijo[]; a
             }
             facil={
               <p>
-                VotoClaro no tiene anuncios. Ningún partido lo paga. Mantener la web cuesta unos{" "}
+                VotoClaro no tiene anuncios. No depende de ningún partido. Mantener la web cuesta
+                unos{" "}
                 {alMes}&nbsp;euros al mes, más la inteligencia artificial que lee los programas y
                 responde en el chat. Si te sirve, puedes ayudar.
               </p>

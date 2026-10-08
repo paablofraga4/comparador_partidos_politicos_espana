@@ -29,6 +29,11 @@ export function SiteFooter() {
             </Link>
           </li>
           <li>
+            <Link className="hover:text-ink" href="/apoya">
+              Apoya VotoClaro: cuentas y tablón
+            </Link>
+          </li>
+          <li>
             <Link className="hover:text-ink" href="/metodologia#estado">
               Estado de los programas
             </Link>
@@ -56,15 +61,14 @@ export function SiteFooter() {
       </div>
       {/* Autoría (spec 005, HU-5.1): discreta, al final de todo */}
       <div className="border-rule border-t">
-        <p className="text-ink-muted mx-auto max-w-6xl px-4 py-4 text-xs sm:px-6">
-          © {ANIO_COPYRIGHT}{" "}
+        <p className="text-ink-muted mx-auto max-w-6xl px-4 py-4 text-sm sm:px-6">
+          © {ANIO_COPYRIGHT} {AUTOR.nombre} ·{" "}
           <a
-            className="hover:text-ink underline-offset-2 hover:underline"
+            className="hover:text-ink inline-flex min-h-11 items-center underline underline-offset-2"
             href={AUTOR.linkedin}
             rel="author noopener"
           >
-            {AUTOR.nombre}
-            <span className="sr-only"> (perfil de LinkedIn)</span>
+            LinkedIn
           </a>
         </p>
       </div>

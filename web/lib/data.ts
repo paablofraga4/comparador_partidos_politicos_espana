@@ -4,7 +4,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { parse } from "yaml";
 
-import type { CosteFijo } from "./apoyos/cuentas";
+import type { Cambio, CosteFijo } from "./apoyos/cuentas";
 import { candidaturasVisibles, programaVigente } from "./reglas";
 import type {
   Analisis,
@@ -112,6 +112,26 @@ export function costesFijos(): CosteFijo[] {
       return { ...c, actualizado: (f instanceof Date ? f.toISOString() : String(f)).slice(0, 10) };
     }),
   );
+}
+
+/** Mes de inicio de los costes y cambio USD→EUR del BCE, de data/costes.yaml (spec 005). */
+export function ajustesCostes(): { inicio: string; cambio: Cambio | null } {
+  return memo("ajustesCostes", () => {
+    const y = readYaml<{
+      inicio?: unknown;
+      cambio?: { usd_por_eur?: unknown; fecha?: unknown; fuente?: unknown };
+    }>("costes.yaml");
+    const texto = (v: unknown) => (v instanceof Date ? v.toISOString() : String(v ?? ""));
+    const c = y.cambio;
+    const usdPorEur = Number(c?.usd_por_eur);
+    return {
+      inicio: texto(y.inicio).slice(0, 7),
+      cambio:
+        c && usdPorEur > 0
+          ? { usdPorEur, fecha: texto(c.fecha).slice(0, 10), fuente: texto(c.fuente) }
+          : null,
+    };
+  });
 }
 
 /**

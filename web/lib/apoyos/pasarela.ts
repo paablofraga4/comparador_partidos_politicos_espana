@@ -34,15 +34,12 @@ export interface PasarelaApoyos {
   leerSesion(id: string): Promise<EstadoSesionApoyo>;
 }
 
-export const DECLARACION_NEUTRAL =
-  "Lo confirmo: ni partido, candidatura, fundación vinculada, candidato ni cargo público";
-
 export function avisoApoyo(tipo: TipoApoyo, importeCent: number, urlBase: string): string {
   const cuanto = tipo === "mensual" ? `de ${euros(importeCent)} al mes` : `de ${euros(importeCent)}`;
   return [
     `Es una aportación voluntaria ${cuanto}, no una compra, y no desgrava: VotoClaro no es una asociación ni una fundación.`,
     tipo === "mensual" ? "Puedes cancelarla cuando quieras desde la página de apoyos." : "",
-    "No se aceptan aportaciones de partidos, candidaturas, sus fundaciones, candidatos ni cargos públicos.",
+    "Ninguna aportación influye de forma política: no cambia los análisis, ni el orden de los partidos, ni las respuestas del chat.",
     `Condiciones: ${urlBase}/condiciones#apoyos`,
   ]
     .filter(Boolean)
@@ -110,13 +107,6 @@ function pasarelaStripe(): PasarelaApoyos {
             optional: true,
             label: { type: "custom", custom: "Nombre o alias para el tablón" },
             text: { maximum_length: 40 },
-          },
-          {
-            key: "neutral",
-            type: "dropdown",
-            optional: false,
-            label: { type: "custom", custom: "No aporto en nombre de un partido" },
-            dropdown: { options: [{ label: DECLARACION_NEUTRAL, value: "confirmo" }] },
           },
         ],
         custom_text: { submit: { message: avisoApoyo(tipo, importeCent, urlBase) } },
