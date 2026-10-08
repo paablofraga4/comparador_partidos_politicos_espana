@@ -70,6 +70,13 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-454 Interfaz: contador, tarjeta de planes (con lectura fácil), «Tengo un código», `/bono` y `/condiciones`. **V:** escritorio y 375 px
 - [x] T-455 Documentación: `.env.example`, metodología/privacidad y runbook para activar los pagos
 
+## F4c · Autoría y apoyos (spec 005, plan D17)
+- [ ] T-461 Autoría: `lib/autor.ts`, línea de *copyright* en el pie y `LICENSE`. **V:** test del pie
+- [ ] T-462 Migración 003, `lib/apoyos` (nombres, interruptor, registro, tablón, cuentas) y `data/costes.yaml`. **V:** tests con PGlite
+- [ ] T-463 Rutas: iniciar, confirmar y simulada; eventos de apoyo en la pasarela y el *webhook*. **V:** flujo completo con la pasarela simulada
+- [ ] T-464 Interfaz: sección «Cómo se mantiene VotoClaro» en la portada, `/apoya` y `/apoya/gracias`; `ARG` en el `Dockerfile`. **V:** escritorio y 375 px
+- [ ] T-465 Documentación: `.env.example`, `/condiciones`, sitemap y runbook `specs/005-autoria-y-apoyos/activar-apoyos.md`
+
 ## F5 · Campaña (después del lanzamiento)
 - [ ] T-501 Vigilancia completa: noticias e ingesta automática en borrador (12-14 oct)
 - [ ] T-502 `watch-boe.yml` y vigilancia de coaliciones (antes del 16 oct)
