@@ -139,23 +139,36 @@ El tablón **no** está en la portada: solo el enlace.
 - **Coste**: las comisiones de Stripe por apoyo se muestran como una partida más.
 
 ## Criterios de aceptación
-- [ ] El pie de todas las páginas muestra «© 2026 Pablo Fraga Naveira» con el enlace a
-      LinkedIn, y la licencia nombra al autor.
-- [ ] La portada termina con «Cómo se mantiene VotoClaro», el coste mensual, las tres formas de
-      ayudar y el enlace a `/apoya`, sin tablón.
-- [ ] `/apoya` muestra el coste por partidas, con la IA calculada a partir del gasto registrado
-      y la fecha de cada cifra.
-- [ ] Con la pasarela simulada:
+Verificados el 8 de octubre. Entre paréntesis, cómo: e2e = flujo completo con la pasarela
+simulada (`scripts/dev-apoyos.mjs`), test = Vitest con PGlite.
+
+- [x] El pie de todas las páginas muestra «© 2026 Pablo Fraga Naveira» con el enlace a
+      LinkedIn, y la licencia nombra al autor (test del pie).
+- [x] La portada termina con «Cómo se mantiene VotoClaro», el coste mensual, las tres formas de
+      ayudar y el enlace a `/apoya`, sin tablón (*build* y revisión visual).
+  - Cambio sobre HU-5.2: la portada es estática y no incluye la IA en la cifra («unos 9 € al
+    mes en servidor y dominio, más lo que gasta la IA del chat»); la cifra real de la IA está
+    en `/apoya`.
+- [x] `/apoya` muestra el coste por partidas, con la IA calculada a partir del gasto registrado
+      y la fecha de cada cifra (test y revisión visual).
+- [x] Con la pasarela simulada (e2e):
   - un apoyo mensual con nombre aparece en «Últimos apoyos» y, al cobrar otro mes, sube en
     «Quienes más han apoyado»;
   - un apoyo sin nombre solo suma en «personas que prefieren no salir» y en los totales;
-  - un pago devuelto sale del tablón y de los totales.
-- [ ] Un nombre con las siglas de una candidatura o con un enlace sale como anónimo.
-- [ ] Al cambiar el ajuste a «este mes», las listas y los totales solo cuentan el mes en curso.
-- [ ] Ninguna tabla guarda emails, IPs ni datos de tarjeta.
-- [ ] Con los apoyos apagados, o sin los datos del titular, no se puede apoyar y no aparecen
-      los botones.
-- [ ] Accesible: teclado, 375 px y lector de pantalla.
+  - un pago devuelto sale del tablón y de los totales;
+  - al cancelar el mensual deja de contar «cada mes», pero sigue en el tablón.
+- [x] Un nombre con las siglas de una candidatura o con un enlace sale como anónimo (test y e2e
+      con «Viva VOX»).
+- [x] Al cambiar el ajuste a «este mes», las listas y los totales solo cuentan el mes en curso
+      (test, con el inicio del mes en hora de España).
+- [x] Ninguna tabla guarda emails, IPs ni datos de tarjeta (diseño de la migración 003).
+- [x] Con los apoyos apagados, o sin los datos del titular, no se puede apoyar y no aparecen
+      los botones (test de las salvaguardas y *build* con el interruptor apagado y encendido).
+- [ ] Accesible.
+  - Teclado, 375 px y objetivos de 44 px: verificados.
+  - Lector de pantalla: falta probarlo (T-213).
+- [ ] **Producción, con Stripe en modo real**: lo prueba el propietario siguiendo
+      [activar-apoyos.md](activar-apoyos.md).
 
 ## Fuera de alcance
 - Recompensas por apoyar (niveles, ventajas en el chat, regalos).
@@ -166,5 +179,3 @@ El tablón **no** está en la portada: solo el enlace.
 - Asesoría legal o fiscal: el texto de los apoyos en `/condiciones` lo debe revisar la gestoría
   antes de activarlos.
 
-## Preguntas abiertas
-1. [ACLARAR: URL del perfil de LinkedIn.]
