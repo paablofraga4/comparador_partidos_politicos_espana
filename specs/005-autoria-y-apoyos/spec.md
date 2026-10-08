@@ -47,6 +47,9 @@ Queremos:
   solo existía para lectores de pantalla; el propietario no lo encontraba.)*
 - Va en texto pequeño y apagado, como el resto de avisos del pie. No hay foto ni logotipo.
 - `/apoya` también lo nombra, con su LinkedIn, al decir que el desarrollo no se cobra.
+- La portada, justo debajo de «Cómo se mantiene VotoClaro», lleva una línea: «Hecho por Pablo
+  Fraga Naveira, de forma independiente · LinkedIn · correo de contacto». *(8 oct, a petición
+  del propietario.)*
 - El pie enlaza a `/apoya` («Apoya VotoClaro: cuentas y tablón»).
 - El correo de contacto de los apoyos es votoclarocomparador@gmail.com.
 - La licencia del repositorio (MIT) nombra al mismo autor en lugar de «Los autores de
