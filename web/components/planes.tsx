@@ -134,7 +134,8 @@ export function TarjetaPlanes({
   );
 }
 
-function Planes() {
+/** Los 3 bonos con su botón de compra. También en /apoya (spec 005, HU-5.2). */
+export function Planes() {
   const [cargando, setCargando] = useState<IdPlan | null>(null);
   const [error, setError] = useState<string | null>(null);
 
