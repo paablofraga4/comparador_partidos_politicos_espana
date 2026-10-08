@@ -330,8 +330,8 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           Comprar preguntas del chat
         </h2>
         <p className="text-ink-muted mt-3 max-w-2xl">
-          El comparador es gratis y sin límite. El chat da 2 preguntas gratis; con un bono tienes más
-          y ayudas a cubrir lo que cuesta la IA.
+          El chat da 2 preguntas gratis; con un bono tienes más y ayudas a cubrir lo que cuesta la
+          IA.
         </p>
         {bonosActivos ? (
           <Planes />

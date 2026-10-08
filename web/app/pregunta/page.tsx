@@ -31,10 +31,7 @@ export default async function Pregunta(props: PageProps<"/pregunta">) {
         <li>· Solo responde con lo que dicen los programas oficiales.</li>
         <li>· No recomienda a quién votar ni valora propuestas.</li>
         <li>· No guardamos tus preguntas.</li>
-        <li>
-          · Tienes {numeroEnv("CHAT_GRATIS_TOTAL", 2)} preguntas gratis. El comparador es gratis y
-          sin límite.
-        </li>
+        <li>· Tienes {numeroEnv("CHAT_GRATIS_TOTAL", 2)} preguntas gratis.</li>
       </ul>
       <div className="mt-8">
         {activo ? (

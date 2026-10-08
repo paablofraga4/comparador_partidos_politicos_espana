@@ -24,7 +24,7 @@ const POR_QUE = {
 
 const PRONTO = {
   normal:
-    "Pronto podrás ampliar con un bono. Mientras tanto, el comparador, las fuentes y la lectura fácil siguen siendo gratis y sin límite.",
+    "Pronto podrás ampliar con un bono. Mientras tanto, puedes seguir comparando los programas con sus fuentes.",
   facil: "Pronto podrás comprar más preguntas. El comparador sigue siendo gratis.",
 };
 
