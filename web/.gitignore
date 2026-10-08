@@ -47,3 +47,4 @@ next-env.d.ts
 /test-results
 /scripts/dist
 /.pglite
+/.pglite-apoyos

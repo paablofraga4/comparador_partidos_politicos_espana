@@ -1,8 +1,9 @@
 import { ArrowRight, BookOpenCheck, Columns3, Quote } from "lucide-react";
 import Link from "next/link";
 
+import { SeccionMantenimiento } from "@/components/apoyos";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidaturas, estadoProgramas29N, registro, temas, vigente } from "@/lib/data";
+import { candidaturas, costesFijos, estadoProgramas29N, registro, temas, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 import { urlDelSitio } from "@/lib/sitio";
 
@@ -177,6 +178,9 @@ export default function Inicio() {
           ))}
         </ol>
       </section>
+
+      {/* Spec 005, HU-5.2. La portada es estática: el interruptor se lee en el build (ARG) */}
+      <SeccionMantenimiento fijos={costesFijos()} activos={process.env.APOYOS_ACTIVOS === "1"} />
     </>
   );
 }

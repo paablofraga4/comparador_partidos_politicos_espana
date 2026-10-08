@@ -206,6 +206,11 @@ export default function Metodologia() {
           </Link>
           .
         </p>
+        <p>
+          Si <Link className="underline" href="/apoya">apoyas VotoClaro</Link>, guardamos solo el
+          nombre o alias que escribas para el tablón (si lo escribes), el importe, el tipo y las
+          fechas. Tu email y tu tarjeta los tiene Stripe; nosotros no los guardamos.
+        </p>
       </section>
     </article>
   );

@@ -160,6 +160,97 @@ se guarda el texto de las preguntas; tope de gasto diario.
   interfaz pinta la tarjeta de planes.
 - **Tests** con PGlite: cupo, bonos, caducidad, devoluciones y salvaguardas.
 
+**D17 · Autoría y apoyos (spec 005)**:
+- **Autoría**: el nombre y el LinkedIn del autor son constantes en `lib/autor.ts` (no variables
+  de entorno: el *copyright* no depende del despliegue). El pie añade la línea final y
+  `LICENSE` nombra al autor.
+- **Migración** `003_apoyos.sql`:
+  - `apoyos(id, tipo, importe_cent, nombre, estado, sesion, creado, activado)`, con `tipo`
+    mensual o puntual y `estado` pendiente, activo o cancelado. `nombre` solo se guarda si la
+    persona lo escribe y pasa el filtro; si no, es `null` (anónimo).
+  - `apoyo_cobros(id, apoyo, importe_cent, pago, cobrado, devuelto)`. `id` es la factura
+    (mensual) o el *PaymentIntent* (puntual), así que registrar el mismo cobro dos veces no
+    duplica nada. `pago` es el *PaymentIntent*, para las devoluciones.
+  - Sin emails, IPs ni ids de cliente o suscripción de Stripe: el apoyo se reconoce por su
+    `apoyo_id` en los metadatos.
+- **Stripe Checkout**, con el mismo SDK y la misma cuenta que los bonos:
+  - una vez: `mode: payment`, `price_data` con el importe elegido y
+    `payment_intent_data.metadata.apoyo_id`;
+  - cada mes: `mode: subscription`, `price_data.recurring.interval = month` y
+    `subscription_data.metadata.apoyo_id`. Las facturas lo heredan en
+    `parent.subscription_details.metadata`;
+  - `custom_fields`:
+    - `nombre`: texto opcional de 40 caracteres como máximo;
+    - `neutral`: desplegable obligatorio con una sola opción, la declaración de HU-5.6;
+  - `custom_text.submit`: aportación voluntaria, no desgrava y se puede cancelar.
+- **Eventos** en el mismo *webhook* que los bonos, `/api/bonos/webhook`:
+  - `checkout.session.completed` con `apoyo_id` activa el apoyo y guarda el nombre. En los
+    puntuales registra el cobro;
+  - `invoice.paid` registra cada cobro mensual. El *PaymentIntent* se lee con
+    `invoicePayments.list`;
+  - `customer.subscription.deleted` marca el apoyo como cancelado. Sus cobros siguen contando;
+  - `charge.refunded`, si es completa, marca el cobro como devuelto por su `pago`, igual que
+    anula los bonos.
+- **Vuelta del pago**: `/api/apoyos/confirmar` comprueba la sesión con Stripe, activa el apoyo
+  y redirige a `/apoya/gracias`, que dice si el nombre saldrá. Es idempotente, igual que el
+  *webhook*.
+- **Pasarela simulada**: en desarrollo, como en los bonos. Su *webhook* sin firma acepta
+  `apoyo-cobrado` y `devuelto` para probar meses siguientes y devoluciones.
+- **Filtro de nombres** (`lib/apoyos/nombres.ts`): se normaliza (espacios, 40 caracteres) y se
+  descarta, quedando anónimo, si contiene:
+  - un enlace o una arroba;
+  - las siglas o el nombre de una candidatura de `candidaturas.yaml`, como palabra completa y
+    sin distinguir mayúsculas ni tildes;
+  - un lema político o un insulto de una lista corta.
+
+  Ante la duda, el nombre se queda en anónimo.
+- **Ocultar un nombre** sin panel de administración: el `apoyo_id` aparece en los metadatos
+  del pago en Stripe, y el propietario lo añade a la variable `APOYOS_OCULTOS` de Railway, que
+  redespliega sola.
+- **Interruptor**: `APOYOS_ACTIVOS=1` con las mismas salvaguardas que `estadoPagos()`: claves de
+  Stripe y datos del titular. El enlace del portal de clientes de Stripe va en
+  `STRIPE_PORTAL_URL`. El periodo del tablón va en `APOYOS_PERIODO`, `total` (por defecto) o
+  `mes`.
+- **Cuentas** (`lib/apoyos/cuentas.ts`):
+  - costes fijos en `data/costes.yaml`, versionado y con fecha por partida;
+  - la IA, con la suma de `uso_diario.coste_usd` de los últimos 30 días, en dólares, porque
+    OpenAI factura en dólares y no inventamos un tipo de cambio;
+  - los bonos, con el precio de su plan si están activos;
+  - las comisiones de Stripe, estimadas al 1,5 % + 0,25 € por cobro, y rotuladas como
+    estimación.
+- **Páginas**:
+  - La portada sigue siendo estática: los costes fijos se leen en el *build* desde `data/`.
+    `APOYOS_ACTIVOS` se declara como `ARG` en el `Dockerfile` para que el *build* sepa si
+    pintar los botones, porque Railway solo pasa al *build* las variables declaradas.
+    Cambiarla redespliega.
+  - `/apoya` y `/apoya/gracias` son dinámicas (`force-dynamic`) y van con `noindex` solo en
+    gracias.
+  - En `/apoya` se reutiliza `TarjetaPlanes` para comprar preguntas del chat.
+  - Los formularios de apoyo son HTML (`POST` a `/api/apoyos/iniciar`, que responde con un 303
+    a Stripe): no añaden JavaScript.
+- **Puerta de la constitución**:
+
+  | Principio | Cómo lo cumple el plan |
+  |---|---|
+  | I. Neutralidad | Ni el contenido ni el orden ni el chat leen nada de `apoyos`. Declaración obligatoria en Checkout, filtro de nombres con las candidaturas y ningún color de partido en el tablón. |
+  | II. Grounding | No toca análisis ni citas. |
+  | III. Transparencia | Costes versionados en `data/costes.yaml`, IA calculada con datos reales y comisiones rotuladas como estimación. |
+  | IV. Asistente | No toca el chat. |
+  | V. Accesibilidad | Listas `<ol>`/`<ul>`, formularios con `<label>`, teclado, 375 px y objetivos de 44 px. Lectura fácil del texto de la portada. |
+  | VI. Privacidad | Sin emails, IPs ni ids de cliente. Nombre solo si se escribe para el tablón. Sin *cookies* nuevas. |
+  | VII. Calidad | Tests con PGlite y verificación con la pasarela simulada antes de `main`. |
+
+- **Verificación**:
+  - HU-5.1: test del pie y revisión visual;
+  - HU-5.2: *build* con el interruptor encendido y apagado, y revisión visual en escritorio y
+    375 px;
+  - HU-5.3 y HU-5.5: tests de cuentas y tablón (total y mes, top sin importes, anónimos,
+    devueltos, ocultos);
+  - HU-5.4 y HU-5.7: flujo completo con la pasarela simulada: mensual con nombre, segundo
+    cobro, puntual anónimo y devolución;
+  - HU-5.6: tests del filtro de nombres;
+  - HU-5.8: test de las salvaguardas del interruptor.
+
 ## Modelo de datos
 
 **Análisis** (`data/analyses/<conv>/<cand>.json`):

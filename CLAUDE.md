@@ -55,7 +55,8 @@ coalición o agrupación de electores); desde el BOE (~28 oct) entran todas las 
 - `git add -A` registra también borrados: revisa `git status` antes (lección: se borró `.env.example`).
 - `uv` puede no estar en el PATH en Windows: usa `python -m uv` (los hooks ya lo hacen).
 - **No edites código con heredocs de Python** (`python - <<EOF … s.replace(…)`): las secuencias
-  de escape (barra invertida + n, d, s…) se corrompen. Pasó 5 veces y llegó a `main`. Usa Edit/Write.
+  de escape (barra invertida + n, d, s…) se corrompen y en Windows quedan finales CRLF. Pasó 6
+  veces y llegó a `main`; desde la 6.ª lo bloquea `.claude/hooks/guard.mjs`. Usa Edit/Write.
 - Páginas: `pagina` = índice 1-based del PDF (visor); `pagina_impresa` = la que se muestra.
 - Candidaturas del 29N cambian hasta la proclamación (BOE ~3 nov): todo en `data/candidaturas.yaml`, nunca en código.
 - Comparador = extracción exhaustiva offline (no RAG); chat = RAG agéntico híbrido y simétrico (spec 001).

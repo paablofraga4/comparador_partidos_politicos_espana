@@ -42,6 +42,14 @@ if (tool === "Bash" || tool === "PowerShell") {
       );
     }
   }
+  // Editar código con un heredoc de Python corrompe los escapes (\n, \d…) y, en Windows, deja
+  // finales de línea CRLF. Pasó 6 veces (CLAUDE.md, «Gotchas»).
+  if (/\bpython\d*(\.exe)?\b[^\n]*<<[\s\S]*\.replace\([\s\S]*\.write\(/.test(cmd)) {
+    block(
+      "Bloqueado por el harness: no edites código con heredocs de Python (corrompen escapes y " +
+        "finales de línea). Usa Edit/Write.",
+    );
+  }
 }
 
 process.exit(0);

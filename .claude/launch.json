@@ -4,14 +4,29 @@
     {
       "name": "web",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "web", "run", "dev:preview"],
+      "runtimeArgs": [
+        "--prefix",
+        "web",
+        "run",
+        "dev:preview"
+      ],
       "port": 3000
     },
     {
       "name": "web-evals",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["web/scripts/dev-evals.mjs"],
+      "runtimeArgs": [
+        "web/scripts/dev-evals.mjs"
+      ],
       "port": 3101
+    },
+    {
+      "name": "web-apoyos",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "web/scripts/dev-apoyos.mjs"
+      ],
+      "port": 3102
     }
   ]
 }
