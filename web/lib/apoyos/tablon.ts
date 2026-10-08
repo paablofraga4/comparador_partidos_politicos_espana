@@ -65,13 +65,14 @@ export async function tablon(
   const fecha = (f: Fila) => (f.activado ? new Date(f.activado).getTime() : 0);
   const publicos = filas.filter((f) => f.nombre && !opciones.ocultos.has(f.id));
 
-  // El mismo nombre en varios apoyos suma como una sola persona
-  const porNombre = new Map<string, { nombre: string; total: number; desde: number }>();
+  // El mismo nombre en varios apoyos suma como una sola persona, con la grafía más reciente
+  const porNombre = new Map<string, { nombre: string; total: number; desde: number; ultimo: number }>();
   for (const f of publicos) {
     const k = claveNombre(f.nombre!);
-    const p = porNombre.get(k) ?? { nombre: f.nombre!, total: 0, desde: fecha(f) };
+    const p = porNombre.get(k) ?? { nombre: f.nombre!, total: 0, desde: fecha(f), ultimo: -1 };
     p.total += Number(f.total_cent);
     p.desde = Math.min(p.desde, fecha(f));
+    if (fecha(f) > p.ultimo) [p.nombre, p.ultimo] = [f.nombre!, fecha(f)];
     porNombre.set(k, p);
   }
   const top = [...porNombre.values()]

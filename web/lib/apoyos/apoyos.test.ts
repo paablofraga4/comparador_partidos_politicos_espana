@@ -47,6 +47,10 @@ async function apoyar(
   const id = await crearApoyoPendiente(db, tipo, cent);
   await activarApoyo(db, id, nombre);
   await registrarCobro(db, { id: cobro.id, apoyoId: id, importeCent: cent, pago: cobro.pago, cobrado: cobro.cobrado });
+  // Fechas distintas para que el orden sea el de la prueba (si no, todos se activan a la vez)
+  if (cobro.cobrado) {
+    await db.query("update apoyos set activado = $2 where id = $1", [id, cobro.cobrado.toISOString()]);
+  }
   return id;
 }
 
@@ -179,7 +183,8 @@ describe("tablón (HU-5.5)", () => {
     await apoyar("puntual", 300, "luis", { id: "pi_7", pago: "pi_7" });
 
     const t = await tablon(db, { desde: null, ocultos: new Set([oculto]) });
-    expect(t.top).toEqual(["Ana", "Luis"]); // 6 € frente a 6 €: empata y va antes quien empezó antes
+    // 6 € frente a 6 €: empata y va antes quien empezó antes; «luis» es su grafía más reciente
+    expect(t.top).toEqual(["Ana", "luis"]);
     expect(t.ultimos.map((u) => u.nombre)).toEqual(["luis", "Ana"]);
     expect(t.ultimos[1]).toMatchObject({ tipo: "mensual" });
     expect(t).toMatchObject({ anonimos: 2, personas: 5, mensualesActivos: 1, totalCent: 4700, cobros: 7 });
