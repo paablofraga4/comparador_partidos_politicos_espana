@@ -8,6 +8,7 @@ import Link from "next/link";
 import { IMPORTES, MINIMO_CENT, type TipoApoyo } from "@/lib/apoyos/config";
 import { centMensual, fijosMensualCent, type CosteFijo } from "@/lib/apoyos/cuentas";
 import type { Tablon } from "@/lib/apoyos/tablon";
+import { AUTOR, CORREO_CONTACTO } from "@/lib/autor";
 import { euros } from "@/lib/bonos/planes";
 
 import { SegunLectura } from "./segun-lectura";
@@ -79,6 +80,37 @@ export function SeccionMantenimiento({ fijos, activos }: { fijos: CosteFijo[]; a
           {activos ? "Ver quién lo apoya y en qué se gasta" : "Ver en qué se gasta"}
           <ArrowRight aria-hidden className="h-4 w-4" />
         </Link>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Quién hace VotoClaro (spec 005, HU-5.1): una sola línea bajo «Cómo se mantiene VotoClaro», en
+ * la misma banda. Sin foto ni logotipo.
+ */
+export function SeccionAutor() {
+  return (
+    <section aria-label="Quién hace VotoClaro" className="bg-paper-raised">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className="border-rule text-ink-muted border-t py-5 text-sm leading-relaxed">
+          Hecho por <span className="text-ink font-medium">{AUTOR.nombre}</span>, de forma
+          independiente ·{" "}
+          <a
+            href={AUTOR.linkedin}
+            rel="author noopener"
+            className="hover:text-ink inline-flex min-h-11 items-center underline underline-offset-2"
+          >
+            LinkedIn
+          </a>{" "}
+          ·{" "}
+          <a
+            href={`mailto:${CORREO_CONTACTO}`}
+            className="hover:text-ink inline-flex min-h-11 items-center break-all underline underline-offset-2"
+          >
+            {CORREO_CONTACTO}
+          </a>
+        </p>
       </div>
     </section>
   );
