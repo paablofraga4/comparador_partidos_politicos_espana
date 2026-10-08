@@ -39,20 +39,22 @@ export function SeccionMantenimiento({ fijos, activos }: { fijos: CosteFijo[]; a
             normal={
               <p>
                 VotoClaro no tiene anuncios ni ningún partido detrás. Mantenerlo cuesta unos{" "}
-                {alMes}&nbsp;€ al mes en servidor y dominio, más lo que gasta la IA del chat. Si te
-                resulta útil, puedes ayudar a cubrirlo.
+                {alMes}&nbsp;€ al mes en servidor y dominio, más la IA: la de cada consulta del chat
+                y la de analizar cada programa. Si te resulta útil, puedes ayudar a cubrirlo.
               </p>
             }
             facil={
               <p>
                 VotoClaro no tiene anuncios. Ningún partido lo paga. Mantener la web cuesta unos{" "}
-                {alMes}&nbsp;euros al mes, más el gasto del chat. Si te sirve, puedes ayudar.
+                {alMes}&nbsp;euros al mes, más la inteligencia artificial que lee los programas y
+                responde en el chat. Si te sirve, puedes ayudar.
               </p>
             }
           />
         </div>
         <p className="text-ink-faint mt-3 text-sm">
-          {fijos.map((c) => `${c.nombre}: ${partidaFija(c)}`).join(" · ")} · IA del chat: según el uso
+          {fijos.map((c) => `${c.nombre}: ${partidaFija(c)}`).join(" · ")} · IA: según el uso y
+          cada programa nuevo
         </p>
         <div className="mt-6 grid gap-3 sm:max-w-3xl sm:grid-cols-3">
           {activos && (

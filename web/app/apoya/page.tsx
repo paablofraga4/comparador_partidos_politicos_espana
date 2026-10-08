@@ -9,7 +9,7 @@ import { COMISION, comisionEstimadaCent, iaUltimos30Usd, ingresosBonos } from "@
 import { desdePeriodo, tablon, type Tablon } from "@/lib/apoyos/tablon";
 import { estadoPagos, titular } from "@/lib/bonos/pagos";
 import { euros } from "@/lib/bonos/planes";
-import { costesFijos } from "@/lib/data";
+import { cargaIa, costesFijos } from "@/lib/data";
 import { getDb, hayDb } from "@/lib/db";
 import { metaPagina } from "@/lib/seo";
 
@@ -45,6 +45,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
   const tipoElegido = uno("tipo");
 
   const fijos = costesFijos();
+  const carga = cargaIa();
   const p = periodo();
   const desde = desdePeriodo(p);
   const apoyosActivos = estadoApoyos().activos;
@@ -112,7 +113,7 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           ))}
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
             <dt>
-              IA del chat
+              IA · consultas del chat
               <span className="text-ink-faint block text-sm">
                 Gasto real de los últimos 30 días. OpenAI cobra en dólares.
               </span>
@@ -123,9 +124,21 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
           </div>
           <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
             <dt>
+              IA · carga de los programas
+              <span className="text-ink-faint block text-sm">
+                Analizar y adaptar a lectura fácil los {carga.programas} programas. Se paga una vez
+                por programa y se repetirá con los del 29N. Es el mínimo registrado: no incluye los
+                reintentos.
+              </span>
+            </dt>
+            <dd className="tabular font-medium">{USD.format(carga.usd)} en total</dd>
+          </div>
+          <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 py-3">
+            <dt>
               Comisiones de pago (Stripe)
               <span className="text-ink-faint block text-sm">
-                Estimación de lo cobrado {cuando}: {COMISION.porcentaje * 100} % +{" "}
+                Estimación de lo cobrado {cuando}:{" "}
+                {(COMISION.porcentaje * 100).toLocaleString("es-ES", { maximumFractionDigits: 2 })}&nbsp;% +{" "}
                 {euros(COMISION.fijoCent)} por pago.
               </span>
             </dt>
