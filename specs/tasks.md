@@ -75,7 +75,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-462 Migración 003, `lib/apoyos` (nombres, interruptor, registro, tablón, cuentas) y `data/costes.yaml`. **V:** tests con PGlite
 - [x] T-463 Rutas: iniciar, confirmar y simulada; eventos de apoyo en la pasarela y el *webhook*. **V:** flujo completo con la pasarela simulada
 - [x] T-464 Interfaz: sección «Cómo se mantiene VotoClaro» en la portada, `/apoya` y `/apoya/gracias`; `ARG` en el `Dockerfile`. **V:** escritorio y 375 px
-- [ ] T-465 Documentación: `.env.example`, `/condiciones`, sitemap y runbook `specs/005-autoria-y-apoyos/activar-apoyos.md`
+- [x] T-465 Documentación: `.env.example`, `/condiciones`, sitemap y runbook `specs/005-autoria-y-apoyos/activar-apoyos.md`
 
 ## F5 · Campaña (después del lanzamiento)
 - [ ] T-501 Vigilancia completa: noticias e ingesta automática en borrador (12-14 oct)

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/pregunta", 0.7],
     ["/tu-papeleta", 0.7],
     ["/metodologia", 0.5],
+    ["/apoya", 0.4],
     ["/condiciones", 0.2],
   ];
   const programas = candidaturas().flatMap((c) => {

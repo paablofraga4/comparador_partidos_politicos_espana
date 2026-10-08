@@ -6,8 +6,9 @@ import { centimosPorPregunta, euros, fechaCaducidad, PLANES } from "@/lib/bonos/
 import { metaPagina } from "@/lib/seo";
 
 export const metadata: Metadata = metaPagina({
-  titulo: "Aviso legal y condiciones de los bonos",
-  descripcion: "Quién está detrás de VotoClaro y condiciones de compra de los bonos del asistente.",
+  titulo: "Aviso legal y condiciones de los bonos y los apoyos",
+  descripcion:
+    "Quién está detrás de VotoClaro, condiciones de compra de los bonos del asistente y de los apoyos voluntarios.",
   ruta: "/condiciones",
 });
 
@@ -119,12 +120,54 @@ export default function Condiciones() {
         </p>
       </section>
 
+      {/* Spec 005, HU-5.4 a HU-5.7. BORRADOR: lo debe revisar la gestoría antes de activar los apoyos */}
+      <section className="mt-10 scroll-mt-32 space-y-3 leading-relaxed" id="apoyos">
+        <h2 className="text-2xl font-medium">Apoyos voluntarios</h2>
+        <p>
+          Puedes apoyar VotoClaro cada mes o una vez. Es una aportación voluntaria para cubrir sus
+          costes (servidor, IA del chat y dominio): no es una compra, no da acceso a nada que no sea
+          gratis y no desgrava, porque VotoClaro no es una asociación ni una fundación. Apoyar no
+          cambia nada del contenido: ni los análisis, ni el orden de los partidos, ni el chat.
+        </p>
+        <p>
+          No se aceptan apoyos de partidos, candidaturas, sus fundaciones, candidatos ni cargos
+          públicos. Antes de pagar confirmas que no aportas en nombre de ninguno de ellos. Si llega
+          un apoyo así, se devuelve.
+        </p>
+        <p>
+          El apoyo mensual se cobra cada mes hasta que lo canceles, cuando quieras, desde el enlace
+          «Gestionar o cancelar mi apoyo» de la página de apoyos o desde el recibo de Stripe. Si te
+          equivocas al apoyar, escríbenos en los 14 días siguientes
+          {t ? (
+            <>
+              {" "}
+              a{" "}
+              <a className="underline" href={`mailto:${t.email}`}>
+                {t.email}
+              </a>
+            </>
+          ) : null}{" "}
+          y te lo devolvemos.
+        </p>
+        <p>
+          Si escribes un nombre o alias en el pago, saldrá en el tablón de{" "}
+          <Link className="underline" href="/apoya">
+            apoyos
+          </Link>
+          , sin importes. Los nombres con siglas de partidos, lemas, insultos o enlaces salen como
+          anónimos, y podemos ocultar cualquier nombre. Para quitar o cambiar el tuyo, escríbenos y
+          lo retiramos en menos de 7 días.
+        </p>
+      </section>
+
       <section className="mt-10 space-y-3 leading-relaxed">
         <h2 className="text-2xl font-medium">Privacidad</h2>
         <p>
           No guardamos el texto de tus preguntas. Para contar las preguntas gratis y recordar tu
           bono usamos dos cookies técnicas, sin publicidad ni seguimiento: una aleatoria que solo
-          cuenta preguntas y otra con tu código de bono. Más detalles en{" "}
+          cuenta preguntas y otra con tu código de bono. De los apoyos guardamos solo el nombre o
+          alias que escribas para el tablón (si lo escribes), el importe, el tipo y las fechas; tu
+          email y tu tarjeta los tiene Stripe. Más detalles en{" "}
           <Link className="underline" href="/metodologia#privacidad">
             cómo lo hacemos
           </Link>
