@@ -5,7 +5,9 @@
  */
 import Stripe from "stripe";
 
-import { estadoPagos } from "./pagos";
+import { estadoApoyos } from "../apoyos/config";
+import { eventoApoyoStripe, type EventoApoyo } from "../apoyos/pasarela";
+import { estadoPagos, type EstadoPagos } from "./pagos";
 import { fechaCaducidad, type Plan } from "./planes";
 
 export type SesionPago = { id: string; url: string };
@@ -18,6 +20,7 @@ export type EstadoSesion = {
 export type EventoPago =
   | { tipo: "pagado"; bonoId: string; pago: string | null }
   | { tipo: "devuelto"; pago: string }
+  | EventoApoyo
   | { tipo: "otro" };
 
 export interface Pasarela {
@@ -99,6 +102,9 @@ function pasarelaStripe(): Pasarela {
           return { tipo: "pagado", bonoId: s.metadata.bono_id, pago: idPago(s.payment_intent) };
         }
       }
+      // Los apoyos (spec 005) comparten este webhook
+      const apoyo = await eventoApoyoStripe(ev);
+      if (apoyo) return apoyo;
       if (ev.type === "charge.refunded") {
         const c = ev.data.object;
         const pago = idPago(c.payment_intent);
@@ -135,15 +141,22 @@ function pasarelaSimulada(): Pasarela {
     async leerEvento(cuerpo) {
       // Sin firma: solo existe en desarrollo (estadoPagos la bloquea en producción)
       const e = JSON.parse(cuerpo) as { tipo?: string; pago?: string };
-      return e.tipo === "devuelto" && e.pago
-        ? { tipo: "devuelto", pago: e.pago }
-        : { tipo: "otro" };
+      if (e.tipo === "devuelto" && e.pago) return { tipo: "devuelto", pago: e.pago };
+      // Apoyos: cobros de meses siguientes y cancelaciones, para probarlos sin Stripe
+      if (e.tipo?.startsWith("apoyo-")) return e as EventoApoyo;
+      return { tipo: "otro" };
     },
   };
 }
 
+const crear = (estado: EstadoPagos): Pasarela | null =>
+  !estado.activos ? null : estado.pasarela === "stripe" ? pasarelaStripe() : pasarelaSimulada();
+
 export function pasarela(): Pasarela | null {
-  const estado = estadoPagos();
-  if (!estado.activos) return null;
-  return estado.pasarela === "stripe" ? pasarelaStripe() : pasarelaSimulada();
+  return crear(estadoPagos());
+}
+
+/** Para el webhook, que comparten bonos y apoyos: basta con que uno de los dos esté activo. */
+export function pasarelaEventos(): Pasarela | null {
+  return crear(estadoPagos()) ?? crear(estadoApoyos());
 }

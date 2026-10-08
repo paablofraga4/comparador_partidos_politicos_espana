@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   // Monorepo: el build lee ../data
   outputFileTracingRoot: path.resolve(__dirname, ".."),
   poweredByHeader: false,
+  // PGlite (desarrollo y tests) carga su wasm con import.meta.url: empaquetado por Turbopack falla
+  // con «Received an instance of URL». En producción no se usa (Postgres de Railway)
+  serverExternalPackages: ["@electric-sql/pglite", "@electric-sql/pglite-pgvector"],
   async headers() {
     return [
       {
