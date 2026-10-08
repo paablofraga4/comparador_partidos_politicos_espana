@@ -8,3 +8,6 @@ export const AUTOR = {
 } as const;
 
 export const ANIO_COPYRIGHT = 2026;
+
+/** Correo público para escribir sobre los apoyos (quitar un nombre, errores al apoyar…). */
+export const CORREO_CONTACTO = "votoclarocomparador@gmail.com";

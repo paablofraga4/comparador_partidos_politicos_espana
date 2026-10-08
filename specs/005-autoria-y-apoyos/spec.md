@@ -42,9 +42,13 @@ Queremos:
 ## Historias de usuario
 
 ### HU-5.1 Autoría en el pie
-- En todas las páginas, la última línea del pie dice «© 2026 Pablo Fraga Naveira», y el nombre
-  enlaza a su perfil de LinkedIn.
+- En todas las páginas, la última línea del pie dice «© 2026 Pablo Fraga Naveira · LinkedIn», y
+  «LinkedIn» enlaza a su perfil. *(8 oct: antes el enlace era el nombre y la palabra «LinkedIn»
+  solo existía para lectores de pantalla; el propietario no lo encontraba.)*
 - Va en texto pequeño y apagado, como el resto de avisos del pie. No hay foto ni logotipo.
+- `/apoya` también lo nombra, con su LinkedIn, al decir que el desarrollo no se cobra.
+- El pie enlaza a `/apoya` («Apoya VotoClaro: cuentas y tablón»).
+- El correo de contacto de los apoyos es votoclarocomparador@gmail.com.
 - La licencia del repositorio (MIT) nombra al mismo autor en lugar de «Los autores de
   VotoClaro». Los análisis siguen bajo CC BY 4.0 y los programas siguen siendo de sus partidos.
 
@@ -63,6 +67,15 @@ Una sección corta, después de «Cómo funciona», con:
 El tablón **no** está en la portada: solo el enlace.
 
 ### HU-5.3 Cuentas claras en `/apoya`
+*(Ampliada el 8 oct a petición del propietario: barra del mes, carga de los programas y euros.)*
+- **Antes de lo que cuesta, una barra «Este mes llevamos cubierto el X %»**: lo que entra este mes
+  (apoyos y bonos) frente a la meta del mes, que suma:
+  - lo que cuesta este mes: costes fijos, IA de las consultas del mes y comisiones;
+  - lo que falta por cubrir de la carga de los programas, que se paga una vez. Lo que sobró en
+    meses anteriores (ingresos menos costes, desde el mes de inicio de `data/costes.yaml`) se
+    descuenta de ella.
+- Los dólares se pasan a euros con el tipo de referencia del BCE guardado, con su fecha, en
+  `data/costes.yaml`. Sin cambio guardado, no hay barra (no se mezclan monedas).
 - **Lo que cuesta al mes**, partida a partida:
   - la IA del chat, con el gasto real de los últimos 30 días, que ya se registra cada día de
     forma agregada;
@@ -96,6 +109,7 @@ El tablón **no** está en la portada: solo el enlace.
 5. Nosotros no guardamos su email ni sus datos de pago: los tiene Stripe.
 
 ### HU-5.5 Tablón de apoyos en `/apoya`
+- La sección se titula «Tablón de apoyos», con «Gracias a quienes hacen posible VotoClaro».
 - Dos listas, solo con los apoyos que han dado un nombre:
   - **«Quienes más han apoyado»**: las 10 personas con más aportado, **sin mostrar importes**;
   - **«Últimos apoyos»**: las 10 más recientes, con el tipo («cada mes» o «una vez») y la
@@ -105,11 +119,11 @@ El tablón **no** está en la portada: solo el enlace.
   **solo este mes**, sin tocar el código.
 - Diseño neutro: ningún color de partido ni distintivos por importe.
 
-### HU-5.6 Reglas de neutralidad, visibles en `/apoya`
-- No se aceptan apoyos de partidos, candidaturas, fundaciones vinculadas, candidatos ni cargos
-  públicos. Antes de pagar, la persona confirma que no aporta en nombre de ninguno de ellos.
-- Si se descubre un apoyo así, se devuelve y se retira del tablón.
-- Los apoyos no cambian nada del contenido: ni los análisis, ni el orden, ni el chat.
+### HU-5.6 Neutralidad, visible en `/apoya`
+*(Cambio del propietario, 8 oct: no se dice que se rechacen apoyos de partidos ni se pide una
+declaración antes de pagar; se dice que ninguna aportación influye de forma política.)*
+- Ninguna aportación influye de forma política: no cambia los análisis, ni el orden de los
+  partidos, ni las respuestas del chat. Se dice en `/apoya`, en `/condiciones` y en el pago.
 - El tablón no muestra logos, enlaces ni mensajes; tampoco los de empresas.
 - Los nombres pasan un filtro automático antes de salir: siglas y nombres de las candidaturas,
   lemas, palabras ofensivas y enlaces. Lo que no pasa sale como anónimo.

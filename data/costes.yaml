@@ -1,7 +1,11 @@
 # Costes fijos de VotoClaro (spec 005, HU-5.3), con las cifras de las facturas.
 # Se actualizan a mano cuando llega cada factura; la web muestra la fecha de cada partida.
-# La IA del chat no va aquí: se calcula con el gasto real registrado cada día.
+# La IA no va aquí: la del chat se calcula con el gasto real registrado cada día y la de la
+# carga de los programas, con lo que registró cada análisis.
 #   euros_mes: coste mensual · euros_ano: coste anual (la web lo prorratea por meses)
+
+# Mes desde el que se cuentan los costes fijos (para la barra «este mes» de /apoya)
+inicio: 2026-10
 
 fijos:
   - id: servidor
@@ -12,3 +16,10 @@ fijos:
     nombre: Dominio votoclaro.app
     euros_ano: 14
     actualizado: 2026-10-08
+
+# Cambio para pasar a euros lo que se paga en dólares (OpenAI). Tipo de referencia oficial:
+# https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
+cambio:
+  usd_por_eur: 1.1177
+  fecha: 2026-10-07
+  fuente: Banco Central Europeo
