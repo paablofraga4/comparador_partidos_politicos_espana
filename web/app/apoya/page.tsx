@@ -125,7 +125,8 @@ export default async function Apoya({ searchParams }: PageProps<"/apoya">) {
             <dt>
               Comisiones de pago (Stripe)
               <span className="text-ink-faint block text-sm">
-                Estimación de lo cobrado {cuando}: {COMISION.porcentaje * 100} % +{" "}
+                Estimación de lo cobrado {cuando}:{" "}
+                {(COMISION.porcentaje * 100).toLocaleString("es-ES", { maximumFractionDigits: 2 })}&nbsp;% +{" "}
                 {euros(COMISION.fijoCent)} por pago.
               </span>
             </dt>
