@@ -25,6 +25,7 @@ candidaturas:
   - id: pp
     nombre: Partido Popular
     corto: PP
+    articulo: el
     tipo: partido
     ambito: estatal
     color: "#1D84CE"
@@ -39,6 +40,7 @@ candidaturas:
   - id: psoe
     nombre: Partido Socialista Obrero Español
     corto: PSOE
+    articulo: el
     tipo: partido
     ambito: estatal
     color: "#E30613"
@@ -141,6 +143,7 @@ candidaturas:
   - id: pnv
     nombre: EAJ-PNV
     corto: PNV
+    articulo: el
     tipo: partido
     ambito: autonomico
     territorio: País Vasco
@@ -156,6 +159,7 @@ candidaturas:
   - id: bng
     nombre: Bloque Nacionalista Galego
     corto: BNG
+    articulo: el
     tipo: partido
     ambito: autonomico
     territorio: Galicia

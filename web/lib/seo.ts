@@ -39,6 +39,34 @@ export function nombrePartido(c: { corto: string; nombre: string }): string {
   return c.corto === c.nombre ? c.corto : `${c.corto} (${c.nombre})`;
 }
 
+type ConArticulo = { corto: string; articulo?: "el" | "la" | null };
+
+/** «el PP», «el PSOE», «VOX», «Sumar»: como se nombra en una frase (y como se busca). */
+export function conArticulo(c: ConArticulo): string {
+  return c.articulo ? `${c.articulo} ${c.corto}` : c.corto;
+}
+
+/** «del PP», «de la X», «de VOX»: con la contracción del castellano. */
+export function delPartido(c: ConArticulo): string {
+  return c.articulo === "el" ? `del ${c.corto}` : `de ${conArticulo(c)}`;
+}
+
+/**
+ * Título de una página partido × tema: la pregunta tal como se busca («Pensiones: qué propone el
+ * PP…») y el número de propuestas, que sale del análisis. Con el programa del 29N lo dice.
+ */
+export function tituloPartidoTema(a: {
+  tema: string;
+  c: ConArticulo;
+  propuestas: number;
+  es29N: boolean;
+}): string {
+  const programa = a.es29N ? "su programa del 29N" : "su programa electoral";
+  const cuantas =
+    a.propuestas > 0 ? ` (${a.propuestas} ${a.propuestas === 1 ? "propuesta" : "propuestas"})` : "";
+  return `${a.tema}: qué propone ${conArticulo(a.c)} en ${programa}${cuantas}`;
+}
+
 /**
  * Metadatos de una página indexable (spec 002, HU-2.9): título, descripción, URL canónica sin
  * parámetros y Open Graph/X con los mismos textos. La imagen de compartir es la de marca

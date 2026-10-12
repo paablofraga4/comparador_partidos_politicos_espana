@@ -51,6 +51,8 @@ class Candidatura(_Model):
     id: str
     nombre: str
     corto: str
+    # Artículo con que se nombra en castellano («el PP», «el PSOE»); sin él, «VOX», «Sumar»
+    articulo: Literal["el", "la"] | None = None
     tipo: Literal["partido", "coalicion", "agrupacion-electores"]
     ambito: Literal["estatal", "autonomico", "provincial"]
     territorio: str | None = None
