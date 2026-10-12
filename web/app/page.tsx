@@ -12,7 +12,8 @@ const DESCRIPCION =
   "Entiende los programas electorales del 29N: las propuestas de cada partido, tema a tema, explicadas claro y con la página exacta del programa oficial.";
 
 export const metadata = metaPagina({
-  titulo: "Qué propone cada partido el 29N: programas electorales explicados",
+  // «programas electorales 29n» es la búsqueda con más impresiones de la portada
+  titulo: "Programas electorales del 29N: qué propone cada partido, explicado",
   descripcion: DESCRIPCION,
   ruta: "/",
 });

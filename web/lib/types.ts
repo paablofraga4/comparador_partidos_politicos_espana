@@ -35,6 +35,8 @@ export type Candidatura = {
   id: string;
   nombre: string;
   corto: string;
+  /** Artículo con que se nombra («el PP»); sin él, «VOX», «Sumar» */
+  articulo?: "el" | "la" | null;
   tipo: "partido" | "coalicion" | "agrupacion-electores";
   ambito: "estatal" | "autonomico" | "provincial";
   territorio?: string | null;

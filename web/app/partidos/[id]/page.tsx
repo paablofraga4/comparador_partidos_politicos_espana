@@ -7,7 +7,7 @@ import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, temas, vigente } from "@/lib/data";
-import { metaPagina, nombrePartido } from "@/lib/seo";
+import { delPartido, metaPagina, nombrePartido } from "@/lib/seo";
 import { CONVOCATORIAS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -20,7 +20,8 @@ export async function generateMetadata(props: PageProps<"/partidos/[id]">): Prom
   if (!c) return {};
   const v = vigente(c);
   const ruta = `/partidos/${c.id}`;
-  const titulo = `${c.corto}: programa electoral y propuestas, tema a tema`;
+  // «Programa electoral de ERC (Esquerra Republicana)»: se busca por siglas y por nombre completo
+  const titulo = `Programa electoral ${delPartido(c)}${c.nombre !== c.corto ? ` (${c.nombre})` : ""}: propuestas por temas`;
   // Honesto con lo que se muestra: sin programa propio, o con el de 2023, la descripción lo dice
   if (v.tipo === "pendiente") {
     const dentro = v.dentroDe ? candidatura(v.dentroDe) : undefined;

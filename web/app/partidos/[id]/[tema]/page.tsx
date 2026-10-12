@@ -7,7 +7,7 @@ import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, tema, temas, vigente } from "@/lib/data";
-import { extracto, metaPagina, nombrePartido } from "@/lib/seo";
+import { extracto, metaPagina, nombrePartido, tituloPartidoTema } from "@/lib/seo";
 
 /** Una página por partido y tema (spec 002, HU-2.11): responde a «qué propone X sobre Y». */
 export function generateStaticParams() {
@@ -30,7 +30,13 @@ export async function generateMetadata(
   const d = cargar(id, temaId);
   if (!d) return {};
   const { c, t, v, analisis } = d;
-  const titulo = `${t.nombre}: qué propone ${c.corto} en su programa electoral`;
+  // La pregunta tal como se busca («Pensiones: qué propone el PP…») y cuántas propuestas tiene
+  const titulo = tituloPartidoTema({
+    tema: t.nombre,
+    c,
+    propuestas: analisis?.menciona ? (analisis.propuestas?.length ?? 0) : 0,
+    es29N: v.tipo === "programa" && !v.anterior,
+  });
   const ruta = `/partidos/${c.id}/${t.id}`;
   if (!analisis?.menciona) {
     // Sin contenido propio: existe (simetría) pero no se indexa
@@ -49,8 +55,13 @@ export async function generateMetadata(
   }
   // La descripción sale del resumen verificado del análisis: no se escribe texto nuevo
   const resumen = (analisis.resumen ?? []).map((r) => r.texto).join(" ");
-  const anterior = v.tipo === "programa" && v.anterior ? " (programa de 2023)" : "";
-  return metaPagina({ titulo, descripcion: extracto(`${c.corto}${anterior}: ${resumen}`), ruta });
+  // Con el nombre completo («ERC (Esquerra Republicana)»): también se busca así
+  const anterior = v.tipo === "programa" && v.anterior ? " · programa de 2023" : "";
+  return metaPagina({
+    titulo,
+    descripcion: extracto(`${nombrePartido(c)}${anterior}: ${resumen}`),
+    ruta,
+  });
 }
 
 export default async function PartidoTema(props: PageProps<"/partidos/[id]/[tema]">) {
