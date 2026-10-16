@@ -80,7 +80,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 ## F5 · Campaña (después del lanzamiento)
 - [ ] T-501 Vigilancia completa: noticias e ingesta automática en borrador (12-14 oct)
 - [ ] T-502 `watch-boe.yml` y vigilancia de coaliciones (antes del 16 oct)
-- [ ] T-503 *Parser* de candidaturas del BOE y `circunscripciones` en `candidaturas.yaml` (antes del 28 oct)
+- [x] T-503 *Parser* de candidaturas del BOE y `circunscripciones` en `candidaturas.yaml` (antes del 28 oct)
 - [ ] T-504 «Tu papeleta» (`/tu-papeleta`) (antes del 28 oct)
 - [ ] T-505 Validación humana de la lectura fácil: fase 1 con una entidad especializada y fase 2 de ajuste
 - [ ] T-506 Ingesta de cada programa del 29N (menos de 24 h)

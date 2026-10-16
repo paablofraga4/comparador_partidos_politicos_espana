@@ -62,26 +62,39 @@ def slug(texto: str) -> str:
 def titulo(texto: str) -> str:
     """«PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE» → «Partido Animalista con el Medio Ambiente»."""
     palabras = texto.lower().split()
+
+    def mayuscula(p: str) -> str:
+        # También tras el guion: «Asturias Existe-España Vaciada», «Euskadi-Euskadiko»
+        return "-".join(x[:1].upper() + x[1:] for x in p.split("-"))
+
     return " ".join(
-        p if (i > 0 and p in _MINUSCULAS) else p[:1].upper() + p[1:] for i, p in enumerate(palabras)
+        p if (i > 0 and p in _MINUSCULAS) else mayuscula(p) for i, p in enumerate(palabras)
     )
 
 
 def separar_siglas(linea: str) -> tuple[str, str] | None:
     """«3. PARTIDO … (PSOE) (PSE-EE (PSOE))» → («PARTIDO …(PSOE)», «PSE-EE (PSOE)»).
-    Las siglas son el último grupo entre paréntesis equilibrado."""
+    Las siglas son el último grupo entre paréntesis equilibrado. A veces el BOE las pone entre
+    corchetes («… (PSOE) [PSE-EE (PSOE)]», Álava y Bizkaia en 2023): valen igual."""
     t = _NUM.sub("", normalizar(linea))
-    if not t.endswith(")"):
+    cierre = t[-1:]
+    if cierre not in (")", "]"):
         return None
+    abre = "(" if cierre == ")" else "["
     nivel = 0
     for i in range(len(t) - 1, -1, -1):
-        if t[i] == ")":
+        if t[i] == cierre:
             nivel += 1
-        elif t[i] == "(":
+        elif t[i] == abre:
             nivel -= 1
             if nivel == 0:
                 return t[:i].strip(), t[i + 1 : -1].strip()
     return None
+
+
+def sin_puntos(siglas: str) -> str:
+    """«U.P.N.» y «UPN» son la misma candidatura escrita de dos formas."""
+    return re.sub(r"[.\s]", "", siglas.upper())
 
 
 @dataclass
@@ -97,6 +110,9 @@ class DocumentoBOE:
     titulo: str
     circunscripciones: dict[str, str]  # slug → nombre (solo las que tienen Congreso)
     candidaturas: dict[str, CandidaturaBOE]  # siglas normalizadas → candidatura
+    # Líneas de candidatura al Congreso que no se han podido leer: van al informe del PR para
+    # que una persona las revise (antes se perdían sin aviso)
+    sin_entender: list[str] = field(default_factory=list)
 
 
 def parse(xml: str) -> DocumentoBOE:
@@ -106,6 +122,7 @@ def parse(xml: str) -> DocumentoBOE:
     camara = ""
     circs: dict[str, str] = {}
     cands: dict[str, CandidaturaBOE] = {}
+    sin_entender: list[str] = []
     for clase, html in _PARRAFO.findall(xml):
         texto = normalizar(_TAG.sub("", html))
         if clase == "centro_negrita" and texto.upper().startswith("JUNTA ELECTORAL DE"):
@@ -116,18 +133,19 @@ def parse(xml: str) -> DocumentoBOE:
         elif clase == "centro_redonda" and junta and camara.startswith("CONGRESO"):
             par = separar_siglas(texto)
             if not par:
+                if _NUM.match(texto):
+                    sin_entender.append(f"{junta[1]}: {texto}")
                 continue
             nombre, siglas = par
             circs[junta[0]] = junta[1]
-            # «U.P.L.» y «UPL» son la misma candidatura escrita de dos formas
-            clave = re.sub(r"[.\s]", "", siglas.upper())
-            c = cands.setdefault(clave, CandidaturaBOE(siglas, nombre))
+            c = cands.setdefault(sin_puntos(siglas), CandidaturaBOE(siglas, nombre))
             c.circunscripciones[junta[0]] = junta[1]
     return DocumentoBOE(
         ident.group(1) if ident else "",
         normalizar(tit.group(1)) if tit else "",
         dict(sorted(circs.items())),
         cands,
+        sin_entender,
     )
 
 
@@ -151,8 +169,14 @@ def emparejar(
     asignadas: dict[str, list[CandidaturaBOE]] = {}
     sueltas: list[CandidaturaBOE] = []
     for c in doc.candidaturas.values():
+        # Con y sin puntos: «U.P.N.» (presentadas de 2023) y «UPN» (proclamadas)
+        formas = {c.siglas, sin_puntos(c.siglas)}
         destino = next(
-            (r.id for r in registro if any(re.fullmatch(p, c.siglas, re.I) for p in r.siglas_boe)),
+            (
+                r.id
+                for r in registro
+                if any(re.fullmatch(p, f, re.I) for p in r.siglas_boe for f in formas)
+            ),
             None,
         )
         if destino:

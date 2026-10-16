@@ -2,7 +2,15 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from votoclaro.boe import emparejar, parse, separar_siglas, slug, titulo
+from votoclaro.boe import (
+    CandidaturaBOE,
+    DocumentoBOE,
+    emparejar,
+    parse,
+    separar_siglas,
+    slug,
+    titulo,
+)
 from votoclaro.paths import ROOT, Paths
 from votoclaro.registry import load_candidaturas
 
@@ -17,8 +25,37 @@ def test_siglas_con_parentesis_anidados_y_espacios_unicode():
     assert separar_siglas("Texto sin siglas") is None
 
 
+def test_siglas_entre_corchetes():
+    # Así venía el PSE-EE en Álava, Bizkaia y Gipuzkoa en el BOE de 2023: antes se perdía
+    assert separar_siglas(
+        "3. PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) [PSE-EE (PSOE)]"
+    ) == ("PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE)", "PSE-EE (PSOE)")
+
+
+def test_emparejar_siglas_con_puntos():
+    # «U.P.N.» en las presentadas de 2023 y «UPN» en las proclamadas: es UPN
+    doc = DocumentoBOE(
+        "x",
+        "t",
+        {"navarra": "Navarra"},
+        {"UPN": CandidaturaBOE("U.P.N.", "UNION DEL PUEBLO NAVARRO", {"navarra": "Navarra"})},
+    )
+    registro = load_candidaturas(Paths(ROOT / "data")).candidaturas
+    asignadas, sueltas = emparejar(doc, registro)
+    assert "upn" in asignadas and not sueltas
+
+
+def test_lineas_sin_entender_van_al_informe():
+    xml = FIXTURE.read_text(encoding="utf-8").replace(
+        "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA)", "PARTIDO SIN SIGLAS LEGIBLES"
+    )
+    doc = parse(xml)
+    assert any("PARTIDO SIN SIGLAS LEGIBLES" in linea for linea in doc.sin_entender)
+
+
 def test_nombres_y_slugs_de_provincia():
     assert titulo("SANTA CRUZ DE TENERIFE") == "Santa Cruz de Tenerife"
+    assert titulo("ASTURIAS EXISTE-ESPAÑA VACIADA") == "Asturias Existe-España Vaciada"
     assert slug("Álava") == "alava" and slug("A Coruña") == "a-coruna"
 
 

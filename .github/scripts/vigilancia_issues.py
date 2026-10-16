@@ -34,8 +34,10 @@ for n in datos["novedades"]:
             "",
             n["url"],
             "",
-            "Si son candidaturas presentadas o proclamadas, hay que cargarlas en "
-            "`data/candidaturas.yaml` (tarea T-503) y pasar `fase_inclusion` a la fase que toque.",
+            "Si son las candidaturas presentadas o proclamadas al Congreso, la vigilancia las "
+            "carga sola en una rama `boe/<id>` y abre un PR (o una issue con el enlace para "
+            "abrirlo). Si no aparece, lánzala a mano: Actions → «Vigilar BOE» → Run workflow "
+            "con el identificador y la fase.",
         ])
     else:
         tipo = "📄 PDF en su web" if n["tipo"] == "pdf-oficial" else "📰 Noticia"

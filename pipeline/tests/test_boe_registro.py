@@ -58,3 +58,20 @@ def test_aplicar_presentadas_y_proclamadas(tmp_path: Path):
     # No duplica altas en la segunda pasada
     ids = [c.id for c in reg2.candidaturas]
     assert len(ids) == len(set(ids))
+
+
+def test_siglas_que_cambian_entre_documentos_no_duplican(tmp_path: Path):
+    """El BOE corrige o abrevia siglas entre presentadas y proclamadas (MÉS PER MALLORCA-MÉS
+    PER MENORCA-SUMAR → MÉS PER MALLORCA-SUMAR en 2023): con el mismo nombre es la misma."""
+    p = _registro_temporal(tmp_path)
+    xml = FIXTURE.read_text(encoding="utf-8")
+    aplicar(parse(xml), "presentadas", p.candidaturas, p.data / "circunscripciones.yaml")
+    otras_siglas = xml.replace("(PACMA)", "(P.A.C.M.A.-2026)")
+    res = aplicar(
+        parse(otras_siglas), "proclamadas", p.candidaturas, p.data / "circunscripciones.yaml"
+    )
+    reg = load_candidaturas(p)
+    assert "pacma" not in res.no_proclamadas and not res.nuevas
+    assert any(a.startswith("pacma ←") for a in res.alias)
+    assert reg.get("pacma").convocatorias["generales-2026"].estado == "proclamada"
+    assert len([c for c in reg.candidaturas if "Animalista" in c.nombre]) == 1
