@@ -1,19 +1,29 @@
 # Vigilancia del BOE (spec 001, HU-1.10): candidaturas presentadas (~28 oct), proclamadas
-# (~3 nov) y coaliciones. Cada mañana hasta el 4-nov-2026 → issue por disposición nueva.
+# (~3 nov) y coaliciones. Cada mañana hasta el 4-nov-2026 → issue por disposición nueva y, si
+# son las candidaturas al Congreso, rama con `candidaturas.yaml` actualizado y PR (T-503).
 name: Vigilar BOE
 on:
   schedule:
     - cron: "30 6,9 * * *"
   workflow_dispatch:
+    inputs:
+      boe_id:
+        description: "Cargar a mano un documento de candidaturas (BOE-A-…); vacío = solo vigilar"
+        required: false
+      fase:
+        description: "presentadas | proclamadas"
+        required: false
+        default: presentadas
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
 
 jobs:
   boe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: ¿Periodo electoral?
         id: fecha
@@ -32,3 +42,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python .github/scripts/vigilancia_issues.py "$RUNNER_TEMP/boe.json"
+      - name: Cargar candidaturas del BOE (rama y PR)
+        if: steps.fecha.outputs.fin != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BOE_ID: ${{ inputs.boe_id }}
+          FASE: ${{ inputs.fase }}
+        run: |
+          git config user.name "votoclaro-bot"
+          git config user.email "votoclaro-bot@users.noreply.github.com"
+          python .github/scripts/boe_candidaturas_pr.py "$RUNNER_TEMP/boe.json"

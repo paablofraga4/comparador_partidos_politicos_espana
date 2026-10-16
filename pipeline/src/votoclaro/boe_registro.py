@@ -30,6 +30,8 @@ class Resumen:
     actualizadas: list[str] = field(default_factory=list)
     nuevas: list[str] = field(default_factory=list)
     no_proclamadas: list[str] = field(default_factory=list)
+    # Siglas nuevas reconocidas por el nombre («id ← siglas»): revisar que sean la misma
+    alias: list[str] = field(default_factory=list)
     circunscripciones: int = 0
 
     def markdown(self, doc: DocumentoBOE, fase: str) -> str:
@@ -45,7 +47,20 @@ class Resumen:
                 f"- Candidaturas nuevas dadas de alta: **{len(self.nuevas)}** "
                 f"({', '.join(self.nuevas) or '—'})",
                 f"- No proclamadas: {', '.join(self.no_proclamadas) or 'ninguna'}",
+                f"- Siglas nuevas reconocidas por el nombre: {', '.join(self.alias) or 'ninguna'}",
                 "",
+                *(
+                    [
+                        f"## ⚠️ Líneas sin entender ({len(doc.sin_entender)})",
+                        "",
+                        "No se han cargado. Revísalas en el BOE y añádelas a mano:",
+                        "",
+                        *[f"- {linea}" for linea in doc.sin_entender],
+                        "",
+                    ]
+                    if doc.sin_entender
+                    else []
+                ),
                 "Revisa en el diff que los alias (`siglas_boe`) no hayan unido candidaturas "
                 "distintas.",
                 "Las nuevas llevan color neutro y sin web: complétalo si procede.",
@@ -77,6 +92,23 @@ def aplicar(doc: DocumentoBOE, fase: str, ruta_registro: Path, ruta_circ: Path) 
     por_id = {c["id"]: c for c in datos["candidaturas"]}
     res = Resumen(circunscripciones=len(doc.circunscripciones))
 
+    # Entre documentos el BOE corrige erratas o abrevia siglas («MÉS PER MALLORCA-MÉS PER
+    # MENORCA-SUMAR» → «MÉS PER MALLORCA-SUMAR»). Con el mismo nombre es la misma candidatura:
+    # se le añade el alias en vez de darla de alta otra vez (y de marcar la vieja «no-proclamada»)
+    por_nombre = {slug(str(e["nombre"])): e["id"] for e in datos["candidaturas"]}
+    nuevas_por_nombre: dict[str, list] = {}
+    for c in sueltas:
+        cid = por_nombre.get(slug(c.nombre))
+        if cid:
+            asignadas.setdefault(cid, []).append(c)
+            siglas_boe = por_id[cid].setdefault("siglas_boe", _flow([]))
+            if re.escape(c.siglas) not in siglas_boe:
+                siglas_boe.append(re.escape(c.siglas))
+            res.alias.append(f"{cid} ← {c.siglas}")
+        else:
+            # En el mismo documento, el mismo nombre con siglas distintas también es una sola
+            nuevas_por_nombre.setdefault(slug(c.nombre), []).append(c)
+
     def conv_de(entrada: CommentedMap) -> CommentedMap:
         convs = entrada.setdefault("convocatorias", CommentedMap())
         if not isinstance(convs.get(CONV), dict):
@@ -94,7 +126,10 @@ def aplicar(doc: DocumentoBOE, fase: str, ruta_registro: Path, ruta_circ: Path) 
         vistos.add(cid)
 
     usados = set(por_id)
-    for c in sorted(sueltas, key=lambda x: x.siglas):
+    for grupo in sorted(nuevas_por_nombre.values(), key=lambda g: g[0].siglas):
+        # La forma con más circunscripciones da las siglas cortas; las demás quedan como alias
+        grupo.sort(key=lambda x: (-len(x.circunscripciones), x.siglas))
+        c = grupo[0]
         cid = slug(c.siglas) or slug(c.nombre)
         base, n = cid, 2
         while cid in usados:
@@ -108,7 +143,8 @@ def aplicar(doc: DocumentoBOE, fase: str, ruta_registro: Path, ruta_circ: Path) 
             if re.search(r"coalici[oó]n", c.nombre, re.I)
             else "partido"
         )
-        n_circ = len(c.circunscripciones)
+        listas = {circ: g.siglas for g in reversed(grupo) for circ in g.circunscripciones}
+        n_circ = len(listas)
         nueva = CommentedMap()
         nueva["id"] = cid
         nueva["nombre"] = nombre
@@ -120,12 +156,13 @@ def aplicar(doc: DocumentoBOE, fase: str, ruta_registro: Path, ruta_circ: Path) 
         nueva["color"] = COLOR_NEUTRO
         nueva["web"] = ""
         nueva["vigilar"] = _flow([])
-        nueva["siglas_boe"] = _flow([re.escape(c.siglas)])
+        nueva["siglas_boe"] = _flow([re.escape(g.siglas) for g in grupo])
         nueva["nota"] = f"Alta automática desde {doc.identificador}"
         c26 = CommentedMap()
         c26["estado"] = ESTADO[fase]
-        c26["circunscripciones"] = _flow(sorted(c.circunscripciones))
-        c26["listas"] = CommentedMap((k, c.siglas) for k in sorted(c.circunscripciones))
+        c26["circunscripciones"] = _flow(sorted(listas))
+        c26["listas"] = CommentedMap(sorted(listas.items()))
+        por_nombre[slug(c.nombre)] = cid
         nueva["convocatorias"] = CommentedMap({CONV: c26})
         datos["candidaturas"].append(nueva)
         res.nuevas.append(cid)
