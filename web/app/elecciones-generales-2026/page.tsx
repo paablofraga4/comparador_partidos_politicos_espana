@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { MigasJsonLd } from "@/components/json-ld";
-import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidaturas, registro, temas, vigente } from "@/lib/data";
+import { Candidato, OtrasCandidaturas, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import { candidaturasPorGrupo, registro, temas, vigente } from "@/lib/data";
 import { CALENDARIO, DECRETO, DIPUTADOS, TOTAL_DIPUTADOS } from "@/lib/elecciones";
 import { metaPagina } from "@/lib/seo";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = metaPagina({
 
 /** Guía de las generales del 29N (spec 002, HU-2.12). Cada dato cita el decreto o la LOREG. */
 export default function GuiaElecciones() {
-  const cands = candidaturas();
+  const { principales: cands, otras } = candidaturasPorGrupo();
   const provisional = registro().fase_inclusion === "provisional";
   const enlaceDecreto = (
     <a href={DECRETO.url} target="_blank" rel="noreferrer" className="underline">
@@ -116,7 +116,7 @@ export default function GuiaElecciones() {
           hacia el 28 de octubre, y las proclamadas, el 2 y 3 de noviembre.{" "}
           {provisional
             ? "Hasta entonces mostramos, de forma provisional, las candidaturas con representación en las Cortes en la XV legislatura, en orden alfabético:"
-            : "Estas son las candidaturas, en orden alfabético:"}
+            : "Estas son las candidaturas de los partidos con representación en las Cortes (o la que los continúa), en orden alfabético; las demás, justo debajo:"}
         </p>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
           {cands.map((c) => (
@@ -134,6 +134,7 @@ export default function GuiaElecciones() {
             </li>
           ))}
         </ul>
+        <OtrasCandidaturas cands={otras} href={(c) => `/partidos/${c.id}`} />
         <p className="text-ink-muted text-sm">
           <Link href="/metodologia#criterio" className="underline">
             Cómo decidimos qué partidos aparecen

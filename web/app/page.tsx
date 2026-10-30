@@ -2,8 +2,15 @@ import { ArrowRight, BookOpenCheck, Columns3, Quote } from "lucide-react";
 import Link from "next/link";
 
 import { SeccionAutor, SeccionMantenimiento } from "@/components/apoyos";
-import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidaturas, costesFijos, estadoProgramas29N, registro, temas, vigente } from "@/lib/data";
+import { Candidato, OtrasCandidaturas, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import {
+  candidaturasPorGrupo,
+  costesFijos,
+  estadoProgramas29N,
+  registro,
+  temas,
+  vigente,
+} from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 import { urlDelSitio } from "@/lib/sitio";
 
@@ -39,7 +46,7 @@ function DatosEstructurados() {
 }
 
 export default function Inicio() {
-  const cands = candidaturas();
+  const { principales, otras } = candidaturasPorGrupo();
   const ts = temas();
   const estado = estadoProgramas29N();
   const provisional = registro().fase_inclusion === "provisional";
@@ -131,10 +138,10 @@ export default function Inicio() {
           <p className="text-ink-muted mt-2">
             {provisional
               ? "Lista provisional (partidos con representación en las Cortes) hasta que el BOE publique las candidaturas oficiales, hacia el 28 de octubre. Orden alfabético."
-              : "Todas las candidaturas publicadas en el BOE. Orden alfabético."}
+              : "Los partidos con representación en las Cortes, o la candidatura que los continúa, según el BOE. Orden alfabético."}
           </p>
           <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {cands.map((c) => (
+            {principales.map((c) => (
               <li key={c.id}>
                 <Link
                   href={`/partidos/${c.id}`}
@@ -146,6 +153,7 @@ export default function Inicio() {
               </li>
             ))}
           </ul>
+          <OtrasCandidaturas cands={otras} href={(c) => `/partidos/${c.id}`} className="mt-6" />
         </div>
       </section>
 

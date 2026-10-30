@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Candidato, ProgramaBadge } from "@/components/piezas";
-import { candidaturas, registro, vigente } from "@/lib/data";
+import { Candidato, OtrasCandidaturas, ProgramaBadge } from "@/components/piezas";
+import { candidaturasPorGrupo, registro, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export const metadata: Metadata = metaPagina({
@@ -14,6 +14,7 @@ export const metadata: Metadata = metaPagina({
 
 export default function Partidos() {
   const provisional = registro().fase_inclusion === "provisional";
+  const { principales, otras } = candidaturasPorGrupo();
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <h1 className="text-4xl font-medium sm:text-5xl">Partidos y sus programas</h1>
@@ -31,7 +32,7 @@ export default function Partidos() {
         </p>
       )}
       <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-        {candidaturas().map((c) => (
+        {principales.map((c) => (
           <li key={c.id}>
             <Link
               href={`/partidos/${c.id}`}
@@ -45,6 +46,7 @@ export default function Partidos() {
           </li>
         ))}
       </ul>
+      <OtrasCandidaturas cands={otras} href={(c) => `/partidos/${c.id}`} className="mt-8" />
     </div>
   );
 }

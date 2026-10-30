@@ -32,6 +32,12 @@ está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de
    - *Desde la publicación en el BOE*: **todas** las candidaturas al Congreso presentadas y,
      tras la proclamación (hacia el 3 de noviembre), todas las proclamadas, sin filtro
      editorial.
+   - *Orden de presentación* (enmienda aprobada por el titular el 30 oct): en el comparador, los
+     temas, la lista de partidos y el chat van primero las **principales**, que son las
+     candidaturas con representación en las Cortes en la XV legislatura o la que continúa una de
+     ellas con otro nombre (Frente Amplio ← Sumar). Las demás candidaturas del BOE siguen en la
+     web, plegadas en «Otras candidaturas del BOE», con su ficha, el mismo trato y orden
+     alfabético. En «Tu papeleta» aparecen todas por igual.
    - Una candidatura sin programa publicado aparece igualmente, con «No ha publicado programa
      electoral (comprobado el {fecha})».
    - El criterio, la fase vigente y la fuente del BOE se publican en la página de

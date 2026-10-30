@@ -1,6 +1,7 @@
 import {
   Baby,
   Briefcase,
+  ChevronDown,
   Cpu,
   Earth,
   Globe,
@@ -20,6 +21,7 @@ import {
   Wheat,
   type LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 import type { Candidatura, ProgramaVigente } from "@/lib/types";
 import { CONVOCATORIAS } from "@/lib/types";
@@ -62,6 +64,48 @@ export function Candidato({ c, className = "" }: { c: Candidatura; className?: s
       />
       <span>{c.corto}</span>
     </span>
+  );
+}
+
+/**
+ * El resto de las candidaturas del BOE, plegadas bajo las principales (constitución I.6): siguen
+ * en la web, con el mismo trato, en orden alfabético y con su enlace.
+ */
+export function OtrasCandidaturas({
+  cands,
+  href,
+  className = "",
+}: {
+  cands: Candidatura[];
+  href: (c: Candidatura) => string;
+  className?: string;
+}) {
+  if (!cands.length) return null;
+  return (
+    <details className={`group/o ${className}`}>
+      <summary className="hover:text-ink text-ink-muted inline-flex min-h-11 cursor-pointer list-none items-center gap-1 font-semibold select-none">
+        <ChevronDown aria-hidden className="h-4 w-4 transition-transform group-open/o:rotate-180" />
+        Otras candidaturas del BOE ({cands.length})
+      </summary>
+      <p className="text-ink-muted mt-1 text-sm">
+        Las demás candidaturas al Congreso publicadas en el BOE, en orden alfabético.{" "}
+        <Link href="/metodologia#criterio" className="underline">
+          Por qué van aquí
+        </Link>
+      </p>
+      <ul className="mt-3 flex flex-wrap gap-2">
+        {cands.map((c) => (
+          <li key={c.id}>
+            <Link
+              href={href(c)}
+              className="border-rule bg-paper-raised hover:border-rule-strong inline-flex min-h-10 items-center rounded-full border px-3 text-sm"
+            >
+              <Candidato c={c} />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
 

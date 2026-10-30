@@ -71,6 +71,18 @@ export function candidaturasVisibles(reg: RegistroCandidaturas): Candidatura[] {
   return ordenAlfabetico(visibles);
 }
 
+/**
+ * Candidaturas principales (constitución I.6): las que tenían representación en las Cortes en la
+ * XV legislatura (`incluir` en el registro) o las que continúan una de ellas con otro nombre
+ * (`sucesora_de`: Frente Amplio ← Sumar). Se muestran primero; el resto de las del BOE siguen
+ * en la web, en «Otras candidaturas del BOE».
+ */
+export function esPrincipal(c: Candidatura, reg: RegistroCandidaturas): boolean {
+  if (c.incluir) return true;
+  const antecesora = c.convocatorias["generales-2023"]?.sucesora_de;
+  return !!antecesora && !!reg.candidaturas.find((x) => x.id === antecesora)?.incluir;
+}
+
 export function ordenAlfabetico<T extends { corto: string }>(items: T[]): T[] {
   return [...items].sort((a, b) =>
     a.corto.localeCompare(b.corto, "es", { sensitivity: "base", ignorePunctuation: true }),

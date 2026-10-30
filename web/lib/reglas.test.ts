@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { candidaturasVisibles, limpiarLiteral, ordenAlfabetico, programaVigente } from "./reglas";
+import {
+  candidaturasVisibles,
+  esPrincipal,
+  limpiarLiteral,
+  ordenAlfabetico,
+  programaVigente,
+} from "./reglas";
 import type { Analisis, Candidatura, RegistroCandidaturas } from "./types";
 
 const cand = (over: Partial<Candidatura> = {}): Candidatura => ({
@@ -133,6 +139,37 @@ describe("candidaturasVisibles (constitución I.6)", () => {
 
   it("fase BOE: todas las presentadas, sin filtro editorial", () => {
     expect(candidaturasVisibles(reg("presentadas")).map((c) => c.id)).toEqual(["nueva"]);
+  });
+});
+
+describe("esPrincipal (constitución I.6)", () => {
+  const sumar = cand({ id: "sumar", corto: "Sumar" });
+  const fa = cand({
+    id: "fa",
+    corto: "Frente Amplio",
+    incluir: null,
+    convocatorias: { "generales-2023": { programa_propio: false, sucesora_de: "sumar" } },
+  });
+  const nueva = cand({ id: "nueva", corto: "Nueva", incluir: null, convocatorias: {} });
+  const reg: RegistroCandidaturas = {
+    version: 2,
+    fase_inclusion: "presentadas",
+    candidaturas: [sumar, fa, nueva],
+  };
+
+  it("principales: con representación en la XV legislatura o sucesoras de una de ellas", () => {
+    expect(esPrincipal(cand(), reg)).toBe(true);
+    expect(esPrincipal(fa, reg)).toBe(true);
+    expect(esPrincipal(nueva, reg)).toBe(false);
+  });
+
+  it("una sucesora de una candidatura sin representación no es principal", () => {
+    const otra = cand({
+      id: "otra",
+      incluir: null,
+      convocatorias: { "generales-2023": { sucesora_de: "nueva" } },
+    });
+    expect(esPrincipal(otra, reg)).toBe(false);
   });
 });
 

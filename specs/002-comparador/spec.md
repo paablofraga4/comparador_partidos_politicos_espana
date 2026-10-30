@@ -38,6 +38,10 @@ fuente con un clic.
 - Con **1 partido**, la vista pasa a «Conocer un partido» (la ficha); con **2 o más**, se
   muestra la comparativa.
 - Atajos: «Todos los partidos» y «Los 5 temas más consultados».
+- Desde el BOE, los *chips* a la vista son los de las candidaturas principales (constitución
+  I.6); el resto de las del BOE, en un desplegable «Otras candidaturas del BOE (N)», abierto si
+  llega alguna ya elegida en el enlace. «Todos» elige las principales. Lo mismo en la lista de
+  partidos, las páginas de tema, las de partido×tema, el inicio y la guía de las elecciones.
 - En móvil, la selección es un flujo de 2 pasos (partidos → temas) con un botón fijo
   «Comparar».
 

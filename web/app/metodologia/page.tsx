@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Candidato } from "@/components/piezas";
-import { analisis, candidaturas, fuente, registro } from "@/lib/data";
+import { analisis, candidatura, candidaturas, fuente, registro } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 import type { ConvocatoriaId } from "@/lib/types";
 
@@ -78,10 +78,20 @@ export default function Metodologia() {
       <section className="mt-10 space-y-3" id="criterio">
         <h2 className="text-2xl font-medium">Qué partidos aparecen</h2>
         <p>
-          La fuente es el <strong>Boletín Oficial del Estado</strong>. Cuando el BOE publique las
-          candidaturas al Congreso (hacia el 28 de octubre) aparecerán <strong>todas</strong>, sin
-          filtro, y podrás ver las de tu provincia. Hasta entonces mostramos, de forma provisional,
-          las candidaturas con representación en las Cortes en la XV legislatura.
+          La fuente es el <strong>Boletín Oficial del Estado</strong>. Están <strong>todas</strong>{" "}
+          las candidaturas al Congreso que publica, y en{" "}
+          <Link href="/tu-papeleta" className="underline">
+            Tu papeleta
+          </Link>{" "}
+          ves las de tu provincia. Hasta que el BOE las publicó (28 de octubre) mostrábamos, de
+          forma provisional, las candidaturas con representación en las Cortes en la XV legislatura.
+        </p>
+        <p>
+          En el comparador, los temas y la lista de partidos van primero las candidaturas de los
+          partidos con representación en las Cortes en la XV legislatura, o la que los continúa con
+          otro nombre (Frente Amplio, que continúa la coalición Sumar de 2023). Es un criterio
+          objetivo, el mismo para todos. Las demás candidaturas del BOE están justo debajo, en
+          «Otras candidaturas del BOE», con su ficha y el mismo trato.
         </p>
         <p className="text-ink-muted text-sm">
           Fase actual: <strong>{reg.fase_inclusion}</strong>.
@@ -149,7 +159,12 @@ export default function Metodologia() {
                       <Estado conv="generales-2026" cand={c.id} />
                     </td>
                     <td className="py-2">
-                      {c23?.dentro_de ? (
+                      {c23?.sucesora_de ? (
+                        <span className="text-ink-faint">
+                          el de {candidatura(c23.sucesora_de)?.corto ?? c23.sucesora_de} (coalición
+                          anterior)
+                        </span>
+                      ) : c23?.dentro_de ? (
                         <span className="text-ink-faint">dentro de otra candidatura</span>
                       ) : c23?.programa_propio === false ? (
                         <span className="text-ink-faint">sin programa propio</span>
@@ -207,9 +222,13 @@ export default function Metodologia() {
           .
         </p>
         <p>
-          Si <Link className="underline" href="/apoya">apoyas VotoClaro</Link>, guardamos solo el
-          nombre o alias que escribas para el tablón (si lo escribes), el importe, el tipo y las
-          fechas. Tu email y tu tarjeta los tiene Stripe; nosotros no los guardamos.
+          Si{" "}
+          <Link className="underline" href="/apoya">
+            apoyas VotoClaro
+          </Link>
+          , guardamos solo el nombre o alias que escribas para el tablón (si lo escribes), el
+          importe, el tipo y las fechas. Tu email y tu tarjeta los tiene Stripe; nosotros no los
+          guardamos.
         </p>
       </section>
     </article>

@@ -84,4 +84,5 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [x] T-504 «Tu papeleta» (`/tu-papeleta`) (antes del 28 oct)
 - [ ] T-505 Validación humana de la lectura fácil: fase 1 con una entidad especializada y fase 2 de ajuste
 - [ ] T-506 Ingesta de cada programa del 29N (menos de 24 h)
+- [x] T-508 Principales primero y el resto plegado («Otras candidaturas del BOE»); Frente Amplio agrupa sus marcas territoriales (30 oct)
 - [x] T-507 Sucesoras de una coalición de 2023 (`sucesora_de`): Frente Amplio con el programa de 2023 de Sumar, rotulado, noindex y pendiente en el chat (30 oct)

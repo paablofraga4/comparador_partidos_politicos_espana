@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BloqueTema } from "@/components/bloque-tema";
 import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { Selector } from "@/components/selector";
-import { candidaturas, temas, vigente } from "@/lib/data";
+import { candidaturas, candidaturasPorGrupo, temas, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 // Canónica sin parámetros: cada combinación de partidos y temas es la misma página
@@ -21,6 +21,7 @@ const lista = (v: string | string[] | undefined) =>
 export default async function Comparar(props: PageProps<"/comparar">) {
   const sp = await props.searchParams;
   const todas = candidaturas();
+  const { principales, otras } = candidaturasPorGrupo();
   const todosTemas = temas();
   // Orden alfabético SIEMPRE (constitución I.2), aunque se seleccionen en otro orden
   const pids = new Set(lista(sp.partidos));
@@ -34,7 +35,8 @@ export default async function Comparar(props: PageProps<"/comparar">) {
       <h1 className="text-4xl font-medium sm:text-5xl">Comparar programas</h1>
       <div className="border-rule bg-paper-raised mt-6 rounded-xl border p-4 sm:p-6">
         <Selector
-          partidos={todas.map((c) => ({ id: c.id, etiqueta: c.corto, color: c.color }))}
+          partidos={principales.map((c) => ({ id: c.id, etiqueta: c.corto, color: c.color }))}
+          otrosPartidos={otras.map((c) => ({ id: c.id, etiqueta: c.corto, color: c.color }))}
           temas={todosTemas.map((t) => ({ id: t.id, etiqueta: t.nombre, icono: t.icono }))}
         />
       </div>

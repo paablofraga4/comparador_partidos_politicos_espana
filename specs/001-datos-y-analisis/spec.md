@@ -44,6 +44,12 @@ aparece en la papeleta y lo que presenta un programa (constitución I.6). Están
 - **Fase BOE**: se cargan **todas** las candidaturas al Congreso publicadas en el BOE, con las
   circunscripciones en que se presenta cada una. Así cada persona puede ver **su papeleta**
   (spec 002, HU-2.10).
+- **Principales** (constitución I.6, 30 oct): las que tienen `incluir` en el registro
+  (representación en la XV legislatura) y las que tienen `sucesora_de` una de ellas. Van
+  primero; el resto, en «Otras candidaturas del BOE». Las marcas territoriales de una misma
+  candidatura se agrupan en ella con `siglas_boe` y `listas`, como el PSOE con el PSC: así
+  Frente Amplio reúne Comuns-Front Ampli, Compromís: Front Valencià, CHA-Frente Amplio Aragón,
+  Aramés-Front Ampli, Fronte Ampla y Fronte Zabala.
 - **Continuidad para el *fallback***: una candidatura de 2026 usa el programa de 2023 solo si
   el registro lo enlaza de forma explícita con una candidatura de 2023 con programa propio
   (por ejemplo, PP con PP). Si en 2023 concurrió dentro de otra candidatura (Podemos dentro de
