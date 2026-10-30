@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
-import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidatura, candidaturas, temas, vigente } from "@/lib/data";
+import { AvisoProgramaAnterior, Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import { candidatura, candidaturas, idDelPrograma, temas, vigente } from "@/lib/data";
 import { delPartido, metaPagina, nombrePartido } from "@/lib/seo";
 import { CONVOCATORIAS } from "@/lib/types";
 
@@ -30,6 +30,18 @@ export async function generateMetadata(props: PageProps<"/partidos/[id]">): Prom
       descripcion: `${nombrePartido(c)}: ${dentro ? `en 2023 se presentó dentro de ${dentro.corto}. ` : ""}Su programa electoral para el 29N aparecerá aquí, explicado por temas, en cuanto se publique.`,
       ruta,
     });
+  }
+  if (v.de) {
+    // Programa ajeno (el de 2023 de la coalición de la que procede): visible, pero no se indexa
+    // para que el buscador no atribuya a esta candidatura un texto que no es suyo
+    return {
+      ...metaPagina({
+        titulo,
+        descripcion: `${nombrePartido(c)} aún no ha publicado su programa para el 29N. Mientras, como referencia, el programa de las generales de 2023 de ${v.de.corto}, la coalición de la que procede.`,
+        ruta,
+      }),
+      robots: { index: false, follow: true },
+    };
   }
   const aviso = v.anterior ? " Hasta que publique el del 29N, es su programa de 2023." : "";
   return metaPagina({
@@ -74,7 +86,7 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
           {v.tipo === "programa" && v.fuente && (
             <>
               <Link
-                href={`/programas/${c.id}/${v.convocatoria}`}
+                href={`/programas/${idDelPrograma(c, v)}/${v.convocatoria}`}
                 className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold underline-offset-4 hover:underline"
               >
                 <FileText aria-hidden className="h-4 w-4" /> Leer el programa completo (
@@ -86,17 +98,13 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
                 rel="noreferrer"
                 className="text-ink-muted hover:text-ink inline-flex min-h-11 items-center gap-1.5 text-sm"
               >
-                <ExternalLink aria-hidden className="h-4 w-4" /> Original en su web
+                <ExternalLink aria-hidden className="h-4 w-4" />{" "}
+                {v.de ? `Original en la web de ${v.de.corto}` : "Original en su web"}
               </a>
             </>
           )}
         </div>
-        {v.tipo === "programa" && v.anterior && (
-          <p className="border-notice-rule bg-notice-bg text-notice-ink mt-4 rounded-md border p-3 text-sm">
-            Estás viendo el programa de las generales de 2023. Cuando {c.corto} publique su programa
-            para el 29N lo analizaremos y lo sustituiremos aquí.
-          </p>
-        )}
+        <AvisoProgramaAnterior c={c} v={v} />
       </header>
 
       {v.tipo === "pendiente" ? (

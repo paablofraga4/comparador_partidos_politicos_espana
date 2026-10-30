@@ -20,13 +20,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/apoya", 0.4],
     ["/condiciones", 0.2],
   ];
-  const programas = candidaturas().flatMap((c) => {
-    const v = vigente(c);
-    return v.tipo === "programa" ? [`/programas/${c.id}/${v.convocatoria}`] : [];
-  });
+  // Las candidaturas que muestran el programa de 2023 de la coalición de la que proceden
+  // (Frente Amplio ← Sumar) tienen sus páginas en noindex: fuera del sitemap
+  const vigentes = candidaturas().map((c) => ({ c, v: vigente(c) }));
+  const propias = vigentes.filter(({ v }) => !(v.tipo === "programa" && v.de));
+  const programas = propias.flatMap(({ c, v }) =>
+    v.tipo === "programa" ? [`/programas/${c.id}/${v.convocatoria}`] : [],
+  );
   // Partido × tema (HU-2.11): solo las que tienen contenido; las de «no menciona» son noindex
-  const partidoTema = candidaturas().flatMap((c) => {
-    const v = vigente(c);
+  const partidoTema = propias.flatMap(({ c, v }) => {
     if (v.tipo !== "programa") return [];
     return temas()
       .filter((t) => v.analisis.temas[t.id]?.menciona)
@@ -39,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily" as const,
       priority,
     })),
-    ...candidaturas().map((c) => ({
+    ...propias.map(({ c }) => ({
       url: url(`/partidos/${c.id}`),
       lastModified: ahora,
       changeFrequency: "daily" as const,

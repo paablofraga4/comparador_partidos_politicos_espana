@@ -137,13 +137,16 @@ export function BloqueTema({
   }
   const a = v.analisis;
   const t = a.temas[temaId];
+  // Programa de la coalición de 2023 de la que procede (Sumar para Frente Amplio): las citas, el
+  // documento y los avisos de error apuntan a ella, que es de quien es el texto
+  const cp: Candidatura = v.de ? { ...c, id: v.de.id, corto: v.de.corto, nombre: v.de.corto } : c;
   if (!t || !t.menciona) {
     return (
       <p className="text-ink-muted italic">
         No lo menciona en su programa.{" "}
         <a
           className="decoration-rule-strong hover:decoration-ink not-italic underline underline-offset-2"
-          href={`/programas/${c.id}/${a.convocatoria}`}
+          href={`/programas/${cp.id}/${a.convocatoria}`}
         >
           Comprobar en el documento
         </a>
@@ -155,11 +158,11 @@ export function BloqueTema({
     <SegunLectura
       normal={
         <>
-          <Resumen frases={t.resumen ?? []} a={a} c={c} />
+          <Resumen frases={t.resumen ?? []} a={a} c={cp} />
           <Propuestas
             items={t.propuestas ?? []}
             a={a}
-            c={c}
+            c={cp}
             tema={temaNombre}
             abiertas={abiertas}
           />
@@ -168,11 +171,11 @@ export function BloqueTema({
       facil={
         lf && (lf.resumen?.length || lf.propuestas?.length) ? (
           <>
-            <Resumen frases={lf.resumen ?? []} a={a} c={c} />
+            <Resumen frases={lf.resumen ?? []} a={a} c={cp} />
             <Propuestas
               items={lf.propuestas ?? []}
               a={a}
-              c={c}
+              c={cp}
               tema={temaNombre}
               abiertas={abiertas}
             />

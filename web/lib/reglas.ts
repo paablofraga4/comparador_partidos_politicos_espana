@@ -20,7 +20,7 @@ export function programaVigente(
   cand: Candidatura,
   analisis: Analisis2,
   fuentes: Fuentes2,
-  opts: { mostrarBorradores: boolean },
+  opts: { mostrarBorradores: boolean; de?: { id: string; corto: string } | null },
 ): ProgramaVigente {
   const publicable = (a: Analisis | null | undefined): a is Analisis =>
     !!a && (a.estado === "aprobado" || opts.mostrarBorradores);
@@ -34,13 +34,17 @@ export function programaVigente(
       fuente: fuentes["generales-2026"] ?? null,
       anterior: false,
       borrador: a26.estado !== "aprobado",
+      de: null,
     };
   }
 
-  // Fallback a 2023 SOLO si concurrió con programa propio (no el de una coalición ajena)
+  // Fallback a 2023 SOLO si concurrió con programa propio (no el de una coalición ajena), o si
+  // el registro dice que continúa una coalición de 2023 (`sucesora_de`): entonces `analisis` y
+  // `fuentes` de 2023 son los de aquella, y `de` lo dice para el aviso (spec 001)
   const c23 = cand.convocatorias["generales-2023"];
   const a23 = analisis["generales-2023"];
-  if (c23?.programa_propio === true && publicable(a23)) {
+  const sucesora = c23?.sucesora_de ?? null;
+  if ((c23?.programa_propio === true || sucesora) && publicable(a23)) {
     return {
       tipo: "programa",
       convocatoria: "generales-2023",
@@ -48,6 +52,7 @@ export function programaVigente(
       fuente: fuentes["generales-2023"] ?? null,
       anterior: true,
       borrador: a23.estado !== "aprobado",
+      de: sucesora ? (opts.de ?? { id: sucesora, corto: sucesora }) : null,
     };
   }
   return { tipo: "pendiente", dentroDe: c23?.dentro_de ?? null };

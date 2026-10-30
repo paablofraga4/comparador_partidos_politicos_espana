@@ -41,6 +41,9 @@ class Taxonomia(_Model):
 class CandidaturaEnConvocatoria(_Model):
     programa_propio: bool | Literal["por-verificar"] | None = None
     dentro_de: str | None = None
+    # Candidatura de 2026 que continúa una coalición de 2023 con otro nombre (Frente Amplio ←
+    # Sumar): mientras no publique, se muestra el programa de aquella, con aviso (spec 001)
+    sucesora_de: str | None = None
     estado: Literal["provisional", "presentada", "proclamada", "no-proclamada"] | None = None
     circunscripciones: list[str] = Field(default_factory=list)
     # Siglas con que concurre en cada circunscripción (p. ej. barcelona: PSC), según el BOE

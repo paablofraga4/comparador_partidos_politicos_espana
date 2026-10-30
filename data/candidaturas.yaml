@@ -459,6 +459,8 @@ candidaturas:
     siglas_boe: [ARAMÉS\-EU\-MS]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [illes-balears]
@@ -475,6 +477,8 @@ candidaturas:
     siglas_boe: [CHA\-IU\-MS\-FRENTE\ AMPLIO]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [huesca, zaragoza]
@@ -508,6 +512,8 @@ candidaturas:
     siglas_boe: [COMPROMIS\-EUPV\-PODEM\-ERPV, COMPROMÍS\-EUPV\-PODEM\-ERPV]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [alicante, castellon, valencia]
@@ -526,6 +532,8 @@ candidaturas:
     siglas_boe: [COMUNS\-FRONT\ AMPLI]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [barcelona, girona, lleida]
@@ -639,6 +647,8 @@ candidaturas:
     siglas_boe: [FA]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [albacete, almeria, asturias, avila, badajoz, bizkaia, burgos, caceres, 
@@ -808,6 +818,8 @@ candidaturas:
     siglas_boe: [FRENTE\ AMPLIO\-FRONTE\ AMPLA]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [a-coruna, ourense]
@@ -825,6 +837,8 @@ candidaturas:
     siglas_boe: [FRENTE\ AMPLIO\ –\ FRONTE\ ZABALA, FRENTE\ AMPLIO\-FRONTE\ ZABALA]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
+      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
+      generales-2023: { programa_propio: false, sucesora_de: sumar }
       generales-2026:
         estado: presentada
         circunscripciones: [alava, navarra]
