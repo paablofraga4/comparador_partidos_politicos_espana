@@ -76,3 +76,21 @@ def test_no_vigila_candidaturas_con_programa_ya_registrado():
     client = httpx.Client(transport=httpx.MockTransport(lambda r: httpx.Response(500)))
     nov, errores = vigilar(cands, fuentes, client=client)
     assert nov == [] and errores == []
+
+
+def test_sumario_del_boe_con_objetos_en_vez_de_listas():
+    """El 29-oct-2026 el sumario trajo una sola sección como objeto y la vigilancia falló."""
+    from votoclaro.vigilancia import boe_novedades
+
+    titulo = "Candidaturas proclamadas para las elecciones al Congreso"
+    item = {"identificador": "BOE-A-2026-1", "titulo": titulo}
+    departamento = {"nombre": "JUNTAS ELECTORALES PROVINCIALES", "epigrafe": {"item": item}}
+    sumario = {"data": {"sumario": {"diario": {"seccion": {"departamento": departamento}}}}}
+    client = httpx.Client(
+        transport=httpx.MockTransport(lambda r: httpx.Response(200, json=sumario))
+    )
+    novedades, errores = boe_novedades(["20261029"], client)
+    assert errores == []
+    assert [n.titulo for n in novedades] == [
+        "BOE-A-2026-1 · Candidaturas proclamadas para las elecciones al Congreso"
+    ]
