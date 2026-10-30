@@ -65,6 +65,34 @@ describe("programaVigente (spec 001, HU-1.7)", () => {
     expect(v).toEqual({ tipo: "pendiente", dentroDe: "sumar" });
   });
 
+  it("si continúa una coalición de 2023 (Frente Amplio ← Sumar), muestra aquel programa rotulado", () => {
+    const fa = cand({
+      id: "fa",
+      corto: "Frente Amplio",
+      convocatorias: { "generales-2023": { programa_propio: false, sucesora_de: "sumar" } },
+    });
+    const v = programaVigente(
+      fa,
+      { "generales-2023": analisis("generales-2023", "aprobado") },
+      {},
+      { ...prod, de: { id: "sumar", corto: "Sumar" } },
+    );
+    expect(v).toMatchObject({
+      tipo: "programa",
+      convocatoria: "generales-2023",
+      anterior: true,
+      de: { id: "sumar", corto: "Sumar" },
+    });
+    // Un programa propio de 2023 no lleva `de`
+    const pp = programaVigente(
+      cand(),
+      { "generales-2023": analisis("generales-2023", "aprobado") },
+      {},
+      prod,
+    );
+    expect(pp).toMatchObject({ tipo: "programa", de: null });
+  });
+
   it("nunca muestra borradores en producción y sí en vista previa", () => {
     const a = { "generales-2023": analisis("generales-2023", "borrador") };
     expect(programaVigente(cand(), a, {}, prod).tipo).toBe("pendiente");

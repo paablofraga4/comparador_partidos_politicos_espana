@@ -88,7 +88,9 @@ fuente con un clic.
 
 ### HU-2.6 Estado del programa siempre visible
 - Cada tarjeta o columna indica su origen: «Programa 29N · publicado el 10 nov», o el aviso
-  de programa de 2023 (constitución III.2).
+  de programa de 2023 (constitución III.2). Si es el de la coalición de la que procede
+  (spec 001, «Sucesora de una coalición de 2023»), el aviso la nombra: «Programa de 2023 de
+  Sumar (coalición anterior) · pendiente del 29N».
 - En el inicio, una tira con el estado de los programas («9 de 14 partidos han publicado ya
   su programa del 29N») que enlaza a la metodología.
 

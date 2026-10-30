@@ -52,6 +52,11 @@ def _check_registries(paths: Paths, inf: Informe) -> tuple[set[str], set[str]]:
                 inf.errores.append(f"candidaturas.yaml: {c.id} usa convocatoria desconocida {conv}")
             if cc.dentro_de and cc.dentro_de not in ids:
                 inf.errores.append(f"candidaturas.yaml: {c.id}.dentro_de={cc.dentro_de} no existe")
+            # La sucesora muestra el programa de aquella coalición: tiene que existir (spec 001)
+            if cc.sucesora_de and cc.sucesora_de not in ids:
+                inf.errores.append(
+                    f"candidaturas.yaml: {c.id}.sucesora_de={cc.sucesora_de} no existe"
+                )
 
     tids = [t.id for t in topics.temas]
     if len(tids) != len(set(tids)):

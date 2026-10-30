@@ -79,19 +79,27 @@ export function candidatura(id: string): Candidatura | undefined {
 }
 
 export function vigente(cand: Candidatura): ProgramaVigente {
+  // Si continúa una coalición de 2023 (Frente Amplio ← Sumar), el programa de 2023 es el de aquella
+  const sucesora = cand.convocatorias["generales-2023"]?.sucesora_de;
+  const id23 = sucesora ?? cand.id;
+  const de = sucesora ? { id: sucesora, corto: candidatura(sucesora)?.corto ?? sucesora } : null;
   return programaVigente(
     cand,
     {
       "generales-2026": analisis("generales-2026", cand.id),
-      "generales-2023": analisis("generales-2023", cand.id),
+      "generales-2023": analisis("generales-2023", id23),
     },
     {
       "generales-2026": fuente("generales-2026", cand.id),
-      "generales-2023": fuente("generales-2023", cand.id),
+      "generales-2023": fuente("generales-2023", id23),
     },
-    { mostrarBorradores: MOSTRAR_BORRADORES },
+    { mostrarBorradores: MOSTRAR_BORRADORES, de },
   );
 }
+
+/** Id de la candidatura cuyo programa se muestra (Sumar para Frente Amplio): citas y documento. */
+export const idDelPrograma = (cand: Candidatura, v: ProgramaVigente): string =>
+  v.tipo === "programa" && v.de ? v.de.id : cand.id;
 
 /** Resumen del estado de publicación de programas del 29N (tira de la portada). */
 export function estadoProgramas29N() {

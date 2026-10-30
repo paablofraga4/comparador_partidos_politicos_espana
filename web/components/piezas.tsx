@@ -65,6 +65,19 @@ export function Candidato({ c, className = "" }: { c: Candidatura; className?: s
   );
 }
 
+/** Aviso de las fichas cuando se muestra el programa de 2023 (constitución III.2; spec 001). */
+export function AvisoProgramaAnterior({ c, v }: { c: Candidatura; v: ProgramaVigente }) {
+  if (v.tipo !== "programa" || !v.anterior) return null;
+  return (
+    <p className="border-notice-rule bg-notice-bg text-notice-ink mt-4 rounded-md border p-3 text-sm">
+      {v.de
+        ? `Estás viendo el programa de las generales de 2023 de ${v.de.corto}, la coalición de la que procede ${c.corto}: su texto es de ${v.de.corto}, no de ${c.corto}.`
+        : "Estás viendo el programa de las generales de 2023."}{" "}
+      Cuando {c.corto} publique su programa para el 29N lo analizaremos y lo sustituiremos aquí.
+    </p>
+  );
+}
+
 /** Origen del programa mostrado (spec 002, HU-2.6). */
 export function ProgramaBadge({ v }: { v: ProgramaVigente }) {
   if (v.tipo === "pendiente") {
@@ -78,7 +91,9 @@ export function ProgramaBadge({ v }: { v: ProgramaVigente }) {
     <span className="inline-flex flex-wrap items-center gap-1.5">
       {v.anterior ? (
         <span className="border-notice-rule bg-notice-bg text-notice-ink inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">
-          Programa de 2023 (anterior) · pendiente del 29N
+          {v.de
+            ? `Programa de 2023 de ${v.de.corto} (coalición anterior) · pendiente del 29N`
+            : "Programa de 2023 (anterior) · pendiente del 29N"}
         </span>
       ) : (
         <span className="border-rule inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">

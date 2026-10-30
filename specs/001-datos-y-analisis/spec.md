@@ -48,6 +48,14 @@ aparece en la papeleta y lo que presenta un programa (constitución I.6). Están
   el registro lo enlaza de forma explícita con una candidatura de 2023 con programa propio
   (por ejemplo, PP con PP). Si en 2023 concurrió dentro de otra candidatura (Podemos dentro de
   Sumar) o es nueva, **no hay *fallback***: se muestra «Pendiente del programa del 29N».
+- **Sucesora de una coalición de 2023** (decisión del 30 oct, BOE-A-2026-22607): si una
+  candidatura continúa con otro nombre una coalición de 2023 que no se presenta en 2026
+  (Frente Amplio y sus marcas territoriales ← Sumar), el registro lo dice con
+  `sucesora_de: sumar` y se muestra el programa de 2023 **de aquella coalición**, rotulado
+  como suyo: «Programa de 2023 de Sumar (coalición anterior) · pendiente del 29N», con un
+  aviso que aclara que el texto es de Sumar. Las citas y el documento llevan al programa de
+  Sumar. Esas páginas no se indexan ni van al sitemap, y el chat las trata como pendientes
+  (no usa ese programa). Solo para sucesoras claras: misma coalición, distinto nombre.
 - **Sin programa**: una candidatura proclamada que no publica programa aparece con «No ha
   publicado programa electoral (comprobado el {fecha})».
 

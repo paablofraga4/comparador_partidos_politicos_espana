@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
-import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import { AvisoProgramaAnterior, Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
 import { candidatura, candidaturas, tema, temas, vigente } from "@/lib/data";
 import { extracto, metaPagina, nombrePartido, tituloPartidoTema } from "@/lib/seo";
 
@@ -38,6 +38,17 @@ export async function generateMetadata(
     es29N: v.tipo === "programa" && !v.anterior,
   });
   const ruta = `/partidos/${c.id}/${t.id}`;
+  if (v.tipo === "programa" && v.de) {
+    // Programa de 2023 de la coalición de la que procede: visible, pero no se indexa (no es suyo)
+    return {
+      ...metaPagina({
+        titulo: `${t.nombre}: ${nombrePartido(c)} aún sin programa del 29N`,
+        descripcion: `${nombrePartido(c)} aún no ha publicado su programa para el 29N. Mientras, como referencia, qué decía sobre ${t.nombre.toLowerCase()} el programa de 2023 de ${v.de.corto}, la coalición de la que procede.`,
+        ruta,
+      }),
+      robots: { index: false, follow: true },
+    };
+  }
   if (!analisis?.menciona) {
     // Sin contenido propio: existe (simetría) pero no se indexa
     const motivo =
@@ -108,12 +119,7 @@ export default async function PartidoTema(props: PageProps<"/partidos/[id]/[tema
         <div className="mt-4">
           <ProgramaBadge v={v} />
         </div>
-        {v.tipo === "programa" && v.anterior && (
-          <p className="border-notice-rule bg-notice-bg text-notice-ink mt-4 rounded-md border p-3 text-sm">
-            Estás viendo el programa de las generales de 2023. Cuando {c.corto} publique su programa
-            para el 29N lo analizaremos y lo sustituiremos aquí.
-          </p>
-        )}
+        <AvisoProgramaAnterior c={c} v={v} />
       </header>
 
       <section className="mt-8" aria-label={`Propuestas de ${c.corto} sobre ${t.nombre}`}>

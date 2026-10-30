@@ -11,6 +11,8 @@ export type CandidaturaPapeleta = {
   color: string;
   listas: Record<string, string>;
   programa: "29N" | "2023" | "pendiente";
+  /** Coalición de 2023 cuyo programa se muestra (Sumar para Frente Amplio) */
+  programaDe?: string | null;
 };
 
 const KEY = "votoclaro:provincia";
@@ -102,7 +104,11 @@ export function Papeleta({
                     {local && local.toLowerCase() !== c.corto.toLowerCase() && (
                       <span className="text-ink-muted text-sm">En tu papeleta: {local}</span>
                     )}
-                    <span className="text-ink-faint text-xs">{ETIQUETA[c.programa]}</span>
+                    <span className="text-ink-faint text-xs">
+                      {c.programaDe
+                        ? `Programa de 2023 de ${c.programaDe} (coalición anterior)`
+                        : ETIQUETA[c.programa]}
+                    </span>
                   </Link>
                 </li>
               );

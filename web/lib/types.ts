@@ -23,6 +23,8 @@ export type Tema = {
 export type CandidaturaEnConvocatoria = {
   programa_propio?: boolean | "por-verificar" | null;
   dentro_de?: string | null;
+  /** Continúa una coalición de 2023 con otro nombre (Frente Amplio ← Sumar): spec 001 */
+  sucesora_de?: string | null;
   estado?: "provisional" | "presentada" | "proclamada" | "no-proclamada" | null;
   circunscripciones?: string[];
   /** Siglas con que concurre en cada circunscripción según el BOE (p. ej. barcelona: PSC) */
@@ -78,5 +80,7 @@ export type ProgramaVigente =
       /** true si es el de 2023 mostrado porque aún no hay programa aprobado del 29N */
       anterior: boolean;
       borrador: boolean;
+      /** Si es el programa de 2023 de la coalición de la que procede (Sumar para Frente Amplio) */
+      de: { id: string; corto: string } | null;
     }
   | { tipo: "pendiente"; dentroDe: string | null };
