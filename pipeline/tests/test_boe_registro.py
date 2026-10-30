@@ -7,16 +7,19 @@ import yaml
 
 from votoclaro.boe import parse
 from votoclaro.boe_registro import aplicar
-from votoclaro.paths import ROOT, Paths
+from votoclaro.paths import Paths
 from votoclaro.registry import load_candidaturas
 
 FIXTURE = Path(__file__).parent / "fixtures" / "boe_candidaturas_2023_extracto.xml"
+# Registro en fase provisional (antes del BOE): los tests no dependen del registro vivo, que
+# cambia al cargar cada BOE
+REGISTRO = Path(__file__).parent / "fixtures" / "registro_provisional"
 
 
 def _registro_temporal(tmp_path: Path) -> Paths:
     d = tmp_path / "data"
     d.mkdir()
-    shutil.copy(ROOT / "data" / "candidaturas.yaml", d / "candidaturas.yaml")
+    shutil.copy(REGISTRO / "candidaturas.yaml", d / "candidaturas.yaml")
     return Paths(d)
 
 

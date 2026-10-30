@@ -1,0 +1,108 @@
+# Circunscripciones al Congreso según el BOE (lo mantiene `vc boe-candidaturas`).
+version: 1
+fuente: BOE-A-2026-22607
+circunscripciones:
+  - id: a-coruna
+    nombre: A Coruña
+  - id: alava
+    nombre: Álava
+  - id: albacete
+    nombre: Albacete
+  - id: alicante
+    nombre: Alicante
+  - id: almeria
+    nombre: Almería
+  - id: asturias
+    nombre: Asturias
+  - id: avila
+    nombre: Ávila
+  - id: badajoz
+    nombre: Badajoz
+  - id: barcelona
+    nombre: Barcelona
+  - id: bizkaia
+    nombre: Bizkaia
+  - id: burgos
+    nombre: Burgos
+  - id: caceres
+    nombre: Cáceres
+  - id: cadiz
+    nombre: Cádiz
+  - id: cantabria
+    nombre: Cantabria
+  - id: castellon
+    nombre: Castellón
+  - id: ceuta
+    nombre: Ceuta
+  - id: ciudad-real
+    nombre: Ciudad Real
+  - id: cordoba
+    nombre: Córdoba
+  - id: cuenca
+    nombre: Cuenca
+  - id: gipuzkoa
+    nombre: Gipuzkoa
+  - id: girona
+    nombre: Girona
+  - id: granada
+    nombre: Granada
+  - id: guadalajara
+    nombre: Guadalajara
+  - id: huelva
+    nombre: Huelva
+  - id: huesca
+    nombre: Huesca
+  - id: illes-balears
+    nombre: Illes Balears
+  - id: jaen
+    nombre: Jaén
+  - id: la-rioja
+    nombre: La Rioja
+  - id: las-palmas
+    nombre: Las Palmas
+  - id: leon
+    nombre: León
+  - id: lleida
+    nombre: Lleida
+  - id: lugo
+    nombre: Lugo
+  - id: madrid
+    nombre: Madrid
+  - id: malaga
+    nombre: Málaga
+  - id: melilla
+    nombre: Melilla
+  - id: murcia
+    nombre: Murcia
+  - id: navarra
+    nombre: Navarra
+  - id: ourense
+    nombre: Ourense
+  - id: palencia
+    nombre: Palencia
+  - id: pontevedra
+    nombre: Pontevedra
+  - id: salamanca
+    nombre: Salamanca
+  - id: santa-cruz-de-tenerife
+    nombre: Santa Cruz de Tenerife
+  - id: segovia
+    nombre: Segovia
+  - id: sevilla
+    nombre: Sevilla
+  - id: soria
+    nombre: Soria
+  - id: tarragona
+    nombre: Tarragona
+  - id: teruel
+    nombre: Teruel
+  - id: toledo
+    nombre: Toledo
+  - id: valencia
+    nombre: Valencia
+  - id: valladolid
+    nombre: Valladolid
+  - id: zamora
+    nombre: Zamora
+  - id: zaragoza
+    nombre: Zaragoza

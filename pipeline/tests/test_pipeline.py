@@ -57,7 +57,8 @@ def test_real_registries_are_valid():
     cands = load_candidaturas(paths)
     topics = load_topics(paths)
     load_sources(paths)
-    assert cands.fase_inclusion == "provisional"
+    # Provisional hasta el BOE de candidaturas; después, la fase que toque (spec 001)
+    assert cands.fase_inclusion in {"provisional", "presentadas", "proclamadas"}
     assert {"pp", "psoe", "vox", "sumar", "podemos"} <= {c.id for c in cands.candidaturas}
     assert cands.get("podemos").convocatorias["generales-2023"].dentro_de == "sumar"
     assert len(topics.temas) == 19

@@ -11,10 +11,13 @@ from votoclaro.boe import (
     slug,
     titulo,
 )
-from votoclaro.paths import ROOT, Paths
+from votoclaro.paths import Paths
 from votoclaro.registry import load_candidaturas
 
 FIXTURE = Path(__file__).parent / "fixtures" / "boe_candidaturas_2023_extracto.xml"
+# Registro en fase provisional (antes del BOE): los tests no dependen del registro vivo, que
+# cambia al cargar cada BOE
+REGISTRO = Path(__file__).parent / "fixtures" / "registro_provisional"
 
 
 def test_siglas_con_parentesis_anidados_y_espacios_unicode():
@@ -40,7 +43,7 @@ def test_emparejar_siglas_con_puntos():
         {"navarra": "Navarra"},
         {"UPN": CandidaturaBOE("U.P.N.", "UNION DEL PUEBLO NAVARRO", {"navarra": "Navarra"})},
     )
-    registro = load_candidaturas(Paths(ROOT / "data")).candidaturas
+    registro = load_candidaturas(Paths(REGISTRO)).candidaturas
     asignadas, sueltas = emparejar(doc, registro)
     assert "upn" in asignadas and not sueltas
 
@@ -74,7 +77,7 @@ def test_parse_documento_real_2023():
 
 def test_emparejar_con_el_registro():
     doc = parse(FIXTURE.read_text(encoding="utf-8"))
-    registro = load_candidaturas(Paths(ROOT / "data")).candidaturas
+    registro = load_candidaturas(Paths(REGISTRO)).candidaturas
     asignadas, sueltas = emparejar(doc, registro)
     psoe = {c.siglas for c in asignadas["psoe"]}
     assert psoe == {"PSOE", "PSC", "PSE-EE (PSOE)", "PSN-PSOE"}
@@ -84,3 +87,23 @@ def test_emparejar_con_el_registro():
     nuevas = {c.siglas for c in sueltas}
     assert {"PACMA", "FO", "RECORTES CERO"} <= nuevas
     assert not nuevas & {"PP", "VOX", "PSC", "EH Bildu", "EAJ-PNV"}
+
+
+def test_patrones_de_2026_sumar_y_bildu():
+    # En el BOE de 2026 «Sumar» no concurre como tal: la coalición canaria que lo incluye es otra
+    # candidatura. Y EH Bildu aparece con guion en Navarra.
+    circ = {"x": "X"}
+    doc = DocumentoBOE(
+        "x",
+        "t",
+        circ,
+        {
+            "A": CandidaturaBOE("NC-BC, PODEMOS, IU, SUMAR", "NUEVA CANARIAS-BC, PODEMOS…", circ),
+            "B": CandidaturaBOE("EH-Bildu", "EUSKAL HERRIA BILDU", circ),
+            "C": CandidaturaBOE("SUMAR - COMPROMÍS", "SUMAR - COMPROMÍS", circ),
+        },
+    )
+    asignadas, sueltas = emparejar(doc, load_candidaturas(Paths(REGISTRO)).candidaturas)
+    assert {c.siglas for c in asignadas["bildu"]} == {"EH-Bildu"}
+    assert {c.siglas for c in asignadas["sumar"]} == {"SUMAR - COMPROMÍS"}
+    assert [c.siglas for c in sueltas] == ["NC-BC, PODEMOS, IU, SUMAR"]
