@@ -262,6 +262,9 @@ candidaturas:
     vigilar: []
     siglas_boe: ['UPN.*']
     incluir: siempre
+    nota: >-
+      En Navarra concurre como UPN-PP (BOE-A-2026-22607); se mantiene como UPN con su programa
+      de 2023 (decisión del 30 oct). Revisar con las proclamadas.
     convocatorias:
       generales-2023: {programa_propio: true}
       generales-2026: {estado: presentada, circunscripciones: [navarra], listas: {navarra: UPN-PP}}
@@ -919,7 +922,10 @@ candidaturas:
     web: ''
     vigilar: []
     siglas_boe: [JOSÉ\ MARÍA\ CALVO\ GUERRA]
-    nota: Alta automática desde BOE-A-2026-22607
+    nota: >-
+      Alta automática desde BOE-A-2026-22607. El BOE da en Málaga (n.º 9) un nombre de persona
+      sin siglas: posible errata; se carga tal cual, con el BOE como criterio (decisión del
+      30 oct). Revisar con las proclamadas.
     convocatorias:
       generales-2026:
         estado: presentada
