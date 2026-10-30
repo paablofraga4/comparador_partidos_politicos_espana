@@ -51,9 +51,10 @@ class Resumen:
                 "",
                 *(
                     [
-                        f"## ⚠️ Líneas sin entender ({len(doc.sin_entender)})",
+                        f"## ⚠️ Candidaturas sin siglas en el BOE ({len(doc.sin_entender)})",
                         "",
-                        "No se han cargado. Revísalas en el BOE y añádelas a mano:",
+                        "Se han cargado con el nombre como siglas. Comprueba en el BOE que sean "
+                        "candidaturas (y no una errata):",
                         "",
                         *[f"- {linea}" for linea in doc.sin_entender],
                         "",

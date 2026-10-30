@@ -110,8 +110,8 @@ class DocumentoBOE:
     titulo: str
     circunscripciones: dict[str, str]  # slug → nombre (solo las que tienen Congreso)
     candidaturas: dict[str, CandidaturaBOE]  # siglas normalizadas → candidatura
-    # Líneas de candidatura al Congreso que no se han podido leer: van al informe del PR para
-    # que una persona las revise (antes se perdían sin aviso)
+    # Candidaturas al Congreso sin siglas en el BOE: se cargan con el nombre como siglas y van al
+    # informe del PR para que una persona las revise (antes se perdían sin aviso)
     sin_entender: list[str] = field(default_factory=list)
 
 
@@ -133,9 +133,13 @@ def parse(xml: str) -> DocumentoBOE:
         elif clase == "centro_redonda" and junta and camara.startswith("CONGRESO"):
             par = separar_siglas(texto)
             if not par:
-                if _NUM.match(texto):
-                    sin_entender.append(f"{junta[1]}: {texto}")
-                continue
+                if not _NUM.match(texto):
+                    continue
+                # Sin siglas entre paréntesis («9. VOX», «5. GEROA BAI» en Navarra, 2026): el
+                # nombre hace de siglas. Va al informe para que una persona lo compruebe
+                nombre = _NUM.sub("", texto).strip()
+                par = (nombre, nombre)
+                sin_entender.append(f"{junta[1]}: {texto}")
             nombre, siglas = par
             circs[junta[0]] = junta[1]
             c = cands.setdefault(sin_puntos(siglas), CandidaturaBOE(siglas, nombre))

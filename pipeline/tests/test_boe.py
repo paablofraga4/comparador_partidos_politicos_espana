@@ -45,12 +45,15 @@ def test_emparejar_siglas_con_puntos():
     assert "upn" in asignadas and not sueltas
 
 
-def test_lineas_sin_entender_van_al_informe():
+def test_candidaturas_sin_siglas_se_cargan_y_van_al_informe():
+    # «9. VOX» y «5. GEROA BAI» venían así en Navarra en el BOE de 2026: antes se perdían
     xml = FIXTURE.read_text(encoding="utf-8").replace(
         "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA)", "PARTIDO SIN SIGLAS LEGIBLES"
     )
     doc = parse(xml)
     assert any("PARTIDO SIN SIGLAS LEGIBLES" in linea for linea in doc.sin_entender)
+    sin = doc.candidaturas["PARTIDOSINSIGLASLEGIBLES"]
+    assert sin.siglas == sin.nombre == "PARTIDO SIN SIGLAS LEGIBLES"
 
 
 def test_nombres_y_slugs_de_provincia():

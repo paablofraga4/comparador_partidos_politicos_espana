@@ -145,6 +145,13 @@ _BOE_SUMARIO = "https://www.boe.es/datosabiertos/api/boe/sumario/{fecha}"
 _BOE_INTERES = re.compile(r"candidatura|coalici", re.I)
 
 
+def _lista(x: object) -> list[dict]:
+    """Elementos de un nodo del sumario del BOE, venga como lista, como objeto o vacío."""
+    if isinstance(x, list):
+        return [e for e in x if isinstance(e, dict)]
+    return [x] if isinstance(x, dict) else []
+
+
 def _items_boe(nodo: object):
     if isinstance(nodo, dict):
         if "identificador" in nodo and "titulo" in nodo:
@@ -173,10 +180,11 @@ def boe_novedades(fechas: list[str], client: httpx.Client) -> tuple[list[Novedad
         except (httpx.HTTPError, KeyError, ValueError) as e:
             errores.append(f"BOE {f}: {e.__class__.__name__}")
             continue
-        for diario in sumario.get("diario", []):
-            for seccion in diario.get("seccion", []):
-                deps = seccion.get("departamento", [])
-                for dep in deps if isinstance(deps, list) else [deps]:
+        # El sumario trae una lista si hay varios elementos y un objeto si hay uno solo (el 29 de
+        # octubre de 2026 la vigilancia falló por eso): se tratan igual
+        for diario in _lista(sumario.get("diario")):
+            for seccion in _lista(diario.get("seccion")):
+                for dep in _lista(seccion.get("departamento")):
                     if "ELECTORAL" not in str(dep.get("nombre", "")).upper():
                         continue
                     for it in _items_boe(dep):
