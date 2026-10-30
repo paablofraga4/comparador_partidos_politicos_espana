@@ -18,7 +18,11 @@
 #        candidatura (dentro_de) → NO hay fallback a 2023 (spec 001).
 #   convocatorias.generales-2026.estado: provisional | presentada | proclamada | no-proclamada
 #   convocatorias.generales-2026.circunscripciones: lista de provincias (desde el BOE) o [todas]
-#   incluir (solo fase provisional): siempre | si-concurre-por-separado
+#   incluir: siempre | si-concurre-por-separado → representación en las Cortes (XV legislatura).
+#        En fase provisional decide quién aparece; desde el BOE, quién es «principal» y va primero
+#        (constitución I.6). También lo es la que tenga `sucesora_de` una de ellas.
+#   convocatorias.generales-2023.sucesora_de: continúa con otro nombre esa coalición de 2023
+#        (Frente Amplio ← Sumar): muestra su programa de 2023 rotulado (spec 001).
 version: 2
 fase_inclusion: presentadas
 candidaturas:
@@ -448,43 +452,6 @@ candidaturas:
           girona: ALHORA
           lleida: ALHORA
           tarragona: ALHORA
-  - id: arames-eu-ms
-    nombre: Aramés-Front Ampli
-    corto: ARAMÉS-EU-MS
-    tipo: partido
-    ambito: provincial
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [ARAMÉS\-EU\-MS]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [illes-balears]
-        listas:
-          illes-balears: ARAMÉS-EU-MS
-  - id: cha-iu-ms-frente-amplio
-    nombre: Chunta Aragonesista-Frente Amplio Aragón
-    corto: CHA-IU-MS-FRENTE AMPLIO
-    tipo: partido
-    ambito: autonomico
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [CHA\-IU\-MS\-FRENTE\ AMPLIO]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [huesca, zaragoza]
-        listas:
-          huesca: CHA-IU-MS-FRENTE AMPLIO
-          zaragoza: CHA-IU-MS-FRENTE AMPLIO
   - id: cnv
     nombre: Convergents
     corto: CNV
@@ -501,46 +468,6 @@ candidaturas:
         circunscripciones: [tarragona]
         listas:
           tarragona: CNV
-  - id: compromis-eupv-podem-erpv
-    nombre: 'Compromís: Front Valencià'
-    corto: COMPROMIS-EUPV-PODEM-ERPV
-    tipo: partido
-    ambito: autonomico
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [COMPROMIS\-EUPV\-PODEM\-ERPV, COMPROMÍS\-EUPV\-PODEM\-ERPV]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [alicante, castellon, valencia]
-        listas:
-          alicante: COMPROMIS-EUPV-PODEM-ERPV
-          castellon: COMPROMIS-EUPV-PODEM-ERPV
-          valencia: COMPROMÍS-EUPV-PODEM-ERPV
-  - id: comuns-front-ampli
-    nombre: Comuns-Front Ampli
-    corto: COMUNS-FRONT AMPLI
-    tipo: partido
-    ambito: autonomico
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [COMUNS\-FRONT\ AMPLI]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [barcelona, girona, lleida]
-        listas:
-          barcelona: COMUNS-FRONT AMPLI
-          girona: COMUNS-FRONT AMPLI
-          lleida: COMUNS-FRONT AMPLI
   - id: d-r-g
     nombre: Partido Drago Canarias
     corto: D.R.G
@@ -638,48 +565,65 @@ candidaturas:
           santa-cruz-de-tenerife: F8
   - id: fa
     nombre: Frente Amplio
-    corto: FA
-    tipo: partido
+    corto: Frente Amplio
+    tipo: coalicion
     ambito: estatal
-    color: '#8A8F9A'
+    color: '#E51C55'
     web: ''
     vigilar: []
-    siglas_boe: [FA]
-    nota: Alta automática desde BOE-A-2026-22607
+    siglas_boe: [FA, FRENTE AMPLIO.*, .*-FRENTE AMPLIO, .*FRONT AMPLI, 'COMPROM[IÍ]S-EUPV-PODEM-ERPV',
+      'ARAM[ÉE]S-EU-MS']
+    nota: 'Sucesora de la coalición Sumar de 2023. Agrupa sus marcas territoriales del BOE, como el PSOE
+      con el PSC: Comuns-Front Ampli, Compromís: Front Valencià, Chunta Aragonesista-Frente Amplio Aragón,
+      Aramés-Front Ampli, Frente Amplio-Fronte Ampla y Frente Amplio – Fronte Zabala (decisión del 30
+      oct).'
     convocatorias:
       # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
+      generales-2023: {programa_propio: false, sucesora_de: sumar}
       generales-2026:
         estado: presentada
-        circunscripciones: [albacete, almeria, asturias, avila, badajoz, bizkaia, burgos, caceres, 
-              cadiz, cantabria, ciudad-real, cordoba, cuenca, gipuzkoa, granada, guadalajara, huelva,
-          jaen, la-rioja, leon, lugo, madrid, malaga, murcia, palencia, pontevedra, salamanca, 
-              segovia, sevilla, soria, tarragona, toledo, valladolid, zamora]
+        circunscripciones: [a-coruna, alava, albacete, alicante, almeria, asturias, avila, badajoz, 
+              barcelona, bizkaia, burgos, caceres, cadiz, cantabria, castellon, ciudad-real, cordoba,
+          cuenca, gipuzkoa, girona, granada, guadalajara, huelva, huesca, illes-balears, jaen, 
+              la-rioja, leon, lleida, lugo, madrid, malaga, murcia, navarra, ourense, palencia, 
+              pontevedra, salamanca, segovia, sevilla, soria, tarragona, toledo, valencia, 
+              valladolid, zamora, zaragoza]
         listas:
+          a-coruna: FRENTE AMPLIO-FRONTE AMPLA
+          alava: FRENTE AMPLIO-FRONTE ZABALA
           albacete: FA
+          alicante: COMPROMIS-EUPV-PODEM-ERPV
           almeria: FA
           asturias: FA
           avila: FA
           badajoz: FA
+          barcelona: COMUNS-FRONT AMPLI
           bizkaia: FA
           burgos: FA
           caceres: FA
           cadiz: FA
           cantabria: FA
+          castellon: COMPROMIS-EUPV-PODEM-ERPV
           ciudad-real: FA
           cordoba: FA
           cuenca: FA
           gipuzkoa: FA
+          girona: COMUNS-FRONT AMPLI
           granada: FA
           guadalajara: FA
           huelva: FA
+          huesca: CHA-IU-MS-FRENTE AMPLIO
+          illes-balears: ARAMÉS-EU-MS
           jaen: FA
           la-rioja: FA
           leon: FA
+          lleida: COMUNS-FRONT AMPLI
           lugo: FA
           madrid: FA
           malaga: FA
           murcia: FA
+          navarra: FRENTE AMPLIO – FRONTE ZABALA
+          ourense: FRENTE AMPLIO-FRONTE AMPLA
           palencia: FA
           pontevedra: FA
           salamanca: FA
@@ -688,8 +632,10 @@ candidaturas:
           soria: FA
           tarragona: FA
           toledo: FA
+          valencia: COMPROMÍS-EUPV-PODEM-ERPV
           valladolid: FA
           zamora: FA
+          zaragoza: CHA-IU-MS-FRENTE AMPLIO
   - id: fe-de-las-jons
     nombre: Falange Española de las Jons
     corto: FE de las JONS
@@ -807,44 +753,6 @@ candidaturas:
           valladolid: FO
           zamora: FO
           zaragoza: FO
-  - id: frente-amplio-fronte-ampla
-    nombre: Frente Amplio-Fronte Ampla
-    corto: FRENTE AMPLIO-FRONTE AMPLA
-    tipo: partido
-    ambito: autonomico
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [FRENTE\ AMPLIO\-FRONTE\ AMPLA]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [a-coruna, ourense]
-        listas:
-          a-coruna: FRENTE AMPLIO-FRONTE AMPLA
-          ourense: FRENTE AMPLIO-FRONTE AMPLA
-  - id: frente-amplio-fronte-zabala
-    nombre: Frente Amplio – Fronte Zabala
-    corto: FRENTE AMPLIO – FRONTE ZABALA
-    tipo: partido
-    ambito: autonomico
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [FRENTE\ AMPLIO\ –\ FRONTE\ ZABALA, FRENTE\ AMPLIO\-FRONTE\ ZABALA]
-    nota: Alta automática desde BOE-A-2026-22607
-    convocatorias:
-      # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
-      generales-2023: { programa_propio: false, sucesora_de: sumar }
-      generales-2026:
-        estado: presentada
-        circunscripciones: [alava, navarra]
-        listas:
-          alava: FRENTE AMPLIO-FRONTE ZABALA
-          navarra: FRENTE AMPLIO – FRONTE ZABALA
   - id: ie
     nombre: Iustitia Europa
     corto: IE

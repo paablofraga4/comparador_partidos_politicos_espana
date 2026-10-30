@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Chat } from "@/components/chat";
 import { estadoPagos } from "@/lib/bonos/pagos";
 import { numeroEnv } from "@/lib/config";
-import { candidaturas } from "@/lib/data";
+import { candidaturasPorGrupo } from "@/lib/data";
 import { hayDb } from "@/lib/db";
 import { metaPagina } from "@/lib/seo";
 
@@ -36,7 +36,12 @@ export default async function Pregunta(props: PageProps<"/pregunta">) {
       <div className="mt-8">
         {activo ? (
           <Chat
-            candidaturas={candidaturas().map((c) => ({ id: c.id, corto: c.corto, color: c.color }))}
+            // Filtro con las principales (constitución I.6); el asistente conoce todas
+            candidaturas={candidaturasPorGrupo().principales.map((c) => ({
+              id: c.id,
+              corto: c.corto,
+              color: c.color,
+            }))}
             maxChars={numeroEnv("CHAT_MAX_QUESTION_CHARS", 500)}
             pagosActivos={estadoPagos().activos}
             avisoPago={typeof pago === "string" ? pago : undefined}

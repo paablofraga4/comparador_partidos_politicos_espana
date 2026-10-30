@@ -5,7 +5,7 @@ import path from "node:path";
 import { parse } from "yaml";
 
 import type { Cambio, CosteFijo } from "./apoyos/cuentas";
-import { candidaturasVisibles, programaVigente } from "./reglas";
+import { candidaturasVisibles, esPrincipal, programaVigente } from "./reglas";
 import type {
   Analisis,
   Candidatura,
@@ -64,6 +64,16 @@ export function candidaturas(): Candidatura[] {
   return candidaturasVisibles(registro());
 }
 
+/** Visibles separadas en principales y el resto de las del BOE (constitución I.6). */
+export function candidaturasPorGrupo(): { principales: Candidatura[]; otras: Candidatura[] } {
+  const reg = registro();
+  const cs = candidaturas();
+  return {
+    principales: cs.filter((c) => esPrincipal(c, reg)),
+    otras: cs.filter((c) => !esPrincipal(c, reg)),
+  };
+}
+
 /** Circunscripciones al Congreso según el BOE (vacío hasta que se publiquen las candidaturas). */
 export function circunscripciones(): Circunscripcion[] {
   return memo("circunscripciones", () =>
@@ -101,9 +111,9 @@ export function vigente(cand: Candidatura): ProgramaVigente {
 export const idDelPrograma = (cand: Candidatura, v: ProgramaVigente): string =>
   v.tipo === "programa" && v.de ? v.de.id : cand.id;
 
-/** Resumen del estado de publicación de programas del 29N (tira de la portada). */
+/** Resumen del estado de publicación de programas del 29N de las principales (tira de la portada). */
 export function estadoProgramas29N() {
-  const cs = candidaturas();
+  const cs = candidaturasPorGrupo().principales;
   const con29N = cs.filter((c) => {
     const a = analisis("generales-2026", c.id);
     return a && (a.estado === "aprobado" || MOSTRAR_BORRADORES);

@@ -5,8 +5,14 @@ import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
-import { AvisoProgramaAnterior, Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidatura, candidaturas, tema, temas, vigente } from "@/lib/data";
+import {
+  AvisoProgramaAnterior,
+  Candidato,
+  OtrasCandidaturas,
+  ProgramaBadge,
+  TemaIcono,
+} from "@/components/piezas";
+import { candidatura, candidaturas, candidaturasPorGrupo, tema, temas, vigente } from "@/lib/data";
 import { extracto, metaPagina, nombrePartido, tituloPartidoTema } from "@/lib/seo";
 
 /** Una página por partido y tema (spec 002, HU-2.11): responde a «qué propone X sobre Y». */
@@ -80,7 +86,9 @@ export default async function PartidoTema(props: PageProps<"/partidos/[id]/[tema
   const d = cargar(id, temaId);
   if (!d) notFound();
   const { c, t, v } = d;
-  const otros = candidaturas().filter((x) => x.id !== c.id);
+  const grupos = candidaturasPorGrupo();
+  const otros = grupos.principales.filter((x) => x.id !== c.id);
+  const restoBoe = grupos.otras.filter((x) => x.id !== c.id);
   const otrosTemas =
     v.tipo === "programa"
       ? temas().filter((x) => x.id !== t.id && v.analisis.temas[x.id]?.menciona)
@@ -139,6 +147,11 @@ export default async function PartidoTema(props: PageProps<"/partidos/[id]/[tema
             </li>
           ))}
         </ul>
+        <OtrasCandidaturas
+          cands={restoBoe}
+          href={(o) => `/partidos/${o.id}/${t.id}`}
+          className="mt-4"
+        />
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link
             href={`/temas/${t.id}`}

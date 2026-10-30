@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
-import { Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidaturas, tema, temas, vigente } from "@/lib/data";
+import { Candidato, OtrasCandidaturas, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import { candidaturasPorGrupo, tema, temas, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -28,7 +28,7 @@ export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
   const { id } = await props.params;
   const t = tema(id);
   if (!t) notFound();
-  const cands = candidaturas();
+  const { principales: cands, otras } = candidaturasPorGrupo();
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
@@ -82,6 +82,7 @@ export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
           );
         })}
       </ul>
+      <OtrasCandidaturas cands={otras} href={(c) => `/partidos/${c.id}/${t.id}`} className="mt-8" />
     </div>
   );
 }
