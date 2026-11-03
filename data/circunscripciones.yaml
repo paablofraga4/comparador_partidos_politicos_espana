@@ -1,6 +1,6 @@
 # Circunscripciones al Congreso según el BOE (lo mantiene `vc boe-candidaturas`).
 version: 1
-fuente: BOE-A-2026-22607
+fuente: BOE-A-2026-23103
 circunscripciones:
   - id: a-coruna
     nombre: A Coruña

@@ -24,7 +24,7 @@
 #   convocatorias.generales-2023.sucesora_de: continúa con otro nombre esa coalición de 2023
 #        (Frente Amplio ← Sumar): muestra su programa de 2023 rotulado (spec 001).
 version: 2
-fase_inclusion: presentadas
+fase_inclusion: proclamadas
 candidaturas:
   - id: pp
     nombre: Partido Popular
@@ -39,7 +39,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [a-coruna, alava, albacete, alicante, 
+      generales-2026: {estado: proclamada, circunscripciones: [a-coruna, alava, albacete, alicante, 
               almeria, asturias, avila, badajoz, barcelona, bizkaia, burgos, caceres, cadiz, 
               cantabria, castellon, ceuta, ciudad-real, cordoba, cuenca, gipuzkoa, girona, granada, 
               guadalajara, huelva, huesca, illes-balears, jaen, la-rioja, las-palmas, leon, lleida, 
@@ -68,23 +68,23 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [a-coruna, alava, albacete, alicante, 
+      generales-2026: {estado: proclamada, circunscripciones: [a-coruna, alava, albacete, alicante, 
               almeria, asturias, avila, badajoz, barcelona, bizkaia, burgos, caceres, cadiz, 
               cantabria, castellon, ceuta, ciudad-real, cordoba, cuenca, gipuzkoa, girona, granada, 
               guadalajara, huelva, huesca, illes-balears, jaen, la-rioja, las-palmas, leon, lleida, 
               lugo, madrid, malaga, melilla, murcia, navarra, ourense, palencia, pontevedra, 
               salamanca, santa-cruz-de-tenerife, segovia, sevilla, soria, tarragona, teruel, toledo, 
-              valencia, valladolid, zamora, zaragoza], listas: {a-coruna: PSDEG-PSOE, alava: PSE-EE 
-            (PSOE), albacete: PSOE, alicante: PSOE, almeria: PSOE, asturias: PSOE, avila: PSOE, 
-            badajoz: PSOE, barcelona: PSC, bizkaia: PSE-EE (PSOE), burgos: PSOE, caceres: PSOE, 
-            cadiz: PSOE, cantabria: PSOE, castellon: PSOE, ceuta: PSOE, ciudad-real: PSOE, cordoba: 
-            PSOE, cuenca: PSOE, gipuzkoa: PSE-EE (PSOE), girona: PSC, granada: PSOE, guadalajara: 
-            PSOE, huelva: PSOE, huesca: PSOE, illes-balears: PSIB-PSOE, jaen: PSOE, la-rioja: PSOE, 
-            las-palmas: PSOE, leon: PSOE, lleida: PSC, lugo: PSOE, madrid: PSOE, malaga: PSOE, 
-            melilla: PSOE, murcia: PSOE, navarra: PSN-PSOE, ourense: PSDEG-PSOE, palencia: PSOE, 
-            pontevedra: PSDEG-PSOE, salamanca: PSOE, santa-cruz-de-tenerife: PSOE, segovia: PSOE, 
-            sevilla: PSOE, soria: PSOE, tarragona: PSC, teruel: PSOE, toledo: PSOE, valencia: PSOE, 
-            valladolid: PSOE, zamora: PSOE, zaragoza: PSOE}}
+              valencia, valladolid, zamora, zaragoza], listas: {a-coruna: PSdeG-PSOE, alava: PSOE, 
+            albacete: PSOE, alicante: PSOE, almeria: PSOE, asturias: PSOE, avila: PSOE, badajoz: 
+            PSOE, barcelona: PSC, bizkaia: PSOE, burgos: PSOE, caceres: PSOE, cadiz: PSOE, cantabria: 
+            PSOE, castellon: PSOE, ceuta: PSOE, ciudad-real: PSOE, cordoba: PSOE, cuenca: PSOE, 
+            gipuzkoa: PSOE, girona: PSC, granada: PSOE, guadalajara: PSOE, huelva: PSOE, huesca: 
+            PSOE, illes-balears: PSIB-PSOE, jaen: PSOE, la-rioja: PSOE, las-palmas: PSOE, leon: PSOE,
+          lleida: PSC, lugo: PSdeG-PSOE, madrid: PSOE, malaga: PSOE, melilla: PSOE, murcia: PSOE, 
+            navarra: PSN-PSOE, ourense: PSdeG-PSOE, palencia: PSOE, pontevedra: PSdeG-PSOE, 
+            salamanca: PSOE, santa-cruz-de-tenerife: PSOE, segovia: PSOE, sevilla: PSOE, soria: PSOE,
+          tarragona: PSC, teruel: PSOE, toledo: PSOE, valencia: PSOE, valladolid: PSOE, zamora: PSOE,
+          zaragoza: PSOE}}
 
   - id: vox
     nombre: VOX
@@ -98,7 +98,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [a-coruna, alava, albacete, alicante, 
+      generales-2026: {estado: proclamada, circunscripciones: [a-coruna, alava, albacete, alicante, 
               almeria, asturias, avila, badajoz, barcelona, bizkaia, burgos, caceres, cadiz, 
               cantabria, castellon, ceuta, ciudad-real, cordoba, cuenca, gipuzkoa, girona, granada, 
               guadalajara, huelva, huesca, illes-balears, jaen, la-rioja, las-palmas, leon, lleida, 
@@ -138,18 +138,18 @@ candidaturas:
     color: "#6B2E68"
     web: https://podemos.info/
     vigilar: []
-    siglas_boe: ['PODEMOS.*', '.*-PODEMOS', 'PAZ,\ CASA\ Y\ TRABAJO']
+    siglas_boe: ['PODEMOS.*', '.*-PODEMOS', 'PAZ,\ CASA\ Y\ TRABAJO', 'PAZ,CASA\ Y\ TRABAJO']
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: false, dentro_de: sumar}
-      generales-2026: {estado: presentada, circunscripciones: [a-coruna, alava, albacete, almeria, 
+      generales-2026: {estado: proclamada, circunscripciones: [a-coruna, alava, albacete, almeria, 
               asturias, avila, badajoz, bizkaia, burgos, caceres, cadiz, cantabria, ceuta, 
               ciudad-real, cordoba, cuenca, gipuzkoa, granada, guadalajara, huelva, huesca, jaen, 
               la-rioja, leon, lugo, madrid, malaga, murcia, navarra, ourense, palencia, pontevedra, 
               salamanca, segovia, sevilla, soria, teruel, toledo, valladolid, zamora, zaragoza], 
-          listas: {a-coruna: PODEMOS, alava: PODEMOS, albacete: PODEMOS, almeria: PODEMOS, asturias: 'PAZ,
-            CASA Y TRABAJO', avila: PODEMOS, badajoz: PODEMOS, bizkaia: PODEMOS, burgos: PODEMOS, 
-            caceres: PODEMOS, cadiz: PODEMOS, cantabria: PODEMOS, ceuta: PODEMOS, ciudad-real: 
+          listas: {a-coruna: PODEMOS, alava: PODEMOS, albacete: PODEMOS, almeria: PODEMOS, asturias: 
+            PODEMOS, avila: PODEMOS, badajoz: PODEMOS, bizkaia: PODEMOS, burgos: PODEMOS, caceres: 
+            PODEMOS, cadiz: PODEMOS, cantabria: PODEMOS, ceuta: 'PAZ,CASA Y TRABAJO', ciudad-real: 
             PODEMOS, cordoba: PODEMOS, cuenca: PODEMOS, gipuzkoa: PODEMOS, granada: PODEMOS, 
             guadalajara: PODEMOS, huelva: PODEMOS, huesca: PODEMOS, jaen: PODEMOS, la-rioja: PODEMOS,
           leon: PODEMOS, lugo: PODEMOS, madrid: PODEMOS, malaga: PODEMOS, murcia: PODEMOS, navarra: 
@@ -170,7 +170,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [barcelona, girona, lleida, tarragona],
+      generales-2026: {estado: proclamada, circunscripciones: [barcelona, girona, lleida, tarragona],
         listas: {barcelona: ERC, girona: ERC, lleida: ERC, tarragona: ERC}}
 
   - id: junts
@@ -186,7 +186,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [barcelona, girona, lleida, tarragona],
+      generales-2026: {estado: proclamada, circunscripciones: [barcelona, girona, lleida, tarragona],
         listas: {barcelona: JxCat, girona: JxCat, lleida: JxCat, tarragona: JxCat}}
 
   - id: bildu
@@ -202,8 +202,8 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [alava, bizkaia, gipuzkoa, navarra], 
-          listas: {alava: EH Bildu, bizkaia: EH Bildu, gipuzkoa: EH Bildu, navarra: EH-Bildu}}
+      generales-2026: {estado: proclamada, circunscripciones: [alava, bizkaia, gipuzkoa], listas: {
+            alava: EH BILDU, bizkaia: EH BILDU, gipuzkoa: EH BILDU}}
 
   - id: pnv
     nombre: EAJ-PNV
@@ -219,7 +219,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [alava, bizkaia, gipuzkoa], listas: {
+      generales-2026: {estado: proclamada, circunscripciones: [alava, bizkaia, gipuzkoa], listas: {
             alava: EAJ-PNV, bizkaia: EAJ-PNV, gipuzkoa: EAJ-PNV}}
 
   - id: bng
@@ -236,8 +236,8 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [a-coruna, lugo, ourense, pontevedra], 
-          listas: {a-coruna: BNG, lugo: BNG, ourense: BNG, pontevedra: BNG}}
+      generales-2026: {estado: proclamada, circunscripciones: [a-coruna, lugo, ourense, pontevedra], 
+          listas: {a-coruna: B.N.G., lugo: B.N.G., ourense: B.N.G., pontevedra: B.N.G.}}
 
   - id: cc
     nombre: Coalición Canaria
@@ -252,7 +252,7 @@ candidaturas:
     incluir: siempre
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [santa-cruz-de-tenerife], listas: {
+      generales-2026: {estado: proclamada, circunscripciones: [santa-cruz-de-tenerife], listas: {
             santa-cruz-de-tenerife: CCa-1.oCAN}}
 
   - id: upn
@@ -271,7 +271,7 @@ candidaturas:
       de 2023 (decisión del 30 oct). Revisar con las proclamadas.
     convocatorias:
       generales-2023: {programa_propio: true}
-      generales-2026: {estado: presentada, circunscripciones: [navarra], listas: {navarra: UPN-PP}}
+      generales-2026: {estado: proclamada, circunscripciones: [navarra], listas: {navarra: UPN-PP}}
 
   - id: mas-madrid
     nombre: Más Madrid
@@ -317,7 +317,7 @@ candidaturas:
     incluir: si-concurre-por-separado
     convocatorias:
       generales-2023: {programa_propio: false}
-      generales-2026: {estado: presentada, circunscripciones: [navarra], listas: {navarra: GEROA BAI}}
+      generales-2026: {estado: proclamada, circunscripciones: [navarra], listas: {navarra: GBAI}}
 
   - id: asg
     nombre: Agrupación Socialista Gomera
@@ -361,7 +361,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [las-palmas]
         listas:
           las-palmas: 1.oCAN-CCa
@@ -377,7 +377,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [malaga]
         listas:
           malaga: '29'
@@ -393,7 +393,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [murcia]
         listas:
           murcia: 3e
@@ -409,7 +409,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [almeria, cadiz, cordoba, granada, huelva, jaen, malaga, sevilla]
         listas:
           almeria: ADELANTE ANDALUCÍA
@@ -432,7 +432,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [valencia]
         listas:
           valencia: AGENDA VALENCIANA
@@ -448,7 +448,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [barcelona, girona, lleida, tarragona]
         listas:
           barcelona: ALHORA
@@ -467,7 +467,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [tarragona]
         listas:
           tarragona: CNV
@@ -483,7 +483,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [las-palmas, santa-cruz-de-tenerife]
         listas:
           las-palmas: D.R.G
@@ -500,7 +500,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [barcelona, madrid]
         listas:
           barcelona: D21
@@ -517,7 +517,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [navarra]
         listas:
           navarra: EGUZKILORE
@@ -533,7 +533,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alava, almeria, cordoba, gipuzkoa, la-rioja, las-palmas, leon, melilla, 
               murcia, palencia, pontevedra, soria, valladolid]
         listas:
@@ -562,7 +562,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [santa-cruz-de-tenerife]
         listas:
           santa-cruz-de-tenerife: F8
@@ -584,7 +584,7 @@ candidaturas:
       # Continúa la coalición Sumar de 2023: su programa con aviso mientras no publique (30-oct)
       generales-2023: {programa_propio: false, sucesora_de: sumar}
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [a-coruna, alava, albacete, alicante, almeria, asturias, avila, badajoz, 
               barcelona, bizkaia, burgos, caceres, cadiz, cantabria, castellon, ciudad-real, cordoba,
           cuenca, gipuzkoa, girona, granada, guadalajara, huelva, huesca, illes-balears, jaen, 
@@ -621,21 +621,21 @@ candidaturas:
           la-rioja: FA
           leon: FA
           lleida: COMUNS-FRONT AMPLI
-          lugo: FA
+          lugo: FRENTE AMPLIO-FRONTE AMPLA
           madrid: FA
           malaga: FA
           murcia: FA
-          navarra: FRENTE AMPLIO – FRONTE ZABALA
+          navarra: FRENTE AMPLIO-FRONTE ZABALA
           ourense: FRENTE AMPLIO-FRONTE AMPLA
           palencia: FA
-          pontevedra: FA
+          pontevedra: FRENTE AMPLIO-FRONTE AMPLA
           salamanca: FA
           segovia: FA
           sevilla: FA
           soria: FA
-          tarragona: FA
+          tarragona: COMUNS-FRONT AMPLI
           toledo: FA
-          valencia: COMPROMÍS-EUPV-PODEM-ERPV
+          valencia: COMPROMIS-EUPV-PODEM-ERPV
           valladolid: FA
           zamora: FA
           zaragoza: CHA-IU-MS-FRENTE AMPLIO
@@ -651,9 +651,9 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
-        circunscripciones: [alicante, castellon, cordoba, guadalajara, madrid, palencia, sevilla, 
-              teruel, toledo, valencia, valladolid, zaragoza]
+        estado: proclamada
+        circunscripciones: [alicante, castellon, cordoba, guadalajara, madrid, palencia, teruel, 
+              toledo, valencia, valladolid, zaragoza]
         listas:
           alicante: FE de las JONS
           castellon: FE de las JONS
@@ -661,7 +661,6 @@ candidaturas:
           guadalajara: FE de las JONS
           madrid: FE de las JONS
           palencia: FE de las JONS
-          sevilla: FE de las JONS
           teruel: FE de las JONS
           toledo: FE de las JONS
           valencia: FE de las JONS
@@ -679,7 +678,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [huesca, zaragoza]
         listas:
           huesca: FIA
@@ -696,7 +695,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [a-coruna, alava, albacete, alicante, almeria, asturias, avila, badajoz, 
               barcelona, bizkaia, burgos, caceres, cadiz, cantabria, castellon, ceuta, ciudad-real, 
               cordoba, cuenca, gipuzkoa, girona, granada, guadalajara, huelva, huesca, illes-balears,
@@ -768,7 +767,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [madrid]
         listas:
           madrid: IE
@@ -784,10 +783,10 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [almeria]
         listas:
-          almeria: IPAL
+          almeria: I.P.A.L.
   - id: j-u-e-x
     nombre: Juntos por Extremadura
     corto: J.U.E.X.
@@ -800,7 +799,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [badajoz, caceres]
         listas:
           badajoz: J.U.E.X.
@@ -817,7 +816,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alava]
         listas:
           alava: JL
@@ -836,10 +835,10 @@ candidaturas:
       30 oct). Revisar con las proclamadas.
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [malaga]
         listas:
-          malaga: JOSÉ MARÍA CALVO GUERRA
+          malaga: José María Calvo Guerra
   - id: lib
     nombre: Liberación Canaria
     corto: LIB
@@ -852,7 +851,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [las-palmas, santa-cruz-de-tenerife]
         listas:
           las-palmas: LIB
@@ -869,11 +868,11 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alava, albacete, almeria, asturias, avila, badajoz, barcelona, bizkaia, 
               burgos, cadiz, cuenca, granada, guadalajara, huesca, jaen, las-palmas, leon, madrid, 
-              navarra, palencia, pontevedra, segovia, sevilla, soria, tarragona, valencia, 
-              valladolid, zaragoza]
+              navarra, ourense, palencia, segovia, sevilla, soria, tarragona, valencia, valladolid, 
+              zaragoza]
         listas:
           alava: MUNDO+JUSTO
           albacete: MUNDO+JUSTO
@@ -894,8 +893,8 @@ candidaturas:
           leon: MUNDO+JUSTO
           madrid: MUNDO+JUSTO
           navarra: MUNDO+JUSTO
+          ourense: MUNDO+JUSTO
           palencia: MUNDO+JUSTO
-          pontevedra: MUNDO+JUSTO
           segovia: MUNDO+JUSTO
           sevilla: MUNDO+JUSTO
           soria: MUNDO+JUSTO
@@ -915,7 +914,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [las-palmas, santa-cruz-de-tenerife]
         listas:
           las-palmas: NC-BC, PODEMOS, IU, SUMAR
@@ -932,7 +931,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [badajoz, caceres]
         listas:
           badajoz: NEX
@@ -945,14 +944,14 @@ candidaturas:
     color: '#8A8F9A'
     web: ''
     vigilar: []
-    siglas_boe: [P\ ALANTRE]
+    siglas_boe: [P\ ALANTRE, P\.\ ALANTRE]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [leon]
         listas:
-          leon: P ALANTRE
+          leon: P. ALANTRE
   - id: pacma
     nombre: Partido Animalista con el Medio Ambiente
     corto: PACMA
@@ -965,7 +964,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [a-coruna, alava, albacete, alicante, almeria, asturias, barcelona, 
               bizkaia, cadiz, castellon, cordoba, cuenca, gipuzkoa, girona, granada, huelva, huesca, 
               illes-balears, jaen, la-rioja, las-palmas, leon, lleida, madrid, malaga, murcia, 
@@ -1021,7 +1020,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [valladolid]
         listas:
           valladolid: PANCAL-URCI
@@ -1037,7 +1036,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alicante, castellon, santa-cruz-de-tenerife, valencia]
         listas:
           alicante: PARTIDO AUTÓNOMOS
@@ -1056,7 +1055,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [las-palmas]
         listas:
           las-palmas: PCPC
@@ -1072,7 +1071,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [barcelona, girona, lleida, tarragona]
         listas:
           barcelona: PCTC
@@ -1091,12 +1090,12 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alicante, almeria, asturias, avila, burgos, caceres, cadiz, cantabria, 
-              castellon, cordoba, cuenca, gipuzkoa, granada, guadalajara, huelva, huesca, 
-              illes-balears, jaen, la-rioja, las-palmas, leon, madrid, malaga, murcia, palencia, 
-              salamanca, santa-cruz-de-tenerife, segovia, sevilla, soria, teruel, toledo, valencia, 
-              valladolid, zamora, zaragoza]
+              castellon, cordoba, cuenca, granada, guadalajara, huelva, huesca, illes-balears, jaen, 
+              la-rioja, las-palmas, leon, madrid, malaga, murcia, navarra, palencia, salamanca, 
+              santa-cruz-de-tenerife, segovia, sevilla, soria, teruel, toledo, valencia, valladolid, 
+              zamora, zaragoza]
         listas:
           alicante: PCTE
           almeria: PCTE
@@ -1109,7 +1108,6 @@ candidaturas:
           castellon: PCTE
           cordoba: PCTE
           cuenca: PCTE
-          gipuzkoa: PCTE
           granada: PCTE
           guadalajara: PCTE
           huelva: PCTE
@@ -1122,6 +1120,7 @@ candidaturas:
           madrid: PCTE
           malaga: PCTE
           murcia: PCTE
+          navarra: PCTE
           palencia: PCTE
           salamanca: PCTE
           santa-cruz-de-tenerife: PCTE
@@ -1146,7 +1145,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alava, bizkaia]
         listas:
           alava: PCTE/ELAK
@@ -1163,7 +1162,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [a-coruna, ourense, pontevedra]
         listas:
           a-coruna: PCTG
@@ -1181,10 +1180,10 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [avila]
         listas:
-          avila: PDSJE
+          avila: P.D.S.J.E.
   - id: pfac
     nombre: Feministas al Congreso
     corto: PFAC
@@ -1197,7 +1196,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [alava, bizkaia]
         listas:
           alava: PFAC
@@ -1214,7 +1213,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [madrid]
         listas:
           madrid: PH
@@ -1230,7 +1229,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [leon, salamanca, zamora]
         listas:
           leon: PREPAL
@@ -1248,7 +1247,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [asturias]
         listas:
           asturias: PUEDE
@@ -1264,7 +1263,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: no-proclamada
         circunscripciones: [ourense]
         listas:
           ourense: PUM+J
@@ -1280,7 +1279,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [valencia]
         listas:
           valencia: RRB
@@ -1296,7 +1295,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [a-coruna, alava, albacete, alicante, almeria, asturias, avila, badajoz, 
               barcelona, burgos, caceres, cadiz, castellon, ceuta, cordoba, cuenca, granada, 
               guadalajara, huelva, huesca, illes-balears, jaen, la-rioja, las-palmas, leon, lugo, 
@@ -1362,7 +1361,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [soria]
         listas:
           soria: SY
@@ -1378,7 +1377,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [teruel]
         listas:
           teruel: TERUEL EXISTE
@@ -1394,7 +1393,7 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [murcia]
         listas:
           murcia: UC
@@ -1410,7 +1409,39 @@ candidaturas:
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
-        estado: presentada
+        estado: proclamada
         circunscripciones: [valencia]
         listas:
           valencia: VLC
+  - id: eh-bildu-erc
+    nombre: Euskal Herria Bildu-Esquerra Republicana de Catalunya
+    corto: EH BILDU-ERC
+    tipo: partido
+    ambito: provincial
+    color: '#8A8F9A'
+    web: ''
+    vigilar: []
+    siglas_boe: [EH\ BILDU\-ERC]
+    nota: Alta automática desde BOE-A-2026-23103
+    convocatorias:
+      generales-2026:
+        estado: proclamada
+        circunscripciones: [navarra]
+        listas:
+          navarra: EH BILDU-ERC
+  - id: elak-pcte
+    nombre: Euskadiko Langileen Alderdi Komunista/partido Comunista de los Trabajadores de Euskadi
+    corto: ELAK/PCTE
+    tipo: partido
+    ambito: provincial
+    color: '#8A8F9A'
+    web: ''
+    vigilar: []
+    siglas_boe: [ELAK/PCTE]
+    nota: Alta automática desde BOE-A-2026-23103
+    convocatorias:
+      generales-2026:
+        estado: proclamada
+        circunscripciones: [gipuzkoa]
+        listas:
+          gipuzkoa: ELAK/PCTE
