@@ -1,6 +1,9 @@
 # Spec 006 · Candidaturas por provincia
 
-- **Estado**: borrador · pendiente de aprobación (4 nov 2026)
+- **Estado**: aprobada (4 nov 2026)
+- **Decisiones del propietario en el chat (4 nov 2026)**: aprueba la spec y las tres
+  recomendaciones de «Preguntas abiertas» (número de diputados por provincia, provincias en la
+  ficha de cada partido y comparador con la provincia ya elegida).
 - **Depende de**: [constitución](../constitution.md), [spec 001](../001-datos-y-analisis/spec.md)
   (candidaturas del BOE) y [spec 002](../002-comparador/spec.md) (HU-2.10 «Tu papeleta» y
   HU-2.9 «Encontrable y compartible»).
@@ -71,6 +74,20 @@ La web de la competencia más directa (29nov.es) aún no usa la lista oficial de
 - La descripción incluye el número de candidaturas y la fuente; no hay texto repetido idéntico
   en las 52 páginas más allá de lo inevitable.
 
+### HU-6.5 Cuántos diputados se eligen
+**Como** votante **quiero** saber cuántos diputados elige mi provincia **para** entender qué
+se vota.
+- La página dice «Se eligen N diputados» con la cifra del anexo del Real Decreto 806/2026
+  (BOE-A-2026-20742), la misma que ya usa la guía de las elecciones (HU-2.12), y cita esa
+  fuente. Ceuta y Melilla eligen uno cada una.
+
+### HU-6.6 Desde la ficha de cada partido
+**Como** persona que mira una candidatura **quiero** ver en qué provincias se presenta
+**para** saber si puedo votarla.
+- La ficha de cada candidatura lista, con enlace a su página, las provincias en que concurre
+  según el BOE, en orden alfabético. Es igual para todas: si es la misma en todas las
+  provincias (PP, PSOE, VOX) se dice «Se presenta en las 52 circunscripciones» sin listarlas.
+
 ## Comprobación contra la constitución
 
 - **I.2 Simetría**: mismo formato para todas, orden alfabético, ninguna destacada; las
@@ -105,6 +122,8 @@ La web de la competencia más directa (29nov.es) aún no usa la lista oficial de
 - [ ] Con la fase «proclamadas», las no proclamadas no aparecen y el texto lo dice.
 - [ ] Título, descripción, canónica y migas correctos; las 52 en el `sitemap.xml`.
 - [ ] Menos de 40 KB comprimida y sin scroll horizontal a 375 px.
+- [ ] Cada página dice cuántos diputados se eligen, con la cifra del decreto.
+- [ ] La ficha de cada candidatura enlaza a sus provincias (o dice «las 52»).
 - [ ] Revisión de neutralidad: ninguna página destaca ni ordena por tamaño o color.
 
 ## Fuera de alcance
@@ -117,10 +136,4 @@ La web de la competencia más directa (29nov.es) aún no usa la lista oficial de
 
 ## Preguntas abiertas
 
-1. [ACLARAR: ¿añadimos «Se eligen N diputados» en cada provincia, con fuente en el anexo del
-   Real Decreto 806/2026? Recomendado: **sí**, es una búsqueda frecuente y ya citamos ese
-   decreto en HU-2.12.]
-2. [ACLARAR: ¿cada ficha de partido lista las provincias en que se presenta, con enlace?
-   Recomendado: **sí**, es simétrico para todas y mejora los enlaces internos.]
-3. [ACLARAR: ¿el comparador de HU-6.1 abre con las candidaturas de la provincia ya elegidas,
-   como hace hoy «Tu papeleta»? Recomendado: **sí**.]
+Ninguna (resueltas el 4 nov, ver HU-6.5 y HU-6.6; la tercera ya está en HU-6.1).
