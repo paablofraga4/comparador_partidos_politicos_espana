@@ -163,6 +163,20 @@ describe("esPrincipal (constitución I.6)", () => {
     expect(esPrincipal(nueva, reg)).toBe(false);
   });
 
+  it("una lista conjunta que incluye a una principal también lo es", () => {
+    const conjunta = cand({
+      id: "bildu-erc",
+      corto: "EH Bildu-ERC",
+      incluir: null,
+      miembros: ["sumar"],
+      convocatorias: {},
+    });
+    const sinMiembros = cand({ id: "otra", incluir: null, miembros: ["nueva"], convocatorias: {} });
+    const r: RegistroCandidaturas = { ...reg, candidaturas: [...reg.candidaturas, conjunta] };
+    expect(esPrincipal(conjunta, r)).toBe(true);
+    expect(esPrincipal(sinMiembros, r)).toBe(false);
+  });
+
   it("una sucesora de una candidatura sin representación no es principal", () => {
     const otra = cand({
       id: "otra",

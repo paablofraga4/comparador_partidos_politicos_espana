@@ -45,7 +45,9 @@ aparece en la papeleta y lo que presenta un programa (constitución I.6). Están
   circunscripciones en que se presenta cada una. Así cada persona puede ver **su papeleta**
   (spec 002, HU-2.10).
 - **Principales** (constitución I.6, 30 oct): las que tienen `incluir` en el registro
-  (representación en la XV legislatura) y las que tienen `sucesora_de` una de ellas. Van
+  (representación en la XV legislatura), las que tienen `sucesora_de` una de ellas y las
+  listas conjuntas que incluyen a alguna en `miembros` (EH Bildu-ERC en Navarra y la de
+  Canarias con Podemos y Sumar, 4 nov). Van
   primero; el resto, en «Otras candidaturas del BOE». Las marcas territoriales de una misma
   candidatura se agrupan en ella con `siglas_boe` y `listas`, como el PSOE con el PSC: así
   Frente Amplio reúne Comuns-Front Ampli, Compromís: Front Valencià, CHA-Frente Amplio Aragón,
