@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
 import { Candidato, OtrasCandidaturas, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidaturasPorGrupo, tema, temas, vigente } from "@/lib/data";
+import { candidaturasPorGrupo, estadoProgramas29N, tema, temas, vigente } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -15,13 +15,20 @@ export function generateStaticParams() {
 export async function generateMetadata(props: PageProps<"/temas/[id]">): Promise<Metadata> {
   const { id } = await props.params;
   const t = tema(id);
-  return t
-    ? metaPagina({
-        titulo: `${t.nombre}: qué proponen los partidos`,
-        descripcion: `Qué propone cada partido sobre ${t.nombre.toLowerCase()} en su programa electoral para el 29N (${t.subtemas.slice(0, 3).join(", ")}…), comparado y con la página exacta de cada programa.`,
-        ruta: `/temas/${t.id}`,
-      })
-    : {};
+  if (!t) return {};
+  // Mientras ningún partido haya publicado el del 29N, lo que se muestra es de 2023 y el título lo
+  // dice (constitución III.1); en cuanto haya alguno del 29N, pasa a «qué proponen»
+  const solo2023 = estadoProgramas29N().con29N === 0;
+  const subtemas = t.subtemas.slice(0, 3).join(", ");
+  return metaPagina({
+    titulo: solo2023
+      ? `${t.nombre}: qué proponen los partidos (programas de 2023)`
+      : `${t.nombre}: qué proponen los partidos`,
+    descripcion: solo2023
+      ? `Qué propuso cada partido sobre ${t.nombre.toLowerCase()} en su programa de 2023 (${subtemas}…), con la página exacta de cada programa. Añadiremos los del 29N en cuanto se publiquen.`
+      : `Qué propone cada partido sobre ${t.nombre.toLowerCase()} en su programa electoral para el 29N (${subtemas}…), comparado y con la página exacta de cada programa.`,
+    ruta: `/temas/${t.id}`,
+  });
 }
 
 export default async function PaginaTema(props: PageProps<"/temas/[id]">) {
