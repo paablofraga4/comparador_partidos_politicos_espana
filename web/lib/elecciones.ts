@@ -101,3 +101,29 @@ export const DIPUTADOS: [string, number][] = [
 ];
 
 export const TOTAL_DIPUTADOS = DIPUTADOS.reduce((s, [, n]) => s + n, 0);
+
+/** Nombres del anexo del decreto que no coinciden con los de las circunscripciones del BOE. */
+const ID_DEL_ANEXO: Record<string, string> = {
+  "Araba/Álava": "alava",
+  "Alicante/Alacant": "alicante",
+  "Balears (Illes)": "illes-balears",
+  "Castellón/Castelló": "castellon",
+  "Coruña (A)": "a-coruna",
+  "Palmas (Las)": "las-palmas",
+  "Rioja (La)": "la-rioja",
+  "Valencia/València": "valencia",
+};
+
+/** «Santa Cruz de Tenerife» → «santa-cruz-de-tenerife»: el id de circunscripción del BOE. */
+const aId = (nombre: string) =>
+  nombre
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+/** Diputados que elige cada circunscripción (id del BOE → número), del anexo del decreto. */
+export const DIPUTADOS_POR_ID: Record<string, number> = Object.fromEntries(
+  DIPUTADOS.map(([nombre, n]) => [ID_DEL_ANEXO[nombre] ?? aId(nombre), n]),
+);

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { candidaturas, temas, vigente } from "@/lib/data";
+import { candidaturas, circunscripciones, temas, vigente } from "@/lib/data";
 import { urlDelSitio } from "@/lib/sitio";
 
 /** sitemap.xml (spec 002, HU-2.9, HU-2.11 y HU-2.12): solo páginas públicas e indexables. */
@@ -35,6 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .map((t) => `/partidos/${c.id}/${t.id}`);
   });
   return [
+    // Una página por circunscripción (spec 006); vacío hasta que el BOE publica las candidaturas
+    ...circunscripciones().map((p) => ({
+      url: url(`/tu-papeleta/${p.id}`),
+      lastModified: ahora,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
+    })),
     ...fijas.map(([ruta, priority]) => ({
       url: url(ruta),
       lastModified: ahora,

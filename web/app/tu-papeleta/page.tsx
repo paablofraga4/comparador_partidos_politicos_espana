@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Papeleta, type CandidaturaPapeleta } from "@/components/papeleta";
-import { candidaturas, circunscripciones, registro, vigente } from "@/lib/data";
+import { Papeleta } from "@/components/papeleta";
+import { circunscripciones, registro } from "@/lib/data";
 import { metaPagina } from "@/lib/seo";
 
 export const metadata: Metadata = metaPagina({
@@ -15,18 +15,6 @@ export const metadata: Metadata = metaPagina({
 export default function TuPapeleta() {
   const fase = registro().fase_inclusion;
   const provincias = circunscripciones();
-  const lista: CandidaturaPapeleta[] = candidaturas().map((c) => {
-    const v = vigente(c);
-    return {
-      id: c.id,
-      corto: c.corto,
-      nombre: c.nombre,
-      color: c.color,
-      listas: c.convocatorias["generales-2026"]?.listas ?? {},
-      programa: v.tipo === "pendiente" ? "pendiente" : v.anterior ? "2023" : "29N",
-      programaDe: v.tipo === "programa" ? (v.de?.corto ?? null) : null,
-    };
-  });
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -47,7 +35,26 @@ export default function TuPapeleta() {
             .
           </p>
         ) : (
-          <Papeleta provincias={provincias} candidaturas={lista} />
+          <>
+            <Papeleta provincias={provincias} />
+            <section className="mt-12" aria-labelledby="provincias-h">
+              <h2 id="provincias-h" className="text-2xl font-medium">
+                Todas las circunscripciones
+              </h2>
+              <ul className="mt-4 grid grid-cols-2 gap-x-4 sm:grid-cols-3">
+                {provincias.map((p) => (
+                  <li key={p.id}>
+                    <Link
+                      href={`/tu-papeleta/${p.id}`}
+                      className="inline-flex min-h-11 items-center underline-offset-4 hover:underline"
+                    >
+                      {p.nombre}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
         )}
       </div>
     </div>

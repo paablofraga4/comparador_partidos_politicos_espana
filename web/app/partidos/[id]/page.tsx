@@ -6,7 +6,14 @@ import { notFound } from "next/navigation";
 import { BloqueTema } from "@/components/bloque-tema";
 import { MigasJsonLd } from "@/components/json-ld";
 import { AvisoProgramaAnterior, Candidato, ProgramaBadge, TemaIcono } from "@/components/piezas";
-import { candidatura, candidaturas, idDelPrograma, temas, vigente } from "@/lib/data";
+import {
+  candidatura,
+  candidaturas,
+  circunscripciones,
+  idDelPrograma,
+  temas,
+  vigente,
+} from "@/lib/data";
 import { delPartido, metaPagina, nombrePartido } from "@/lib/seo";
 import { CONVOCATORIAS } from "@/lib/types";
 
@@ -57,6 +64,10 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
   if (!c) notFound();
   const v = vigente(c);
   const ts = temas();
+  // En qué circunscripciones concurre según el BOE (spec 006, HU-6.6); vacío en fase provisional
+  const todasLasCircunscripciones = circunscripciones();
+  const propias = new Set(c.convocatorias["generales-2026"]?.circunscripciones ?? []);
+  const dondeSePresenta = todasLasCircunscripciones.filter((p) => propias.has(p.id));
   const conTema = v.tipo === "programa" ? ts.filter((t) => v.analisis.temas[t.id]?.menciona) : [];
   const sinTema = v.tipo === "programa" ? ts.filter((t) => !v.analisis.temas[t.id]?.menciona) : [];
 
@@ -158,6 +169,42 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
             </section>
           )}
         </>
+      )}
+
+      {dondeSePresenta.length > 0 && (
+        <section className="border-rule mt-12 border-t pt-8" aria-labelledby="donde-h">
+          <h2 id="donde-h" className="text-2xl font-medium">
+            Dónde se presenta
+          </h2>
+          {dondeSePresenta.length === todasLasCircunscripciones.length ? (
+            <p className="text-ink-muted mt-2">
+              {c.corto} se presenta en las {dondeSePresenta.length} circunscripciones, según el BOE.{" "}
+              <Link href="/tu-papeleta" className="underline">
+                Ver tu papeleta
+              </Link>
+            </p>
+          ) : (
+            <>
+              <p className="text-ink-muted mt-2">
+                Candidatura al Congreso en {dondeSePresenta.length}{" "}
+                {dondeSePresenta.length === 1 ? "circunscripción" : "circunscripciones"}, según el
+                BOE:
+              </p>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {dondeSePresenta.map((p) => (
+                  <li key={p.id}>
+                    <Link
+                      href={`/tu-papeleta/${p.id}`}
+                      className="border-rule bg-paper-raised hover:border-rule-strong inline-flex min-h-10 items-center rounded-full border px-3 text-sm"
+                    >
+                      {p.nombre}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
       )}
     </div>
   );
