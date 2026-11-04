@@ -830,9 +830,8 @@ candidaturas:
     vigilar: []
     siglas_boe: [JOSÉ\ MARÍA\ CALVO\ GUERRA]
     nota: >-
-      Alta automática desde BOE-A-2026-22607. El BOE da en Málaga (n.º 9) un nombre de persona
-      sin siglas: posible errata; se carga tal cual, con el BOE como criterio (decisión del
-      30 oct). Revisar con las proclamadas.
+      Alta automática desde el BOE. Concurre en Málaga con su nombre y sin siglas (n.º 9) y figura también
+      en la lista de proclamadas (BOE-A-2026-23103).
     convocatorias:
       generales-2026:
         estado: proclamada
@@ -1141,15 +1140,16 @@ candidaturas:
     color: '#8A8F9A'
     web: ''
     vigilar: []
-    siglas_boe: [PCTE/ELAK]
+    siglas_boe: [PCTE/ELAK, ELAK/PCTE]
     nota: Alta automática desde BOE-A-2026-22607
     convocatorias:
       generales-2026:
         estado: proclamada
-        circunscripciones: [alava, bizkaia]
+        circunscripciones: [alava, bizkaia, gipuzkoa]
         listas:
           alava: PCTE/ELAK
           bizkaia: PCTE/ELAK
+          gipuzkoa: ELAK/PCTE
   - id: pctg
     nombre: Partido Comunista dos Traballadores da Galiza
     corto: PCTG
@@ -1429,19 +1429,3 @@ candidaturas:
         circunscripciones: [navarra]
         listas:
           navarra: EH BILDU-ERC
-  - id: elak-pcte
-    nombre: Euskadiko Langileen Alderdi Komunista/partido Comunista de los Trabajadores de Euskadi
-    corto: ELAK/PCTE
-    tipo: partido
-    ambito: provincial
-    color: '#8A8F9A'
-    web: ''
-    vigilar: []
-    siglas_boe: [ELAK/PCTE]
-    nota: Alta automática desde BOE-A-2026-23103
-    convocatorias:
-      generales-2026:
-        estado: proclamada
-        circunscripciones: [gipuzkoa]
-        listas:
-          gipuzkoa: ELAK/PCTE
