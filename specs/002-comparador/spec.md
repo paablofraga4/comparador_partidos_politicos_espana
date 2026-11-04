@@ -144,6 +144,9 @@ exactamente a eso **para** no tener que buscar dentro de la ficha completa.
   - enlaces a lo que proponen **los demás partidos** sobre el mismo tema, en orden alfabético;
   - enlaces a la comparativa del tema y a los demás temas del partido.
 - **Título**: «{Tema}: qué propone {el PP / VOX} en su programa electoral ({N} propuestas)».
+  Con el programa de 2023 a la vista dice «en su programa de 2023», y con el del 29N, «en su
+  programa del 29N» (4 nov: la forma «qué propone» se mantiene por los datos de Search Console).
+  La página de cada tema añade «(programas de 2023)» mientras ningún partido tenga el del 29N.
   *(12 oct, con datos de Search Console: la búsqueda que más tráfico trae es «qué propone el pp
   para las pensiones», así que el título copia esa forma.)*
   - El artículo sale de `articulo` en `candidaturas.yaml` («el PP», «el PSOE», «VOX»).

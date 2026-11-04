@@ -53,17 +53,26 @@ export function delPartido(c: ConArticulo): string {
 
 /**
  * Título de una página partido × tema: la pregunta tal como se busca («Pensiones: qué propone el
- * PP…») y el número de propuestas, que sale del análisis. Con el programa del 29N lo dice.
+ * PP…») y el número de propuestas, que sale del análisis. Dice de qué programa es: con el del 29N,
+ * «su programa del 29N»; con el de 2023 (aún sin el nuevo), «su programa de 2023», que es lo que
+ * se muestra (constitución III.1). Se mantiene «propone»: es la forma que más tráfico trae en
+ * Search Console (spec 002, HU-2.11).
  */
 export function tituloPartidoTema(a: {
   tema: string;
   c: ConArticulo;
   propuestas: number;
   es29N: boolean;
+  /** Se muestra el programa de 2023 porque aún no hay del 29N */
+  de2023?: boolean;
 }): string {
-  const programa = a.es29N ? "su programa del 29N" : "su programa electoral";
   const cuantas =
     a.propuestas > 0 ? ` (${a.propuestas} ${a.propuestas === 1 ? "propuesta" : "propuestas"})` : "";
+  const programa = a.es29N
+    ? "su programa del 29N"
+    : a.de2023
+      ? "su programa de 2023"
+      : "su programa electoral";
   return `${a.tema}: qué propone ${conArticulo(a.c)} en ${programa}${cuantas}`;
 }
 

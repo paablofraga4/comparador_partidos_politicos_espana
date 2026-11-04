@@ -42,6 +42,7 @@ export async function generateMetadata(
     c,
     propuestas: analisis?.menciona ? (analisis.propuestas?.length ?? 0) : 0,
     es29N: v.tipo === "programa" && !v.anterior,
+    de2023: v.tipo === "programa" && v.anterior,
   });
   const ruta = `/partidos/${c.id}/${t.id}`;
   if (v.tipo === "programa" && v.de) {

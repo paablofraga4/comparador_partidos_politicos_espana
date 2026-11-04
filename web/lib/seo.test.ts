@@ -23,12 +23,23 @@ describe("seo", () => {
     expect(tituloPartidoTema({ tema: "Pensiones", c: pp, propuestas: 8, es29N: false })).toBe(
       "Pensiones: qué propone el PP en su programa electoral (8 propuestas)",
     );
-    expect(tituloPartidoTema({ tema: "Sanidad", c: { corto: "VOX" }, propuestas: 1, es29N: true })).toBe(
-      "Sanidad: qué propone VOX en su programa del 29N (1 propuesta)",
-    );
-    expect(tituloPartidoTema({ tema: "Sanidad", c: { corto: "VOX" }, propuestas: 0, es29N: false })).toBe(
-      "Sanidad: qué propone VOX en su programa electoral",
-    );
+    expect(
+      tituloPartidoTema({ tema: "Sanidad", c: { corto: "VOX" }, propuestas: 1, es29N: true }),
+    ).toBe("Sanidad: qué propone VOX en su programa del 29N (1 propuesta)");
+    expect(
+      tituloPartidoTema({ tema: "Sanidad", c: { corto: "VOX" }, propuestas: 0, es29N: false }),
+    ).toBe("Sanidad: qué propone VOX en su programa electoral");
+  });
+
+  it("título partido × tema con el programa de 2023: sigue en «propone» y dice el año", () => {
+    const pp = { corto: "PP", articulo: "el" as const };
+    expect(
+      tituloPartidoTema({ tema: "Pensiones", c: pp, propuestas: 5, es29N: false, de2023: true }),
+    ).toBe("Pensiones: qué propone el PP en su programa de 2023 (5 propuestas)");
+    // con el del 29N aprobado, manda el 29N
+    expect(
+      tituloPartidoTema({ tema: "Pensiones", c: pp, propuestas: 5, es29N: true, de2023: false }),
+    ).toBe("Pensiones: qué propone el PP en su programa del 29N (5 propuestas)");
   });
 
   it("canónica sin parámetros, la misma imagen en todas y la marca al final", () => {
