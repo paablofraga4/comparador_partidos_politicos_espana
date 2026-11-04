@@ -35,7 +35,8 @@ está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de
    - *Orden de presentación* (enmienda aprobada por el titular el 30 oct): en el comparador, los
      temas, la lista de partidos y el chat van primero las **principales**, que son las
      candidaturas con representación en las Cortes en la XV legislatura o la que continúa una de
-     ellas con otro nombre (Frente Amplio ← Sumar). Las demás candidaturas del BOE siguen en la
+     ellas con otro nombre (Frente Amplio ← Sumar) o una lista conjunta que incluya a alguna
+     (EH Bildu-ERC en Navarra, aprobado por el titular el 4 nov). Las demás candidaturas del BOE siguen en la
      web, plegadas en «Otras candidaturas del BOE», con su ficha, el mismo trato y orden
      alfabético. En «Tu papeleta» aparecen todas por igual.
    - Una candidatura sin programa publicado aparece igualmente, con «No ha publicado programa

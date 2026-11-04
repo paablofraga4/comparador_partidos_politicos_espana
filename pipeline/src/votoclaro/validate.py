@@ -47,6 +47,9 @@ def _check_registries(paths: Paths, inf: Informe) -> tuple[set[str], set[str]]:
     if len(ids) != len(set(ids)):
         inf.errores.append("candidaturas.yaml: ids duplicados")
     for c in cands.candidaturas:
+        for m in c.miembros:
+            if m not in ids:
+                inf.errores.append(f"candidaturas.yaml: {c.id}.miembros={m} no existe")
         for conv, cc in c.convocatorias.items():
             if conv not in sources.convocatorias:
                 inf.errores.append(f"candidaturas.yaml: {c.id} usa convocatoria desconocida {conv}")

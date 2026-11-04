@@ -904,13 +904,15 @@ candidaturas:
   - id: nc-bc-podemos-iu-sumar
     nombre: Unidad del Pueblo Canario Upc
     corto: NC-BC, PODEMOS, IU, SUMAR
-    tipo: partido
+    tipo: coalicion
     ambito: autonomico
     color: '#8A8F9A'
     web: ''
     vigilar: []
     siglas_boe: ['NC\-BC,\ PODEMOS,\ IU,\ SUMAR']
-    nota: Alta automática desde BOE-A-2026-22607
+    nota: Lista conjunta de NC-BC, Podemos, IU y Sumar en Canarias. Incluye a Podemos y a Sumar, con
+      representación en la XV legislatura, así que es principal por el mismo criterio que EH 
+      Bildu-ERC (4 nov).
     convocatorias:
       generales-2026:
         estado: proclamada
@@ -918,6 +920,7 @@ candidaturas:
         listas:
           las-palmas: NC-BC, PODEMOS, IU, SUMAR
           santa-cruz-de-tenerife: NC-BC, PODEMOS, IU, SUMAR
+    miembros: [podemos, sumar]
   - id: nex
     nombre: Nuevo Extremeñismo - Adelante Extremadura
     corto: NEX
@@ -1416,16 +1419,19 @@ candidaturas:
   - id: eh-bildu-erc
     nombre: Euskal Herria Bildu-Esquerra Republicana de Catalunya
     corto: EH BILDU-ERC
-    tipo: partido
+    tipo: coalicion
     ambito: provincial
     color: '#8A8F9A'
     web: ''
     vigilar: []
     siglas_boe: [EH\ BILDU\-ERC]
-    nota: Alta automática desde BOE-A-2026-23103
+    nota: Lista conjunta de EH Bildu y ERC en Navarra (BOE-A-2026-23103). Incluye a dos partidos con
+      representación en la XV legislatura, así que es principal (decisión del 4 nov). EH Bildu no 
+      concurre con sus siglas en Navarra.
     convocatorias:
       generales-2026:
         estado: proclamada
         circunscripciones: [navarra]
         listas:
           navarra: EH BILDU-ERC
+    miembros: [bildu, erc]
