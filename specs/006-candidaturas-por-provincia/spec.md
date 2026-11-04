@@ -41,7 +41,7 @@ La web de la competencia más directa (29nov.es) aún no usa la lista oficial de
 - Título: «Candidaturas al Congreso en {provincia}: quién se presenta el 29N». Un solo título
   principal visible, con el mismo texto.
 - Un párrafo inicial dice, con cifras de los datos: cuántas candidaturas se presentan y que la
-  fuente es el BOE, con su identificador y fecha.
+  fuente es el BOE, con su identificador (BOE-A-…) y un enlace.
 - Lista **en orden alfabético**, sin destacar ninguna. Cada candidatura muestra su nombre, el
   nombre con que concurre en esa provincia si es distinto («En tu papeleta: UPN-PP»), el
   origen de su programa (el mismo texto que en «Tu papeleta») y un enlace a su ficha.
@@ -59,9 +59,9 @@ La web de la competencia más directa (29nov.es) aún no usa la lista oficial de
 ### HU-6.3 Siempre fiel a la fase del BOE
 **Como** votante **quiero** que la página diga si son candidaturas presentadas o proclamadas
 **para** no creer que son definitivas si no lo son.
-- Con las **presentadas** (fase actual): «Candidaturas presentadas, según el BOE del {fecha}.
-  Se proclamarán el {fecha}».
-- Con las **proclamadas**: «Candidaturas proclamadas, según el BOE del {fecha}». Las no
+- Con las **presentadas** (fase actual): «Candidaturas presentadas, según el BOE ({identificador}).
+  Se proclaman el 2 y 3 de noviembre».
+- Con las **proclamadas**: «Candidaturas proclamadas, según el BOE ({identificador})». Las no
   proclamadas desaparecen de la lista, igual que en el resto de la web (spec 001).
 - El cambio de fase actualiza todas las provincias a la vez, sin tocar cada una.
 
@@ -94,7 +94,7 @@ se vota.
   candidaturas locales pequeñas reciben el mismo trato que las grandes (aquí **todas** las del
   BOE, sin la separación de «principales» del comparador, porque el criterio es la papeleta).
 - **I.5 Igualdad visual**: color solo como acento junto al nombre; sin logotipos.
-- **I.6 Criterio objetivo**: única fuente, el BOE; se cita su identificador y fecha.
+- **I.6 Criterio objetivo**: única fuente, el BOE; se cita su identificador y se enlaza (la fecha no se guarda en los datos: mejora pendiente del cargador del BOE).
 - **II Grounding**: solo datos oficiales ya cargados; no se escribe nada de memoria.
 - **III Transparencia**: se dice la fase (presentadas/proclamadas) y la fecha del BOE.
 - **VI Privacidad**: sin cuentas ni seguimiento; la provincia elegida sigue sin salir del

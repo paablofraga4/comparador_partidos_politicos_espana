@@ -5,6 +5,7 @@ import path from "node:path";
 import { parse } from "yaml";
 
 import type { Cambio, CosteFijo } from "./apoyos/cuentas";
+import type { CandidaturaPapeleta } from "./papeleta";
 import { candidaturasVisibles, esPrincipal, programaVigente } from "./reglas";
 import type {
   Analisis,
@@ -72,6 +73,31 @@ export function candidaturasPorGrupo(): { principales: Candidatura[]; otras: Can
     principales: cs.filter((c) => esPrincipal(c, reg)),
     otras: cs.filter((c) => !esPrincipal(c, reg)),
   };
+}
+
+/** Las candidaturas visibles con lo que necesitan «Tu papeleta» y las páginas por provincia. */
+export function listaPapeleta(): CandidaturaPapeleta[] {
+  return candidaturas().map((c) => {
+    const v = vigente(c);
+    return {
+      id: c.id,
+      corto: c.corto,
+      nombre: c.nombre,
+      color: c.color,
+      listas: c.convocatorias["generales-2026"]?.listas ?? {},
+      programa: v.tipo === "pendiente" ? "pendiente" : v.anterior ? "2023" : "29N",
+      programaDe: v.tipo === "programa" ? (v.de?.corto ?? null) : null,
+    };
+  });
+}
+
+/** Identificador del BOE de donde salen las circunscripciones y sus candidaturas. */
+export function fuenteBoe(): string | null {
+  return memo("fuenteBoe", () =>
+    existsSync(path.join(DATA_DIR, "circunscripciones.yaml"))
+      ? (readYaml<{ fuente?: string }>("circunscripciones.yaml").fuente ?? null)
+      : null,
+  );
 }
 
 /** Circunscripciones al Congreso según el BOE (vacío hasta que se publiquen las candidaturas). */
@@ -164,7 +190,9 @@ export function cargaIa(): { usd: number; programas: number } {
     let programas = 0;
     // Solo las carpetas de convocatoria (en analyses/ también hay un .gitkeep)
     const convs = existsSync(base)
-      ? readdirSync(base, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name)
+      ? readdirSync(base, { withFileTypes: true })
+          .filter((d) => d.isDirectory())
+          .map((d) => d.name)
       : [];
     for (const conv of convs) {
       for (const f of readdirSync(path.join(base, conv)).filter((x) => x.endsWith(".json"))) {
