@@ -107,7 +107,8 @@ def vigilar(
                 and c.id in fuentes.convocatorias[convocatoria].programas
             ):
                 continue  # ya tenemos su programa de esta convocatoria
-            for pagina in c.vigilar or [c.web]:
+            # Las altas automáticas del BOE no traen web: no hay página que visitar (solo noticias)
+            for pagina in c.vigilar or ([c.web] if c.web else []):
                 try:
                     r = client.get(pagina, timeout=30)
                     r.raise_for_status()

@@ -94,3 +94,28 @@ def test_sumario_del_boe_con_objetos_en_vez_de_listas():
     assert [n.titulo for n in novedades] == [
         "BOE-A-2026-1 · Candidaturas proclamadas para las elecciones al Congreso"
     ]
+
+
+def test_no_se_cae_con_candidaturas_sin_web():
+    """Las altas automáticas del BOE llevan `web: ''` y `vigilar: []`: no hay nada que visitar
+    (antes, `client.get('')` lanzaba ValueError y tumbaba toda la vigilancia)."""
+    pedidas: list[str] = []
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        pedidas.append(str(req.url))
+        if req.url.host == "news.google.com":
+            return httpx.Response(200, content=RSS.encode())
+        return httpx.Response(200, text=HTML)
+
+    base = load_candidaturas(Paths(ROOT / "data")).get("pp")
+    sin_web = base.model_copy(update={"id": "nueva", "web": "", "vigilar": []})
+    fuentes = RegistroFuentes.model_validate(
+        {"version": 1, "convocatorias": {"generales-2026": {"fecha": "2026-11-29"}}}
+    )
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    nov, errores = vigilar(
+        [sin_web], fuentes, desde=datetime(2026, 10, 6, tzinfo=UTC), client=client
+    )
+    assert not errores
+    assert all(n.tipo == "noticia" for n in nov)  # sin web no hay PDF oficial que mirar
+    assert not any(u in ("", "/") or "pp.es" in u for u in pedidas)
