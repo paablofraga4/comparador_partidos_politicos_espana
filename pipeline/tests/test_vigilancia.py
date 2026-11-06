@@ -7,7 +7,7 @@ import httpx
 from votoclaro.models import RegistroFuentes
 from votoclaro.paths import ROOT, Paths
 from votoclaro.registry import load_candidaturas
-from votoclaro.vigilancia import pdfs_de_programa, vigilar
+from votoclaro.vigilancia import noticias, pdfs_de_programa, vigilar
 
 HTML = """
 <a href="/wp-content/uploads/2026/11/Programa-Electoral-Generales-2026.pdf">Programa electoral</a>
@@ -119,3 +119,40 @@ def test_no_se_cae_con_candidaturas_sin_web():
     assert not errores
     assert all(n.tipo == "noticia" for n in nov)  # sin web no hay PDF oficial que mirar
     assert not any(u in ("", "/") or "pp.es" in u for u in pedidas)
+
+
+def _rss(*titulos: str) -> bytes:
+    items = "".join(
+        f"<item><title>{t}</title><link>https://ejemplo.es/{i}</link>"
+        "<pubDate>Tue, 10 Nov 2026 10:00:00 GMT</pubDate></item>"
+        for i, t in enumerate(titulos)
+    )
+    return f'<?xml version="1.0"?><rss><channel>{items}</channel></rss>'.encode()
+
+
+def _noticias(cand, *titulos: str) -> list[str]:
+    client = httpx.Client(
+        transport=httpx.MockTransport(lambda req: httpx.Response(200, content=_rss(*titulos)))
+    )
+    return [n.titulo for n in noticias(cand, client, datetime(2026, 10, 6, tzinfo=UTC))]
+
+
+def test_noticias_no_confunde_siglas_con_otros_textos():
+    pp = load_candidaturas(Paths(ROOT / "data")).get("pp")
+    # «PP» solo cuenta como palabra completa: no dentro de «Apple» o «app»
+    assert _noticias(
+        pp,
+        "El PP presenta su programa electoral",
+        "Programa electoral de la app de Apple",
+    ) == ["El PP presenta su programa electoral"]
+
+
+def test_noticias_de_siglas_ambiguas_se_buscan_por_el_nombre_completo():
+    pp = load_candidaturas(Paths(ROOT / "data")).get("pp")
+    veintinueve = pp.model_copy(update={"id": "29", "corto": "29", "nombre": "Partido Veintinueve"})
+    assert _noticias(
+        veintinueve,
+        "Programa electoral de ERC para el 29-N",
+        "Programa electoral de VOX para el 29N: las propuestas",
+        "Partido Veintinueve presenta su programa electoral",
+    ) == ["Partido Veintinueve presenta su programa electoral"]
