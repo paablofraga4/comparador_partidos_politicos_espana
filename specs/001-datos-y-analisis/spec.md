@@ -242,12 +242,17 @@ programa **para** no depender de revisarlo a mano.
   - las páginas de cada candidatura donde suele publicar el programa (`vigilar` en el
     registro), buscando documentos nuevos o cambios de hash;
   - una búsqueda de noticias por candidatura («programa electoral» + nombre).
+  - *Menos ruido (6 nov)*: una noticia solo cuenta si su título **nombra a la candidatura como
+    palabra completa** («PP» no es «Apple»). Las siglas con un dígito y de hasta 3 caracteres
+    («29», «3e») se buscan por el nombre completo, porque coinciden con textos como «el 29-N».
+    Las candidaturas sin web (las altas automáticas del BOE) no se visitan: solo noticias.
 - **Candidaturas**: cada día, del 16 de octubre al 3 de noviembre, se revisa el **sumario del
   BOE** (API de datos abiertos) en busca de candidaturas presentadas y proclamadas, y las
   noticias de coaliciones y agrupaciones nuevas.
 - Cuando se detecta algo:
-  - se abre una *issue* de GitHub («Posible programa nuevo: X», con el enlace), que te llega
-    como notificación;
+  - se abre una *issue* de GitHub, que te llega como notificación: una por cada documento
+    («Posible programa nuevo: X») y **una sola por candidatura y ejecución con todas sus
+    noticias nuevas** («Noticias sobre el programa de X (N)»), para no inundar el correo;
   - si es un documento del dominio oficial, se lanza la ingesta automáticamente y queda en un
     PR **en borrador**. Nunca se publica sin merge humano.
   - si es el BOE, se abre un PR que actualiza `candidaturas.yaml` con las candidaturas y sus

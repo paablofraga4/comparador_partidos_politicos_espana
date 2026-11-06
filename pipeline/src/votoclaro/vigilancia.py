@@ -59,8 +59,23 @@ def pdfs_de_programa(html: str, base: str) -> list[tuple[str, str]]:
     return list(dict.fromkeys(out))
 
 
+def _siglas_ambiguas(cand: Candidatura) -> bool:
+    """Siglas con un dígito y de hasta 3 caracteres («29», «3e», «D21»): coinciden con textos que
+    no son de la candidatura («el 29-N»), así que se busca por su nombre completo."""
+    return bool(re.search(r"\d", cand.corto)) and len(cand.corto) <= 3
+
+
+def menciona(cand: Candidatura, titulo: str) -> bool:
+    """¿El título nombra a la candidatura, como palabra completa? («PP» no es «apple»)"""
+    nombres = [cand.nombre] if _siglas_ambiguas(cand) else [cand.corto, cand.nombre]
+    return any(
+        re.search(rf"(?<!\w){re.escape(n)}(?!\w)", titulo, re.I) for n in nombres if n.strip()
+    )
+
+
 def noticias(cand: Candidatura, client: httpx.Client, desde: datetime) -> list[Novedad]:
-    q = quote_plus(f'"programa electoral" "{cand.corto}" elecciones generales')
+    nombre = cand.nombre if _siglas_ambiguas(cand) else cand.corto
+    q = quote_plus(f'"programa electoral" "{nombre}" elecciones generales')
     url = f"https://news.google.com/rss/search?q={q}&hl=es&gl=ES&ceid=ES:es"
     r = client.get(url, timeout=30)
     r.raise_for_status()
@@ -74,7 +89,7 @@ def noticias(cand: Candidatura, client: httpx.Client, desde: datetime) -> list[N
             continue
         if fecha < desde or not enlace:
             continue
-        if not (_PROGRAMA.search(titulo) and cand.corto.lower() in titulo.lower()):
+        if not (_PROGRAMA.search(titulo) and menciona(cand, titulo)):
             continue
         out.append(Novedad(cand.id, "noticia", enlace, titulo, fecha.date().isoformat()))
     return out
