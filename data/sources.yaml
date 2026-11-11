@@ -116,4 +116,12 @@ convocatorias:
           el 6-10-2026.
   generales-2026:
     fecha: '2026-11-29'
-    programas: {}
+    programas:
+      cc:
+        url: https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf
+        fichero: documents/generales-2026/cc.pdf
+        sha256: 3c40c0a6e38d8dd80ae1061d94b614f4e3f1b6492ec8c801834fb497f337044e
+        descargado: '2026-11-11T17:39:08Z'
+        origen: pdf
+        paginas: 23
+        estado: aprobado
