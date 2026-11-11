@@ -143,3 +143,11 @@ convocatorias:
         origen: pdf
         paginas: 82
         estado: aprobado
+      erc:
+        url: https://www.esquerrarepublicana.cat/documents/e2026-programa.pdf
+        fichero: documents/generales-2026/erc.pdf
+        sha256: 61728d162a6e88d492d44a0b0994effb31f9e4abb85ebf8aea715d870a9b2e04
+        descargado: '2026-11-11T17:56:46Z'
+        origen: pdf
+        paginas: 48
+        estado: aprobado
