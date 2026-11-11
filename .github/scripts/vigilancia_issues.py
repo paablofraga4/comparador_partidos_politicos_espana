@@ -20,12 +20,20 @@ def gh(*args: str) -> str:
     return subprocess.run(["gh", *args], check=True, capture_output=True, text=True).stdout
 
 
-def ya_existe(url: str) -> bool:
+def cuerpos_de_issues() -> str:
+    """El cuerpo de todas las issues de vigilancia, abiertas y cerradas. Se compara en memoria:
+    la búsqueda de GitHub admite 256 caracteres y las direcciones de Google News miden unos 800,
+    así que `--search` nunca las encontraba y se creaban issues repetidas en cada ejecución."""
     if DRY_RUN:
-        return False
-    salida = gh("issue", "list", "--label", "vigilancia", "--state", "all", "--limit", "5",
-                "--search", f'"{url}" in:body', "--json", "number")
-    return bool(json.loads(salida))
+        return ""
+    salida = gh("issue", "list", "--label", "vigilancia", "--state", "all", "--limit", "5000",
+                "--json", "body")
+    return "\n".join(i.get("body") or "" for i in json.loads(salida))
+
+
+def filtrar_nuevas(novedades: list[dict], conocidas: str) -> list[dict]:
+    """Las novedades cuya URL no aparece ya en ninguna issue."""
+    return [n for n in novedades if n["url"] not in conocidas]
 
 
 def crear(titulo: str, cuerpo: str) -> None:
@@ -70,7 +78,7 @@ def main() -> None:
            "--description", "Posible programa o candidatura nueva (vigilancia automática)")
 
     creadas = 0
-    nuevas = [n for n in datos["novedades"] if not ya_existe(n["url"])]
+    nuevas = filtrar_nuevas(datos["novedades"], cuerpos_de_issues())
 
     for n in (x for x in nuevas if x["tipo"] == "boe"):
         crear(
