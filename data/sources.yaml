@@ -116,4 +116,13 @@ convocatorias:
           el 6-10-2026.
   generales-2026:
     fecha: '2026-11-29'
-    programas: {}
+    programas:
+      bng:
+        url: https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf
+        url_archivo: https://web.archive.org/web/20261111174549/https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf
+        fichero: documents/generales-2026/bng.pdf
+        sha256: fd5aef260b9c66d030b57b7b0e18914c8ad79384e2c46b2346d9fb4f6514a97d
+        descargado: '2026-11-11T17:45:55Z'
+        origen: pdf
+        paginas: 91
+        estado: aprobado
