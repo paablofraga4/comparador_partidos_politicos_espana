@@ -83,14 +83,15 @@ export default function Inicio() {
               Conocer un partido <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </div>
-          {/* Lo que hay, en cifras de los datos (spec 007, HU-7.3); el aviso de 2023 se mantiene */}
+          {/* Lo nuevo primero, en cifras de los datos (spec 007, HU-7.3); el aviso de 2023 se
+              mantiene. «11 de 15» se leía como 11 programas nuevos: se separan las dos cifras */}
           <p className="border-notice-rule bg-notice-bg text-notice-ink mt-8 inline-flex flex-wrap items-center gap-x-2 rounded-md border px-3 py-2 text-sm">
             <strong className="font-semibold">
-              Ya puedes comparar {resumen.del29N.length + resumen.de2023} de los {resumen.total}{" "}
-              partidos principales:
+              {resumen.del29N.length} de los {resumen.total} partidos principales{" "}
+              {resumen.del29N.length === 1 ? "ya tiene" : "ya tienen"} programa del 29N.
             </strong>
-            {resumen.del29N.length} con su programa del 29N y {resumen.de2023} con el de 2023.
-            {resumen.de2023 > 0 && " Cuando el de 2023 es el anterior, lo indicamos."}
+            {resumen.de2023 > 0 &&
+              `Mientras publican los demás, puedes comparar ${resumen.de2023 === 1 ? "otro" : `otros ${resumen.de2023}`} con su programa de 2023 (lo indicamos).`}
             <Link href="/metodologia#estado" className="font-semibold underline">
               Ver estado
             </Link>
