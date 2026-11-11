@@ -58,9 +58,11 @@ qué hay de nuevo.
 ### HU-7.3 Una cifra que cuenta lo que hay
 **Como** votante **quiero** saber cuánto puedo comparar ya **para** confiar en que la web está
 completa.
-- La tira actual pasa a decir, con cifras de los datos: «Ya puedes comparar {N} de los {T}
-  partidos principales: {A} con su programa del 29N y {B} con el de 2023», con el enlace «Ver
-  estado» a la metodología.
+- La tira actual pasa a decir, con cifras de los datos y lo nuevo primero: «{A} de los {T}
+  partidos principales ya tienen programa del 29N. Mientras publican los demás, puedes comparar
+  otros {B} con su programa de 2023 (lo indicamos)», con el enlace «Ver estado» a la metodología.
+  *(11 nov: la primera versión, «Ya puedes comparar {A+B} de los {T}…», se leía como {A+B}
+  programas nuevos; el propietario aprobó esta.)*
 - Mientras quede alguno con el programa de 2023 se mantiene el aviso de que se muestra el
   anterior y se indica (constitución III.2).
 
@@ -94,8 +96,9 @@ Titular y botones → tira (HU-7.3) → tarjetas (HU-7.1) → programas del 29N 
 - [ ] El selector de la tarjeta de Tu papeleta lleva a `/tu-papeleta/{provincia}`.
 - [ ] El bloque lista BNG, CC, ERC y PP en orden alfabético, con páginas, fecha de carga y
       enlace; la línea de pendientes lista las demás principales.
-- [ ] La tira dice «Ya puedes comparar 11 de los 15 partidos principales: 4 con su programa
-      del 29N y 7 con el de 2023» (con los datos de hoy) y mantiene el aviso de 2023.
+- [ ] La tira dice «4 de los 15 partidos principales ya tienen programa del 29N. Mientras
+      publican los demás, puedes comparar otros 7 con su programa de 2023 (lo indicamos)» (con los
+      datos de hoy).
 - [ ] Revisión de neutralidad: nada ordena por fecha ni destaca a un partido.
 - [ ] Escritorio y 375 px revisados en el navegador.
 
