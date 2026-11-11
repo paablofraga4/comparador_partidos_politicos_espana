@@ -137,6 +137,24 @@ export function vigente(cand: Candidatura): ProgramaVigente {
 export const idDelPrograma = (cand: Candidatura, v: ProgramaVigente): string =>
   v.tipo === "programa" && v.de ? v.de.id : cand.id;
 
+/**
+ * Lo que se puede comparar hoy entre las principales (spec 007): quién tiene ya el programa del
+ * 29N (con su fuente, para páginas y fecha de carga), cuántas se ven con el de 2023 y quién aún no
+ * tiene el del 29N. Todo en orden alfabético, como `candidaturasPorGrupo`.
+ */
+export function resumenPortada() {
+  const filas = candidaturasPorGrupo().principales.map((c) => ({ c, v: vigente(c) }));
+  const del29N = filas.flatMap(({ c, v }) =>
+    v.tipo === "programa" && !v.anterior ? [{ c, fuente: v.fuente }] : [],
+  );
+  return {
+    total: filas.length,
+    del29N,
+    de2023: filas.filter(({ v }) => v.tipo === "programa" && v.anterior).length,
+    sin29N: filas.filter(({ v }) => !(v.tipo === "programa" && !v.anterior)).map(({ c }) => c),
+  };
+}
+
 /** Resumen del estado de publicación de programas del 29N de las principales (tira de la portada). */
 export function estadoProgramas29N() {
   const cs = candidaturasPorGrupo().principales;
