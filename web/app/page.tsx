@@ -3,11 +3,13 @@ import Link from "next/link";
 
 import { SeccionAutor, SeccionMantenimiento } from "@/components/apoyos";
 import { Candidato, OtrasCandidaturas, ProgramaBadge, TemaIcono } from "@/components/piezas";
+import { ProgramasPublicados, TarjetasEntrada } from "@/components/portada";
 import {
   candidaturasPorGrupo,
+  circunscripciones,
   costesFijos,
-  estadoProgramas29N,
   registro,
+  resumenPortada,
   temas,
   vigente,
 } from "@/lib/data";
@@ -48,7 +50,7 @@ function DatosEstructurados() {
 export default function Inicio() {
   const { principales, otras } = candidaturasPorGrupo();
   const ts = temas();
-  const estado = estadoProgramas29N();
+  const resumen = resumenPortada();
   const provisional = registro().fase_inclusion === "provisional";
 
   return (
@@ -81,12 +83,14 @@ export default function Inicio() {
               Conocer un partido <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </div>
+          {/* Lo que hay, en cifras de los datos (spec 007, HU-7.3); el aviso de 2023 se mantiene */}
           <p className="border-notice-rule bg-notice-bg text-notice-ink mt-8 inline-flex flex-wrap items-center gap-x-2 rounded-md border px-3 py-2 text-sm">
             <strong className="font-semibold">
-              {estado.con29N} de {estado.total} partidos
+              Ya puedes comparar {resumen.del29N.length + resumen.de2023} de los {resumen.total}{" "}
+              partidos principales:
             </strong>
-            han publicado ya su programa del 29N. Mientras tanto, mostramos el de 2023 y lo
-            indicamos.
+            {resumen.del29N.length} con su programa del 29N y {resumen.de2023} con el de 2023.
+            {resumen.de2023 > 0 && " Cuando el de 2023 es el anterior, lo indicamos."}
             <Link href="/metodologia#estado" className="font-semibold underline">
               Ver estado
             </Link>
@@ -102,6 +106,13 @@ export default function Inicio() {
           </p>
         </div>
       </section>
+
+      <TarjetasEntrada
+        // La portada es estática: el chat se decide en el build (CHAT_ACTIVO, ARG del Dockerfile)
+        chat={process.env.CHAT_ACTIVO === "1"}
+        provincias={provisional ? [] : circunscripciones()}
+      />
+      <ProgramasPublicados publicados={resumen.del29N} pendientes={resumen.sin29N} />
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6" aria-labelledby="temas-h">
         <div className="flex items-end justify-between gap-4">

@@ -86,6 +86,7 @@ Cada tarea es pequeña y comprobable. Al completarla se marca `[x]` y se hace co
 - [ ] T-506 Ingesta de cada programa del 29N (menos de 24 h)
 - [x] T-510 Spec 006 · páginas por circunscripción `/tu-papeleta/[provincia]` (52), con diputados, fase del BOE, migas y sitemap; «Tu papeleta» enlaza a las 52 y el selector lleva a la página (4 nov)
 - [x] T-511 Spec 006 · «Dónde se presenta» en la ficha de cada candidatura (4 nov)
+- [x] T-512 Spec 007 · portada: tarjetas de entrada (comparar, IA, Tu papeleta con selector), «Programas del 29N ya publicados» y tira «Ya puedes comparar…» (11 nov)
 - [x] T-509 Las listas conjuntas que incluyen a una principal son principales (`miembros`; EH Bildu-ERC y la de Canarias) (4 nov)
 - [x] T-508 Principales primero y el resto plegado («Otras candidaturas del BOE»); Frente Amplio agrupa sus marcas territoriales (30 oct)
 - [x] T-507 Sucesoras de una coalición de 2023 (`sucesora_de`): Frente Amplio con el programa de 2023 de Sumar, rotulado, noindex y pendiente en el chat (30 oct)

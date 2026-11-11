@@ -42,18 +42,29 @@ export function RecordarProvincia({ id }: { id: string }) {
  * «Tu papeleta» (spec 002, HU-2.10; spec 006, HU-6.2): elegir la provincia lleva a su página. La
  * provincia se guarda solo en este navegador y nunca sale de él.
  */
-export function Papeleta({ provincias }: { provincias: { id: string; nombre: string }[] }) {
+export function Papeleta({
+  provincias,
+  compacta = false,
+}: {
+  provincias: { id: string; nombre: string }[];
+  /** Dentro de una tarjeta (portada, spec 007): etiqueta pequeña y enlace sin botón grande */
+  compacta?: boolean;
+}) {
   const router = useRouter();
   const provincia = useSyncExternalStore(subscribe, leer, () => "");
   const recordada = provincias.find((p) => p.id === provincia);
+  const id = compacta ? "provincia-portada" : "provincia";
 
   return (
-    <div>
-      <label htmlFor="provincia" className="block font-serif text-xl">
+    <div className={compacta ? "mt-auto" : undefined}>
+      <label
+        htmlFor={id}
+        className={compacta ? "block text-sm font-semibold" : "block font-serif text-xl"}
+      >
         ¿Dónde votas?
       </label>
       <select
-        id="provincia"
+        id={id}
         value=""
         onChange={(e) => {
           if (!e.target.value) return;
@@ -73,7 +84,11 @@ export function Papeleta({ provincias }: { provincias: { id: string; nombre: str
       {recordada && (
         <Link
           href={`/tu-papeleta/${recordada.id}`}
-          className="bg-ink text-paper mt-5 inline-flex min-h-12 items-center gap-2 rounded-md px-5 font-semibold"
+          className={
+            compacta
+              ? "mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-semibold"
+              : "bg-ink text-paper mt-5 inline-flex min-h-12 items-center gap-2 rounded-md px-5 font-semibold"
+          }
         >
           Ver mi papeleta en {recordada.nombre} <ArrowRight aria-hidden className="h-5 w-5" />
         </Link>

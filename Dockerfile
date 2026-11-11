@@ -14,10 +14,13 @@ ARG NEXT_PUBLIC_GITHUB_REPO=paablofraga4/comparador_partidos_politicos_espana
 ARG NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
 # La portada es estática: los botones de apoyar se deciden en el build (spec 005, HU-5.8)
 ARG APOYOS_ACTIVOS=
+# Igual para la tarjeta «Pregúntale a la IA» de la portada (spec 007, HU-7.1)
+ARG CHAT_ACTIVO=
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL \
     NEXT_PUBLIC_GITHUB_REPO=$NEXT_PUBLIC_GITHUB_REPO \
     NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=$NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION \
     APOYOS_ACTIVOS=$APOYOS_ACTIVOS \
+    CHAT_ACTIVO=$CHAT_ACTIVO \
     NEXT_TELEMETRY_DISABLED=1
 COPY --from=deps /app/web/node_modules ./web/node_modules
 COPY web ./web
