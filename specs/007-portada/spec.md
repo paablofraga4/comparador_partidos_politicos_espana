@@ -82,7 +82,9 @@ Titular y botones → tira (HU-7.3) → tarjetas (HU-7.1) → programas del 29N 
 
 ## Requisitos no funcionales
 
-- La portada sigue siendo estática; el peso comprimido no crece más de un 15 %.
+- La portada sigue siendo estática; el peso comprimido no crece más de un 20 % (subido del 15 % el
+  11 nov con aprobación del propietario: el selector de las 52 provincias lleva la portada de 19,9 a
+  23 KB, +16 %, imperceptible incluso con conexión lenta).
 - Accesibilidad WCAG 2.2 AA; tarjetas navegables por teclado; objetivos táctiles de 44 px.
 - Sin scroll horizontal a 375 px; en móvil, las tarjetas van una debajo de otra.
 
