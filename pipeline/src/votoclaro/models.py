@@ -81,6 +81,18 @@ class RegistroCandidaturas(_Model):
                 return c
         raise KeyError(f"Candidatura desconocida: {cand_id!r} (ver data/candidaturas.yaml)")
 
+    def es_principal(self, cand_id: str) -> bool:
+        """Principal (constitución I.6): con representación en la XV legislatura (`incluir`), o
+        que continúa a una de ellas (`sucesora_de`) o la incluye en una lista conjunta
+        (`miembros`). Es la misma regla que `esPrincipal` en la web (web/lib/reglas.ts)."""
+        c = self.get(cand_id)
+        if c.incluir:
+            return True
+        c23 = c.convocatorias.get("generales-2023")
+        relacionadas = [c23.sucesora_de if c23 else None, *c.miembros]
+        ids = {x.id: x for x in self.candidaturas}
+        return any(r and r in ids and ids[r].incluir for r in relacionadas)
+
 
 class Fuente(_Model):
     url: str

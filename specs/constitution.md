@@ -39,6 +39,11 @@ está mal aunque funcione. Solo el propietario del proyecto puede cambiarlos, de
      (EH Bildu-ERC en Navarra, aprobado por el titular el 4 nov). Las demás candidaturas del BOE siguen en la
      web, plegadas en «Otras candidaturas del BOE», con su ficha, el mismo trato y orden
      alfabético. En «Tu papeleta» aparecen todas por igual.
+   - *Análisis con IA solo de las principales* (enmienda aprobada por el titular el 12 nov, por
+     coste): de las demás, si publican programa, se registra el documento oficial **sin
+     análisis**; su ficha dice «Ha publicado su programa del 29N» y enlaza el documento y el
+     visor, sin resumen por temas ni uso en el chat. El criterio es el mismo objetivo de las
+     principales y se explica en la metodología.
    - Una candidatura sin programa publicado aparece igualmente, con «No ha publicado programa
      electoral (comprobado el {fecha})».
    - El criterio, la fase vigente y la fuente del BOE se publican en la página de

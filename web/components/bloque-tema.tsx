@@ -135,6 +135,20 @@ export function BloqueTema({
       </p>
     );
   }
+  if (v.tipo === "publicado") {
+    // Sin análisis con IA (candidaturas no principales, spec 008): se enlaza el documento
+    return (
+      <p className="text-ink-muted">
+        Ha publicado su programa del 29N, sin resumen por temas.{" "}
+        <a
+          className="decoration-rule-strong hover:decoration-ink underline underline-offset-2"
+          href={`/programas/${c.id}/${v.convocatoria}`}
+        >
+          Leer el programa ({v.fuente.paginas} págs.)
+        </a>
+      </p>
+    );
+  }
   const a = v.analisis;
   const t = a.temas[temaId];
   // Programa de la coalición de 2023 de la que procede (Sumar para Frente Amplio): las citas, el

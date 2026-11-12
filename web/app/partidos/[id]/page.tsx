@@ -38,6 +38,13 @@ export async function generateMetadata(props: PageProps<"/partidos/[id]">): Prom
       ruta,
     });
   }
+  if (v.tipo === "publicado") {
+    return metaPagina({
+      titulo: `Programa electoral ${delPartido(c)}${c.nombre !== c.corto ? ` (${c.nombre})` : ""} para el 29N`,
+      descripcion: `${nombrePartido(c)} ha publicado su programa electoral para el 29N (${v.fuente.paginas} páginas). Léelo completo, con buscador y enlace al documento oficial.`,
+      ruta,
+    });
+  }
   if (v.de) {
     // Programa ajeno (el de 2023 de la coalición de la que procede): visible, pero no se indexa
     // para que el buscador no atribuya a esta candidatura un texto que no es suyo
@@ -94,6 +101,25 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <ProgramaBadge v={v} />
+          {v.tipo === "publicado" && (
+            <>
+              <Link
+                href={`/programas/${c.id}/${v.convocatoria}`}
+                className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold underline-offset-4 hover:underline"
+              >
+                <FileText aria-hidden className="h-4 w-4" /> Leer el programa ({v.fuente.paginas}{" "}
+                págs.)
+              </Link>
+              <a
+                href={v.fuente.url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-ink-muted hover:text-ink inline-flex min-h-11 items-center gap-1.5 text-sm"
+              >
+                <ExternalLink aria-hidden className="h-4 w-4" /> Original en su web
+              </a>
+            </>
+          )}
           {v.tipo === "programa" && v.fuente && (
             <>
               <Link
@@ -123,6 +149,17 @@ export default async function FichaCandidatura(props: PageProps<"/partidos/[id]"
           {c.corto} aún no ha publicado su programa para el 29N.{" "}
           {v.dentroDe &&
             `En 2023 concurrió dentro de otra candidatura, así que no tiene un programa anterior propio que mostrar.`}
+        </p>
+      ) : v.tipo === "publicado" ? (
+        // Sin análisis con IA (candidaturas no principales, spec 008)
+        <p className="text-ink-muted mt-8 max-w-2xl text-lg">
+          {c.corto} ha publicado su programa electoral para el 29N. Puedes leerlo completo, con
+          buscador, o en su web. Resumimos por temas los programas de los partidos con
+          representación en las Cortes;{" "}
+          <Link href="/metodologia#criterio" className="underline">
+            por qué
+          </Link>
+          .
         </p>
       ) : (
         <>

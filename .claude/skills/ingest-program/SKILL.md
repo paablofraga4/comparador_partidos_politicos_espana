@@ -12,6 +12,12 @@ Solo `aprobado` se ve en la web; hasta entonces sigue el programa anterior con s
 > Los comandos `vc …` se construyen en la fase F1. Antes de eso, este runbook es la guía.
 
 ## 0. Comprobaciones previas
+- **¿Es principal?** (constitución I.6, spec 008) Solo las principales se analizan con IA. De
+  las demás, haz `vc fetch` y `vc extract` (sin `analyze`): la web mostrará «Ha publicado su
+  programa del 29N» con el documento. `vc analyze` se niega con una no principal salvo
+  `--forzar-no-principal`, que solo se usa si el titular lo pide expresamente.
+- Si la web del partido bloquea a los robots (VOX, Podemos), no lo fuerces: el titular descarga
+  el PDF en su navegador y se registra con `vc fetch --url <oficial> --archivo <pdf>`.
 - La candidatura existe en `data/candidaturas.yaml` con su estado para esa convocatoria.
   Si es nueva (coalición, agrupación de electores…), solo se publica si cumple el criterio
   de inclusión (constitución I.6: fase provisional o aparece en el BOE); puedes ingestarla

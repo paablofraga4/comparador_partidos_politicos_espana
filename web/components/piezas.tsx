@@ -131,6 +131,13 @@ export function ProgramaBadge({ v }: { v: ProgramaVigente }) {
       </span>
     );
   }
+  if (v.tipo === "publicado") {
+    return (
+      <span className="border-rule inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">
+        Programa 29N publicado · sin resumen por temas
+      </span>
+    );
+  }
   return (
     <span className="inline-flex flex-wrap items-center gap-1.5">
       {v.anterior ? (

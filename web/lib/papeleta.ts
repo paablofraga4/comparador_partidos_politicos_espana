@@ -5,7 +5,7 @@ export type CandidaturaPapeleta = {
   nombre: string;
   color: string;
   listas: Record<string, string>;
-  programa: "29N" | "2023" | "pendiente";
+  programa: "29N" | "2023" | "publicado" | "pendiente";
   /** Coalición de 2023 cuyo programa se muestra (Sumar para Frente Amplio) */
   programaDe?: string | null;
 };
@@ -13,6 +13,7 @@ export type CandidaturaPapeleta = {
 const ETIQUETA = {
   "29N": "Programa del 29N",
   "2023": "Programa de 2023 (anterior)",
+  publicado: "Programa del 29N publicado",
   pendiente: "Sin programa publicado",
 } as const;
 

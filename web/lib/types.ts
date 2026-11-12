@@ -83,4 +83,6 @@ export type ProgramaVigente =
       /** Si es el programa de 2023 de la coalición de la que procede (Sumar para Frente Amplio) */
       de: { id: string; corto: string } | null;
     }
+  /** Programa del 29N registrado sin análisis con IA (candidaturas no principales, spec 008) */
+  | { tipo: "publicado"; convocatoria: "generales-2026"; fuente: Fuente }
   | { tipo: "pendiente"; dentroDe: string | null };

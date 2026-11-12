@@ -214,6 +214,20 @@ def show_pages(candidatura: Cand, convocatoria: Conv, pagina: int) -> None:
     raise typer.Exit(1)
 
 
+def _exige_principal(paths, candidatura: str, forzar: bool) -> None:
+    """Candado de coste (spec 008): las candidaturas no principales no se analizan con IA; su
+    programa se registra con `vc fetch` y la web enlaza el documento oficial."""
+    reg = load_candidaturas(paths)
+    if forzar or reg.es_principal(candidatura):
+        return
+    console.print(
+        f"[red]✗ {candidatura} no es una candidatura principal: su programa no se analiza con IA "
+        "(spec 008). Regístralo con `vc fetch` y la web enlazará el documento oficial. "
+        "Si de verdad quieres analizarlo, usa --forzar-no-principal."
+    )
+    raise typer.Exit(1)
+
+
 @app.command()
 def analyze(
     candidatura: Cand,
@@ -221,6 +235,9 @@ def analyze(
     tema: Annotated[list[str] | None, typer.Option(help="Solo estos temas (repetible)")] = None,
     force: Annotated[bool, typer.Option(help="Permite rehacer un análisis aprobado")] = False,
     workers: Annotated[int, typer.Option(help="Llamadas en paralelo")] = 6,
+    forzar_no_principal: Annotated[
+        bool, typer.Option(help="Analizar con IA una candidatura no principal (spec 008)")
+    ] = False,
 ) -> None:
     """Analiza el programa por temas con citas verificadas y lectura fácil (HU-1.3/1.4/1.5)."""
     from .analyze import Contexto
@@ -229,6 +246,7 @@ def analyze(
     from .registry import load_topics
 
     paths = _paths()
+    _exige_principal(paths, candidatura, forzar_no_principal)
     target = paths.analysis(convocatoria, candidatura)
     previous = load_analysis(paths, convocatoria, candidatura) if target.exists() else None
     if previous and previous.estado == "aprobado" and not force:
