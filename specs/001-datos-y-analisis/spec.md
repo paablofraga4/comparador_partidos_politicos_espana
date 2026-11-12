@@ -238,7 +238,8 @@ Objetivo: **menos de 24 h** desde que se publica el programa hasta que está en 
 **Como** mantenedor **quiero** que el sistema me avise en cuanto aparezca una candidatura o un
 programa **para** no depender de revisarlo a mano.
 
-- **Programas**: varias veces al día, hasta el 27 de noviembre, se comprueba:
+- **Programas**: varias veces al día (cada hora desde el 12 de noviembre, inicio de campaña,
+  a petición del propietario), hasta el 27 de noviembre, se comprueba:
   - las páginas de cada candidatura donde suele publicar el programa (`vigilar` en el
     registro), buscando documentos nuevos o cambios de hash;
   - una búsqueda de noticias por candidatura («programa electoral» + nombre).
@@ -246,6 +247,9 @@ programa **para** no depender de revisarlo a mano.
     palabra completa** («PP» no es «Apple»). Las siglas con un dígito y de hasta 3 caracteres
     («29», «3e») se buscan por el nombre completo, porque coinciden con textos como «el 29-N».
     Las candidaturas sin web (las altas automáticas del BOE) no se visitan: solo noticias.
+  - *PDF sin «.pdf» (12 nov, caso PNV)*: cuenta como PDF un enlace con un tramo «/pdf/» en la
+    ruta, y se entra un nivel en las páginas «programa electoral» de la propia web (como mucho
+    3), porque el PDF suele estar en ellas y no en la portada.
 - **Candidaturas**: cada día, del 16 de octubre al 3 de noviembre, se revisa el **sumario del
   BOE** (API de datos abiertos) en busca de candidaturas presentadas y proclamadas, y las
   noticias de coaliciones y agrupaciones nuevas.
