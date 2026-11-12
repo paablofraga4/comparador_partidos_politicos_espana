@@ -160,3 +160,13 @@ convocatorias:
         origen: pdf
         paginas: 43
         estado: aprobado
+      vox:
+        url: https://www.voxespana.es/
+        fichero: documents/generales-2026/vox.pdf
+        sha256: 065abf6720be2f7b19b8e911920c2ee2ce5c2059d0ae8bf09770bc790ed11b65
+        descargado: '2026-11-12T19:36:55Z'
+        origen: pdf
+        paginas: 66
+        estado: aprobado
+        nota: PDF descargado a mano por el titular desde voxespana.es el 12 nov 2026 (la web bloquea a
+          los robots); la URL apunta a su portada hasta tener el enlace exacto del documento.
