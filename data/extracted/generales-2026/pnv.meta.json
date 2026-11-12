@@ -1,0 +1,622 @@
+{
+  "id": "generales-2026/pnv",
+  "convocatoria": "generales-2026",
+  "candidatura": "pnv",
+  "sha256": "5af7a5b6f67c26bad87ef6c3ca01ae38aa1f1d7d9029efb32fc52482de0c1314",
+  "paginas": 43,
+  "idioma": "es",
+  "ocr": false,
+  "caracteres": 82807,
+  "toc": [
+    [
+      1,
+      "Lo que te importa. Lo que vamos a defender.",
+      3
+    ],
+    [
+      1,
+      "Cinco compromisos para Euskadi",
+      5
+    ],
+    [
+      1,
+      "PODER CONSTRUIR TU VIDA AQUÍ",
+      6
+    ],
+    [
+      2,
+      "1.1 Vivienda: acabar con los abusos y construir más viviendas",
+      7
+    ],
+    [
+      3,
+      "Aumentar la oferta de viviendas",
+      7
+    ],
+    [
+      3,
+      "Regular el alquiler y evitar abusos",
+      8
+    ],
+    [
+      3,
+      "Garantías y protección residencial",
+      8
+    ],
+    [
+      2,
+      "1.2 Emanciparse en Euskadi debe ser posible",
+      8
+    ],
+    [
+      3,
+      "Acceso a la primera vivienda",
+      8
+    ],
+    [
+      3,
+      "Empleo y autonomía económica",
+      8
+    ],
+    [
+      3,
+      "Perspectiva juvenil y financiación",
+      8
+    ],
+    [
+      2,
+      "1.3 Mejores salarios, empleo digno y derechos laborales",
+      9
+    ],
+    [
+      3,
+      "Salarios y negociación colectiva",
+      9
+    ],
+    [
+      3,
+      "Cumplimiento de los derechos laborales",
+      9
+    ],
+    [
+      3,
+      "Formación y prácticas",
+      9
+    ],
+    [
+      3,
+      "Protección ante el desempleo",
+      9
+    ],
+    [
+      3,
+      "Productividad, absentismo, competitividad y bienestar laboral",
+      10
+    ],
+    [
+      2,
+      "1.4 Una educación que abra oportunidades",
+      10
+    ],
+    [
+      3,
+      "Modelo educativo y competencias",
+      10
+    ],
+    [
+      3,
+      "Becas e igualdad de oportunidades",
+      10
+    ],
+    [
+      3,
+      "Formación Profesional y universidad",
+      10
+    ],
+    [
+      2,
+      "1.5 Una juventud con voz y capacidad de decisión",
+      10
+    ],
+    [
+      3,
+      "Participación en las decisiones públicas",
+      11
+    ],
+    [
+      3,
+      "Perspectiva juvenil en las leyes",
+      11
+    ],
+    [
+      1,
+      "UNA EUSKADI QUE TRABAJA Y PROSPERA",
+      12
+    ],
+    [
+      2,
+      "2.1 Industria fuerte y centros de decisión en Euskadi",
+      13
+    ],
+    [
+      3,
+      "Inversión y arraigo industrial",
+      14
+    ],
+    [
+      3,
+      "Innovación y modernización tecnológica",
+      14
+    ],
+    [
+      3,
+      "Cooperativas e internacionalización",
+      14
+    ],
+    [
+      2,
+      "2.2 Apoyar a quienes emprenden, generan empleo y mantienen vivos nuestros negocios",
+      14
+    ],
+    [
+      3,
+      "Creación, crecimiento y financiación",
+      14
+    ],
+    [
+      3,
+      "Protección de las personas autónomas",
+      15
+    ],
+    [
+      3,
+      "Relevo generacional y continuidad empresarial",
+      15
+    ],
+    [
+      2,
+      "2.3 Energía competitiva para nuestra industria y asequible para los hogares",
+      15
+    ],
+    [
+      3,
+      "Redes eléctricas y planificación",
+      15
+    ],
+    [
+      3,
+      "Costes y competitividad industrial",
+      16
+    ],
+    [
+      3,
+      "Consumidores y regulación",
+      16
+    ],
+    [
+      2,
+      "2.4 Una transición ecológica que proteja el medio ambiente y genere oportunidades",
+      16
+    ],
+    [
+      3,
+      "Edificios, autoconsumo y movilidad",
+      16
+    ],
+    [
+      3,
+      "Economía circular y recuperación de suelos",
+      17
+    ],
+    [
+      3,
+      "Adaptación climática y biodiversidad",
+      17
+    ],
+    [
+      3,
+      "Protección del litoral y del agua",
+      17
+    ],
+    [
+      2,
+      "2.5 Futuro para nuestros pueblos, el campo y la pesca",
+      17
+    ],
+    [
+      3,
+      "Agricultura, ganadería y cadena alimentaria",
+      17
+    ],
+    [
+      3,
+      "Gestión forestal",
+      18
+    ],
+    [
+      3,
+      "Política pesquera y cuotas",
+      18
+    ],
+    [
+      3,
+      "Flota, empleo y protección social",
+      18
+    ],
+    [
+      2,
+      "2.6 Infraestructuras: fechas, inversiones y resultados.",
+      19
+    ],
+    [
+      3,
+      "Ferrocarril de viajeros y conexiones territoriales",
+      19
+    ],
+    [
+      3,
+      "Mercancías y logística ferroviaria",
+      19
+    ],
+    [
+      3,
+      "Aeropuertos",
+      20
+    ],
+    [
+      3,
+      "Puertos y regeneración portuaria",
+      20
+    ],
+    [
+      3,
+      "Movilidad eléctrica y transporte por carretera",
+      20
+    ],
+    [
+      2,
+      "2.7 Una fiscalidad que favorezca la actividad económica y permita invertir",
+      20
+    ],
+    [
+      3,
+      "Fiscalidad de bienes y servicios",
+      21
+    ],
+    [
+      3,
+      "Inversión pública y autonomía financiera y fiscal",
+      21
+    ],
+    [
+      1,
+      "VIVIR CON TRANQUILIDAD Y CON DERECHOS",
+      22
+    ],
+    [
+      2,
+      "3.1 Calles y barrios seguros. Una Ertzaintza con todas las capacidades",
+      23
+    ],
+    [
+      3,
+      "Capacidades de la Ertzaintza",
+      24
+    ],
+    [
+      3,
+      "Cooperación policial europea e internacional",
+      24
+    ],
+    [
+      3,
+      "Respuesta a la delincuencia reincidente",
+      24
+    ],
+    [
+      2,
+      "3.2 Una migración gestionada desde Euskadi, con derechos y responsabilidades",
+      24
+    ],
+    [
+      3,
+      "Competencias y planificación migratoria",
+      24
+    ],
+    [
+      3,
+      "Permisos, vías legales y empleo",
+      25
+    ],
+    [
+      3,
+      "Asilo, acogida e integración",
+      25
+    ],
+    [
+      2,
+      "3.3 Igualdad real y una vida libre de violencia machista",
+      25
+    ],
+    [
+      3,
+      "Igualdad y derechos sexuales y reproductivos",
+      26
+    ],
+    [
+      3,
+      "Violencia machista y protección judicial",
+      26
+    ],
+    [
+      3,
+      "Ayudas, indemnizaciones y reparación",
+      26
+    ],
+    [
+      2,
+      "3.4 Defender los derechos de las personas LGTBIQ+ y combatir la discriminación",
+      27
+    ],
+    [
+      3,
+      "Aplicación de derechos y protección frente al odio",
+      27
+    ],
+    [
+      3,
+      "Prohibición de prácticas discriminatorias y documentación",
+      27
+    ],
+    [
+      2,
+      "3.5 Derechos humanos y libertades sin retrocesos",
+      27
+    ],
+    [
+      3,
+      "Garantías democráticas y libertad de expresión",
+      27
+    ],
+    [
+      3,
+      "Justicia penal y derechos de personas migrantes",
+      28
+    ],
+    [
+      3,
+      "Derechos humanos y cooperación internacional",
+      28
+    ],
+    [
+      1,
+      "CUIDAR LO QUE HEMOS CONSEGUIDO",
+      29
+    ],
+    [
+      2,
+      "4.1 Pensiones dignas y justicia para las largas carreras de cotización",
+      30
+    ],
+    [
+      3,
+      "Poder adquisitivo y pensiones mínimas",
+      31
+    ],
+    [
+      3,
+      "Carreras largas y desigualdad en las pensiones",
+      31
+    ],
+    [
+      3,
+      "Sostenibilidad y previsión complementaria",
+      31
+    ],
+    [
+      3,
+      "Gestión de la Seguridad Social",
+      31
+    ],
+    [
+      2,
+      "4.2 Una sanidad pública que responda cuando la necesitamos",
+      31
+    ],
+    [
+      3,
+      "Profesionales y formación especializada",
+      32
+    ],
+    [
+      3,
+      "Medicamentos, investigación y tratamientos",
+      32
+    ],
+    [
+      3,
+      "Competencias y condiciones profesionales",
+      32
+    ],
+    [
+      2,
+      "4.3 Cuidar a quienes cuidan. Reconocer su trabajo y proteger sus derechos",
+      32
+    ],
+    [
+      3,
+      "Reconocimiento económico y prestaciones",
+      33
+    ],
+    [
+      3,
+      "Servicios y apoyos comunitarios",
+      33
+    ],
+    [
+      2,
+      "4.4 Protección efectiva ante las enfermedades graves y la dependencia",
+      33
+    ],
+    [
+      3,
+      "Cumplimiento de la Ley ELA",
+      33
+    ],
+    [
+      3,
+      "Protección de personas electrodependientes",
+      33
+    ],
+    [
+      3,
+      "Prestaciones para cuidados de menores",
+      34
+    ],
+    [
+      2,
+      "4.5 Reparación justa y sin más retrasos para las víctimas del amianto",
+      34
+    ],
+    [
+      3,
+      "Acceso y funcionamiento del fondo",
+      34
+    ],
+    [
+      3,
+      "Fiscalidad de las indemnizaciones",
+      34
+    ],
+    [
+      3,
+      "Financiación y plazos",
+      34
+    ],
+    [
+      2,
+      "4.6 Proteger a la infancia y garantizar el bienestar de todas las generaciones",
+      34
+    ],
+    [
+      3,
+      "Pobreza infantil y protección frente a la violencia",
+      35
+    ],
+    [
+      3,
+      "Seguridad digital de la infancia",
+      35
+    ],
+    [
+      3,
+      "Sostenibilidad intergeneracional",
+      35
+    ],
+    [
+      1,
+      "DECIDIR AQUÍ. HACERNOS ESCUCHAR ALLÍ.",
+      36
+    ],
+    [
+      2,
+      "5.1 Lo pactado se cumple. Más capacidad para decidir aquí",
+      38
+    ],
+    [
+      3,
+      "Cumplimiento del Estatuto y defensa de competencias",
+      38
+    ],
+    [
+      3,
+      "Relación bilateral y derechos históricos",
+      38
+    ],
+    [
+      3,
+      "Realidades territoriales y derechos democráticos",
+      38
+    ],
+    [
+      2,
+      "5.2 Defender el Concierto Económico. Avanzar hacia un nuevo pacto político",
+      38
+    ],
+    [
+      3,
+      "Concierto Económico",
+      39
+    ],
+    [
+      3,
+      "Concierto Político: reconocimiento nacional, bilateralidad y garantías",
+      39
+    ],
+    [
+      2,
+      "5.3 Una justicia más cercana y con capacidad de decisión desde Euskadi",
+      39
+    ],
+    [
+      3,
+      "Organización y gobierno judicial",
+      39
+    ],
+    [
+      3,
+      "Policía judicial",
+      39
+    ],
+    [
+      2,
+      "5.4 Verdad, justicia y reparación. Una democracia que rinde cuentas",
+      40
+    ],
+    [
+      3,
+      "Ley de Secretos Oficiales",
+      40
+    ],
+    [
+      3,
+      "Desclasificación y esclarecimiento de hechos",
+      40
+    ],
+    [
+      3,
+      "Memoria democrática y rendición de cuentas",
+      40
+    ],
+    [
+      2,
+      "5.5 Euskadi con voz propia en Europa",
+      40
+    ],
+    [
+      3,
+      "Participación institucional y reconocimiento europeo",
+      41
+    ],
+    [
+      3,
+      "Prioridades económicas y cooperación atlántica",
+      41
+    ],
+    [
+      2,
+      "5.6 Los fondos europeos deben llegar a Euskadi y gestionarse desde Euskadi",
+      41
+    ],
+    [
+      3,
+      "Programación de fondos europeos",
+      41
+    ],
+    [
+      3,
+      "Gestión, seguimiento y financiación",
+      42
+    ]
+  ]
+}
