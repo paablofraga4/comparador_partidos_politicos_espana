@@ -45,18 +45,45 @@ def _dominio(url: str) -> str:
     return ".".join(partes[-2:]) if len(partes) >= 2 else host
 
 
+def _es_pdf(url: str) -> bool:
+    """Termina en «.pdf» o tiene un tramo «/pdf/» en la ruta (gestores documentales como el del
+    PNV: …/adjuntos-documentos/21765/pdf/programa-electoral-29n)."""
+    ruta = urlparse(url).path.lower()
+    return ruta.endswith(".pdf") or "/pdf/" in ruta
+
+
+def _enlaces(html: str, base: str):
+    for href, texto in _HREF.findall(html):
+        yield urljoin(base, href.strip()), " ".join(_TAGS.sub(" ", texto).split())
+
+
 def pdfs_de_programa(html: str, base: str) -> list[tuple[str, str]]:
     """Enlaces a PDF cuyo texto o URL sugieren un programa electoral."""
     out = []
-    for href, texto in _HREF.findall(html):
-        url = urljoin(base, href.strip())
-        texto = " ".join(_TAGS.sub(" ", texto).split())
-        if not url.lower().split("?")[0].endswith(".pdf"):
+    for url, texto in _enlaces(html, base):
+        if not _es_pdf(url):
             continue
         pista = f"{url} {texto}"
         if _PROGRAMA.search(pista) and _ELECCION.search(pista):
             out.append((url, texto or url.rsplit("/", 1)[-1]))
     return list(dict.fromkeys(out))
+
+
+def paginas_de_programa(html: str, base: str, maximo: int = 3) -> list[str]:
+    """Páginas del mismo dominio que parecen la del programa electoral (no PDF): el PDF suele
+    estar en ellas y no en la portada. Se visitan como mucho `maximo`, un solo nivel."""
+    out = []
+    for url, texto in _enlaces(html, base):
+        pista = f"{url} {texto}"
+        if (
+            not _es_pdf(url)
+            and url.startswith(("http://", "https://"))
+            and _dominio(url) == _dominio(base)
+            and _PROGRAMA.search(pista)
+            and _ELECCION.search(pista)
+        ):
+            out.append(url.split("#")[0])
+    return list(dict.fromkeys(out))[:maximo]
 
 
 def _siglas_ambiguas(cand: Candidatura) -> bool:
@@ -131,7 +158,17 @@ def vigilar(
                     errores.append(f"{c.id}: {pagina} → {e.__class__.__name__}")
                     continue
                 oficiales = {_dominio(c.web), *(_dominio(v) for v in c.vigilar)}
-                for url, texto in pdfs_de_programa(r.text, str(r.url)):
+                encontrados = pdfs_de_programa(r.text, str(r.url))
+                # Un nivel más: la página «programa electoral» de su propia web (caso PNV)
+                for sub in paginas_de_programa(r.text, str(r.url)):
+                    try:
+                        rs = client.get(sub, timeout=30)
+                        rs.raise_for_status()
+                    except httpx.HTTPError as e:
+                        errores.append(f"{c.id}: {sub} → {e.__class__.__name__}")
+                        continue
+                    encontrados += pdfs_de_programa(rs.text, str(rs.url))
+                for url, texto in dict.fromkeys(encontrados):
                     if url in registradas:
                         continue
                     novedades.append(

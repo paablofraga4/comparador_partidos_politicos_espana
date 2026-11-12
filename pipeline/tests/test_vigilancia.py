@@ -156,3 +156,43 @@ def test_noticias_de_siglas_ambiguas_se_buscan_por_el_nombre_completo():
         "Programa electoral de VOX para el 29N: las propuestas",
         "Partido Veintinueve presenta su programa electoral",
     ) == ["Partido Veintinueve presenta su programa electoral"]
+
+
+def test_reconoce_pdf_sin_extension_y_entra_en_la_pagina_del_programa():
+    """Caso del PNV (12 nov): la portada enlaza a una página del programa y esta al PDF, cuya
+    URL no termina en «.pdf» (…/adjuntos-documentos/21765/pdf/programa-electoral-29n)."""
+    portada = '<a href="/programa-elecciones-generales-2026/">Programa electoral 29N</a>'
+    pagina = (
+        '<a href="/es/adjuntos-documentos/21765/pdf/programa-electoral-29n">Descargar</a>'
+        '<a href="/es/actualidad/">Actualidad</a>'
+    )
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        if req.url.host == "news.google.com":
+            return httpx.Response(200, content=b"<rss><channel></channel></rss>")
+        if req.url.path.startswith("/programa-elecciones-generales-2026"):
+            return httpx.Response(200, text=pagina)
+        return httpx.Response(200, text=portada)
+
+    base = load_candidaturas(Paths(ROOT / "data")).get("pp")
+    pnv = base.model_copy(update={"id": "pnv", "web": "https://www.eaj-pnv.eus/es/", "vigilar": []})
+    fuentes = RegistroFuentes.model_validate(
+        {"version": 1, "convocatorias": {"generales-2026": {"fecha": "2026-11-29"}}}
+    )
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    nov, errores = vigilar([pnv], fuentes, desde=datetime(2026, 10, 6, tzinfo=UTC), client=client)
+    assert not errores
+    pdfs = [n for n in nov if n.tipo == "pdf-oficial"]
+    assert [n.url for n in pdfs] == [
+        "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n"
+    ]
+    assert pdfs[0].dominio_oficial
+
+
+def test_pdf_sin_extension_solo_si_la_ruta_tiene_un_tramo_pdf():
+    html = (
+        '<a href="/docs/pdf/programa-electoral-2026">Programa electoral 2026</a>'
+        '<a href="/programa-electoral-2026">Programa electoral 2026</a>'
+    )
+    urls = [u for u, _ in pdfs_de_programa(html, "https://ejemplo.es/")]
+    assert urls == ["https://ejemplo.es/docs/pdf/programa-electoral-2026"]
