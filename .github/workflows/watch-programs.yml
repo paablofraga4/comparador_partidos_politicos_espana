@@ -1,10 +1,11 @@
-# Vigilancia de programas del 29N (spec 001, HU-1.10). Cada 3 horas hasta el 28-nov-2026:
+# Vigilancia de programas del 29N (spec 001, HU-1.10). Cada hora (desde el 12-nov, inicio de
+# campaña; antes, cada 3 horas) hasta el 28-nov-2026:
 # webs de las candidaturas + Google News → issue (sin duplicar) que te llega como notificación.
 # Ingesta automática en borrador solo si la variable del repo VIGILANCIA_AUTOINGESTA = 1.
 name: Vigilar programas
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
