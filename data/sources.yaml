@@ -151,3 +151,12 @@ convocatorias:
         origen: pdf
         paginas: 48
         estado: aprobado
+      pnv:
+        url: https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n
+        url_archivo: https://web.archive.org/web/20261112100955/https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n
+        fichero: documents/generales-2026/pnv.pdf
+        sha256: 5af7a5b6f67c26bad87ef6c3ca01ae38aa1f1d7d9029efb32fc52482de0c1314
+        descargado: '2026-11-12T10:10:09Z'
+        origen: pdf
+        paginas: 43
+        estado: aprobado
