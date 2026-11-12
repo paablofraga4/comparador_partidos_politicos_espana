@@ -85,7 +85,14 @@ export function listaPapeleta(): CandidaturaPapeleta[] {
       nombre: c.nombre,
       color: c.color,
       listas: c.convocatorias["generales-2026"]?.listas ?? {},
-      programa: v.tipo === "pendiente" ? "pendiente" : v.anterior ? "2023" : "29N",
+      programa:
+        v.tipo === "pendiente"
+          ? "pendiente"
+          : v.tipo === "publicado"
+            ? "publicado"
+            : v.anterior
+              ? "2023"
+              : "29N",
       programaDe: v.tipo === "programa" ? (v.de?.corto ?? null) : null,
     };
   });

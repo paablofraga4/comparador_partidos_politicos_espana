@@ -25,7 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const vigentes = candidaturas().map((c) => ({ c, v: vigente(c) }));
   const propias = vigentes.filter(({ v }) => !(v.tipo === "programa" && v.de));
   const programas = propias.flatMap(({ c, v }) =>
-    v.tipo === "programa" ? [`/programas/${c.id}/${v.convocatoria}`] : [],
+    // También los publicados sin análisis (spec 008): su visor es el contenido de esa candidatura
+    v.tipo === "programa" || v.tipo === "publicado" ? [`/programas/${c.id}/${v.convocatoria}`] : [],
   );
   // Partido × tema (HU-2.11): solo las que tienen contenido; las de «no menciona» son noindex
   const partidoTema = propias.flatMap(({ c, v }) => {

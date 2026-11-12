@@ -61,7 +61,9 @@ export async function generateMetadata(
     const motivo =
       v.tipo === "pendiente"
         ? `${nombrePartido(c)} aún no ha publicado su programa para el 29N.`
-        : `${nombrePartido(c)} no menciona ${t.nombre.toLowerCase()} en su programa electoral${v.anterior ? " de 2023" : ""}.`;
+        : v.tipo === "publicado"
+          ? `${nombrePartido(c)} ha publicado su programa para el 29N, sin resumen por temas.`
+          : `${nombrePartido(c)} no menciona ${t.nombre.toLowerCase()} en su programa electoral${v.anterior ? " de 2023" : ""}.`;
     return {
       ...metaPagina({
         titulo,

@@ -17,6 +17,9 @@ const convCorto = (conv: string) => CONVOCATORIAS[conv as ConvocatoriaId]?.corto
 
 function etiquetaPrograma(v: ProgramaVigente): string {
   if (v.tipo === "pendiente") return "Sin programa publicado para el 29N";
+  // Registrado sin análisis con IA (no principales, spec 008): el chat no lo usa
+  if (v.tipo === "publicado")
+    return "Ha publicado su programa del 29N, pero no está resumido por temas y aquí no se usa";
   // El chat no usa el programa de otra coalición (Sumar para Frente Amplio): cuenta como pendiente
   if (v.de)
     return `Sin programa publicado para el 29N (procede de la coalición ${v.de.corto} de 2023, cuyo programa no se usa aquí)`;
@@ -99,7 +102,7 @@ export function herramientas({
           const v = vigente(c);
           return tids.map((tid) => {
             const base = { candidatura: c.corto, tema: tid, programa: etiquetaPrograma(v) };
-            if (v.tipo === "pendiente" || v.de) return { ...base, menciona: false };
+            if (v.tipo !== "programa" || v.de) return { ...base, menciona: false };
             const t = v.analisis.temas[tid];
             if (!t?.menciona)
               return { ...base, menciona: false, nota: "No lo menciona en su programa" };

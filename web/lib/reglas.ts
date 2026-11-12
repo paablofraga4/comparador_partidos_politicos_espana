@@ -38,6 +38,11 @@ export function programaVigente(
     };
   }
 
+  // Publicado y registrado, pero sin análisis con IA (no principales, spec 008): se enlaza el
+  // documento oficial. Va antes del fallback a 2023: ya hay programa del 29N
+  const f26 = fuentes["generales-2026"];
+  if (f26) return { tipo: "publicado", convocatoria: "generales-2026", fuente: f26 };
+
   // Fallback a 2023 SOLO si concurrió con programa propio (no el de una coalición ajena), o si
   // el registro dice que continúa una coalición de 2023 (`sucesora_de`): entonces `analisis` y
   // `fuentes` de 2023 son los de aquella, y `de` lo dice para el aviso (spec 001)

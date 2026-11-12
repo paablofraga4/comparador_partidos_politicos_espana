@@ -93,6 +93,11 @@ export default function Metodologia() {
           objetivo, el mismo para todos. Las demás candidaturas del BOE están justo debajo, en
           «Otras candidaturas del BOE», con su ficha y el mismo trato.
         </p>
+        <p>
+          Resumimos por temas, con inteligencia artificial, los programas de esas candidaturas
+          principales. Analizar cada programa tiene un coste, así que de las demás, cuando publican
+          el suyo, enlazamos el documento oficial completo, con buscador, sin resumen por temas.
+        </p>
         <p className="text-ink-muted text-sm">
           Fase actual: <strong>{reg.fase_inclusion}</strong>.
         </p>

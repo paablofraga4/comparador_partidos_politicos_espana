@@ -6,7 +6,7 @@ import {
   ordenAlfabetico,
   programaVigente,
 } from "./reglas";
-import type { Analisis, Candidatura, RegistroCandidaturas } from "./types";
+import type { Analisis, Candidatura, Fuente, RegistroCandidaturas } from "./types";
 
 const cand = (over: Partial<Candidatura> = {}): Candidatura => ({
   id: "pp",
@@ -97,6 +97,28 @@ describe("programaVigente (spec 001, HU-1.7)", () => {
       prod,
     );
     expect(pp).toMatchObject({ tipo: "programa", de: null });
+  });
+
+  it("con el programa del 29N registrado pero sin análisis, lo da por publicado (spec 008)", () => {
+    const fuente = { url: "https://ejemplo.es/p.pdf", paginas: 30 } as unknown as Fuente;
+    const v = programaVigente(
+      cand(),
+      { "generales-2023": analisis("generales-2023", "aprobado") },
+      {
+        "generales-2026": fuente,
+      },
+      prod,
+    );
+    // Antes que el de 2023: ya hay programa del 29N, aunque no esté resumido por temas
+    expect(v).toMatchObject({ tipo: "publicado", convocatoria: "generales-2026", fuente });
+    // Con análisis aprobado del 29N, manda el análisis
+    const conAnalisis = programaVigente(
+      cand(),
+      { "generales-2026": analisis("generales-2026", "aprobado") },
+      { "generales-2026": fuente },
+      prod,
+    );
+    expect(conAnalisis).toMatchObject({ tipo: "programa", convocatoria: "generales-2026" });
   });
 
   it("nunca muestra borradores en producción y sí en vista previa", () => {
