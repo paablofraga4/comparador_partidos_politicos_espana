@@ -95,6 +95,18 @@
           "title": "Literal",
           "type": "string"
         },
+        "visible": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Visible"
+        },
         "idioma": {
           "default": "es",
           "title": "Idioma",

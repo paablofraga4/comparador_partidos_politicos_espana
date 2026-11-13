@@ -128,8 +128,21 @@ def verify_citation(cita: Cita, chunk: Chunk, doc: pymupdf.Document) -> Resultad
     return Resultado(True, rects)
 
 
+_PARTIDA = re.compile(r"(\w+)­\s*(\w+)")
+
+
+def texto_visible(literal: str, texto_chunk: str) -> str | None:
+    """El literal con las palabras que el PDF parte con guion blando, unidas («privi legios» →
+    «privilegios»), o None si no cambia. Solo une los pares que el propio fragmento marca con
+    guion blando (U+00AD); no toca la verificación, que sigue usando el literal."""
+    visible = literal
+    for a, b in set(_PARTIDA.findall(texto_chunk)):
+        visible = re.sub(rf"(?<!\w){re.escape(a)}\s+{re.escape(b)}(?!\w)", a + b, visible)
+    return visible if visible != literal else None
+
+
 def apply(cita: Cita, chunk: Chunk | None, doc: pymupdf.Document) -> Cita:
-    """Devuelve la cita con `verificada`, `resaltada` y `rects` recalculados."""
+    """Devuelve la cita con `verificada`, `resaltada`, `rects` y `visible` recalculados."""
     if chunk is None:
         return cita.model_copy(update={"verificada": False, "resaltada": False, "rects": []})
     res = verify_citation(cita, chunk, doc)
@@ -139,5 +152,6 @@ def apply(cita: Cita, chunk: Chunk | None, doc: pymupdf.Document) -> Cita:
             "resaltada": res.resaltada,
             "rects": res.rects,
             "pagina_impresa": chunk.etiqueta or cita.pagina_impresa,
+            "visible": texto_visible(cita.literal, chunk.texto),
         }
     )

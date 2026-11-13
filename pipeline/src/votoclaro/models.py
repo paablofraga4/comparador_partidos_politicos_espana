@@ -176,6 +176,9 @@ class Cita(_Model):
     pagina: int
     pagina_impresa: str | None = None
     literal: str
+    # Solo para mostrar: el literal con las palabras que el PDF parte con guion blando unidas
+    # («privi legios» → «privilegios»). La verificación y el resaltado usan siempre `literal`
+    visible: str | None = None
     idioma: str = "es"
     traduccion: str | None = None
     rects: list[Rect] = Field(default_factory=list)
