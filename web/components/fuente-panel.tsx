@@ -15,6 +15,8 @@ type Datos = {
     pagina: number;
     pagina_impresa?: string | null;
     literal: string;
+    /** El literal con las palabras partidas por el PDF unidas; solo para mostrar */
+    visible?: string | null;
     idioma: string;
     traduccion?: string | null;
     rects: RectNorm[];
@@ -178,7 +180,7 @@ export function FuentePanel({ inicial = null }: { inicial?: string | null }) {
                     pagina={pagina}
                     rects={datos.cita.rects}
                     onRendered={esPaginaCita ? alRenderizar : undefined}
-                    alt={`Página ${pagina} del programa. Fragmento resaltado: ${limpiarLiteral(datos.cita.literal)}`}
+                    alt={`Página ${pagina} del programa. Fragmento resaltado: ${limpiarLiteral(datos.cita.visible ?? datos.cita.literal)}`}
                   />
                   <div className="mt-3 flex items-center justify-between text-sm">
                     <button
@@ -213,7 +215,7 @@ export function FuentePanel({ inicial = null }: { inicial?: string | null }) {
 
                   <figure className="mt-5 border-l-2 border-[var(--marker)] pl-4">
                     <blockquote className="font-serif text-lg leading-snug">
-                      «{limpiarLiteral(datos.cita.literal)}»
+                      «{limpiarLiteral(datos.cita.visible ?? datos.cita.literal)}»
                     </blockquote>
                     {datos.cita.traduccion && (
                       <p className="text-ink-muted mt-2 text-sm">

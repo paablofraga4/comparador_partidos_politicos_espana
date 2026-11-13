@@ -290,3 +290,18 @@ def test_jsonl_roundtrip(tmp_path: Path, sample_pdf: Path, data_dir: Paths):
     from votoclaro.registry import read_jsonl
 
     assert read_jsonl(tmp_path / "c.jsonl", Chunk) == chunks
+
+
+def test_texto_visible_une_las_palabras_partidas_con_guion_blando():
+    from votoclaro.verify import texto_visible
+
+    # Programa de VOX 2026: el PDF parte «privi­legios» y «nacio­nales» al final de línea
+    chunk = "Eliminar los privi­\nlegios de los partidos y los medios nacio­ nales."
+    literal = "Eliminar los privi legios de los partidos y los medios nacio nales."
+    assert texto_visible(literal, chunk) == (
+        "Eliminar los privilegios de los partidos y los medios nacionales."
+    )
+    # Sin guiones blandos en el fragmento, no cambia nada (None)
+    assert texto_visible("los medios nacionales", "los medios nacionales") is None
+    # Solo une los pares que el fragmento marca: «de los» no se toca
+    assert "de los" in texto_visible(literal, chunk)

@@ -46,6 +46,7 @@ export type Chunk = string;
 export type Pagina = number;
 export type PaginaImpresa = string | null;
 export type Literal = string;
+export type Visible = string | null;
 export type Idioma1 = string;
 export type Traduccion = string | null;
 export type Pagina1 = number;
@@ -132,6 +133,7 @@ export interface Cita {
   pagina: Pagina;
   pagina_impresa?: PaginaImpresa;
   literal: Literal;
+  visible?: Visible;
   idioma?: Idioma1;
   traduccion?: Traduccion;
   rects?: Rects;
