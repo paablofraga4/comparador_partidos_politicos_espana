@@ -170,3 +170,12 @@ convocatorias:
         estado: aprobado
         nota: PDF descargado a mano por el titular desde voxespana.es el 12 nov 2026 (la web bloquea a
           los robots); la URL apunta a su portada hasta tener el enlace exacto del documento.
+      teruel-existe:
+        url: https://teruelexiste.info/wp-content/uploads/2026/11/Programa_Teruel_Existe_Completo_29N.pdf
+        url_archivo: https://web.archive.org/web/20261113114233/https://teruelexiste.info/wp-content/uploads/2026/11/Programa_Teruel_Existe_Completo_29N.pdf
+        fichero: documents/generales-2026/teruel-existe.pdf
+        sha256: f93342d6c9d0f17eaa53fa68ff714bfa0981ca9c10605401b71801cf1870e190
+        descargado: '2026-11-13T11:42:38Z'
+        origen: pdf
+        paginas: 15
+        estado: publicado
