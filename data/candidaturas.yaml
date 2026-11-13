@@ -1374,7 +1374,7 @@ candidaturas:
     tipo: partido
     ambito: provincial
     color: '#8A8F9A'
-    web: ''
+    web: https://teruelexiste.info/
     vigilar: []
     siglas_boe: [TERUEL\ EXISTE]
     nota: Alta automática desde BOE-A-2026-22607

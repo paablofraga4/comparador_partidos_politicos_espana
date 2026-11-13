@@ -1,0 +1,82 @@
+{
+  "id": "generales-2026/teruel-existe",
+  "convocatoria": "generales-2026",
+  "candidatura": "teruel-existe",
+  "sha256": "f93342d6c9d0f17eaa53fa68ff714bfa0981ca9c10605401b71801cf1870e190",
+  "paginas": 15,
+  "idioma": "es",
+  "ocr": false,
+  "caracteres": 41100,
+  "toc": [
+    [
+      1,
+      "Portada",
+      1
+    ],
+    [
+      1,
+      "Cinco prioridades",
+      2
+    ],
+    [
+      1,
+      "1. Un cambio de rumbo: ser pocos no resta derechos",
+      3
+    ],
+    [
+      1,
+      "2. Teruel no será territorio de sacrificio",
+      3
+    ],
+    [
+      1,
+      "3. Financiación justa para Teruel",
+      5
+    ],
+    [
+      1,
+      "4. Servicios públicos para todo el territorio",
+      5
+    ],
+    [
+      1,
+      "5. Infraestructuras que vertebren el territorio",
+      8
+    ],
+    [
+      1,
+      "6. Un campo vivo: agricultura y ganadería familiar, agua y montes",
+      10
+    ],
+    [
+      1,
+      "7. Economía y empleo en el territorio",
+      11
+    ],
+    [
+      1,
+      "8. Ciencia, universidad y cultura",
+      12
+    ],
+    [
+      1,
+      "9. Repoblación y derechos: un Pacto de Estado",
+      13
+    ],
+    [
+      1,
+      "10. Medio ambiente y paisaje",
+      14
+    ],
+    [
+      1,
+      "11. Una sociedad de personas iguales",
+      14
+    ],
+    [
+      1,
+      "12. Instituciones al servicio de la ciudadanía",
+      15
+    ]
+  ]
+}
