@@ -179,3 +179,14 @@ convocatorias:
         origen: pdf
         paginas: 15
         estado: publicado
+      d21:
+        url: https://mi.democracia21.es/programa
+        fichero: documents/generales-2026/d21.pdf
+        sha256: 2cdc3a5f449e812417a8c33cec5a14c74988b74ddc229533da4d5806de7e24d4
+        descargado: '2026-11-14T21:07:48Z'
+        origen: pdf
+        paginas: 123
+        estado: publicado
+        nota: 'Documento compilado por VotoClaro: une, sin tocar su contenido y en el orden de su web,
+          los 25 PDFs oficiales (uno por tema) descargados de mi.democracia21.es/programa el 14 nov 2026.
+          La web de D21 no ofrece un único PDF. Se registra sin análisis de IA (spec 008).'
