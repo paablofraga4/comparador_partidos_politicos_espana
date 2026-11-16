@@ -190,3 +190,13 @@ convocatorias:
         nota: 'Documento compilado por VotoClaro: une, sin tocar su contenido y en el orden de su web,
           los 25 PDFs oficiales (uno por tema) descargados de mi.democracia21.es/programa el 14 nov 2026.
           La web de D21 no ofrece un único PDF. Se registra sin análisis de IA (spec 008).'
+      psoe:
+        url: https://www.psoe.es/
+        fichero: documents/generales-2026/psoe.pdf
+        sha256: e9c8341339538b550641b6ddb1c3fdfeef7fda6a8a1a4be9e8d6a44cbc229bf5
+        descargado: '2026-11-16T14:41:50Z'
+        origen: pdf
+        paginas: 114
+        estado: aprobado
+        nota: PDF descargado a mano por el titular desde psoe.es el 15 nov 2026 (la web bloquea a los
+          robots); la URL apunta a su portada hasta tener el enlace exacto del documento.
