@@ -200,3 +200,11 @@ convocatorias:
         estado: aprobado
         nota: PDF descargado a mano por el titular desde psoe.es el 15 nov 2026 (la web bloquea a los
           robots); la URL apunta a su portada hasta tener el enlace exacto del documento.
+      fa:
+        url: https://www.frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf
+        fichero: documents/generales-2026/fa.pdf
+        sha256: df6e4d967a3a41386656273c32c2df3edc6681b6ee047b190b2ebb91f1a36f04
+        descargado: '2026-11-16T15:05:01Z'
+        origen: pdf
+        paginas: 151
+        estado: analizado
