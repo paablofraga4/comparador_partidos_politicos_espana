@@ -494,7 +494,7 @@ candidaturas:
     tipo: partido
     ambito: autonomico
     color: '#8A8F9A'
-    web: ''
+    web: https://democracia21.es/
     vigilar: []
     siglas_boe: [D21]
     nota: Alta automática desde BOE-A-2026-22607
