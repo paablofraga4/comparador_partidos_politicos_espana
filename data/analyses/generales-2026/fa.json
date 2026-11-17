@@ -1,7 +1,8 @@
 {
   "convocatoria": "generales-2026",
   "candidatura": "fa",
-  "estado": "borrador",
+  "estado": "aprobado",
+  "aprobado_en": "2026-11-17T20:51:09Z",
   "documento": {
     "id": "generales-2026/fa",
     "sha256": "df6e4d967a3a41386656273c32c2df3edc6681b6ee047b190b2ebb91f1a36f04",
@@ -16,7 +17,7 @@
     "tokens_entrada": 2437331,
     "tokens_cache": 2227642,
     "tokens_salida": 142816,
-    "coste_usd": 1.8608
+    "coste_usd": 1.9929
   },
   "temas": {
     "vivienda": {
@@ -1269,28 +1270,35 @@
       "lectura_facil": {
         "resumen": [
           {
-            "texto": "Frente Amplio quiere reforzar la educación pública con unos fondos mínimos por ley.",
+            "texto": "Frente Amplio quiere que la ley asegure dinero para la educación pública.",
             "citas": [
               "c0055",
               "c0056"
             ]
           },
           {
-            "texto": "Frente Amplio quiere más plazas públicas en todas las etapas de enseñanza.",
+            "texto": "Frente Amplio quiere que la ley fije una cantidad mínima.",
             "citas": [
               "c0055",
               "c0056"
             ]
           },
           {
-            "texto": "Frente Amplio quiere dar más becas.",
+            "texto": "Frente Amplio quiere más plazas públicas en todas las etapas de la educación.",
+            "citas": [
+              "c0055",
+              "c0056"
+            ]
+          },
+          {
+            "texto": "Frente Amplio quiere aumentar las becas.",
             "citas": [
               "c0060",
               "c0063"
             ]
           },
           {
-            "texto": "Frente Amplio quiere un gasto mínimo para las universidades públicas.",
+            "texto": "Frente Amplio quiere un mínimo de dinero para las universidades públicas.",
             "citas": [
               "c0060",
               "c0063"
@@ -1299,7 +1307,7 @@
         ],
         "propuestas": [
           {
-            "texto": "Frente Amplio quiere aprobar una Ley de Financiación Educativa. Frente Amplio quiere que esta ley fije un gasto público mínimo en educación. Frente Amplio quiere alcanzar el 7 % de la riqueza que produce el país en 2030.",
+            "texto": "Frente Amplio quiere aprobar una Ley de Financiación Educativa. Frente Amplio quiere que esta ley fije un mínimo de dinero público para educación. Frente Amplio quiere alcanzar el 7 % del producto interior bruto en 2030.",
             "citas": [
               "c0055"
             ],
@@ -1307,7 +1315,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "Frente Amplio quiere incluir el primer ciclo de educación infantil en el sistema educativo. Frente Amplio quiere más plazas públicas gratuitas para todas las familias que las pidan.",
+            "texto": "Frente Amplio quiere incluir el primer ciclo de educación infantil en el sistema educativo. Frente Amplio quiere crear más plazas públicas gratuitas. Frente Amplio quiere ofrecer plaza a toda familia que la pida.",
             "citas": [
               "c0038"
             ],
@@ -1315,7 +1323,7 @@
             "subtema": "educación 0-3 años"
           },
           {
-            "texto": "Frente Amplio quiere fijar por ley un máximo de estudiantes por clase. Frente Amplio propone un máximo de 15 en Primaria y Formación Profesional. Frente Amplio propone un máximo de 20 en Secundaria y 23 en Bachillerato. Frente Amplio propone contar doble a quienes necesitan más apoyo para aprender.",
+            "texto": "Frente Amplio quiere que la ley limite el número de estudiantes por clase. Frente Amplio quiere un máximo de 15 en Primaria y Formación Profesional. Frente Amplio quiere un máximo de 20 en Secundaria. Frente Amplio quiere un máximo de 23 en Bachillerato. Frente Amplio quiere contar doble a quienes necesitan más apoyo para aprender.",
             "citas": [
               "c0058",
               "c0054"
@@ -1324,7 +1332,7 @@
             "subtema": "modelo educativo"
           },
           {
-            "texto": "Frente Amplio quiere prohibir los pagos obligatorios en centros que reciben fondos públicos. Frente Amplio quiere esta norma mientras haya centros concertados. Frente Amplio propone como meta destinar el 100 % de los fondos públicos a la educación pública.",
+            "texto": "Frente Amplio quiere prohibir las cuotas obligatorias en centros que reciben dinero público. Frente Amplio plantea esta medida mientras existan centros concertados. Frente Amplio tiene como meta dedicar el 100 % del dinero público a la educación pública.",
             "citas": [
               "c0057"
             ],
@@ -1332,7 +1340,7 @@
             "subtema": "educación concertada"
           },
           {
-            "texto": "Frente Amplio propone un Plan Estatal para aprender y dar a conocer las lenguas cooficiales. Frente Amplio se refiere a lenguas que son oficiales junto a otra lengua. Frente Amplio quiere garantizar la enseñanza en catalán como lengua principal en Cataluña.",
+            "texto": "Frente Amplio quiere crear un Plan Estatal para aprender las lenguas cooficiales. Frente Amplio quiere que este plan también sirva para darlas a conocer. Frente Amplio quiere garantizar la inmersión lingüística en catalán en Cataluña. Frente Amplio quiere que el catalán sea la lengua de enseñanza en Cataluña.",
             "citas": [
               "c0059"
             ],
@@ -1340,7 +1348,7 @@
             "subtema": "lenguas en la enseñanza"
           },
           {
-            "texto": "Frente Amplio quiere aumentar las becas para estudios posteriores a la enseñanza obligatoria. Frente Amplio quiere dedicarles el 0,44 % de la riqueza que produce el país. Frente Amplio quiere asegurar el pago de estas becas al inicio del curso. Frente Amplio quiere dar más ayudas para alojamiento. Frente Amplio quiere crear becas que aporten un sueldo para estudiar.",
+            "texto": "Frente Amplio quiere aumentar el dinero para becas tras la educación obligatoria. Frente Amplio quiere dedicarles el 0,44 % del producto interior bruto. Frente Amplio quiere que el alumnado cobre las becas al inicio del curso. Frente Amplio quiere dar más ayudas para vivir fuera de casa durante los estudios. Frente Amplio quiere crear becas-salario: ayudas que dan ingresos al alumnado para estudiar.",
             "citas": [
               "c0061"
             ],
@@ -1348,7 +1356,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "Frente Amplio quiere cambiar la Ley Orgánica del Sistema Universitario. Frente Amplio quiere un gasto mínimo para las universidades públicas. Frente Amplio quiere que las comunidades autónomas aporten ese dinero a sus universidades públicas. Frente Amplio propone al menos el 1 % de la riqueza que produce cada comunidad autónoma.",
+            "texto": "Frente Amplio quiere cambiar la Ley Orgánica del Sistema Universitario. Frente Amplio quiere un mínimo de dinero para las universidades públicas. Frente Amplio propone al menos el 1 % del producto interior bruto regional. Frente Amplio quiere que cada comunidad autónoma aporte ese dinero a sus universidades públicas.",
             "citas": [
               "c0063"
             ],
@@ -1356,7 +1364,7 @@
             "subtema": "universidad y becas"
           },
           {
-            "texto": "Frente Amplio quiere limitar por ley las horas de clase que imparte el profesorado. Frente Amplio propone un máximo de 18 horas en Secundaria, Bachillerato, Formación Profesional y Régimen Especial. Frente Amplio propone un máximo de 23 horas en Infantil y Primaria.",
+            "texto": "Frente Amplio quiere que la ley limite las horas de clase que da el profesorado. Frente Amplio quiere un máximo de 18 horas en Secundaria y Bachillerato. Frente Amplio quiere ese mismo límite en Formación Profesional y Régimen Especial. Frente Amplio quiere un máximo de 23 horas en Infantil y Primaria.",
             "citas": [
               "c0062"
             ],
@@ -1365,14 +1373,14 @@
           }
         ],
         "legibilidad": {
-          "inflesz": 61.4,
-          "max_palabras_frase": 16,
+          "inflesz": 62.5,
+          "max_palabras_frase": 15,
           "ok": true,
           "avisos": [
-            "Aviso: INFLESZ 61.4 por debajo del objetivo 65.0"
+            "Aviso: INFLESZ 62.5 por debajo del objetivo 65.0"
           ]
         },
-        "fiel": false,
+        "fiel": true,
         "observaciones": []
       }
     },
@@ -11489,7 +11497,6 @@
     }
   },
   "incidencias": [
-    "inmigracion: descartado tras reintento — el literal «mediante el registro obligatorio de la solicitud en un plazo máximo de 5 días desde la\nman» no aparece tal cual en fa-26-p128-01",
-    "educacion: la lectura fácil no supera la validación tras 4 intentos (último: Fidelidad (grave): En la propuesta sobre las lenguas cooficiales, se cambia «garantizar la inmersión lingüística en catalán» por «garantizar la enseñanza en catalán». Esto omite el elemento esencial de la inmersión lingüística.)"
+    "inmigracion: descartado tras reintento — el literal «mediante el registro obligatorio de la solicitud en un plazo máximo de 5 días desde la\nman» no aparece tal cual en fa-26-p128-01"
   ]
 }
